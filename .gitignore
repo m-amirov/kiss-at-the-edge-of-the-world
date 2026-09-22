@@ -1,0 +1,37 @@
+# Local development and execution traces
+node_modules/
+dist/
+build/
+coverage/
+output/
+.ceos-runs/
+.loop/
+.playwright-cli/
+*.log
+*.zip
+*.7z
+*.rar
+*.tmp
+*.bak
+*.swp
+.DS_Store
+Thumbs.db
+
+# Local credentials and session data
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.pfx
+*.key
+*.sqlite
+*.sqlite3
+*.db
+*credentials*.json
+*secrets*.json
+*token*.txt
+
+# Run-specific evidence; keep editorial / art-direction source
+artifacts/evidence/
+artifacts/upstream/

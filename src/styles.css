@@ -1,0 +1,99 @@
+:root { color-scheme: dark; font-family: Georgia, 'Times New Roman', serif; background: #182630; }
+* { box-sizing: border-box; }
+html, body, #app { width: 100%; height: 100%; margin: 0; overflow: hidden; }
+body { background: #182630; user-select: none; -webkit-touch-callout: none; }
+button { font: inherit; }
+.game-shell { position: relative; width: 100%; height: 100%; min-height: 100%; isolation: isolate; overflow: hidden; }
+#scene-canvas { position: absolute; inset: 0; z-index: -2; display: block; user-select: none; -webkit-touch-callout: none; }
+.scene-art { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: center; user-select: none; -webkit-user-drag: none; }
+.atmosphere { position: absolute; inset: 0; z-index: -1; pointer-events: none; background: linear-gradient(180deg, rgba(15, 28, 39, .18), rgba(15, 28, 39, .62) 66%, rgba(9, 18, 24, .88)); }
+.hud { position: absolute; top: clamp(18px, 5vw, 48px); left: clamp(18px, 6vw, 84px); right: clamp(18px, 6vw, 84px); color: #f3e8d3; text-shadow: 0 2px 12px rgba(0,0,0,.45); }
+.episode-label { margin: 0 0 8px; font: 700 11px/1.2 system-ui, sans-serif; letter-spacing: .18em; opacity: .78; }
+.location { margin: 0; font: 500 clamp(14px, 2vw, 18px)/1.3 system-ui, sans-serif; }
+.dialogue { position: absolute; left: 50%; bottom: clamp(16px, 4vw, 56px); width: min(920px, calc(100% - 32px)); max-height: min(58vh, 520px); overflow-y: auto; overscroll-behavior: contain; transform: translateX(-50%); padding: clamp(18px, 3vw, 32px); padding-left: 176px; border: 1px solid rgba(250, 235, 210, .35); border-radius: 18px; background: rgba(17, 27, 34, .88); box-shadow: 0 18px 60px rgba(0,0,0,.3); backdrop-filter: blur(10px); }
+.dialogue.narration { padding-left: clamp(18px, 3vw, 32px); }
+.portrait[hidden] { display: none !important; }
+.portrait { position: absolute; left: 18px; bottom: 18px; width: 128px; height: 174px; object-fit: cover; object-position: center top; border-radius: 12px; border: 1px solid rgba(241, 191, 130, .45); box-shadow: 0 8px 20px rgba(0,0,0,.3); }
+.speaker-row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.speaker { color: #f1bf82; font: 700 clamp(15px, 2.4vw, 20px)/1.2 system-ui, sans-serif; }
+.progress { color: rgba(244,235,219,.56); font: 12px/1.2 system-ui, sans-serif; }
+.scene-title { margin: 5px 0 0; color: rgba(244,235,219,.7); font: 600 12px/1.3 system-ui, sans-serif; letter-spacing: .08em; text-transform: uppercase; }
+.dialogue-text { min-height: 3.3em; margin: 12px 0 18px; color: #fff8ec; font-size: calc(clamp(18px, 3vw, 26px) * var(--reader-scale, 1)); line-height: 1.42; }
+.actions { display: grid; gap: 10px; }
+.choice, .continue { min-height: 46px; border: 1px solid rgba(245, 210, 163, .58); border-radius: 10px; color: #fff7eb; background: rgba(59, 74, 79, .84); cursor: pointer; transition: background .18s ease, transform .18s ease; }
+.choice { padding: 11px 16px; text-align: left; }
+.continue { display: block; width: 100%; padding: 10px 16px; }
+.continue[hidden] { display: none; }
+.choice:hover, .continue:hover, .choice:focus-visible, .continue:focus-visible { background: #8d5f46; transform: translateY(-1px); outline: 2px solid #f1bf82; outline-offset: 2px; }
+.save-status { position: absolute; right: 18px; top: 18px; margin: 0; color: rgba(255,248,236,.7); font: 12px/1.2 system-ui, sans-serif; }
+@media (max-width: 560px) {
+  .dialogue { bottom: 12px; width: calc(100% - 20px); max-height: 62vh; padding: 16px; padding-left: 84px; border-radius: 14px; }
+  .dialogue.narration { padding-left: 16px; }
+  .portrait:not([hidden]) { display: block; left: 10px; bottom: 10px; width: 62px; height: 84px; border-radius: 9px; }
+  .dialogue-text { min-height: 4.2em; margin: 10px 0 14px; font-size: calc(18px * var(--reader-scale, 1)); }
+  .save-status { top: 58px; right: 14px; }
+}
+@media (prefers-reduced-motion: reduce) { .choice, .continue { transition: none; } }
+
+/* S18 transitional states intentionally use neutral colour staging, not an
+   unrelated city's photo or a night-time harbour during the next morning. */
+.scene-art[hidden] { display: none !important; }
+.game-shell[data-preview-scene="guesthouse-night"],
+.game-shell[data-preview-scene="corridor-night"] {
+  background: radial-gradient(ellipse at 75% 25%, #926c4f 0%, #494843 32%, #202a36 75%, #101a24 100%);
+}
+.game-shell[data-preview-scene="guesthouse-morning"] {
+  background: radial-gradient(ellipse at 76% 24%, #e4d0a6 0%, #a6a99f 36%, #58717a 75%, #25394b 100%);
+}
+.game-shell[data-preview-scene="street-morning"],
+.game-shell[data-preview-scene="town-day"] {
+  background: linear-gradient(148deg, #a4b9bd 0%, #8aacae 38%, #6b8d93 63%, #284755 100%);
+}
+.game-shell[data-preview-scene="guesthouse-morning"] .atmosphere,
+.game-shell[data-preview-scene="street-morning"] .atmosphere,
+.game-shell[data-preview-scene="town-day"] .atmosphere {
+  background: linear-gradient(180deg, rgba(16,34,46,.26), rgba(13,29,39,.28) 48%, rgba(9,18,24,.82));
+}
+
+@media (max-width: 560px) {
+  /* A landscape two-person CG must frame *both* faces on portrait phones.
+     The dialogue remains below the illustration and scrolls independently. */
+  .game-shell[data-preview-visual="dance"] .scene-art,
+  .game-shell[data-preview-visual="romance"] .scene-art {
+    top: 46px;
+    height: min(54vh, 460px);
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+/* Standalone, spoiler-safe game menu for the existing playable draft. */
+.menu-trigger { position: absolute; z-index: 12; right: 18px; top: 14px; min-height: 44px; padding: 8px 16px; border: 1px solid rgba(255,240,219,.48); border-radius: 999px; background: rgba(15,27,38,.76); color: #fff7ed; cursor: pointer; font: 600 14px/1 system-ui,sans-serif; }
+.menu-trigger[hidden], .game-menu[hidden], .menu-panel[hidden], .menu-controls[hidden] { display: none !important; }
+.game-menu { position: absolute; z-index: 20; inset: 0; overflow-y: auto; background: #0f1e2d; color: #fff7ed; display: grid; place-items: center; padding: max(24px, env(safe-area-inset-top)) 18px max(22px, env(safe-area-inset-bottom)); }
+.menu-cover { position: fixed; inset: 0; background: linear-gradient(90deg, rgba(10,22,33,.96), rgba(12,24,34,.79) 54%,rgba(12,24,34,.55)), url('/assets/backgrounds/snaefellsnes-master.png') center / cover; filter: saturate(.9); }
+.menu-card { position: relative; width: min(580px, 100%); margin: auto; padding: clamp(12px, 3vw, 30px); background: rgba(13,27,40,.59); border: 1px solid rgba(247,224,190,.29); border-radius: 24px; box-shadow: 0 24px 70px rgba(0,0,0,.32); backdrop-filter: blur(14px); }
+.menu-kicker { letter-spacing: .23em; font: 650 11px/1.5 system-ui,sans-serif; color: #e6cfab; }
+.menu-card h1 { font-size: clamp(35px, 6vw, 61px); line-height: 1.04; margin: 15px 0 20px; font-weight: 500; letter-spacing: -.04em; }
+.menu-card h1 em { color: #f5cf9d; font-weight: 400; }
+.menu-description { max-width: 32ch; font-size: clamp(17px, 2.5vw, 21px); line-height: 1.55; }
+.menu-build-status { font: 600 12px/1.45 system-ui,sans-serif; color: #ffdaa6; }
+.menu-controls, .menu-panel { display: grid; gap: 10px; margin-top: 22px; }
+.menu-controls button, .menu-panel button { min-height: 46px; padding: 11px 17px; border: 1px solid rgba(241,219,187,.4); border-radius: 11px; color: #fff7ed; font: 600 15px/1.3 system-ui,sans-serif; background: rgba(43,63,75,.78); text-align: left; cursor: pointer; }
+.menu-controls .menu-primary { background: #bd8860; color: #162332; border-color: #f6d3a7; font-weight: 750; }
+.menu-controls button:hover, .menu-panel button:hover, .menu-controls button:focus-visible, .menu-panel button:focus-visible, .menu-trigger:focus-visible { outline: 2px solid #ffdfaa; outline-offset: 2px; background-color: #765843; }
+.menu-progress { color: #e8d9c5; font: 13px/1.5 system-ui,sans-serif; margin: 19px 0 5px; }
+.menu-footnote { color: #cfba9c; font: 11px/1.45 system-ui,sans-serif; opacity: .83; margin: 4px 0 0; }
+.menu-panel h2 { font: 500 25px/1.2 Georgia,serif; margin: 0 0 4px; }
+.menu-panel p { line-height: 1.55; margin: 5px 0; }
+.gallery-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; max-height: 40vh; overflow-y: auto; }
+.gallery-grid figure { margin: 0; }
+.gallery-grid img { display: block; width: 100%; aspect-ratio: 1.7; object-fit: cover; border-radius: 8px; }
+.gallery-grid figcaption { font: 13px/1.5 system-ui,sans-serif; margin-top: 5px; }
+body.high-contrast .dialogue { background: rgba(4,9,14,.98); border-color: #fff6df; }
+body.high-contrast .dialogue-text { color: #fff; }
+body.reduced-motion *,body.reduced-motion *::before,body.reduced-motion *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+@media (max-width:560px) { .menu-trigger { top: 10px; right: 10px; } .menu-card { padding: 18px; } .menu-card h1 { font-size: clamp(32px,9vw,46px); } .menu-description { font-size: 17px; } .gallery-grid { max-height: 37vh; } }
+
+.episode-list { display:grid; gap: 7px; margin: 5px 0 14px; padding-left: 25px; max-height: 34vh; overflow-y: auto; font: 14px/1.4 system-ui,sans-serif; }
+.episode-list li.locked { opacity: .65; }

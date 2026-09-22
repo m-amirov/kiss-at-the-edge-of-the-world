@@ -1,0 +1,21 @@
+{
+  "scripts": {
+    "test:narrative": "node tests/narrative/season-state.test.mjs && node tests/narrative/save-state.test.mjs && node tests/narrative/s18-preview.test.mjs && node tests/narrative/literary-reader.test.mjs && node tests/narrative/literary-stage.test.mjs && node tests/narrative/literary-interactivity.test.mjs && node tests/narrative/release-preflight.test.mjs && node tests/narrative/literary-pacing.test.mjs",
+    "starter-kit:self-test": "node tools/starter-kit/self-test.mjs",
+    "starter-kit:status": "node tools/starter-kit/status.mjs",
+    "yandex:requirements:audit": "node tools/yandex/requirements-audit.mjs",
+    "yandex:console:audit": "node tools/yandex/requirements-audit.mjs --console-only",
+    "yandex:docs:check": "node tools/yandex/docs-watch.mjs",
+    "yandex:docs:accept-snapshot": "node tools/yandex/docs-watch.mjs --accept-snapshot",
+    "yandex:media:validate": "node tools/yandex/media-validation.mjs",
+    "yandex:external:verify": "node tools/yandex/external-evidence.mjs verify",
+    "yandex:external:run": "node tools/yandex/external-evidence.mjs run",
+    "yandex:external:normalize": "node tools/yandex/external-evidence.mjs normalize",
+    "yandex:external:audit": "node tools/yandex/external-evidence.mjs audit",
+    "skills:validate": "node tools/starter-kit/self-test.mjs",
+    "literary:compile": "node tools/literary/compile.mjs",
+    "release:preflight": "node tools/release/preflight.mjs",
+    "dev": "node tools/dev-server.mjs"
+  },
+  "type": "module"
+}

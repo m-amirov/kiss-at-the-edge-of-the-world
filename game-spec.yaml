@@ -1,0 +1,111 @@
+schemaVersion: 2
+yandex:
+  publication:
+    type: first-publication
+
+project:
+  slug: kiss-at-the-edge-of-the-world
+  title:
+    ru: Поцелуй на краю света
+    en: Kiss at the Edge of the World
+  platform: yandex-games
+  engine: browser-runtime
+  target: release-candidate
+
+game:
+  genre: interactive romance, romantic drama, travel adventure
+  audience: 16+
+  sessionMinutes: 30
+  orientation: responsive
+  description: >-
+    Алиса, журналистка, отправляется на три недели в Исландию и вместе с
+    небольшой группой пишет серию материалов о людях, меняющих свою жизнь.
+    Решения игрока определяют, кому Алиса доверится, что она поймёт о себе и
+    с кем — или без кого — продолжит путь после возвращения.
+  coreLoop: [read-scene, choose-intention, witness-consequence, save-progress, reach-episode-end]
+  winCondition: Reach a coherent season ending shaped by the player's choices.
+  loseCondition: No hard fail; unresolved choices lead to the independent ending.
+
+content:
+  episodes: 12
+  travelDays: 21
+  romanticRoutes: [eric, nick, damir]
+  seasonEndings: 4
+  endlessMode: false
+  deterministicGeneration: true
+
+visual:
+  artDirection: cinematic contemporary romance, overcast Icelandic light, tactile travel photography
+  assetCreation: codex
+  imageModelPreferred: true
+  proceduralFallback: false
+  firstGenerationMayBeFinal: false
+  marketing:
+    icon: true
+    cover: true
+    desktopScreenshots: 3
+    mobileScreenshots: 3
+    horizontalGameplayVideo:
+      languageDependentText: true
+      targetDurationSeconds: [20, 25]
+      gameplayRatioTarget: 1.0
+
+audio:
+  enabled: true
+  autoplay: false
+  muteSetting: true
+  pauseForAds: true
+
+accessibility:
+  reducedMotion: true
+  colorOnlyCriticalStates: false
+  criticalInformationAudioOnly: false
+  minimumTouchTargetCssPx: 44
+
+localization:
+  languages: [ru]
+  autoDetectYandexLanguage: true
+  fallback: ru
+
+platform:
+  cloudSave: true
+  authentication: optional
+  leaderboards:
+    enabled: false
+  ads:
+    fullscreen: true
+    rewarded: false
+    fullscreenPolicy: result-navigation-only
+  gameplayApi: true
+  pwa: false
+  serviceWorker: false
+  externalRuntimeAssets: false
+  webGpuOnly: false
+
+quality:
+  viewports:
+    - { width: 360, height: 640 }
+    - { width: 390, height: 844 }
+    - { width: 412, height: 915 }
+    - { width: 844, height: 390 }
+    - { width: 768, height: 1024 }
+    - { width: 1024, height: 768 }
+    - { width: 1366, height: 768 }
+    - { width: 1920, height: 1080 }
+  budgets:
+    maxInitialDownloadMb: 12
+    maxZipUnpackedMb: 100
+    targetFps: 60
+    minimumFps: 30
+    maxFrameMs: 33
+    maxSceneListenerLeaks: 0
+    maxTimerLeaks: 0
+    maxRenderTextureLeaks: 0
+  zeroConsoleErrors: true
+  noOpenP0P1: true
+
+release:
+  publish: false
+  submitToModeration: false
+  zipRootMustContainIndex: true
+  includeSha256: true

@@ -1,0 +1,11 @@
+version: 1
+profile: "yandex-games"
+commands:
+  starter_kit_self_test: "npm run starter-kit:self-test"
+gates:
+  verification: ["starter_kit_self_test"]
+  release: ["starter_kit_self_test"]
+production:
+  access: "read-only"
+release:
+  clean_worktree: true

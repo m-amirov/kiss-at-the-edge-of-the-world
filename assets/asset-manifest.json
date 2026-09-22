@@ -1,0 +1,292 @@
+{
+  "schemaVersion": 1,
+  "project": "kiss-at-the-edge-of-the-world",
+  "lockedCanon": "docs/CONCEPT_CANON.md",
+  "assets": [
+    {
+      "id": "alice-master",
+      "family": "character",
+      "path": "assets/characters/alice-master.png",
+      "status": "integrated",
+      "runtime": "portraitBySpeaker.Алиса"
+    },
+    {
+      "id": "eric-master",
+      "family": "character",
+      "path": "assets/characters/eric-master.png",
+      "status": "integrated",
+      "runtime": "portraitBySpeaker.Эрик"
+    },
+    {
+      "id": "nick-master",
+      "family": "character",
+      "path": "assets/characters/nick-master.png",
+      "status": "integrated",
+      "runtime": "portraitBySpeaker.Ник"
+    },
+    {
+      "id": "damir-master",
+      "family": "character",
+      "path": "assets/characters/damir-master.png",
+      "status": "integrated",
+      "runtime": "portraitBySpeaker.Дамир"
+    },
+    {
+      "id": "alice-reflective",
+      "family": "character-variant",
+      "path": "assets/characters/alice-reflective.png",
+      "status": "integrated",
+      "runtime": "portraitVariantsByNode"
+    },
+    {
+      "id": "eric-tender",
+      "family": "character-variant",
+      "path": "assets/characters/eric-tender.png",
+      "status": "integrated",
+      "runtime": "portraitVariantsByNode"
+    },
+    {
+      "id": "nick-serious",
+      "family": "character-variant",
+      "path": "assets/characters/nick-serious.png",
+      "status": "integrated",
+      "runtime": "portraitVariantsByNode"
+    },
+    {
+      "id": "damir-vulnerable",
+      "family": "character-variant",
+      "path": "assets/characters/damir-vulnerable.png",
+      "status": "integrated",
+      "runtime": "portraitVariantsByNode"
+    },
+    {
+      "id": "alice-stage",
+      "family": "character-stage",
+      "path": "assets/characters/alice-stage.png",
+      "status": "integrated",
+      "runtime": "src/literary-stage.js scene-directed stage compositing (solo/pair/group)",
+      "alphaChannel": "true RGBA"
+    },
+    {
+      "id": "eric-stage",
+      "family": "character-stage",
+      "path": "assets/characters/eric-stage.png",
+      "status": "integrated",
+      "runtime": "src/literary-stage.js scene-directed stage compositing (solo/pair/group)",
+      "alphaChannel": "true RGBA"
+    },
+    {
+      "id": "nick-stage",
+      "family": "character-stage",
+      "path": "assets/characters/nick-stage.png",
+      "status": "integrated",
+      "runtime": "src/literary-stage.js scene-directed stage compositing (solo/pair/group)",
+      "alphaChannel": "true RGBA"
+    },
+    {
+      "id": "damir-stage",
+      "family": "character-stage",
+      "path": "assets/characters/damir-stage.png",
+      "status": "integrated",
+      "runtime": "src/literary-stage.js scene-directed stage compositing (solo/pair/group)",
+      "alphaChannel": "true RGBA"
+    },
+    {
+      "id": "reykjavik-harbour-master",
+      "family": "background",
+      "path": "assets/backgrounds/reykjavik-harbour-master.png",
+      "status": "integrated",
+      "runtime": "sceneArt default"
+    },
+    {
+      "id": "keflavik-airport-arrivals-v1",
+      "family": "background",
+      "path": "assets/backgrounds/keflavik-airport-arrivals-v1.png",
+      "status": "integrated",
+      "runtime": "episode 1 arrival"
+    },
+    {
+      "id": "reynisfjara-master",
+      "family": "background",
+      "path": "assets/backgrounds/reynisfjara-master.png",
+      "status": "integrated",
+      "runtime": "episode 4"
+    },
+    {
+      "id": "thingvellir-master",
+      "family": "background",
+      "path": "assets/backgrounds/thingvellir-master.png",
+      "status": "integrated",
+      "runtime": "episode 2"
+    },
+    {
+      "id": "skogafoss-master",
+      "family": "background",
+      "path": "assets/backgrounds/skogafoss-master.png",
+      "status": "integrated",
+      "runtime": "episode 3"
+    },
+    {
+      "id": "jokulsarlon-master",
+      "family": "background",
+      "path": "assets/backgrounds/jokulsarlon-master.png",
+      "status": "integrated",
+      "runtime": "episode 5"
+    },
+    {
+      "id": "eastfjords-road-master",
+      "family": "background",
+      "path": "assets/backgrounds/eastfjords-road-master.png",
+      "status": "integrated",
+      "runtime": "episodes 6-7"
+    },
+    {
+      "id": "myvatn-pool-master",
+      "family": "background",
+      "path": "assets/backgrounds/myvatn-pool-master.png",
+      "status": "integrated",
+      "runtime": "episode 8 Eric"
+    },
+    {
+      "id": "akureyri-street-master",
+      "family": "background",
+      "path": "assets/backgrounds/akureyri-street-master.png",
+      "status": "integrated",
+      "runtime": "episodes 8-9"
+    },
+    {
+      "id": "snaefellsnes-master",
+      "family": "background",
+      "path": "assets/backgrounds/snaefellsnes-master.png",
+      "status": "integrated",
+      "runtime": "episode 10"
+    },
+    {
+      "id": "eric-route-hand",
+      "family": "cg",
+      "path": "assets/cg/eric-route-hand.png",
+      "status": "integrated",
+      "runtime": "Eric ending"
+    },
+    {
+      "id": "nick-route-editing",
+      "family": "cg",
+      "path": "assets/cg/nick-route-editing.png",
+      "status": "integrated",
+      "runtime": "Nick ending"
+    },
+    {
+      "id": "damir-route-letter",
+      "family": "cg",
+      "path": "assets/cg/damir-route-letter.png",
+      "status": "integrated",
+      "runtime": "Damir ending"
+    },
+    {
+      "id": "alice-independent-ending",
+      "family": "cg",
+      "path": "assets/cg/alice-independent-ending.png",
+      "status": "integrated",
+      "runtime": "independent ending"
+    },
+    {
+      "id": "eric-myvattn-dawn",
+      "family": "cg",
+      "path": "assets/cg/eric-myvattn-dawn.png",
+      "status": "integrated",
+      "runtime": "episode 8 Eric route"
+    },
+    {
+      "id": "nick-akureyri-edit",
+      "family": "cg",
+      "path": "assets/cg/nick-akureyri-edit.png",
+      "status": "integrated",
+      "runtime": "episode 8 Nick route"
+    },
+    {
+      "id": "damir-road-letter",
+      "family": "cg",
+      "path": "assets/cg/damir-road-letter.png",
+      "status": "integrated",
+      "runtime": "episode 8 Damir route"
+    },
+    {
+      "id": "s02-expedition-planning-iceland",
+      "family": "cg",
+      "path": "assets/cg/s02-expedition-planning-iceland.png",
+      "status": "integrated",
+      "runtime": "S02 route-planning beat"
+    },
+    {
+      "id": "s13-skaftafell-travelers",
+      "family": "cg",
+      "path": "assets/cg/s13-skaftafell-travelers.png",
+      "status": "integrated",
+      "runtime": "S13 Skaftafell ascent beat"
+    },
+    {
+      "id": "s18-hofn-dance-lights",
+      "family": "cg",
+      "path": "assets/cg/s18-hofn-dance-lights.png",
+      "status": "integrated",
+      "runtime": "S18 Eric dance beat"
+    },
+    {
+      "id": "s45-reykjavik-warm-montage",
+      "family": "cg",
+      "path": "assets/cg/s45-reykjavik-warm-montage.png",
+      "status": "integrated",
+      "runtime": "S45 Nick finale"
+    },
+    {
+      "id": "s46-airport-goodbye",
+      "family": "cg",
+      "path": "assets/cg/s46-airport-goodbye.png",
+      "status": "integrated",
+      "runtime": "S46 Damir airport goodbye"
+    },
+    {
+      "id": "s47-reykjavik-harbour-alice",
+      "family": "cg",
+      "path": "assets/cg/s47-reykjavik-harbour-alice.png",
+      "status": "integrated",
+      "runtime": "S47 Alice independent finale"
+    }
+  ],
+  "routingTrace": {
+    "webPreflightStatus": "READY",
+    "webAgentsUsed": [
+      "ceos_art_director_web"
+    ],
+    "nativeAssetGeneratorUsed": true,
+    "imageGenerationCapability": "available",
+    "generatedAssetCount": 35,
+    "integratedAssetCount": 35,
+    "nativeFallbackUsed": true,
+    "nativeFallbackReason": "Web art-director transport disconnected with ERR_ABORTED before completion; one native fallback used"
+  },
+  "gate": "LEGACY_RUNTIME_ASSETS_ONLY_NEW_SEASON_COVERAGE_BLOCKED",
+  "previewAssets": [
+    {
+      "id": "s18-hofn-harbour",
+      "family": "background",
+      "path": "assets/backgrounds/s18-hofn-harbour.png",
+      "status": "preview-integrated",
+      "scope": "S18 only, not full new season"
+    },
+    {
+      "id": "s18-hofn-dance",
+      "family": "cg",
+      "path": "assets/cg/s18-hofn-dance.png",
+      "status": "preview-integrated",
+      "scope": "S18 only, not full new season"
+    },
+    {
+      "id": "s18-hofn-dance-action",
+      "family": "cg",
+      "path": "assets/cg/s18-hofn-dance-action.png",
+      "status": "preview-integrated",
+      "scope": "S18 only, not full new season"
+    }
+  ]
+}

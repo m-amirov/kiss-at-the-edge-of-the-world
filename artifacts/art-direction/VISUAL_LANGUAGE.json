@@ -1,0 +1,15 @@
+{
+  "project": "kiss-at-the-edge-of-the-world",
+  "style": "cinematic semi-realistic contemporary romance",
+  "season": "early October",
+  "palette": ["basalt charcoal", "Atlantic blue", "moss green", "cloud grey", "warm amber", "muted wine"],
+  "lighting": "diffuse overcast daylight with warm practical interiors",
+  "framing": {
+    "mobileSafeCenterPercent": 60,
+    "dialogueClearLowerContrast": true,
+    "facesAndHandsProtected": true
+  },
+  "canonMasters": ["alice", "eric", "nick", "damir", "reykjavik-harbour", "south-coast-basalt"],
+  "prohibited": ["temporary gradients as final art", "generic placeholder geometry", "identity drift", "generated text", "neon fantasy motifs"],
+  "status": "DIRECTION_READY"
+}
