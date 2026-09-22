@@ -1,4 +1,5 @@
 import { compileScenePlayback } from './literary-engine.js';
+import { visualBoundary } from './literary-visual-directions.js';
 import { interactionBeats, interactionEchoes, interactionTargets } from './literary-interactive-beats.js';
 
 // Counts refer to the fully resolved manuscript's canonical A read. They are
@@ -28,36 +29,39 @@ export function compileInteractivePlayback(scene, choices={}) {
   const flush=()=>{
     if(!pending.length)return;
     result.push({type:'page',paragraphs:pending.map(x=>x.text),text:pending.map(x=>x.text).join('\n\n'),
-      sourceStart:start,sourceEnd:pending.at(-1).sourceIndex});
+      sourceStart:start,sourceEnd:pending.at(-1).sourceIndex,
+      sourceStartRef:pending[0].sourceRef,sourceEndRef:pending.at(-1).sourceRef});
     pending=[];words=0;
   };
-  function addParagraph(text,sourceIndex){
+  function addParagraph(text,sourceIndex,sourceRef){
     if(!text)return;
     const nextWords=countWords(text);
     if(pending.length && (pending.length>=3 || words+nextWords>95))flush();
     if(!pending.length)start=sourceIndex;
-    pending.push({text,sourceIndex});words+=nextWords;
+    pending.push({text,sourceIndex,sourceRef});words+=nextWords;
   }
   function insertBeat(beat,index,sourceIndex){
     flush();const id=`${scene.id}-C${90+index}`;
     const selected=choices[id];
+    const sourceRef=original[Math.min(sourceIndex,original.length-1)]?.sourceRef ?? null;
     if(!selected){
-      result.push({type:'choice',id,question:beat.question,options:beat.options.map(({code,label})=>({code,label})),sourceStart:sourceIndex,sourceEnd:sourceIndex});
+      result.push({type:'choice',id,question:beat.question,options:beat.options.map(({code,label})=>({code,label})),sourceStart:sourceIndex,sourceEnd:sourceIndex,sourceStartRef:sourceRef,sourceEndRef:sourceRef});
       return false;
     }
     const option=beat.options.find(o=>o.code===selected);
     if(!option)throw new Error(`Invalid extra choice ${id}=${selected}`);
-    result.push({type:'page',paragraphs:[option.text],text:option.text,sourceStart:sourceIndex,sourceEnd:sourceIndex,decisionResult:id});
+    result.push({type:'page',paragraphs:[option.text],text:option.text,sourceStart:sourceIndex,sourceEnd:sourceIndex,sourceStartRef:sourceRef,sourceEndRef:sourceRef,decisionResult:id});
     return true;
   }
   for(let index=0;index<original.length;index++){
     const entry=original[index];
     if(entry.type==='paragraph'){
-      addParagraph(entry.text,index);paragraphNumber++;
+      if(visualBoundary(scene.id,entry.sourceRef))flush();
+      addParagraph(entry.text,index,entry.sourceRef);paragraphNumber++;
       if(paragraphNumber===1){
         for(const [id,a,b] of interactionEchoes[scene.id]||[]){
           const echo=choices[id]==='A'?a:choices[id]==='B'?b:null;
-          if(echo){flush();result.push({type:'page',paragraphs:[echo],text:echo,sourceStart:index,sourceEnd:index,echoOf:id});}
+          if(echo){flush();result.push({type:'page',paragraphs:[echo],text:echo,sourceStart:index,sourceEnd:index,sourceStartRef:entry.sourceRef,sourceEndRef:entry.sourceRef,echoOf:id});}
         }
       }
       while(beatIndex<beats.length && paragraphNumber>=targets[beatIndex]){
@@ -65,7 +69,7 @@ export function compileInteractivePlayback(scene, choices={}) {
         beatIndex++;
       }
     }else{
-      flush();result.push(entry);
+      flush();result.push({...entry,sourceStartRef:entry.sourceRef,sourceEndRef:entry.sourceRef});
       // The manuscript parser stops at the first unresolved authored choice.
       if(entry.type==='choice')return result;
     }

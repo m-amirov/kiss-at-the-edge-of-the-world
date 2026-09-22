@@ -1,0 +1,109 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {literarySeason} from '../../src/literary-season-data.js';
+import {compileInteractivePlayback} from '../../src/literary-pacing.js';
+import {stageForScene} from '../../src/literary-stage.js';
+import {visualScenes,visualCues,visualAt} from '../../src/literary-visual-directions.js';
+
+const scenes=new Map(literarySeason.scenes.map(s=>[s.id,s]));
+function complete(id,choiceOverrides={}){
+ const seed=['S01-C1','S02-C1','S04-C1','S05-C1','S08-C1','S09-C1','S13-C1','S15-C1','S16-C1','S17-C2','S18-C1','S19-C2','S20-C1','S21-C1','S23-C1','S26-C1','S32-C1','S33-C1','S34-C1','S37-C1','S38-C1','S39-C1','S42-C1'];
+ const everyChoice=literarySeason.scenes.flatMap(s=>s.chunks.map(c=>c.title.match(/Выбор\s+(S\d{2}-C\d+)/)?.[1]).filter(Boolean));
+ const choices={...Object.fromEntries([...seed,...everyChoice].map(id=>[id,'A'])),...choiceOverrides};let flow=[];
+ for(let i=0;i<100;i++){
+  flow=compileInteractivePlayback(scenes.get(id),choices);
+  const pending=flow.find(e=>e.type==='choice');
+  if(!pending)return {flow,choices};
+  choices[pending.id] ??= pending.options[0].code;
+ }
+ throw new Error(`Unresolved ${id}`);
+}
+function shot(id,flow,position,choices){
+ return visualAt(id,flow[position],choices,stageForScene(id,choices).cast);
+}
+function indexOfSource(flow,chunk,paragraph){
+ const i=flow.findIndex(e=>e.sourceStartRef?.chunk===chunk && e.sourceStartRef.paragraph===paragraph);
+ assert.ok(i>=0,`Missing source ${chunk}:${paragraph}`);return i;
+}
+test('all 66 scenes have a real authored place, time, cast and bounded image reference',()=>{
+ assert.deepEqual(new Set(Object.keys(visualScenes)),new Set(scenes.keys()));
+ for(const [id,scene] of scenes){
+  const {flow,choices}=complete(id,{'S17-C2':'A','S26-C1':'A','S18-C1':'A'});
+  assert.ok(flow.length,id);
+  for(const [i,entry] of flow.entries()){
+   const d=shot(id,flow,i,choices);
+   assert.ok(d.location&&d.time&&d.beatId,`${id} missing visual metadata`);
+   assert.ok(d.cast.length&&new Set(d.cast).size===d.cast.length,`${id} invalid cast`);
+   if(d.art){
+    const file=new URL(`../../assets/${d.art.type==='cg'?'cg':'backgrounds'}/${d.art.file}`,import.meta.url);
+    assert.ok(fs.existsSync(file),`${id}/${d.beatId}: missing ${d.art.file}`);
+   }
+  }
+  for(const cue of visualCues[id]||[]){
+   assert.ok(scene.chunks[cue.at[0]]?.paragraphs[cue.at[1]],`${id}/${cue.id} dangling event address`);
+   const ref={chunk:cue.at[0],paragraph:cue.at[1]};
+   assert.ok(shot(id,[{sourceStartRef:ref,sourceEndRef:ref}],0,choices).beatId,`${id} cue unresolved`);
+  }
+ }
+});
+
+test('S02 cafe resets road stage and never shows a van-planning CG not written in the story',()=>{
+ const {flow,choices}=complete('S02');
+ assert.equal(shot('S02',flow,0,choices).location,'Автомобиль по дороге в Рейкьявик');
+ assert.equal(shot('S02',flow,0,choices).art,null);
+ const cafe=indexOfSource(flow,0,31);
+ assert.equal(shot('S02',flow,cafe,choices).beatId,'roadside-cafe');
+ assert.equal(shot('S02',flow,cafe,choices).art,null);
+ assert.ok(flow.every((e,i)=>shot('S02',flow,i,choices).art?.type!=='cg'));
+});
+
+test('S13 visitor center precedes notebook CG; image is not used in Vik',()=>{
+ const {flow,choices}=complete('S13');
+ const arrival=indexOfSource(flow,0,7),notebook=indexOfSource(flow,0,12);
+ assert.equal(shot('S13',flow,0,choices).art,null);
+ assert.equal(shot('S13',flow,arrival,choices).art,null);
+ assert.equal(shot('S13',flow,notebook,choices).art?.file,'s13-skaftafell-travelers.png');
+ assert.ok(arrival<notebook);
+});
+
+test('S18 dance happens before the kiss choice on all options; walking back and morning end it',()=>{
+ for(const option of ['A','B','C']){
+  const {flow,choices}=complete('S18',{'S17-C2':'A','S18-C1':option});
+  const dance=indexOfSource(flow,0,35),walk=indexOfSource(flow,0,39),morning=indexOfSource(flow,5,1),breakfast=indexOfSource(flow,5,3);
+  assert.equal(shot('S18',flow,dance,choices).art?.file,'s18-hofn-dance-lights.png');
+  assert.equal(shot('S18',flow,walk,choices).art?.type,'background');
+  assert.equal(shot('S18',flow,morning,choices).art,null);
+  assert.deepEqual(shot('S18',flow,breakfast,choices).cast,['alice','eric','nick','damir']);
+  assert.ok(dance<walk&&walk<morning&&morning<breakfast);
+ }
+});
+
+test('finale location and art change at the literal month-later epilogue for all four routes',()=>{
+ const cfg={S44:[null,4],S45:['s45-reykjavik-warm-montage.png',4],S46:['s46-airport-goodbye.png',4],S47:['s47-reykjavik-harbour-alice.png',4]};
+ for(const [id,[expectedCG,chapter]] of Object.entries(cfg)){
+  const {flow,choices}=complete(id);
+  const first=shot(id,flow,0,choices);
+  if(expectedCG&&id!=='S46')assert.equal(first.art?.file,expectedCG);
+  if(id==='S46'){
+   assert.equal(first.art,null);
+   assert.equal(shot(id,flow,indexOfSource(flow,0,1),choices).art?.file,expectedCG);
+  }
+  const month=indexOfSource(flow,chapter,0);
+  const final=shot(id,flow,month,choices);
+  assert.equal(final.time,'спустя месяц',id);
+  assert.equal(final.art,null,`stale final CG in ${id} epilogue`);
+  assert.ok(month>0);
+ }
+});
+
+test('the page boundary never mixes different authored visual beats',()=>{
+ for(const id of ['S01','S02','S13','S18','S26','S44','S45','S46','S47']){
+  const {flow,choices}=complete(id,{'S18-C1':'A','S26-C1':'A','S17-C2':'A'});
+  for(const page of flow.filter(e=>e.type==='page'&&e.sourceStartRef&&e.sourceEndRef)){
+   const a=visualAt(id,{sourceEndRef:page.sourceStartRef},choices,stageForScene(id,choices).cast);
+   const b=visualAt(id,{sourceEndRef:page.sourceEndRef},choices,stageForScene(id,choices).cast);
+   assert.equal(a.beatId,b.beatId,`${id}: page spans two visual beats`);
+  }
+ }
+});

@@ -104,15 +104,16 @@ function typeOfHeading(t) {
 export function compileScenePlayback(scene, choices={}) {
   const input=scene.chunks;
   const output=[];
-  const paragraphs=(chunks)=>chunks.forEach(c=>{
-    for (let p of c.paragraphs) {
+  const paragraphs=(chunk,chunkIndex)=>{
+    for(let paragraphIndex=0;paragraphIndex<chunk.paragraphs.length;paragraphIndex++){
+      let p=chunk.paragraphs[paragraphIndex];
       if (p.startsWith('- ') && /→\s*S\d+/.test(p)) continue;
       if (/^Выбирается ровно одна линия/.test(p))continue;
       if (/^Утром дня 11\s*[—–-]\s*S22/.test(p))continue;
       if (/^К вечеру вещи высохли/.test(p))p=p.replace(/Утром дня 11\s*[—–-]\s*S22\.?.*$/,'Утром они выехали дальше.');
-      if(p)output.push({type:'paragraph',text:p});
+      if(p)output.push({type:'paragraph',text:p,sourceRef:{chunk:chunkIndex,paragraph:paragraphIndex}});
     }
-  });
+  };
   let halted=false;
   function walk(from,to){
     let i=from;
@@ -168,7 +169,7 @@ export function compileScenePlayback(scene, choices={}) {
         if(options.length<2)throw new Error(`Incomplete options for ${id}: ${options.length}`);
         let selected=codeChoice(choices,id);
         if(!selected){
-          output.push({type:'choice',id,options:options.map(o=>({code:o.code,label:o.label}))});
+          output.push({type:'choice',id,options:options.map(o=>({code:o.code,label:o.label})),sourceRef:{chunk:i,paragraph:0}});
           halted=true;return false;
         }
         const optionIndex=options.findIndex(x=>x.code===selected);
@@ -182,7 +183,7 @@ export function compileScenePlayback(scene, choices={}) {
         i=j;continue;
       }
       if(kind==='conditional' && !conditional(scene.id,item.title,choices)){i++;continue;}
-      paragraphs([item]);i++;
+      paragraphs(item,i);i++;
     }
     return true;
   }

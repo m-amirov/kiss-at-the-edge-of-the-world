@@ -2,7 +2,8 @@ import { literarySeason } from './literary-season-data.js';
 import { compileScenePlayback, nextLiteraryScene, literarySaveKey, cleanLiteraryText } from './literary-engine.js';
 import { initYandexPlatform } from './yandex-sdk.js';
 import { createCloudSaveQueue } from './save-state.js';
-import { stageForPlayback } from './literary-stage.js';
+import { stageForScene } from './literary-stage.js';
+import { visualAt } from './literary-visual-directions.js';
 import { compileInteractivePlayback } from './literary-pacing.js';
 
 const byId = new Map(literarySeason.scenes.map(scene => [scene.id, scene]));
@@ -10,44 +11,21 @@ const app = document.getElementById('literary-app');
 const textSettingsKey = 'kiss-at-the-edge-of-the-world:literary-settings:v1';
 const literaryCloudKey = 'kiss-at-the-edge-of-the-world:literary-season:v1';
 const routeName = { A: 'Эрик', B: 'Ник', C: 'Дамир', D: 'Алиса' };
-const mapScene = {
-  S01: 'keflavik-airport-arrivals-v1.png', S03: 'reykjavik-harbour-master.png',
-  S04: 'thingvellir-master.png', S06: 'thingvellir-master.png',
-  S09: 'skogafoss-master.png', S11: 'reynisfjara-master.png',
-  S14: 'jokulsarlon-master.png', S15: 'jokulsarlon-master.png',
-  S17: 's18-hofn-harbour.png', S18: 's18-hofn-harbour.png',
-  S22: 'eastfjords-road-master.png', S26: 'eastfjords-road-master.png',
-  S36: 'snaefellsnes-master.png', S37: 'snaefellsnes-master.png',
-  S38: 'snaefellsnes-master.png', S39: 'snaefellsnes-master.png',
-  S40: 'snaefellsnes-master.png', S64: 'snaefellsnes-master.png',
-  S41: 'reykjavik-harbour-master.png', S44: 'reykjavik-harbour-master.png',
-  S45: 'reykjavik-harbour-master.png', S47: 'reykjavik-harbour-master.png'
-};
-const keyCG = {
-  S02: 's02-expedition-planning-iceland.png',
-  S13: 's13-skaftafell-travelers.png',
-  S18: 's18-hofn-dance-lights.png',
-  S33: 'nick-akureyri-edit.png',
-  S37: 'eric-route-hand.png',
-  S45: 's45-reykjavik-warm-montage.png',
-  S46: 's46-airport-goodbye.png',
-  S47: 's47-reykjavik-harbour-alice.png'
-};
 const stageAsset = { alice:'alice-stage.png', eric:'eric-stage.png', nick:'nick-stage.png', damir:'damir-stage.png' };
 const cover = './assets/backgrounds/snaefellsnes-master.png';
-const blank = () => ({ schemaVersion:2,sceneId:'S01',position:0,choices:{},finished:false, visited:['S01'],runId:`literary-${Date.now()}-${crypto.randomUUID?.() ?? Math.random().toString(36).slice(2)}`, revision:0 });
+const blank = () => ({ schemaVersion:3,sceneId:'S01',position:0,choices:{},finished:false, visited:['S01'],runId:`literary-${Date.now()}-${crypto.randomUUID?.() ?? Math.random().toString(36).slice(2)}`, revision:0 });
 function parseSaved(raw) {
   try {
     const s=typeof raw==='string'?JSON.parse(raw):raw;
-    if(![1,2].includes(s?.schemaVersion) || !byId.has(s.sceneId) || !Number.isInteger(s.position) || s.position<0 ||
+    if(![1,2,3].includes(s?.schemaVersion) || !byId.has(s.sceneId) || !Number.isInteger(s.position) || s.position<0 ||
        !s.choices || typeof s.choices!=='object' || Array.isArray(s.choices))return null;
     if(Object.entries(s.choices).some(([id,code])=> !/^S\d{2}-C\d+$/.test(id)|| !/^[A-D]$/.test(code)))return null;
-    return { ...s, schemaVersion:2, position:s.schemaVersion===1?0:s.position,
-      migrationNotice:s.schemaVersion===1, visited:Array.isArray(s.visited)?s.visited.filter(id=>byId.has(id)):[s.sceneId],revision:s.revision??0 };
+    return { ...s, schemaVersion:3, position:s.schemaVersion<3?0:s.position,
+      migrationNotice:s.schemaVersion<3, visited:Array.isArray(s.visited)?s.visited.filter(id=>byId.has(id)):[s.sceneId],revision:s.revision??0 };
   } catch { return null; }
 }
 function loadLocal(){try{const saved=localStorage.getItem(literarySaveKey);const parsed=parseSaved(saved);
-  if(parsed?.migrationNotice){localStorage.setItem(`${literarySaveKey}:pre-pacing-backup`,saved);localStorage.setItem(literarySaveKey,JSON.stringify(parsed));}
+  if(parsed?.migrationNotice){localStorage.setItem(`${literarySaveKey}:pre-visual-directions-backup`,saved);localStorage.setItem(literarySaveKey,JSON.stringify(parsed));}
   return parsed;}catch{return null}}
 let reader=loadLocal()??blank();
 let hasSave=Boolean(loadLocal());
@@ -155,8 +133,7 @@ function renderMenu(){
   for(let ep=1;ep<=10;ep++){const visited=(reader.visited||[]).some(id=>byId.get(id)?.episode===ep);chapters.append(el(`${String(ep).padStart(2,'0')} · ${visited?'открыт':'впереди'}`,visited?'':'planned'))}
   section.append(chapters);
 }
-function renderStage(scene, flow, position, choices) {
-  const direction=stageForPlayback(scene.id,flow,position,choices);
+function renderStage(direction) {
   const stage=el('','scene-stage');
   stage.dataset.count=String(direction.cast.length);
   stage.dataset.mode=direction.mode;
@@ -172,56 +149,23 @@ function renderStage(scene, flow, position, choices) {
   });
   return stage;
 }
-function backgroundFor(scene,entry){
-  const text=entry?.text||'';
-  const flow=compileScenePlayback(scene,reader.choices);
-  const sourceStart=entry?.sourceStart ?? -1;
-  const morningS18Index=flow.findIndex(e=>e.type==='paragraph' && e.text.includes('Утром десятого дня'));
-  const beforeMorning=!(scene.id==='S18' && morningS18Index>=0 && sourceStart>=morningS18Index);
-  if(/Спустя месяц/i.test(text))return null;
-
-  if(scene.id==='S02'){
-    if(/карт|маршрут|план|стол|фургон/i.test(text))return {type:'cg',file:keyCG.S02};
-    return null;
-  }
-  if(scene.id==='S13'){
-    if(/троп|ледник|блокнот|карта|подъ[её]м|маршрут/i.test(text))return {type:'cg',file:keyCG.S13};
-    return null;
-  }
-  if(scene.id==='S18'){
-    if(beforeMorning && reader.choices['S18-C1']==='A' && /маяк|танц|протянул.*руку|поворот|музык|подош[её]л.*близко|почти каса|поцелов|обня/i.test(text)){
-      return {type:'cg',file:keyCG.S18};
-    }
-    if(beforeMorning)return {type:'background',file:mapScene.S18};
-    return null;
-  }
-  if(scene.id==='S41' && /редакц|видеозвон|столик|кафе|ноутбук/i.test(text))return null;
-  if(scene.id==='S45')return {type:'cg',file:keyCG.S45};
-  if(scene.id==='S46'){
-    if(/автобус|аэропорт|стойк|посадк|регистрац|терминал|вылет/i.test(text))return {type:'cg',file:keyCG.S46};
-    return null;
-  }
-  if(scene.id==='S47')return {type:'cg',file:keyCG.S47};
-
-  let background=mapScene[scene.id];
-  if(scene.id==='S18' && /на следующий день|утром десятого|за завтраком|в гостевом доме|утром дня 10/i.test(text))background=null;
-  if(keyCG[scene.id] && /поцелов|обня|взял.*за руку|танц|открыт.*кадр|фотограф/i.test(text))return {type:'cg',file:keyCG[scene.id]};
-  return background?{type:'background',file:background}:null;
-}
 function renderReader(){
   if(menuOpen)return renderMenu();
   const scene=byId.get(reader.sceneId);if(!scene){goHome();return}
   const flow=compileInteractivePlayback(scene,reader.choices);reader.position=Math.min(reader.position,flow.at(-1)?.type==='choice'?Math.max(0,flow.length-1):flow.length);
   app.className='literary-reader';app.replaceChildren();
-  const current=flow[reader.position];const art=backgroundFor(scene,current);
+  const current=flow[reader.position];
+  const direction=visualAt(scene.id,current,reader.choices,stageForScene(scene.id,reader.choices).cast);
+  const art=direction.art;
   const picture=el('','literary-picture');picture.setAttribute('aria-hidden','true');
-  if(art){const img=el('','','img');img.src=`./assets/${art.type==='cg'?'cg':'backgrounds'}/${art.file}`;img.alt='';img.decoding='async';picture.append(img);if(art.type==='cg')picture.classList.add('is-cg')}
+  picture.dataset.visualBeat=direction.beatId;picture.dataset.location=direction.location;picture.dataset.time=direction.time;
+  if(art){const img=el('','','img');img.src=`./assets/${art.type==='cg'?'cg':'backgrounds'}/${art.file}`;img.alt='';img.decoding='async';picture.append(img);if(art.type==='cg'){picture.classList.add('is-cg');picture.style.setProperty('--cg-url',`url("${img.src}")`)}}
   else picture.classList.add('no-art');
-  if(art?.type!=='cg') picture.append(renderStage(scene,flow,reader.position,reader.choices));
+  if(art?.type!=='cg') picture.append(renderStage({...direction,mode:direction.cast.length>2?'group':direction.cast.length===2?'pair':'solo',mood:stageForScene(scene.id,reader.choices).mood}));
   picture.append(el('','literary-vignette'));app.append(picture);
   const header=el('','reader-header');header.append(button('☰ Меню',goHome,'small-button'),el(`ЭПИЗОД ${scene.episode} / 10 · ${scene.id}`,'chapter-index'),el('ПОЦЕЛУЙ НА КРАЮ СВЕТА','draft-indicator'));app.append(header);
   const sheet=el('','reader-sheet');sheet.append(el(cleanLiteraryText(scene.title),'reader-scene','h2'));
-  if(reader.migrationNotice){sheet.append(el('После обновления темпа чтения продолжение начинается с начала текущей сцены. Прежний прогресс и выборы сохранены.','migration-note'));reader.migrationNotice=false;persist();}
+  if(reader.migrationNotice){sheet.append(el('После обновления визуальных переходов продолжение начинается с начала текущей сцены. Прежний прогресс и выборы сохранены.','migration-note'));reader.migrationNotice=false;persist();}
   if(current?.type==='page'){
     for(const paragraph of current.paragraphs)sheet.append(el(cleanLiteraryText(paragraph),'reader-paragraph','p'));
     const footer=el('','reader-footer');

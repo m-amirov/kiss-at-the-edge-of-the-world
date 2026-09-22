@@ -214,43 +214,43 @@
       "id": "s02-expedition-planning-iceland",
       "family": "cg",
       "path": "assets/cg/s02-expedition-planning-iceland.png",
-      "status": "integrated",
-      "runtime": "S02 route-planning beat"
+      "status": "available-unassigned",
+      "runtime": "Not active: manuscript S02 is a moving car followed by a cafe, not four people at a van table. Gallery/reference only pending authored scene."
     },
     {
       "id": "s13-skaftafell-travelers",
       "family": "cg",
       "path": "assets/cg/s13-skaftafell-travelers.png",
       "status": "integrated",
-      "runtime": "S13 Skaftafell ascent beat"
+      "runtime": "S13 authored source 0:12 onward; not the Vík breakfast or Skaftafell parking"
     },
     {
       "id": "s18-hofn-dance-lights",
       "family": "cg",
       "path": "assets/cg/s18-hofn-dance-lights.png",
       "status": "integrated",
-      "runtime": "S18 Eric dance beat"
+      "runtime": "S18 authored source 0:35-0:38 dance, before S18-C1 and independent of its result"
     },
     {
       "id": "s45-reykjavik-warm-montage",
       "family": "cg",
       "path": "assets/cg/s45-reykjavik-warm-montage.png",
       "status": "integrated",
-      "runtime": "S45 Nick finale"
+      "runtime": "S45 film review, before month-later home epilogue"
     },
     {
       "id": "s46-airport-goodbye",
       "family": "cg",
       "path": "assets/cg/s46-airport-goodbye.png",
       "status": "integrated",
-      "runtime": "S46 Damir airport goodbye"
+      "runtime": "S46 airport check-in source 0:1 onward, before month-later home epilogue"
     },
     {
       "id": "s47-reykjavik-harbour-alice",
       "family": "cg",
       "path": "assets/cg/s47-reykjavik-harbour-alice.png",
       "status": "integrated",
-      "runtime": "S47 Alice independent finale"
+      "runtime": "S47 harbour, before month-later domestic epilogue"
     }
   ],
   "routingTrace": {
@@ -288,5 +288,12 @@
       "status": "preview-integrated",
       "scope": "S18 only, not full new season"
     }
-  ]
+  ],
+  "visualDirection": {
+    "mode": "authored-source-reference",
+    "sceneCount": 66,
+    "file": "src/literary-visual-directions.js",
+    "condition": "unillustrated location uses neutral stage; do not display a CG for an unrelated event",
+    "currentGate": "ART_INCOMPLETE"
+  }
 }
