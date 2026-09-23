@@ -1,0 +1,9 @@
+{
+  "license": "SIL Open Font License 1.1",
+  "assets": [
+    {"family":"Cormorant Garamond","file":"CormorantGaramond[wght].ttf","sha256":"B20B7D9626DD956B2C5E558692AD328B1F19E3275E2782DB4FA07670D83F35E0","source":"https://github.com/google/fonts/tree/main/ofl/cormorantgaramond","cyrillic":true,"weights":"300-700"},
+    {"family":"EB Garamond","file":"EBGaramond[wght].ttf","sha256":"EF9512F92F6D579E5DC75AF59A5A4B1B8B47D2EDA89E00B954D44520E5369027","source":"https://github.com/google/fonts/tree/main/ofl/ebgaramond","cyrillic":true,"weights":"variable"},
+    {"family":"Literata","file":"Literata[opsz,wght].ttf","sha256":"B41138C9373112F32ABB589CC22E8674B06ED4048B0C513BE922BDD26F274440","source":"https://github.com/googlefonts/literata","cyrillic":true,"axes":"opsz,wght"},
+    {"family":"Manrope","file":"Manrope[wght].ttf","sha256":"3AE11C49DB0455A3CC33E37D380F20FDB8C7F8B41DC07625C177E3D87A9D6AE6","source":"https://github.com/google/fonts/tree/main/ofl/manrope","cyrillic":true,"weights":"200-800"}
+  ]
+}

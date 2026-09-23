@@ -10,7 +10,18 @@
     "output/playwright/premium-b-390x844.png",
     "output/playwright/premium-c-390x844.png",
     "output/playwright/premium-b-360x640.png",
-    "output/playwright/premium-b-landscape.png"
+    "output/playwright/premium-b-landscape.png",
+    "output/playwright/premium-a-type1-menu-1920x900.png",
+    "output/playwright/premium-a-type1-dialogue-1920x900.png",
+    "output/playwright/premium-a-type1-choice-1920x900.png",
+    "output/playwright/premium-a-type2-menu-1920x900.png",
+    "output/playwright/premium-a-type3-menu-1920x900.png",
+    "output/playwright/premium-a-type1-menu-390x844.png",
+    "output/playwright/premium-a-type2-menu-390x844.png",
+    "output/playwright/premium-a-type3-menu-390x844.png",
+    "output/playwright/premium-a-type1-choice-390x844.png",
+    "output/playwright/premium-a-type3-menu-360x640.png",
+    "output/playwright/premium-a-type1-choice-360x640.png"
   ],
   "checks": {
     "desktop_1920x900": "PASS",
@@ -20,6 +31,8 @@
     "menu_to_dialogue": "PASS",
     "local_assets_only": "PASS",
     "external_runtime_cdn": "PASS_NONE",
+    "font_cyrillic_cmap": "PASS_NONE_MISSING",
+    "font_license_manifest": "PASS_OFL_1_1",
     "production_runtime_modified": "NO",
     "visual_acceptance": "PROTOTYPE_REVIEW_READY_NOT_PRODUCTION_ACCEPTANCE"
   },
