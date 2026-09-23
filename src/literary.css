@@ -108,3 +108,37 @@ button:disabled{opacity:.43;cursor:not-allowed}
  .literary-picture.is-cg>img{inset:clamp(60px,9dvh,86px) 0 auto;width:100%;height:auto;max-height:min(44dvh,390px);object-fit:contain;object-position:center top}
  .literary-picture.is-cg .literary-vignette{background:linear-gradient(180deg,rgba(4,12,18,.2),transparent 30%,rgba(4,12,18,.8) 70%)}
 }
+
+/* Cinematic Romance A / Typography I. Fonts are bundled in assets/fonts. */
+@font-face{font-family:'Cinematic Cormorant';src:url('../assets/fonts/CormorantGaramond[wght].ttf') format('truetype');font-style:normal;font-weight:300 700;font-display:swap}
+@font-face{font-family:'Cinematic Manrope';src:url('../assets/fonts/Manrope[wght].ttf') format('truetype');font-style:normal;font-weight:200 800;font-display:swap}
+:root{--cinema-ink:#f6efe6;--cinema-muted:#d3c6b9;--cinema-accent:#d9a37c;--cinema-panel:rgba(12,20,27,.88);--cinema-line:rgba(244,218,187,.34);font-family:'Cinematic Manrope',Arial,sans-serif;background:#111b24;color:var(--cinema-ink)}
+body{font-family:'Cinematic Manrope',Arial,sans-serif;background:#111b24}
+button{font-family:'Cinematic Manrope',Arial,sans-serif;border-radius:3px;background:rgba(38,57,67,.88);border-color:var(--cinema-line);color:var(--cinema-ink);transition:background .22s ease,border-color .22s ease,transform .22s ease}
+button:hover,button:focus-visible{background:#765744;border-color:#f3d2a8;transform:translateY(-1px)}
+.literary-home::before{background-image:linear-gradient(90deg,rgba(7,15,22,.88),rgba(9,19,26,.48) 52%,rgba(9,19,26,.2)),var(--cover);background-position:center}
+.literary-home-card{width:min(760px,calc(100% - 32px));background:linear-gradient(135deg,rgba(10,20,28,.94),rgba(24,38,45,.88));border:1px solid var(--cinema-line);border-radius:4px;box-shadow:0 24px 100px #000b;backdrop-filter:blur(12px)}
+.home-title{font-family:'Cinematic Cormorant',Georgia,serif;font-size:clamp(48px,7vw,92px);font-weight:600;line-height:.92;letter-spacing:-.045em;color:var(--cinema-ink);text-wrap:balance}
+.home-summary,.reader-paragraph{font-family:'Cinematic Manrope',Arial,sans-serif;color:var(--cinema-muted);font-weight:500}
+.home-summary{font-size:clamp(17px,2vw,21px);line-height:1.6}.kicker,.chapter-index,.draft-indicator,.choice-label,.small-note,.chapter-list,.chapter-heading,.section-title,.small-button{font-family:'Cinematic Manrope',Arial,sans-serif}
+.kicker,.chapter-index,.draft-indicator,.choice-label{color:var(--cinema-accent)}
+.section-title,.chapter-heading{color:#f0d0aa}
+.home-actions{gap:9px}.home-actions>button{min-height:50px;text-align:left;padding:13px 16px}.home-actions>button.primary{background:#876045;border-color:#f5cd96}.home-actions>button.primary:hover{background:#a87551}
+.literary-picture>img{filter:saturate(.86)}.literary-picture.is-cg>img{filter:none}
+.reader-header{font-family:'Cinematic Manrope',Arial,sans-serif;background:linear-gradient(180deg,rgba(5,13,20,.9),transparent);padding-inline:max(16px,4vw)}
+.reader-sheet{width:min(940px,calc(100% - 32px));max-height:min(56dvh,620px);background:linear-gradient(135deg,rgba(10,21,29,.95),rgba(21,34,41,.92));border:1px solid var(--cinema-line);border-radius:4px;box-shadow:0 24px 90px #000b}
+.reader-scene{font-family:'Cinematic Cormorant',Georgia,serif;font-size:clamp(22px,3vw,32px);font-weight:600;line-height:1.05;color:#f0cda7;letter-spacing:-.02em}
+.reader-paragraph{font-size:calc(clamp(17px,2.15vw,22px)*var(--literary-scale));line-height:1.62;letter-spacing:.005em}
+.decision-question{font-family:'Cinematic Cormorant',Georgia,serif;font-size:calc(clamp(24px,3vw,34px)*var(--literary-scale));font-weight:600;line-height:1.12;color:#f5d8b4}
+.choice-button{font-size:calc(clamp(16px,1.8vw,19px)*var(--literary-scale));line-height:1.45;text-align:left;min-height:52px;background:rgba(47,67,77,.92);border-color:var(--cinema-line)}
+.choice-button:hover,.choice-button:focus-visible{background:#765744;border-color:#f3d2a8}
+.reader-content{scrollbar-color:#b88b68 rgba(0,0,0,.2);scrollbar-width:thin}
+.reader-footer .primary{min-width:120px}.page-counter{font-family:'Cinematic Manrope',Arial,sans-serif}
+.literary-contrast .reader-sheet{background:#061019;border-color:#ffe4bd}.literary-contrast .reader-paragraph,.literary-contrast .reader-scene{color:#fff}.literary-contrast button{border-color:#ffe4bd}
+@media(max-width:680px){
+ .literary-home{padding:12px}.literary-home-card{width:100%;max-height:calc(100dvh - 24px);padding:20px 18px}
+ .home-title{font-size:clamp(44px,13vw,68px)}.home-summary{font-size:17px}.home-actions>button{min-height:52px}
+ .reader-sheet{width:calc(100% - 20px);max-height:min(56dvh,540px);bottom:10px;padding:16px 15px}.reader-scene{font-size:24px}.reader-paragraph{font-size:calc(17px*var(--literary-scale));line-height:1.6}.decision-question{font-size:calc(24px*var(--literary-scale))}.choice-button{font-size:calc(16px*var(--literary-scale));min-height:54px;padding:13px 14px}
+ .reader-footer{padding-top:4px}.reader-footer .primary{min-width:110px}
+}
+@media (orientation:landscape) and (max-height:600px){.reader-sheet{max-height:48dvh;bottom:8px}.scene-stage{inset:5% 5% 26%}.literary-picture.is-cg>img{object-position:center top}.home-title{font-size:clamp(36px,6vw,58px)}}

@@ -28,3 +28,7 @@
 ## Статус
 
 `integrated for season 1`: 9 фоновых мастеров, 4 базовых портрета, 4 expression/pose-варианта и 7 CG (по одному ключевому mid-season моменту для каждого маршрута плюс четыре финала). Все изображения находятся в `assets/asset-manifest.json` и имеют runtime mapping. Дополнительные варианты остаются расширением за пределами зафиксированного сезона, а не незакрытыми обязательными сценами.
+
+## Production UI direction
+
+The approved production presentation is Cinematic Romance A with typography I: local Cormorant Garamond for the title and authored display headings, and local Manrope for interface, dialogue, choices and settings. The literary runtime owns the interface truth in `src/literary.css`; the concept prototypes remain historical references under `prototypes/premium-ui/`. Bundled font licenses are stored in `assets/fonts/`.

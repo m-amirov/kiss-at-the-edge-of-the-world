@@ -353,6 +353,24 @@
       "path": "assets/cg/s18-hofn-dance-action.png",
       "status": "preview-integrated",
       "scope": "S18 only, not full new season"
+    },
+    {
+      "id": "font-cormorant-garamond-variable",
+      "family": "font",
+      "path": "assets/fonts/CormorantGaramond[wght].ttf",
+      "status": "integrated",
+      "runtime": "src/literary.css title and authored headings",
+      "license": "SIL Open Font License 1.1",
+      "licenseFile": "assets/fonts/OFL-CormorantGaramond.txt"
+    },
+    {
+      "id": "font-manrope-variable",
+      "family": "font",
+      "path": "assets/fonts/Manrope[wght].ttf",
+      "status": "integrated",
+      "runtime": "src/literary.css interface, dialogue, choices and settings",
+      "license": "SIL Open Font License 1.1",
+      "licenseFile": "assets/fonts/OFL-Manrope.txt"
     }
   ],
   "visualDirection": {

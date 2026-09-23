@@ -1,0 +1,13 @@
+{
+  "scope":"production literary UI",
+  "modes":["default","high-contrast setting","reduced-motion setting","text scale settings"],
+  "checks":{
+    "keyboard_focus":"PASS_BY_FOCUS_VISIBLE_CSS",
+    "touch_targets":"PASS_MIN_HEIGHT_46_AND_CHOICE_52",
+    "long_russian_text":"PASS_READER_CONTENT_SCROLLS_INDEPENDENTLY",
+    "reduced_motion":"PASS",
+    "contrast_setting":"PASS",
+    "color_only_state":"PASS_NOT_USED_FOR_CRITICAL_STATE"
+  },
+  "limitations":["WebKit independent browser lane was not available in the local Playwright CLI session."]
+}

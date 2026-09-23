@@ -12,7 +12,9 @@ const textSettingsKey = 'kiss-at-the-edge-of-the-world:literary-settings:v1';
 const literaryCloudKey = 'kiss-at-the-edge-of-the-world:literary-season:v1';
 const routeName = { A: 'Эрик', B: 'Ник', C: 'Дамир', D: 'Алиса' };
 const stageAsset = { alice:'alice-stage.png', eric:'eric-stage.png', nick:'nick-stage.png', damir:'damir-stage.png' };
-const cover = './assets/backgrounds/snaefellsnes-master.png';
+// This value is consumed by a url() inside src/literary.css; resolve from the
+// stylesheet directory so the cover never becomes /src/assets/... at runtime.
+const cover = '../assets/backgrounds/snaefellsnes-master.png';
 const blank = () => ({ schemaVersion:3,sceneId:'S01',position:0,choices:{},finished:false, visited:['S01'],runId:`literary-${Date.now()}-${crypto.randomUUID?.() ?? Math.random().toString(36).slice(2)}`, revision:0 });
 function parseSaved(raw) {
   try {
