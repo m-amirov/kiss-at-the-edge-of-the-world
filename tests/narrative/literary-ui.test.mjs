@@ -38,3 +38,11 @@ test('Cinematic A mobile polish keeps artwork visible without a nested menu scro
   assert.match(css, /\.scene-stage\[data-mode="group"\] \.stage-character\{width:36vw/);
   assert.match(css, /\.literary-reader:has\(\.literary-picture\.is-cg\) \.reader-sheet\{max-height:min\(35dvh,300px\)/);
 });
+
+test('ending screens use authored emotional headings instead of engine copy', () => {
+  for (const heading of ['Дорога, которую выбирают вдвоём', 'Без чужого голоса', 'Начать заново — вместе', 'Свой следующий маршрут']) {
+    assert.match(player, new RegExp(heading.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
+  }
+  assert.doesNotMatch(player, /Конец первого сезона|Это завершение выбранной истории|начать другое прохождение можно из меню/);
+  assert.match(player, /sheet\.prepend\(el\(endingHeadings\[scene\.id\]/);
+});

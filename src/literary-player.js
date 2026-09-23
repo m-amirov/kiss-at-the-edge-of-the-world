@@ -11,6 +11,12 @@ const app = document.getElementById('literary-app');
 const textSettingsKey = 'kiss-at-the-edge-of-the-world:literary-settings:v1';
 const literaryCloudKey = 'kiss-at-the-edge-of-the-world:literary-season:v1';
 const routeName = { A: 'Эрик', B: 'Ник', C: 'Дамир', D: 'Алиса' };
+const endingHeadings = {
+  S44: 'Дорога, которую выбирают вдвоём',
+  S45: 'Без чужого голоса',
+  S46: 'Начать заново — вместе',
+  S47: 'Свой следующий маршрут'
+};
 const stageAsset = { alice:'alice-stage.png', eric:'eric-stage.png', nick:'nick-stage.png', damir:'damir-stage.png' };
 // This value is consumed by a url() inside src/literary.css; resolve from the
 // stylesheet directory so the cover never becomes /src/assets/... at runtime.
@@ -167,7 +173,9 @@ function renderReader(){
   if(art?.type!=='cg') picture.append(renderStage({...direction,mode:direction.cast.length>2?'group':direction.cast.length===2?'pair':'solo',mood:stageForScene(scene.id,reader.choices).mood}));
   picture.append(el('','literary-vignette'));app.append(picture);
   const header=el('','reader-header');header.append(button('☰ Меню',goHome,'small-button'),el(`ЭПИЗОД ${scene.episode} / 10 · ${scene.id}`,'chapter-index'),el('ПОЦЕЛУЙ НА КРАЮ СВЕТА','draft-indicator'));app.append(header);
-  const sheet=el('','reader-sheet');sheet.append(el(cleanLiteraryText(scene.title),'reader-scene','h2'));
+  const isEnding=['S44','S45','S46','S47'].includes(scene.id);
+  const sheet=el('','reader-sheet');
+  if(!isEnding)sheet.append(el(cleanLiteraryText(scene.title),'reader-scene','h2'));
   if(reader.migrationNotice){sheet.append(el('После обновления визуальных переходов продолжение начинается с начала текущей сцены. Прежний прогресс и выборы сохранены.','migration-note'));reader.migrationNotice=false;persist();}
   if(current?.type==='page'){
     const content=el('','reader-content');
@@ -190,13 +198,11 @@ function renderReader(){
   }else{
     const next=nextLiteraryScene(reader.sceneId,reader.choices);
     if(next && byId.has(next))sheet.append(button(`Следующая сцена → ${next}`,()=>{reader.sceneId=next;reader.position=0;if(!reader.visited.includes(next))reader.visited.push(next);persist();renderReader()},'primary'));
-    else if(['S44','S45','S46','S47'].includes(scene.id)){
+    else if(isEnding){
       if(!reader.finished){reader.finished=true;persist()}
       sheet.classList.add('terminal-sheet');
-      const content=el('','reader-content');
-      content.append(el('Конец первого сезона. Это завершение выбранной истории; начать другое прохождение можно из меню.','reader-paragraph'));
-      sheet.append(content);
       sheet.append(button('Вернуться в меню',goHome,'primary'));
+      sheet.prepend(el(endingHeadings[scene.id],'reader-scene','h2'));
     }else{sheet.append(el('Следующая сцена недоступна: ошибка структуры сценария.','reader-paragraph'));sheet.append(button('В меню',goHome,'primary'))}
   }
   app.append(sheet);

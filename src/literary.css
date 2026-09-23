@@ -171,3 +171,121 @@ button:hover,button:focus-visible{background:#765744;border-color:#f3d2a8;transf
  .literary-reader:has(.literary-picture.is-cg) .reader-sheet{max-height:42dvh}
  .literary-reader:has(.reader-sheet.terminal-sheet) .reader-sheet{top:38dvh;bottom:auto;max-height:calc(62dvh - 14px)}
 }
+
+/* Final cinematic composition: the artwork owns the whole viewport and the
+   terminal copy is a lower layer of the same image, never a second card. */
+.literary-reader:has(.reader-sheet.terminal-sheet) .literary-picture.is-cg {
+  z-index: 0;
+}
+.literary-reader:has(.reader-sheet.terminal-sheet) .literary-picture.is-cg::before {
+  filter: blur(28px) brightness(.62) saturate(.82);
+}
+.literary-reader:has(.reader-sheet.terminal-sheet) .literary-picture.is-cg > img {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
+  object-position: center;
+}
+.literary-reader:has(.reader-sheet.terminal-sheet) .literary-picture.is-cg .literary-vignette {
+  background: linear-gradient(180deg,rgba(4,12,18,.08) 0%,rgba(4,12,18,.02) 42%,rgba(4,12,18,.18) 58%,rgba(4,12,18,.94) 100%);
+}
+.literary-reader:has(.reader-sheet.terminal-sheet) .reader-sheet {
+  top: auto;
+  bottom: 0;
+  width: min(980px,100%);
+  max-height: min(38dvh,340px);
+  padding: clamp(22px,3vw,38px) max(20px,4vw) max(20px,env(safe-area-inset-bottom));
+  background: linear-gradient(180deg,rgba(7,15,22,0),rgba(7,15,22,.76) 22%,rgba(7,15,22,.94) 100%);
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+.literary-reader:has(.reader-sheet.terminal-sheet) .reader-sheet .reader-content {
+  overflow: visible;
+}
+.literary-reader:has(.reader-sheet.terminal-sheet) .reader-sheet .reader-scene {
+  color: #f6d3ae;
+  text-shadow: 0 2px 18px #000;
+}
+.literary-reader:has(.reader-sheet.terminal-sheet) .reader-sheet .reader-paragraph {
+  max-width: 62ch;
+  color: #f4eee8;
+  text-shadow: 0 2px 12px #000;
+}
+.literary-reader:has(.reader-sheet.terminal-sheet) .reader-sheet > .primary {
+  width: auto;
+  min-width: 190px;
+  margin-top: 4px;
+  background: rgba(151,101,72,.86);
+  border-color: rgba(249,218,182,.72);
+  border-radius: 999px;
+  text-align: center;
+}
+
+/* Premium menu: a quiet editorial column over the cover, with controls as
+   outlined actions rather than a generic form card. */
+.literary-home {
+  align-items: center;
+  overflow: hidden;
+  padding: clamp(28px,6vw,88px) clamp(22px,8vw,150px);
+}
+.literary-home::before {
+  background-image: linear-gradient(90deg,rgba(5,13,20,.92),rgba(5,13,20,.66) 42%,rgba(5,13,20,.12) 78%),var(--cover);
+}
+.literary-home::after {
+  background: linear-gradient(90deg,rgba(4,11,18,.32),transparent 62%),linear-gradient(0deg,rgba(4,11,18,.52),transparent 35%);
+}
+.literary-home-card {
+  width: min(590px,58vw);
+  margin: 0;
+  padding: 0;
+}
+.literary-home-card::before {
+  content: '';
+  display: block;
+  width: 58px;
+  height: 1px;
+  margin-bottom: 24px;
+  background: var(--cinema-accent);
+  box-shadow: 0 0 18px rgba(217,163,124,.6);
+}
+.home-title { max-width: 8ch; margin: 14px 0 24px; }
+.home-summary { max-width: 31ch; }
+.home-actions { max-width: 430px; gap: 8px; margin-top: 30px; }
+.home-actions > button {
+  min-height: 54px;
+  padding: 14px 18px;
+  border: 1px solid rgba(244,218,187,.42);
+  border-radius: 999px;
+  background: rgba(10,20,27,.28);
+  letter-spacing: .01em;
+  transition: background .22s ease,border-color .22s ease,transform .22s ease,box-shadow .22s ease;
+}
+.home-actions > button:hover,.home-actions > button:focus-visible {
+  background: rgba(132,88,65,.72);
+  border-color: #f3d2a8;
+  box-shadow: 0 8px 26px rgba(0,0,0,.28);
+}
+.home-actions > button.primary { background: rgba(164,108,76,.9); }
+.chapter-list { opacity: .78; }
+
+@media(max-width:680px){
+  .literary-home { align-items: flex-end; padding: 24px 20px max(24px,env(safe-area-inset-bottom)); }
+  .literary-home::before { background-image: linear-gradient(180deg,rgba(5,13,20,.08),rgba(5,13,20,.42) 44%,rgba(5,13,20,.96) 100%),var(--cover); background-position: 62% center; }
+  .literary-home-card { width: 100%; padding-bottom: 0; }
+  .literary-home-card::before { margin-bottom: 16px; }
+  .home-title { font-size: clamp(46px,14vw,68px); margin-bottom: 16px; }
+  .home-summary { font-size: 16px; line-height: 1.5; }
+  .home-actions { grid-template-columns: 1fr; max-width: none; margin-top: 22px; }
+  .home-actions > button { min-height: 52px; }
+  .literary-home-card .chapter-list { display: none; }
+  .literary-reader:has(.reader-sheet.terminal-sheet) .literary-picture.is-cg > img { object-fit: contain; }
+  .literary-reader:has(.reader-sheet.terminal-sheet) .reader-sheet { max-height: min(35dvh,300px); padding: 22px 18px max(18px,env(safe-area-inset-bottom)); }
+  .literary-reader:has(.reader-sheet.terminal-sheet) .reader-sheet .reader-scene { font-size: 22px; }
+  .literary-reader:has(.reader-sheet.terminal-sheet) .reader-sheet .reader-paragraph { font-size: 16px; line-height: 1.45; margin-bottom: 12px; }
+  .literary-reader:has(.reader-sheet.terminal-sheet) .reader-sheet > .primary { min-width: 100%; }
+}

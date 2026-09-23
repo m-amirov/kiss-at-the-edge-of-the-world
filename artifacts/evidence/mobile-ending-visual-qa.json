@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "runtime": "http://127.0.0.1:4173/literary.html",
+  "commit": "a701c0dce4fb260abb595e5349b174cb06e1b316",
+  "browser": "Playwright Chromium",
+  "scenarios": "Each case was bootstrapped to the authored final page, then the final Далее action was clicked before capture.",
+  "findings": {
+    "cg_full_viewport_composition": true,
+    "bottom_overlay": true,
+    "no_empty_gap": true,
+    "faces_and_key_details_readable": true,
+    "return_button_available": true,
+    "technical_text_absent": true,
+    "overflow_absent": true,
+    "console_errors": 0
+  },
+  "cases": [
+    {"sceneId":"S44","visualEvent":"eric-month-later","cg":"./assets/cg/s44-eric-epilogue-month-later.png","image":{"naturalWidth":1672,"naturalHeight":941},"viewports":[[390,844],[360,640]],"screenshots":["output/playwright/ending-S44-390x844.png","output/playwright/ending-S44-360x640.png"]},
+    {"sceneId":"S45","visualEvent":"nick-month-later","cg":"./assets/cg/s45-nick-home-epilogue-month-later.png","image":{"naturalWidth":1672,"naturalHeight":941},"viewports":[[390,844],[360,640]],"screenshots":["output/playwright/ending-S45-390x844.png","output/playwright/ending-S45-360x640.png"]},
+    {"sceneId":"S46","visualEvent":"damir-month-later","cg":"./assets/cg/s46-damir-epilogue-month-later.png","image":{"naturalWidth":1672,"naturalHeight":941},"viewports":[[390,844],[360,640]],"screenshots":["output/playwright/ending-S46-390x844.png","output/playwright/ending-S46-360x640.png"]},
+    {"sceneId":"S47","visualEvent":"alice-month-later","cg":"./assets/cg/s47-alice-home-epilogue-month-later.png","image":{"naturalWidth":1672,"naturalHeight":941},"viewports":[[390,844],[360,640]],"screenshots":["output/playwright/ending-S47-390x844.png","output/playwright/ending-S47-360x640.png"]}
+  ]
+}
