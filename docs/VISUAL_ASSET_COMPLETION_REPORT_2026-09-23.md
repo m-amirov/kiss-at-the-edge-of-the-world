@@ -11,10 +11,11 @@ gate остаётся заблокированным ограничением ho
 
 - `S02`: `s02-roadside-cafe.png` назначен строго на `roadside-cafe` `[0,31]`;
   до cue сохраняется дорожная сцена.
-- `S26`: `s26-eric-choice.png` назначен строго на ветку `S26-C1=A`, chunk 2,
-  paragraph 0; ветви B/C/D его не получают. Сценарный момент — согласованное
-  объятие Алисы и Эрика во дворе гостевого дома Seyðisfjörður поздним вечером
-  дня 12.
+- `S26`: `s26-eric-choice.png` назначен строго на общий continuation cue
+  `eric-consensual-embrace` (`chunk 7`, `paragraph 0`) при `S26-C1=A`;
+  во время разговора, промежуточных откликов и на ветвях B/C/D его нет.
+  Сценарный момент — согласованное объятие Алисы и Эрика во дворе гостевого
+  дома Seyðisfjörður поздним вечером дня 12.
 - `node --test tests/narrative/literary-visual.test.mjs` — PASS, 9/9,
   включая routing, route isolation и save/load-shaped round trip.
 - Browser runtime routing был открыт в локальном in-app browser и загрузился,

@@ -112,14 +112,15 @@ test('the page boundary never mixes different authored visual beats',()=>{
  }
 });
 
-test('S26 Eric CG is isolated to the authored Eric route choice',()=>{
+test('S26 Eric CG appears only at the authored consensual embrace and stays isolated',()=>{
  for(const route of ['A','B','C','D']){
   const {flow,choices}=complete('S26',{'S26-C90':'A','S26-C1':route});
   const routeChunk={A:2,B:8,C:14,D:20}[route];
-  const at=indexOfSource(flow,routeChunk,0);
-  const shotAt=shot('S26',flow,at,choices);
-  if(route==='A') assert.equal(shotAt.art?.file,'s26-eric-choice.png');
-  else assert.notEqual(shotAt.art?.file,'s26-eric-choice.png');
+  const routeAt=indexOfSource(flow,routeChunk,0);
+  const embraceAt=route==='A'?indexOfSource(flow,7,0):routeAt;
+  assert.notEqual(shot('S26',flow,routeAt,choices).art?.file,'s26-eric-choice.png');
+  if(route==='A') assert.equal(shot('S26',flow,embraceAt,choices).art?.file,'s26-eric-choice.png');
+  else assert.notEqual(shot('S26',flow,embraceAt,choices).art?.file,'s26-eric-choice.png');
  }
 });
 
@@ -130,7 +131,7 @@ test('S02 and S26 visual state survives a save/load-shaped choice round trip',()
  assert.equal(shot('S02',s02.flow,s02Cafe,s02Saved).art?.file,'s02-roadside-cafe.png');
  const s26=complete('S26',{'S26-C90':'A','S26-C1':'A'});
  const s26Saved=JSON.parse(JSON.stringify(s26.choices));
- const s26Eric=indexOfSource(s26.flow,2,0);
+ const s26Eric=indexOfSource(s26.flow,7,0);
  assert.equal(shot('S26',s26.flow,s26Eric,s26Saved).art?.file,'s26-eric-choice.png');
 });
 
