@@ -32,3 +32,8 @@
 ## Production UI direction
 
 The approved production presentation is Cinematic Romance A with typography I: local Cormorant Garamond for the title and authored display headings, and local Manrope for interface, dialogue, choices and settings. The literary runtime owns the interface truth in `src/literary.css`; the concept prototypes remain historical references under `prototypes/premium-ui/`. Bundled font licenses are stored in `assets/fonts/`.
+### Production visual polish — Cinematic Romance A
+
+The production reader keeps the approved Cormorant Garamond + Manrope system and now treats the cover art as the menu surface: controls sit in a localized dark gradient, with no nested menu-card scrollbar. Portrait group staging enlarges the four-character cast with controlled overlap. CG dialogue uses a letterboxed image over a dimmed copy; ending sheets receive a compact terminal layout so the final CG and ending controls remain adjacent on phones.
+
+Browser evidence is recorded in `artifacts/evidence/web-game-playtest.json`. The capture procedure advances the real UI, then records the live scene id, visual-event id and image source; scene ids alone are not accepted as visual proof. The initial cover 404 was caused by resolving a CSS-relative asset as `/src/assets/...`; the player now uses the runtime-relative `../assets/...` path.

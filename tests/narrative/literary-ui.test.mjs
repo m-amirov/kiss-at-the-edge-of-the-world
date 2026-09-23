@@ -30,3 +30,11 @@ test('production literary UI preserves mobile reading and control invariants', (
   assert.match(css, /orientation:landscape/);
   assert.match(css, /prefers-reduced-motion:reduce/);
 });
+
+test('Cinematic A mobile polish keeps artwork visible without a nested menu scroller', () => {
+  assert.match(css, /\.literary-home::after\{[^}]*linear-gradient/);
+  assert.match(css, /\.literary-home-card\{[^}]*overflow:visible/);
+  assert.match(css, /\.literary-home-card \.chapter-list\{display:grid;grid-template-columns:repeat\(2/);
+  assert.match(css, /\.scene-stage\[data-mode="group"\] \.stage-character\{width:36vw/);
+  assert.match(css, /\.literary-reader:has\(\.literary-picture\.is-cg\) \.reader-sheet\{max-height:min\(35dvh,300px\)/);
+});

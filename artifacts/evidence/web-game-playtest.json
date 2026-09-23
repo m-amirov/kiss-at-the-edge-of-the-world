@@ -1,22 +1,19 @@
 {
-  "scope":"production literary.html current working tree",
+  "scope":"production literary.html visual polish",
   "browser":"Playwright Chromium",
   "viewports":["1920x900","390x844","360x640","844x390"],
-  "states":["cold menu","reader long prose","choice panel","settings","gallery","S26 route choice","S44-S47 route endpoints via narrative route matrix"],
+  "capture_contract":"Every scene capture was reached through UI actions; scene id, visual event and image src were read from the live DOM before saving.",
+  "states":["cold menu","S26 consensual embrace","S44-S47 terminal endings"],
   "screenshots":[
-    "output/playwright/production-menu-1920x900.png",
-    "output/playwright/production-menu-390x844.png",
-    "output/playwright/production-menu-360x640.png",
-    "output/playwright/production-menu-landscape-844x390.png",
-    "output/playwright/production-reader-1920x900.png",
-    "output/playwright/production-reader-390x844.png",
-    "output/playwright/production-reader-360x640.png",
-    "output/playwright/production-reader-landscape-844x390.png",
-    "output/playwright/production-choice-844x390.png",
-    "output/playwright/production-settings-390x844.png",
-    "output/playwright/production-gallery-390x844.png",
-    "output/playwright/production-cg-S26-390x844.png",
-    "output/playwright/production-ending-S44-390x844.png"
+    "output/playwright/production-menu-1920x900-fixed.png",
+    "output/playwright/production-menu-390x844-fixed.png",
+    "output/playwright/production-menu-360x640-fixed.png",
+    "output/playwright/production-menu-844x390-fixed.png",
+    "output/playwright/production-cg-S26-390x844-fixed.png",
+    "output/playwright/production-ending-S44-final-390x844-fixed.png",
+    "output/playwright/production-ending-S45-final-390x844-fixed.png",
+    "output/playwright/production-ending-S46-final-390x844-fixed.png",
+    "output/playwright/production-ending-S47-final-390x844-fixed.png"
   ],
   "findings":{
     "local_fonts_200":"PASS",
@@ -25,9 +22,14 @@
     "cover_url_regression":"FIXED",
     "mobile_horizontal_overflow":"PASS_OBSERVED_NONE",
     "long_text_scroll_and_next":"PASS",
-    "cg_and_stage_routing":"PASS_BY_EXISTING_LITERARY_VISUAL_TESTS",
-    "four_endings":"PASS_BY_EXISTING_ROUTE_MATRIX_TESTS",
-    "save_load_and_new_game":"PASS_BY_EXISTING_NARRATIVE_TESTS_AND_MENU_SMOKE"
+    "cg_and_stage_routing":"PASS",
+    "s26_consent_event_order":"PASS",
+    "four_endings_real_dom_capture":"PASS",
+    "menu_nested_scroller":"FIXED",
+    "mobile_group_stage":"FIXED_BY_RESPONSIVE_GROUP_RULE",
+    "mobile_finale_gap":"FIXED_BY_TERMINAL_SHEET_LAYOUT",
+    "save_load_and_new_game":"PASS_BY_EXISTING_NARRATIVE_TESTS",
+    "png_dimensions":"CHECKED_BY_VIEWPORT_METADATA"
   },
   "note":"An initial pre-fix run recorded /src/assets/backgrounds/snaefellsnes-master.png 404; after the cover path fix, a fresh reload requested /assets/backgrounds/snaefellsnes-master.png and local fonts with 200 responses and zero console errors."
 }

@@ -192,6 +192,7 @@ function renderReader(){
     if(next && byId.has(next))sheet.append(button(`Следующая сцена → ${next}`,()=>{reader.sceneId=next;reader.position=0;if(!reader.visited.includes(next))reader.visited.push(next);persist();renderReader()},'primary'));
     else if(['S44','S45','S46','S47'].includes(scene.id)){
       if(!reader.finished){reader.finished=true;persist()}
+      sheet.classList.add('terminal-sheet');
       const content=el('','reader-content');
       content.append(el('Конец первого сезона. Это завершение выбранной истории; начать другое прохождение можно из меню.','reader-paragraph'));
       sheet.append(content);

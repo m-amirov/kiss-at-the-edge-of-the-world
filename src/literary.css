@@ -142,3 +142,32 @@ button:hover,button:focus-visible{background:#765744;border-color:#f3d2a8;transf
  .reader-footer{padding-top:4px}.reader-footer .primary{min-width:110px}
 }
 @media (orientation:landscape) and (max-height:600px){.reader-sheet{max-height:48dvh;bottom:8px}.scene-stage{inset:5% 5% 26%}.literary-picture.is-cg>img{object-position:center top}.home-title{font-size:clamp(36px,6vw,58px)}}
+
+/* Cinematic A polish: the artwork is the menu, while controls live in a readable light pocket. */
+.literary-home{align-items:flex-start;justify-content:flex-start;overflow:auto;padding:clamp(24px,5vw,72px) clamp(18px,6vw,120px)}
+.literary-home::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgba(5,13,20,.9) 0%,rgba(5,13,20,.7) 38%,rgba(5,13,20,.18) 68%,transparent 100%)}
+.literary-home-card{position:relative;z-index:1;width:min(650px,62vw);max-height:none;overflow:visible;margin:clamp(18px,5vh,58px) 0 0;padding:clamp(18px,3vw,36px) 0;background:transparent;border:0;border-radius:0;box-shadow:none;backdrop-filter:none}
+.literary-home-card .chapter-list{max-height:none;overflow:visible}
+
+@media(max-width:680px){
+ .literary-home{align-items:flex-start;overflow:auto;padding:12px 14px 24px}
+ .literary-home::after{background:linear-gradient(180deg,rgba(5,13,20,.78),rgba(5,13,20,.9) 72%,rgba(5,13,20,.96))}
+ .literary-home-card{width:min(100%,520px);max-height:none;margin:clamp(22px,7dvh,54px) auto 0;padding:18px 4px 22px}
+ .literary-home-card .chapter-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 18px;margin-top:18px}
+ .literary-home-card .chapter-heading{grid-column:1/-1;margin-bottom:4px}
+ .scene-stage[data-mode="group"]{inset:7% -5% 29%;gap:0;overflow:visible}
+ .scene-stage[data-mode="group"] .stage-character{width:36vw;min-width:0;height:100%;margin-inline:-6vw}
+ .literary-picture.is-cg>img{inset:clamp(54px,7dvh,72px) 0 auto;max-height:min(52dvh,440px);object-position:center top}
+ .literary-reader:has(.literary-picture.is-cg) .reader-sheet{max-height:min(35dvh,300px);bottom:8px}
+ .literary-reader:has(.reader-sheet.terminal-sheet) .reader-sheet{top:34dvh;bottom:auto;max-height:calc(66dvh - 14px)}
+}
+
+@media (orientation:landscape) and (max-height:600px){
+ .literary-home{padding:12px 28px}
+ .literary-home-card{width:min(560px,68vw);margin-top:8px;padding-block:10px}
+ .scene-stage[data-mode="group"]{inset:5% -2% 25%}
+ .scene-stage[data-mode="group"] .stage-character{width:28vw;margin-inline:-4vw}
+ .literary-picture.is-cg>img{max-height:62dvh}
+ .literary-reader:has(.literary-picture.is-cg) .reader-sheet{max-height:42dvh}
+ .literary-reader:has(.reader-sheet.terminal-sheet) .reader-sheet{top:38dvh;bottom:auto;max-height:calc(62dvh - 14px)}
+}
