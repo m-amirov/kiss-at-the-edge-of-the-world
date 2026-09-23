@@ -16,7 +16,7 @@ desktop/mobile screenshots.
 | S06 | Hveragerði geothermal valley, day 3 | Alice/Eric | stage only | MISSING_APPROPRIATE_ART |
 | S07 | guesthouse shared kitchen, evening | group | stage only | MISSING_APPROPRIATE_ART |
 | S08 | Hveragerði guesthouse, day 4 morning | Alice/Damir | stage only | MISSING_APPROPRIATE_ART |
-| S66 | Hveragerði greenhouse, day 4 | group | stage only | MISSING_APPROPRIATE_ART |
+| S66 | Hveragerði greenhouse, day 4 | group | dedicated desktop + independent portrait background | COVERED_EVENT |
 | S09 | Skógafoss, day 5 morning | group; trail cue | reuse Skógafoss master | REUSE |
 | S10 | road/Vík petrol station, day 5 | Alice/Eric | stage only | MISSING_APPROPRIATE_ART |
 | S11 | Reynisfjara, day 6 morning | group | reuse Reynisfjara master | REUSE |
@@ -79,9 +79,9 @@ desktop/mobile screenshots.
 - 66 authored scenes audited; 66 rows above.
 - 9 scenes have truthful reusable location coverage at scene start; 6 scenes
   have authored CG coverage (including route-specific/epilogue beats).
-- 44 scenes remain without a scene-specific background or CG and therefore
+- 43 scenes remain without a scene-specific background or CG and therefore
   remain `MISSING_APPROPRIATE_ART`; stage presentation is not counted as full
-  location coverage.
+  location coverage. S66 was closed by commit `9eb70f4`.
 - `s02-expedition-planning-iceland.png` and `myvatn-pool-master.png` remain
   `UNUSED_ASSET`/`available-unassigned` until an authored event proves their use.
 - This ledger intentionally does not approve any asset without current runtime
