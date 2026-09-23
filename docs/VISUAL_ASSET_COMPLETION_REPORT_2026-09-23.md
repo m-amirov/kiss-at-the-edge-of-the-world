@@ -25,7 +25,7 @@
 - `node --test tests/narrative/literary-visual.test.mjs` — PASS (6/6), включая S02, S13, S18 и финальные visual beats.
 - `npm run literary:compile` — PASS (`66 scenes`, `619 chunks`).
 - Полный `npm run test:narrative` ранее дошёл до visual suite и выявил только устаревшее ожидание теста; после его корректировки targeted visual suite проходит. Полный npm barrier после последней правки не перезапускался.
-- SHA-256 и provenance новых файлов сохранены в `artifacts/evidence/rights-manifest.json`.
+- SHA-256 и provenance новых файлов сохранены в `assets/provenance/rights-manifest.json`.
 
 ## Что осталось
 

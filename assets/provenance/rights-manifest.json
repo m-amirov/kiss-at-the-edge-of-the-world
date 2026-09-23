@@ -1,0 +1,9 @@
+{
+  "generatedAt": "2026-09-23",
+  "assets": [
+    {"path":"assets/cg/s44-eric-epilogue-month-later.png","sha256":"7F543844BF078EEFBFB1DBD916BC305DF81587FEA519BC24AC1B7DCA8B17A02E","method":"AI-generated with Eric and Alice master references","source":"OpenAI image generation","license":"project-generated"},
+    {"path":"assets/cg/s45-nick-home-epilogue-month-later.png","sha256":"EDF7E5DA1B20EB4EF5D4CA390BB7A3D63244A6DFEE21E7FEB57191EA5EF13A71","method":"AI-generated with Nick and Alice master references","source":"OpenAI image generation","license":"project-generated"},
+    {"path":"assets/cg/s46-damir-epilogue-month-later.png","sha256":"D8A69727471E7634034B88EB9AA6C991065E1426484FAA17B2261E1642A1A470","method":"AI-generated with Damir and Alice master references","source":"OpenAI image generation","license":"project-generated"},
+    {"path":"assets/cg/s47-alice-home-epilogue-month-later.png","sha256":"B51BB844078800F2F740DC7E8E04D6E8AF40712FE6CFF8507A7049AB35B1BDA7","method":"AI-generated with Alice master reference","source":"OpenAI image generation","license":"project-generated"}
+  ]
+}

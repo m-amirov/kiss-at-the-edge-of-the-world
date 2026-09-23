@@ -106,7 +106,7 @@ These are explicit P0 checks in this kit:
 - `artifacts/evidence/responsive-layout-report.json`
 - `artifacts/evidence/interaction-guard-report.json`
 - `artifacts/evidence/content-duration-report.json`
-- `artifacts/evidence/rights-manifest.json`
+- `assets/provenance/rights-manifest.json`
 - `artifacts/evidence/draft-metadata-checklist.json`
 - `artifacts/evidence/final-screenshots.json`
 - `artifacts/evidence/final-gameplay-videos.json`

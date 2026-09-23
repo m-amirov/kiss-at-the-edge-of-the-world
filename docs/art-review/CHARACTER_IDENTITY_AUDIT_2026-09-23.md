@@ -13,10 +13,10 @@
 
 Comparative panels:
 
-- `artifacts/evidence/identity-comparison-alice.svg`
-- `artifacts/evidence/identity-comparison-eric.svg`
-- `artifacts/evidence/identity-comparison-nick.svg`
-- `artifacts/evidence/identity-comparison-damir.svg`
+- `docs/art-review/identity-comparison-alice.svg`
+- `docs/art-review/identity-comparison-eric.svg`
+- `docs/art-review/identity-comparison-nick.svg`
+- `docs/art-review/identity-comparison-damir.svg`
 
 The existing route-CG set (`eric-route-hand`, `nick-route-editing`, `damir-route-letter`, `alice-independent-ending`, `eric-myvattn-dawn`, `nick-akureyri-edit`, `damir-road-letter`) was visually checked against the same masters and retained; no material identity drift was found.
 
