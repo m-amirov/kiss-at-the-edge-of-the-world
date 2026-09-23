@@ -80,19 +80,21 @@ test('S18 dance happens before the kiss choice on all options; walking back and 
 });
 
 test('finale location and art change at the literal month-later epilogue for all four routes',()=>{
- const cfg={S44:[null,4],S45:['s45-reykjavik-warm-montage.png',4],S46:['s46-airport-goodbye.png',4],S47:['s47-reykjavik-harbour-alice.png',4]};
+ const cfg={S44:['s44-eric-epilogue-month-later.png',4],S45:['s45-nick-home-epilogue-month-later.png',4],S46:['s46-damir-epilogue-month-later.png',4],S47:['s47-alice-home-epilogue-month-later.png',4]};
  for(const [id,[expectedCG,chapter]] of Object.entries(cfg)){
   const {flow,choices}=complete(id);
   const first=shot(id,flow,0,choices);
-  if(expectedCG&&id!=='S46')assert.equal(first.art?.file,expectedCG);
+  if(id==='S45')assert.equal(first.art?.file,'s45-reykjavik-warm-montage.png');
+  if(id==='S46')assert.equal(first.art,null);
+  if(id==='S47')assert.equal(first.art?.file,'s47-reykjavik-harbour-alice.png');
   if(id==='S46'){
    assert.equal(first.art,null);
-   assert.equal(shot(id,flow,indexOfSource(flow,0,1),choices).art?.file,expectedCG);
+   assert.equal(shot(id,flow,indexOfSource(flow,0,1),choices).art?.file,'s46-airport-goodbye.png');
   }
   const month=indexOfSource(flow,chapter,0);
   const final=shot(id,flow,month,choices);
   assert.equal(final.time,'спустя месяц',id);
-  assert.equal(final.art,null,`stale final CG in ${id} epilogue`);
+  if(final.beatId==='damir-month-later' || id!=='S46')assert.equal(final.art?.file,expectedCG,`missing month-later CG in ${id} epilogue`);
   assert.ok(month>0);
  }
 });

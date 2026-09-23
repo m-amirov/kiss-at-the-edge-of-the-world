@@ -251,6 +251,46 @@
       "path": "assets/cg/s47-reykjavik-harbour-alice.png",
       "status": "integrated",
       "runtime": "S47 harbour, before month-later domestic epilogue"
+    },
+    {
+      "id": "s44-eric-epilogue-month-later",
+      "family": "cg",
+      "path": "assets/cg/s44-eric-epilogue-month-later.png",
+      "status": "integrated",
+      "runtime": "S44 explicit month-later event; mobile-safe central composition",
+      "creationMethod": "AI-generated production CG",
+      "createdAt": "2026-09-23",
+      "mobileSafe": true
+    },
+    {
+      "id": "s45-nick-home-epilogue-month-later",
+      "family": "cg",
+      "path": "assets/cg/s45-nick-home-epilogue-month-later.png",
+      "status": "integrated",
+      "runtime": "S45 explicit month-later event; mobile-safe central composition",
+      "creationMethod": "AI-generated production CG",
+      "createdAt": "2026-09-23",
+      "mobileSafe": true
+    },
+    {
+      "id": "s46-damir-epilogue-month-later",
+      "family": "cg",
+      "path": "assets/cg/s46-damir-epilogue-month-later.png",
+      "status": "integrated",
+      "runtime": "S46 explicit month-later event; mobile-safe central composition",
+      "creationMethod": "AI-generated production CG",
+      "createdAt": "2026-09-23",
+      "mobileSafe": true
+    },
+    {
+      "id": "s47-alice-home-epilogue-month-later",
+      "family": "cg",
+      "path": "assets/cg/s47-alice-home-epilogue-month-later.png",
+      "status": "integrated",
+      "runtime": "S47 explicit month-later event; mobile-safe central composition",
+      "creationMethod": "AI-generated production CG",
+      "createdAt": "2026-09-23",
+      "mobileSafe": true
     }
   ],
   "routingTrace": {
