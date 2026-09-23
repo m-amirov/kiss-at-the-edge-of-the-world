@@ -423,6 +423,6 @@
     "sceneCount": 66,
     "file": "src/literary-visual-directions.js",
     "condition": "unillustrated location uses neutral stage; do not display a CG for an unrelated event",
-    "currentGate": "PILOT_S06_S08_BROWSER_EVIDENCE_BLOCKED"
+    "currentGate": "PILOT_S06_S08_ACCEPTED"
   }
 }
