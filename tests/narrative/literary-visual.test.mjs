@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import {literarySeason} from '../../src/literary-season-data.js';
 import {compileInteractivePlayback} from '../../src/literary-pacing.js';
 import {stageForScene} from '../../src/literary-stage.js';
-import {visualScenes,visualCues,visualAt} from '../../src/literary-visual-directions.js';
+import {visualScenes,visualCues,visualAt,visualEntryForPosition} from '../../src/literary-visual-directions.js';
 
 const scenes=new Map(literarySeason.scenes.map(s=>[s.id,s]));
 function complete(id,choiceOverrides={}){
@@ -107,5 +107,16 @@ test('the page boundary never mixes different authored visual beats',()=>{
    const b=visualAt(id,{sourceEndRef:page.sourceEndRef},choices,stageForScene(id,choices).cast);
    assert.equal(a.beatId,b.beatId,`${id}: page spans two visual beats`);
   }
+ }
+});
+
+test('completion position retains the month-later CG and a fresh scene cannot inherit it',()=>{
+ const expected={S44:'s44-eric-epilogue-month-later.png',S45:'s45-nick-home-epilogue-month-later.png',S46:'s46-damir-epilogue-month-later.png',S47:'s47-alice-home-epilogue-month-later.png'};
+ for(const [id,file] of Object.entries(expected)){
+  const {flow,choices}=complete(id);
+  const terminal=visualEntryForPosition(flow,flow.length);
+  const final=visualAt(id,terminal,choices,stageForScene(id,choices).cast);
+  assert.equal(final.art?.file,file,`${id} completion must retain its final CG`);
+  assert.equal(visualAt('S01',null,{},stageForScene('S01',{}).cast).art?.file,'keflavik-airport-arrivals-v1.png');
  }
 });

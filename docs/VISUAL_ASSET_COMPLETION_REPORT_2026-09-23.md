@@ -4,6 +4,21 @@
 
 Статус: **PARTIAL**. Route-specific month-later CG для S44–S47 созданы, сохранены, внесены в manifest и подключены к явным visual events. Полное покрытие всех 61 позиций из аудита этим проходом не достигнуто: для ряда локаций всё ещё нет авторского ассета, поэтому runtime корректно оставляет нейтральный stage вместо ложной иллюстрации.
 
+Последняя партия пользовательских изображений заменяет эти четыре файла: S44 — встреча у выхода из вокзала, S45 — ремонт лампы, S46 — обмен выпечкой в кафе, S47 — тосты на кухне. Финальный экран теперь удерживает CG последнего эпилога после последнего нажатия «Далее».
+
+## Интеграционная проверка текущей партии
+
+- Источники доступны локально в `C:\Users\user\Downloads` и скопированы в действующие runtime paths.
+- `npm run literary:compile` — PASS (`66 scenes`, `619 chunks`).
+- `npm run test:narrative` — PASS, включая удержание terminal CG, сброс при новой сцене и изоляцию маршрутов.
+- Provenance SHA-256 — PASS; ledger обновлён под фактически интегрированные PNG.
+- `npm run starter-kit:self-test` — PASS.
+- `npm run lint` — BLOCKED: в `package.json` отсутствует script `lint`.
+- `npm run build` — BLOCKED: в `package.json` отсутствует script `build`.
+- Browser QA 1920×900 и 390×844 — BLOCKED: Playwright CLI не запускается на host из-за отсутствующего WSL2/Hyper-V (`HCS_E_HYPERV_NOT_INSTALLED`). Поэтому актуальные runtime screenshots не созданы.
+
+Итоговый статус этой партии: **PARTIAL** до доступности browser QA и отсутствующих lint/build scripts.
+
 ## Создано
 
 - `assets/cg/s44-eric-epilogue-month-later.png` — домашний/городской эпилог Эрика.

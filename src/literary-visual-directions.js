@@ -146,4 +146,10 @@ export function visualAt(sceneId,entry,choices={},baseCast=['alice']){
  }
  return state;
 }
+/** The terminal reader position is one past the last page after the final
+ * "Далее" click. Keep the last authored visual beat on the completion screen
+ * instead of resolving an undefined entry back to the scene opening art. */
+export function visualEntryForPosition(flow,position){
+ return flow[position] ?? flow.at(-1) ?? null;
+}
 export const visualCues=cues;

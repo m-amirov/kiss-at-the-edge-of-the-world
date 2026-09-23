@@ -17,8 +17,9 @@ Comparative panels:
 - `docs/art-review/identity-comparison-eric.svg`
 - `docs/art-review/identity-comparison-nick.svg`
 - `docs/art-review/identity-comparison-damir.svg`
+- `docs/art-review/identity-comparison-alice-all-epilogues.svg` — проверка Алисы во всех четырёх новых CG.
 
-The existing route-CG set (`eric-route-hand`, `nick-route-editing`, `damir-route-letter`, `alice-independent-ending`, `eric-myvattn-dawn`, `nick-akureyri-edit`, `damir-road-letter`) was visually checked against the same masters and retained; no material identity drift was found.
+The existing route-CG set (`eric-route-hand`, `nick-route-editing`, `damir-route-letter`, `alice-independent-ending`, `eric-myvattn-dawn`, `nick-akureyri-edit`, `damir-road-letter`) was visually checked against the same masters and retained; no material identity drift was found. The four newly supplied images were accepted for scene fidelity: S44 station exit, S45 lamp repair, S46 pastry exchange in a cafe, S47 toast preparation at home.
 
 ## Scope and limitations
 

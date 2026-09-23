@@ -3,7 +3,7 @@ import { compileScenePlayback, nextLiteraryScene, literarySaveKey, cleanLiterary
 import { initYandexPlatform } from './yandex-sdk.js';
 import { createCloudSaveQueue } from './save-state.js';
 import { stageForScene } from './literary-stage.js';
-import { visualAt } from './literary-visual-directions.js';
+import { visualAt, visualEntryForPosition } from './literary-visual-directions.js';
 import { compileInteractivePlayback } from './literary-pacing.js';
 
 const byId = new Map(literarySeason.scenes.map(scene => [scene.id, scene]));
@@ -155,7 +155,8 @@ function renderReader(){
   const flow=compileInteractivePlayback(scene,reader.choices);reader.position=Math.min(reader.position,flow.at(-1)?.type==='choice'?Math.max(0,flow.length-1):flow.length);
   app.className='literary-reader';app.replaceChildren();
   const current=flow[reader.position];
-  const direction=visualAt(scene.id,current,reader.choices,stageForScene(scene.id,reader.choices).cast);
+  const visualEntry=visualEntryForPosition(flow,reader.position);
+  const direction=visualAt(scene.id,visualEntry,reader.choices,stageForScene(scene.id,reader.choices).cast);
   const art=direction.art;
   const picture=el('','literary-picture');picture.setAttribute('aria-hidden','true');
   picture.dataset.visualBeat=direction.beatId;picture.dataset.location=direction.location;picture.dataset.time=direction.time;

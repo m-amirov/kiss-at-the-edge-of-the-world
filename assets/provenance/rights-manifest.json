@@ -1,9 +1,9 @@
 {
   "generatedAt": "2026-09-23",
   "assets": [
-    {"path":"assets/cg/s44-eric-epilogue-month-later.png","sha256":"7F543844BF078EEFBFB1DBD916BC305DF81587FEA519BC24AC1B7DCA8B17A02E","method":"AI-generated with Eric and Alice master references","source":"OpenAI image generation","license":"project-generated"},
-    {"path":"assets/cg/s45-nick-home-epilogue-month-later.png","sha256":"EDF7E5DA1B20EB4EF5D4CA390BB7A3D63244A6DFEE21E7FEB57191EA5EF13A71","method":"AI-generated with Nick and Alice master references","source":"OpenAI image generation","license":"project-generated"},
-    {"path":"assets/cg/s46-damir-epilogue-month-later.png","sha256":"D8A69727471E7634034B88EB9AA6C991065E1426484FAA17B2261E1642A1A470","method":"AI-generated with Damir and Alice master references","source":"OpenAI image generation","license":"project-generated"},
-    {"path":"assets/cg/s47-alice-home-epilogue-month-later.png","sha256":"B51BB844078800F2F740DC7E8E04D6E8AF40712FE6CFF8507A7049AB35B1BDA7","method":"AI-generated with Alice master reference","source":"OpenAI image generation","license":"project-generated"}
+    {"path":"assets/cg/s44-eric-epilogue-month-later.png","sha256":"4CA63F902BC1E9CF8299F9E3906146E540C0BEA25EF87F04717B1DA69EFAD7FD","dimensions":"1672x941","method":"User-supplied ChatGPT image reviewed against Eric and Alice master references","source":"User-provided image attachment, 2026-09-23","license":"user-provided for this project"},
+    {"path":"assets/cg/s45-nick-home-epilogue-month-later.png","sha256":"263CE5B2465FF4087DF39F0D1A843C477068855333F3100B02A80F0F7C291FB8","dimensions":"1672x941","method":"User-supplied ChatGPT image reviewed against Nick and Alice master references","source":"User-provided image attachment, 2026-09-23","license":"user-provided for this project"},
+    {"path":"assets/cg/s46-damir-epilogue-month-later.png","sha256":"2FDFAF393046798BB41F511923F71213165F5967D04AD0296799CF66A120E384","dimensions":"1672x941","method":"User-supplied ChatGPT image reviewed against Damir and Alice master references","source":"User-provided image attachment, 2026-09-23","license":"user-provided for this project"},
+    {"path":"assets/cg/s47-alice-home-epilogue-month-later.png","sha256":"E28124497F9B16A3A2ABFD7303030420F864BB881D5DF9984F081C04804600CC","dimensions":"1672x941","method":"User-supplied ChatGPT image reviewed against Alice master reference","source":"User-provided image attachment, 2026-09-23","license":"user-provided for this project"}
   ]
 }
