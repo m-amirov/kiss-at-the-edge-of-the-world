@@ -30,6 +30,10 @@ const focalPointByAsset = {
   's47-alice-home-epilogue-month-later.png': '67% 44%'
 };
 const portraitAssetByDesktopAsset = {
+  's06-hveragerdi-eric-alice.png':'s06-hveragerdi-eric-alice-portrait.png',
+  's07-kitchen-pasta.png':'s07-kitchen-pasta-portrait.png',
+  's07-kitchen-cards.png':'s07-kitchen-cards-portrait.png',
+  's08-guesthouse-strap.png':'s08-guesthouse-strap-portrait.png',
   's05-hveragerdi-road.png':'s05-hveragerdi-road-portrait.png',
   's66-hveragerdi-greenhouse.png':'s66-hveragerdi-greenhouse-portrait.png',
   's13-skaftafell-travelers.png':'s13-skaftafell-travelers-portrait.png',
@@ -211,7 +215,7 @@ function renderReader(){
   picture.dataset.visualBeat=direction.beatId;picture.dataset.location=direction.location;picture.dataset.time=direction.time;
   if(art){const file=assetFileForViewport(art);const img=el('','','img');img.src=`./assets/${art.type==='cg'?'cg':'backgrounds'}/${file}`;img.alt='';img.decoding='async';img.dataset.desktopAsset=art.file;img.dataset.asset=file;picture.append(img);picture.style.setProperty('--focus',focalPointByAsset[file]??focalPointByAsset[art.file]??'50% 50%');if(art.type==='cg'){picture.classList.add('is-cg');picture.style.setProperty('--cg-url',`url("${img.src}")`)}}
   else picture.classList.add('no-art');
-  if(art?.type!=='cg') picture.append(renderStage({...direction,mode:direction.cast.length>2?'group':direction.cast.length===2?'pair':'solo',mood:stageForScene(scene.id,reader.choices).mood}));
+  if(art?.presentation!=='cinematic') picture.append(renderStage({...direction,mode:direction.cast.length>2?'group':direction.cast.length===2?'pair':'solo',mood:stageForScene(scene.id,reader.choices).mood}));
   picture.append(el('','literary-vignette'));app.append(picture);
   const header=el('','reader-header');header.append(button('☰ Меню',goHome,'small-button'),el(`ЭПИЗОД ${scene.episode} / 10 · ${scene.id}`,'chapter-index'),el('ПОЦЕЛУЙ НА КРАЮ СВЕТА','draft-indicator'));app.append(header);
   const sheet=el('','reader-sheet');

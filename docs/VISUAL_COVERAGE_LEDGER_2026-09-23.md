@@ -13,9 +13,9 @@ desktop/mobile screenshots.
 | S03 | Reykjavik guesthouse, day 2 morning | Alice, then Damir | stage/editor call | MISSING_APPROPRIATE_ART |
 | S04 | Þingvellir, day 2 | group | reuse thingvellir master | REUSE |
 | S05 | road to Hveragerði, day 3 morning | group | dedicated desktop + independent portrait road background; native Chromium accepted at 1920×900, 390×844, 360×640 | COVERED_EVENT |
-| S06 | Hveragerði geothermal valley, day 3 | Alice/Eric | stage only | MISSING_APPROPRIATE_ART |
-| S07 | guesthouse shared kitchen, evening | group | stage only | MISSING_APPROPRIATE_ART |
-| S08 | Hveragerði guesthouse, day 4 morning | Alice/Damir | stage only | MISSING_APPROPRIATE_ART |
+| S06 | Hveragerði geothermal valley, day 3 | Alice/Eric; `s06-eric-alice-stream` [6,6] | desktop+portrait cinematic | PARTIAL_BROWSER_BLOCKED |
+| S07 | guesthouse shared kitchen, evening | group; `s07-kitchen-pasta` [3,0], `s07-kitchen-cards` [3,42] | desktop+portrait cinematic | PARTIAL_BROWSER_BLOCKED |
+| S08 | Hveragerði guesthouse, day 4 morning | Alice/Damir; `s08-guesthouse-strap` [2,0] | desktop+portrait cinematic | PARTIAL_BROWSER_BLOCKED |
 | S66 | Hveragerði greenhouse, day 4 | group | dedicated desktop + independent portrait background; native Chromium accepted at 1920×900, 390×844, 360×640 | COVERED_EVENT |
 | S09 | Skógafoss, day 5 morning | group; trail cue | reuse Skógafoss master | REUSE |
 | S10 | road/Vík petrol station, day 5 | Alice/Eric | stage only | MISSING_APPROPRIATE_ART |

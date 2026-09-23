@@ -10,9 +10,9 @@ export const visualScenes = {
   S03:['Гостевой дом Рейкьявика: гостиная','день 2, утро'],
   S04:['Þingvellir: парковка и тропа','день 2, день'],
   S05:['Гостевой дом и дорога к Hveragerði','день 3, утро','s05-hveragerdi-road.png'],
-  S06:['Геотермальная долина Hveragerði','день 3, день'],
-  S07:['Общая кухня гостевого дома Hveragerði','день 3, вечер'],
-  S08:['Гостевой дом Hveragerði: комнаты и общая зона','день 4, утро'],
+ S06:['Геотермальная долина Hveragerði','день 3, день'],
+ S07:['Общая кухня гостевого дома Hveragerði','день 3, вечер'],
+ S08:['Гостевой дом Hveragerði: комнаты и общая зона','день 4, утро'],
   S66:['Теплица Hveragerði: грядки и кафе','день 4, день','s66-hveragerdi-greenhouse.png'],
   S09:['Гостевой дом → водопад Skógafoss','день 5, утро'],
   S10:['АЗС и дорога к Vík','день 5, день'],
@@ -112,6 +112,10 @@ const cues = {
       {at:[4,0],id:'damir-month-later',location:'Аэропортовый автобус: поздняя встреча',time:'спустя месяц',art:'cg/s46-damir-epilogue-month-later.png',cast:['alice','damir']}],
  S47:[{at:[0,0],id:'alice-morning-harbour',location:'Рейкьявик: утренняя городская гавань',art:'cg/s47-reykjavik-harbour-alice.png',cast:['alice']},
       {at:[4,0],id:'alice-month-later',location:'Дом Алисы: новый маршрут',time:'спустя месяц',art:'cg/s47-alice-home-epilogue-month-later.png',cast:['alice']}],
+ S06:[{at:[6,6],id:'s06-eric-alice-stream',location:'Геотермальная долина Hveragerði: площадка над ручьём',art:'cg/s06-hveragerdi-eric-alice.png',cast:['alice','eric']}],
+ S07:[{at:[3,0],id:'s07-kitchen-pasta',location:'Общая кухня Hveragerði: плита и стол',art:'cg/s07-kitchen-pasta.png',cast:['alice','nick','eric','damir']},
+      {at:[3,42],id:'s07-kitchen-cards',location:'Общая кухня Hveragerði: карточная игра',art:'cg/s07-kitchen-cards.png',cast:['alice','nick','eric','damir']}],
+ S08:[{at:[2,0],id:'s08-guesthouse-strap',location:'Гостевой дом Hveragerði: лестница и коридор',art:'cg/s08-guesthouse-strap.png',cast:['alice','damir']}],
  S48:[{at:[5,0],id:'group-hotel-exit',location:'Выход из гостевого дома',art:null,cast:['alice','eric','nick','damir']}]
 };
 
@@ -130,7 +134,7 @@ export function visualAt(sceneId,entry,choices={},baseCast=['alice']){
  const record=visualScenes[sceneId];
  if(!record)throw new Error(`Missing visual scene contract: ${sceneId}`);
  const [baseLocation,baseTime,baseBackground]=record;
- const state={sceneId,beatId:'scene-start',location:baseLocation,time:baseTime,cast:[...(openingCast[sceneId]??baseCast)],art:baseBackground ? {type:'background',file:baseBackground}:null};
+ const state={sceneId,beatId:'scene-start',location:baseLocation,time:baseTime,cast:[...(openingCast[sceneId]??baseCast)],art:baseBackground ? {type:'background',presentation:'environment',file:baseBackground}:null};
  const ref=entry?.sourceEndRef ?? entry?.sourceStartRef;
  const at=ref?address([ref.chunk,ref.paragraph]):-1;
  for(const cue of cues[sceneId]??[]){
@@ -141,7 +145,7 @@ export function visualAt(sceneId,entry,choices={},baseCast=['alice']){
   if('cast' in cue)state.cast=[...cue.cast];
   if('art' in cue){
    if(!validArt(cue.art))throw new Error(`Invalid art for ${sceneId}/${cue.id}`);
-   state.art=cue.art===null?null:cue.art.startsWith('cg/')?{type:'cg',file:cue.art.slice(3)}:{type:'background',file:cue.art};
+   state.art=cue.art===null?null:cue.art.startsWith('cg/')?{type:'cg',presentation:'cinematic',file:cue.art.slice(3)}:{type:'background',presentation:'environment',file:cue.art};
   }
   state.beatId=cue.id;
  }

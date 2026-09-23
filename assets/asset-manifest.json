@@ -358,7 +358,11 @@
       "mobileSafe": true,
       "portraitAsset": "assets/backgrounds/s05-hveragerdi-road-portrait.png",
       "portraitDimensions": "941x1672"
-    }
+    },
+    {"id":"s06-hveragerdi-eric-alice","family":"cg","path":"assets/cg/s06-hveragerdi-eric-alice.png","status":"integrated","runtime":"S06 authored cue [6,6], cinematic trail overlook","creationMethod":"Built-in image generation using Alice and Eric master references","createdAt":"2026-09-23","dimensions":"1672x941","mobileSafe":true,"portraitAsset":"assets/cg/s06-hveragerdi-eric-alice-portrait.png","portraitDimensions":"941x1672"},
+    {"id":"s07-kitchen-pasta","family":"cg","path":"assets/cg/s07-kitchen-pasta.png","status":"integrated","runtime":"S07 authored cue [3,0], cinematic pasta rescue","creationMethod":"Built-in image generation using four character master references","createdAt":"2026-09-23","dimensions":"1672x941","mobileSafe":true,"portraitAsset":"assets/cg/s07-kitchen-pasta-portrait.png","portraitDimensions":"941x1672"},
+    {"id":"s07-kitchen-cards","family":"cg","path":"assets/cg/s07-kitchen-cards.png","status":"integrated","runtime":"S07 authored cue [3,42], cinematic card game","creationMethod":"Built-in image generation using four character master references","createdAt":"2026-09-23","dimensions":"1672x941","mobileSafe":true,"portraitAsset":"assets/cg/s07-kitchen-cards-portrait.png","portraitDimensions":"941x1672"},
+    {"id":"s08-guesthouse-strap","family":"cg","path":"assets/cg/s08-guesthouse-strap.png","status":"integrated","runtime":"S08 authored cue [2,0], cinematic backpack-strap repair","creationMethod":"Built-in image generation using Alice and Damir master references","createdAt":"2026-09-23","dimensions":"1672x941","mobileSafe":true,"portraitAsset":"assets/cg/s08-guesthouse-strap-portrait.png","portraitDimensions":"941x1672"}
   ],
   "routingTrace": {
     "webPreflightStatus": "READY",
@@ -367,8 +371,8 @@
     ],
     "nativeAssetGeneratorUsed": true,
     "imageGenerationCapability": "available",
-    "generatedAssetCount": 37,
-    "integratedAssetCount": 37,
+    "generatedAssetCount": 45,
+    "integratedAssetCount": 45,
     "nativeFallbackUsed": true,
     "nativeFallbackReason": "Web art-director transport disconnected with ERR_ABORTED before completion; one native fallback used"
   },
@@ -419,6 +423,6 @@
     "sceneCount": 66,
     "file": "src/literary-visual-directions.js",
     "condition": "unillustrated location uses neutral stage; do not display a CG for an unrelated event",
-    "currentGate": "ART_INCOMPLETE"
+    "currentGate": "PILOT_S06_S08_BROWSER_EVIDENCE_BLOCKED"
   }
 }

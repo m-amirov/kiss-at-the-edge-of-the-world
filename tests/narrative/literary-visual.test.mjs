@@ -77,6 +77,29 @@ test('S05 Hveragerði road uses the authored desktop background and independent 
  assert.ok(fs.existsSync(new URL('../../assets/backgrounds/s05-hveragerdi-road-portrait.png',import.meta.url)));
 });
 
+test('S06-S08 pilot uses authored cinematic events with independent portrait assets',()=>{
+ const expected={
+  S06:['s06-eric-alice-stream','s06-hveragerdi-eric-alice.png',['alice','eric'],[6,6]],
+  S07:['s07-kitchen-pasta','s07-kitchen-pasta.png',['alice','nick','eric','damir'],[3,0]],
+  S08:['s08-guesthouse-strap','s08-guesthouse-strap.png',['alice','damir'],[2,0]]
+ };
+ for(const [id,[beat,file,cast,ref]] of Object.entries(expected)){
+  const {flow,choices}=complete(id);
+  const at=indexOfSource(flow,ref[0],ref[1]);
+  const shotAt=shot(id,flow,at,choices);
+  assert.equal(shotAt.beatId,beat);
+  assert.equal(shotAt.art?.presentation,'cinematic');
+  assert.equal(shotAt.art?.file,file);
+  assert.deepEqual(shotAt.cast,cast);
+  assert.ok(fs.existsSync(new URL(`../../assets/cg/${file}`,import.meta.url)));
+  assert.ok(fs.existsSync(new URL(`../../assets/cg/${file.replace('.png','-portrait.png')}`,import.meta.url)));
+ }
+ const {flow,choices}=complete('S07');
+ const cards=indexOfSource(flow,3,42);
+ assert.equal(shot('S07',flow,cards,choices).beatId,'s07-kitchen-cards');
+ assert.equal(shot('S07',flow,cards,choices).art?.presentation,'cinematic');
+});
+
 test('S13 visitor center precedes notebook CG; image is not used in Vik',()=>{
  const {flow,choices}=complete('S13');
  const arrival=indexOfSource(flow,0,7),notebook=indexOfSource(flow,0,12);
