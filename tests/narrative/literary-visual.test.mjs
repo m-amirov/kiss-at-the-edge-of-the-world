@@ -60,6 +60,15 @@ test('S02 cafe background appears only after arrival and never during the road s
  assert.ok(flow.every((e,i)=>shot('S02',flow,i,choices).art?.type!=='cg'));
 });
 
+test('S66 greenhouse uses the authored environment and its independent portrait mapping',()=>{
+ const {flow,choices}=complete('S66');
+ const opening=shot('S66',flow,0,choices);
+ assert.equal(opening.art?.type,'background');
+ assert.equal(opening.art?.file,'s66-hveragerdi-greenhouse.png');
+ assert.ok(fs.existsSync(new URL('../../assets/backgrounds/s66-hveragerdi-greenhouse.png',import.meta.url)));
+ assert.ok(fs.existsSync(new URL('../../assets/backgrounds/s66-hveragerdi-greenhouse-portrait.png',import.meta.url)));
+});
+
 test('S13 visitor center precedes notebook CG; image is not used in Vik',()=>{
  const {flow,choices}=complete('S13');
  const arrival=indexOfSource(flow,0,7),notebook=indexOfSource(flow,0,12);
