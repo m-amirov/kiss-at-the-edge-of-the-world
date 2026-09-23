@@ -17,6 +17,34 @@ const endingHeadings = {
   S46: 'Начать заново — вместе',
   S47: 'Свой следующий маршрут'
 };
+// Presentation-only focal points. Values are percentages of the source image;
+// the authored visual event remains the source of truth for which asset shows.
+const focalPointByAsset = {
+  's02-roadside-cafe.png': '50% 48%',
+  's13-skaftafell-travelers.png': '50% 42%',
+  's18-hofn-dance-lights.png': '50% 44%',
+  's26-eric-choice.png': '50% 40%',
+  's44-eric-epilogue-month-later.png': '50% 48%',
+  's45-nick-home-epilogue-month-later.png': '50% 45%',
+  's46-damir-epilogue-month-later.png': '50% 44%',
+  's47-alice-home-epilogue-month-later.png': '67% 44%'
+};
+const portraitAssetByDesktopAsset = {
+  's13-skaftafell-travelers.png':'s13-skaftafell-travelers-portrait.png',
+  's18-hofn-dance-lights.png':'s18-hofn-dance-lights-portrait.png',
+  's26-eric-choice.png':'s26-eric-choice-portrait.png',
+  's45-reykjavik-warm-montage.png':'s45-reykjavik-warm-montage-portrait.png',
+  's46-airport-goodbye.png':'s46-airport-goodbye-portrait.png',
+  's47-reykjavik-harbour-alice.png':'s47-reykjavik-harbour-alice-portrait.png',
+  's44-eric-epilogue-month-later.png':'s44-eric-epilogue-month-later-portrait.png',
+  's45-nick-home-epilogue-month-later.png':'s45-nick-home-epilogue-month-later-portrait.png',
+  's46-damir-epilogue-month-later.png':'s46-damir-epilogue-month-later-portrait.png',
+  's47-alice-home-epilogue-month-later.png':'s47-alice-home-epilogue-month-later-portrait.png'
+};
+function assetFileForViewport(art){
+  const portrait=window.matchMedia?.('(max-width: 680px) and (orientation: portrait)').matches;
+  return portrait ? (portraitAssetByDesktopAsset[art.file]??art.file) : art.file;
+}
 const stageAsset = { alice:'alice-stage.png', eric:'eric-stage.png', nick:'nick-stage.png', damir:'damir-stage.png' };
 // This value is consumed by a url() inside src/literary.css; resolve from the
 // stylesheet directory so the cover never becomes /src/assets/... at runtime.
@@ -125,7 +153,7 @@ function galleryPanel(section){
   section.append(gallery);
 }
 function renderMenu(){
-  menuOpen=true;app.className='literary-home';app.style.setProperty('--cover',`url('${cover}')`);app.replaceChildren();
+  menuOpen=true;app.className='literary-home';app.dataset.presentation=modal?`menu-${modal.toLowerCase()}`:'menu-home';app.style.setProperty('--cover',`url('${cover}')`);app.replaceChildren();
   const section=el('','literary-home-card');app.append(section);
   section.append(el('РОМАНТИЧЕСКАЯ ИСТОРИЯ · ИСЛАНДИЯ','kicker'),el('Поцелуй на краю света','home-title','h1'));
   if(modal){const draw={Эпизоды:episodeSelection,Настройки:settingsPanel,Галерея:galleryPanel}[modal];section.append(panel(modal,draw??(x=>x.append(el('Четыре самостоятельных исхода: Эрик, Ник, Дамир и Алиса. Прогресс этой редакции сохраняется отдельно от прежней короткой версии.','home-summary')))));return;}
@@ -157,23 +185,33 @@ function renderStage(direction) {
   });
   return stage;
 }
+function artMode(scene, entry, choices, isEnding) {
+  const direction=visualAt(scene.id,entry,choices,stageForScene(scene.id,choices).cast);
+  if (entry?.type==='choice') return direction.art?.type==='cg'?'choice-cg':'choice';
+  if (isEnding && entry?.type!=='page') return 'ending';
+  if (isEnding && entry?.type==='page' && entry===null) return 'ending';
+  if (direction.art?.type==='cg') return 'cg';
+  if (direction.art?.type==='background') return 'background';
+  return direction.cast?.length ? 'sprite-dialogue' : 'background';
+}
 function renderReader(){
   if(menuOpen)return renderMenu();
   const scene=byId.get(reader.sceneId);if(!scene){goHome();return}
   const flow=compileInteractivePlayback(scene,reader.choices);reader.position=Math.min(reader.position,flow.at(-1)?.type==='choice'?Math.max(0,flow.length-1):flow.length);
-  app.className='literary-reader';app.replaceChildren();
+  const isEnding=['S44','S45','S46','S47'].includes(scene.id);
+  const mode=artMode(scene,flow[reader.position],reader.choices,isEnding);
+  app.className='literary-reader';app.dataset.presentation=mode;app.replaceChildren();
   const current=flow[reader.position];
   const visualEntry=visualEntryForPosition(flow,reader.position);
   const direction=visualAt(scene.id,visualEntry,reader.choices,stageForScene(scene.id,reader.choices).cast);
   const art=direction.art;
-  const picture=el('','literary-picture');picture.setAttribute('aria-hidden','true');
+  const picture=el('','literary-picture');picture.setAttribute('aria-hidden','true');picture.dataset.presentation=mode;
   picture.dataset.visualBeat=direction.beatId;picture.dataset.location=direction.location;picture.dataset.time=direction.time;
-  if(art){const img=el('','','img');img.src=`./assets/${art.type==='cg'?'cg':'backgrounds'}/${art.file}`;img.alt='';img.decoding='async';picture.append(img);if(art.type==='cg'){picture.classList.add('is-cg');picture.style.setProperty('--cg-url',`url("${img.src}")`)}}
+  if(art){const file=assetFileForViewport(art);const img=el('','','img');img.src=`./assets/${art.type==='cg'?'cg':'backgrounds'}/${file}`;img.alt='';img.decoding='async';img.dataset.desktopAsset=art.file;img.dataset.asset=file;picture.append(img);picture.style.setProperty('--focus',focalPointByAsset[file]??focalPointByAsset[art.file]??'50% 50%');if(art.type==='cg'){picture.classList.add('is-cg');picture.style.setProperty('--cg-url',`url("${img.src}")`)}}
   else picture.classList.add('no-art');
   if(art?.type!=='cg') picture.append(renderStage({...direction,mode:direction.cast.length>2?'group':direction.cast.length===2?'pair':'solo',mood:stageForScene(scene.id,reader.choices).mood}));
   picture.append(el('','literary-vignette'));app.append(picture);
   const header=el('','reader-header');header.append(button('☰ Меню',goHome,'small-button'),el(`ЭПИЗОД ${scene.episode} / 10 · ${scene.id}`,'chapter-index'),el('ПОЦЕЛУЙ НА КРАЮ СВЕТА','draft-indicator'));app.append(header);
-  const isEnding=['S44','S45','S46','S47'].includes(scene.id);
   const sheet=el('','reader-sheet');
   if(!isEnding)sheet.append(el(cleanLiteraryText(scene.title),'reader-scene','h2'));
   if(reader.migrationNotice){sheet.append(el('После обновления визуальных переходов продолжение начинается с начала текущей сцены. Прежний прогресс и выборы сохранены.','migration-note'));reader.migrationNotice=false;persist();}

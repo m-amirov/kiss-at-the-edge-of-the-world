@@ -223,6 +223,7 @@
       "path": "assets/cg/s13-skaftafell-travelers.png",
       "status": "integrated",
       "runtime": "S13 authored source 0:12 onward; not the Vík breakfast or Skaftafell parking"
+      ,"portraitAsset": "assets/cg/s13-skaftafell-travelers-portrait.png", "portraitDimensions": "941x1672"
     },
     {
       "id": "s18-hofn-dance-lights",
@@ -230,6 +231,7 @@
       "path": "assets/cg/s18-hofn-dance-lights.png",
       "status": "integrated",
       "runtime": "S18 authored source 0:35-0:38 dance, before S18-C1 and independent of its result"
+      ,"portraitAsset": "assets/cg/s18-hofn-dance-lights-portrait.png", "portraitDimensions": "941x1672"
     },
     {
       "id": "s45-reykjavik-warm-montage",
@@ -237,6 +239,7 @@
       "path": "assets/cg/s45-reykjavik-warm-montage.png",
       "status": "integrated",
       "runtime": "S45 film review, before month-later home epilogue"
+      ,"portraitAsset": "assets/cg/s45-reykjavik-warm-montage-portrait.png", "portraitDimensions": "941x1672"
     },
     {
       "id": "s46-airport-goodbye",
@@ -244,6 +247,7 @@
       "path": "assets/cg/s46-airport-goodbye.png",
       "status": "integrated",
       "runtime": "S46 airport check-in source 0:1 onward, before month-later home epilogue"
+      ,"portraitAsset": "assets/cg/s46-airport-goodbye-portrait.png", "portraitDimensions": "941x1672"
     },
     {
       "id": "s47-reykjavik-harbour-alice",
@@ -251,6 +255,7 @@
       "path": "assets/cg/s47-reykjavik-harbour-alice.png",
       "status": "integrated",
       "runtime": "S47 harbour, before month-later domestic epilogue"
+      ,"portraitAsset": "assets/cg/s47-reykjavik-harbour-alice-portrait.png", "portraitDimensions": "941x1672"
     },
     {
       "id": "s44-eric-epilogue-month-later",
@@ -261,7 +266,9 @@
       "creationMethod": "User-supplied ChatGPT image reviewed against Eric and Alice master references",
       "createdAt": "2026-09-23",
       "dimensions": "1672x941",
-      "mobileSafe": true
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s44-eric-epilogue-month-later-portrait.png",
+      "portraitDimensions": "941x1672"
     },
     {
       "id": "s45-nick-home-epilogue-month-later",
@@ -272,7 +279,9 @@
       "creationMethod": "User-supplied ChatGPT image reviewed against Nick and Alice master references",
       "createdAt": "2026-09-23",
       "dimensions": "1672x941",
-      "mobileSafe": true
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s45-nick-home-epilogue-month-later-portrait.png",
+      "portraitDimensions": "941x1672"
     },
     {
       "id": "s46-damir-epilogue-month-later",
@@ -283,7 +292,9 @@
       "creationMethod": "User-supplied ChatGPT image reviewed against Damir and Alice master references",
       "createdAt": "2026-09-23",
       "dimensions": "1672x941",
-      "mobileSafe": true
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s46-damir-epilogue-month-later-portrait.png",
+      "portraitDimensions": "941x1672"
     },
     {
       "id": "s47-alice-home-epilogue-month-later",
@@ -294,7 +305,9 @@
       "creationMethod": "User-supplied ChatGPT image reviewed against Alice master reference",
       "createdAt": "2026-09-23",
       "dimensions": "1672x941",
-      "mobileSafe": true
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s47-alice-home-epilogue-month-later-portrait.png",
+      "portraitDimensions": "941x1672"
     },
     {
       "id": "s02-roadside-cafe",
@@ -316,7 +329,9 @@
       "creationMethod": "Built-in image generation using Alice and Eric master references; authored consenting embrace",
       "createdAt": "2026-09-23",
       "dimensions": "1672x941",
-      "mobileSafe": true
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s26-eric-choice-portrait.png",
+      "portraitDimensions": "941x1672"
     }
   ],
   "routingTrace": {

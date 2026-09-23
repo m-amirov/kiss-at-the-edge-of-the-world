@@ -109,6 +109,146 @@ button:disabled{opacity:.43;cursor:not-allowed}
  .literary-picture.is-cg .literary-vignette{background:linear-gradient(180deg,rgba(4,12,18,.2),transparent 30%,rgba(4,12,18,.8) 70%)}
 }
 
+/* Unified fullscreen presentation contract. Every runtime mode owns the
+   viewport; the readable layer is composited into the scene instead of being
+   rendered as a separate web card. */
+.literary-reader[data-presentation] .literary-picture {
+  z-index: 0;
+  background: #111b24;
+}
+.literary-reader[data-presentation] .literary-picture > img {
+  object-position: var(--focus,50% 50%);
+}
+.literary-reader[data-presentation] .literary-picture:not(.is-cg) > img {
+  object-fit: cover;
+}
+.literary-reader[data-presentation] .reader-sheet {
+  z-index: 3;
+  left: 0;
+  bottom: 0;
+  transform: none;
+  width: 100%;
+  max-height: min(46dvh,470px);
+  padding: clamp(22px,3vw,38px) max(20px,5vw) max(20px,env(safe-area-inset-bottom));
+  background: linear-gradient(180deg,rgba(7,15,22,0),rgba(7,15,22,.74) 22%,rgba(7,15,22,.95) 100%);
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+.literary-reader[data-presentation] .reader-content {
+  max-width: 940px;
+  margin-inline: auto;
+}
+.literary-reader[data-presentation] .reader-scene,
+.literary-reader[data-presentation] .reader-paragraph,
+.literary-reader[data-presentation] .decision-question {
+  text-shadow: 0 2px 16px rgba(0,0,0,.92);
+}
+.literary-reader[data-presentation="choice"] .reader-sheet,
+.literary-reader[data-presentation="choice-cg"] .reader-sheet {
+  max-height: min(52dvh,520px);
+}
+.literary-reader[data-presentation="choice"] .reader-content,
+.literary-reader[data-presentation="choice-cg"] .reader-content {
+  overflow: visible;
+}
+.literary-reader[data-presentation="choice"] .choice-button,
+.literary-reader[data-presentation="choice-cg"] .choice-button {
+  background: rgba(14,25,32,.58);
+  border-color: rgba(244,218,187,.65);
+  border-radius: 999px;
+  box-shadow: 0 5px 20px rgba(0,0,0,.2);
+}
+.literary-reader[data-presentation="choice"] .choice-button:hover,
+.literary-reader[data-presentation="choice"] .choice-button:focus-visible,
+.literary-reader[data-presentation="choice-cg"] .choice-button:hover,
+.literary-reader[data-presentation="choice-cg"] .choice-button:focus-visible {
+  background: rgba(132,88,65,.9);
+}
+.literary-reader[data-presentation="cg"] .literary-picture.is-cg,
+.literary-reader[data-presentation="choice-cg"] .literary-picture.is-cg,
+.literary-reader[data-presentation="ending"] .literary-picture.is-cg {
+  overflow: hidden;
+}
+.literary-reader[data-presentation="cg"] .literary-picture.is-cg::before,
+.literary-reader[data-presentation="choice-cg"] .literary-picture.is-cg::before,
+.literary-reader[data-presentation="ending"] .literary-picture.is-cg::before {
+  filter: blur(26px) brightness(.58) saturate(.86);
+}
+.literary-reader[data-presentation="cg"] .literary-picture.is-cg > img,
+.literary-reader[data-presentation="choice-cg"] .literary-picture.is-cg > img,
+.literary-reader[data-presentation="ending"] .literary-picture.is-cg > img {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
+  object-position: var(--focus,50% 50%);
+}
+.literary-reader[data-presentation="sprite-dialogue"] .reader-sheet,
+.literary-reader[data-presentation="background"] .reader-sheet {
+  background: linear-gradient(180deg,rgba(7,15,22,0),rgba(7,15,22,.7) 18%,rgba(7,15,22,.94) 100%);
+}
+.literary-reader[data-presentation="sprite-dialogue"] .scene-stage {
+  z-index: 2;
+}
+.literary-home[data-presentation^="menu-"] .home-panel {
+  max-width: 760px;
+  margin-inline: 0;
+  padding: 24px 0 0;
+  background: linear-gradient(180deg,rgba(7,15,22,0),rgba(7,15,22,.48));
+}
+.literary-home[data-presentation^="menu-"] {
+  align-items: flex-start;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.literary-home[data-presentation^="menu-"] .literary-home-card {
+  margin-top: clamp(18px,5vh,58px);
+  padding-bottom: max(28px,env(safe-area-inset-bottom));
+}
+.literary-home[data-presentation^="menu-"] .episode-select,
+.literary-home[data-presentation^="menu-"] .setting-button,
+.literary-home[data-presentation^="menu-"] .small-button {
+  border-radius: 999px;
+  background: rgba(10,20,27,.34);
+}
+
+@media(max-width:680px){
+  .literary-home[data-presentation^="menu-"] { padding-top: 24px; }
+  .literary-home[data-presentation^="menu-"] .literary-home-card { margin-top: 0; }
+  .literary-reader[data-presentation] .reader-sheet {
+    width: 100%;
+    max-height: min(42dvh,390px);
+    padding: 20px 18px max(18px,env(safe-area-inset-bottom));
+  }
+  .literary-reader[data-presentation="choice"] .reader-sheet,
+  .literary-reader[data-presentation="choice-cg"] .reader-sheet {
+    max-height: min(58dvh,500px);
+  }
+  .literary-reader[data-presentation] .reader-paragraph { font-size: calc(17px*var(--literary-scale)); line-height: 1.52; }
+  .literary-reader[data-presentation] .reader-footer { max-width: 940px; margin-inline: auto; }
+  .literary-reader[data-presentation="choice"] .reader-options,
+  .literary-reader[data-presentation="choice-cg"] .reader-options { gap: 8px; }
+  .literary-reader[data-presentation="choice"] .choice-button,
+  .literary-reader[data-presentation="choice-cg"] .choice-button { min-height: 54px; padding: 13px 16px; }
+  .literary-reader[data-presentation="sprite-dialogue"] .scene-stage { bottom: 34%; }
+  .literary-reader[data-presentation="cg"] .literary-picture.is-cg > img,
+  .literary-reader[data-presentation="choice-cg"] .literary-picture.is-cg > img,
+  .literary-reader[data-presentation="ending"] .literary-picture.is-cg > img {
+    -webkit-mask-image: linear-gradient(180deg,transparent 0%,#000 12%,#000 88%,transparent 100%);
+    mask-image: linear-gradient(180deg,transparent 0%,#000 12%,#000 88%,transparent 100%);
+  }
+}
+
+@media (orientation:landscape) and (max-height:600px){
+  .literary-reader[data-presentation] .reader-sheet { max-height: min(45dvh,280px); padding-block: 14px; }
+  .literary-reader[data-presentation="choice"] .reader-sheet,
+  .literary-reader[data-presentation="choice-cg"] .reader-sheet { max-height: 58dvh; }
+}
+
 /* Cinematic Romance A / Typography I. Fonts are bundled in assets/fonts. */
 @font-face{font-family:'Cinematic Cormorant';src:url('../assets/fonts/CormorantGaramond[wght].ttf') format('truetype');font-style:normal;font-weight:300 700;font-display:swap}
 @font-face{font-family:'Cinematic Manrope';src:url('../assets/fonts/Manrope[wght].ttf') format('truetype');font-style:normal;font-weight:200 800;font-display:swap}

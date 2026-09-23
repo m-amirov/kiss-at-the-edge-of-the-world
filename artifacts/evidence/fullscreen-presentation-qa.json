@@ -1,0 +1,28 @@
+{
+  "status": "PARTIAL",
+  "runtime": "http://127.0.0.1:4173/literary.html",
+  "browser": "Playwright Chromium",
+  "viewports": [[1920,900],[390,844],[360,640]],
+  "verifiedModes": ["menu-home","menu-эпизоды","background","sprite-dialogue","choice","cg","ending"],
+  "checks": {
+    "explicitPresentationMode": true,
+    "sceneAndVisualEventReadback": true,
+    "assetNaturalDimensionsReadback": true,
+    "noViewportOverflow": true,
+    "noInternalCardScroll": true,
+    "choicesRemainReachable": true,
+    "endingTechnicalCopyAbsent": true,
+    "consoleErrors": 0
+  },
+  "screenshots": {
+    "menu": ["output/playwright/system-menu-1920x900.png","output/playwright/system-menu-390x844.png","output/playwright/system-menu-360x640.png"],
+    "episodes": ["output/playwright/system-episodes-390x844.png"],
+    "spriteDialogue": ["output/playwright/system-reader-sprite-1920x900.png","output/playwright/system-reader-sprite-390x844.png","output/playwright/system-reader-sprite-360x640.png"],
+    "backgroundReader": ["output/playwright/system-reader-background-1920x900.png","output/playwright/system-reader-background-390x844.png","output/playwright/system-reader-background-360x640.png"],
+    "choice": ["output/playwright/system-choice-1920x900.png","output/playwright/system-choice-390x844.png","output/playwright/system-choice-360x640.png"],
+    "cg": ["output/playwright/system-cg-1920x900.png","output/playwright/system-cg-390x844.png","output/playwright/system-cg-360x640.png"],
+    "endings": ["output/playwright/ending-S44-390x844.png","output/playwright/ending-S44-360x640.png","output/playwright/ending-S45-390x844.png","output/playwright/ending-S45-360x640.png","output/playwright/ending-S46-390x844.png","output/playwright/ending-S46-360x640.png","output/playwright/ending-S47-390x844.png","output/playwright/ending-S47-360x640.png"]
+  },
+  "portraitAssetInventory": {"activeCgCount": 10, "portraitVariantsCreated": 10, "remainingPortraitAssets": []},
+  "remainingBlocker": "All active production CGs now have explicit portrait derivatives, but fresh Chromium runtime screenshots/readback are complete for S44-S47 only; the six newly generated non-ending CG states and every background state still need the same full 1920x900 + 390x844 + 360x640 runtime evidence before a whole-project visual PASS."
+}
