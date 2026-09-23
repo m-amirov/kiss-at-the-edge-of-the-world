@@ -1429,6 +1429,24 @@
       "conflictPolicy": "replace-if-baseline"
     },
     {
+      "source": ".codex/skills/visual-novel-art-continuity/SKILL.md",
+      "logicalId": "skill:visual-novel-art-continuity:SKILL.md",
+      "ownership": "target-mapped",
+      "targetTemplate": "{skillRoot}/visual-novel-art-continuity/SKILL.md",
+      "modes": ["init", "update"],
+      "projectTypes": ["new", "mature"],
+      "conflictPolicy": "semantic-merge"
+    },
+    {
+      "source": ".codex/skills/visual-novel-narrative-qa/SKILL.md",
+      "logicalId": "skill:visual-novel-narrative-qa:SKILL.md",
+      "ownership": "target-mapped",
+      "targetTemplate": "{skillRoot}/visual-novel-narrative-qa/SKILL.md",
+      "modes": ["init", "update"],
+      "projectTypes": ["new", "mature"],
+      "conflictPolicy": "semantic-merge"
+    },
+    {
       "source": "tools/yandex/external-runtime-provider/lib/reporting.mjs",
       "logicalId": "managed:yandex-external-runtime-provider-reporting",
       "ownership": "managed",

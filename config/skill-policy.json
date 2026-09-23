@@ -167,6 +167,18 @@
       ]
     },
     {
+      "name": "visual-novel-art-continuity",
+      "kind": "production",
+      "activation": "visual-novel asset generation, character/location continuity, CG integration or visual-event staging",
+      "mandatoryWhen": "the project ships authored character art or CGs"
+    },
+    {
+      "name": "visual-novel-narrative-qa",
+      "kind": "production",
+      "activation": "visual-novel script audit, route/choice verification, save restoration or visual-event narrative QA",
+      "mandatoryWhen": "the project has authored scenes, routes or interactive choices"
+    },
+    {
       "name": "yandex-release-validation",
       "kind": "platform",
       "activation": "before any Yandex Games release candidate",
