@@ -74,3 +74,9 @@ test('every active production CG has an explicit portrait derivative mapping', (
     assert.match(player, new RegExp(`'${asset.path.split('/').pop()}'\\s*:`));
   }
 });
+
+test('legacy-only Myvatn background is not falsely reported as active literary runtime art', () => {
+  const asset = assetManifest.assets.find(entry => entry.id === 'myvatn-pool-master');
+  assert.equal(asset?.status, 'available-unassigned');
+  assert.match(asset?.runtime ?? '', /Legacy src\/season-data\.js only/);
+});

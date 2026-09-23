@@ -144,8 +144,8 @@
       "id": "myvatn-pool-master",
       "family": "background",
       "path": "assets/backgrounds/myvatn-pool-master.png",
-      "status": "integrated",
-      "runtime": "episode 8 Eric"
+      "status": "available-unassigned",
+      "runtime": "Legacy src/season-data.js only; no active mapping in literary production runtime"
     },
     {
       "id": "akureyri-street-master",
