@@ -168,7 +168,9 @@ function renderReader(){
   const sheet=el('','reader-sheet');sheet.append(el(cleanLiteraryText(scene.title),'reader-scene','h2'));
   if(reader.migrationNotice){sheet.append(el('После обновления визуальных переходов продолжение начинается с начала текущей сцены. Прежний прогресс и выборы сохранены.','migration-note'));reader.migrationNotice=false;persist();}
   if(current?.type==='page'){
-    for(const paragraph of current.paragraphs)sheet.append(el(cleanLiteraryText(paragraph),'reader-paragraph','p'));
+    const content=el('','reader-content');
+    for(const paragraph of current.paragraphs)content.append(el(cleanLiteraryText(paragraph),'reader-paragraph','p'));
+    sheet.append(content);
     const footer=el('','reader-footer');
     footer.append(el(`${reader.position+1} / ${flow.length}`,'page-counter'));
     const nextDecision=flow.findIndex((entry,index)=>index>reader.position+1 && entry.type==='choice');
@@ -176,17 +178,21 @@ function renderReader(){
     footer.append(button('Далее →',()=>{reader.position++;persist();renderReader()},'primary'));
     sheet.append(footer);
   } else if(current?.type==='choice'){
-    sheet.append(el('ТВОЙ ВЫБОР','choice-label'));
-    if(current.question)sheet.append(el(current.question,'decision-question','p'));
+    const content=el('','reader-content');
+    content.append(el('ТВОЙ ВЫБОР','choice-label'));
+    if(current.question)content.append(el(current.question,'decision-question','p'));
     const options=el('','reader-options');
     for(const opt of current.options)options.append(button(cleanLiteraryText(opt.label),()=>{reader.choices[current.id]=opt.code;persist();renderReader()},'choice-button'));
-    sheet.append(options);
+    content.append(options);
+    sheet.append(content);
   }else{
     const next=nextLiteraryScene(reader.sceneId,reader.choices);
     if(next && byId.has(next))sheet.append(button(`Следующая сцена → ${next}`,()=>{reader.sceneId=next;reader.position=0;if(!reader.visited.includes(next))reader.visited.push(next);persist();renderReader()},'primary'));
     else if(['S44','S45','S46','S47'].includes(scene.id)){
       if(!reader.finished){reader.finished=true;persist()}
-      sheet.append(el('Конец первого сезона. Это завершение выбранной истории; начать другое прохождение можно из меню.','reader-paragraph'));
+      const content=el('','reader-content');
+      content.append(el('Конец первого сезона. Это завершение выбранной истории; начать другое прохождение можно из меню.','reader-paragraph'));
+      sheet.append(content);
       sheet.append(button('Вернуться в меню',goHome,'primary'));
     }else{sheet.append(el('Следующая сцена недоступна: ошибка структуры сценария.','reader-paragraph'));sheet.append(button('В меню',goHome,'primary'))}
   }

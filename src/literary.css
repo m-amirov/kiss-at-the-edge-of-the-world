@@ -37,7 +37,9 @@ button:disabled{opacity:.43;cursor:not-allowed}
 .stage-character.stage-alice{z-index:3}.stage-character.stage-eric{z-index:2}.stage-character.stage-nick{z-index:1}.stage-character.stage-damir{z-index:2}
 @keyframes stage-in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
 .reader-header{z-index:4}
-.reader-sheet{z-index:3;max-height:min(55dvh,610px);background:linear-gradient(125deg,rgba(12,23,32,.94),rgba(22,34,41,.92));box-shadow:0 23px 90px rgba(0,0,0,.57);border-color:rgba(225,189,136,.7)}
+.reader-sheet{z-index:3;max-height:min(55dvh,610px);overflow:hidden;display:flex;flex-direction:column;min-height:0;background:linear-gradient(125deg,rgba(12,23,32,.94),rgba(22,34,41,.92));box-shadow:0 23px 90px rgba(0,0,0,.57);border-color:rgba(225,189,136,.7)}
+.reader-content{min-height:0;flex:1 1 auto;overflow:auto;overscroll-behavior:contain}
+.reader-footer{flex:0 0 auto}
 .reader-paragraph{font-size:calc(clamp(17px,2.2vw,21px)*var(--literary-scale));line-height:1.58;text-wrap:pretty}
 .reader-scene{font-size:14px;line-height:1.45}
 .literary-contrast .reader-sheet{background:#08131c;color:white;border:2px solid #f2d7b0}

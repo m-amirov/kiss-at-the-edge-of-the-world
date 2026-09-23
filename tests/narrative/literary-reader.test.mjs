@@ -121,3 +121,12 @@ test('300 synthetic complete paths preserve all branch and ending invariants',()
  }
  assert.equal(samples.length,300);
 });
+test('mobile long text scrolls independently while the next control stays in the card',()=>{
+ const player=fs.readFileSync(new URL('../../src/literary-player.js',import.meta.url),'utf8');
+ const css=fs.readFileSync(new URL('../../src/literary.css',import.meta.url),'utf8');
+ assert.match(player,/reader-content/);
+ assert.match(player,/sheet\.append\(content\)/);
+ assert.match(css,/\.reader-content\{[^}]*overflow:auto/);
+ assert.match(css,/\.reader-sheet\{[^}]*display:flex/);
+ assert.match(css,/\.reader-footer\{flex:0 0 auto\}/);
+});
