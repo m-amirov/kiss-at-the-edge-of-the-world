@@ -1,0 +1,31 @@
+{
+  "scope": "isolated prototypes/premium-ui",
+  "commit": "working-tree-before-commit",
+  "browser": "Playwright Chromium",
+  "screenshots": [
+    "output/playwright/premium-a-1920x900.png",
+    "output/playwright/premium-b-1920x900.png",
+    "output/playwright/premium-c-1920x900.png",
+    "output/playwright/premium-a-390x844.png",
+    "output/playwright/premium-b-390x844.png",
+    "output/playwright/premium-c-390x844.png",
+    "output/playwright/premium-b-360x640.png",
+    "output/playwright/premium-b-landscape.png"
+  ],
+  "checks": {
+    "desktop_1920x900": "PASS",
+    "mobile_390x844": "PASS",
+    "mobile_360x640": "PASS",
+    "mobile_landscape_844x390": "PASS",
+    "menu_to_dialogue": "PASS",
+    "local_assets_only": "PASS",
+    "external_runtime_cdn": "PASS_NONE",
+    "production_runtime_modified": "NO",
+    "visual_acceptance": "PROTOTYPE_REVIEW_READY_NOT_PRODUCTION_ACCEPTANCE"
+  },
+  "limitations": [
+    "In-app browser blocked localhost with ERR_BLOCKED_BY_CLIENT; equivalent Chromium capture via Playwright succeeded.",
+    "Screenshots cover representative menu states; interactive CG/choice/settings/gallery/ending were verified through DOM state and should be re-captured after owner direction is chosen.",
+    "No independent Web High visual review was requested or used."
+  ]
+}
