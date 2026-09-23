@@ -1,5 +1,7 @@
 {
   "status": "PARTIAL",
+  "acceptanceRun": "2026-09-23",
+  "currentHead": "9310a1b",
   "runtime": "http://127.0.0.1:4173/literary.html",
   "browser": "Playwright Chromium",
   "viewports": [[1920,900],[390,844],[360,640]],
@@ -24,5 +26,7 @@
     "endings": ["output/playwright/ending-S44-390x844.png","output/playwright/ending-S44-360x640.png","output/playwright/ending-S45-390x844.png","output/playwright/ending-S45-360x640.png","output/playwright/ending-S46-390x844.png","output/playwright/ending-S46-360x640.png","output/playwright/ending-S47-390x844.png","output/playwright/ending-S47-360x640.png"]
   },
   "portraitAssetInventory": {"activeCgCount": 10, "portraitVariantsCreated": 10, "remainingPortraitAssets": []},
-  "remainingBlocker": "All active production CGs now have explicit portrait derivatives, but fresh Chromium runtime screenshots/readback are complete for S44-S47 only; the six newly generated non-ending CG states and every background state still need the same full 1920x900 + 390x844 + 360x640 runtime evidence before a whole-project visual PASS."
+  "intermediateCgAcceptance": {"states": ["S13:skaftafell-notebook","S18:hofn-dance","S26:eric-consensual-embrace","S45:nick-film-final","S46:airport-checkin","S47:alice-morning-harbour"], "viewportsPerState": 3, "passed": true, "screenshots": "output/playwright/intermediate-S*-*.png"},
+  "backgroundAcceptance": {"activeRuntimeAssetsChecked": 12, "passedStates": ["S01:keflavik-airport-arrivals-v1.png","S02:roadside-cafe","S04:thingvellir-trail","S09:skogafoss-trail","S11:scene-start","S15:jokulsarlon-lagoon","S17:scene-start","S18:hofn-lighthouse","S36:snaefellsnes-drive","S43:scene-start","S50:scene-start"], "viewportsPerState": 3, "unverified": ["S22:eastfjords-road-master.png — runtime bootstrap requires authored S05-C1 weatherChoice; seeded readback returned menu and console logged Unresolved conditional group S22", "myvatn-pool-master.png — manifest asset has no active visual-event mapping in literary runtime"], "screenshots": "output/playwright/background-*.png"},
+  "remainingBlocker": "PARTIAL: S22 eastfjords-road-master.png could not be reached in a clean seeded runtime because the production scene requires prior authored S05-C1 weatherChoice state; myvatn-pool-master.png is listed as integrated in the manifest but has no active literary visual-event mapping. No image defect was changed without a reproducible presentation defect."
 }
