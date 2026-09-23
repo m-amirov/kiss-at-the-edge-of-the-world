@@ -69,6 +69,14 @@ test('S66 greenhouse uses the authored environment and its independent portrait 
  assert.ok(fs.existsSync(new URL('../../assets/backgrounds/s66-hveragerdi-greenhouse-portrait.png',import.meta.url)));
 });
 
+test('S05 Hveragerði road uses the authored desktop background and independent portrait mapping',()=>{
+ const {flow,choices}=complete('S05');
+ const opening=shot('S05',flow,0,choices);
+ assert.equal(opening.art?.file,'s05-hveragerdi-road.png');
+ assert.ok(fs.existsSync(new URL('../../assets/backgrounds/s05-hveragerdi-road.png',import.meta.url)));
+ assert.ok(fs.existsSync(new URL('../../assets/backgrounds/s05-hveragerdi-road-portrait.png',import.meta.url)));
+});
+
 test('S13 visitor center precedes notebook CG; image is not used in Vik',()=>{
  const {flow,choices}=complete('S13');
  const arrival=indexOfSource(flow,0,7),notebook=indexOfSource(flow,0,12);

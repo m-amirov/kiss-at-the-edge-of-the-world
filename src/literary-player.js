@@ -30,6 +30,7 @@ const focalPointByAsset = {
   's47-alice-home-epilogue-month-later.png': '67% 44%'
 };
 const portraitAssetByDesktopAsset = {
+  's05-hveragerdi-road.png':'s05-hveragerdi-road-portrait.png',
   's66-hveragerdi-greenhouse.png':'s66-hveragerdi-greenhouse-portrait.png',
   's13-skaftafell-travelers.png':'s13-skaftafell-travelers-portrait.png',
   's18-hofn-dance-lights.png':'s18-hofn-dance-lights-portrait.png',

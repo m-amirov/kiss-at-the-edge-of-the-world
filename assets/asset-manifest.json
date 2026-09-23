@@ -345,6 +345,19 @@
       "mobileSafe": true,
       "portraitAsset": "assets/backgrounds/s66-hveragerdi-greenhouse-portrait.png",
       "portraitDimensions": "941x1672"
+    },
+    {
+      "id": "s05-hveragerdi-road",
+      "family": "background",
+      "path": "assets/backgrounds/s05-hveragerdi-road.png",
+      "status": "integrated",
+      "runtime": "S05 scene start; authored wet geothermal road toward Hveragerði",
+      "creationMethod": "Built-in image generation from ART_BIBLE direction; empty environment",
+      "createdAt": "2026-09-23",
+      "dimensions": "1832x859",
+      "mobileSafe": true,
+      "portraitAsset": "assets/backgrounds/s05-hveragerdi-road-portrait.png",
+      "portraitDimensions": "941x1672"
     }
   ],
   "routingTrace": {

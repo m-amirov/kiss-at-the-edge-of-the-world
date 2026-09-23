@@ -12,7 +12,7 @@ desktop/mobile screenshots.
 | S65 | Reykjavik guesthouse, evening | group | stage only | MISSING_APPROPRIATE_ART |
 | S03 | Reykjavik guesthouse, day 2 morning | Alice, then Damir | stage/editor call | MISSING_APPROPRIATE_ART |
 | S04 | Þingvellir, day 2 | group | reuse thingvellir master | REUSE |
-| S05 | road to Hveragerði, day 3 morning | group | stage only | MISSING_APPROPRIATE_ART |
+| S05 | road to Hveragerði, day 3 morning | group | dedicated desktop + independent portrait road background; native Chromium accepted at 1920×900, 390×844, 360×640 | COVERED_EVENT |
 | S06 | Hveragerði geothermal valley, day 3 | Alice/Eric | stage only | MISSING_APPROPRIATE_ART |
 | S07 | guesthouse shared kitchen, evening | group | stage only | MISSING_APPROPRIATE_ART |
 | S08 | Hveragerði guesthouse, day 4 morning | Alice/Damir | stage only | MISSING_APPROPRIATE_ART |
@@ -79,11 +79,13 @@ desktop/mobile screenshots.
 - 66 authored scenes audited; 66 rows above.
 - 9 scenes have truthful reusable location coverage at scene start; 6 scenes
   have authored CG coverage (including route-specific/epilogue beats).
-- 43 scenes remain without a scene-specific background or CG and therefore
+- 42 scenes remain without a scene-specific background or CG and therefore
   remain `MISSING_APPROPRIATE_ART`; stage presentation is not counted as full
   location coverage. S66 was closed by commit `9eb70f4`.
 - S66 runtime evidence is recorded in `docs/VISUAL_ACCEPTANCE_S66_2026-09-23.md`
   and the ignored run artifact `artifacts/evidence/s66-visual-qa.json`.
+- S05 runtime evidence is recorded in `docs/VISUAL_ACCEPTANCE_S05_2026-09-23.md`
+  and the ignored run artifact `artifacts/evidence/s05-visual-qa.json`.
 - `s02-expedition-planning-iceland.png` and `myvatn-pool-master.png` remain
   `UNUSED_ASSET`/`available-unassigned` until an authored event proves their use.
 - This ledger intentionally does not approve any asset without current runtime
