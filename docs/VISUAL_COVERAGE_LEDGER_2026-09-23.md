@@ -16,7 +16,7 @@ desktop/mobile screenshots.
 | S06 | Hveragerði geothermal valley, day 3 | Alice/Eric | stage only | MISSING_APPROPRIATE_ART |
 | S07 | guesthouse shared kitchen, evening | group | stage only | MISSING_APPROPRIATE_ART |
 | S08 | Hveragerði guesthouse, day 4 morning | Alice/Damir | stage only | MISSING_APPROPRIATE_ART |
-| S66 | Hveragerði greenhouse, day 4 | group | dedicated desktop + independent portrait background | COVERED_EVENT |
+| S66 | Hveragerði greenhouse, day 4 | group | dedicated desktop + independent portrait background; native Chromium accepted at 1920×900, 390×844, 360×640 | COVERED_EVENT |
 | S09 | Skógafoss, day 5 morning | group; trail cue | reuse Skógafoss master | REUSE |
 | S10 | road/Vík petrol station, day 5 | Alice/Eric | stage only | MISSING_APPROPRIATE_ART |
 | S11 | Reynisfjara, day 6 morning | group | reuse Reynisfjara master | REUSE |
@@ -82,6 +82,8 @@ desktop/mobile screenshots.
 - 43 scenes remain without a scene-specific background or CG and therefore
   remain `MISSING_APPROPRIATE_ART`; stage presentation is not counted as full
   location coverage. S66 was closed by commit `9eb70f4`.
+- S66 runtime evidence is recorded in `docs/VISUAL_ACCEPTANCE_S66_2026-09-23.md`
+  and the ignored run artifact `artifacts/evidence/s66-visual-qa.json`.
 - `s02-expedition-planning-iceland.png` and `myvatn-pool-master.png` remain
   `UNUSED_ASSET`/`available-unassigned` until an authored event proves their use.
 - This ledger intentionally does not approve any asset without current runtime
