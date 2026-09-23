@@ -295,6 +295,28 @@
       "createdAt": "2026-09-23",
       "dimensions": "1672x941",
       "mobileSafe": true
+    },
+    {
+      "id": "s02-roadside-cafe",
+      "family": "background",
+      "path": "assets/backgrounds/s02-roadside-cafe.png",
+      "status": "integrated",
+      "runtime": "S02 roadside-cafe cue [0,31], after arrival; never during road sequence",
+      "creationMethod": "Built-in image generation from ART_BIBLE direction; empty environment, no character references",
+      "createdAt": "2026-09-23",
+      "dimensions": "1672x941",
+      "mobileSafe": true
+    },
+    {
+      "id": "s26-eric-choice",
+      "family": "cg",
+      "path": "assets/cg/s26-eric-choice.png",
+      "status": "integrated",
+      "runtime": "S26 route-eric cue [2,0], conditional on S26-C1=A",
+      "creationMethod": "Built-in image generation using Alice and Eric master references; authored consenting embrace",
+      "createdAt": "2026-09-23",
+      "dimensions": "1672x941",
+      "mobileSafe": true
     }
   ],
   "routingTrace": {
@@ -304,8 +326,8 @@
     ],
     "nativeAssetGeneratorUsed": true,
     "imageGenerationCapability": "available",
-    "generatedAssetCount": 35,
-    "integratedAssetCount": 35,
+    "generatedAssetCount": 37,
+    "integratedAssetCount": 37,
     "nativeFallbackUsed": true,
     "nativeFallbackReason": "Web art-director transport disconnected with ERR_ABORTED before completion; one native fallback used"
   },

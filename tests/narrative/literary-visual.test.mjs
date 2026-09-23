@@ -48,13 +48,15 @@ test('all 66 scenes have a real authored place, time, cast and bounded image ref
  }
 });
 
-test('S02 cafe resets road stage and never shows a van-planning CG not written in the story',()=>{
+test('S02 cafe background appears only after arrival and never during the road sequence',()=>{
  const {flow,choices}=complete('S02');
  assert.equal(shot('S02',flow,0,choices).location,'Автомобиль по дороге в Рейкьявик');
  assert.equal(shot('S02',flow,0,choices).art,null);
  const cafe=indexOfSource(flow,0,31);
  assert.equal(shot('S02',flow,cafe,choices).beatId,'roadside-cafe');
- assert.equal(shot('S02',flow,cafe,choices).art,null);
+ assert.equal(shot('S02',flow,cafe,choices).art?.file,'s02-roadside-cafe.png');
+ assert.equal(shot('S02',flow,cafe,choices).art?.type,'background');
+ assert.equal(shot('S02',flow,cafe-1,choices).art,null);
  assert.ok(flow.every((e,i)=>shot('S02',flow,i,choices).art?.type!=='cg'));
 });
 
@@ -108,6 +110,28 @@ test('the page boundary never mixes different authored visual beats',()=>{
    assert.equal(a.beatId,b.beatId,`${id}: page spans two visual beats`);
   }
  }
+});
+
+test('S26 Eric CG is isolated to the authored Eric route choice',()=>{
+ for(const route of ['A','B','C','D']){
+  const {flow,choices}=complete('S26',{'S26-C90':'A','S26-C1':route});
+  const routeChunk={A:2,B:8,C:14,D:20}[route];
+  const at=indexOfSource(flow,routeChunk,0);
+  const shotAt=shot('S26',flow,at,choices);
+  if(route==='A') assert.equal(shotAt.art?.file,'s26-eric-choice.png');
+  else assert.notEqual(shotAt.art?.file,'s26-eric-choice.png');
+ }
+});
+
+test('S02 and S26 visual state survives a save/load-shaped choice round trip',()=>{
+ const s02=complete('S02');
+ const s02Saved=JSON.parse(JSON.stringify(s02.choices));
+ const s02Cafe=indexOfSource(s02.flow,0,31);
+ assert.equal(shot('S02',s02.flow,s02Cafe,s02Saved).art?.file,'s02-roadside-cafe.png');
+ const s26=complete('S26',{'S26-C90':'A','S26-C1':'A'});
+ const s26Saved=JSON.parse(JSON.stringify(s26.choices));
+ const s26Eric=indexOfSource(s26.flow,2,0);
+ assert.equal(shot('S26',s26.flow,s26Eric,s26Saved).art?.file,'s26-eric-choice.png');
 });
 
 test('completion position retains the month-later CG and a fresh scene cannot inherit it',()=>{
