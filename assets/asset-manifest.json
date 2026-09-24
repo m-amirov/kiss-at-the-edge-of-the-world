@@ -623,6 +623,19 @@
       "mobileSafe": true,
       "portraitAsset": "assets/backgrounds/s61-hofn-streets-portrait.png",
       "portraitDimensions": "941x1672"
+    },
+    {
+      "id": "s27-egilsstadir-boardwalk",
+      "family": "cg",
+      "path": "assets/cg/s27-egilsstadir-boardwalk.png",
+      "status": "integrated",
+      "runtime": "S27 authored cue [0,0], Lagarfljót boardwalk repair",
+      "creationMethod": "Codex imagegen using canonical Alice, Nick, Eric and Damir master references",
+      "createdAt": "2026-09-24",
+      "dimensions": "1672x941",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s27-egilsstadir-boardwalk-portrait.png",
+      "portraitDimensions": "941x1672"
     }
   ],
   "routingTrace": {

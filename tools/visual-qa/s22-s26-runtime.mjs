@@ -6,16 +6,12 @@ import { compileInteractivePlayback } from '../../src/literary-pacing.js';
 import { literarySaveKey } from '../../src/literary-engine.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
-const output = path.join(root, 'output/playwright/s22-s26-runtime-2026-09-24');
+const output = path.join(root, 'output/playwright/s27-runtime-2026-09-24');
 const { chromium } = await import(pathToFileURL('C:/Users/user/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs').href);
 const baseUrl = process.env.LITERARY_QA_URL ?? 'http://127.0.0.1:4173/literary.html';
 const viewports = [{ width: 1920, height: 900 }, { width: 390, height: 844 }, { width: 360, height: 640 }];
-const routes = { A: 'eric', B: 'nick', C: 'damir', D: 'alice' };
 const targetCues = {
-  S22: [{ id: 'scene-start', chunk: 0, paragraph: 0 }],
-  S23: [{ id: 's23-eric-harbor-plan', chunk: 0, paragraph: 0 }],
-  S24: [{ id: 's24-nick-pier-consent', chunk: 0, paragraph: 0 }],
-  S25: [{ id: 's25-damir-clarity-talk', chunk: 0, paragraph: 0 }]
+  S27: [{ id: 's27-egilsstadir-boardwalk', chunk: 0, paragraph: 0 }]
 };
 
 function choicesFor(route = 'A') {
@@ -52,14 +48,6 @@ function targets() {
     for (const cue of cues) {
       result.push({ id: `${sceneId}-${cue.id}`, sceneId, choices: common, position: flowPosition(sceneId, common, cue.chunk, cue.paragraph), phase: 'event' });
     }
-  }
-  for (const [route, routeName] of Object.entries(routes)) {
-    const choices = choicesFor(route);
-    const routeChunk = { A: 7, B: 8, C: 14, D: 20 }[route];
-    const before = Math.max(0, flowPosition('S26', choices, routeChunk, 0) - 1);
-    const after = flowPosition('S26', choices, routeChunk, 0);
-    result.push({ id: `S26-${routeName}-before`, sceneId: 'S26', choices, position: before, phase: 'before', route, cue: `[${routeChunk},0]` });
-    result.push({ id: `S26-${routeName}-after`, sceneId: 'S26', choices, position: after, phase: 'after', route, cue: `[${routeChunk},0]` });
   }
   return result;
 }

@@ -116,6 +116,7 @@ const cues = {
       {at:[8,0],id:'route-nick',cast:['alice','nick'],art:'cg/s26-nick-choice.png',when:{'S26-C1':'B'}},
       {at:[14,0],id:'route-damir',cast:['alice','damir'],art:'cg/s26-damir-choice.png',when:{'S26-C1':'C'}},
       {at:[20,0],id:'route-independent',cast:['alice'],art:'cg/s26-alice-choice.png',when:{'S26-C1':'D'}}],
+ S27:[{at:[0,0],id:'s27-egilsstadir-boardwalk',location:'Lagarfljót: ремонт приозёрного настила',cast:['alice','nick','eric','damir'],art:'cg/s27-egilsstadir-boardwalk.png'}],
  S33:[{at:[0,1],id:'hotel-teaser',location:'Гостиница Акюрейри: личный голос в тизере',art:null,cast:['alice','nick']}],
  S36:[{at:[0,1],id:'snaefellsnes-drive',location:'Дорога по Snæfellsnes',art:'snaefellsnes-master.png'}],
  S41:[{at:[0,1],id:'editor-cafe-call',location:'Рейкьявик: кафе, видеозвонок редактору',art:null}],

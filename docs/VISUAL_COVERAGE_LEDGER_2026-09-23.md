@@ -37,7 +37,7 @@ desktop/mobile screenshots.
 | S25 | Eastfjords guesthouse, day 12 | Alice/Damir; `s25-damir-clarity-talk` [0,0] | dedicated desktop + independent portrait cinematic; 3 viewport runtime evidence | VISUAL_ACCEPTANCE: PASS |
 | S58 | shared kitchen, day 12 evening | group | stage only | MISSING_APPROPRIATE_ART |
 | S26 | guesthouse corridor/courtyard, day 12 evening | route-dependent pair/solo; Eric `[7,0]`, Nick `[8,0]`, Damir `[14,0]`, independent `[20,0]` | four route-specific desktop + independent portrait cinematic states; before/after evidence at 3 viewports | VISUAL_ACCEPTANCE: PASS |
-| S27 | Egilsstaðir lakeside boardwalk, day 13 | group | stage only | MISSING_APPROPRIATE_ART |
+| S27 | Egilsstaðir lakeside boardwalk, day 13 | group | `s27-egilsstadir-boardwalk` at [0,0], independent portrait; action visible above text panel at 3 viewports | VISUAL_ACCEPTANCE: PASS |
 | S59 | group lunch, day 13 | group | stage only | MISSING_APPROPRIATE_ART |
 | S28 | marked trail/viewpoint, day 14 | Alice/Eric | stage only | MISSING_APPROPRIATE_ART |
 | S49 | guesthouse hall dance, evening | Alice/Eric | stage only | MISSING_APPROPRIATE_ART |
@@ -79,7 +79,7 @@ desktop/mobile screenshots.
 - 66 authored scenes audited; 66 rows above.
 - 8 scenes are `REUSE`, 8 are `COVERED_EVENT`, 4 are accepted cinematic batch
   rows (`S10`, `S12`, `S14`, `S16`), and 3 are pilot-accepted rows (`S06-S08`).
-- 42 scenes remain `MISSING_APPROPRIATE_ART`; stage presentation is not counted
+- 40 scenes remain `MISSING_APPROPRIATE_ART`; S27 is now `VISUAL_ACCEPTANCE: PASS` after fresh runtime screenshots at all three required viewports. Stage presentation is not counted
   as full location coverage. The ledger still contains 66 authored rows.
 - S66 runtime evidence is recorded in `docs/VISUAL_ACCEPTANCE_S66_2026-09-23.md`
   and the ignored run artifact `artifacts/evidence/s66-visual-qa.json`.

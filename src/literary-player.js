@@ -68,6 +68,7 @@ const portraitAssetByDesktopAsset = {
   ,'s20-hofn-damir-kitchen.png':'s20-hofn-damir-kitchen-portrait.png'
   ,'s21-alice-hofn-room.png':'s21-alice-hofn-room-portrait.png'
   ,'s61-hofn-streets.png':'s61-hofn-streets-portrait.png'
+  ,'s27-egilsstadir-boardwalk.png':'s27-egilsstadir-boardwalk-portrait.png'
 };
 function assetFileForViewport(art){
   const portrait=window.matchMedia?.('(max-width: 680px) and (orientation: portrait)').matches;

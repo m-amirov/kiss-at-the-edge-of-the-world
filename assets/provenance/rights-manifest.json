@@ -474,6 +474,22 @@
       "license": "generated for this project"
     },
     {
+      "path": "assets/cg/s27-egilsstadir-boardwalk.png",
+      "sha256": "2F8C46AD171940CA1B0FFAAE9C8ECE0ED72F7C470DC0CD81887B972B34FC26D6",
+      "dimensions": "1672x941",
+      "method": "Independent desktop composition generated from canonical master references; authored S27 boardwalk repair event",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s27-egilsstadir-boardwalk-portrait.png",
+      "sha256": "1CEEF9AD63A7C7596D3E70BD4CA519D13395C48E9B770762B46F25546B61E826",
+      "dimensions": "941x1672",
+      "method": "Recomposed portrait edit from the prior S27 portrait and canonical master references; boardwalk repair action moved above the dialogue-panel safe region",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
+    },
+    {
       "path": "assets/backgrounds/s61-hofn-streets-portrait.png",
       "sha256": "98274AC64656B1BB6006DAF825D57FB2E7C21D0606F5C5968A1A2ACBCE2F7863",
       "dimensions": "941x1672",
