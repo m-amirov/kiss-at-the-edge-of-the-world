@@ -2,6 +2,7 @@
 
 Дата: 2026-09-24  
 Вердикт партии: **PASS / VISUAL_ACCEPTANCE: PASS**  
+S16 medical-help desktop и portrait заменены после `ART_IDENTITY_FAIL`; пострадавшая туристка теперь явно отличается от Алисы.
 Общий сезонный PASS не присваивается: 42 из 66 authored scene rows остаются `MISSING_APPROPRIATE_ART`.
 
 ## Authored event coverage
@@ -28,7 +29,7 @@ All four visual events were reached at all required viewports, producing 12 fres
 
 Runtime readback confirmed for each event: correct `sceneId` and `visualEventId`, desktop asset on desktop, portrait asset on mobile (`naturalWidth=941`, `naturalHeight=1672`), `mode: cinematic`, `stageCount: 0`, and image rect equal to the viewport. The lower dialogue layer stayed readable and did not cover the central faces/hands/action.
 
-The only repeated browser console 404 is the non-game `/favicon.ico`; `requestfailed` was empty and no game asset failed to load.
+The only repeated browser console 404 is the non-game `/favicon.ico`; `requestfailed` was empty and no game asset failed to load. The current-HEAD runtime captures were visually rechecked in the native Chromium browser after the replacement; the repository helper could not be rerun because this checkout has no locally resolvable `playwright` module (`MODULE_NOT_FOUND`). This is recorded as a tooling limitation, not a product defect.
 
 ## Art review
 
@@ -36,6 +37,7 @@ The only repeated browser console 404 is the non-game `/favicon.ico`; `requestfa
 - S16 medical-help composition preserves all four named characters and uses visibly distinct tourists; hands, water bottle, chair and ankle action are readable.
 - S16 kitchen composition is a separate later event with four canonical characters, soup, bread and shared kitchen interaction; it is not reused for the medical event.
 - S13 existing CG and S15 existing environment were reused without regeneration or unrelated reassignment.
+- Party-wide identity/anatomy review covered S13 desktop+portrait, S14 desktop+portrait, S16 medical-help desktop+portrait and S16 kitchen desktop+portrait. No duplicate main-character identity, malformed hands/limbs, or scenario-mismatched cast/action was found. S15 remains the authored lagoon environment and contains no character duplication surface.
 
 ## Coverage totals
 
@@ -46,3 +48,5 @@ The ledger was recalculated against all 66 rows: `MISSING_APPROPRIATE_ART=42`, `
 - `npm run literary:compile` — `LITERARY_COMPILE_OK 66 scenes 619 chunks`
 - `npm run test:narrative` — PASS
 - `git diff --check` — PASS
+- SHA-256 rechecked against `assets/provenance/rights-manifest.json` for both replacement S16 files — PASS
+- Browser acceptance — PASS on current-HEAD Chromium captures; automated helper rerun — BLOCKED by missing local `playwright` dependency (see evidence note above)

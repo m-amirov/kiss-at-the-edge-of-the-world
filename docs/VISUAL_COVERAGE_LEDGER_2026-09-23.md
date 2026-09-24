@@ -24,7 +24,7 @@ desktop/mobile screenshots.
 | S13 | Skaftafell, day 7 morning | group; notebook CG | reuse desktop+portrait CG | COVERED_EVENT |
 | S14 | glacier-plain trail, day 7 | Alice/Eric; `s14-skaftafell-pace` [0,0], clear at road transition [7,0] | desktop+portrait cinematic | BATCH_ACCEPTED_S13_S16 |
 | S15 | Jökulsárlón, day 8 | Alice/Nick/group; lagoon cue | reuse lagoon master | REUSE |
-| S16 | roadside guesthouse, evening | `s16-guesthouse-help` [0,0]; `s16-kitchen-soup` [4,0] | desktop+portrait cinematic, separate medical-help/kitchen beats | BATCH_ACCEPTED_S13_S16 |
+| S16 | roadside guesthouse, evening | `s16-guesthouse-help` [0,0]; `s16-kitchen-soup` [4,0] | desktop+portrait cinematic, separate medical-help/kitchen beats; replacement tourist identity verified | BATCH_ACCEPTED_S13_S16 |
 | S17 | Höfn guesthouse, day 9 | group | reuse Höfn harbour bg, scene-specificity pending | MISSING_APPROPRIATE_ART |
 | S18 | Höfn lighthouse/harbour, day 9 evening | Alice/Eric; lighthouse/dance/walk/morning | covered bg + dance desktop/portrait | COVERED_EVENT |
 | S19 | Höfn pool, evening | Alice/Nick | stage only | MISSING_APPROPRIATE_ART |

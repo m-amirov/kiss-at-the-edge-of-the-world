@@ -1,0 +1,31 @@
+{
+  "date": "2026-09-24",
+  "head": "f6f2231",
+  "scope": [
+    "assets/cg/s13-skaftafell-travelers.png",
+    "assets/cg/s13-skaftafell-travelers-portrait.png",
+    "assets/cg/s14-skaftafell-pace.png",
+    "assets/cg/s14-skaftafell-pace-portrait.png",
+    "assets/cg/s16-guesthouse-help.png",
+    "assets/cg/s16-guesthouse-help-portrait.png",
+    "assets/cg/s16-kitchen-soup.png",
+    "assets/cg/s16-kitchen-soup-portrait.png"
+  ],
+  "s16Replacement": {
+    "desktopSha256": "8B492AE3E84D9DCDFC830E00FD0DCF18B3CFC0048748DB67B49FA3FDD37D6656",
+    "portraitSha256": "1D59EF97CD7BF9CE6B5ED31E967FD7BC3FEE51BF6AA3EF6E132BB364B4201FB2",
+    "identity": "PASS: injured tourist is visibly older, grey-haired and red-jacketed; Alice remains the distinct yellow-jacketed short-haired traveler",
+    "medicalAction": "PASS: Damir supports and examines the tourist ankle; companion supports her shoulder; no duplicate Alice or incorrect cast"
+  },
+  "batchReview": {
+    "identityDuplication": "PASS",
+    "anatomy": "PASS",
+    "scenarioCastAndAction": "PASS",
+    "s15Environment": "PASS: no character duplication surface"
+  },
+  "browser": {
+    "currentHeadRuntimeCaptures": "PASS",
+    "automatedHelper": "BLOCKED: local playwright module is not resolvable in this checkout"
+  },
+  "verdict": "PASS / VISUAL_ACCEPTANCE: PASS"
+}
