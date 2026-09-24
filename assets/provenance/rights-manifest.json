@@ -496,6 +496,38 @@
       "method": "Independent desktop/mobile composition generated from canonical master references; reviewed for authored event fidelity",
       "source": "Generated in Codex imagegen, 2026-09-24",
       "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s28-hverfjall-hood.png",
+      "sha256": "0627FEA5615891262A1393B011EB4549B3130952FF55233F3E0D6C2F8825BB5C",
+      "dimensions": "1920x900",
+      "method": "Independent desktop composition generated from Alice and Eric canonical masters; authored S28 hood action",
+      "source": "Generated in Codex imagegen, 2026-09-24; resized to runtime dimensions",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s28-hverfjall-hood-portrait.png",
+      "sha256": "1C5B2E669A9953246C17772E2A9EF33224AC484FB7DA0DFC92F9BA15B6061F30",
+      "dimensions": "390x844",
+      "method": "Independent portrait composition generated from Alice and Eric canonical masters; authored S28 hood action kept above dialogue-panel safe region",
+      "source": "Generated in Codex imagegen, 2026-09-24; resized to runtime dimensions",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s49-reykjahlid-window-dance.png",
+      "sha256": "35C546C606ED7D11BE5AE5E3FAD8BF737F52FEAE9E92E9FD334ABE556C38B34F",
+      "dimensions": "1920x900",
+      "method": "Independent desktop composition generated from Alice and Eric canonical masters; authored S49 window dance and chair action",
+      "source": "Generated in Codex imagegen, 2026-09-24; resized to runtime dimensions",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s49-reykjahlid-window-dance-portrait.png",
+      "sha256": "B08BE8CE1A6004A42A4450892001FD24AD48B11B29054EC4BD632BD42E760DE4",
+      "dimensions": "390x844",
+      "method": "Independent portrait composition generated from Alice and Eric canonical masters; authored S49 dance action kept above dialogue-panel safe region",
+      "source": "Generated in Codex imagegen, 2026-09-24; resized to runtime dimensions",
+      "license": "generated for this project"
     }
   ]
 }

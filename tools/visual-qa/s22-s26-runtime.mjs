@@ -6,12 +6,13 @@ import { compileInteractivePlayback } from '../../src/literary-pacing.js';
 import { literarySaveKey } from '../../src/literary-engine.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
-const output = path.join(root, 'output/playwright/s27-runtime-2026-09-24');
+const output = path.join(root, 'output/playwright/s28-s49-runtime-2026-09-24');
 const { chromium } = await import(pathToFileURL('C:/Users/user/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs').href);
 const baseUrl = process.env.LITERARY_QA_URL ?? 'http://127.0.0.1:4173/literary.html';
 const viewports = [{ width: 1920, height: 900 }, { width: 390, height: 844 }, { width: 360, height: 640 }];
 const targetCues = {
-  S27: [{ id: 's27-egilsstadir-boardwalk', chunk: 0, paragraph: 0 }]
+  S28: [{ id: 's28-hverfjall-hood', chunk: 0, paragraph: 3 }],
+  S49: [{ id: 's49-reykjahlid-window-dance', chunk: 0, paragraph: 4 }]
 };
 
 function choicesFor(route = 'A') {

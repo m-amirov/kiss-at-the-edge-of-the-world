@@ -69,6 +69,8 @@ const portraitAssetByDesktopAsset = {
   ,'s21-alice-hofn-room.png':'s21-alice-hofn-room-portrait.png'
   ,'s61-hofn-streets.png':'s61-hofn-streets-portrait.png'
   ,'s27-egilsstadir-boardwalk.png':'s27-egilsstadir-boardwalk-portrait.png'
+  ,'s28-hverfjall-hood.png':'s28-hverfjall-hood-portrait.png'
+  ,'s49-reykjahlid-window-dance.png':'s49-reykjahlid-window-dance-portrait.png'
 };
 function assetFileForViewport(art){
   const portrait=window.matchMedia?.('(max-width: 680px) and (orientation: portrait)').matches;
