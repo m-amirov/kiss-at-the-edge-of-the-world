@@ -538,13 +538,13 @@
       "family": "cg",
       "path": "assets/cg/s16-guesthouse-help.png",
       "status": "integrated",
-      "runtime": "S16 authored cue [0,0], cinematic guesthouse medical-help event",
+      "runtime": "S16 authored cue [0,1], cinematic guesthouse medical-help event",
       "creationMethod": "Replacement built-in image generation using Alice and Damir masters plus distinct tourist subjects after ART_IDENTITY_FAIL",
       "createdAt": "2026-09-24",
       "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s16-guesthouse-help-portrait.png",
-      "portraitDimensions": "940x1672"
+      "portraitDimensions": "941x1672"
     },
     {
       "id": "s16-kitchen-soup",
