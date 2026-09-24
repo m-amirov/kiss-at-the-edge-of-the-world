@@ -114,11 +114,6 @@ button:disabled{opacity:.43;cursor:not-allowed}
 @media(max-width:680px) and (orientation:portrait){
   .literary-picture.is-cg::before{display:none!important}
   .literary-picture.is-cg>img{inset:0!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:contain!important;object-position:center center!important}
-  /* S16 medical-help keeps the central ankle intervention above a compact,
-     scrollable text layer while the portrait remains edge-to-edge. */
-  .literary-reader:has(> .literary-picture > img[data-asset="s16-guesthouse-help-portrait.png"]) .reader-sheet{
-    max-height:27dvh;overflow:hidden
-  }
 }
 
 /* Unified fullscreen presentation contract. Every runtime mode owns the
@@ -140,7 +135,7 @@ button:disabled{opacity:.43;cursor:not-allowed}
   bottom: 0;
   transform: none;
   width: 100%;
-  max-height: min(46dvh,470px);
+  max-height: min(68dvh,680px);
   padding: clamp(22px,3vw,38px) max(20px,5vw) max(20px,env(safe-area-inset-bottom));
   background: linear-gradient(180deg,rgba(7,15,22,0),rgba(7,15,22,.74) 22%,rgba(7,15,22,.95) 100%);
   border: 0;
@@ -151,6 +146,13 @@ button:disabled{opacity:.43;cursor:not-allowed}
 .literary-reader[data-presentation] .reader-content {
   max-width: 940px;
   margin-inline: auto;
+  overflow: visible;
+}
+.literary-reader[data-presentation] .reader-footer {
+  width: min(940px,100%);
+  margin-inline: auto;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .literary-reader[data-presentation] .reader-scene,
 .literary-reader[data-presentation] .reader-paragraph,
@@ -233,14 +235,14 @@ button:disabled{opacity:.43;cursor:not-allowed}
   .literary-home[data-presentation^="menu-"] .literary-home-card { margin-top: 0; }
   .literary-reader[data-presentation] .reader-sheet {
     width: 100%;
-    max-height: min(42dvh,390px);
+    max-height: min(68dvh,560px);
     padding: 20px 18px max(18px,env(safe-area-inset-bottom));
   }
   .literary-reader[data-presentation="choice"] .reader-sheet,
   .literary-reader[data-presentation="choice-cg"] .reader-sheet {
-    max-height: min(58dvh,500px);
+    max-height: min(78dvh,620px);
   }
-  .literary-reader[data-presentation] .reader-paragraph { font-size: calc(17px*var(--literary-scale)); line-height: 1.52; }
+  .literary-reader[data-presentation] .reader-paragraph { font-size: calc(17px*var(--literary-scale)); line-height: 1.5; }
   .literary-reader[data-presentation] .reader-footer { max-width: 940px; margin-inline: auto; }
   .literary-reader[data-presentation="choice"] .reader-options,
   .literary-reader[data-presentation="choice-cg"] .reader-options { gap: 8px; }

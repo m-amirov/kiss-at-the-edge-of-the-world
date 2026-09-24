@@ -15,8 +15,9 @@ const paragraphCount = {
  S43:5,S44:6,S45:4,S46:5,S47:4,S48:5
 };
 const countWords = text => text.trim().split(/\s+/u).length;
+const splitSentences = text => text.trim().split(/(?<=[.!?…])\s+(?=[—«„A-ZА-ЯЁ])/u).filter(Boolean);
 
-/** A page holds up to three short manuscript paragraphs or 95 words, whichever
+/** A page holds up to two short manuscript paragraphs or 55 words, whichever
  * comes first. No manuscript sentence is deleted or paraphrased. A choice and
  * its selected response always begin fresh pages so save positions stay stable.
  */
@@ -36,9 +37,19 @@ export function compileInteractivePlayback(scene, choices={}) {
   function addParagraph(text,sourceIndex,sourceRef){
     if(!text)return;
     const nextWords=countWords(text);
-    if(pending.length && (pending.length>=3 || words+nextWords>95))flush();
+    if(pending.length && (pending.length>=2 || words+nextWords>55))flush();
     if(!pending.length)start=sourceIndex;
     pending.push({text,sourceIndex,sourceRef});words+=nextWords;
+  }
+  function addReadableParagraph(text,sourceIndex,sourceRef){
+    const sentences=splitSentences(text);
+    if(sentences.length<2){addParagraph(text,sourceIndex,sourceRef);return;}
+    let part='';
+    for(const sentence of sentences){
+      if(part && countWords(part)+countWords(sentence)>55){addParagraph(part,sourceIndex,sourceRef);part='';}
+      part=part?`${part} ${sentence}`:sentence;
+    }
+    if(part)addParagraph(part,sourceIndex,sourceRef);
   }
   function insertBeat(beat,index,sourceIndex){
     flush();const id=`${scene.id}-C${90+index}`;
@@ -57,7 +68,7 @@ export function compileInteractivePlayback(scene, choices={}) {
     const entry=original[index];
     if(entry.type==='paragraph'){
       if(visualBoundary(scene.id,entry.sourceRef))flush();
-      addParagraph(entry.text,index,entry.sourceRef);paragraphNumber++;
+      addReadableParagraph(entry.text,index,entry.sourceRef);paragraphNumber++;
       if(paragraphNumber===1){
         for(const [id,a,b] of interactionEchoes[scene.id]||[]){
           const echo=choices[id]==='A'?a:choices[id]==='B'?b:null;

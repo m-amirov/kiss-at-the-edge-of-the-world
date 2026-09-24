@@ -16,8 +16,8 @@ function complete(route='A',evening='A',answer='A'){
    const question=flow.at(-1);
    if(question?.type!=='choice'){
     const original=compileScenePlayback(s,choices);
-    assert.deepEqual(flow.filter(e=>e.type==='page'&&!e.decisionResult&&!e.echoOf).flatMap(e=>e.paragraphs),
-      original.filter(e=>e.type==='paragraph').map(e=>e.text),`manuscript text lost in ${sceneId}`);
+    assert.equal(flow.filter(e=>e.type==='page'&&!e.decisionResult&&!e.echoOf).flatMap(e=>e.paragraphs).join(' '),
+      original.filter(e=>e.type==='paragraph').map(e=>e.text).join(' '),`manuscript text lost in ${sceneId}`);
     screens+=flow.length;break;
    }
    const selected=question.id==='S26-C1'?route:question.id==='S17-C2'?evening:answer;
@@ -80,4 +80,23 @@ test('a choice is a stable page boundary and selected reaction occupies its form
   assert.ok(after.length>=before.length);
   assert.equal(after[before.length-1]?.type,'page',`next after ${first.id} should be readable without jumping`);
  }
+});
+test('mobile reader pagination uses natural short page boundaries without dropping prose',()=>{
+ for(const scene of literarySeason.scenes){
+  const flow=compileInteractivePlayback(scene,seeded);
+  for(const page of flow.filter(entry=>entry.type==='page')){
+   assert.ok(page.paragraphs.length<=2,`${scene.id} page has too many paragraphs`);
+   assert.ok(page.text.trim().length>0,`${scene.id} contains an empty page`);
+   assert.equal(page.text,page.paragraphs.join('\n\n'));
+  }
+ }
+});
+test('long authored paragraphs are split only at sentence boundaries',()=>{
+ const scene=literarySeason.scenes.find(item=>item.chunks.some(chunk=>chunk.paragraphs.some(text=>text.split(/\s+/u).length>55)));
+ assert.ok(scene,'fixture must contain a long authored paragraph');
+ const source=scene.chunks.flatMap(chunk=>chunk.paragraphs).find(text=>text.split(/\s+/u).length>55);
+ const flow=compileInteractivePlayback(scene,seeded);
+ const shown=flow.filter(entry=>entry.type==='page').flatMap(entry=>entry.paragraphs).join(' ');
+ assert.ok(shown.includes(source.slice(0,80)),'long paragraph prefix must survive pagination');
+ assert.ok(shown.includes(source.slice(-80)),'long paragraph suffix must survive pagination');
 });

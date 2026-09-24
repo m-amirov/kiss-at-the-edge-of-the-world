@@ -1,0 +1,44 @@
+{
+  "verdict": "PARTIAL",
+  "scope": "literary UI pagination, menu and desktop composition",
+  "commitScope": [
+    "sentence-boundary pagination with exact text preservation",
+    "menu home without episode list",
+    "unified bounded desktop reader content and footer"
+  ],
+  "routes": {
+    "eric": "PASS_TESTED",
+    "nick": "PASS_TESTED",
+    "damir": "PASS_TESTED",
+    "alice": "PASS_TESTED",
+    "coverage": "16 evening/route combinations and 300 synthetic complete paths"
+  },
+  "browser": {
+    "engine": "Playwright Chromium on Windows",
+    "viewports": ["360x640", "390x844", "1920x900"],
+    "textScales": ["100%", "112%", "125%"],
+    "innerTextScroll": "PASS_OBSERVED_NONE",
+    "nextButton": "PASS_OBSERVED",
+    "choiceButtons": "PASS_OBSERVED_VISIBLE",
+    "menuEpisodeList": "PASS_ABSENT_ON_HOME",
+    "desktopComposition": "PASS_OBSERVED_BOUNDED_940PX_CONTENT_AND_FOOTER"
+  },
+  "screenshots": [
+    "output/playwright/literary-menu-360-final.png",
+    "output/playwright/literary-menu-390-final.png",
+    "output/playwright/literary-long-text-360-final.png",
+    "output/playwright/literary-choice-360-final.png",
+    "output/playwright/literary-text-125-360-final.png",
+    "output/playwright/literary-desktop-composition-1920x900-final.png"
+  ],
+  "commands": {
+    "literaryCompile": "PASS",
+    "narrativeTests": "PASS",
+    "gitDiffCheck": "PASS"
+  },
+  "unclosed": [
+    "Native Google Chrome-specific run was not separately isolated from Playwright Chromium.",
+    "The browser console still reports the pre-existing optional favicon.ico 404.",
+    "Full interactive browser traversal of all four routes was not captured as four independent screenshot traces; route coverage is proven by project-native deterministic tests."
+  ]
+}

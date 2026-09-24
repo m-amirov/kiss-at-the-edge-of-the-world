@@ -176,9 +176,6 @@ function renderMenu(){
   section.append(actions);
   section.append(el('История доступна от начала до одного из четырёх финалов. Финальная редакторская и платформенная приёмка ещё не пройдена.','small-note'));
   if(cloudCandidate)section.append(button('Восстановить облачный прогресс',()=>{if(!window.confirm('Заменить текущее локальное сохранение облачным?'))return;cloudLocked=true;reader=cloudCandidate;cloudCandidate=null;persist();continueGame()}));
-  const chapters=el('','chapter-list');chapters.append(el('ДЕСЯТЬ ЭПИЗОДОВ','chapter-heading','h2'));
-  for(let ep=1;ep<=10;ep++){const visited=(reader.visited||[]).some(id=>byId.get(id)?.episode===ep);chapters.append(el(`${String(ep).padStart(2,'0')} · ${visited?'открыт':'впереди'}`,visited?'':'planned'))}
-  section.append(chapters);
 }
 function renderStage(direction) {
   const stage=el('','scene-stage');
@@ -222,9 +219,12 @@ function renderReader(){
   else picture.classList.add('no-art');
   if(art?.presentation!=='cinematic') picture.append(renderStage({...direction,mode:direction.cast.length>2?'group':direction.cast.length===2?'pair':'solo',mood:stageForScene(scene.id,reader.choices).mood}));
   picture.append(el('','literary-vignette'));app.append(picture);
-  const header=el('','reader-header');header.append(button('☰ Меню',goHome,'small-button'),el(`ЭПИЗОД ${scene.episode} / 10 · ${scene.id}`,'chapter-index'),el('ПОЦЕЛУЙ НА КРАЮ СВЕТА','draft-indicator'));app.append(header);
+  const header=el('','reader-header');
+  header.append(button('☰ Меню',goHome,'small-button'),el(`ЭПИЗОД ${scene.episode} / 10 · ${scene.id}`,'chapter-index'),el('ПОЦЕЛУЙ НА КРАЮ СВЕТА','draft-indicator'));
+  header.setAttribute('aria-label',`${scene.title}. Эпизод ${scene.episode}, сцена ${scene.id}`);
+  app.append(header);
   const sheet=el('','reader-sheet');
-  if(!isEnding)sheet.append(el(cleanLiteraryText(scene.title),'reader-scene','h2'));
+  if(!isEnding)sheet.setAttribute('aria-label',cleanLiteraryText(scene.title));
   if(reader.migrationNotice){sheet.append(el('После обновления визуальных переходов продолжение начинается с начала текущей сцены. Прежний прогресс и выборы сохранены.','migration-note'));reader.migrationNotice=false;persist();}
   if(current?.type==='page'){
     const content=el('','reader-content');
