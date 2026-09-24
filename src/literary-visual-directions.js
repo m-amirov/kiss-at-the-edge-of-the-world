@@ -119,6 +119,8 @@ const cues = {
  S27:[{at:[0,0],id:'s27-egilsstadir-boardwalk',location:'Lagarfljót: ремонт приозёрного настила',cast:['alice','nick','eric','damir'],art:'cg/s27-egilsstadir-boardwalk.png'}],
  S28:[{at:[0,3],id:'s28-hverfjall-hood',location:'Hverfjall: разрешённый участок тропы и обзорная площадка',time:'день 14',cast:['alice','eric'],art:'cg/s28-hverfjall-hood.png'}],
  S49:[{at:[0,4],id:'s49-reykjahlid-window-dance',location:'Reykjahlíð: зал гостевого дома у окна',time:'день 14, вечер',cast:['alice','eric'],art:'cg/s49-reykjahlid-window-dance.png'}],
+ S29:[{at:[0,0],id:'s29-nick-playback',location:'Гостевой дом: общая комната и монтажная папка',time:'день 14',cast:['alice','nick'],art:'cg/s29-nick-playback.png'}],
+ S52:[{at:[0,4],id:'s52-glove-found',location:'Улица у почты и мастерской',time:'день 14, дождь',cast:['alice','nick'],art:'cg/s52-glove-found.png'}],
  S33:[{at:[0,1],id:'hotel-teaser',location:'Гостиница Акюрейри: личный голос в тизере',art:null,cast:['alice','nick']}],
  S36:[{at:[0,1],id:'snaefellsnes-drive',location:'Дорога по Snæfellsnes',art:'snaefellsnes-master.png'}],
  S41:[{at:[0,1],id:'editor-cafe-call',location:'Рейкьявик: кафе, видеозвонок редактору',art:null}],

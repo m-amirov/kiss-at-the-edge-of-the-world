@@ -41,8 +41,8 @@ desktop/mobile screenshots.
 | S59 | group lunch, day 13 | group | stage only | MISSING_APPROPRIATE_ART |
 | S28 | marked trail/viewpoint, day 14 | Alice/Eric | `s28-hverfjall-hood` at [0,3]; independent desktop + portrait; runtime evidence at 1920×900, 390×844, 360×640 | VISUAL_ACCEPTANCE: BLOCKED (independent multimodal pixel review unavailable) |
 | S49 | guesthouse hall dance, evening | Alice/Eric | `s49-reykjahlid-window-dance` at [0,4]; independent desktop + portrait; runtime evidence at 1920×900, 390×844, 360×640 | VISUAL_ACCEPTANCE: BLOCKED (independent multimodal pixel review unavailable) |
-| S29 | guesthouse Nick playback, day 14 | Alice/Nick | stage only | MISSING_APPROPRIATE_ART |
-| S52 | streets/post/workshop, day 14 | Alice/Nick | stage only | MISSING_APPROPRIATE_ART |
+| S29 | guesthouse Nick playback, day 14 | Alice/Nick; `s29-nick-playback` [0,0] | dedicated desktop + independent portrait cinematic; runtime evidence and independent multimodal review at 1920×900, 390×844, 360×640 | VISUAL_ACCEPTANCE: PASS |
+| S52 | streets/post/workshop, day 14 | Alice/Nick; `s52-glove-found` [0,4] after discovery beat | dedicated desktop + independent portrait cinematic; runtime evidence and independent multimodal review at 1920×900, 390×844, 360×640 | VISUAL_ACCEPTANCE: PASS |
 | S30 | personal Damir conversation, day 14 | Alice/Damir | stage only | MISSING_APPROPRIATE_ART |
 | S55 | horse farm, day 14 | Alice/Damir | stage only | MISSING_APPROPRIATE_ART |
 | S31 | Alice independent day, day 14 | Alice | stage only | MISSING_APPROPRIATE_ART |
@@ -79,7 +79,7 @@ desktop/mobile screenshots.
 - 66 authored scenes audited; 66 rows above.
 - 8 scenes are `REUSE`, 8 are `COVERED_EVENT`, 4 are accepted cinematic batch
   rows (`S10`, `S12`, `S14`, `S16`), and 3 are pilot-accepted rows (`S06-S08`).
-- 38 scenes remain `MISSING_APPROPRIATE_ART`; S27, S28 and S49 are now `VISUAL_ACCEPTANCE: PASS` after fresh runtime screenshots at all three required viewports. Stage presentation is not counted
+- 36 scenes remain `MISSING_APPROPRIATE_ART`; S27, S28, S29, S49 and S52 are now `VISUAL_ACCEPTANCE: PASS` after fresh runtime screenshots at all three required viewports and independent multimodal review. Stage presentation is not counted
   as full location coverage. The ledger still contains 66 authored rows.
 - S66 runtime evidence is recorded in `docs/VISUAL_ACCEPTANCE_S66_2026-09-23.md`
   and the ignored run artifact `artifacts/evidence/s66-visual-qa.json`.

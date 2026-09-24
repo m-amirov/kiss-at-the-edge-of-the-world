@@ -32,6 +32,8 @@ const focalPointByAsset = {
   's26-alice-choice.png': '50% 42%',
   's27-egilsstadir-boardwalk-portrait.png': '50% 72%',
   's49-reykjahlid-window-dance-portrait.png': '50% 35%',
+  's29-nick-playback.png': '50% 42%',
+  's52-glove-found.png': '50% 38%',
   's44-eric-epilogue-month-later.png': '50% 48%',
   's45-nick-home-epilogue-month-later.png': '50% 45%',
   's46-damir-epilogue-month-later.png': '50% 44%',
@@ -73,6 +75,8 @@ const portraitAssetByDesktopAsset = {
   ,'s27-egilsstadir-boardwalk.png':'s27-egilsstadir-boardwalk-portrait.png'
   ,'s28-hverfjall-hood.png':'s28-hverfjall-hood-portrait.png'
   ,'s49-reykjahlid-window-dance.png':'s49-reykjahlid-window-dance-portrait.png'
+  ,'s29-nick-playback.png':'s29-nick-playback-portrait.png'
+  ,'s52-glove-found.png':'s52-glove-found-portrait.png'
 };
 function assetFileForViewport(art){
   const portrait=window.matchMedia?.('(max-width: 680px) and (orientation: portrait)').matches;

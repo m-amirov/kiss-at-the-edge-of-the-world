@@ -716,6 +716,32 @@
       "runtime": "src/literary.css interface, dialogue, choices and settings",
       "license": "SIL Open Font License 1.1",
       "licenseFile": "assets/fonts/OFL-Manrope.txt"
+    },
+    {
+      "id": "s29-nick-playback",
+      "family": "cg",
+      "path": "assets/cg/s29-nick-playback.png",
+      "status": "integrated",
+      "runtime": "S29 authored cue [0,0], Alice and Nick review the 40-second clip before choice",
+      "creationMethod": "Codex imagegen using canonical Alice and Nick master references; independent desktop composition",
+      "createdAt": "2026-09-24",
+      "dimensions": "1672x941",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s29-nick-playback-portrait.png",
+      "portraitDimensions": "941x1672"
+    },
+    {
+      "id": "s52-glove-found",
+      "family": "cg",
+      "path": "assets/cg/s52-glove-found.png",
+      "status": "integrated",
+      "runtime": "S52 authored cue [0,0], Alice and Nick find Inga's glove at the workshop",
+      "creationMethod": "Codex imagegen using canonical Alice and Nick master references; desktop rework removed background pseudo-text",
+      "createdAt": "2026-09-24",
+      "dimensions": "1672x941",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s52-glove-found-portrait.png",
+      "portraitDimensions": "941x1672"
     }
   ],
   "visualDirection": {

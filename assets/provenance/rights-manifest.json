@@ -528,6 +528,38 @@
       "method": "Independent portrait composition generated from Alice and Eric canonical masters; authored S49 dance action kept above dialogue-panel safe region",
       "source": "Generated in Codex imagegen, 2026-09-24; resized to runtime dimensions",
       "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s29-nick-playback.png",
+      "sha256": "E338C1C3BFD8CC0E8F766D5DAD82EC2489157018E513EA7DA84467C8F45A7E88",
+      "dimensions": "1672x941",
+      "method": "Independent desktop composition generated from canonical Alice and Nick master references; authored S29 playback consent beat",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s29-nick-playback-portrait.png",
+      "sha256": "794D96C2689EB6DFB1924184FECF5216A022F152809EFF8E2FEEF6B8BFD1B0AC",
+      "dimensions": "941x1672",
+      "method": "Independent portrait composition generated from canonical Alice and Nick master references; final bounded rework raised phone and hands above the 360x640 dialogue panel",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s52-glove-found.png",
+      "sha256": "A1AF4C3BA5E28B457FD1CA773EF1F0528C73A8EE4DF9838F3C82BD7AF975D8D8",
+      "dimensions": "1672x941",
+      "method": "Desktop composition generated from canonical Alice and Nick master references; one bounded rework removed background pseudo-text; authored S52 glove-found beat",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s52-glove-found-portrait.png",
+      "sha256": "65C062D5B9E49935BBAB3A94D63F1A2D0E5CBE84773BB335D5D9BB0781E74528",
+      "dimensions": "941x1672",
+      "method": "Independent portrait composition generated from canonical Alice and Nick master references; authored S52 glove-found beat and mobile safe framing",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
     }
   ]
 }
