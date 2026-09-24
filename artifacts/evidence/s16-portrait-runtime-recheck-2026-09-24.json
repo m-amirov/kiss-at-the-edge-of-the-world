@@ -9,8 +9,8 @@
     "output/playwright/s16-guesthouse-help-portrait-390x844.png",
     "output/playwright/s16-guesthouse-help-portrait-360x640.png"
   ],
-  "imageRegenerated": false,
-  "reason": "Independent Playwright CLI with native Chromium completed the runtime capture after the in-app browser path timed out.",
+  "imageRegenerated": true,
+  "reason": "The portrait was re-composed after the prior runtime capture showed the ankle action under the lower sheet; independent Playwright CLI with native Chromium completed the fresh runtime capture.",
   "runtime": {
     "sceneId": "S16",
     "visualEventId": "s16-guesthouse-help",
@@ -23,6 +23,7 @@
       "390x844": true,
       "360x640": true
     },
+    "sheetLayout": "S16-scoped compact scrollable sheet, max-height 27dvh; no image height override",
     "controlsEnabled": ["К выбору ⇢", "Далее →"]
   },
   "staticAssetReview": {

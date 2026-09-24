@@ -58,6 +58,17 @@ DOM/runtime readback confirmed `S16` from the live header, visual beat `s16-gues
 
 Final S16 portrait acceptance: **PASS / VISUAL_ACCEPTANCE: PASS**.
 
+## Recheck after mobile composition correction — 2026-09-24
+
+The former portrait `height: 76% !important` rule was removed. The portrait was re-composed so the ankle-help action is central, and the S16 sheet alone uses a compact scrollable mobile layout (`max-height: 27dvh`) while the image remains edge-to-edge.
+
+Fresh Playwright captures after the correction:
+
+- `output/playwright/s16-guesthouse-help-portrait-390x844.png`
+- `output/playwright/s16-guesthouse-help-portrait-360x640.png`
+
+Both captures show Alice, Damir, the injured tourist and her companion distinctly; with the lower text layer open, Damir's two hands and the injured ankle remain visible above the panel. Live DOM readback: `S16`, `s16-guesthouse-help`, `s16-guesthouse-help-portrait.png`, `stageCount: 0`, natural size `940×1672`, no horizontal overflow, enabled controls. No other scene or routing was changed.
+
 - `npm run literary:compile` — `LITERARY_COMPILE_OK 66 scenes 619 chunks`
 - `npm run test:narrative` — PASS
 - `git diff --check` — PASS
