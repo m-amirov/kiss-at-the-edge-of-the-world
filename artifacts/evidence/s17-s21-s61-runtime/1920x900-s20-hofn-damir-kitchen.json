@@ -1,0 +1,41 @@
+{
+  "sceneId": "S20",
+  "expectedVisualEventId": "s20-hofn-damir-kitchen",
+  "viewport": "1920x900",
+  "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-git\\output\\playwright\\s17-s21-s61-runtime-2026-09-24\\1920x900-s20-hofn-damir-kitchen.png",
+  "visualEventId": "s20-hofn-damir-kitchen",
+  "asset": "s20-hofn-damir-kitchen.png",
+  "desktopAsset": "s20-hofn-damir-kitchen.png",
+  "presentationMode": "cg",
+  "stageSprites": 0,
+  "naturalWidth": 1672,
+  "naturalHeight": 941,
+  "imageRect": {
+    "x": 0,
+    "y": 0,
+    "width": 1920,
+    "height": 900
+  },
+  "overflow": {
+    "body": false,
+    "html": false
+  },
+  "controls": [
+    {
+      "text": "☰ Меню",
+      "disabled": false
+    },
+    {
+      "text": "К выбору ⇢",
+      "disabled": false
+    },
+    {
+      "text": "Далее →",
+      "disabled": false
+    }
+  ],
+  "errors": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "failed": []
+}

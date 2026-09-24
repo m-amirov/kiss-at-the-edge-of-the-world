@@ -1,0 +1,81 @@
+{
+  "url": "http://127.0.0.1:4173/literary.html",
+  "browser": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+  "before": {
+    "href": "http://127.0.0.1:4173/literary.html",
+    "scene": null,
+    "beat": null,
+    "buttons": [
+      {
+        "text": "Новая игра",
+        "disabled": false
+      },
+      {
+        "text": "Эпизоды",
+        "disabled": false
+      },
+      {
+        "text": "Настройки",
+        "disabled": false
+      },
+      {
+        "text": "Галерея",
+        "disabled": false
+      },
+      {
+        "text": "Об игре",
+        "disabled": false
+      }
+    ],
+    "storage": [
+      "kiss-at-the-edge-of-the-world:literary-settings:v1"
+    ],
+    "bodyOverflow": false,
+    "htmlOverflow": false
+  },
+  "click": "PASS 239ms",
+  "navigation": "{\"timeout\":\"page.waitForNavigation: Timeout 1500ms exceeded.\\n=========================== logs ===========================\\nwaiting for navigation until \\\"domcontentloaded\\\"\\n============================================================\"}",
+  "after": {
+    "href": "http://127.0.0.1:4173/literary.html",
+    "scene": "S01",
+    "beat": "scene-start",
+    "buttons": [
+      {
+        "text": "☰ Меню",
+        "disabled": false
+      },
+      {
+        "text": "К выбору ⇢",
+        "disabled": false
+      },
+      {
+        "text": "Далее →",
+        "disabled": false
+      }
+    ],
+    "storage": [
+      "kiss-at-the-edge-of-the-world:literary-settings:v1",
+      "kiss-at-the-edge-of-the-world:literary-draft:v1"
+    ],
+    "bodyOverflow": false,
+    "htmlOverflow": false
+  },
+  "storageAfter": null,
+  "events": [
+    {
+      "type": "navigation",
+      "url": "http://127.0.0.1:4173/literary.html"
+    },
+    {
+      "type": "navigation",
+      "url": "http://127.0.0.1:4173/literary.html"
+    },
+    {
+      "type": "console",
+      "level": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ],
+  "errors": [],
+  "failed": []
+}
