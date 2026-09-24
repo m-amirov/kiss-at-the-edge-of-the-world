@@ -109,6 +109,13 @@ button:disabled{opacity:.43;cursor:not-allowed}
  .literary-picture.is-cg .literary-vignette{background:linear-gradient(180deg,rgba(4,12,18,.2),transparent 30%,rgba(4,12,18,.8) 70%)}
 }
 
+/* Final mobile cinematic override: the independent portrait asset itself
+   fills the viewport; no top letterbox or blurred continuation. */
+@media(max-width:680px) and (orientation:portrait){
+  .literary-picture.is-cg::before{display:none!important}
+  .literary-picture.is-cg>img{inset:0!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:contain!important;object-position:center center!important}
+}
+
 /* Unified fullscreen presentation contract. Every runtime mode owns the
    viewport; the readable layer is composited into the scene instead of being
    rendered as a separate web card. */
@@ -312,6 +319,14 @@ button:hover,button:focus-visible{background:#765744;border-color:#f3d2a8;transf
  .literary-reader:has(.reader-sheet.terminal-sheet) .reader-sheet{top:38dvh;bottom:auto;max-height:calc(62dvh - 14px)}
 }
 
+/* Independent portrait CGs own the mobile viewport. Do not surround them
+   with a blurred continuation or letterbox: the authored vertical
+   composition must remain the actual fullscreen image. */
+@media (max-width:680px) and (orientation:portrait){
+ .literary-picture.is-cg::before{display:none}
+ .literary-picture.is-cg>img{inset:0!important;width:100%;height:100%;max-width:none;max-height:none;object-fit:cover;object-position:center center}
+}
+
 /* Final cinematic composition: the artwork owns the whole viewport and the
    terminal copy is a lower layer of the same image, never a second card. */
 .literary-reader:has(.reader-sheet.terminal-sheet) .literary-picture.is-cg {
@@ -428,4 +443,11 @@ button:hover,button:focus-visible{background:#765744;border-color:#f3d2a8;transf
   .literary-reader:has(.reader-sheet.terminal-sheet) .reader-sheet .reader-scene { font-size: 22px; }
   .literary-reader:has(.reader-sheet.terminal-sheet) .reader-sheet .reader-paragraph { font-size: 16px; line-height: 1.45; margin-bottom: 12px; }
   .literary-reader:has(.reader-sheet.terminal-sheet) .reader-sheet > .primary { min-width: 100%; }
+}
+
+/* Final mobile cinematic override: the independent portrait asset itself
+   fills the viewport; no top letterbox or blurred continuation. */
+@media(max-width:680px) and (orientation:portrait){
+  .literary-picture.is-cg::before{display:none!important}
+  .literary-picture.is-cg>img{inset:0!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:contain!important;object-position:center center!important}
 }

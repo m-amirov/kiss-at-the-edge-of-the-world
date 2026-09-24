@@ -100,6 +100,26 @@ test('S06-S08 pilot uses authored cinematic events with independent portrait ass
  assert.equal(shot('S07',flow,cards,choices).art?.presentation,'cinematic');
 });
 
+test('S10 and S12 use bounded cinematic events and clear them at the location transition',()=>{
+ const expected={
+  S10:{beat:'s10-vik-road-song',file:'s10-vik-road-song.png',cast:['alice','eric'],ref:[0,0],clear:[6,0]},
+  S12:{beat:'s12-vik-cafe-damir',file:'s12-vik-cafe-damir.png',cast:['alice','damir'],ref:[0,0],clear:[11,0]}
+ };
+ for(const [id,cfg] of Object.entries(expected)){
+  const {flow,choices}=complete(id);
+  const at=indexOfSource(flow,...cfg.ref), shotAt=shot(id,flow,at,choices);
+  assert.equal(shotAt.beatId,cfg.beat);
+  assert.equal(shotAt.art?.presentation,'cinematic');
+  assert.equal(shotAt.art?.file,cfg.file);
+  assert.deepEqual(shotAt.cast,cfg.cast);
+  assert.ok(fs.existsSync(new URL(`../../assets/cg/${cfg.file}`,import.meta.url)));
+  assert.ok(fs.existsSync(new URL(`../../assets/cg/${cfg.file.replace('.png','-portrait.png')}`,import.meta.url)));
+  const cleared=indexOfSource(flow,...cfg.clear);
+  assert.equal(shot(id,flow,cleared,choices).art,null);
+  assert.notEqual(shot(id,flow,cleared,choices).beatId,cfg.beat);
+ }
+});
+
 test('S13 visitor center precedes notebook CG; image is not used in Vik',()=>{
  const {flow,choices}=complete('S13');
  const arrival=indexOfSource(flow,0,7),notebook=indexOfSource(flow,0,12);

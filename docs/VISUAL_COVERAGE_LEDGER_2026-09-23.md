@@ -18,9 +18,9 @@ desktop/mobile screenshots.
 | S08 | Hveragerði guesthouse, day 4 morning | Alice/Damir; `s08-guesthouse-strap` [2,0] | desktop+portrait cinematic | PILOT_ACCEPTED |
 | S66 | Hveragerði greenhouse, day 4 | group | dedicated desktop + independent portrait background; native Chromium accepted at 1920×900, 390×844, 360×640 | COVERED_EVENT |
 | S09 | Skógafoss, day 5 morning | group; trail cue | reuse Skógafoss master | REUSE |
-| S10 | road/Vík petrol station, day 5 | Alice/Eric | stage only | MISSING_APPROPRIATE_ART |
+| S10 | road/Vík petrol station, day 5 | Alice/Eric; `s10-vik-road-song` [0,0], clear at Vík arrival [6,0] | desktop+portrait cinematic | BATCH_ACCEPTED_S09_S12 |
 | S11 | Reynisfjara, day 6 morning | group | reuse Reynisfjara master | REUSE |
-| S12 | Vík cafe, day 6 | Alice/Damir | stage only | MISSING_APPROPRIATE_ART |
+| S12 | Vík cafe, day 6 | Alice/Damir; `s12-vik-cafe-damir` [0,0], clear on street transition [11,0] | desktop+portrait cinematic | BATCH_ACCEPTED_S09_S12 |
 | S13 | Skaftafell, day 7 morning | group; notebook CG | reuse desktop+portrait CG | COVERED_EVENT |
 | S14 | glacier-plain trail, day 7 | Alice/Eric | stage only | MISSING_APPROPRIATE_ART |
 | S15 | Jökulsárlón, day 8 | Alice/Nick/group; lagoon cue | reuse lagoon master | REUSE |

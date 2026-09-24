@@ -45,7 +45,9 @@ const portraitAssetByDesktopAsset = {
   's44-eric-epilogue-month-later.png':'s44-eric-epilogue-month-later-portrait.png',
   's45-nick-home-epilogue-month-later.png':'s45-nick-home-epilogue-month-later-portrait.png',
   's46-damir-epilogue-month-later.png':'s46-damir-epilogue-month-later-portrait.png',
-  's47-alice-home-epilogue-month-later.png':'s47-alice-home-epilogue-month-later-portrait.png'
+  's47-alice-home-epilogue-month-later.png':'s47-alice-home-epilogue-month-later-portrait.png',
+  's10-vik-road-song.png':'s10-vik-road-song-portrait.png',
+  's12-vik-cafe-damir.png':'s12-vik-cafe-damir-portrait.png'
 };
 function assetFileForViewport(art){
   const portrait=window.matchMedia?.('(max-width: 680px) and (orientation: portrait)').matches;
