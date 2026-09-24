@@ -662,6 +662,32 @@
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s49-reykjahlid-window-dance-portrait.png",
       "portraitDimensions": "390x844"
+    },
+    {
+      "id": "s30-damir-sleeve-promise",
+      "family": "cg",
+      "path": "assets/cg/s30-damir-sleeve-promise.png",
+      "status": "integrated",
+      "runtime": "S30 authored cue [0,7], conditional on S30-C1=A; Damir covers Alice sleeve while discussing future",
+      "creationMethod": "Built-in image generation using canonical Alice and Damir master references",
+      "createdAt": "2026-09-24",
+      "dimensions": "1672x941",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s30-damir-sleeve-promise-portrait.png",
+      "portraitDimensions": "941x1672"
+    },
+    {
+      "id": "s55-shum-first-step",
+      "family": "cg",
+      "path": "assets/cg/s55-shum-first-step.png",
+      "status": "integrated",
+      "runtime": "S55 authored cue [0,5], Alice laughs as Damir turns and Shum takes first step",
+      "creationMethod": "Built-in image generation using canonical Alice and Damir master references",
+      "createdAt": "2026-09-24",
+      "dimensions": "1672x941",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s55-shum-first-step-portrait.png",
+      "portraitDimensions": "941x1672"
     }
   ],
   "routingTrace": {

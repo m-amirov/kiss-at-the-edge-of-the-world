@@ -77,6 +77,8 @@ const portraitAssetByDesktopAsset = {
   ,'s49-reykjahlid-window-dance.png':'s49-reykjahlid-window-dance-portrait.png'
   ,'s29-nick-playback.png':'s29-nick-playback-portrait.png'
   ,'s52-glove-found.png':'s52-glove-found-portrait.png'
+  ,'s30-damir-sleeve-promise.png':'s30-damir-sleeve-promise-portrait.png'
+  ,'s55-shum-first-step.png':'s55-shum-first-step-portrait.png'
 };
 function assetFileForViewport(art){
   const portrait=window.matchMedia?.('(max-width: 680px) and (orientation: portrait)').matches;

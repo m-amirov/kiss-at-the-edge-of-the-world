@@ -560,6 +560,38 @@
       "method": "Independent portrait composition generated from canonical Alice and Nick master references; authored S52 glove-found beat and mobile safe framing",
       "source": "Generated in Codex imagegen, 2026-09-24",
       "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s30-damir-sleeve-promise.png",
+      "sha256": "3067CF10304648180C9B7FF41066D107D3BF09A081CCB33002517D56489D2A95",
+      "dimensions": "1672x941",
+      "method": "Independent desktop cinematic composition generated from Alice and Damir canonical master references; blank letter and sleeve-touch beat",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s30-damir-sleeve-promise-portrait.png",
+      "sha256": "95F352B51C39C318394B673DE98EE66BAFBE34DFFC918D1B4A7F271505059359",
+      "dimensions": "941x1672",
+      "method": "Independent portrait composition generated from Alice and Damir canonical master references; sleeve touch and faces above mobile dialogue safe area",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s55-shum-first-step.png",
+      "sha256": "CA8A9A595E49101BED5C1753188052392BFECD1C8C72CFE953F489C4D5930A8E",
+      "dimensions": "1672x941",
+      "method": "Independent desktop cinematic composition generated from Alice and Damir canonical master references; authored Shum first-step beat",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s55-shum-first-step-portrait.png",
+      "sha256": "CB6E4B31491E3D14D529B94DEC95D8ECEF345723DAB7D7568FEB2F14384A991E",
+      "dimensions": "941x1672",
+      "method": "Independent portrait composition generated from Alice and Damir canonical master references; horses, reins and first step visible above mobile dialogue safe area",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
     }
   ]
 }

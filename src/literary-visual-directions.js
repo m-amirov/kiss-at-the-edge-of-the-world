@@ -121,6 +121,8 @@ const cues = {
  S49:[{at:[0,4],id:'s49-reykjahlid-window-dance',location:'Reykjahlíð: зал гостевого дома у окна',time:'день 14, вечер',cast:['alice','eric'],art:'cg/s49-reykjahlid-window-dance.png'}],
  S29:[{at:[0,0],id:'s29-nick-playback',location:'Гостевой дом: общая комната и монтажная папка',time:'день 14',cast:['alice','nick'],art:'cg/s29-nick-playback.png'}],
  S52:[{at:[0,4],id:'s52-glove-found',location:'Улица у почты и мастерской',time:'день 14, дождь',cast:['alice','nick'],art:'cg/s52-glove-found.png'}],
+ S30:[{at:[2,1],id:'s30-damir-sleeve-promise',location:'Кафе Reykjahlíð у Mývatn: честный разговор о будущем',time:'день 14',cast:['alice','damir'],art:'cg/s30-damir-sleeve-promise.png',when:{'S30-C1':'A'}}],
+ S55:[{at:[0,3],id:'s55-shum-first-step',location:'Конная ферма у Mývatn: огороженная дорожка',time:'день 14',cast:['alice','damir'],art:'cg/s55-shum-first-step.png'}],
  S33:[{at:[0,1],id:'hotel-teaser',location:'Гостиница Акюрейри: личный голос в тизере',art:null,cast:['alice','nick']}],
  S36:[{at:[0,1],id:'snaefellsnes-drive',location:'Дорога по Snæfellsnes',art:'snaefellsnes-master.png'}],
  S41:[{at:[0,1],id:'editor-cafe-call',location:'Рейкьявик: кафе, видеозвонок редактору',art:null}],
