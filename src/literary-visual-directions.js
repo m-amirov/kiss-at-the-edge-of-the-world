@@ -95,7 +95,7 @@ const cues = {
  S14:[{at:[0,0],id:'s14-skaftafell-pace',location:'Скафтафетль: тропа над ледниковой равниной',cast:['alice','eric'],art:'cg/s14-skaftafell-pace.png'},
       {at:[7,0],id:'s14-lagoon-road',location:'Дорога к ледниковой лагуне',cast:['alice','eric','nick','damir'],art:null}],
  S15:[{at:[0,5],id:'jokulsarlon-lagoon',location:'Jökulsárlón: лагуна',art:'jokulsarlon-master.png'}],
- S16:[{at:[0,0],id:'s16-guesthouse-help',location:'Придорожный гостевой дом: вход и скамья',cast:['alice','damir','eric','nick'],art:'cg/s16-guesthouse-help.png'},
+ S16:[{at:[0,1],id:'s16-guesthouse-help',location:'Придорожный гостевой дом: вход и скамья',cast:['alice','damir','eric','nick'],art:'cg/s16-guesthouse-help.png'},
       {at:[4,0],id:'s16-kitchen-soup',location:'Придорожный гостевой дом: общая кухня',cast:['alice','damir','eric','nick'],art:'cg/s16-kitchen-soup.png'}],
  S17:[{at:[0,0],id:'s17-hofn-guesthouse',location:'Гостевой дом Höfn: общая кухня',art:'cg/s17-hofn-guesthouse.png',cast:['alice','eric','nick','damir']}],
  S18:[{at:[0,5],id:'hofn-lighthouse',location:'Höfn: прогулка к маяку',art:'s18-hofn-harbour.png',cast:['alice','eric']},

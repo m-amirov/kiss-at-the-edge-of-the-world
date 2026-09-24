@@ -125,7 +125,7 @@ test('S13-S16 preserve environment transitions and use only authored cinematic e
   S13:[['skaftafell-parking',[0,7],null,'environment'],['skaftafell-notebook',[0,12],'s13-skaftafell-travelers.png','cinematic']],
   S14:[['s14-skaftafell-pace',[0,0],'s14-skaftafell-pace.png','cinematic'],['s14-lagoon-road',[7,0],null,'environment']],
   S15:[['jokulsarlon-lagoon',[0,5],'jokulsarlon-master.png','environment']],
-  S16:[['s16-guesthouse-help',[0,0],'s16-guesthouse-help.png','cinematic'],['s16-kitchen-soup',[4,0],'s16-kitchen-soup.png','cinematic']]
+  S16:[['s16-guesthouse-help',[0,1],'s16-guesthouse-help.png','cinematic'],['s16-kitchen-soup',[4,0],'s16-kitchen-soup.png','cinematic']]
  };
  for(const [id,events] of Object.entries(expected)){
   const {flow,choices}=complete(id);

@@ -105,15 +105,28 @@ button:disabled{opacity:.43;cursor:not-allowed}
 .literary-picture.is-cg::before{content:'';position:absolute;inset:-12px;background-image:var(--cg-url);background-size:cover;background-position:center;filter:blur(23px) brightness(.37);transform:scale(1.04);z-index:0}
 .literary-picture.is-cg>img{z-index:1;object-fit:contain;object-position:center top;max-width:100%;max-height:100%}
 @media(max-width:680px){
- .literary-picture.is-cg>img{inset:clamp(60px,9dvh,86px) 0 auto;width:100%;height:auto;max-height:min(44dvh,390px);object-fit:contain;object-position:center top}
+ .literary-picture.is-cg>img{inset:0;width:100%;height:100%;max-height:none;object-fit:cover;object-position:var(--focus,50% 50%)}
  .literary-picture.is-cg .literary-vignette{background:linear-gradient(180deg,rgba(4,12,18,.2),transparent 30%,rgba(4,12,18,.8) 70%)}
 }
 
 /* Final mobile cinematic override: the independent portrait asset itself
    fills the viewport; no top letterbox or blurred continuation. */
 @media(max-width:680px) and (orientation:portrait){
-  .literary-picture.is-cg::before{display:block!important;opacity:.9}
-  .literary-picture.is-cg>img{inset:0!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:contain!important;object-position:center center!important}
+  .literary-picture.is-cg::before{display:none!important}
+  .literary-picture.is-cg>img{inset:0!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:cover!important;object-position:var(--focus,50% 50%)!important}
+}
+
+/* Canonical fullscreen pixel contract. The runtime image is the only source of
+   edge pixels: no letterbox, blurred duplicate, or opaque header strip may
+   occupy viewport space. The text layer remains independently sized. */
+.literary-reader[data-presentation] .reader-header{background:transparent!important}
+.literary-reader[data-presentation] .literary-picture.is-cg::before{display:none!important}
+.literary-reader[data-presentation] .literary-picture.is-cg>img,
+.literary-reader[data-presentation] .literary-picture.is-cg>img,
+.literary-reader:has(.reader-sheet.terminal-sheet) .literary-picture.is-cg>img{
+  inset:0!important;width:100%!important;height:100%!important;
+  max-width:none!important;max-height:none!important;
+  object-fit:cover!important;object-position:var(--focus,50% 50%)!important;
 }
 
 /* Unified fullscreen presentation contract. Every runtime mode owns the
@@ -198,7 +211,7 @@ button:disabled{opacity:.43;cursor:not-allowed}
   height: 100%;
   max-width: none;
   max-height: none;
-  object-fit: contain;
+  object-fit: cover;
   object-position: var(--focus,50% 50%);
 }
 .literary-reader[data-presentation="sprite-dialogue"] .reader-sheet,
@@ -349,7 +362,7 @@ button:hover,button:focus-visible{background:#765744;border-color:#f3d2a8;transf
   height: 100%;
   max-width: none;
   max-height: none;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
 }
 .literary-reader:has(.reader-sheet.terminal-sheet) .literary-picture.is-cg .literary-vignette {
@@ -446,7 +459,7 @@ button:hover,button:focus-visible{background:#765744;border-color:#f3d2a8;transf
   .home-actions { grid-template-columns: 1fr; max-width: none; margin-top: 22px; }
   .home-actions > button { min-height: 52px; }
   .literary-home-card .chapter-list { display: none; }
-  .literary-reader:has(.reader-sheet.terminal-sheet) .literary-picture.is-cg > img { object-fit: contain; }
+  .literary-reader:has(.reader-sheet.terminal-sheet) .literary-picture.is-cg > img { object-fit: cover; }
   .literary-reader:has(.reader-sheet.terminal-sheet) .reader-sheet { max-height: min(35dvh,300px); padding: 22px 18px max(18px,env(safe-area-inset-bottom)); }
   .literary-reader:has(.reader-sheet.terminal-sheet) .reader-sheet .reader-scene { font-size: 22px; }
   .literary-reader:has(.reader-sheet.terminal-sheet) .reader-sheet .reader-paragraph { font-size: 16px; line-height: 1.45; margin-bottom: 12px; }
@@ -456,6 +469,6 @@ button:hover,button:focus-visible{background:#765744;border-color:#f3d2a8;transf
 /* Final mobile cinematic override: the independent portrait asset itself
    fills the viewport; no top letterbox or blurred continuation. */
 @media(max-width:680px) and (orientation:portrait){
-  .literary-picture.is-cg::before{display:block!important;opacity:.9}
-  .literary-picture.is-cg>img{inset:0!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:contain!important;object-position:center center!important}
+      .literary-picture.is-cg::before{display:none!important}
+      .literary-picture.is-cg>img{inset:0!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:cover!important;object-position:var(--focus,50% 50%)!important}
 }

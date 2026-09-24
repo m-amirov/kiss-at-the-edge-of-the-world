@@ -66,11 +66,11 @@ test('fullscreen scene layers do not reintroduce a card shell or mobile overflow
 });
 
 test('mobile cinematic presentation fills the viewport without empty bands', () => {
-  assert.match(css, /@media\(max-width:680px\) and \(orientation:portrait\)[\s\S]*?\.literary-picture\.is-cg::before\{display:block/);
-  assert.match(css, /@media\(max-width:680px\) and \(orientation:portrait\)[\s\S]*?\.literary-picture\.is-cg>img\{[^}]*object-fit:contain/);
-  assert.match(css, /\.literary-picture\.is-cg::before\{content:'';position:absolute;inset:-12px;background-image:var\(--cg-url\);background-size:cover/);
+  assert.match(css, /\.literary-reader\[data-presentation\] \.literary-picture\.is-cg::before\{display:none!important\}/);
+  assert.match(css, /object-fit:cover!important/);
+  assert.doesNotMatch(css, /\.literary-reader\[data-presentation\][\s\S]*?object-fit:\s*contain/);
   assert.match(css, /\.literary-reader\[data-presentation\] \.literary-picture \{[^}]*z-index: 0/);
-  assert.match(css, /background:linear-gradient\(180deg,rgba\(12,22,37,\.52\),transparent\)/);
+  assert.match(css, /\.literary-reader\[data-presentation\] \.reader-header\{background:transparent!important\}/);
 });
 
 test('every active production CG has an explicit portrait derivative mapping', () => {
