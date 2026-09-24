@@ -1,9 +1,9 @@
 {
   "schemaVersion": 2,
   "updaterSchemaVersion": 2,
-  "installedVersion": "0.5.7",
-  "attemptedVersion": "0.5.7",
-  "sourceManifestHash": "2c50d95a157c20d4dd9b0710ceeb07ea1d5a632a5ce4df52d3010bbe69c288cd",
+  "installedVersion": "0.5.8",
+  "attemptedVersion": "0.5.8",
+  "sourceManifestHash": "5113cafd3049c8407b9e492e2dbeabf8de8c508d4d1b097532f731390724d9ac",
   "targetProfile": {
     "schemaVersion": 1,
     "profileName": "new-project",
@@ -46,13 +46,13 @@
     },
     "managed:version": {
       "target": ".starter-kit/VERSION",
-      "sourceHash": "79d7614c17275d8e26f7c386169e65f3073bfcf583757b84bcda201134e628b4",
-      "targetHash": "79d7614c17275d8e26f7c386169e65f3073bfcf583757b84bcda201134e628b4"
+      "sourceHash": "9a5e04d55ade7d167d2c3717946fb945d2036ac644486074f77df2bf1942b9db",
+      "targetHash": "9a5e04d55ade7d167d2c3717946fb945d2036ac644486074f77df2bf1942b9db"
     },
     "managed:changelog": {
       "target": ".starter-kit/docs/CHANGELOG.md",
-      "sourceHash": "2d5ce7824ff3df803ad999404816e9a1ff948233515c936a273168a6e85894c6",
-      "targetHash": "2d5ce7824ff3df803ad999404816e9a1ff948233515c936a273168a6e85894c6"
+      "sourceHash": "db99628a4ee59f23945e07e7ffcb341a5b2ff964e71ce933ee2a9ca70a6f4802",
+      "targetHash": "db99628a4ee59f23945e07e7ffcb341a5b2ff964e71ce933ee2a9ca70a6f4802"
     },
     "managed:starter-readme": {
       "target": ".starter-kit/docs/README.md",
@@ -91,8 +91,8 @@
     },
     "managed:skill-policy": {
       "target": "config/skill-policy.json",
-      "sourceHash": "9b04a368051afa8e615061650ffd5c8a5983511405aafd6fd0902bd8c1a6d495",
-      "targetHash": "9b04a368051afa8e615061650ffd5c8a5983511405aafd6fd0902bd8c1a6d495"
+      "sourceHash": "fb6f70df330f1471bd7c62e9f29d3cb245f360cb3d27cdb339baedeed71c5fd2",
+      "targetHash": "fb6f70df330f1471bd7c62e9f29d3cb245f360cb3d27cdb339baedeed71c5fd2"
     },
     "managed:external-skill-sources": {
       "target": "docs/EXTERNAL_SKILL_SOURCES.md",
@@ -166,8 +166,8 @@
     },
     "managed:screenshot-visual-gate-template": {
       "target": "templates/visual-review/SCREENSHOT_VISUAL_GATE.md",
-      "sourceHash": "a4ad95dce14d008b9219805c6bfae97ac90478f0e5b828f79ffe997567b6d264",
-      "targetHash": "a4ad95dce14d008b9219805c6bfae97ac90478f0e5b828f79ffe997567b6d264"
+      "sourceHash": "9342e811694fb166589916bd3e2605ce1a890a2f09acb24a738be6fa2ad2a2a0",
+      "targetHash": "9342e811694fb166589916bd3e2605ce1a890a2f09acb24a738be6fa2ad2a2a0"
     },
     "managed:horizontal-gameplay-video-task": {
       "target": "templates/media/HORIZONTAL_GAMEPLAY_VIDEO.md",
@@ -256,8 +256,8 @@
     },
     "managed:tool-self-test": {
       "target": "tools/starter-kit/self-test.mjs",
-      "sourceHash": "813d76ade243b7de68a158c3c19f62dc1e7d347b2b193bead9d1e4017b9934b2",
-      "targetHash": "813d76ade243b7de68a158c3c19f62dc1e7d347b2b193bead9d1e4017b9934b2"
+      "sourceHash": "4fc1b95be5310e9b30cde3dc63ed668f46f38cd16b6a3178fdaff9b6ce1516fe",
+      "targetHash": "4fc1b95be5310e9b30cde3dc63ed668f46f38cd16b6a3178fdaff9b6ce1516fe"
     },
     "managed:tool-status": {
       "target": "tools/starter-kit/status.mjs",
@@ -488,8 +488,8 @@
     },
     "skill:visual-quality-gate:SKILL.md": {
       "target": ".codex/skills/visual-quality-gate/SKILL.md",
-      "sourceHash": "f3b5ac263a5c07ca686c191dbe005a48a78ca841ff9c4580aecc743fa93f1177",
-      "targetHash": "f3b5ac263a5c07ca686c191dbe005a48a78ca841ff9c4580aecc743fa93f1177"
+      "sourceHash": "7842ce786aa85653479e3357849ea4bad7c7104ad6f74b9c0301a8e91a18806d",
+      "targetHash": "7842ce786aa85653479e3357849ea4bad7c7104ad6f74b9c0301a8e91a18806d"
     },
     "skill:web-game-playtest:ORIGIN.md": {
       "target": ".codex/skills/web-game-playtest/ORIGIN.md",
@@ -499,7 +499,7 @@
     "skill:web-game-playtest:SKILL.md": {
       "target": ".codex/skills/web-game-playtest/SKILL.md",
       "sourceHash": "af5a75584e6656e3c0271310b136a610ee290805ee25b0e149394dcd4ea4d66e",
-      "targetHash": "af5a75584e6656e3c0271310b136a610ee290805ee25b0e149394dcd4ea4d66e"
+      "targetHash": "8d1bb30e1802a9c1a7736dc1d7b46abb50f17ebf72e7e87adc393bf91b331703"
     },
     "skill:yandex-release-validation:SKILL.md": {
       "target": ".codex/skills/yandex-release-validation/SKILL.md",
@@ -513,8 +513,8 @@
     },
     "contract:package-json": {
       "target": "package.json",
-      "sourceHash": "ed55b39b7c69ae3f455ce281c349211e42e1d4419f9046ee777044f2732ffbef",
-      "targetHash": "a45427c3d3bedc0ac79386f05295705f14d3008b6d55496483c0bb0db549f76a"
+      "sourceHash": "c3a012abe201582590a783a259ecc577ecba1386132e3bf4872a761e3ecd456c",
+      "targetHash": "c8c8de31ac8b08034624466197d278f9b24df26d5a0f58e475a199b173ce5ee2"
     },
     "contract:yandex-requirements": {
       "target": "config/yandex-requirements.yaml",
@@ -534,7 +534,7 @@
     "contract:yandex-checklist": {
       "target": "docs/YANDEX_REQUIREMENTS_CHECKLIST.md",
       "sourceHash": "2bdc3939564b59018de2c3720001f052a3cf24cba24028b16eaf53320428bb85",
-      "targetHash": "f3b53a77d9cc2d8a38071d38303dff2b9a957868db0b81c06402a1c843dc5459"
+      "targetHash": "b08db199f7e61c31766aecf348fba6f691df175fe3a254c31d83939ff5595ff1"
     }
   },
   "conflicts": [],

@@ -1,22 +1,17 @@
 {
   "schemaVersion": 2,
   "updaterSchemaVersion": 2,
-  "updaterVersion": "0.5.7",
+  "updaterVersion": "0.5.8",
   "mode": "update",
   "dryRun": false,
   "fromVersion": "0.5.7",
-  "toVersion": "0.5.7",
-  "sourceManifestHash": "2c50d95a157c20d4dd9b0710ceeb07ea1d5a632a5ce4df52d3010bbe69c288cd",
+  "toVersion": "0.5.8",
+  "sourceManifestHash": "5113cafd3049c8407b9e492e2dbeabf8de8c508d4d1b097532f731390724d9ac",
   "targetProfile": "new-project",
   "projectType": "new",
   "skillRoot": ".codex/skills",
   "created": [],
-  "updated": [
-    {
-      "logicalId": "managed:tool-self-test",
-      "target": "tools/starter-kit/self-test.mjs"
-    }
-  ],
+  "updated": [],
   "preserved": [
     {
       "logicalId": "skill:asset-provenance-and-rights:SKILL.md",
@@ -91,10 +86,6 @@
       "target": ".codex/skills/web-game-playtest/ORIGIN.md"
     },
     {
-      "logicalId": "skill:web-game-playtest:SKILL.md",
-      "target": ".codex/skills/web-game-playtest/SKILL.md"
-    },
-    {
       "logicalId": "skill:yandex-release-validation:SKILL.md",
       "target": ".codex/skills/yandex-release-validation/SKILL.md"
     },
@@ -143,8 +134,16 @@
       "target": "config/yandex-requirements.yaml"
     },
     {
+      "logicalId": "contract:yandex-console-requirements",
+      "target": "config/yandex-console-requirements.yaml"
+    },
+    {
       "logicalId": "managed:yandex-doc-sources",
       "target": "config/yandex-doc-sources.yaml"
+    },
+    {
+      "logicalId": "managed:yandex-doc-snapshot",
+      "target": "config/yandex-doc-snapshot.json"
     },
     {
       "logicalId": "managed:game-spec-schema",
@@ -159,17 +158,8 @@
       "target": "docs/SKILL_PRECEDENCE.md"
     },
     {
-      "logicalId": "contract:yandex-checklist",
-      "target": "docs/YANDEX_REQUIREMENTS_CHECKLIST.md",
-      "ownership": "semantic-merge"
-    },
-    {
       "logicalId": "managed:yandex-requirements-diff-2026-08-18",
       "target": "docs/YANDEX_REQUIREMENTS_DIFF_2026-07-01_TO_2026-08-18.md"
-    },
-    {
-      "logicalId": "managed:skill-policy",
-      "target": "config/skill-policy.json"
     },
     {
       "logicalId": "managed:external-skill-sources",
@@ -248,10 +238,6 @@
       "target": "docs/MANIFEST_SCHEMA.md"
     },
     {
-      "logicalId": "managed:manifest-entry-config",
-      "target": "config/manifest-entries.json"
-    },
-    {
       "logicalId": "managed:manifest-json-schema",
       "target": "config/starter-kit-manifest.schema.json"
     },
@@ -298,6 +284,10 @@
     {
       "logicalId": "managed:tool-profile",
       "target": "tools/starter-kit/profile.mjs"
+    },
+    {
+      "logicalId": "managed:tool-self-test",
+      "target": "tools/starter-kit/self-test.mjs"
     },
     {
       "logicalId": "managed:tool-status",
@@ -395,13 +385,23 @@
   "merged": [],
   "resolved": [
     {
-      "logicalId": "contract:yandex-console-requirements",
-      "target": "config/yandex-console-requirements.yaml",
-      "resolution": "accept-incoming"
+      "logicalId": "skill:web-game-playtest:SKILL.md",
+      "target": ".codex/skills/web-game-playtest/SKILL.md",
+      "resolution": "accept-current"
     },
     {
-      "logicalId": "managed:yandex-doc-snapshot",
-      "target": "config/yandex-doc-snapshot.json",
+      "logicalId": "contract:yandex-checklist",
+      "target": "docs/YANDEX_REQUIREMENTS_CHECKLIST.md",
+      "resolution": "accept-current"
+    },
+    {
+      "logicalId": "managed:skill-policy",
+      "target": "config/skill-policy.json",
+      "resolution": "replace-managed-drift"
+    },
+    {
+      "logicalId": "managed:manifest-entry-config",
+      "target": "config/manifest-entries.json",
       "resolution": "replace-managed-drift"
     }
   ],

@@ -1429,6 +1429,15 @@
       "conflictPolicy": "replace-if-baseline"
     },
     {
+      "source": "tools/yandex/external-runtime-provider/lib/reporting.mjs",
+      "logicalId": "managed:yandex-external-runtime-provider-reporting",
+      "ownership": "managed",
+      "target": "tools/yandex/external-runtime-provider/lib/reporting.mjs",
+      "modes": ["init", "update"],
+      "projectTypes": ["new", "mature"],
+      "conflictPolicy": "replace-if-baseline"
+    },
+    {
       "source": ".codex/skills/visual-novel-art-continuity/SKILL.md",
       "logicalId": "skill:visual-novel-art-continuity:SKILL.md",
       "ownership": "target-mapped",
@@ -1445,15 +1454,6 @@
       "modes": ["init", "update"],
       "projectTypes": ["new", "mature"],
       "conflictPolicy": "semantic-merge"
-    },
-    {
-      "source": "tools/yandex/external-runtime-provider/lib/reporting.mjs",
-      "logicalId": "managed:yandex-external-runtime-provider-reporting",
-      "ownership": "managed",
-      "target": "tools/yandex/external-runtime-provider/lib/reporting.mjs",
-      "modes": ["init", "update"],
-      "projectTypes": ["new", "mature"],
-      "conflictPolicy": "replace-if-baseline"
     }
   ]
 }

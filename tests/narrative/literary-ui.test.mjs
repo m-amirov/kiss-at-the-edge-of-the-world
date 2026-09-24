@@ -65,6 +65,14 @@ test('fullscreen scene layers do not reintroduce a card shell or mobile overflow
   assert.match(css, /object-fit: cover/);
 });
 
+test('mobile cinematic presentation fills the viewport without empty bands', () => {
+  assert.match(css, /@media\(max-width:680px\) and \(orientation:portrait\)[\s\S]*?\.literary-picture\.is-cg::before\{display:block/);
+  assert.match(css, /@media\(max-width:680px\) and \(orientation:portrait\)[\s\S]*?\.literary-picture\.is-cg>img\{[^}]*object-fit:contain/);
+  assert.match(css, /\.literary-picture\.is-cg::before\{content:'';position:absolute;inset:-12px;background-image:var\(--cg-url\);background-size:cover/);
+  assert.match(css, /\.literary-reader\[data-presentation\] \.literary-picture \{[^}]*z-index: 0/);
+  assert.match(css, /background:linear-gradient\(180deg,rgba\(12,22,37,\.52\),transparent\)/);
+});
+
 test('every active production CG has an explicit portrait derivative mapping', () => {
   const active = ['s13-skaftafell-travelers','s18-hofn-dance-lights','s26-eric-choice','s44-eric-epilogue-month-later','s45-nick-home-epilogue-month-later','s45-reykjavik-warm-montage','s46-airport-goodbye','s46-damir-epilogue-month-later','s47-alice-home-epilogue-month-later','s47-reykjavik-harbour-alice'];
   for (const id of active) {

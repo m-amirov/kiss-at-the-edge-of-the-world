@@ -37,10 +37,10 @@ desktop/mobile screenshots.
 | S25 | Eastfjords guesthouse, day 12 | Alice/Damir; `s25-damir-clarity-talk` [0,0] | dedicated desktop + independent portrait cinematic; 3 viewport runtime evidence | VISUAL_ACCEPTANCE: PASS |
 | S58 | shared kitchen, day 12 evening | group | stage only | MISSING_APPROPRIATE_ART |
 | S26 | guesthouse corridor/courtyard, day 12 evening | route-dependent pair/solo; Eric `[7,0]`, Nick `[8,0]`, Damir `[14,0]`, independent `[20,0]` | four route-specific desktop + independent portrait cinematic states; before/after evidence at 3 viewports | VISUAL_ACCEPTANCE: PASS |
-| S27 | Egilsstaðir lakeside boardwalk, day 13 | group | `s27-egilsstadir-boardwalk` at [0,0], independent portrait; action visible above text panel at 3 viewports | VISUAL_ACCEPTANCE: PASS |
+| S27 | Egilsstaðir lakeside boardwalk, day 13 | group | `s27-egilsstadir-boardwalk` at [0,0], independent portrait; action visible above text panel at 3 viewports | VISUAL_ACCEPTANCE: BLOCKED (independent multimodal pixel review unavailable) |
 | S59 | group lunch, day 13 | group | stage only | MISSING_APPROPRIATE_ART |
-| S28 | marked trail/viewpoint, day 14 | Alice/Eric | `s28-hverfjall-hood` at [0,3]; independent desktop + portrait; runtime evidence at 1920×900, 390×844, 360×640 | VISUAL_ACCEPTANCE: PASS |
-| S49 | guesthouse hall dance, evening | Alice/Eric | `s49-reykjahlid-window-dance` at [0,4]; independent desktop + portrait; runtime evidence at 1920×900, 390×844, 360×640 | VISUAL_ACCEPTANCE: PASS |
+| S28 | marked trail/viewpoint, day 14 | Alice/Eric | `s28-hverfjall-hood` at [0,3]; independent desktop + portrait; runtime evidence at 1920×900, 390×844, 360×640 | VISUAL_ACCEPTANCE: BLOCKED (independent multimodal pixel review unavailable) |
+| S49 | guesthouse hall dance, evening | Alice/Eric | `s49-reykjahlid-window-dance` at [0,4]; independent desktop + portrait; runtime evidence at 1920×900, 390×844, 360×640 | VISUAL_ACCEPTANCE: BLOCKED (independent multimodal pixel review unavailable) |
 | S29 | guesthouse Nick playback, day 14 | Alice/Nick | stage only | MISSING_APPROPRIATE_ART |
 | S52 | streets/post/workshop, day 14 | Alice/Nick | stage only | MISSING_APPROPRIATE_ART |
 | S30 | personal Damir conversation, day 14 | Alice/Damir | stage only | MISSING_APPROPRIATE_ART |

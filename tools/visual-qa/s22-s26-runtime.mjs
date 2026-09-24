@@ -1,4 +1,5 @@
 import fs from 'node:fs/promises';
+import crypto from 'node:crypto';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { literarySeason } from '../../src/literary-season-data.js';
@@ -6,11 +7,13 @@ import { compileInteractivePlayback } from '../../src/literary-pacing.js';
 import { literarySaveKey } from '../../src/literary-engine.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
-const output = path.join(root, 'output/playwright/s28-s49-runtime-2026-09-24');
+const output = path.join(root, 'output/playwright/fullscreen-regression-2026-09-24');
 const { chromium } = await import(pathToFileURL('C:/Users/user/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs').href);
 const baseUrl = process.env.LITERARY_QA_URL ?? 'http://127.0.0.1:4173/literary.html';
 const viewports = [{ width: 1920, height: 900 }, { width: 390, height: 844 }, { width: 360, height: 640 }];
 const targetCues = {
+  S16: [{ id: 's16-guesthouse-help', chunk: 0, paragraph: 0 }],
+  S27: [{ id: 's27-egilsstadir-boardwalk', chunk: 0, paragraph: 0 }],
   S28: [{ id: 's28-hverfjall-hood', chunk: 0, paragraph: 3 }],
   S49: [{ id: 's49-reykjahlid-window-dance', chunk: 0, paragraph: 4 }]
 };
@@ -56,7 +59,7 @@ function targets() {
 async function main() {
   await fs.mkdir(output, { recursive: true });
   const browser = await chromium.launch({ executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: true });
-  const evidence = { generatedAt: new Date().toISOString(), baseUrl, productionIsolation: { urlParametersUsed: false, productionDebugCodeChanged: false, saveKey: literarySaveKey, mechanism: 'validated existing literary save loaded before production runtime boot' }, captures: [] };
+  const evidence = { generatedAt: new Date().toISOString(), baseUrl, productionIsolation: { urlParametersUsed: false, productionDebugCodeChanged: false, saveKey: literarySaveKey, mechanism: 'validated existing literary save loaded before production runtime boot' }, independentMultimodalReview: { status: 'BLOCKED', actualPixelsSupplied: false, reason: 'No available Web reviewer route accepts local image content in this session; DOM/readback and local inspection are not independent multimodal acceptance.' }, captures: [] };
   try {
     for (const target of targets()) {
       for (const viewport of viewports) {
@@ -90,12 +93,14 @@ async function main() {
             textLayer: { visible: Boolean(sheet && sheet.offsetParent !== null), top: sheet?.getBoundingClientRect().top ?? null, contentScrollable: Boolean(document.querySelector('.reader-content') && document.querySelector('.reader-content').scrollHeight > document.querySelector('.reader-content').clientHeight + 1) },
             importantDetailsRegion: { imageBottom: image?.getBoundingClientRect().bottom ?? null, textTop: sheet?.getBoundingClientRect().top ?? null, actionAboveTextLayer: Boolean(image && sheet && image.getBoundingClientRect().bottom >= sheet.getBoundingClientRect().top) },
             controlsWithinViewport: buttons.every((button) => { const rect = button.getBoundingClientRect(); return rect.top >= 0 && rect.bottom <= window.innerHeight; }),
+            fullscreen: (() => { const rect = picture?.getBoundingClientRect(); const imageRect = image?.getBoundingClientRect(); const style = image ? getComputedStyle(image) : null; return { picture: rect ? { left: rect.left, top: rect.top, right: rect.right, bottom: rect.bottom, width: rect.width, height: rect.height } : null, image: imageRect ? { left: imageRect.left, top: imageRect.top, right: imageRect.right, bottom: imageRect.bottom, width: imageRect.width, height: imageRect.height } : null, objectFit: style?.objectFit ?? null, unexplainedBands: Boolean(rect && (rect.left > 0.5 || rect.top > 0.5 || window.innerWidth - rect.right > 0.5 || window.innerHeight - rect.bottom > 0.5)) }; })(),
             buttons: buttons.map((button) => ({ text: button.textContent?.trim(), enabled: !button.disabled }))
           };
         });
         const screenshot = path.join(output, `${target.id}-${viewport.width}x${viewport.height}.png`);
         await page.screenshot({ path: screenshot });
-        evidence.captures.push({ target: target.id, sceneId: target.sceneId, phase: target.phase, route: target.route ?? null, cue: target.cue ?? null, viewport, screenshot, errors, readback });
+        const bytes = await fs.readFile(screenshot);
+        evidence.captures.push({ target: target.id, sceneId: target.sceneId, phase: target.phase, route: target.route ?? null, cue: target.cue ?? null, viewport, screenshot, screenshotSha256: crypto.createHash('sha256').update(bytes).digest('hex'), screenshotBytes: bytes.length, errors, readback });
         await context.close();
       }
     }

@@ -6,7 +6,7 @@
 .literary-home-card{width:min(720px,100%);max-height:94dvh;overflow-y:auto;background:rgba(14,24,31,.89);padding:clamp(20px,4vw,40px);border:1px solid #bea284;border-radius:18px;box-shadow:0 16px 70px #0008;backdrop-filter:blur(12px)}
 .kicker,.chapter-index,.draft-indicator,.choice-label{font:700 11px/1.3 system-ui,sans-serif;letter-spacing:.12em;color:#e7c293}.home-title{font-size:clamp(33px,6vw,58px);line-height:1.08;margin:10px 0 20px}.home-summary,.reader-paragraph{font-size:clamp(17px,2.4vw,23px);line-height:1.55}.small-note{font:13px/1.5 system-ui,sans-serif;color:#e4d8c8}.home-actions,.reader-options{display:grid;gap:11px;margin-top:22px}.chapter-list{margin-top:24px;font:13px/1.8 system-ui,sans-serif;color:#ddd1c1}.chapter-list>.planned{color:#baa999}.chapter-heading{margin:0 0 7px;font:700 16px system-ui,sans-serif}
 .literary-picture{position:absolute;inset:0;z-index:-2;background:linear-gradient(130deg,#1c3845,#4d5760)}.literary-picture img{width:100%;height:100%;object-fit:cover;object-position:center}.literary-vignette{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,16,23,.25),rgba(7,16,23,.56) 58%,rgba(7,16,23,.89))}
-.reader-header{position:absolute;inset:0 0 auto;display:flex;gap:15px;align-items:center;justify-content:space-between;min-height:74px;padding:10px max(16px,4vw);background:linear-gradient(180deg,#0c1625bd,transparent);font-family:system-ui,sans-serif}.draft-indicator{text-align:right;font-size:10px;letter-spacing:.04em}
+.reader-header{position:absolute;inset:0 0 auto;display:flex;gap:15px;align-items:center;justify-content:space-between;min-height:74px;padding:10px max(16px,4vw);background:linear-gradient(180deg,rgba(12,22,37,.52),transparent);font-family:system-ui,sans-serif}.draft-indicator{text-align:right;font-size:10px;letter-spacing:.04em}
 .reader-sheet{position:absolute;left:50%;bottom:clamp(12px,4vh,38px);transform:translateX(-50%);width:min(900px,calc(100% - 24px));max-height:min(72dvh,680px);overflow:auto;background:rgba(17,28,36,.93);border:1px solid #bfa17b;border-radius:16px;padding:clamp(18px,3vw,30px);backdrop-filter:blur(10px);box-shadow:0 15px 70px #0008}.reader-scene{margin:0 0 16px;color:#edcd9c;font:600 clamp(14px,2vw,18px)/1.4 system-ui,sans-serif}.reader-paragraph{white-space:pre-wrap;overflow-wrap:anywhere;margin:0 0 20px}.reader-footer{display:flex;align-items:center;justify-content:space-between;gap:16px}.page-counter{font:12px system-ui,sans-serif;color:#c9c0af}.choice-label{margin:16px 0 8px}.choice-button{text-align:left}.reader-sheet>.primary{width:100%}
 @media(max-width:560px){.reader-header{min-height:68px;padding:9px 12px}.chapter-index{font-size:10px;letter-spacing:0}.draft-indicator{font-size:9px;max-width:100px}.literary-picture img{object-position:center}.reader-sheet{max-height:65dvh;padding:16px;bottom:10px}.reader-paragraph{font-size:18px}.reader-footer .primary{min-width:120px}.home-summary{font-size:18px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
@@ -112,7 +112,7 @@ button:disabled{opacity:.43;cursor:not-allowed}
 /* Final mobile cinematic override: the independent portrait asset itself
    fills the viewport; no top letterbox or blurred continuation. */
 @media(max-width:680px) and (orientation:portrait){
-  .literary-picture.is-cg::before{display:none!important}
+  .literary-picture.is-cg::before{display:block!important;opacity:.9}
   .literary-picture.is-cg>img{inset:0!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:contain!important;object-position:center center!important}
 }
 
@@ -279,7 +279,7 @@ button:hover,button:focus-visible{background:#765744;border-color:#f3d2a8;transf
 .section-title,.chapter-heading{color:#f0d0aa}
 .home-actions{gap:9px}.home-actions>button{min-height:50px;text-align:left;padding:13px 16px}.home-actions>button.primary{background:#876045;border-color:#f5cd96}.home-actions>button.primary:hover{background:#a87551}
 .literary-picture>img{filter:saturate(.86)}.literary-picture.is-cg>img{filter:none}
-.reader-header{font-family:'Cinematic Manrope',Arial,sans-serif;background:linear-gradient(180deg,rgba(5,13,20,.9),transparent);padding-inline:max(16px,4vw)}
+.reader-header{font-family:'Cinematic Manrope',Arial,sans-serif;background:linear-gradient(180deg,rgba(5,13,20,.52),transparent);padding-inline:max(16px,4vw)}
 .reader-sheet{width:min(940px,calc(100% - 32px));max-height:min(56dvh,620px);background:linear-gradient(135deg,rgba(10,21,29,.95),rgba(21,34,41,.92));border:1px solid var(--cinema-line);border-radius:4px;box-shadow:0 24px 90px #000b}
 .reader-scene{font-family:'Cinematic Cormorant',Georgia,serif;font-size:clamp(22px,3vw,32px);font-weight:600;line-height:1.05;color:#f0cda7;letter-spacing:-.02em}
 .reader-paragraph{font-size:calc(clamp(17px,2.15vw,22px)*var(--literary-scale));line-height:1.62;letter-spacing:.005em}
@@ -456,6 +456,6 @@ button:hover,button:focus-visible{background:#765744;border-color:#f3d2a8;transf
 /* Final mobile cinematic override: the independent portrait asset itself
    fills the viewport; no top letterbox or blurred continuation. */
 @media(max-width:680px) and (orientation:portrait){
-  .literary-picture.is-cg::before{display:none!important}
+  .literary-picture.is-cg::before{display:block!important;opacity:.9}
   .literary-picture.is-cg>img{inset:0!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:contain!important;object-position:center center!important}
 }
