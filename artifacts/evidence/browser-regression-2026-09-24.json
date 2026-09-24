@@ -1,0 +1,19 @@
+{
+  "head": "0661ab2",
+  "status": "PARTIAL",
+  "browser": "Windows Chrome via Playwright runtime",
+  "viewports": ["1920x900", "390x844", "360x640"],
+  "routes": {
+    "eric": "NOT_VERIFIED",
+    "nick": "NOT_VERIFIED",
+    "damir": "NOT_VERIFIED",
+    "alice": "NOT_VERIFIED"
+  },
+  "productChecks": {"literaryCompile": "PASS", "narrativeTests": "PASS", "diffCheck": "PASS"},
+  "blockers": [
+    "Codex in-app browser failed Emulation.setFocusEmulationEnabled/Input.dispatchMouseEvent.",
+    "Native Playwright Chromium launched, but the full UI loop stalled after the first successful click; no route completion or save/load claim is made."
+  ],
+  "screenshots": [],
+  "note": "This is not browser acceptance and does not imply seasonal PASS."
+}
