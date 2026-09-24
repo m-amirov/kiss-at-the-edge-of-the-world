@@ -45,6 +45,19 @@ The ledger was recalculated against all 66 rows: `MISSING_APPROPRIATE_ART=42`, `
 
 ## Verification
 
+## Latest portrait recheck — 2026-09-24
+
+The updated `assets/cg/s16-guesthouse-help-portrait.png` was inspected as a new 941×1672 asset and its provenance hash matches `assets/provenance/rights-manifest.json`. The targeted composition places the injured ankle and Damir's hands materially higher than the previous portrait.
+
+The first in-app browser attempt was blocked by `Emulation.setFocusEmulationEnabled`, but the independent Playwright CLI path with the project preview server and native Chromium completed the required check. Fresh screenshots:
+
+- `output/playwright/s16-guesthouse-help-portrait-390x844.png`
+- `output/playwright/s16-guesthouse-help-portrait-360x640.png`
+
+DOM/runtime readback confirmed `S16` from the live header, visual beat `s16-guesthouse-help`, portrait asset `s16-guesthouse-help-portrait.png`, `mode: cinematic`, `stageCount: 0`, natural size `940×1672`, no document/body horizontal overflow, and enabled `К выбору` / `Далее` controls. With the lower text sheet open, both fresh screenshots visibly retain the injured ankle and Damir's hands above the sheet. A scoped mobile presentation rule was required; no image was regenerated.
+
+Final S16 portrait acceptance: **PASS / VISUAL_ACCEPTANCE: PASS**.
+
 - `npm run literary:compile` — `LITERARY_COMPILE_OK 66 scenes 619 chunks`
 - `npm run test:narrative` — PASS
 - `git diff --check` — PASS

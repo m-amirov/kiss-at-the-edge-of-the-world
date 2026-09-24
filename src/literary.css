@@ -114,6 +114,10 @@ button:disabled{opacity:.43;cursor:not-allowed}
 @media(max-width:680px) and (orientation:portrait){
   .literary-picture.is-cg::before{display:none!important}
   .literary-picture.is-cg>img{inset:0!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:contain!important;object-position:center center!important}
+  /* S16 medical-help keeps the ankle intervention above the readable sheet. */
+  .literary-picture.is-cg:has(>img[data-asset="s16-guesthouse-help-portrait.png"])>img{
+    height:76%!important;object-fit:cover!important;object-position:center top!important
+  }
 }
 
 /* Unified fullscreen presentation contract. Every runtime mode owns the

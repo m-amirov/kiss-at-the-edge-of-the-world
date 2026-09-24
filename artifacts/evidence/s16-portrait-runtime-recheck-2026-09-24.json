@@ -1,0 +1,34 @@
+{
+  "sceneId": "S16",
+  "visualEventId": "s16-guesthouse-help",
+  "asset": "assets/cg/s16-guesthouse-help-portrait.png",
+  "requestedViewports": ["390x844", "360x640"],
+  "dialoguePanel": "required-open",
+  "status": "PASS",
+  "screenshots": [
+    "output/playwright/s16-guesthouse-help-portrait-390x844.png",
+    "output/playwright/s16-guesthouse-help-portrait-360x640.png"
+  ],
+  "imageRegenerated": false,
+  "reason": "Independent Playwright CLI with native Chromium completed the runtime capture after the in-app browser path timed out.",
+  "runtime": {
+    "sceneId": "S16",
+    "visualEventId": "s16-guesthouse-help",
+    "mode": "cinematic",
+    "stageCount": 0,
+    "naturalDimensions": "940x1672",
+    "overflow": false,
+    "dialoguePanelOpen": true,
+    "ankleAndDamirHandsVisible": {
+      "390x844": true,
+      "360x640": true
+    },
+    "controlsEnabled": ["К выбору ⇢", "Далее →"]
+  },
+  "staticAssetReview": {
+    "dimensions": "941x1672",
+    "portraitActionRaised": true,
+    "distinctAliceAndTourist": true,
+    "damirHandsAndAnkleVisibleInAsset": true
+  }
+}
