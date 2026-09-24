@@ -22,9 +22,9 @@ desktop/mobile screenshots.
 | S11 | Reynisfjara, day 6 morning | group | reuse Reynisfjara master | REUSE |
 | S12 | Vík cafe, day 6 | Alice/Damir; `s12-vik-cafe-damir` [0,0], clear on street transition [11,0] | desktop+portrait cinematic | BATCH_ACCEPTED_S09_S12 |
 | S13 | Skaftafell, day 7 morning | group; notebook CG | reuse desktop+portrait CG | COVERED_EVENT |
-| S14 | glacier-plain trail, day 7 | Alice/Eric | stage only | MISSING_APPROPRIATE_ART |
+| S14 | glacier-plain trail, day 7 | Alice/Eric; `s14-skaftafell-pace` [0,0], clear at road transition [7,0] | desktop+portrait cinematic | BATCH_ACCEPTED_S13_S16 |
 | S15 | Jökulsárlón, day 8 | Alice/Nick/group; lagoon cue | reuse lagoon master | REUSE |
-| S16 | roadside guesthouse, evening | group | stage only | MISSING_APPROPRIATE_ART |
+| S16 | roadside guesthouse, evening | `s16-guesthouse-help` [0,0]; `s16-kitchen-soup` [4,0] | desktop+portrait cinematic, separate medical-help/kitchen beats | BATCH_ACCEPTED_S13_S16 |
 | S17 | Höfn guesthouse, day 9 | group | reuse Höfn harbour bg, scene-specificity pending | MISSING_APPROPRIATE_ART |
 | S18 | Höfn lighthouse/harbour, day 9 evening | Alice/Eric; lighthouse/dance/walk/morning | covered bg + dance desktop/portrait | COVERED_EVENT |
 | S19 | Höfn pool, evening | Alice/Nick | stage only | MISSING_APPROPRIATE_ART |
@@ -77,11 +77,10 @@ desktop/mobile screenshots.
 ## Current totals
 
 - 66 authored scenes audited; 66 rows above.
-- 9 scenes have truthful reusable location coverage at scene start; 6 scenes
-  have authored CG coverage (including route-specific/epilogue beats).
-- 42 scenes remain without a scene-specific background or CG and therefore
-  remain `MISSING_APPROPRIATE_ART`; stage presentation is not counted as full
-  location coverage. S66 was closed by commit `9eb70f4`.
+- 8 scenes are `REUSE`, 8 are `COVERED_EVENT`, 4 are accepted cinematic batch
+  rows (`S10`, `S12`, `S14`, `S16`), and 3 are pilot-accepted rows (`S06-S08`).
+- 42 scenes remain `MISSING_APPROPRIATE_ART`; stage presentation is not counted
+  as full location coverage. The ledger still contains 66 authored rows.
 - S66 runtime evidence is recorded in `docs/VISUAL_ACCEPTANCE_S66_2026-09-23.md`
   and the ignored run artifact `artifacts/evidence/s66-visual-qa.json`.
 - S05 runtime evidence is recorded in `docs/VISUAL_ACCEPTANCE_S05_2026-09-23.md`

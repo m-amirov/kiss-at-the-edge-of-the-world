@@ -120,6 +120,32 @@ test('S10 and S12 use bounded cinematic events and clear them at the location tr
  }
 });
 
+test('S13-S16 preserve environment transitions and use only authored cinematic events',()=>{
+ const expected={
+  S13:[['skaftafell-parking',[0,7],null,'environment'],['skaftafell-notebook',[0,12],'s13-skaftafell-travelers.png','cinematic']],
+  S14:[['s14-skaftafell-pace',[0,0],'s14-skaftafell-pace.png','cinematic'],['s14-lagoon-road',[7,0],null,'environment']],
+  S15:[['jokulsarlon-lagoon',[0,5],'jokulsarlon-master.png','environment']],
+  S16:[['s16-guesthouse-help',[0,0],'s16-guesthouse-help.png','cinematic'],['s16-kitchen-soup',[4,0],'s16-kitchen-soup.png','cinematic']]
+ };
+ for(const [id,events] of Object.entries(expected)){
+  const {flow,choices}=complete(id);
+  for(const [beat,ref,file,presentation] of events){
+   const at=indexOfSource(flow,...ref),shotAt=shot(id,flow,at,choices);
+   assert.equal(shotAt.beatId,beat);
+   if(file){
+    assert.equal(shotAt.art?.file,file);
+    assert.equal(shotAt.art?.presentation,presentation);
+   }else assert.equal(shotAt.art,null);
+   if(file){
+    assert.ok(fs.existsSync(new URL(`../../assets/${presentation==='cinematic'?'cg':'backgrounds'}/${file}`,import.meta.url)));
+    if(presentation==='cinematic')assert.ok(fs.existsSync(new URL(`../../assets/cg/${file.replace('.png','-portrait.png')}`,import.meta.url)));
+   }
+  }
+ }
+ const {flow,choices}=complete('S14');
+ assert.equal(shot('S14',flow,indexOfSource(flow,7,0),choices).art,null);
+});
+
 test('S13 visitor center precedes notebook CG; image is not used in Vik',()=>{
  const {flow,choices}=complete('S13');
  const arrival=indexOfSource(flow,0,7),notebook=indexOfSource(flow,0,12);

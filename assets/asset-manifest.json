@@ -365,6 +365,9 @@
     {"id":"s08-guesthouse-strap","family":"cg","path":"assets/cg/s08-guesthouse-strap.png","status":"integrated","runtime":"S08 authored cue [2,0], cinematic backpack-strap repair","creationMethod":"Built-in image generation using Alice and Damir master references","createdAt":"2026-09-23","dimensions":"1672x941","mobileSafe":true,"portraitAsset":"assets/cg/s08-guesthouse-strap-portrait.png","portraitDimensions":"941x1672"},
     {"id":"s10-vik-road-song","family":"cg","path":"assets/cg/s10-vik-road-song.png","status":"integrated","runtime":"S10 authored cue [0,0], cinematic Alice/Eric song at petrol station","creationMethod":"Built-in image generation using Alice and Eric master references","createdAt":"2026-09-24","dimensions":"1672x941","mobileSafe":true,"portraitAsset":"assets/cg/s10-vik-road-song-portrait.png","portraitDimensions":"941x1672"},
     {"id":"s12-vik-cafe-damir","family":"cg","path":"assets/cg/s12-vik-cafe-damir.png","status":"integrated","runtime":"S12 authored cue [0,0], cinematic Alice/Damir cafe conversation","creationMethod":"Built-in image generation using Alice and Damir master references","createdAt":"2026-09-24","dimensions":"1672x941","mobileSafe":true,"portraitAsset":"assets/cg/s12-vik-cafe-damir-portrait.png","portraitDimensions":"941x1672"}
+    ,{"id":"s14-skaftafell-pace","family":"cg","path":"assets/cg/s14-skaftafell-pace.png","status":"integrated","runtime":"S14 authored cue [0,0], cinematic Alice/Eric pace conversation","creationMethod":"Built-in image generation using Alice and Eric master references","createdAt":"2026-09-24","dimensions":"1672x941","mobileSafe":true,"portraitAsset":"assets/cg/s14-skaftafell-pace-portrait.png","portraitDimensions":"941x1672"}
+    ,{"id":"s16-guesthouse-help","family":"cg","path":"assets/cg/s16-guesthouse-help.png","status":"integrated","runtime":"S16 authored cue [0,0], cinematic guesthouse medical-help event","creationMethod":"Built-in image generation using four character masters and distinct tourist references","createdAt":"2026-09-24","dimensions":"1672x940","mobileSafe":true,"portraitAsset":"assets/cg/s16-guesthouse-help-portrait.png","portraitDimensions":"941x1672"}
+    ,{"id":"s16-kitchen-soup","family":"cg","path":"assets/cg/s16-kitchen-soup.png","status":"integrated","runtime":"S16 authored cue [4,0], cinematic shared kitchen continuation","creationMethod":"Built-in image generation using four character masters","createdAt":"2026-09-24","dimensions":"1672x941","mobileSafe":true,"portraitAsset":"assets/cg/s16-kitchen-soup-portrait.png","portraitDimensions":"941x1672"}
   ],
   "routingTrace": {
     "webPreflightStatus": "READY",
@@ -373,8 +376,8 @@
     ],
     "nativeAssetGeneratorUsed": true,
     "imageGenerationCapability": "available",
-    "generatedAssetCount": 49,
-    "integratedAssetCount": 49,
+    "generatedAssetCount": 55,
+    "integratedAssetCount": 55,
     "nativeFallbackUsed": true,
     "nativeFallbackReason": "Web art-director transport disconnected with ERR_ABORTED before completion; one native fallback used"
   },
@@ -425,6 +428,6 @@
     "sceneCount": 66,
     "file": "src/literary-visual-directions.js",
     "condition": "unillustrated location uses neutral stage; do not display a CG for an unrelated event",
-    "currentGate": "PILOT_S06_S12_ACCEPTED; S09/S11 environment coverage retained; season incomplete"
+    "currentGate": "BATCH_S13_S16_INTEGRATED; season incomplete"
   }
 }
