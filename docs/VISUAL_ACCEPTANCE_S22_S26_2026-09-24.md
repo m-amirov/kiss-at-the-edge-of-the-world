@@ -19,6 +19,10 @@ S26 conditions are regression-tested: before the route-lock paragraph no route-s
 
 ## Browser evidence
 
-**PARTIAL.** The live literary runtime opened successfully at `http://127.0.0.1:4173/literary.html`, but the current browser harness did not provide a safe address-level route seeding mechanism for reaching S22–S26 without replaying the full 66-scene reader. Therefore fresh current-HEAD screenshots and runtime readback for all 12 new assets at `1920×900`, `390×844`, and `360×640`, plus before/after checks for all four S26 routes, remain unverified. Full four-route browser regression remains separate and is not promoted by this asset batch.
+**VISUAL_ACCEPTANCE: PASS** for the S22–S26 visual-event batch. The isolated runner `tools/visual-qa/s22-s26-runtime.mjs` uses real `literarySeason`, `compileInteractivePlayback`, the existing `literarySaveKey`, and the production save parser. It does not add URL parameters, production debug controls, or an alternate scene player. The runner produced 36 current-HEAD captures and `evidence.json` in `output/playwright/s22-s26-runtime-2026-09-24/`.
 
-No release PASS is claimed. The remaining acceptance work is browser capture/readback for S22–S26 at all three viewports, including stage count, actual `img.src`, natural dimensions, overflow and enabled controls.
+For every target state at `1920×900`, `390×844`, and `360×640`, readback recorded the actual `img.src`, desktop/portrait asset, visual-event ID, presentation mode, natural dimensions, stage count, text-layer visibility, enabled buttons, viewport control bounds and document/body overflow. Result: 36/36 captures, zero page/request errors, zero overflow, zero hidden controls and zero inner text-layer scrolling after the shared cinematic layout correction.
+
+S26 was checked before and after each cue: Eric before `[7,0]` has no CG and after `[7,0]` loads `s26-eric-choice.png`; Nick after `[8,0]` loads `s26-nick-choice.png`; Damir after `[14,0]` loads `s26-damir-choice.png`; independent Alice after `[20,0]` loads `s26-alice-choice.png`. No route displayed another route's CG. Eric's embrace remained conditional on `S26-C1=A`.
+
+The complete four-route season regression remains a separate scope and is not promoted to a season-wide PASS.

@@ -312,7 +312,8 @@ button:hover,button:focus-visible{background:#765744;border-color:#f3d2a8;transf
  .scene-stage[data-mode="group"]{inset:7% -5% 29%;gap:0;overflow:visible}
  .scene-stage[data-mode="group"] .stage-character{width:36vw;min-width:0;height:100%;margin-inline:-6vw}
  .literary-picture.is-cg>img{inset:clamp(54px,7dvh,72px) 0 auto;max-height:min(52dvh,440px);object-position:center top}
- .literary-reader:has(.literary-picture.is-cg) .reader-sheet{max-height:min(35dvh,300px);bottom:8px}
+ .literary-reader:has(.literary-picture.is-cg) .reader-sheet{max-height:min(60dvh,460px);bottom:8px}
+ .literary-reader:has(.literary-picture.is-cg) .reader-paragraph{font-size:calc(16px*var(--literary-scale));line-height:1.45}
  .literary-reader:has(.reader-sheet.terminal-sheet) .reader-sheet{top:34dvh;bottom:auto;max-height:calc(66dvh - 14px)}
 }
 

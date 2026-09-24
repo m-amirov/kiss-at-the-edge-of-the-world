@@ -37,7 +37,7 @@ test('Cinematic A mobile polish keeps artwork visible without a nested menu scro
   assert.match(css, /\.literary-home-card\{[^}]*overflow:visible/);
   assert.match(css, /\.literary-home-card \.chapter-list\{display:grid;grid-template-columns:repeat\(2/);
   assert.match(css, /\.scene-stage\[data-mode="group"\] \.stage-character\{width:36vw/);
-  assert.match(css, /\.literary-reader:has\(\.literary-picture\.is-cg\) \.reader-sheet\{max-height:min\(35dvh,300px\)/);
+  assert.match(css, /\.literary-reader:has\(\.literary-picture\.is-cg\) \.reader-sheet\{max-height:min\(60dvh,460px\)/);
 });
 
 test('ending screens use authored emotional headings instead of engine copy', () => {
