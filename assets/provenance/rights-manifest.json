@@ -378,6 +378,102 @@
       "license": "generated for this project"
     },
     {
+      "path": "assets/cg/s23-eric-harbor-plan.png",
+      "sha256": "5D49A086898A4DCCBDE332A8681EE3C99D52DF326BC0236515512A51B979918E",
+      "dimensions": "1672x941",
+      "method": "Independent desktop composition generated from Alice and Eric canonical master references; reviewed for authored event fidelity",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s23-eric-harbor-plan-portrait.png",
+      "sha256": "AE9272F20C3DD6864F62ACA2FE25F1C04BE9F7C9255E2421BD4C206466FBB14B",
+      "dimensions": "941x1672",
+      "method": "Independent portrait composition generated from the S23 desktop composition; reviewed for authored event fidelity and mobile readability",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s24-nick-pier-consent.png",
+      "sha256": "ACD6F882A04DC2C35C509EE40EDA183D531F6B8522AFEB1B6A30F9A808B2E15A",
+      "dimensions": "1672x941",
+      "method": "Independent desktop composition generated from Alice and Nick canonical master references; reviewed for authored event fidelity",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s24-nick-pier-consent-portrait.png",
+      "sha256": "404C4E2501A0F0C12096B0CB2B8F7306BAB8D40E5DE25E8A23F9C73B2F99729A",
+      "dimensions": "941x1672",
+      "method": "Independent portrait composition generated from the S24 desktop composition; reviewed for authored event fidelity and mobile readability",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s25-damir-clarity-talk.png",
+      "sha256": "445889B4E4EC41E45EAB64C36D64C48283530E7D892336108A5C8AB37DC5518B",
+      "dimensions": "1672x941",
+      "method": "Independent desktop composition generated from Alice and Damir canonical master references; reviewed for authored event fidelity",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s25-damir-clarity-talk-portrait.png",
+      "sha256": "2F38ECF909D4C9D3B2DAB5AEAB000F3B9C25884C1FB53EAD73DCC0F4E360FBAB",
+      "dimensions": "941x1672",
+      "method": "Independent portrait composition generated from the S25 desktop composition; reviewed for authored event fidelity and mobile readability",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s26-nick-choice.png",
+      "sha256": "1320A9DCE97E3905C1296DE8D4C4634866614D3D0DB3567AC10D3FB35827FA2B",
+      "dimensions": "1672x941",
+      "method": "Independent desktop composition generated from Alice and Nick canonical master references; reviewed for route-lock fidelity",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s26-nick-choice-portrait.png",
+      "sha256": "EE6CF0336006DE222D71AD4805D4A2B695096B1B383A4FC53E9F17F7D13F6B7B",
+      "dimensions": "941x1672",
+      "method": "Independent portrait composition generated from the S26 Nick desktop composition; reviewed for route-lock fidelity and mobile readability",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s26-damir-choice.png",
+      "sha256": "16EC16E047283AB0FC858C6A52D7B54D6932C0037D04395CBD7A7835447CC206",
+      "dimensions": "1672x941",
+      "method": "Independent desktop composition generated from Alice and Damir canonical master references; reviewed for route-lock fidelity",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s26-damir-choice-portrait.png",
+      "sha256": "11C5DA7C3FC3CB7568BD15751D6902B6F8C47E9D4B3EDB452D696B4FF5D35B43",
+      "dimensions": "941x1672",
+      "method": "Independent portrait composition generated from the S26 Damir desktop composition; reviewed for route-lock fidelity and mobile readability",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s26-alice-choice.png",
+      "sha256": "D6B566B4EC753E88603D0EB16822EA4BF9FB1D9415615FAD7D4E0C96829CEF4F",
+      "dimensions": "1672x941",
+      "method": "Independent desktop composition generated from Alice canonical master reference; reviewed for independent route fidelity",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s26-alice-choice-portrait.png",
+      "sha256": "0E7FFBACE60602F06B039C9732AB5E7858717A58220387FE87822EC383E06281",
+      "dimensions": "941x1672",
+      "method": "Independent portrait composition generated from the S26 Alice desktop composition; reviewed for independent route fidelity and mobile readability",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
+    },
+    {
       "path": "assets/backgrounds/s61-hofn-streets-portrait.png",
       "sha256": "98274AC64656B1BB6006DAF825D57FB2E7C21D0606F5C5968A1A2ACBCE2F7863",
       "dimensions": "941x1672",

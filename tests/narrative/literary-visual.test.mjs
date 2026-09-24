@@ -210,6 +210,18 @@ test('S26 Eric CG appears only at the authored consensual embrace and stays isol
  }
 });
 
+test('S26 non-Eric route CGs appear only after their own route lock',()=>{
+ const expected={B:['route-nick','s26-nick-choice.png',8],C:['route-damir','s26-damir-choice.png',14],D:['route-independent','s26-alice-choice.png',20]};
+ for(const [route,[beat,file,chunk]] of Object.entries(expected)){
+  const {flow,choices}=complete('S26',{'S26-C90':'A','S26-C1':route});
+  const before=indexOfSource(flow,chunk,0)-1;
+  const after=indexOfSource(flow,chunk,0);
+  assert.notEqual(shot('S26',flow,before,choices).art?.file,file,`${route} art must be absent before route lock`);
+  assert.equal(shot('S26',flow,after,choices).art?.file,file,`${route} art must start at route lock`);
+  assert.deepEqual(shot('S26',flow,after,choices).cast,route==='B'?['alice','nick']:route==='C'?['alice','damir']:['alice']);
+ }
+});
+
 test('S02 and S26 visual state survives a save/load-shaped choice round trip',()=>{
  const s02=complete('S02');
  const s02Saved=JSON.parse(JSON.stringify(s02.choices));

@@ -32,11 +32,11 @@ desktop/mobile screenshots.
 | S21 | Alice room, Höfn, evening | Alice | `s21-alice-hofn-room` cinematic desktop + portrait at [0,0] | COVERED_EVENT |
 | S61 | Höfn streets/shops, day 10 | Alice | `s61-hofn-streets` environment desktop + portrait at [0,0] | COVERED_EVENT |
 | S22 | Eastfjords road, day 11 | group | reuse Eastfjords road master | REUSE |
-| S23 | Eastfjords pier, day 11 | Alice/Eric | stage only | MISSING_APPROPRIATE_ART |
-| S24 | Eastfjords pier, day 12 morning | Alice/Nick | stage only | MISSING_APPROPRIATE_ART |
-| S25 | Eastfjords guesthouse, day 12 | Alice/Damir | stage only | MISSING_APPROPRIATE_ART |
+| S23 | Eastfjords pier, day 11 | Alice/Eric; `s23-eric-harbor-plan` [0,0] | dedicated desktop + independent portrait cinematic | BATCH_ACCEPTED_S22_S26 |
+| S24 | Eastfjords pier, day 12 morning | Alice/Nick; `s24-nick-pier-consent` [0,0] | dedicated desktop + independent portrait cinematic | BATCH_ACCEPTED_S22_S26 |
+| S25 | Eastfjords guesthouse, day 12 | Alice/Damir; `s25-damir-clarity-talk` [0,0] | dedicated desktop + independent portrait cinematic | BATCH_ACCEPTED_S22_S26 |
 | S58 | shared kitchen, day 12 evening | group | stage only | MISSING_APPROPRIATE_ART |
-| S26 | guesthouse corridor/courtyard, day 12 evening | route-dependent pair/solo | stage + Eric desktop/portrait CG only | MISSING_APPROPRIATE_ART |
+| S26 | guesthouse corridor/courtyard, day 12 evening | route-dependent pair/solo; Eric `[7,0]`, Nick `[8,0]`, Damir `[14,0]`, independent `[20,0]` | four route-specific desktop + independent portrait cinematic states; each conditional on `S26-C1` | BATCH_ACCEPTED_S22_S26 |
 | S27 | Egilsstaðir lakeside boardwalk, day 13 | group | stage only | MISSING_APPROPRIATE_ART |
 | S59 | group lunch, day 13 | group | stage only | MISSING_APPROPRIATE_ART |
 | S28 | marked trail/viewpoint, day 14 | Alice/Eric | stage only | MISSING_APPROPRIATE_ART |
