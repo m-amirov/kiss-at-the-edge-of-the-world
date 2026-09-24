@@ -222,40 +222,45 @@
       "family": "cg",
       "path": "assets/cg/s13-skaftafell-travelers.png",
       "status": "integrated",
-      "runtime": "S13 authored source 0:12 onward; not the Vík breakfast or Skaftafell parking"
-      ,"portraitAsset": "assets/cg/s13-skaftafell-travelers-portrait.png", "portraitDimensions": "941x1672"
+      "runtime": "S13 authored source 0:12 onward; not the Vík breakfast or Skaftafell parking",
+      "portraitAsset": "assets/cg/s13-skaftafell-travelers-portrait.png",
+      "portraitDimensions": "941x1672"
     },
     {
       "id": "s18-hofn-dance-lights",
       "family": "cg",
       "path": "assets/cg/s18-hofn-dance-lights.png",
       "status": "integrated",
-      "runtime": "S18 authored source 0:35-0:38 dance, before S18-C1 and independent of its result"
-      ,"portraitAsset": "assets/cg/s18-hofn-dance-lights-portrait.png", "portraitDimensions": "941x1672"
+      "runtime": "S18 authored source 0:35-0:38 dance, before S18-C1 and independent of its result",
+      "portraitAsset": "assets/cg/s18-hofn-dance-lights-portrait.png",
+      "portraitDimensions": "941x1672"
     },
     {
       "id": "s45-reykjavik-warm-montage",
       "family": "cg",
       "path": "assets/cg/s45-reykjavik-warm-montage.png",
       "status": "integrated",
-      "runtime": "S45 film review, before month-later home epilogue"
-      ,"portraitAsset": "assets/cg/s45-reykjavik-warm-montage-portrait.png", "portraitDimensions": "941x1672"
+      "runtime": "S45 film review, before month-later home epilogue",
+      "portraitAsset": "assets/cg/s45-reykjavik-warm-montage-portrait.png",
+      "portraitDimensions": "941x1672"
     },
     {
       "id": "s46-airport-goodbye",
       "family": "cg",
       "path": "assets/cg/s46-airport-goodbye.png",
       "status": "integrated",
-      "runtime": "S46 airport check-in source 0:1 onward, before month-later home epilogue"
-      ,"portraitAsset": "assets/cg/s46-airport-goodbye-portrait.png", "portraitDimensions": "941x1672"
+      "runtime": "S46 airport check-in source 0:1 onward, before month-later home epilogue",
+      "portraitAsset": "assets/cg/s46-airport-goodbye-portrait.png",
+      "portraitDimensions": "941x1672"
     },
     {
       "id": "s47-reykjavik-harbour-alice",
       "family": "cg",
       "path": "assets/cg/s47-reykjavik-harbour-alice.png",
       "status": "integrated",
-      "runtime": "S47 harbour, before month-later domestic epilogue"
-      ,"portraitAsset": "assets/cg/s47-reykjavik-harbour-alice-portrait.png", "portraitDimensions": "941x1672"
+      "runtime": "S47 harbour, before month-later domestic epilogue",
+      "portraitAsset": "assets/cg/s47-reykjavik-harbour-alice-portrait.png",
+      "portraitDimensions": "941x1672"
     },
     {
       "id": "s44-eric-epilogue-month-later",
@@ -359,15 +364,188 @@
       "portraitAsset": "assets/backgrounds/s05-hveragerdi-road-portrait.png",
       "portraitDimensions": "941x1672"
     },
-    {"id":"s06-hveragerdi-eric-alice","family":"cg","path":"assets/cg/s06-hveragerdi-eric-alice.png","status":"integrated","runtime":"S06 authored cue [6,6], cinematic trail overlook","creationMethod":"Built-in image generation using Alice and Eric master references","createdAt":"2026-09-23","dimensions":"1672x941","mobileSafe":true,"portraitAsset":"assets/cg/s06-hveragerdi-eric-alice-portrait.png","portraitDimensions":"941x1672"},
-    {"id":"s07-kitchen-pasta","family":"cg","path":"assets/cg/s07-kitchen-pasta.png","status":"integrated","runtime":"S07 authored cue [3,0], cinematic pasta rescue","creationMethod":"Built-in image generation using four character master references","createdAt":"2026-09-23","dimensions":"1672x941","mobileSafe":true,"portraitAsset":"assets/cg/s07-kitchen-pasta-portrait.png","portraitDimensions":"941x1672"},
-    {"id":"s07-kitchen-cards","family":"cg","path":"assets/cg/s07-kitchen-cards.png","status":"integrated","runtime":"S07 authored cue [3,42], cinematic card game","creationMethod":"Built-in image generation using four character master references","createdAt":"2026-09-23","dimensions":"1672x941","mobileSafe":true,"portraitAsset":"assets/cg/s07-kitchen-cards-portrait.png","portraitDimensions":"941x1672"},
-    {"id":"s08-guesthouse-strap","family":"cg","path":"assets/cg/s08-guesthouse-strap.png","status":"integrated","runtime":"S08 authored cue [2,0], cinematic backpack-strap repair","creationMethod":"Built-in image generation using Alice and Damir master references","createdAt":"2026-09-23","dimensions":"1672x941","mobileSafe":true,"portraitAsset":"assets/cg/s08-guesthouse-strap-portrait.png","portraitDimensions":"941x1672"},
-    {"id":"s10-vik-road-song","family":"cg","path":"assets/cg/s10-vik-road-song.png","status":"integrated","runtime":"S10 authored cue [0,0], cinematic Alice/Eric song at petrol station","creationMethod":"Built-in image generation using Alice and Eric master references","createdAt":"2026-09-24","dimensions":"1672x941","mobileSafe":true,"portraitAsset":"assets/cg/s10-vik-road-song-portrait.png","portraitDimensions":"941x1672"},
-    {"id":"s12-vik-cafe-damir","family":"cg","path":"assets/cg/s12-vik-cafe-damir.png","status":"integrated","runtime":"S12 authored cue [0,0], cinematic Alice/Damir cafe conversation","creationMethod":"Built-in image generation using Alice and Damir master references","createdAt":"2026-09-24","dimensions":"1672x941","mobileSafe":true,"portraitAsset":"assets/cg/s12-vik-cafe-damir-portrait.png","portraitDimensions":"941x1672"}
-    ,{"id":"s14-skaftafell-pace","family":"cg","path":"assets/cg/s14-skaftafell-pace.png","status":"integrated","runtime":"S14 authored cue [0,0], cinematic Alice/Eric pace conversation","creationMethod":"Built-in image generation using Alice and Eric master references","createdAt":"2026-09-24","dimensions":"1672x941","mobileSafe":true,"portraitAsset":"assets/cg/s14-skaftafell-pace-portrait.png","portraitDimensions":"941x1672"}
-    ,{"id":"s16-guesthouse-help","family":"cg","path":"assets/cg/s16-guesthouse-help.png","status":"integrated","runtime":"S16 authored cue [0,0], cinematic guesthouse medical-help event","creationMethod":"Replacement built-in image generation using Alice and Damir masters plus distinct tourist subjects after ART_IDENTITY_FAIL","createdAt":"2026-09-24","dimensions":"1672x941","mobileSafe":true,"portraitAsset":"assets/cg/s16-guesthouse-help-portrait.png","portraitDimensions":"940x1672"}
-    ,{"id":"s16-kitchen-soup","family":"cg","path":"assets/cg/s16-kitchen-soup.png","status":"integrated","runtime":"S16 authored cue [4,0], cinematic shared kitchen continuation","creationMethod":"Built-in image generation using four character masters","createdAt":"2026-09-24","dimensions":"1672x941","mobileSafe":true,"portraitAsset":"assets/cg/s16-kitchen-soup-portrait.png","portraitDimensions":"941x1672"}
+    {
+      "id": "s06-hveragerdi-eric-alice",
+      "family": "cg",
+      "path": "assets/cg/s06-hveragerdi-eric-alice.png",
+      "status": "integrated",
+      "runtime": "S06 authored cue [6,6], cinematic trail overlook",
+      "creationMethod": "Built-in image generation using Alice and Eric master references",
+      "createdAt": "2026-09-23",
+      "dimensions": "1672x941",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s06-hveragerdi-eric-alice-portrait.png",
+      "portraitDimensions": "941x1672"
+    },
+    {
+      "id": "s07-kitchen-pasta",
+      "family": "cg",
+      "path": "assets/cg/s07-kitchen-pasta.png",
+      "status": "integrated",
+      "runtime": "S07 authored cue [3,0], cinematic pasta rescue",
+      "creationMethod": "Built-in image generation using four character master references",
+      "createdAt": "2026-09-23",
+      "dimensions": "1672x941",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s07-kitchen-pasta-portrait.png",
+      "portraitDimensions": "941x1672"
+    },
+    {
+      "id": "s07-kitchen-cards",
+      "family": "cg",
+      "path": "assets/cg/s07-kitchen-cards.png",
+      "status": "integrated",
+      "runtime": "S07 authored cue [3,42], cinematic card game",
+      "creationMethod": "Built-in image generation using four character master references",
+      "createdAt": "2026-09-23",
+      "dimensions": "1672x941",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s07-kitchen-cards-portrait.png",
+      "portraitDimensions": "941x1672"
+    },
+    {
+      "id": "s08-guesthouse-strap",
+      "family": "cg",
+      "path": "assets/cg/s08-guesthouse-strap.png",
+      "status": "integrated",
+      "runtime": "S08 authored cue [2,0], cinematic backpack-strap repair",
+      "creationMethod": "Built-in image generation using Alice and Damir master references",
+      "createdAt": "2026-09-23",
+      "dimensions": "1672x941",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s08-guesthouse-strap-portrait.png",
+      "portraitDimensions": "941x1672"
+    },
+    {
+      "id": "s10-vik-road-song",
+      "family": "cg",
+      "path": "assets/cg/s10-vik-road-song.png",
+      "status": "integrated",
+      "runtime": "S10 authored cue [0,0], cinematic Alice/Eric song at petrol station",
+      "creationMethod": "Built-in image generation using Alice and Eric master references",
+      "createdAt": "2026-09-24",
+      "dimensions": "1672x941",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s10-vik-road-song-portrait.png",
+      "portraitDimensions": "941x1672"
+    },
+    {
+      "id": "s12-vik-cafe-damir",
+      "family": "cg",
+      "path": "assets/cg/s12-vik-cafe-damir.png",
+      "status": "integrated",
+      "runtime": "S12 authored cue [0,0], cinematic Alice/Damir cafe conversation",
+      "creationMethod": "Built-in image generation using Alice and Damir master references",
+      "createdAt": "2026-09-24",
+      "dimensions": "1672x941",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s12-vik-cafe-damir-portrait.png",
+      "portraitDimensions": "941x1672"
+    },
+    {
+      "id": "s14-skaftafell-pace",
+      "family": "cg",
+      "path": "assets/cg/s14-skaftafell-pace.png",
+      "status": "integrated",
+      "runtime": "S14 authored cue [0,0], cinematic Alice/Eric pace conversation",
+      "creationMethod": "Built-in image generation using Alice and Eric master references",
+      "createdAt": "2026-09-24",
+      "dimensions": "1672x941",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s14-skaftafell-pace-portrait.png",
+      "portraitDimensions": "941x1672"
+    },
+    {
+      "id": "s16-guesthouse-help",
+      "family": "cg",
+      "path": "assets/cg/s16-guesthouse-help.png",
+      "status": "integrated",
+      "runtime": "S16 authored cue [0,0], cinematic guesthouse medical-help event",
+      "creationMethod": "Replacement built-in image generation using Alice and Damir masters plus distinct tourist subjects after ART_IDENTITY_FAIL",
+      "createdAt": "2026-09-24",
+      "dimensions": "1672x941",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s16-guesthouse-help-portrait.png",
+      "portraitDimensions": "940x1672"
+    },
+    {
+      "id": "s16-kitchen-soup",
+      "family": "cg",
+      "path": "assets/cg/s16-kitchen-soup.png",
+      "status": "integrated",
+      "runtime": "S16 authored cue [4,0], cinematic shared kitchen continuation",
+      "creationMethod": "Built-in image generation using four character masters",
+      "createdAt": "2026-09-24",
+      "dimensions": "1672x941",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s16-kitchen-soup-portrait.png",
+      "portraitDimensions": "941x1672"
+    },
+    {
+      "id": "s17-hofn-guesthouse",
+      "family": "cg",
+      "path": "assets/cg/s17-hofn-guesthouse.png",
+      "status": "integrated",
+      "runtime": "S17 authored cue [0,0], cinematic group guesthouse kitchen event",
+      "creationMethod": "Codex imagegen using canonical master references",
+      "createdAt": "2026-09-24",
+      "dimensions": "1672x941",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s17-hofn-guesthouse-portrait.png",
+      "portraitDimensions": "941x1672"
+    },
+    {
+      "id": "s19-hofn-pool",
+      "family": "cg",
+      "path": "assets/cg/s19-hofn-pool.png",
+      "status": "integrated",
+      "runtime": "S19 authored cue [0,0], cinematic Alice/Nick pool reflection and camera event",
+      "creationMethod": "Codex imagegen using canonical master references",
+      "createdAt": "2026-09-24",
+      "dimensions": "1672x941",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s19-hofn-pool-portrait.png",
+      "portraitDimensions": "941x1672"
+    },
+    {
+      "id": "s20-hofn-damir-kitchen",
+      "family": "cg",
+      "path": "assets/cg/s20-hofn-damir-kitchen.png",
+      "status": "integrated",
+      "runtime": "S20 authored cue [0,0], cinematic Alice/Damir shared kitchen event",
+      "creationMethod": "Codex imagegen using canonical master references",
+      "createdAt": "2026-09-24",
+      "dimensions": "1672x941",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s20-hofn-damir-kitchen-portrait.png",
+      "portraitDimensions": "941x1672"
+    },
+    {
+      "id": "s21-alice-hofn-room",
+      "family": "cg",
+      "path": "assets/cg/s21-alice-hofn-room.png",
+      "status": "integrated",
+      "runtime": "S21 authored cue [0,0], cinematic Alice article decision in Höfn room",
+      "creationMethod": "Codex imagegen using canonical master references",
+      "createdAt": "2026-09-24",
+      "dimensions": "1672x941",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s21-alice-hofn-room-portrait.png",
+      "portraitDimensions": "941x1672"
+    },
+    {
+      "id": "s61-hofn-streets",
+      "family": "environment",
+      "path": "assets/backgrounds/s61-hofn-streets.png",
+      "status": "integrated",
+      "runtime": "S61 authored cue [0,0], environment Höfn streets and shops",
+      "creationMethod": "Codex imagegen using canonical master references",
+      "createdAt": "2026-09-24",
+      "dimensions": "1672x941",
+      "mobileSafe": true,
+      "portraitAsset": "assets/backgrounds/s61-hofn-streets-portrait.png",
+      "portraitDimensions": "941x1672"
+    }
   ],
   "routingTrace": {
     "webPreflightStatus": "READY",

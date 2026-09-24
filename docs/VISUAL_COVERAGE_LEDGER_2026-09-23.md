@@ -25,12 +25,12 @@ desktop/mobile screenshots.
 | S14 | glacier-plain trail, day 7 | Alice/Eric; `s14-skaftafell-pace` [0,0], clear at road transition [7,0] | desktop+portrait cinematic | BATCH_ACCEPTED_S13_S16 |
 | S15 | Jökulsárlón, day 8 | Alice/Nick/group; lagoon cue | reuse lagoon master | REUSE |
 | S16 | roadside guesthouse, evening | `s16-guesthouse-help` [0,0]; `s16-kitchen-soup` [4,0] | desktop+portrait cinematic, separate medical-help/kitchen beats; replacement tourist identity verified | BATCH_ACCEPTED_S13_S16 |
-| S17 | Höfn guesthouse, day 9 | group | reuse Höfn harbour bg, scene-specificity pending | MISSING_APPROPRIATE_ART |
+| S17 | Höfn guesthouse, day 9 | group | `s17-hofn-guesthouse` cinematic desktop + portrait at [0,0] | COVERED_EVENT |
 | S18 | Höfn lighthouse/harbour, day 9 evening | Alice/Eric; lighthouse/dance/walk/morning | covered bg + dance desktop/portrait | COVERED_EVENT |
-| S19 | Höfn pool, evening | Alice/Nick | stage only | MISSING_APPROPRIATE_ART |
-| S20 | Höfn room/breakfast, day 10 | Alice/Damir | stage only | MISSING_APPROPRIATE_ART |
-| S21 | Alice room, Höfn, evening | Alice | stage only | MISSING_APPROPRIATE_ART |
-| S61 | Höfn streets/shops, day 10 | Alice | stage only | MISSING_APPROPRIATE_ART |
+| S19 | Höfn pool, evening | Alice/Nick | `s19-hofn-pool` cinematic desktop + portrait at [0,0] | COVERED_EVENT |
+| S20 | Höfn room/breakfast, day 10 | Alice/Damir | `s20-hofn-damir-kitchen` cinematic desktop + portrait at [0,0] | COVERED_EVENT |
+| S21 | Alice room, Höfn, evening | Alice | `s21-alice-hofn-room` cinematic desktop + portrait at [0,0] | COVERED_EVENT |
+| S61 | Höfn streets/shops, day 10 | Alice | `s61-hofn-streets` environment desktop + portrait at [0,0] | COVERED_EVENT |
 | S22 | Eastfjords road, day 11 | group | reuse Eastfjords road master | REUSE |
 | S23 | Eastfjords pier, day 11 | Alice/Eric | stage only | MISSING_APPROPRIATE_ART |
 | S24 | Eastfjords pier, day 12 morning | Alice/Nick | stage only | MISSING_APPROPRIATE_ART |

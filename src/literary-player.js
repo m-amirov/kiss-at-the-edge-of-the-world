@@ -51,6 +51,11 @@ const portraitAssetByDesktopAsset = {
   's14-skaftafell-pace.png':'s14-skaftafell-pace-portrait.png',
   's16-guesthouse-help.png':'s16-guesthouse-help-portrait.png',
   's16-kitchen-soup.png':'s16-kitchen-soup-portrait.png'
+  ,'s17-hofn-guesthouse.png':'s17-hofn-guesthouse-portrait.png'
+  ,'s19-hofn-pool.png':'s19-hofn-pool-portrait.png'
+  ,'s20-hofn-damir-kitchen.png':'s20-hofn-damir-kitchen-portrait.png'
+  ,'s21-alice-hofn-room.png':'s21-alice-hofn-room-portrait.png'
+  ,'s61-hofn-streets.png':'s61-hofn-streets-portrait.png'
 };
 function assetFileForViewport(art){
   const portrait=window.matchMedia?.('(max-width: 680px) and (orientation: portrait)').matches;

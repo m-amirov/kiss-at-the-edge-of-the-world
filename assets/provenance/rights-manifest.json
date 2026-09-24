@@ -1,43 +1,389 @@
 {
   "generatedAt": "2026-09-23",
   "assets": [
-    {"path":"assets/cg/s44-eric-epilogue-month-later-portrait.png","sha256":"EF6869CE864369E5EE8384F2AED0CDE47AA7CCBCEBED1D0B645FAB350D4DCB9E","dimensions":"941x1672","method":"Portrait re-composition generated from the original S44 CG plus Eric master reference; reviewed for event, identity, wardrobe, lighting and mobile composition","source":"Generated in Codex imagegen, 2026-09-23; derivative of assets/cg/s44-eric-epilogue-month-later.png","license":"generated for this project"},
-    {"path":"assets/cg/s45-nick-home-epilogue-month-later-portrait.png","sha256":"5D0835E92BC326BC7A6D46F92B23F805A2CEA8A154EF1FA5E89456C27D3119BB","dimensions":"941x1672","method":"Portrait re-composition generated from the original S45 CG plus Nick master reference; reviewed for event, identity, wardrobe, lighting and mobile composition","source":"Generated in Codex imagegen, 2026-09-23; derivative of assets/cg/s45-nick-home-epilogue-month-later.png","license":"generated for this project"},
-    {"path":"assets/cg/s46-damir-epilogue-month-later-portrait.png","sha256":"0D6B51F9A549D67DDF0A38D2981257FFA450781171745123837C196C57BA9D18","dimensions":"941x1672","method":"Portrait re-composition generated from the original S46 CG plus Damir master reference; reviewed for event, identity, wardrobe, lighting and mobile composition","source":"Generated in Codex imagegen, 2026-09-23; derivative of assets/cg/s46-damir-epilogue-month-later.png","license":"generated for this project"},
-    {"path":"assets/cg/s47-alice-home-epilogue-month-later-portrait.png","sha256":"085651EF09D16D2ECB3D861FC72184644E53C89AC198F25F9B4851BF6FB59792","dimensions":"941x1672","method":"Portrait re-composition generated from the original S47 CG plus Alice master reference; reviewed for event, identity, wardrobe, lighting and mobile composition","source":"Generated in Codex imagegen, 2026-09-23; derivative of assets/cg/s47-alice-home-epilogue-month-later.png","license":"generated for this project"},
-    {"path":"assets/cg/s13-skaftafell-travelers-portrait.png","sha256":"0C299238E5D7C7668564A79370C21C3FD6B043B20F26A98570C0C85807889762","dimensions":"941x1672","method":"Portrait re-composition generated from original S13 CG and four character masters; reviewed for group identity, event fidelity and no text artifacts","source":"Generated in Codex imagegen, 2026-09-23; derivative of assets/cg/s13-skaftafell-travelers.png","license":"generated for this project"},
-    {"path":"assets/cg/s18-hofn-dance-lights-portrait.png","sha256":"F1D8BCDA88794C68A9CC0411B703BB82CFD0882F2737EA32640B26828A2C7A33","dimensions":"941x1672","method":"Portrait re-composition generated from original S18 CG and Alice/Eric masters; reviewed for event fidelity and no text artifacts","source":"Generated in Codex imagegen, 2026-09-23; derivative of assets/cg/s18-hofn-dance-lights.png","license":"generated for this project"},
-    {"path":"assets/cg/s26-eric-choice-portrait.png","sha256":"E5DE1E45E1109835D2D214AB6B79244C95A20070330EB264C59851F22F048FFE","dimensions":"941x1672","method":"Portrait re-composition generated from original S26 CG and Alice/Eric masters; reviewed for consensual event fidelity and no text artifacts","source":"Generated in Codex imagegen, 2026-09-23; derivative of assets/cg/s26-eric-choice.png","license":"generated for this project"},
-    {"path":"assets/cg/s45-reykjavik-warm-montage-portrait.png","sha256":"A7522F89C2D1ABC5586EF138BB1DF389AA35C39397885CAD190F3FF6DA3B02F8","dimensions":"941x1672","method":"Portrait re-composition generated from original S45 CG and Alice/Nick masters; reviewed for event fidelity and no text artifacts","source":"Generated in Codex imagegen, 2026-09-23; derivative of assets/cg/s45-reykjavik-warm-montage.png","license":"generated for this project"},
-    {"path":"assets/cg/s46-airport-goodbye-portrait.png","sha256":"E3A20093FB7EB8D66BE863DFF81F58B23DEECF31286E31AD5937DC27259B51CF","dimensions":"941x1672","method":"Portrait re-composition generated from original S46 CG and Alice/Damir masters; reviewed for event fidelity and no text artifacts","source":"Generated in Codex imagegen, 2026-09-23; derivative of assets/cg/s46-airport-goodbye.png","license":"generated for this project"},
-    {"path":"assets/cg/s47-reykjavik-harbour-alice-portrait.png","sha256":"645FB26D18E53C2DEB5923707B1C53800C5975E812A1EC58658E858876B37234","dimensions":"941x1672","method":"Portrait re-composition generated from original S47 CG and Alice master; reviewed for event fidelity and no text artifacts","source":"Generated in Codex imagegen, 2026-09-23; derivative of assets/cg/s47-reykjavik-harbour-alice.png","license":"generated for this project"},
-    {"path":"assets/cg/s44-eric-epilogue-month-later.png","sha256":"D1987EAD5DAC9FD26C74694C8D64DADF73C6A79066C8C1C829F426CBF520A03B","dimensions":"1672x941","method":"Targeted text-artifact cleanup of user-supplied ChatGPT image; identities and composition reviewed against Eric and Alice master references","source":"User-provided image attachment, 2026-09-23; targeted inpainting, 2026-09-23","license":"user-provided for this project"},
-    {"path":"assets/cg/s45-nick-home-epilogue-month-later.png","sha256":"0A95116942E8046EE71BD6D008FAA0FCF3E2EA34B8E792F8B388B79C0F0A8734","dimensions":"1672x941","method":"Targeted text-artifact cleanup of user-supplied ChatGPT image; identities and composition reviewed against Nick and Alice master references","source":"User-provided image attachment, 2026-09-23; targeted inpainting, 2026-09-23","license":"user-provided for this project"},
-    {"path":"assets/cg/s46-damir-epilogue-month-later.png","sha256":"4FF183BADAC5D980DA2565086C4E5BE520CFB8BD824B19BB825BC1648960CE0E","dimensions":"1672x941","method":"Targeted text-artifact cleanup of user-supplied ChatGPT image; identities and composition reviewed against Damir and Alice master references","source":"User-provided image attachment, 2026-09-23; targeted inpainting, 2026-09-23","license":"user-provided for this project"},
-    {"path":"assets/cg/s47-alice-home-epilogue-month-later.png","sha256":"2642735A952673F22A43F373B67A03296F265624C27A6926E7EF64D06B0AEA1D","dimensions":"1672x941","method":"Targeted text-artifact cleanup of user-supplied ChatGPT image; identity and composition reviewed against Alice master reference","source":"User-provided image attachment, 2026-09-23; targeted inpainting, 2026-09-23","license":"user-provided for this project"},
-    {"path":"assets/backgrounds/s02-roadside-cafe.png","sha256":"F6D2ADC4A65D2B30E9EB86203E34A848CC79C69A206A9F81A5A6C9B823BB1C13","dimensions":"1672x941","method":"Built-in image generation; empty roadside cafe background reviewed against ART_BIBLE and existing location masters","source":"Generated in Codex imagegen, 2026-09-23","license":"generated for this project"},
-    {"path":"assets/cg/s26-eric-choice.png","sha256":"EF229A99516F80DD39CFAC49EF021A25AC00630E01BF5E30D676A2401869721F","dimensions":"1672x941","method":"Built-in image generation using Alice and Eric master references; reviewed for identity, event fidelity and no text artifacts","source":"Generated in Codex imagegen, 2026-09-23","license":"generated for this project"},
-    {"path":"assets/backgrounds/s66-hveragerdi-greenhouse.png","sha256":"07B303976B97D186C37F3DC7950E5C4207C8F78A6681AE156733EF019E3C75AF","dimensions":"1832x859","method":"Built-in image generation from ART_BIBLE direction; empty environment reviewed for authored S66 location, composition and no text artifacts","source":"Generated in Codex imagegen, 2026-09-23","license":"generated for this project"},
-    {"path":"assets/backgrounds/s66-hveragerdi-greenhouse-portrait.png","sha256":"0E16BB094172C375208C71AA651CD1D273E781342F3B273ACDA026B1C8C8ADDA","dimensions":"941x1672","method":"Independent portrait composition generated from the same ART_BIBLE direction; reviewed for mobile-safe scene readability","source":"Generated in Codex imagegen, 2026-09-23","license":"generated for this project"},
-    {"path":"assets/backgrounds/s05-hveragerdi-road.png","sha256":"A01B6CA5147810CDB88FAEFC7187053027FD69105E976B7AD2F42A586A6D030F","dimensions":"1832x859","method":"Built-in image generation from ART_BIBLE direction; empty environment reviewed for authored S05 road transition","source":"Generated in Codex imagegen, 2026-09-23","license":"generated for this project"},
-    {"path":"assets/backgrounds/s05-hveragerdi-road-portrait.png","sha256":"B6E5924BC1830160FC5199677FE2A8C4919E23AEE877DA250B082B3B754FC8FE","dimensions":"941x1672","method":"Independent portrait composition generated from the same authored S05 direction; reviewed for mobile-safe road readability","source":"Generated in Codex imagegen, 2026-09-23","license":"generated for this project"},
-    {"path":"assets/cg/s06-hveragerdi-eric-alice.png","sha256":"03541D251C355D14F35B2E6EFC813A83A2A304B0729EF413D78B34553C21E8F9","dimensions":"1672x941","method":"Cinematic composition generated from Alice and Eric masters; reviewed for authored S06 event","source":"Generated in Codex imagegen, 2026-09-23","license":"generated for this project"},
-    {"path":"assets/cg/s06-hveragerdi-eric-alice-portrait.png","sha256":"7E7F017C10BCC5F86621BC80991F9D2767733E471451C0D4AC330B3B642000CA","dimensions":"941x1672","method":"Independent portrait composition generated from S06 direction","source":"Generated in Codex imagegen, 2026-09-23","license":"generated for this project"},
-    {"path":"assets/cg/s07-kitchen-pasta.png","sha256":"452AB108A997FD6371DD338635DDFE94BDBCF7B85A39FB552AE00FBCDE3DD6DF","dimensions":"1672x941","method":"Cinematic group composition generated from four character masters; reviewed for authored S07 pasta event","source":"Generated in Codex imagegen, 2026-09-23","license":"generated for this project"},
-    {"path":"assets/cg/s07-kitchen-pasta-portrait.png","sha256":"552C38C03679EC662A94439FD33F6DC3C8DCB52215FC3DC6890F1135AF801C2A","dimensions":"941x1672","method":"Independent portrait composition generated from S07 pasta direction","source":"Generated in Codex imagegen, 2026-09-23","license":"generated for this project"},
-    {"path":"assets/cg/s07-kitchen-cards.png","sha256":"ED50CFB8CAD1615427DF2B0E1802F32CC4C17F32B313CC6367403EBFEBA73B8B","dimensions":"1672x941","method":"Cinematic group composition generated from four character masters; reviewed for authored S07 card event","source":"Generated in Codex imagegen, 2026-09-23","license":"generated for this project"},
-    {"path":"assets/cg/s07-kitchen-cards-portrait.png","sha256":"818353A9909AA12784D0379002315536FF219DF4A514243F408F3CD04718EC95","dimensions":"941x1672","method":"Independent portrait composition generated from S07 card direction","source":"Generated in Codex imagegen, 2026-09-23","license":"generated for this project"},
-    {"path":"assets/cg/s08-guesthouse-strap.png","sha256":"CD8E44EB13DCBEC7A8D5CCD1612CDBDA1A0C92EDAD3B93A77E3118E8CCA990D6","dimensions":"1672x941","method":"Cinematic composition generated from Alice and Damir masters; reviewed for authored S08 repair event","source":"Generated in Codex imagegen, 2026-09-23","license":"generated for this project"},
-    {"path":"assets/cg/s08-guesthouse-strap-portrait.png","sha256":"9533065CEF3A31780E71B4F4DE8C7325CC3A6DD48BB14F34079A02D03154ABDF","dimensions":"941x1672","method":"Independent portrait composition generated from S08 repair direction","source":"Generated in Codex imagegen, 2026-09-23","license":"generated for this project"},
-    {"path":"assets/cg/s10-vik-road-song.png","sha256":"DF56B1A22CBB3A94868C4E9A5815FE60FBE8A574375D5C3A5C89AE135F1ACC93","dimensions":"1672x941","method":"Cinematic composition generated from Alice and Eric masters; reviewed for authored S10 music conversation","source":"Generated in Codex imagegen, 2026-09-24","license":"generated for this project"},
-    {"path":"assets/cg/s10-vik-road-song-portrait.png","sha256":"19FAC68E95C05B60102651BC5019FF5039A5326D1BDE4A6E5FFA05B8896CD0F8","dimensions":"941x1672","method":"Independent portrait composition generated from S10 direction; reviewed for mobile-safe faces, hands and stereo","source":"Generated in Codex imagegen, 2026-09-24","license":"generated for this project"},
-    {"path":"assets/cg/s12-vik-cafe-damir.png","sha256":"7344FDDA79EEA8BF02BC3FB49E79BB94DF78E93E387BD2A198A610CD648BE99E","dimensions":"1672x941","method":"Cinematic composition generated from Alice and Damir masters; reviewed for authored S12 cafe conversation","source":"Generated in Codex imagegen, 2026-09-24","license":"generated for this project"},
-    {"path":"assets/cg/s12-vik-cafe-damir-portrait.png","sha256":"A97C3311D0C181E54E083E741FBEA1B0CA46D073CE5C53B050702AD14A0E36A4","dimensions":"941x1672","method":"Independent portrait composition generated from S12 direction; reviewed for mobile-safe faces, hands, soup and cups","source":"Generated in Codex imagegen, 2026-09-24","license":"generated for this project"}
-    ,{"path":"assets/cg/s14-skaftafell-pace.png","sha256":"E13E3A9296CEA4CB8EEF1DDDCFA0C734BD0391F5A4F6E1FA5CC44C60D822406E","dimensions":"1672x941","method":"Cinematic composition generated from Alice and Eric masters; reviewed for authored S14 pace event","source":"Generated in Codex imagegen, 2026-09-24","license":"generated for this project"}
-    ,{"path":"assets/cg/s14-skaftafell-pace-portrait.png","sha256":"C1B822B1F34851DD240B55F3003A8D0D38179BF7DB0E441A3B686F23E557E345","dimensions":"941x1672","method":"Independent portrait composition generated from S14 direction; reviewed for mobile-safe faces, hands and thermos","source":"Generated in Codex imagegen, 2026-09-24","license":"generated for this project"}
-    ,{"path":"assets/cg/s16-guesthouse-help.png","sha256":"8B492AE3E84D9DCDFC830E00FD0DCF18B3CFC0048748DB67B49FA3FDD37D6656","dimensions":"1672x941","method":"Replacement cinematic composition generated from Alice and Damir masters with distinct older tourist and companion; reviewed for identity separation, consented ankle help and no duplicate main characters","source":"Generated in Codex imagegen, 2026-09-24; replacement after ART_IDENTITY_FAIL","license":"generated for this project"}
-    ,{"path":"assets/cg/s16-guesthouse-help-portrait.png","sha256":"8C03456AA8EF4000B0F3FCC486834EAEE5171C715564F07CCD8F8166E565E35A","dimensions":"940x1672","method":"Second targeted portrait re-composition generated from the prior S16 portrait with Alice and Damir master references; moved the medical-help action into the central mobile-safe zone and reviewed for identity separation, hands, ankle anatomy and mobile framing","source":"Generated in Codex imagegen, 2026-09-24; second targeted replacement after runtime readability review","license":"generated for this project"}
-    ,{"path":"assets/cg/s16-kitchen-soup.png","sha256":"4F5AFD577454E72853BBDFCBDE639801F2C127D9C8DF9DC22520AC4E5DB5E718","dimensions":"1672x941","method":"Cinematic group composition generated from four character masters; reviewed for authored S16 kitchen continuation","source":"Generated in Codex imagegen, 2026-09-24","license":"generated for this project"}
-    ,{"path":"assets/cg/s16-kitchen-soup-portrait.png","sha256":"65EF2C909502A7912D1799F2BA97D537C0A03B5D99F85D29FEF6A8CB9C2147C6","dimensions":"941x1672","method":"Independent portrait composition generated from S16 kitchen direction; reviewed for mobile-safe faces, hands and soup props","source":"Generated in Codex imagegen, 2026-09-24","license":"generated for this project"}
+    {
+      "path": "assets/cg/s44-eric-epilogue-month-later-portrait.png",
+      "sha256": "EF6869CE864369E5EE8384F2AED0CDE47AA7CCBCEBED1D0B645FAB350D4DCB9E",
+      "dimensions": "941x1672",
+      "method": "Portrait re-composition generated from the original S44 CG plus Eric master reference; reviewed for event, identity, wardrobe, lighting and mobile composition",
+      "source": "Generated in Codex imagegen, 2026-09-23; derivative of assets/cg/s44-eric-epilogue-month-later.png",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s45-nick-home-epilogue-month-later-portrait.png",
+      "sha256": "5D0835E92BC326BC7A6D46F92B23F805A2CEA8A154EF1FA5E89456C27D3119BB",
+      "dimensions": "941x1672",
+      "method": "Portrait re-composition generated from the original S45 CG plus Nick master reference; reviewed for event, identity, wardrobe, lighting and mobile composition",
+      "source": "Generated in Codex imagegen, 2026-09-23; derivative of assets/cg/s45-nick-home-epilogue-month-later.png",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s46-damir-epilogue-month-later-portrait.png",
+      "sha256": "0D6B51F9A549D67DDF0A38D2981257FFA450781171745123837C196C57BA9D18",
+      "dimensions": "941x1672",
+      "method": "Portrait re-composition generated from the original S46 CG plus Damir master reference; reviewed for event, identity, wardrobe, lighting and mobile composition",
+      "source": "Generated in Codex imagegen, 2026-09-23; derivative of assets/cg/s46-damir-epilogue-month-later.png",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s47-alice-home-epilogue-month-later-portrait.png",
+      "sha256": "085651EF09D16D2ECB3D861FC72184644E53C89AC198F25F9B4851BF6FB59792",
+      "dimensions": "941x1672",
+      "method": "Portrait re-composition generated from the original S47 CG plus Alice master reference; reviewed for event, identity, wardrobe, lighting and mobile composition",
+      "source": "Generated in Codex imagegen, 2026-09-23; derivative of assets/cg/s47-alice-home-epilogue-month-later.png",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s13-skaftafell-travelers-portrait.png",
+      "sha256": "0C299238E5D7C7668564A79370C21C3FD6B043B20F26A98570C0C85807889762",
+      "dimensions": "941x1672",
+      "method": "Portrait re-composition generated from original S13 CG and four character masters; reviewed for group identity, event fidelity and no text artifacts",
+      "source": "Generated in Codex imagegen, 2026-09-23; derivative of assets/cg/s13-skaftafell-travelers.png",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s18-hofn-dance-lights-portrait.png",
+      "sha256": "F1D8BCDA88794C68A9CC0411B703BB82CFD0882F2737EA32640B26828A2C7A33",
+      "dimensions": "941x1672",
+      "method": "Portrait re-composition generated from original S18 CG and Alice/Eric masters; reviewed for event fidelity and no text artifacts",
+      "source": "Generated in Codex imagegen, 2026-09-23; derivative of assets/cg/s18-hofn-dance-lights.png",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s26-eric-choice-portrait.png",
+      "sha256": "E5DE1E45E1109835D2D214AB6B79244C95A20070330EB264C59851F22F048FFE",
+      "dimensions": "941x1672",
+      "method": "Portrait re-composition generated from original S26 CG and Alice/Eric masters; reviewed for consensual event fidelity and no text artifacts",
+      "source": "Generated in Codex imagegen, 2026-09-23; derivative of assets/cg/s26-eric-choice.png",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s45-reykjavik-warm-montage-portrait.png",
+      "sha256": "A7522F89C2D1ABC5586EF138BB1DF389AA35C39397885CAD190F3FF6DA3B02F8",
+      "dimensions": "941x1672",
+      "method": "Portrait re-composition generated from original S45 CG and Alice/Nick masters; reviewed for event fidelity and no text artifacts",
+      "source": "Generated in Codex imagegen, 2026-09-23; derivative of assets/cg/s45-reykjavik-warm-montage.png",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s46-airport-goodbye-portrait.png",
+      "sha256": "E3A20093FB7EB8D66BE863DFF81F58B23DEECF31286E31AD5937DC27259B51CF",
+      "dimensions": "941x1672",
+      "method": "Portrait re-composition generated from original S46 CG and Alice/Damir masters; reviewed for event fidelity and no text artifacts",
+      "source": "Generated in Codex imagegen, 2026-09-23; derivative of assets/cg/s46-airport-goodbye.png",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s47-reykjavik-harbour-alice-portrait.png",
+      "sha256": "645FB26D18E53C2DEB5923707B1C53800C5975E812A1EC58658E858876B37234",
+      "dimensions": "941x1672",
+      "method": "Portrait re-composition generated from original S47 CG and Alice master; reviewed for event fidelity and no text artifacts",
+      "source": "Generated in Codex imagegen, 2026-09-23; derivative of assets/cg/s47-reykjavik-harbour-alice.png",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s44-eric-epilogue-month-later.png",
+      "sha256": "D1987EAD5DAC9FD26C74694C8D64DADF73C6A79066C8C1C829F426CBF520A03B",
+      "dimensions": "1672x941",
+      "method": "Targeted text-artifact cleanup of user-supplied ChatGPT image; identities and composition reviewed against Eric and Alice master references",
+      "source": "User-provided image attachment, 2026-09-23; targeted inpainting, 2026-09-23",
+      "license": "user-provided for this project"
+    },
+    {
+      "path": "assets/cg/s45-nick-home-epilogue-month-later.png",
+      "sha256": "0A95116942E8046EE71BD6D008FAA0FCF3E2EA34B8E792F8B388B79C0F0A8734",
+      "dimensions": "1672x941",
+      "method": "Targeted text-artifact cleanup of user-supplied ChatGPT image; identities and composition reviewed against Nick and Alice master references",
+      "source": "User-provided image attachment, 2026-09-23; targeted inpainting, 2026-09-23",
+      "license": "user-provided for this project"
+    },
+    {
+      "path": "assets/cg/s46-damir-epilogue-month-later.png",
+      "sha256": "4FF183BADAC5D980DA2565086C4E5BE520CFB8BD824B19BB825BC1648960CE0E",
+      "dimensions": "1672x941",
+      "method": "Targeted text-artifact cleanup of user-supplied ChatGPT image; identities and composition reviewed against Damir and Alice master references",
+      "source": "User-provided image attachment, 2026-09-23; targeted inpainting, 2026-09-23",
+      "license": "user-provided for this project"
+    },
+    {
+      "path": "assets/cg/s47-alice-home-epilogue-month-later.png",
+      "sha256": "2642735A952673F22A43F373B67A03296F265624C27A6926E7EF64D06B0AEA1D",
+      "dimensions": "1672x941",
+      "method": "Targeted text-artifact cleanup of user-supplied ChatGPT image; identity and composition reviewed against Alice master reference",
+      "source": "User-provided image attachment, 2026-09-23; targeted inpainting, 2026-09-23",
+      "license": "user-provided for this project"
+    },
+    {
+      "path": "assets/backgrounds/s02-roadside-cafe.png",
+      "sha256": "F6D2ADC4A65D2B30E9EB86203E34A848CC79C69A206A9F81A5A6C9B823BB1C13",
+      "dimensions": "1672x941",
+      "method": "Built-in image generation; empty roadside cafe background reviewed against ART_BIBLE and existing location masters",
+      "source": "Generated in Codex imagegen, 2026-09-23",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s26-eric-choice.png",
+      "sha256": "EF229A99516F80DD39CFAC49EF021A25AC00630E01BF5E30D676A2401869721F",
+      "dimensions": "1672x941",
+      "method": "Built-in image generation using Alice and Eric master references; reviewed for identity, event fidelity and no text artifacts",
+      "source": "Generated in Codex imagegen, 2026-09-23",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/backgrounds/s66-hveragerdi-greenhouse.png",
+      "sha256": "07B303976B97D186C37F3DC7950E5C4207C8F78A6681AE156733EF019E3C75AF",
+      "dimensions": "1832x859",
+      "method": "Built-in image generation from ART_BIBLE direction; empty environment reviewed for authored S66 location, composition and no text artifacts",
+      "source": "Generated in Codex imagegen, 2026-09-23",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/backgrounds/s66-hveragerdi-greenhouse-portrait.png",
+      "sha256": "0E16BB094172C375208C71AA651CD1D273E781342F3B273ACDA026B1C8C8ADDA",
+      "dimensions": "941x1672",
+      "method": "Independent portrait composition generated from the same ART_BIBLE direction; reviewed for mobile-safe scene readability",
+      "source": "Generated in Codex imagegen, 2026-09-23",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/backgrounds/s05-hveragerdi-road.png",
+      "sha256": "A01B6CA5147810CDB88FAEFC7187053027FD69105E976B7AD2F42A586A6D030F",
+      "dimensions": "1832x859",
+      "method": "Built-in image generation from ART_BIBLE direction; empty environment reviewed for authored S05 road transition",
+      "source": "Generated in Codex imagegen, 2026-09-23",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/backgrounds/s05-hveragerdi-road-portrait.png",
+      "sha256": "B6E5924BC1830160FC5199677FE2A8C4919E23AEE877DA250B082B3B754FC8FE",
+      "dimensions": "941x1672",
+      "method": "Independent portrait composition generated from the same authored S05 direction; reviewed for mobile-safe road readability",
+      "source": "Generated in Codex imagegen, 2026-09-23",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s06-hveragerdi-eric-alice.png",
+      "sha256": "03541D251C355D14F35B2E6EFC813A83A2A304B0729EF413D78B34553C21E8F9",
+      "dimensions": "1672x941",
+      "method": "Cinematic composition generated from Alice and Eric masters; reviewed for authored S06 event",
+      "source": "Generated in Codex imagegen, 2026-09-23",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s06-hveragerdi-eric-alice-portrait.png",
+      "sha256": "7E7F017C10BCC5F86621BC80991F9D2767733E471451C0D4AC330B3B642000CA",
+      "dimensions": "941x1672",
+      "method": "Independent portrait composition generated from S06 direction",
+      "source": "Generated in Codex imagegen, 2026-09-23",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s07-kitchen-pasta.png",
+      "sha256": "452AB108A997FD6371DD338635DDFE94BDBCF7B85A39FB552AE00FBCDE3DD6DF",
+      "dimensions": "1672x941",
+      "method": "Cinematic group composition generated from four character masters; reviewed for authored S07 pasta event",
+      "source": "Generated in Codex imagegen, 2026-09-23",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s07-kitchen-pasta-portrait.png",
+      "sha256": "552C38C03679EC662A94439FD33F6DC3C8DCB52215FC3DC6890F1135AF801C2A",
+      "dimensions": "941x1672",
+      "method": "Independent portrait composition generated from S07 pasta direction",
+      "source": "Generated in Codex imagegen, 2026-09-23",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s07-kitchen-cards.png",
+      "sha256": "ED50CFB8CAD1615427DF2B0E1802F32CC4C17F32B313CC6367403EBFEBA73B8B",
+      "dimensions": "1672x941",
+      "method": "Cinematic group composition generated from four character masters; reviewed for authored S07 card event",
+      "source": "Generated in Codex imagegen, 2026-09-23",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s07-kitchen-cards-portrait.png",
+      "sha256": "818353A9909AA12784D0379002315536FF219DF4A514243F408F3CD04718EC95",
+      "dimensions": "941x1672",
+      "method": "Independent portrait composition generated from S07 card direction",
+      "source": "Generated in Codex imagegen, 2026-09-23",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s08-guesthouse-strap.png",
+      "sha256": "CD8E44EB13DCBEC7A8D5CCD1612CDBDA1A0C92EDAD3B93A77E3118E8CCA990D6",
+      "dimensions": "1672x941",
+      "method": "Cinematic composition generated from Alice and Damir masters; reviewed for authored S08 repair event",
+      "source": "Generated in Codex imagegen, 2026-09-23",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s08-guesthouse-strap-portrait.png",
+      "sha256": "9533065CEF3A31780E71B4F4DE8C7325CC3A6DD48BB14F34079A02D03154ABDF",
+      "dimensions": "941x1672",
+      "method": "Independent portrait composition generated from S08 repair direction",
+      "source": "Generated in Codex imagegen, 2026-09-23",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s10-vik-road-song.png",
+      "sha256": "DF56B1A22CBB3A94868C4E9A5815FE60FBE8A574375D5C3A5C89AE135F1ACC93",
+      "dimensions": "1672x941",
+      "method": "Cinematic composition generated from Alice and Eric masters; reviewed for authored S10 music conversation",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s10-vik-road-song-portrait.png",
+      "sha256": "19FAC68E95C05B60102651BC5019FF5039A5326D1BDE4A6E5FFA05B8896CD0F8",
+      "dimensions": "941x1672",
+      "method": "Independent portrait composition generated from S10 direction; reviewed for mobile-safe faces, hands and stereo",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s12-vik-cafe-damir.png",
+      "sha256": "7344FDDA79EEA8BF02BC3FB49E79BB94DF78E93E387BD2A198A610CD648BE99E",
+      "dimensions": "1672x941",
+      "method": "Cinematic composition generated from Alice and Damir masters; reviewed for authored S12 cafe conversation",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s12-vik-cafe-damir-portrait.png",
+      "sha256": "A97C3311D0C181E54E083E741FBEA1B0CA46D073CE5C53B050702AD14A0E36A4",
+      "dimensions": "941x1672",
+      "method": "Independent portrait composition generated from S12 direction; reviewed for mobile-safe faces, hands, soup and cups",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s14-skaftafell-pace.png",
+      "sha256": "E13E3A9296CEA4CB8EEF1DDDCFA0C734BD0391F5A4F6E1FA5CC44C60D822406E",
+      "dimensions": "1672x941",
+      "method": "Cinematic composition generated from Alice and Eric masters; reviewed for authored S14 pace event",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s14-skaftafell-pace-portrait.png",
+      "sha256": "C1B822B1F34851DD240B55F3003A8D0D38179BF7DB0E441A3B686F23E557E345",
+      "dimensions": "941x1672",
+      "method": "Independent portrait composition generated from S14 direction; reviewed for mobile-safe faces, hands and thermos",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s16-guesthouse-help.png",
+      "sha256": "8B492AE3E84D9DCDFC830E00FD0DCF18B3CFC0048748DB67B49FA3FDD37D6656",
+      "dimensions": "1672x941",
+      "method": "Replacement cinematic composition generated from Alice and Damir masters with distinct older tourist and companion; reviewed for identity separation, consented ankle help and no duplicate main characters",
+      "source": "Generated in Codex imagegen, 2026-09-24; replacement after ART_IDENTITY_FAIL",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s16-guesthouse-help-portrait.png",
+      "sha256": "8C03456AA8EF4000B0F3FCC486834EAEE5171C715564F07CCD8F8166E565E35A",
+      "dimensions": "940x1672",
+      "method": "Second targeted portrait re-composition generated from the prior S16 portrait with Alice and Damir master references; moved the medical-help action into the central mobile-safe zone and reviewed for identity separation, hands, ankle anatomy and mobile framing",
+      "source": "Generated in Codex imagegen, 2026-09-24; second targeted replacement after runtime readability review",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s16-kitchen-soup.png",
+      "sha256": "4F5AFD577454E72853BBDFCBDE639801F2C127D9C8DF9DC22520AC4E5DB5E718",
+      "dimensions": "1672x941",
+      "method": "Cinematic group composition generated from four character masters; reviewed for authored S16 kitchen continuation",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s16-kitchen-soup-portrait.png",
+      "sha256": "65EF2C909502A7912D1799F2BA97D537C0A03B5D99F85D29FEF6A8CB9C2147C6",
+      "dimensions": "941x1672",
+      "method": "Independent portrait composition generated from S16 kitchen direction; reviewed for mobile-safe faces, hands and soup props",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s17-hofn-guesthouse.png",
+      "sha256": "385B4795F708736AC0CAA56D860EFF9F1C4090F094F5A8C5AF8CB342CA2DCC37",
+      "dimensions": "1672x941",
+      "method": "Independent desktop/mobile composition generated from canonical master references; reviewed for authored event fidelity",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s17-hofn-guesthouse-portrait.png",
+      "sha256": "AC09E422A2502D7F243C5BE0303988EA467B093D9581908E1C65728CC0C4BD85",
+      "dimensions": "941x1672",
+      "method": "Independent desktop/mobile composition generated from canonical master references; reviewed for authored event fidelity",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s19-hofn-pool.png",
+      "sha256": "F1D5704A588A699DDB09ACC3DFC7F2D7AC9626544F349F93810156384D11D213",
+      "dimensions": "1672x941",
+      "method": "Independent desktop/mobile composition generated from canonical master references; reviewed for authored event fidelity",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s19-hofn-pool-portrait.png",
+      "sha256": "399DDE32C9C49A82C1C814C6A0C7EE94A56FE746D9C3656B16CEDB6E9875B31E",
+      "dimensions": "941x1672",
+      "method": "Independent desktop/mobile composition generated from canonical master references; reviewed for authored event fidelity",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s20-hofn-damir-kitchen.png",
+      "sha256": "1DC4DC153162ED94C4D1315558576C23CC29964A090B30F02DC2C82DEEA70996",
+      "dimensions": "1672x941",
+      "method": "Independent desktop/mobile composition generated from canonical master references; reviewed for authored event fidelity",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s20-hofn-damir-kitchen-portrait.png",
+      "sha256": "7AF1F46BB7427BCBBC312598AB40FD1A8AC074C33415E57CCECD3D67CE4B7EB1",
+      "dimensions": "941x1672",
+      "method": "Independent desktop/mobile composition generated from canonical master references; reviewed for authored event fidelity",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s21-alice-hofn-room.png",
+      "sha256": "0039E3EC3DDEA4D771BB7B844D06A23F6C92A0AC1FC0AD42F0A2FFD64CE97683",
+      "dimensions": "1672x941",
+      "method": "Independent desktop/mobile composition generated from canonical master references; reviewed for authored event fidelity",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s21-alice-hofn-room-portrait.png",
+      "sha256": "89669CA893D8B7CFC157D734962EEF85CA9749A2F98120E99AFA39F0F5A9E588",
+      "dimensions": "941x1672",
+      "method": "Independent desktop/mobile composition generated from canonical master references; reviewed for authored event fidelity",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/backgrounds/s61-hofn-streets.png",
+      "sha256": "DD24EC408FBD1770D27DC5D9C72D468DF7E6760FF9B3CE13829F202C91DC6EC8",
+      "dimensions": "1672x941",
+      "method": "Independent desktop/mobile composition generated from canonical master references; reviewed for authored event fidelity",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/backgrounds/s61-hofn-streets-portrait.png",
+      "sha256": "98274AC64656B1BB6006DAF825D57FB2E7C21D0606F5C5968A1A2ACBCE2F7863",
+      "dimensions": "941x1672",
+      "method": "Independent desktop/mobile composition generated from canonical master references; reviewed for authored event fidelity",
+      "source": "Generated in Codex imagegen, 2026-09-24",
+      "license": "generated for this project"
+    }
   ]
 }
