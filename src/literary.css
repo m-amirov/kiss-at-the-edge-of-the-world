@@ -471,4 +471,5 @@ button:hover,button:focus-visible{background:#765744;border-color:#f3d2a8;transf
 @media(max-width:680px) and (orientation:portrait){
       .literary-picture.is-cg::before{display:none!important}
       .literary-picture.is-cg>img{inset:0!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:cover!important;object-position:var(--focus,50% 50%)!important}
+      .literary-picture.is-cg>img[data-asset="s16-guesthouse-help-portrait.png"]{transform:scale(1.12) translateY(-8%);transform-origin:center center}
 }
