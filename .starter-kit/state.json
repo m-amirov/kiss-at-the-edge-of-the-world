@@ -3,7 +3,7 @@
   "updaterSchemaVersion": 2,
   "installedVersion": "0.5.8",
   "attemptedVersion": "0.5.8",
-  "sourceManifestHash": "5113cafd3049c8407b9e492e2dbeabf8de8c508d4d1b097532f731390724d9ac",
+  "sourceManifestHash": "ba9d8bfe1c941265b1f25594dcb4b33602412171f239361276bbd8f4ead574e1",
   "targetProfile": {
     "schemaVersion": 1,
     "profileName": "new-project",
@@ -88,11 +88,6 @@
       "target": "docs/YANDEX_REQUIREMENTS_DIFF_2026-07-01_TO_2026-08-18.md",
       "sourceHash": "26448e0f3786286c7c49c9765a7e474bd8ed0330f4d919a866823acb77cd4fd3",
       "targetHash": "26448e0f3786286c7c49c9765a7e474bd8ed0330f4d919a866823acb77cd4fd3"
-    },
-    "managed:skill-policy": {
-      "target": "config/skill-policy.json",
-      "sourceHash": "fb6f70df330f1471bd7c62e9f29d3cb245f360cb3d27cdb339baedeed71c5fd2",
-      "targetHash": "fb6f70df330f1471bd7c62e9f29d3cb245f360cb3d27cdb339baedeed71c5fd2"
     },
     "managed:external-skill-sources": {
       "target": "docs/EXTERNAL_SKILL_SOURCES.md",
@@ -188,11 +183,6 @@
       "target": "docs/MANIFEST_SCHEMA.md",
       "sourceHash": "a41c440010cecdb8774f3a30c457b8b5beae25b89eb8a32b18018218249673f8",
       "targetHash": "a41c440010cecdb8774f3a30c457b8b5beae25b89eb8a32b18018218249673f8"
-    },
-    "managed:manifest-entry-config": {
-      "target": "config/manifest-entries.json",
-      "sourceHash": "692e6acb46f819be4db7ab8564d1bd8d51a10b51907b5816b0afabd4dad89914",
-      "targetHash": "692e6acb46f819be4db7ab8564d1bd8d51a10b51907b5816b0afabd4dad89914"
     },
     "managed:manifest-json-schema": {
       "target": "config/starter-kit-manifest.schema.json",
@@ -535,6 +525,16 @@
       "target": "docs/YANDEX_REQUIREMENTS_CHECKLIST.md",
       "sourceHash": "2bdc3939564b59018de2c3720001f052a3cf24cba24028b16eaf53320428bb85",
       "targetHash": "b08db199f7e61c31766aecf348fba6f691df175fe3a254c31d83939ff5595ff1"
+    },
+    "managed:skill-policy": {
+      "target": "config/skill-policy.json",
+      "sourceHash": "fb6f70df330f1471bd7c62e9f29d3cb245f360cb3d27cdb339baedeed71c5fd2",
+      "targetHash": "2c7f5c0785b07ac601e197fd84a876eb4cb350106669c8fb0712e81c97439187"
+    },
+    "managed:manifest-entry-config": {
+      "target": "config/manifest-entries.json",
+      "sourceHash": "3ff42a20c08d0ad57a369817f43bad79f9daa5634169cf37c2b3c0eb18839339",
+      "targetHash": "b106f873b08291464934b92152516fa998ff0138e1870c40ac9178d22ef91f1d"
     }
   },
   "conflicts": [],
