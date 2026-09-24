@@ -84,3 +84,12 @@ Control request used exactly one short prompt and the current PNG, with no extra
 Verified image: `assets/cg/s16-guesthouse-help-portrait.png`; SHA-256 `50F5353FFACF349DCF7C13709AC654A03B9EB7112AF16924E9F1E6FBA7193550`.
 
 The short control passed through the current adapter without any adapter, selector, model-routing, or timeout change.
+
+## Project verification barrier
+
+- Runtime regression S16/S27/S28/S49: PASS, 15 captures, zero page/request errors.
+- `npm run test:narrative`: PASS.
+- `npm run starter-kit:self-test`: BLOCKED, exit `1`; Starter Kit reports pre-existing modified managed files `config/skill-policy.json` and `config/manifest-entries.json`.
+- `npm run starter-kit:status`: `status: modified`, `idempotencyStatus: blocked`; no product runtime ownership violations.
+
+Those managed-file differences were not changed or reverted in this task. Because the required Starter Kit barrier is not green, no push to `origin/main` was performed.
