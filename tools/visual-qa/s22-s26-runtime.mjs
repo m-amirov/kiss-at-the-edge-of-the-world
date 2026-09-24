@@ -12,8 +12,11 @@ const { chromium } = await import(pathToFileURL('C:/Users/user/.cache/codex-runt
 const baseUrl = process.env.LITERARY_QA_URL ?? 'http://127.0.0.1:4173/literary.html';
 const viewports = [{ width: 1920, height: 900 }, { width: 390, height: 844 }, { width: 360, height: 640 }];
 const targetCues = {
-  S16: [{ id: 's16-guesthouse-help', chunk: 0, paragraph: 1 }],
-  S27: [{ id: 's27-egilsstadir-boardwalk', chunk: 0, paragraph: 0 }],
+  S16: [
+    { id: 's16-pre-cue', chunk: 0, paragraph: 0 },
+    { id: 's16-guesthouse-help', chunk: 0, paragraph: 1 }
+  ],
+  S27: [{ id: 's27-egilsstadir-boardwalk', chunk: 0, paragraph: 1 }],
   S28: [{ id: 's28-hverfjall-hood', chunk: 0, paragraph: 3 }],
   S49: [{ id: 's49-reykjahlid-window-dance', chunk: 0, paragraph: 4 }]
 };

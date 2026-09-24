@@ -33,3 +33,9 @@ This session has no available Web route that accepts the local screenshot and re
 - No inner text-layer scrolling in captured states.
 - Visible buttons remained enabled and within viewport.
 - No page errors or failed requests.
+
+## Independent pixel-review update
+
+The CEOS `ceos_bulk_checker_web` route accepted `local_image` items and confirmed receipt of binary PNG pixels. Three bounded reviews covered the 15 current captures (12 event captures plus three S16 pre-cue captures); the evidence records the batch identifiers and receipt counts.
+
+The independent result is `REWORK`, not PASS. S49/360 passed after the asset focal-point correction. S16 timing is independently confirmed: the pre-cue captures contain no medical CG and the cue captures contain it. Remaining findings are partial medical-action visibility in S16/360 and a conflicting S27/360 report; the latter must be reconciled before release acceptance. No push was performed.

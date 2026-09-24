@@ -30,6 +30,8 @@ const focalPointByAsset = {
   's26-nick-choice.png': '50% 42%',
   's26-damir-choice.png': '50% 42%',
   's26-alice-choice.png': '50% 42%',
+  's27-egilsstadir-boardwalk-portrait.png': '50% 72%',
+  's49-reykjahlid-window-dance-portrait.png': '50% 35%',
   's44-eric-epilogue-month-later.png': '50% 48%',
   's45-nick-home-epilogue-month-later.png': '50% 45%',
   's46-damir-epilogue-month-later.png': '50% 44%',
