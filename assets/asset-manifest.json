@@ -859,6 +859,19 @@
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s62-alice-bookstore-choice-portrait.png",
       "portraitDimensions": "940x1672"
+    },
+    {
+      "id": "s63-alice-solo-concert",
+      "family": "cg",
+      "path": "assets/cg/s63-alice-solo-concert.png",
+      "status": "integrated",
+      "runtime": "S63 authored cue [0,1], Alice attends a small solo concert and taps her toe during the third composition; anonymous listeners only",
+      "creationMethod": "Codex imagegen using canonical Alice master reference; independent desktop and portrait compositions",
+      "createdAt": "2026-09-25",
+      "dimensions": "1672x941",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s63-alice-solo-concert-portrait.png",
+      "portraitDimensions": "941x1672"
     }
   ],
   "visualDirection": {

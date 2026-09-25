@@ -704,6 +704,22 @@
       "method": "Independent portrait composition generated from S56 desktop direction and canonical Alice/Damir masters; musicians, faces and hands above dialogue area",
       "source": "Generated in Codex imagegen, 2026-09-25",
       "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s63-alice-solo-concert.png",
+      "sha256": "2BBA2031DD5008D41CCB04CA5843963CCF280DF5B661677E32908600DC35DA29",
+      "dimensions": "1672x941",
+      "method": "Independent desktop composition generated from canonical Alice master reference; authored S63 solo concert beat",
+      "source": "Generated in Codex imagegen, 2026-09-25",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s63-alice-solo-concert-portrait.png",
+      "sha256": "BD10B89EB9E08320DD8CA2C384E658E5D8DFC3B8C075BD2EEAABCE65C5108D8B",
+      "dimensions": "941x1672",
+      "method": "Independent portrait composition generated from canonical Alice master reference; authored S63 solo concert beat",
+      "source": "Generated in Codex imagegen, 2026-09-25",
+      "license": "generated for this project"
     }
   ]
 }

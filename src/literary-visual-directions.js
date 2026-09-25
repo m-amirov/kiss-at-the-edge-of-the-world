@@ -131,6 +131,7 @@ const cues = {
  S34:[{at:[0,3],id:'s34-cancelled-evening-entrance',location:'Акюрейри: вход в гостиницу после дождя, Дамир с пакетом из аптеки; Алиса сама останавливается',time:'день 16, дождь',cast:['alice','damir'],art:'cg/s34-cancelled-evening.png'}],
  S56:[{at:[0,0],id:'s56-cafe-new-song-active',location:'Акюрейри: музыкальное кафе, стол у окна; музыканты играют новую для Алисы и Дамира песню',time:'день 16, вечер',cast:['alice','damir'],art:'cg/s56-cafe-musicians.png',when:{'S34-C1':'A'}},
       {at:[0,0],id:'s56-cafe-new-song-paused',location:'Акюрейри: музыкальное кафе, стол у окна; музыканты играют новую для Алисы и Дамира песню',time:'день 16, вечер',cast:['alice','damir'],art:'cg/s56-cafe-musicians.png',when:{'S34-C1':'B'}}],
+ S63:[{at:[0,1],id:'s63-alice-solo-concert',location:'Акюрейри: небольшой камерный зал со складными стульями и случайными слушателями',time:'день 16, вечер',cast:['alice'],art:'cg/s63-alice-solo-concert.png'}],
  S36:[{at:[0,1],id:'snaefellsnes-drive',location:'Дорога по Snæfellsnes',art:'snaefellsnes-master.png'}],
  S41:[{at:[0,1],id:'editor-cafe-call',location:'Рейкьявик: кафе, видеозвонок редактору',art:null}],
  S44:[{at:[0,0],id:'eric-morning-harbour',location:'Рейкьявик: утренняя гавань',art:null,cast:['alice','eric']},

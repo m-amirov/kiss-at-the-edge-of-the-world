@@ -86,6 +86,7 @@ const portraitAssetByDesktopAsset = {
   ,'s53-nick-no-camera-pool.png':'s53-nick-no-camera-pool-portrait.png'
   ,'s34-cancelled-evening.png':'s34-cancelled-evening-portrait.png'
   ,'s56-cafe-musicians.png':'s56-cafe-musicians-portrait.png'
+  ,'s63-alice-solo-concert.png':'s63-alice-solo-concert-portrait.png'
 };
 function assetFileForViewport(art){
   const portrait=window.matchMedia?.('(max-width: 680px) and (orientation: portrait)').matches;
