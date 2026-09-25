@@ -672,6 +672,38 @@
       "method": "Independent portrait composition generated from S53 desktop and canonical Alice/Nick masters; tea, faces and hands above dialogue area",
       "source": "Generated in Codex imagegen, 2026-09-25",
       "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s34-cancelled-evening.png",
+      "sha256": "3CCEAC18F7698D6A8589B75AB077C88A6807C8353DC5F4EA4DAB1ED9674A382D",
+      "dimensions": "1672x941",
+      "method": "Independent desktop cinematic composition generated from canonical Alice and Damir master references; rainy hotel entrance and respectful distance after cancelled dinner",
+      "source": "Generated in Codex imagegen, 2026-09-25",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s34-cancelled-evening-portrait.png",
+      "sha256": "ADA136CD36903A05BF4846D4F755BE97435026ED56E66DAE23BC100262B5B5E7",
+      "dimensions": "941x1672",
+      "method": "Independent portrait composition generated from S34 desktop direction and canonical Alice/Damir masters; phone-pocket gesture and faces above dialogue area",
+      "source": "Generated in Codex imagegen, 2026-09-25",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s56-cafe-musicians.png",
+      "sha256": "8B07611B7854E1AC00EBC8D31608ACBB71184AC996276BD1DAF8511CCDEB1CB3",
+      "dimensions": "1672x941",
+      "method": "Independent desktop cinematic composition generated from canonical Alice and Damir master references; live musicians and new-song listening beat",
+      "source": "Generated in Codex imagegen, 2026-09-25",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s56-cafe-musicians-portrait.png",
+      "sha256": "E434C8412C5C80542F3BA839BED19934984C97009A3F6F9B4AAEC370822D6D8B",
+      "dimensions": "941x1672",
+      "method": "Independent portrait composition generated from S56 desktop direction and canonical Alice/Damir masters; musicians, faces and hands above dialogue area",
+      "source": "Generated in Codex imagegen, 2026-09-25",
+      "license": "generated for this project"
     }
   ]
 }

@@ -822,6 +822,32 @@
       "portraitDimensions": "941x1672"
     },
     {
+      "id": "s34-cancelled-evening",
+      "family": "cg",
+      "path": "assets/cg/s34-cancelled-evening.png",
+      "status": "integrated",
+      "runtime": "S34 authored cue [0,3], Alice stops at hotel entrance after cancelling dinner; Damir keeps respectful distance",
+      "creationMethod": "Built-in image generation using canonical Alice and Damir master references; independent desktop and portrait compositions",
+      "createdAt": "2026-09-25",
+      "dimensions": "1672x941",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s34-cancelled-evening-portrait.png",
+      "portraitDimensions": "941x1672"
+    },
+    {
+      "id": "s56-cafe-musicians",
+      "family": "cg",
+      "path": "assets/cg/s56-cafe-musicians.png",
+      "status": "integrated",
+      "runtime": "S56 authored cue [0,0], conditional on S34-C1=A/B; Alice and Damir listen to new song with musicians visible",
+      "creationMethod": "Built-in image generation using canonical Alice and Damir master references; independent desktop and portrait compositions",
+      "createdAt": "2026-09-25",
+      "dimensions": "1672x941",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s56-cafe-musicians-portrait.png",
+      "portraitDimensions": "941x1672"
+    },
+    {
       "id": "s62-alice-bookstore-choice",
       "family": "cg",
       "path": "assets/cg/s62-alice-bookstore-choice.png",

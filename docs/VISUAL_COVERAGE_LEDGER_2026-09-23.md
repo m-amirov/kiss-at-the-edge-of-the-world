@@ -51,8 +51,8 @@ desktop/mobile screenshots.
 | S50 | Akureyri walk, day 15 | Alice/Eric | reuse Akureyri street master | REUSE |
 | S33 | Akureyri hotel teaser, day 15 | Alice/Nick; `hotel-teaser` [0,1] | independent desktop + portrait cinematic; first-reveal cue, runtime evidence and Web High PASS at 1920×900, 390×844, 360×640 | VISUAL_ACCEPTANCE: PASS |
 | S53 | Akureyri streets/pool, day 16 | Alice/Nick; `s53-nick-no-camera-pool` [0,0] | independent desktop + portrait cinematic; runtime evidence and Web High PASS at 1920×900, 390×844, 360×640 | VISUAL_ACCEPTANCE: PASS |
-| S34 | guesthouse cancelled evening, day 16 | Alice/Damir | stage only | MISSING_APPROPRIATE_ART |
-| S56 | cafe musicians, evening | Alice/Damir | stage only | MISSING_APPROPRIATE_ART |
+| S34 | guesthouse cancelled evening, day 16 | Alice/Damir; `s34-cancelled-evening-entrance` [0,3] | dedicated desktop + independent portrait cinematic; Chrome QA 3 viewports; Web High PASS `WHVA-S34-20260925-01`, `-03`, `-04` | VISUAL_ACCEPTANCE: PASS |
+| S56 | cafe musicians, evening | Alice/Damir; `s56-cafe-new-song-active` [0,0], active/paused route conditions | dedicated desktop + independent portrait cinematic; Chrome QA 3 viewports; raw Web High PASS `WH-S56-RAWASSET-20260925-0951-03`; runtime PASS `WH-S56-RUNTIME-20260925-0952-04`, `-0954-05`, `-0956-06`; actualPixelsReceived=true | VISUAL_ACCEPTANCE: PASS |
 | S35 | Alice room/article, day 16 | Alice | stage only | MISSING_APPROPRIATE_ART |
 | S63 | small concert hall, evening | Alice/Damir | stage only | MISSING_APPROPRIATE_ART |
 | S36 | hotel → Snæfellsnes road, day 17 | group | reuse Snæfellsnes master | REUSE |
@@ -79,7 +79,7 @@ desktop/mobile screenshots.
 - 66 authored scenes audited; 66 rows above.
 - 8 scenes are `REUSE`, 8 are `COVERED_EVENT`, 4 are accepted cinematic batch
   rows (`S10`, `S12`, `S14`, `S16`), and 3 are pilot-accepted rows (`S06-S08`).
-- 21 scenes remain `MISSING_APPROPRIATE_ART`; 45 scenes have accepted coverage, including S31, S32, S33, S53 and S62. There are no `INTEGRATED / QA_PENDING` rows. The accepted total includes `REUSE`, pilot/batch accepted and covered events. S27, S28, S29, S30, S32, S33, S49, S52, S53 and S55 are `VISUAL_ACCEPTANCE: PASS` after fresh runtime screenshots at all three required viewports and independent multimodal review. Stage presentation is not counted
+- 19 scenes remain `MISSING_APPROPRIATE_ART`; 47 scenes have accepted coverage, including S34, S56, S31, S32, S33, S53 and S62. There are no `INTEGRATED / QA_PENDING` rows. The accepted total includes `REUSE`, pilot/batch accepted and covered events. S27, S28, S29, S30, S32, S33, S34, S49, S52, S53, S55 and S56 are `VISUAL_ACCEPTANCE: PASS` after fresh runtime screenshots at all three required viewports and independent multimodal review. Stage presentation is not counted
   as full location coverage. The ledger still contains 66 authored rows.
 - S66 runtime evidence is recorded in `docs/VISUAL_ACCEPTANCE_S66_2026-09-23.md`
   and the ignored run artifact `artifacts/evidence/s66-visual-qa.json`.

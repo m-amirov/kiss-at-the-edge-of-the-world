@@ -84,6 +84,8 @@ const portraitAssetByDesktopAsset = {
   ,'s32-eric-calendar-crossroads.png':'s32-eric-calendar-crossroads-portrait.png'
   ,'s33-nick-teaser-reveal.png':'s33-nick-teaser-reveal-portrait.png'
   ,'s53-nick-no-camera-pool.png':'s53-nick-no-camera-pool-portrait.png'
+  ,'s34-cancelled-evening.png':'s34-cancelled-evening-portrait.png'
+  ,'s56-cafe-musicians.png':'s56-cafe-musicians-portrait.png'
 };
 function assetFileForViewport(art){
   const portrait=window.matchMedia?.('(max-width: 680px) and (orientation: portrait)').matches;
