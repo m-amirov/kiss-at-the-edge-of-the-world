@@ -79,6 +79,8 @@ const portraitAssetByDesktopAsset = {
   ,'s52-glove-found.png':'s52-glove-found-portrait.png'
   ,'s30-damir-sleeve-promise.png':'s30-damir-sleeve-promise-portrait.png'
   ,'s55-shum-first-step.png':'s55-shum-first-step-portrait.png'
+  ,'s31-alice-independent-evening.png':'s31-alice-independent-evening-portrait.png'
+  ,'s62-alice-bookstore-choice.png':'s62-alice-bookstore-choice-portrait.png'
 };
 function assetFileForViewport(art){
   const portrait=window.matchMedia?.('(max-width: 680px) and (orientation: portrait)').matches;

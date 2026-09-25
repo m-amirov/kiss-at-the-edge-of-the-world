@@ -37,16 +37,16 @@ desktop/mobile screenshots.
 | S25 | Eastfjords guesthouse, day 12 | Alice/Damir; `s25-damir-clarity-talk` [0,0] | dedicated desktop + independent portrait cinematic; 3 viewport runtime evidence | VISUAL_ACCEPTANCE: PASS |
 | S58 | shared kitchen, day 12 evening | group | stage only | MISSING_APPROPRIATE_ART |
 | S26 | guesthouse corridor/courtyard, day 12 evening | route-dependent pair/solo; Eric `[7,0]`, Nick `[8,0]`, Damir `[14,0]`, independent `[20,0]` | four route-specific desktop + independent portrait cinematic states; before/after evidence at 3 viewports | VISUAL_ACCEPTANCE: PASS |
-| S27 | Egilsstaðir lakeside boardwalk, day 13 | group | `s27-egilsstadir-boardwalk` at [0,0], independent portrait; action visible above text panel at 3 viewports | VISUAL_ACCEPTANCE: BLOCKED (independent multimodal pixel review unavailable) |
+| S27 | Egilsstaðir lakeside boardwalk, day 13 | group | `s27-egilsstadir-boardwalk` at [0,0], independent portrait; action visible above text panel at 3 viewports | VISUAL_ACCEPTANCE: PASS |
 | S59 | group lunch, day 13 | group | stage only | MISSING_APPROPRIATE_ART |
-| S28 | marked trail/viewpoint, day 14 | Alice/Eric | `s28-hverfjall-hood` at [0,3]; independent desktop + portrait; runtime evidence at 1920×900, 390×844, 360×640 | VISUAL_ACCEPTANCE: BLOCKED (independent multimodal pixel review unavailable) |
-| S49 | guesthouse hall dance, evening | Alice/Eric | `s49-reykjahlid-window-dance` at [0,4]; independent desktop + portrait; runtime evidence at 1920×900, 390×844, 360×640 | VISUAL_ACCEPTANCE: BLOCKED (independent multimodal pixel review unavailable) |
+| S28 | marked trail/viewpoint, day 14 | Alice/Eric | `s28-hverfjall-hood` at [0,3]; independent desktop + portrait; runtime evidence at 1920×900, 390×844, 360×640 | VISUAL_ACCEPTANCE: PASS |
+| S49 | guesthouse hall dance, evening | Alice/Eric | `s49-reykjahlid-window-dance` at [0,4]; independent desktop + portrait; runtime evidence at 1920×900, 390×844, 360×640 | VISUAL_ACCEPTANCE: PASS |
 | S29 | guesthouse Nick playback, day 14 | Alice/Nick; `s29-nick-playback` [0,0] | dedicated desktop + independent portrait cinematic; runtime evidence and independent multimodal review at 1920×900, 390×844, 360×640 | VISUAL_ACCEPTANCE: PASS |
 | S52 | streets/post/workshop, day 14 | Alice/Nick; `s52-glove-found` [0,4] after discovery beat | dedicated desktop + independent portrait cinematic; runtime evidence and independent multimodal review at 1920×900, 390×844, 360×640 | VISUAL_ACCEPTANCE: PASS |
 | S30 | personal Damir conversation, day 14 | Alice/Damir; `s30-damir-sleeve-promise` [2,1], conditional on S30-C1=A | dedicated desktop + independent portrait cinematic; runtime evidence at 1920×900, 390×844, 360×640; Web High review R2 | VISUAL_ACCEPTANCE: PASS |
 | S55 | horse farm, day 14 | Alice/Damir; `s55-shum-first-step` [0,3] | dedicated desktop + independent portrait cinematic; runtime evidence at 1920×900, 390×844, 360×640; Web High review R2 | VISUAL_ACCEPTANCE: PASS |
-| S31 | Alice independent day, day 14 | Alice | stage only | MISSING_APPROPRIATE_ART |
-| S62 | bookstore, day 14 | Alice | stage only | MISSING_APPROPRIATE_ART |
+| S31 | Alice independent day, day 14 | Alice | `s31-alice-independent-evening` at [0,0]; desktop + independent portrait; current runtime evidence at 1920×900, 390×844, 360×640; Web High `S31-WEBHIGH-20260925-A1-*` | VISUAL_ACCEPTANCE: PASS |
+| S62 | bookstore, day 14 | Alice | `s62-alice-bookstore-choice` at [0,1]; desktop + independent portrait; current runtime evidence at 1920×900, 390×844, 360×640; Web High `S62-Alice-RUNTIME-20260925-01..03` | VISUAL_ACCEPTANCE: PASS |
 | S32 | guesthouse Eric conversation, day 15 | Alice/Eric | stage only | MISSING_APPROPRIATE_ART |
 | S50 | Akureyri walk, day 15 | Alice/Eric | reuse Akureyri street master | REUSE |
 | S33 | Akureyri hotel teaser, day 15 | Alice/Nick | stage only; authored teaser cue | MISSING_APPROPRIATE_ART |
@@ -79,7 +79,7 @@ desktop/mobile screenshots.
 - 66 authored scenes audited; 66 rows above.
 - 8 scenes are `REUSE`, 8 are `COVERED_EVENT`, 4 are accepted cinematic batch
   rows (`S10`, `S12`, `S14`, `S16`), and 3 are pilot-accepted rows (`S06-S08`).
-- 26 scenes remain `MISSING_APPROPRIATE_ART`; S27, S28, S29, S30, S49, S52 and S55 are now `VISUAL_ACCEPTANCE: PASS` after fresh runtime screenshots at all three required viewports and independent multimodal review. Stage presentation is not counted
+- 24 scenes remain `MISSING_APPROPRIATE_ART`; 42 scenes have accepted coverage, including S31 and S62. There are no `INTEGRATED / QA_PENDING` rows. The accepted total includes `REUSE`, pilot/batch accepted and covered events. S27, S28, S29, S30, S49, S52 and S55 are `VISUAL_ACCEPTANCE: PASS` after fresh runtime screenshots at all three required viewports and independent multimodal review. Stage presentation is not counted
   as full location coverage. The ledger still contains 66 authored rows.
 - S66 runtime evidence is recorded in `docs/VISUAL_ACCEPTANCE_S66_2026-09-23.md`
   and the ignored run artifact `artifacts/evidence/s66-visual-qa.json`.
