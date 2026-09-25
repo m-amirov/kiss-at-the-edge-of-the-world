@@ -872,6 +872,19 @@
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s63-alice-solo-concert-portrait.png",
       "portraitDimensions": "941x1672"
+    },
+    {
+      "id": "s37-eric-alice-cafe",
+      "family": "cg",
+      "path": "assets/cg/s37-eric-alice-cafe.png",
+      "status": "integrated",
+      "runtime": "S37 authored cue [1,2], active Eric/Alice cafe conversation after the fishing museum",
+      "creationMethod": "Independent desktop and portrait compositions generated with canonical Alice and Eric master references",
+      "createdAt": "2026-09-25",
+      "dimensions": "1672x941",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s37-eric-alice-cafe-portrait.png",
+      "portraitDimensions": "941x1672"
     }
   ],
   "visualDirection": {

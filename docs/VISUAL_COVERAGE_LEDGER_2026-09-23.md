@@ -56,8 +56,8 @@ desktop/mobile screenshots.
 | S35 | Alice room/article, day 16 | Alice | stage only; cue/page feasibility audit found no runtime-safe authored cue under the mobile reader contract; attempts 1–3 exhausted | BLOCKED: NO_RUNTIME_SAFE_AUTHORED_CUE |
 | S63 | solo small concert hall, evening | Alice; `s63-alice-solo-concert` [0,1] at third composition/toe-tap beat | dedicated desktop + independent portrait cinematic; Chrome QA and Web High PASS at 1920×900, 390×844, 360×640; anonymous listeners only | VISUAL_ACCEPTANCE: PASS |
 | S36 | hotel → Snæfellsnes road, day 17 | group | reuse Snæfellsnes master | REUSE |
-| S37 | guesthouse Eric/Alice, day 18 | Alice/Eric | stage only | MISSING_APPROPRIATE_ART |
-| S51 | Eric/Alice dinner, day 19 | Alice/Eric | stage only | MISSING_APPROPRIATE_ART |
+| S37 | guesthouse Eric/Alice, day 18 | Alice/Eric; `s37-eric-alice-cafe` [1,2] | dedicated desktop + independent portrait cinematic; Chrome QA + Web High PASS | VISUAL_ACCEPTANCE: PASS |
+| S51 | Eric/Alice ordinary dinner, day 19 | Alice/Eric | attempt 1 desktop/mobile rework; attempt 2 raw rework; attempt 3 local safe-zone semantic fail | BLOCKED: COMPOSITION_BUDGET_EXHAUSTED |
 | S38 | Alice/Nick ordinary day, day 18 | Alice/Nick | stage only | MISSING_APPROPRIATE_ART |
 | S54 | Alice/Nick evening, day 19 | Alice/Nick | stage only | MISSING_APPROPRIATE_ART |
 | S39 | Alice/Damir conversation, day 18 | Alice/Damir | stage only | MISSING_APPROPRIATE_ART |
@@ -79,7 +79,7 @@ desktop/mobile screenshots.
 - 66 authored scenes audited; 66 rows above.
 - 8 scenes are `REUSE`, 8 are `COVERED_EVENT`, 4 are accepted cinematic batch
   rows (`S10`, `S12`, `S14`, `S16`), and 3 are pilot-accepted rows (`S06-S08`).
-- 18 scenes remain `MISSING_APPROPRIATE_ART`; S35 remains explicitly blocked by the mobile cue/page feasibility audit, and 48 scenes have accepted coverage after S63. There are no `INTEGRATED / QA_PENDING` rows. The accepted total includes `REUSE`, pilot/batch accepted and covered events. S27, S28, S29, S30, S32, S33, S34, S49, S52, S53, S55, S56 and S63 are `VISUAL_ACCEPTANCE: PASS` after fresh runtime screenshots at all three required viewports and independent multimodal review. Stage presentation is not counted
+- 17 scenes remain `MISSING_APPROPRIATE_ART`; S35 remains explicitly blocked by the mobile cue/page feasibility audit, S51 is blocked after three bounded attempts, and S37 is accepted after fresh runtime and Web High evidence. Stage presentation is not counted
   as full location coverage. The ledger still contains 66 authored rows.
 - S66 runtime evidence is recorded in `docs/VISUAL_ACCEPTANCE_S66_2026-09-23.md`
   and the ignored run artifact `artifacts/evidence/s66-visual-qa.json`.

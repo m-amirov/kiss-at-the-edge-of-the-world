@@ -720,6 +720,22 @@
       "method": "Independent portrait composition generated from canonical Alice master reference; authored S63 solo concert beat",
       "source": "Generated in Codex imagegen, 2026-09-25",
       "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s37-eric-alice-cafe.png",
+      "sha256": "F4F7AD3D04779377B34041F2C04E77E5E803BCE933348F1D410D62EEAE7B9839",
+      "dimensions": "1672x941",
+      "method": "Independent desktop composition from canonical Alice and Eric masters; authored S37 cafe conversation",
+      "source": "Generated in Codex imagegen, 2026-09-25",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s37-eric-alice-cafe-portrait.png",
+      "sha256": "D006A0FA4385D4A0BF6D146187801E34B765A6A4A32A7569CC113ED8D1E3A14C",
+      "dimensions": "941x1672",
+      "method": "Independent portrait composition from canonical Alice and Eric masters; authored S37 cafe conversation and mobile-safe upper framing",
+      "source": "Generated in Codex imagegen, 2026-09-25",
+      "license": "generated for this project"
     }
   ]
 }
