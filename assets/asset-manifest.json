@@ -688,6 +688,45 @@
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s55-shum-first-step-portrait.png",
       "portraitDimensions": "941x1672"
+    },
+    {
+      "id": "s32-eric-calendar-crossroads",
+      "family": "cg",
+      "path": "assets/cg/s32-eric-calendar-crossroads.png",
+      "status": "integrated",
+      "runtime": "S32 authored cue [0,0], Eric/Alice crossroads and hand-taking; Eric route only",
+      "creationMethod": "Codex imagegen using canonical Alice and Eric master references; independent desktop composition",
+      "createdAt": "2026-09-25",
+      "dimensions": "1672x941",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s32-eric-calendar-crossroads-portrait.png",
+      "portraitDimensions": "941x1672"
+    },
+    {
+      "id": "s33-nick-teaser-reveal",
+      "family": "cg",
+      "path": "assets/cg/s33-nick-teaser-reveal.png",
+      "status": "integrated",
+      "runtime": "S33 authored cue [0,1] hotel-teaser, first teaser reveal before deletion; Nick route only",
+      "creationMethod": "Codex imagegen using canonical Alice and Nick master references; independent desktop composition",
+      "createdAt": "2026-09-25",
+      "dimensions": "1672x941",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s33-nick-teaser-reveal-portrait.png",
+      "portraitDimensions": "941x1672"
+    },
+    {
+      "id": "s53-nick-no-camera-pool",
+      "family": "cg",
+      "path": "assets/cg/s53-nick-no-camera-pool.png",
+      "status": "integrated",
+      "runtime": "S53 authored cue [0,0], Nick/Alice camera-in-trunk and tea at pool; Nick route only",
+      "creationMethod": "Codex imagegen using canonical Alice and Nick master references; independent desktop composition",
+      "createdAt": "2026-09-25",
+      "dimensions": "1672x941",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s53-nick-no-camera-pool-portrait.png",
+      "portraitDimensions": "941x1672"
     }
   ],
   "routingTrace": {

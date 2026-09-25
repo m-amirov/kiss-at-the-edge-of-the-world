@@ -81,6 +81,9 @@ const portraitAssetByDesktopAsset = {
   ,'s55-shum-first-step.png':'s55-shum-first-step-portrait.png'
   ,'s31-alice-independent-evening.png':'s31-alice-independent-evening-portrait.png'
   ,'s62-alice-bookstore-choice.png':'s62-alice-bookstore-choice-portrait.png'
+  ,'s32-eric-calendar-crossroads.png':'s32-eric-calendar-crossroads-portrait.png'
+  ,'s33-nick-teaser-reveal.png':'s33-nick-teaser-reveal-portrait.png'
+  ,'s53-nick-no-camera-pool.png':'s53-nick-no-camera-pool-portrait.png'
 };
 function assetFileForViewport(art){
   const portrait=window.matchMedia?.('(max-width: 680px) and (orientation: portrait)').matches;
