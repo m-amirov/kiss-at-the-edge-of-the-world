@@ -727,6 +727,111 @@
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s53-nick-no-camera-pool-portrait.png",
       "portraitDimensions": "941x1672"
+    },
+    {
+      "id": "guesthouse-common-kitchen-evening",
+      "family": "background",
+      "path": "assets/backgrounds/guesthouse-common-kitchen-evening.png",
+      "status": "integrated",
+      "runtime": "S07,S08,S13,S16,S20,S21,S48,S51,S58,S59,S60,S65"
+    },
+    {
+      "id": "small-icelandic-cafe-rain",
+      "family": "background",
+      "path": "assets/backgrounds/small-icelandic-cafe-rain.png",
+      "status": "integrated",
+      "runtime": "S12,S30,S35,S42,S43,S56"
+    },
+    {
+      "id": "south-coast-road-rain",
+      "family": "background",
+      "path": "assets/backgrounds/south-coast-road-rain.png",
+      "status": "integrated",
+      "runtime": "S05,S10"
+    },
+    {
+      "id": "hofn-open-pool-evening",
+      "family": "background",
+      "path": "assets/backgrounds/hofn-open-pool-evening.png",
+      "status": "integrated",
+      "runtime": "S19"
+    },
+    {
+      "id": "lagarfljot-volunteer-trail",
+      "family": "background",
+      "path": "assets/backgrounds/lagarfljot-volunteer-trail.png",
+      "status": "integrated",
+      "runtime": "S27"
+    },
+    {
+      "id": "myvatn-rainy-lodge-interior",
+      "family": "background",
+      "path": "assets/backgrounds/myvatn-rainy-lodge-interior.png",
+      "status": "integrated",
+      "runtime": "S31,S32,S33"
+    },
+    {
+      "id": "seydisfjordur-community-hall",
+      "family": "background",
+      "path": "assets/backgrounds/seydisfjordur-community-hall.png",
+      "status": "integrated",
+      "runtime": "S49,S63"
+    },
+    {
+      "id": "horse-farm-riding-lane",
+      "family": "background",
+      "path": "assets/backgrounds/horse-farm-riding-lane.png",
+      "status": "integrated",
+      "runtime": "S55"
+    },
+    {
+      "id": "road-trip-van-interior-rain",
+      "family": "background",
+      "path": "assets/backgrounds/road-trip-van-interior-rain.png",
+      "status": "integrated",
+      "runtime": "S02"
+    },
+    {
+      "id": "seydisfjordur-guesthouse-smokehouse-morning",
+      "family": "background",
+      "path": "assets/backgrounds/seydisfjordur-guesthouse-smokehouse-morning.png",
+      "status": "integrated",
+      "runtime": "S25"
+    },
+    {
+      "id": "myvatn-hverfjall-viewpoint-overcast",
+      "family": "background",
+      "path": "assets/backgrounds/myvatn-hverfjall-viewpoint-overcast.png",
+      "status": "integrated",
+      "runtime": "S28,S29"
+    },
+    {
+      "id": "keflavik-airport-departures",
+      "family": "background",
+      "path": "assets/backgrounds/keflavik-airport-departures.png",
+      "status": "integrated",
+      "runtime": "S46"
+    },
+    {
+      "id": "snaefellsnes-bakery-dawn",
+      "family": "background",
+      "path": "assets/backgrounds/snaefellsnes-bakery-dawn.png",
+      "status": "integrated",
+      "runtime": "S57"
+    },
+    {
+      "id": "reykjahlid-bookshop-day",
+      "family": "background",
+      "path": "assets/backgrounds/reykjahlid-bookshop-day.png",
+      "status": "integrated",
+      "runtime": "S62"
+    },
+    {
+      "id": "hveragerdi-greenhouse-cafe",
+      "family": "background",
+      "path": "assets/backgrounds/hveragerdi-greenhouse-cafe.png",
+      "status": "integrated",
+      "runtime": "S66"
     }
   ],
   "routingTrace": {
