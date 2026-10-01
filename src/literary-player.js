@@ -208,7 +208,7 @@ function bindStageNavigation(picture){
 }
 function goHome(){menuOpen=true;modal=null;renderMenu()}
 function startNew(){
-  if(hasSave && !window.confirm('Начать новое прохождение? Текущий прогресс этой литературной редакции будет заменён.'))return;
+  if(hasSave && !window.confirm('Начать новое прохождение? Текущий прогресс будет заменён.'))return;
   cloudLocked=true; reader=blank();persist();menuOpen=false;modal=null;renderReader();
 }
 function continueGame(){menuOpen=false;modal=null;renderReader()}
@@ -302,8 +302,8 @@ function renderReader(){
   if(art?.presentation!=='cinematic') picture.append(renderStage({...direction,mode:direction.cast.length>2?'group':direction.cast.length===2?'pair':'solo',mood:stageForScene(scene.id,reader.choices).mood}));
   picture.append(el('','literary-vignette'));app.append(picture);bindStageNavigation(picture);
   const header=el('','reader-header');
-  header.append(button('☰ Меню',goHome,'small-button'),el(`ЭПИЗОД ${scene.episode} / 10 · ${scene.id}`,'chapter-index'),el('ПОЦЕЛУЙ НА КРАЮ СВЕТА','draft-indicator'));
-  header.setAttribute('aria-label',`${scene.title}. Эпизод ${scene.episode}, сцена ${scene.id}`);
+  header.append(button('☰ Меню',goHome,'small-button'),el(`ЭПИЗОД ${scene.episode} / 10`,'chapter-index'),el('ПОЦЕЛУЙ НА КРАЮ СВЕТА','draft-indicator'));
+  header.setAttribute('aria-label',`${scene.title}. Эпизод ${scene.episode}`);
   app.append(header);
   const sheet=el('','reader-sheet');
   if(!isEnding)sheet.setAttribute('aria-label',cleanLiteraryText(scene.title));
