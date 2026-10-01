@@ -206,6 +206,22 @@ function bindStageNavigation(picture){
     activateStage(event);
   });
 }
+function bindStageTapTarget(node){
+  let pointer=null;
+  node.addEventListener('pointerdown',event=>{
+    if(event.button!==0 || isInteractiveTarget(event.target))return;
+    pointer={id:event.pointerId,x:event.clientX,y:event.clientY};
+  });
+  node.addEventListener('pointerup',event=>{
+    if(!pointer || pointer.id!==event.pointerId || isInteractiveTarget(event.target)){pointer=null;return;}
+    const moved=Math.hypot(event.clientX-pointer.x,event.clientY-pointer.y)>tapThreshold;
+    pointer=null;
+    if(moved)return;
+    activateStage(event);
+  });
+  node.addEventListener('pointercancel',()=>{pointer=null});
+  node.addEventListener('click',event=>activateStage(event));
+}
 function goHome(){menuOpen=true;modal=null;renderMenu()}
 function startNew(){
   if(hasSave && !window.confirm('Начать новое прохождение? Текущий прогресс будет заменён.'))return;
@@ -334,6 +350,7 @@ function renderReader(){
       sheet.prepend(el(endingHeadings[scene.id],'reader-scene','h2'));
     }else{sheet.append(el('Следующая сцена недоступна: ошибка структуры сценария.','reader-paragraph'));sheet.append(button('В меню',goHome,'primary'))}
   }
+  bindStageTapTarget(sheet);
   app.append(sheet);
 }
 window.addEventListener('keydown',event=>{
