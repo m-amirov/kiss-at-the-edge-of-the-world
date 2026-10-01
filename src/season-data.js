@@ -1,17 +1,17 @@
-const harbour = '/assets/backgrounds/reykjavik-harbour-master.png';
-const keflavik = '/assets/backgrounds/keflavik-airport-arrivals-v1.png';
+const harbour = '/assets/backgrounds/reykjavik-harbour-master.webp';
+const keflavik = '/assets/backgrounds/keflavik-airport-arrivals-v1.webp';
 import { createProvisionalMetadata, createStateMetadata, SAVE_SCHEMA_VERSION } from './save-state.js';
-const beach = '/assets/backgrounds/reynisfjara-master.png';
-const thingvellir = '/assets/backgrounds/thingvellir-master.png';
-const skogafoss = '/assets/backgrounds/skogafoss-master.png';
-const jokulsarlon = '/assets/backgrounds/jokulsarlon-master.png';
-const eastfjords = '/assets/backgrounds/eastfjords-road-master.png';
-const myvatn = '/assets/backgrounds/myvatn-pool-master.png';
-const akureyri = '/assets/backgrounds/akureyri-street-master.png';
-const snaefellsnes = '/assets/backgrounds/snaefellsnes-master.png';
-const ericMidCg = '/assets/cg/eric-myvattn-dawn.png';
-const nickMidCg = '/assets/cg/nick-akureyri-edit.png';
-const damirMidCg = '/assets/cg/damir-road-letter.png';
+const beach = '/assets/backgrounds/reynisfjara-master.webp';
+const thingvellir = '/assets/backgrounds/thingvellir-master.webp';
+const skogafoss = '/assets/backgrounds/skogafoss-master.webp';
+const jokulsarlon = '/assets/backgrounds/jokulsarlon-master.webp';
+const eastfjords = '/assets/backgrounds/eastfjords-road-master.webp';
+const myvatn = '/assets/backgrounds/myvatn-pool-master.webp';
+const akureyri = '/assets/backgrounds/akureyri-street-master.webp';
+const snaefellsnes = '/assets/backgrounds/snaefellsnes-master.webp';
+const ericMidCg = '/assets/cg/eric-myvattn-dawn.webp';
+const nickMidCg = '/assets/cg/nick-akureyri-edit.webp';
+const damirMidCg = '/assets/cg/damir-road-letter.webp';
 
 const L = (speaker, text) => ({ speaker, text });
 const N = text => ({ narration: true, text });
@@ -803,10 +803,10 @@ export const season = {
     ], choices: [C('finish', 'Открыть итог сезона', 'ending-router')] },
 
     'ending-router': { episode: 12, location: 'Рейкьявик · прощание', title: 'Итог', lines: [], terminal: true },
-    'ending-eric': { episode: 12, location: 'Рейкьявик · у окна', background: harbour, cg: '/assets/cg/eric-route-hand.png', title: 'Дорога, которую прокладывают вдвоём', lines: [L('Эрик', 'Можно?'), L('Алиса', 'Теперь — да.'), L('Эрик', 'Я забронировал маленькую тропу на следующий месяц. Отменю, если ты не захочешь.'), L('Алиса', 'Не отменяй заранее. Спроси меня.'), L('Эрик', 'Я хочу показать тебе план школы. Но сначала хочу услышать, есть ли у тебя на это силы.'), L('Алиса', 'Есть. И я скажу, если их не станет.'), L('Эрик', 'Тогда мы не строим жизнь из обещаний хорошей погоды.'), L('Алиса', 'Мы строим её из маршрутов, которые можно пересмотреть.'), L('Алиса', 'Мы не обещаем ясную погоду. Мы назначаем дату следующего маршрута.'), L('Алиса', 'Поцелуй оказывается не наградой за правильные выборы, а согласием продолжить разговор.')], terminal: true, ending: 'eric' },
-    'ending-nick': { episode: 12, location: 'Рейкьявик · монтажная', background: harbour, cg: '/assets/cg/nick-route-editing.png', title: 'Не вырезай главное', lines: [L('Ник', 'Я раньше думал, что если вырезать лишнее, история станет правдивее.'), L('Алиса', 'Иногда правдивее становится, когда оставляешь пространство.'), L('Ник', 'Я отправлю тебе финальный монтаж до публикации. Не потому что ты моя героиня.'), L('Алиса', 'А потому что я человек, который оказался в твоём кадре.'), L('Ник', 'Я составил список сцен, которые хочу переснять. В нём нет ни одной, где ты должна быть удобной.'), L('Алиса', 'А если я передумаю участвовать?'), L('Ник', 'Фильм изменится. Это не будет поводом убеждать тебя.'), L('Алиса', 'Она выключает запись и целует его первой.'), L('Ник', 'Я не буду это снимать.'), L('Алиса', 'Вот теперь ты понял.')], terminal: true, ending: 'nick' },
-    'ending-damir': { episode: 12, location: 'Рейкьявик · гавань', background: harbour, cg: '/assets/cg/damir-route-letter.png', title: 'Новая договорённость', lines: [L('Дамир', 'Я не могу переписать тот билет.'), L('Алиса', 'Зато можешь не покупать следующий молча.'), L('Дамир', 'Клиника ждёт моего ответа. Я скажу тебе до того, как отправлю его.'), L('Алиса', 'И я скажу, если не смогу поехать с тобой.'), L('Дамир', 'Я буду расстроен, но останусь в разговоре.'), L('Алиса', 'А я не буду обещать согласие только потому, что ты наконец спросил.'), L('Дамир', 'Это не звучит романтично.'), L('Алиса', 'Зато звучит как мы, если у нас получится.'), L('Алиса', 'Они начинают заново — с расписанием, границами и правом остановиться.')], terminal: true, ending: 'damir' },
-    'ending-alice': { episode: 12, location: 'Рейкьявик · гавань', background: harbour, cg: '/assets/cg/alice-independent-ending.png', title: 'Свой следующий маршрут', lines: [L('Ник', 'Значит, никто не победил?'), L('Алиса', 'Это не соревнование.'), L('Эрик', 'Мы всё равно можем спросить, как ты доехала.'), L('Дамир', 'И принять ответ, даже если он короткий.'), L('Алиса', 'Она идёт к гавани одна, но не одинока, и выбирает новую командировку.'), L('Ник', 'Если ты однажды захочешь вернуться, мы спросим до того, как включим камеру.'), L('Алиса', 'А если не захочу, вы всё равно останетесь частью моей истории — не владельцами её.'), L('Эрик', 'Справедливо.'), L('Дамир', 'Справедливо.'), L('Алиса', 'Свобода не отменяет близость. Она отменяет необходимость заслуживать её отказом от себя.')], terminal: true, ending: 'alice' }
+    'ending-eric': { episode: 12, location: 'Рейкьявик · у окна', background: harbour, cg: '/assets/cg/eric-route-hand.webp', title: 'Дорога, которую прокладывают вдвоём', lines: [L('Эрик', 'Можно?'), L('Алиса', 'Теперь — да.'), L('Эрик', 'Я забронировал маленькую тропу на следующий месяц. Отменю, если ты не захочешь.'), L('Алиса', 'Не отменяй заранее. Спроси меня.'), L('Эрик', 'Я хочу показать тебе план школы. Но сначала хочу услышать, есть ли у тебя на это силы.'), L('Алиса', 'Есть. И я скажу, если их не станет.'), L('Эрик', 'Тогда мы не строим жизнь из обещаний хорошей погоды.'), L('Алиса', 'Мы строим её из маршрутов, которые можно пересмотреть.'), L('Алиса', 'Мы не обещаем ясную погоду. Мы назначаем дату следующего маршрута.'), L('Алиса', 'Поцелуй оказывается не наградой за правильные выборы, а согласием продолжить разговор.')], terminal: true, ending: 'eric' },
+    'ending-nick': { episode: 12, location: 'Рейкьявик · монтажная', background: harbour, cg: '/assets/cg/nick-route-editing.webp', title: 'Не вырезай главное', lines: [L('Ник', 'Я раньше думал, что если вырезать лишнее, история станет правдивее.'), L('Алиса', 'Иногда правдивее становится, когда оставляешь пространство.'), L('Ник', 'Я отправлю тебе финальный монтаж до публикации. Не потому что ты моя героиня.'), L('Алиса', 'А потому что я человек, который оказался в твоём кадре.'), L('Ник', 'Я составил список сцен, которые хочу переснять. В нём нет ни одной, где ты должна быть удобной.'), L('Алиса', 'А если я передумаю участвовать?'), L('Ник', 'Фильм изменится. Это не будет поводом убеждать тебя.'), L('Алиса', 'Она выключает запись и целует его первой.'), L('Ник', 'Я не буду это снимать.'), L('Алиса', 'Вот теперь ты понял.')], terminal: true, ending: 'nick' },
+    'ending-damir': { episode: 12, location: 'Рейкьявик · гавань', background: harbour, cg: '/assets/cg/damir-route-letter.webp', title: 'Новая договорённость', lines: [L('Дамир', 'Я не могу переписать тот билет.'), L('Алиса', 'Зато можешь не покупать следующий молча.'), L('Дамир', 'Клиника ждёт моего ответа. Я скажу тебе до того, как отправлю его.'), L('Алиса', 'И я скажу, если не смогу поехать с тобой.'), L('Дамир', 'Я буду расстроен, но останусь в разговоре.'), L('Алиса', 'А я не буду обещать согласие только потому, что ты наконец спросил.'), L('Дамир', 'Это не звучит романтично.'), L('Алиса', 'Зато звучит как мы, если у нас получится.'), L('Алиса', 'Они начинают заново — с расписанием, границами и правом остановиться.')], terminal: true, ending: 'damir' },
+    'ending-alice': { episode: 12, location: 'Рейкьявик · гавань', background: harbour, cg: '/assets/cg/alice-independent-ending.webp', title: 'Свой следующий маршрут', lines: [L('Ник', 'Значит, никто не победил?'), L('Алиса', 'Это не соревнование.'), L('Эрик', 'Мы всё равно можем спросить, как ты доехала.'), L('Дамир', 'И принять ответ, даже если он короткий.'), L('Алиса', 'Она идёт к гавани одна, но не одинока, и выбирает новую командировку.'), L('Ник', 'Если ты однажды захочешь вернуться, мы спросим до того, как включим камеру.'), L('Алиса', 'А если не захочу, вы всё равно останетесь частью моей истории — не владельцами её.'), L('Эрик', 'Справедливо.'), L('Дамир', 'Справедливо.'), L('Алиса', 'Свобода не отменяет близость. Она отменяет необходимость заслуживать её отказом от себя.')], terminal: true, ending: 'alice' }
   }
 };
 

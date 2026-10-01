@@ -20,83 +20,83 @@ const endingHeadings = {
 // Presentation-only focal points. Values are percentages of the source image;
 // the authored visual event remains the source of truth for which asset shows.
 const focalPointByAsset = {
-  's02-roadside-cafe.png': '50% 48%',
-  's13-skaftafell-travelers.png': '50% 42%',
-  's18-hofn-dance-lights.png': '50% 44%',
-  's26-eric-choice.png': '50% 40%',
-  's23-eric-harbor-plan.png': '50% 42%',
-  's24-nick-pier-consent.png': '50% 42%',
-  's25-damir-clarity-talk.png': '50% 42%',
-  's26-nick-choice.png': '50% 42%',
-  's26-damir-choice.png': '50% 42%',
-  's26-alice-choice.png': '50% 42%',
-  's27-egilsstadir-boardwalk-portrait.png': '50% 72%',
-  's49-reykjahlid-window-dance-portrait.png': '50% 35%',
-  's29-nick-playback.png': '50% 42%',
-  's52-glove-found.png': '50% 38%',
-  's44-eric-epilogue-month-later.png': '50% 48%',
-  's45-nick-home-epilogue-month-later.png': '50% 45%',
-  's46-damir-epilogue-month-later.png': '50% 44%',
-  's47-alice-home-epilogue-month-later.png': '67% 44%'
+  's02-roadside-cafe.webp': '50% 48%',
+  's13-skaftafell-travelers.webp': '50% 42%',
+  's18-hofn-dance-lights.webp': '50% 44%',
+  's26-eric-choice.webp': '50% 40%',
+  's23-eric-harbor-plan.webp': '50% 42%',
+  's24-nick-pier-consent.webp': '50% 42%',
+  's25-damir-clarity-talk.webp': '50% 42%',
+  's26-nick-choice.webp': '50% 42%',
+  's26-damir-choice.webp': '50% 42%',
+  's26-alice-choice.webp': '50% 42%',
+  's27-egilsstadir-boardwalk-portrait.webp': '50% 72%',
+  's49-reykjahlid-window-dance-portrait.webp': '50% 35%',
+  's29-nick-playback.webp': '50% 42%',
+  's52-glove-found.webp': '50% 38%',
+  's44-eric-epilogue-month-later.webp': '50% 48%',
+  's45-nick-home-epilogue-month-later.webp': '50% 45%',
+  's46-damir-epilogue-month-later.webp': '50% 44%',
+  's47-alice-home-epilogue-month-later.webp': '67% 44%'
 };
 const portraitAssetByDesktopAsset = {
-  's06-hveragerdi-eric-alice.png':'s06-hveragerdi-eric-alice-portrait.png',
-  's07-kitchen-pasta.png':'s07-kitchen-pasta-portrait.png',
-  's07-kitchen-cards.png':'s07-kitchen-cards-portrait.png',
-  's08-guesthouse-strap.png':'s08-guesthouse-strap-portrait.png',
-  's05-hveragerdi-road.png':'s05-hveragerdi-road-portrait.png',
-  's66-hveragerdi-greenhouse.png':'s66-hveragerdi-greenhouse-portrait.png',
-  's13-skaftafell-travelers.png':'s13-skaftafell-travelers-portrait.png',
-  's18-hofn-dance-lights.png':'s18-hofn-dance-lights-portrait.png',
-  's26-eric-choice.png':'s26-eric-choice-portrait.png',
-  's23-eric-harbor-plan.png':'s23-eric-harbor-plan-portrait.png',
-  's24-nick-pier-consent.png':'s24-nick-pier-consent-portrait.png',
-  's25-damir-clarity-talk.png':'s25-damir-clarity-talk-portrait.png',
-  's26-nick-choice.png':'s26-nick-choice-portrait.png',
-  's26-damir-choice.png':'s26-damir-choice-portrait.png',
-  's26-alice-choice.png':'s26-alice-choice-portrait.png',
-  's45-reykjavik-warm-montage.png':'s45-reykjavik-warm-montage-portrait.png',
-  's46-airport-goodbye.png':'s46-airport-goodbye-portrait.png',
-  's47-reykjavik-harbour-alice.png':'s47-reykjavik-harbour-alice-portrait.png',
-  's44-eric-epilogue-month-later.png':'s44-eric-epilogue-month-later-portrait.png',
-  's45-nick-home-epilogue-month-later.png':'s45-nick-home-epilogue-month-later-portrait.png',
-  's46-damir-epilogue-month-later.png':'s46-damir-epilogue-month-later-portrait.png',
-  's47-alice-home-epilogue-month-later.png':'s47-alice-home-epilogue-month-later-portrait.png',
-  's10-vik-road-song.png':'s10-vik-road-song-portrait.png',
-  's12-vik-cafe-damir.png':'s12-vik-cafe-damir-portrait.png',
-  's14-skaftafell-pace.png':'s14-skaftafell-pace-portrait.png',
-  's16-guesthouse-help.png':'s16-guesthouse-help-portrait.png',
-  's16-kitchen-soup.png':'s16-kitchen-soup-portrait.png'
-  ,'s17-hofn-guesthouse.png':'s17-hofn-guesthouse-portrait.png'
-  ,'s19-hofn-pool.png':'s19-hofn-pool-portrait.png'
-  ,'s20-hofn-damir-kitchen.png':'s20-hofn-damir-kitchen-portrait.png'
-  ,'s21-alice-hofn-room.png':'s21-alice-hofn-room-portrait.png'
-  ,'s61-hofn-streets.png':'s61-hofn-streets-portrait.png'
-  ,'s27-egilsstadir-boardwalk.png':'s27-egilsstadir-boardwalk-portrait.png'
-  ,'s28-hverfjall-hood.png':'s28-hverfjall-hood-portrait.png'
-  ,'s49-reykjahlid-window-dance.png':'s49-reykjahlid-window-dance-portrait.png'
-  ,'s29-nick-playback.png':'s29-nick-playback-portrait.png'
-  ,'s52-glove-found.png':'s52-glove-found-portrait.png'
-  ,'s30-damir-sleeve-promise.png':'s30-damir-sleeve-promise-portrait.png'
-  ,'s55-shum-first-step.png':'s55-shum-first-step-portrait.png'
-  ,'s31-alice-independent-evening.png':'s31-alice-independent-evening-portrait.png'
-  ,'s62-alice-bookstore-choice.png':'s62-alice-bookstore-choice-portrait.png'
-  ,'s32-eric-calendar-crossroads.png':'s32-eric-calendar-crossroads-portrait.png'
-  ,'s33-nick-teaser-reveal.png':'s33-nick-teaser-reveal-portrait.png'
-  ,'s53-nick-no-camera-pool.png':'s53-nick-no-camera-pool-portrait.png'
-  ,'s34-cancelled-evening.png':'s34-cancelled-evening-portrait.png'
-  ,'s56-cafe-musicians.png':'s56-cafe-musicians-portrait.png'
-  ,'s63-alice-solo-concert.png':'s63-alice-solo-concert-portrait.png'
-  ,'s37-eric-alice-cafe.png':'s37-eric-alice-cafe-portrait.png'
+  's06-hveragerdi-eric-alice.webp':'s06-hveragerdi-eric-alice-portrait.webp',
+  's07-kitchen-pasta.webp':'s07-kitchen-pasta-portrait.webp',
+  's07-kitchen-cards.webp':'s07-kitchen-cards-portrait.webp',
+  's08-guesthouse-strap.webp':'s08-guesthouse-strap-portrait.webp',
+  's05-hveragerdi-road.webp':'s05-hveragerdi-road-portrait.webp',
+  's66-hveragerdi-greenhouse.webp':'s66-hveragerdi-greenhouse-portrait.webp',
+  's13-skaftafell-travelers.webp':'s13-skaftafell-travelers-portrait.webp',
+  's18-hofn-dance-lights.webp':'s18-hofn-dance-lights-portrait.webp',
+  's26-eric-choice.webp':'s26-eric-choice-portrait.webp',
+  's23-eric-harbor-plan.webp':'s23-eric-harbor-plan-portrait.webp',
+  's24-nick-pier-consent.webp':'s24-nick-pier-consent-portrait.webp',
+  's25-damir-clarity-talk.webp':'s25-damir-clarity-talk-portrait.webp',
+  's26-nick-choice.webp':'s26-nick-choice-portrait.webp',
+  's26-damir-choice.webp':'s26-damir-choice-portrait.webp',
+  's26-alice-choice.webp':'s26-alice-choice-portrait.webp',
+  's45-reykjavik-warm-montage.webp':'s45-reykjavik-warm-montage-portrait.webp',
+  's46-airport-goodbye.webp':'s46-airport-goodbye-portrait.webp',
+  's47-reykjavik-harbour-alice.webp':'s47-reykjavik-harbour-alice-portrait.webp',
+  's44-eric-epilogue-month-later.webp':'s44-eric-epilogue-month-later-portrait.webp',
+  's45-nick-home-epilogue-month-later.webp':'s45-nick-home-epilogue-month-later-portrait.webp',
+  's46-damir-epilogue-month-later.webp':'s46-damir-epilogue-month-later-portrait.webp',
+  's47-alice-home-epilogue-month-later.webp':'s47-alice-home-epilogue-month-later-portrait.webp',
+  's10-vik-road-song.webp':'s10-vik-road-song-portrait.webp',
+  's12-vik-cafe-damir.webp':'s12-vik-cafe-damir-portrait.webp',
+  's14-skaftafell-pace.webp':'s14-skaftafell-pace-portrait.webp',
+  's16-guesthouse-help.webp':'s16-guesthouse-help-portrait.webp',
+  's16-kitchen-soup.webp':'s16-kitchen-soup-portrait.webp'
+  ,'s17-hofn-guesthouse.webp':'s17-hofn-guesthouse-portrait.webp'
+  ,'s19-hofn-pool.webp':'s19-hofn-pool-portrait.webp'
+  ,'s20-hofn-damir-kitchen.webp':'s20-hofn-damir-kitchen-portrait.webp'
+  ,'s21-alice-hofn-room.webp':'s21-alice-hofn-room-portrait.webp'
+  ,'s61-hofn-streets.webp':'s61-hofn-streets-portrait.webp'
+  ,'s27-egilsstadir-boardwalk.webp':'s27-egilsstadir-boardwalk-portrait.webp'
+  ,'s28-hverfjall-hood.webp':'s28-hverfjall-hood-portrait.webp'
+  ,'s49-reykjahlid-window-dance.webp':'s49-reykjahlid-window-dance-portrait.webp'
+  ,'s29-nick-playback.webp':'s29-nick-playback-portrait.webp'
+  ,'s52-glove-found.webp':'s52-glove-found-portrait.webp'
+  ,'s30-damir-sleeve-promise.webp':'s30-damir-sleeve-promise-portrait.webp'
+  ,'s55-shum-first-step.webp':'s55-shum-first-step-portrait.webp'
+  ,'s31-alice-independent-evening.webp':'s31-alice-independent-evening-portrait.webp'
+  ,'s62-alice-bookstore-choice.webp':'s62-alice-bookstore-choice-portrait.webp'
+  ,'s32-eric-calendar-crossroads.webp':'s32-eric-calendar-crossroads-portrait.webp'
+  ,'s33-nick-teaser-reveal.webp':'s33-nick-teaser-reveal-portrait.webp'
+  ,'s53-nick-no-camera-pool.webp':'s53-nick-no-camera-pool-portrait.webp'
+  ,'s34-cancelled-evening.webp':'s34-cancelled-evening-portrait.webp'
+  ,'s56-cafe-musicians.webp':'s56-cafe-musicians-portrait.webp'
+  ,'s63-alice-solo-concert.webp':'s63-alice-solo-concert-portrait.webp'
+  ,'s37-eric-alice-cafe.webp':'s37-eric-alice-cafe-portrait.webp'
 };
 function assetFileForViewport(art){
   const portrait=window.matchMedia?.('(max-width: 680px) and (orientation: portrait)').matches;
   return portrait ? (portraitAssetByDesktopAsset[art.file]??art.file) : art.file;
 }
-const stageAsset = { alice:'alice-stage.png', eric:'eric-stage.png', nick:'nick-stage.png', damir:'damir-stage.png' };
+const stageAsset = { alice:'alice-stage.webp', eric:'eric-stage.webp', nick:'nick-stage.webp', damir:'damir-stage.webp' };
 // This value is consumed by a url() inside src/literary.css; resolve from the
 // stylesheet directory so the cover never becomes /src/assets/... at runtime.
-const cover = '../assets/backgrounds/snaefellsnes-master.png';
+const cover = '../assets/backgrounds/snaefellsnes-master.webp';
 const blank = () => ({ schemaVersion:3,sceneId:'S01',position:0,choices:{},finished:false, visited:['S01'],runId:`literary-${Date.now()}-${crypto.randomUUID?.() ?? Math.random().toString(36).slice(2)}`, revision:0 });
 function parseSaved(raw) {
   try {
@@ -137,6 +137,45 @@ function el(value='',className='',tag='div'){
 function button(label,handler,className=''){
   const b=el(label,className,'button');b.type='button';b.addEventListener('click',handler);return b;
 }
+const interactiveSelector='button,a,input,select,textarea,summary,[role="button"],[role="link"],[contenteditable="true"],[data-interactive]';
+const tapThreshold=10;
+let lastStageActionAt=0;
+function isInteractiveTarget(target){return target instanceof Element && Boolean(target.closest(interactiveSelector));}
+function advanceNarrative(){
+  if(menuOpen)return false;
+  const scene=byId.get(reader.sceneId);if(!scene)return false;
+  const flow=compileInteractivePlayback(scene,reader.choices);
+  const current=flow[reader.position];
+  if(current?.type==='page'){
+    reader.position=Math.min(reader.position+1,flow.length);
+  }else if(current?.type==='choice'){
+    return false;
+  }else{
+    const next=nextLiteraryScene(reader.sceneId,reader.choices);
+    if(!next || !byId.has(next))return false;
+    reader.sceneId=next;reader.position=0;
+    if(!reader.visited.includes(next))reader.visited.push(next);
+  }
+  persist();renderReader();return true;
+}
+function bindStageNavigation(picture){
+  let pointer=null;
+  picture.addEventListener('pointerdown',event=>{
+    if(event.button!==0 || isInteractiveTarget(event.target))return;
+    pointer={id:event.pointerId,x:event.clientX,y:event.clientY};
+  });
+  picture.addEventListener('pointerup',event=>{
+    if(!pointer || pointer.id!==event.pointerId || isInteractiveTarget(event.target)){pointer=null;return;}
+    const moved=Math.hypot(event.clientX-pointer.x,event.clientY-pointer.y)>tapThreshold;
+    pointer=null;
+    if(moved)return;
+    const now=performance.now();
+    if(now-lastStageActionAt<180)return;
+    lastStageActionAt=now;
+    advanceNarrative();
+  });
+  picture.addEventListener('pointercancel',()=>{pointer=null});
+}
 function goHome(){menuOpen=true;modal=null;renderMenu()}
 function startNew(){
   if(hasSave && !window.confirm('Начать новое прохождение? Текущий прогресс этой литературной редакции будет заменён.'))return;
@@ -175,43 +214,19 @@ function settingsPanel(section){
   function draw(){size.textContent=`Размер текста · ${Math.round(settings.scale*100)}%`;contrast.textContent=`Повышенная контрастность · ${settings.contrast?'да':'нет'}`;motion.textContent=`Анимация · ${settings.motion?'отключена':'системная'}`}
   draw();section.append(size,contrast,motion);
 }
-function galleryPanel(section){
-  const images=[
-    ['Кефлавик', 'backgrounds', 'keflavik-airport-arrivals-v1.png'],
-    ['Рейкьявик', 'backgrounds', 'reykjavik-harbour-master.png'],
-    ['Skógafoss', 'backgrounds', 'skogafoss-master.png'],
-    ['Snæfellsnes', 'backgrounds', 'snaefellsnes-master.png'],
-    ['Планирование маршрута', 'cg', 's02-expedition-planning-iceland.png'],
-    ['Скафтафетль', 'cg', 's13-skaftafell-travelers.png'],
-    ['Танец в Höfn', 'cg', 's18-hofn-dance-lights.png'],
-    ['Монтаж Ника', 'cg', 's45-reykjavik-warm-montage.png'],
-    ['Прощание Дамира', 'cg', 's46-airport-goodbye.png'],
-    ['Финал Алисы', 'cg', 's47-reykjavik-harbour-alice.png']
-  ];
-  const gallery=el('','literary-gallery');
-  for(const [name,folder,file] of images){
-    const fig=el('','','figure');
-    const img=el('','','img');
-    img.src=`./assets/${folder}/${file}`;
-    img.alt=name;
-    img.loading='lazy';
-    fig.append(img,el(name,'','figcaption'));
-    gallery.append(fig);
-  }
-  section.append(gallery);
-}
 function renderMenu(){
   menuOpen=true;app.className='literary-home';app.dataset.presentation=modal?`menu-${modal.toLowerCase()}`:'menu-home';app.style.setProperty('--cover',`url('${cover}')`);app.replaceChildren();
   const section=el('','literary-home-card');app.append(section);
   section.append(el('РОМАНТИЧЕСКАЯ ИСТОРИЯ · ИСЛАНДИЯ','kicker'),el('Поцелуй на краю света','home-title','h1'));
-  if(modal){const draw={Эпизоды:episodeSelection,Настройки:settingsPanel,Галерея:galleryPanel}[modal];section.append(panel(modal,draw??(x=>x.append(el('Четыре самостоятельных исхода: Эрик, Ник, Дамир и Алиса. Прогресс этой редакции сохраняется отдельно от прежней короткой версии.','home-summary')))));return;}
+  if(modal){const draw={Эпизоды:episodeSelection,Настройки:settingsPanel}[modal];section.append(panel(modal,draw??(x=>x.append(el('Четыре самостоятельных исхода: Эрик, Ник, Дамир и Алиса. Прогресс этой редакции сохраняется отдельно от прежней короткой версии.','home-summary')))));return;}
   section.append(el('Три недели дороги. Три возможные истории любви. И возможность выбрать себя.','home-summary'));
   const actions=el('','home-actions');
   if(hasSave)actions.append(button(`Продолжить · эпизод ${byId.get(reader.sceneId).episode}`,continueGame,'primary'));
-  actions.append(button('Новая игра',startNew,'primary'));
-  for(const name of ['Эпизоды','Настройки','Галерея','Об игре'])actions.append(button(name,()=>{modal=name;renderMenu()}));
+  actions.append(button('Новая игра',startNew,hasSave?'':'primary'));
+  const secondary=el('','home-actions-secondary');
+  for(const name of ['Эпизоды','Настройки'])secondary.append(button(name,()=>{modal=name;renderMenu()}));
+  actions.append(secondary);
   section.append(actions);
-  section.append(el('История доступна от начала до одного из четырёх финалов. Финальная редакторская и платформенная приёмка ещё не пройдена.','small-note'));
   if(cloudCandidate)section.append(button('Восстановить облачный прогресс',()=>{if(!window.confirm('Заменить текущее локальное сохранение облачным?'))return;cloudLocked=true;reader=cloudCandidate;cloudCandidate=null;persist();continueGame()}));
 }
 function renderStage(direction) {
@@ -255,7 +270,7 @@ function renderReader(){
   if(art){const file=assetFileForViewport(art);const img=el('','','img');img.src=`./assets/${art.type==='cg'?'cg':'backgrounds'}/${file}`;img.alt='';img.decoding='async';img.dataset.desktopAsset=art.file;img.dataset.asset=file;picture.append(img);picture.style.setProperty('--focus',focalPointByAsset[file]??focalPointByAsset[art.file]??'50% 50%');if(art.type==='cg'){picture.classList.add('is-cg');picture.style.setProperty('--cg-url',`url("${img.src}")`)}}
   else picture.classList.add('no-art');
   if(art?.presentation!=='cinematic') picture.append(renderStage({...direction,mode:direction.cast.length>2?'group':direction.cast.length===2?'pair':'solo',mood:stageForScene(scene.id,reader.choices).mood}));
-  picture.append(el('','literary-vignette'));app.append(picture);
+  picture.append(el('','literary-vignette'));app.append(picture);bindStageNavigation(picture);
   const header=el('','reader-header');
   header.append(button('☰ Меню',goHome,'small-button'),el(`ЭПИЗОД ${scene.episode} / 10 · ${scene.id}`,'chapter-index'),el('ПОЦЕЛУЙ НА КРАЮ СВЕТА','draft-indicator'));
   header.setAttribute('aria-label',`${scene.title}. Эпизод ${scene.episode}, сцена ${scene.id}`);
@@ -269,9 +284,7 @@ function renderReader(){
     sheet.append(content);
     const footer=el('','reader-footer');
     footer.append(el(`${reader.position+1} / ${flow.length}`,'page-counter'));
-    const nextDecision=flow.findIndex((entry,index)=>index>reader.position+1 && entry.type==='choice');
-    if(nextDecision>=0)footer.append(button('К выбору ⇢',()=>{reader.position=nextDecision;persist();renderReader()},'skip-to-choice'));
-    footer.append(button('Далее →',()=>{reader.position++;persist();renderReader()},'primary'));
+    footer.append(el('','advance-cue','span'));
     sheet.append(footer);
   } else if(current?.type==='choice'){
     const content=el('','reader-content');
@@ -294,9 +307,8 @@ function renderReader(){
   app.append(sheet);
 }
 window.addEventListener('keydown',event=>{
-  if(menuOpen || !['Enter',' ','ArrowRight'].includes(event.key) || event.altKey || event.ctrlKey || event.metaKey || ['BUTTON','INPUT','TEXTAREA'].includes(document.activeElement?.tagName))return;
-  const actions=app.querySelectorAll('.reader-footer button, .reader-sheet > button.primary');
-  if(actions.length===1){event.preventDefault();actions[0].click()}
+  if(menuOpen || !['Enter',' ','Spacebar','ArrowRight'].includes(event.key) || event.altKey || event.ctrlKey || event.metaKey || isInteractiveTarget(event.target) || isInteractiveTarget(document.activeElement))return;
+  if(advanceNarrative())event.preventDefault();
 });
 applySettings();renderMenu();
 // Versioned cloud key: never interpret old 12-episode progression as new literary scenes.

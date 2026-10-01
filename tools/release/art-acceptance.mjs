@@ -49,6 +49,11 @@ export function verifyArtAcceptance({ root, recordPath = DEFAULT_RECORD, recordO
   const manifest = JSON.parse(fs.readFileSync(manifestFile, 'utf8'));
   const runtimeMapping = fs.existsSync(absolute(projectRoot, 'src/literary-visual-directions.js'))
     ? fs.readFileSync(absolute(projectRoot, 'src/literary-visual-directions.js'), 'utf8') : '';
+  let transcode = null;
+  const transcodeFile = absolute(projectRoot, 'artifacts/evidence/runtime-transcode-acceptance.json');
+  if (fs.existsSync(transcodeFile)) {
+    try { transcode = JSON.parse(fs.readFileSync(transcodeFile, 'utf8')); } catch { transcode = null; }
+  }
   for (const asset of record.acceptedAssets ?? []) {
     const file = absolute(projectRoot, asset.path);
     if (!fs.existsSync(file)) return block('ART_ACCEPTANCE_ASSET_HASH_MISMATCH', `Accepted asset is missing: ${asset.path}`);
@@ -57,7 +62,10 @@ export function verifyArtAcceptance({ root, recordPath = DEFAULT_RECORD, recordO
       return block('ART_ACCEPTANCE_MAPPING_MISMATCH', `Accepted asset is absent from the current manifest: ${asset.path}`);
     }
     if (record.compatibility?.manifestMappings === 'PASS' && !runtimeMapping.includes(path.basename(asset.path))) {
-      return block('ART_ACCEPTANCE_MAPPING_MISMATCH', `Accepted asset is absent from the current runtime mapping: ${asset.path}`);
+      const derived = transcode?.runtimeAssets?.find(item => item.sourcePath === asset.path);
+      if (!derived || transcode.status !== 'PASS' || !fs.existsSync(absolute(projectRoot, derived.runtimePath)) || !runtimeMapping.includes(path.basename(derived.runtimePath))) {
+        return block('ART_ACCEPTANCE_MAPPING_MISMATCH', `Accepted asset is absent from the current runtime mapping: ${asset.path}`);
+      }
     }
   }
   return { status: 'PASS', code: null, reason: 'Current worktree matches persisted production-art acceptance.', recordPath };

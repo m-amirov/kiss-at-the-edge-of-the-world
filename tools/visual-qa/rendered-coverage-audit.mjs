@@ -48,7 +48,7 @@ try {
       page.on('response', response => { if (response.url().includes('/assets/')) responses.push({ url: response.url(), status: response.status() }); });
       await page.addInitScript(({ key, value }) => localStorage.setItem(key, JSON.stringify(value)), { key: literarySaveKey, value: stateFor(scene, target.index) });
       await page.goto(baseUrl, { waitUntil: 'networkidle' });
-      await page.getByRole('button', { name: /Продолжить/ }).click();
+      await page.getByRole('button', { name: /Продолжить|Новая игра/ }).first().click();
       await page.locator('.literary-picture').waitFor();
       await page.waitForTimeout(50);
       const readback = await page.evaluate(() => {
@@ -80,8 +80,10 @@ try {
       await page.screenshot({ path: screenshot });
       const bytes = await fs.readFile(screenshot);
       const desktopFile = target.direction.art?.file ?? null;
-      const portraitCandidate = desktopFile && path.join(root, 'assets', target.direction.art.type === 'cg' ? 'cg' : 'backgrounds', desktopFile.replace('.png', '-portrait.png'));
-      const expectedFile = viewport.width < 680 && portraitCandidate && await fs.stat(portraitCandidate).then(() => desktopFile.replace('.png', '-portrait.png')).catch(() => desktopFile) || desktopFile;
+      const extension = desktopFile ? path.extname(desktopFile) : '';
+      const portraitName = desktopFile && `${desktopFile.slice(0, -extension.length)}-portrait${extension}`;
+      const portraitCandidate = desktopFile && path.join(root, 'assets', target.direction.art.type === 'cg' ? 'cg' : 'backgrounds', portraitName);
+      const expectedFile = viewport.width < 680 && portraitCandidate && await fs.stat(portraitCandidate).then(() => portraitName).catch(() => desktopFile) || desktopFile;
       const expected = target.direction.art ? `${target.direction.art.type === 'cg' ? 'cg' : 'background'}/${expectedFile}` : null;
       const assetLoaded = readback.imageComplete && readback.natural[0] > 0 && readback.natural[1] > 0 && readback.imageOpacity !== '0' && readback.imageDisplay !== 'none' && readback.imageVisibility !== 'hidden';
       const status = expected ? (assetLoaded && readback.asset && `${readback.mode === 'cinematic' ? 'cg' : 'background'}/${readback.asset}` === expected && !errors.length ? 'PASS' : 'FAIL') : (!readback.asset && readback.mode === 'environment' ? 'INTENTIONAL_NO_ART' : 'FAIL');

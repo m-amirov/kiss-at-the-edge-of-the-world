@@ -93,9 +93,9 @@ const common = commonLines(commonRaw);
 export const s18Preview = {
   id: 'S18-preview', episode: 5,
   title: 'Маяк. Эрик и неотправленная открытка',
-  background: '/assets/backgrounds/s18-hofn-harbour.png',
-  cg: '/assets/cg/s18-hofn-dance.png',
-  danceCg: '/assets/cg/s18-hofn-dance-action.png',
+  background: '/assets/backgrounds/s18-hofn-harbour.webp',
+  cg: '/assets/cg/s18-hofn-dance.webp',
+  danceCg: '/assets/cg/s18-hofn-dance-action.webp',
   lines: buildEvening(baseRaw),
   choices: [
     {id: 'kiss', label: 'Поцеловать Эрика'},

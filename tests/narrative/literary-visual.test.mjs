@@ -53,12 +53,12 @@ test('S02 keeps the current production road background until the authored cafe c
  assert.equal(shot('S02',flow,0,choices).location,'Автомобиль по дороге в Рейкьявик');
  // Baseline updated for cf0cb3d: the release mapping intentionally added the
  // integrated road-trip environment at scene start; the cafe cue remains exact.
- assert.equal(shot('S02',flow,0,choices).art?.file,'road-trip-van-interior-rain.png');
+ assert.equal(shot('S02',flow,0,choices).art?.file,'road-trip-van-interior-rain.webp');
  const cafe=indexOfSource(flow,0,31);
  assert.equal(shot('S02',flow,cafe,choices).beatId,'roadside-cafe');
- assert.equal(shot('S02',flow,cafe,choices).art?.file,'s02-roadside-cafe.png');
+ assert.equal(shot('S02',flow,cafe,choices).art?.file,'s02-roadside-cafe.webp');
  assert.equal(shot('S02',flow,cafe,choices).art?.type,'background');
- assert.equal(shot('S02',flow,cafe-1,choices).art?.file,'road-trip-van-interior-rain.png');
+ assert.equal(shot('S02',flow,cafe-1,choices).art?.file,'road-trip-van-interior-rain.webp');
  assert.ok(flow.every((e,i)=>shot('S02',flow,i,choices).art?.type!=='cg'));
 });
 
@@ -69,8 +69,8 @@ test('S66 greenhouse uses the authored environment and its independent portrait 
  // Baseline updated for cf0cb3d: current integrated runtime mapping uses the
  // accepted greenhouse-cafe background; the dedicated S66 asset remains a
  // manifest candidate/reference and is not the active scene-start mapping.
- assert.equal(opening.art?.file,'hveragerdi-greenhouse-cafe.png');
- assert.ok(fs.existsSync(new URL('../../assets/backgrounds/hveragerdi-greenhouse-cafe.png',import.meta.url)));
+ assert.equal(opening.art?.file,'hveragerdi-greenhouse-cafe.webp');
+ assert.ok(fs.existsSync(new URL('../../assets/backgrounds/hveragerdi-greenhouse-cafe.webp',import.meta.url)));
 });
 
 test('S05 Hveragerði road uses the authored desktop background and independent portrait mapping',()=>{
@@ -78,15 +78,15 @@ test('S05 Hveragerði road uses the authored desktop background and independent 
  const opening=shot('S05',flow,0,choices);
  // Baseline updated for cf0cb3d: S05 now reuses the integrated rain-road
  // environment shared with the later south-coast route.
- assert.equal(opening.art?.file,'south-coast-road-rain.png');
- assert.ok(fs.existsSync(new URL('../../assets/backgrounds/south-coast-road-rain.png',import.meta.url)));
+ assert.equal(opening.art?.file,'south-coast-road-rain.webp');
+ assert.ok(fs.existsSync(new URL('../../assets/backgrounds/south-coast-road-rain.webp',import.meta.url)));
 });
 
 test('S06-S08 pilot uses authored cinematic events with independent portrait assets',()=>{
  const expected={
-  S06:['s06-eric-alice-stream','s06-hveragerdi-eric-alice.png',['alice','eric'],[6,6]],
-  S07:['s07-kitchen-pasta','s07-kitchen-pasta.png',['alice','nick','eric','damir'],[3,0]],
-  S08:['s08-guesthouse-strap','s08-guesthouse-strap.png',['alice','damir'],[2,0]]
+  S06:['s06-eric-alice-stream','s06-hveragerdi-eric-alice.webp',['alice','eric'],[6,6]],
+  S07:['s07-kitchen-pasta','s07-kitchen-pasta.webp',['alice','nick','eric','damir'],[3,0]],
+  S08:['s08-guesthouse-strap','s08-guesthouse-strap.webp',['alice','damir'],[2,0]]
  };
  for(const [id,[beat,file,cast,ref]] of Object.entries(expected)){
   const {flow,choices}=complete(id);
@@ -97,7 +97,7 @@ test('S06-S08 pilot uses authored cinematic events with independent portrait ass
   assert.equal(shotAt.art?.file,file);
   assert.deepEqual(shotAt.cast,cast);
   assert.ok(fs.existsSync(new URL(`../../assets/cg/${file}`,import.meta.url)));
-  assert.ok(fs.existsSync(new URL(`../../assets/cg/${file.replace('.png','-portrait.png')}`,import.meta.url)));
+  assert.ok(fs.existsSync(new URL(`../../assets/cg/${file.replace('.webp','-portrait.webp')}`,import.meta.url)));
  }
  const {flow,choices}=complete('S07');
  const cards=indexOfSource(flow,3,42);
@@ -107,8 +107,8 @@ test('S06-S08 pilot uses authored cinematic events with independent portrait ass
 
 test('S10 and S12 use bounded cinematic events and clear them at the location transition',()=>{
  const expected={
-  S10:{beat:'s10-vik-road-song',file:'s10-vik-road-song.png',cast:['alice','eric'],ref:[0,0],clear:[6,0]},
-  S12:{beat:'s12-vik-cafe-damir',file:'s12-vik-cafe-damir.png',cast:['alice','damir'],ref:[0,0],clear:[11,0]}
+  S10:{beat:'s10-vik-road-song',file:'s10-vik-road-song.webp',cast:['alice','eric'],ref:[0,0],clear:[6,0]},
+  S12:{beat:'s12-vik-cafe-damir',file:'s12-vik-cafe-damir.webp',cast:['alice','damir'],ref:[0,0],clear:[11,0]}
  };
  for(const [id,cfg] of Object.entries(expected)){
   const {flow,choices}=complete(id);
@@ -118,7 +118,7 @@ test('S10 and S12 use bounded cinematic events and clear them at the location tr
   assert.equal(shotAt.art?.file,cfg.file);
   assert.deepEqual(shotAt.cast,cfg.cast);
   assert.ok(fs.existsSync(new URL(`../../assets/cg/${cfg.file}`,import.meta.url)));
-  assert.ok(fs.existsSync(new URL(`../../assets/cg/${cfg.file.replace('.png','-portrait.png')}`,import.meta.url)));
+  assert.ok(fs.existsSync(new URL(`../../assets/cg/${cfg.file.replace('.webp','-portrait.webp')}`,import.meta.url)));
   const cleared=indexOfSource(flow,...cfg.clear);
   assert.equal(shot(id,flow,cleared,choices).art,null);
   assert.notEqual(shot(id,flow,cleared,choices).beatId,cfg.beat);
@@ -127,10 +127,10 @@ test('S10 and S12 use bounded cinematic events and clear them at the location tr
 
 test('S13-S16 preserve environment transitions and use only authored cinematic events',()=>{
  const expected={
-  S13:[['skaftafell-parking',[0,7],null,'environment'],['skaftafell-notebook',[0,12],'s13-skaftafell-travelers.png','cinematic']],
-  S14:[['s14-skaftafell-pace',[0,0],'s14-skaftafell-pace.png','cinematic'],['s14-lagoon-road',[7,0],null,'environment']],
-  S15:[['jokulsarlon-lagoon',[0,5],'jokulsarlon-master.png','environment']],
-  S16:[['s16-guesthouse-help',[0,1],'s16-guesthouse-help.png','cinematic'],['s16-kitchen-soup',[4,0],'s16-kitchen-soup.png','cinematic']]
+  S13:[['skaftafell-parking',[0,7],null,'environment'],['skaftafell-notebook',[0,12],'s13-skaftafell-travelers.webp','cinematic']],
+  S14:[['s14-skaftafell-pace',[0,0],'s14-skaftafell-pace.webp','cinematic'],['s14-lagoon-road',[7,0],null,'environment']],
+  S15:[['jokulsarlon-lagoon',[0,5],'jokulsarlon-master.webp','environment']],
+  S16:[['s16-guesthouse-help',[0,1],'s16-guesthouse-help.webp','cinematic'],['s16-kitchen-soup',[4,0],'s16-kitchen-soup.webp','cinematic']]
  };
  for(const [id,events] of Object.entries(expected)){
   const {flow,choices}=complete(id);
@@ -143,7 +143,7 @@ test('S13-S16 preserve environment transitions and use only authored cinematic e
    }else assert.equal(shotAt.art,null);
    if(file){
     assert.ok(fs.existsSync(new URL(`../../assets/${presentation==='cinematic'?'cg':'backgrounds'}/${file}`,import.meta.url)));
-    if(presentation==='cinematic')assert.ok(fs.existsSync(new URL(`../../assets/cg/${file.replace('.png','-portrait.png')}`,import.meta.url)));
+    if(presentation==='cinematic')assert.ok(fs.existsSync(new URL(`../../assets/cg/${file.replace('.webp','-portrait.webp')}`,import.meta.url)));
    }
   }
  }
@@ -156,9 +156,9 @@ test('S13 visitor center precedes notebook CG; image is not used in Vik',()=>{
  const arrival=indexOfSource(flow,0,7),notebook=indexOfSource(flow,0,12);
  // Baseline updated for cf0cb3d: a scene-start environment is now present,
  // then the authored parking cue intentionally clears it before the notebook CG.
- assert.equal(shot('S13',flow,0,choices).art?.file,'guesthouse-common-kitchen-evening.png');
+ assert.equal(shot('S13',flow,0,choices).art?.file,'guesthouse-common-kitchen-evening.webp');
  assert.equal(shot('S13',flow,arrival,choices).art,null);
- assert.equal(shot('S13',flow,notebook,choices).art?.file,'s13-skaftafell-travelers.png');
+ assert.equal(shot('S13',flow,notebook,choices).art?.file,'s13-skaftafell-travelers.webp');
  assert.ok(arrival<notebook);
 });
 
@@ -166,7 +166,7 @@ test('S18 dance happens before the kiss choice on all options; walking back and 
  for(const option of ['A','B','C']){
   const {flow,choices}=complete('S18',{'S17-C2':'A','S18-C1':option});
   const dance=indexOfSource(flow,0,35),walk=indexOfSource(flow,0,39),morning=indexOfSource(flow,5,1),breakfast=indexOfSource(flow,5,3);
-  assert.equal(shot('S18',flow,dance,choices).art?.file,'s18-hofn-dance-lights.png');
+  assert.equal(shot('S18',flow,dance,choices).art?.file,'s18-hofn-dance-lights.webp');
   assert.equal(shot('S18',flow,walk,choices).art?.type,'background');
   assert.equal(shot('S18',flow,morning,choices).art,null);
   assert.deepEqual(shot('S18',flow,breakfast,choices).cast,['alice','eric','nick','damir']);
@@ -175,16 +175,16 @@ test('S18 dance happens before the kiss choice on all options; walking back and 
 });
 
 test('finale location and art change at the literal month-later epilogue for all four routes',()=>{
- const cfg={S44:['s44-eric-epilogue-month-later.png',4],S45:['s45-nick-home-epilogue-month-later.png',4],S46:['s46-damir-epilogue-month-later.png',4],S47:['s47-alice-home-epilogue-month-later.png',4]};
+ const cfg={S44:['s44-eric-epilogue-month-later.webp',4],S45:['s45-nick-home-epilogue-month-later.webp',4],S46:['s46-damir-epilogue-month-later.webp',4],S47:['s47-alice-home-epilogue-month-later.webp',4]};
  for(const [id,[expectedCG,chapter]] of Object.entries(cfg)){
   const {flow,choices}=complete(id);
   const first=shot(id,flow,0,choices);
-  if(id==='S45')assert.equal(first.art?.file,'s45-reykjavik-warm-montage.png');
+  if(id==='S45')assert.equal(first.art?.file,'s45-reykjavik-warm-montage.webp');
   if(id==='S46')assert.equal(first.art,null);
-  if(id==='S47')assert.equal(first.art?.file,'s47-reykjavik-harbour-alice.png');
+  if(id==='S47')assert.equal(first.art?.file,'s47-reykjavik-harbour-alice.webp');
   if(id==='S46'){
    assert.equal(first.art,null);
-   assert.equal(shot(id,flow,indexOfSource(flow,0,1),choices).art?.file,'s46-airport-goodbye.png');
+   assert.equal(shot(id,flow,indexOfSource(flow,0,1),choices).art?.file,'s46-airport-goodbye.webp');
   }
   const month=indexOfSource(flow,chapter,0);
   const final=shot(id,flow,month,choices);
@@ -211,14 +211,14 @@ test('S26 Eric CG appears only at the authored consensual embrace and stays isol
   const routeChunk={A:2,B:8,C:14,D:20}[route];
   const routeAt=indexOfSource(flow,routeChunk,0);
   const embraceAt=route==='A'?indexOfSource(flow,7,0):routeAt;
-  assert.notEqual(shot('S26',flow,routeAt,choices).art?.file,'s26-eric-choice.png');
-  if(route==='A') assert.equal(shot('S26',flow,embraceAt,choices).art?.file,'s26-eric-choice.png');
-  else assert.notEqual(shot('S26',flow,embraceAt,choices).art?.file,'s26-eric-choice.png');
+  assert.notEqual(shot('S26',flow,routeAt,choices).art?.file,'s26-eric-choice.webp');
+  if(route==='A') assert.equal(shot('S26',flow,embraceAt,choices).art?.file,'s26-eric-choice.webp');
+  else assert.notEqual(shot('S26',flow,embraceAt,choices).art?.file,'s26-eric-choice.webp');
  }
 });
 
 test('S26 non-Eric route CGs appear only after their own route lock',()=>{
- const expected={B:['route-nick','s26-nick-choice.png',8],C:['route-damir','s26-damir-choice.png',14],D:['route-independent','s26-alice-choice.png',20]};
+ const expected={B:['route-nick','s26-nick-choice.webp',8],C:['route-damir','s26-damir-choice.webp',14],D:['route-independent','s26-alice-choice.webp',20]};
  for(const [route,[beat,file,chunk]] of Object.entries(expected)){
   const {flow,choices}=complete('S26',{'S26-C90':'A','S26-C1':route});
   const before=indexOfSource(flow,chunk,0)-1;
@@ -233,20 +233,20 @@ test('S02 and S26 visual state survives a save/load-shaped choice round trip',()
  const s02=complete('S02');
  const s02Saved=JSON.parse(JSON.stringify(s02.choices));
  const s02Cafe=indexOfSource(s02.flow,0,31);
- assert.equal(shot('S02',s02.flow,s02Cafe,s02Saved).art?.file,'s02-roadside-cafe.png');
+ assert.equal(shot('S02',s02.flow,s02Cafe,s02Saved).art?.file,'s02-roadside-cafe.webp');
  const s26=complete('S26',{'S26-C90':'A','S26-C1':'A'});
  const s26Saved=JSON.parse(JSON.stringify(s26.choices));
  const s26Eric=indexOfSource(s26.flow,7,0);
- assert.equal(shot('S26',s26.flow,s26Eric,s26Saved).art?.file,'s26-eric-choice.png');
+ assert.equal(shot('S26',s26.flow,s26Eric,s26Saved).art?.file,'s26-eric-choice.webp');
 });
 
 test('completion position retains the month-later CG and a fresh scene cannot inherit it',()=>{
- const expected={S44:'s44-eric-epilogue-month-later.png',S45:'s45-nick-home-epilogue-month-later.png',S46:'s46-damir-epilogue-month-later.png',S47:'s47-alice-home-epilogue-month-later.png'};
+ const expected={S44:'s44-eric-epilogue-month-later.webp',S45:'s45-nick-home-epilogue-month-later.webp',S46:'s46-damir-epilogue-month-later.webp',S47:'s47-alice-home-epilogue-month-later.webp'};
  for(const [id,file] of Object.entries(expected)){
   const {flow,choices}=complete(id);
   const terminal=visualEntryForPosition(flow,flow.length);
   const final=visualAt(id,terminal,choices,stageForScene(id,choices).cast);
   assert.equal(final.art?.file,file,`${id} completion must retain its final CG`);
-  assert.equal(visualAt('S01',null,{},stageForScene('S01',{}).cast).art?.file,'keflavik-airport-arrivals-v1.png');
+   assert.equal(visualAt('S01',null,{},stageForScene('S01',{}).cast).art?.file,'keflavik-airport-arrivals-v1.webp');
  }
 });

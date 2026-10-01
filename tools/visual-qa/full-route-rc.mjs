@@ -23,14 +23,14 @@ try {
       value: { schemaVersion: 3, sceneId: 'S01', position: 0, choices: {}, finished: false, visited: ['S01'], runId: `rc-${route}-${viewport.width}-${Date.now()}`, revision: 0 }
     });
     await page.goto(baseUrl, { waitUntil: 'domcontentloaded' });
-    await page.getByRole('button', { name: /Продолжить/ }).click();
+    await page.getByRole('button', { name: /Продолжить|Новая игра/ }).first().click();
     let steps = 0; let terminal = null;
     while (steps < 1600) {
       const state = await page.evaluate((routeCode) => {
         const qa = window.__LITERARY_QA__;
         const saved = qa.getState(); const screen = qa.getScreen(); const flow = qa.getFlow(); const current = flow[screen.position];
         const result = { sceneId: saved.sceneId, position: saved.position, type: current?.type, id: current?.id };
-        if (current?.type === 'page') document.querySelector('.reader-footer button.primary')?.click();
+        if (current?.type === 'page') result.advance = 'stage';
         else if (current?.type === 'choice') {
           const code = current.id === 'S17-C2' || current.id === 'S26-C1' ? routeCode : current.options[0]?.code;
           const index = current.options.findIndex((option) => option.code === code);
@@ -44,6 +44,7 @@ try {
         }
         return result;
       }, contract.code);
+      if (state.advance === 'stage') await page.keyboard.press('ArrowRight');
       if (['S17', 'S26'].includes(state.sceneId) && !checkpoints.includes(state.sceneId)) {
         checkpoints.push(state.sceneId);
         await page.screenshot({ path: `${output}/${route}-${viewport.width}x${viewport.height}-${state.sceneId}.png` });

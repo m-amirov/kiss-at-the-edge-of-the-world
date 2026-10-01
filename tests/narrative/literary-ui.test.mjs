@@ -19,8 +19,8 @@ test('production literary UI bundles the approved Cinematic Romance fonts locall
   assert.match(css, /url\('\.\.\/assets\/fonts\/CormorantGaramond\[wght\]\.ttf'\)/);
   assert.match(css, /url\('\.\.\/assets\/fonts\/Manrope\[wght\]\.ttf'\)/);
   assert.doesNotMatch(css, /fonts\.googleapis\.com|fonts\.gstatic\.com/);
-  assert.match(player, /const cover = '\.\.\/assets\/backgrounds\/snaefellsnes-master\.png'/);
-  assert.doesNotMatch(player, /const cover = '\.\/assets\/backgrounds\/snaefellsnes-master\.png'/);
+  assert.match(player, /const cover = '\.\.\/assets\/backgrounds\/snaefellsnes-master\.webp'/);
+  assert.doesNotMatch(player, /const cover = '\.\/assets\/backgrounds\/snaefellsnes-master\.webp'/);
 });
 
 test('production literary UI preserves mobile reading and control invariants', () => {
@@ -30,6 +30,34 @@ test('production literary UI preserves mobile reading and control invariants', (
   assert.match(css, /@media\(max-width:680px\)/);
   assert.match(css, /orientation:landscape/);
   assert.match(css, /prefers-reduced-motion:reduce/);
+});
+
+test('main menu keeps only the supported actions and has no retired panels or footer', () => {
+  assert.match(player, /for\(const name of \['Эпизоды','Настройки'\]\)/);
+  assert.match(player, /Продолжить · эпизод/);
+  assert.match(player, /button\('Новая игра',startNew/);
+  assert.doesNotMatch(player, /Галерея|Об игре|История доступна от начала до одного из четырёх финалов/);
+  assert.doesNotMatch(player, /galleryPanel|literary-gallery/);
+  assert.doesNotMatch(css, /literary-gallery/);
+  assert.match(css, /\.home-actions-secondary \{ display: grid; grid-template-columns: repeat\(2/);
+  assert.match(css, /\.home-actions-secondary \{ grid-template-columns: 1fr; \}/);
+});
+
+test('narrative navigation is stage-first and retired text controls are absent', () => {
+  assert.doesNotMatch(player, /Далее|К выбору|skip-to-choice/);
+  assert.match(player, /bindStageNavigation\(picture\)/);
+  assert.match(player, /pointerdown/);
+  assert.match(player, /pointerup/);
+  assert.match(player, /tapThreshold=10/);
+  assert.match(player, /Math\.hypot\(event\.clientX-pointer\.x,event\.clientY-pointer\.y\)>tapThreshold/);
+  assert.match(player, /interactiveSelector/);
+  assert.match(player, /advanceNarrative\(\)/);
+  assert.match(player, /\['Enter',' ','Spacebar','ArrowRight'\]/);
+  assert.match(player, /isInteractiveTarget\(event\.target\)/);
+  assert.match(css, /\.advance-cue\{/);
+  assert.match(css, /\.choice-button::before\{/);
+  assert.match(css, /\.choice-button::after\{/);
+  assert.match(css, /\.choice-button\{[\s\S]*?min-height:56px/);
 });
 
 test('Cinematic A mobile polish keeps artwork visible without a nested menu scroller', () => {
@@ -79,7 +107,7 @@ test('every active production CG has an explicit portrait derivative mapping', (
     const asset = assetManifest.assets.find(entry => entry.id === id);
     assert.ok(asset?.portraitAsset, `${id} needs an explicit portraitAsset`);
     assert.ok(fs.existsSync(`${root}/${asset.portraitAsset}`), `${id} portrait file must exist`);
-    assert.match(player, new RegExp(`'${asset.path.split('/').pop()}'\\s*:`));
+    assert.match(player, new RegExp(`'${asset.runtimePath.split('/').pop()}'\\s*:`));
   }
 });
 

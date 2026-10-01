@@ -10,7 +10,7 @@ output = os.environ.get(
     os.path.join(root, "release-artifacts", "kiss-at-the-edge-of-the-world-rc-release-kiss-rc-2026-09-30.zip"),
 )
 files = subprocess.check_output(
-    ["git", "ls-files", "--", "index.html", "literary.html", "src", "assets/fonts", "assets/characters", "favicon.ico"],
+    ["git", "ls-files", "--", "index.html", "literary.html", "src", "assets/fonts", "favicon.ico"],
     text=True,
 ).splitlines()
 manifest = json.load(open(os.path.join(root, "assets", "asset-manifest.json"), encoding="utf-8"))
@@ -18,12 +18,15 @@ manifest_assets = [
     entry
     for section in ("assets", "previewAssets")
     for entry in manifest.get(section, [])
-    if entry.get("status") == "integrated"
+    if entry.get("status") == "integrated" or entry.get("runtimePath")
 ]
 files.extend(
     asset_path
     for entry in manifest_assets
-    for asset_path in (entry.get("path"), entry.get("portraitAsset"))
+    for asset_path in (
+        entry.get("runtimePath", entry.get("path")),
+        entry.get("runtimePortraitAsset", entry.get("portraitAsset")),
+    )
     if asset_path
 )
 files = sorted({path for path in files if os.path.isfile(os.path.join(root, path))})
@@ -33,7 +36,10 @@ if "index.html" not in files:
 missing = [
     asset_path
     for entry in manifest_assets
-    for asset_path in (entry.get("path"), entry.get("portraitAsset"))
+    for asset_path in (
+        entry.get("runtimePath", entry.get("path")),
+        entry.get("runtimePortraitAsset", entry.get("portraitAsset")),
+    )
     if asset_path and asset_path not in files
 ]
 if missing:

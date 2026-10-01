@@ -17,8 +17,8 @@ names=set(zipfile.ZipFile(sys.argv[2]).namelist())
 required=[]
 for section in ('assets','previewAssets'):
   for entry in manifest.get(section, []):
-    if entry.get('status') == 'integrated':
-      required.extend(x for x in (entry.get('path'), entry.get('portraitAsset')) if x)
+    if entry.get('status') == 'integrated' or entry.get('runtimePath'):
+      required.extend(x for x in (entry.get('runtimePath', entry.get('path')), entry.get('runtimePortraitAsset', entry.get('portraitAsset'))) if x)
 missing=sorted(set(required)-names)
 print(json.dumps({'required': len(set(required)), 'missing': missing}))
 if missing: raise SystemExit(1)
