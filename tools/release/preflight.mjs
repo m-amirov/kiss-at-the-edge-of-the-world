@@ -60,7 +60,7 @@ export function releasePreflight(){
  const currentHead=execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).trim();
  const routeQaPass=routeQa?.status==='PASS'&&routeQa.head===currentHead&&routeQa.results?.length===8&&routeQa.results.every(item=>item.ending===item.expectedEnding&&item.finished&&item.errors?.length===0&&item.failed?.length===0);
  if(!routeQaPass)block('FINAL_QA_MISSING','Fresh full-route browser evidence for all four routes and both required viewports is missing or does not match the audited HEAD.');
- return {status:blockers.length?'BLOCKED':'PASS',releaseCandidateReady:!blockers.length,newSeasonEpisodesPlanned:10,literaryEpisodesPlayable:literarySeason.episodes,literarySceneCount:literarySeason.scenes.length,defaultEdition:'new-ten-episode',legacyAvailableOnExplicitQuery:true,routeSamples:routes,artAcceptance,blockers};
+ return {status:blockers.length?'BLOCKED':'PASS',releaseCandidateReady:!blockers.length,newSeasonEpisodesPlanned:10,literaryEpisodesPlayable:literarySeason.episodes,literarySceneCount:literarySeason.scenes.length,defaultEdition:'new-ten-episode',legacyAvailableOnExplicitQuery:false,routeSamples:routes,artAcceptance,blockers};
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
  const result=releasePreflight();console.log(JSON.stringify(result,null,2));if(result.status!=='PASS')process.exitCode=1;
