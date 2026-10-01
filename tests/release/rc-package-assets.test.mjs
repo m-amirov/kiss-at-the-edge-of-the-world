@@ -20,10 +20,11 @@ for section in ('assets','previewAssets'):
     if entry.get('status') == 'integrated' or entry.get('runtimePath'):
       required.extend(x for x in (entry.get('runtimePath', entry.get('path')), entry.get('runtimePortraitAsset', entry.get('portraitAsset'))) if x)
 missing=sorted(set(required)-names)
-print(json.dumps({'required': len(set(required)), 'missing': missing}))
+print(json.dumps({'required': len(set(required)), 'missing': missing, 'branding': all(item in names for item in ('assets/branding/kiss-at-the-edge-cover.png', 'assets/branding/kiss-at-the-edge-icon.png'))}))
 if missing: raise SystemExit(1)
 `, path.join(root, 'assets', 'asset-manifest.json'), packagePath], { encoding: 'utf8' });
 const result = JSON.parse(check.trim());
 assert.equal(result.missing.length, 0);
 assert.ok(result.required >= 142);
+assert.equal(result.branding, true);
 console.log(JSON.stringify({ status: 'PASS', required: result.required, missing: result.missing }));

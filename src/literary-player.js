@@ -96,7 +96,7 @@ function assetFileForViewport(art){
 const stageAsset = { alice:'alice-stage.webp', eric:'eric-stage.webp', nick:'nick-stage.webp', damir:'damir-stage.webp' };
 // This value is consumed by a url() inside src/literary.css; resolve from the
 // stylesheet directory so the cover never becomes /src/assets/... at runtime.
-const cover = '../assets/backgrounds/snaefellsnes-master.webp';
+const cover = '../assets/branding/kiss-at-the-edge-cover.png';
 const blank = () => ({ schemaVersion:3,sceneId:'S01',position:0,choices:{},finished:false, visited:['S01'],runId:`literary-${Date.now()}-${crypto.randomUUID?.() ?? Math.random().toString(36).slice(2)}`, revision:0 });
 function parseSaved(raw) {
   try {
@@ -139,7 +139,8 @@ function button(label,handler,className=''){
 }
 const interactiveSelector='button,a,input,select,textarea,summary,[role="button"],[role="link"],[contenteditable="true"],[data-interactive]';
 const tapThreshold=10;
-let lastStageActionAt=0;
+let lastPointerActivationAt=0;
+let lastStageInput='none';
 function isInteractiveTarget(target){return target instanceof Element && Boolean(target.closest(interactiveSelector));}
 function advanceNarrative(){
   if(menuOpen)return false;
@@ -158,7 +159,27 @@ function advanceNarrative(){
   }
   persist();renderReader();return true;
 }
+function activateStage(event){
+  if(isInteractiveTarget(event.target))return false;
+  const now=performance.now();
+  // Debounce only rapid pointer taps and the synthetic click that follows a
+  // pointerup. Keyboard and a later independent click remain responsive.
+  if(event.type==='pointerup'){
+    if(lastStageInput==='pointer' && now-lastPointerActivationAt<180)return false;
+  }else if(event.type==='click' && lastStageInput==='pointer' && now-lastPointerActivationAt<180)return false;
+  else if(event.type==='keydown')lastStageInput='keyboard';
+  const advanced=advanceNarrative();
+  if(event.type==='pointerup' && advanced){
+    lastPointerActivationAt=now;
+    lastStageInput='pointer';
+  }
+  return advanced;
+}
 function bindStageNavigation(picture){
+  picture.tabIndex=0;
+  picture.dataset.stageAdvance='true';
+  picture.setAttribute('role','group');
+  picture.setAttribute('aria-label','Нажмите на сцену или Enter, чтобы продолжить чтение');
   let pointer=null;
   picture.addEventListener('pointerdown',event=>{
     if(event.button!==0 || isInteractiveTarget(event.target))return;
@@ -169,12 +190,21 @@ function bindStageNavigation(picture){
     const moved=Math.hypot(event.clientX-pointer.x,event.clientY-pointer.y)>tapThreshold;
     pointer=null;
     if(moved)return;
-    const now=performance.now();
-    if(now-lastStageActionAt<180)return;
-    lastStageActionAt=now;
-    advanceNarrative();
+    activateStage(event);
   });
   picture.addEventListener('pointercancel',()=>{pointer=null});
+  picture.addEventListener('click',event=>{
+    // Pointer activation above already handles ordinary taps/clicks. This
+    // fallback keeps keyboard-generated clicks and assistive-tech activation
+    // safe without allowing a pointerup + click pair to advance twice.
+    activateStage(event);
+  });
+  picture.addEventListener('keydown',event=>{
+    if(!['Enter',' ','Spacebar','ArrowRight'].includes(event.key))return;
+    event.stopPropagation();
+    event.preventDefault();
+    activateStage(event);
+  });
 }
 function goHome(){menuOpen=true;modal=null;renderMenu()}
 function startNew(){
@@ -291,12 +321,12 @@ function renderReader(){
     content.append(el('ТВОЙ ВЫБОР','choice-label'));
     if(current.question)content.append(el(current.question,'decision-question','p'));
     const options=el('','reader-options');
-    for(const opt of current.options)options.append(button(cleanLiteraryText(opt.label),()=>{reader.choices[current.id]=opt.code;persist();renderReader()},'choice-button'));
+    for(const opt of current.options)options.append(button(cleanLiteraryText(opt.label),()=>{lastStageInput='none';lastPointerActivationAt=0;reader.choices[current.id]=opt.code;persist();renderReader()},'choice-button'));
     content.append(options);
     sheet.append(content);
   }else{
     const next=nextLiteraryScene(reader.sceneId,reader.choices);
-    if(next && byId.has(next))sheet.append(button(`Следующая сцена → ${next}`,()=>{reader.sceneId=next;reader.position=0;if(!reader.visited.includes(next))reader.visited.push(next);persist();renderReader()},'primary'));
+    if(next && byId.has(next))sheet.append(button(`Следующая сцена → ${next}`,()=>{lastStageInput='none';lastPointerActivationAt=0;reader.sceneId=next;reader.position=0;if(!reader.visited.includes(next))reader.visited.push(next);persist();renderReader()},'primary'));
     else if(isEnding){
       if(!reader.finished){reader.finished=true;persist()}
       sheet.classList.add('terminal-sheet');
@@ -307,7 +337,7 @@ function renderReader(){
   app.append(sheet);
 }
 window.addEventListener('keydown',event=>{
-  if(menuOpen || !['Enter',' ','Spacebar','ArrowRight'].includes(event.key) || event.altKey || event.ctrlKey || event.metaKey || isInteractiveTarget(event.target) || isInteractiveTarget(document.activeElement))return;
+  if(menuOpen || !['Enter',' ','Spacebar','ArrowRight'].includes(event.key) || event.altKey || event.ctrlKey || event.metaKey || isInteractiveTarget(event.target) || isInteractiveTarget(document.activeElement) || document.activeElement?.closest?.('[data-stage-advance]'))return;
   if(advanceNarrative())event.preventDefault();
 });
 applySettings();renderMenu();

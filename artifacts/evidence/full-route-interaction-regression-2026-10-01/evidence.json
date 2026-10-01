@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "generatedAt": "2026-10-01T17:16:37.890Z",
+  "head": "3d1b94ce76c3b913832d721c9c90cea8f6b0529a",
+  "baseUrl": "http://127.0.0.1:4173/literary.html?qa=full-route-interaction",
+  "interactionModel": [
+    "click",
+    "touch",
+    "keyboard"
+  ],
+  "requirements": [
+    "choice boundary guard",
+    "menu/settings/episodes guard",
+    "save/load",
+    "4/4 endings",
+    "no skipped chunks",
+    "no double-advance",
+    "no soft-lock"
+  ],
+  "results": [
+    {
+      "route": "eric",
+      "viewport": {
+        "width": 1920,
+        "height": 900
+      },
+      "ending": "S44",
+      "expectedEnding": "S44",
+      "finished": true,
+      "visited": 40,
+      "choiceCount": 113,
+      "steps": 1308,
+      "choiceBoundaries": 113,
+      "saveLoadChecked": true,
+      "doubleAdvanceFailures": 0,
+      "errors": [],
+      "failed": []
+    },
+    {
+      "route": "eric",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "ending": "S44",
+      "expectedEnding": "S44",
+      "finished": true,
+      "visited": 40,
+      "choiceCount": 113,
+      "steps": 1308,
+      "choiceBoundaries": 113,
+      "saveLoadChecked": true,
+      "doubleAdvanceFailures": 0,
+      "errors": [],
+      "failed": []
+    },
+    {
+      "route": "nick",
+      "viewport": {
+        "width": 1920,
+        "height": 900
+      },
+      "ending": "S45",
+      "expectedEnding": "S45",
+      "finished": true,
+      "visited": 40,
+      "choiceCount": 114,
+      "steps": 1307,
+      "choiceBoundaries": 114,
+      "saveLoadChecked": true,
+      "doubleAdvanceFailures": 0,
+      "errors": [],
+      "failed": []
+    },
+    {
+      "route": "nick",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "ending": "S45",
+      "expectedEnding": "S45",
+      "finished": true,
+      "visited": 40,
+      "choiceCount": 114,
+      "steps": 1307,
+      "choiceBoundaries": 114,
+      "saveLoadChecked": true,
+      "doubleAdvanceFailures": 0,
+      "errors": [],
+      "failed": []
+    },
+    {
+      "route": "damir",
+      "viewport": {
+        "width": 1920,
+        "height": 900
+      },
+      "ending": "S46",
+      "expectedEnding": "S46",
+      "finished": true,
+      "visited": 40,
+      "choiceCount": 113,
+      "steps": 1295,
+      "choiceBoundaries": 113,
+      "saveLoadChecked": true,
+      "doubleAdvanceFailures": 0,
+      "errors": [],
+      "failed": []
+    },
+    {
+      "route": "damir",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "ending": "S46",
+      "expectedEnding": "S46",
+      "finished": true,
+      "visited": 40,
+      "choiceCount": 113,
+      "steps": 1295,
+      "choiceBoundaries": 113,
+      "saveLoadChecked": true,
+      "doubleAdvanceFailures": 0,
+      "errors": [],
+      "failed": []
+    },
+    {
+      "route": "alice",
+      "viewport": {
+        "width": 1920,
+        "height": 900
+      },
+      "ending": "S47",
+      "expectedEnding": "S47",
+      "finished": true,
+      "visited": 41,
+      "choiceCount": 116,
+      "steps": 1287,
+      "choiceBoundaries": 116,
+      "saveLoadChecked": true,
+      "doubleAdvanceFailures": 0,
+      "errors": [],
+      "failed": []
+    },
+    {
+      "route": "alice",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "ending": "S47",
+      "expectedEnding": "S47",
+      "finished": true,
+      "visited": 41,
+      "choiceCount": 116,
+      "steps": 1287,
+      "choiceBoundaries": 116,
+      "saveLoadChecked": true,
+      "doubleAdvanceFailures": 0,
+      "errors": [],
+      "failed": []
+    }
+  ]
+}

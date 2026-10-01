@@ -10,7 +10,7 @@ output = os.environ.get(
     os.path.join(root, "release-artifacts", "kiss-at-the-edge-of-the-world-rc-release-kiss-rc-2026-09-30.zip"),
 )
 files = subprocess.check_output(
-    ["git", "ls-files", "--", "index.html", "literary.html", "src", "assets/fonts", "favicon.ico"],
+    ["git", "ls-files", "--", "index.html", "literary.html", "src", "assets/fonts", "assets/branding", "favicon.ico"],
     text=True,
 ).splitlines()
 manifest = json.load(open(os.path.join(root, "assets", "asset-manifest.json"), encoding="utf-8"))

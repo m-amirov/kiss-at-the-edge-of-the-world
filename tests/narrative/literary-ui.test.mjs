@@ -19,8 +19,9 @@ test('production literary UI bundles the approved Cinematic Romance fonts locall
   assert.match(css, /url\('\.\.\/assets\/fonts\/CormorantGaramond\[wght\]\.ttf'\)/);
   assert.match(css, /url\('\.\.\/assets\/fonts\/Manrope\[wght\]\.ttf'\)/);
   assert.doesNotMatch(css, /fonts\.googleapis\.com|fonts\.gstatic\.com/);
-  assert.match(player, /const cover = '\.\.\/assets\/backgrounds\/snaefellsnes-master\.webp'/);
-  assert.doesNotMatch(player, /const cover = '\.\/assets\/backgrounds\/snaefellsnes-master\.webp'/);
+  assert.match(player, /const cover = '\.\.\/assets\/branding\/kiss-at-the-edge-cover\.png'/);
+  assert.doesNotMatch(player, /const cover = '\.\/assets\/branding\/kiss-at-the-edge-cover\.png'/);
+  assert.match(fs.readFileSync(fileURLToPath(new URL('../../literary.html', import.meta.url)), 'utf8'), /assets\/branding\/kiss-at-the-edge-icon\.png/);
 });
 
 test('production literary UI preserves mobile reading and control invariants', () => {
@@ -46,8 +47,13 @@ test('main menu keeps only the supported actions and has no retired panels or fo
 test('narrative navigation is stage-first and retired text controls are absent', () => {
   assert.doesNotMatch(player, /Далее|К выбору|skip-to-choice/);
   assert.match(player, /bindStageNavigation\(picture\)/);
+  assert.match(player, /picture\.dataset\.stageAdvance='true'/);
+  assert.match(player, /picture\.setAttribute\('aria-label','Нажмите на сцену или Enter, чтобы продолжить чтение'\)/);
   assert.match(player, /pointerdown/);
   assert.match(player, /pointerup/);
+  assert.match(player, /picture\.addEventListener\('click'/);
+  assert.match(player, /picture\.addEventListener\('keydown'/);
+  assert.match(player, /event\.stopPropagation\(\)/);
   assert.match(player, /tapThreshold=10/);
   assert.match(player, /Math\.hypot\(event\.clientX-pointer\.x,event\.clientY-pointer\.y\)>tapThreshold/);
   assert.match(player, /interactiveSelector/);
@@ -55,6 +61,7 @@ test('narrative navigation is stage-first and retired text controls are absent',
   assert.match(player, /\['Enter',' ','Spacebar','ArrowRight'\]/);
   assert.match(player, /isInteractiveTarget\(event\.target\)/);
   assert.match(css, /\.advance-cue\{/);
+  assert.match(css, /\.literary-picture\[data-stage-advance\]:focus-visible/);
   assert.match(css, /\.choice-button::before\{/);
   assert.match(css, /\.choice-button::after\{/);
   assert.match(css, /\.choice-button\{[\s\S]*?min-height:56px/);
