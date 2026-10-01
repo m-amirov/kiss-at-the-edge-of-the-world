@@ -1,0 +1,4604 @@
+{
+  "schemaVersion": 1,
+  "recordType": "runtime-transcode-acceptance",
+  "status": "PASS",
+  "verdict": "PASS_RUNTIME_TRANSCODE_DERIVED_FROM_ACCEPTED_SOURCES",
+  "headAtGeneration": "c2992992503f60c67776a58489b25be5c0352194",
+  "manifestSha256": "153b56612015ed2c1dcaf7868cfd54623af67dfcdfb3c0764fc37a448013f0ca",
+  "sourceAcceptanceBasis": [
+    "asset-manifest status=integrated",
+    "assets/provenance/rights-manifest.json",
+    "artifacts/evidence/production-art-acceptance.json"
+  ],
+  "encoder": {
+    "format": "WEBP",
+    "quality": 90,
+    "method": 6,
+    "lossless": false,
+    "dimensionsChanged": false
+  },
+  "sourcePngsRetainedInRepository": true,
+  "runtimeAssets": [
+    {
+      "sourcePath": "assets/characters/alice-master.png",
+      "sourceSha256": "d261c464d1d40913e3bd377b206b9d59e86310ecfbedc0357d6fe4def1179d5d",
+      "sourceBytes": 2561620,
+      "runtimePath": "assets/characters/alice-master.webp",
+      "runtimeSha256": "eabf5484992e8f266d350a27956b5601efa325a3dfe8f430dab0ef9e6e8330ce",
+      "runtimeBytes": 273510,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/characters/eric-master.png",
+      "sourceSha256": "aa66cc7e0a58bd409b1066dbc07cd5780796245fd79a7eb5c8e0fb98f0322f14",
+      "sourceBytes": 2414483,
+      "runtimePath": "assets/characters/eric-master.webp",
+      "runtimeSha256": "4dfd5ebba0550258228ce61dd9e7a6691cdaaa9f6a181bbba813e71f42f0b2cf",
+      "runtimeBytes": 228742,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/characters/nick-master.png",
+      "sourceSha256": "a1c4aae9230b21a7ce9eaf4605a62ed54e225e35ab1b2470049902a63fe44fdd",
+      "sourceBytes": 2385519,
+      "runtimePath": "assets/characters/nick-master.webp",
+      "runtimeSha256": "7bac455f935124e50a8a1f0e0e08b367c8ca102e388b58d624aba6aa64f2cd6c",
+      "runtimeBytes": 222464,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/characters/damir-master.png",
+      "sourceSha256": "221df2cdd61880de169b500fa56095c99c9784595d156201ee65f15f76c69ef3",
+      "sourceBytes": 2442308,
+      "runtimePath": "assets/characters/damir-master.webp",
+      "runtimeSha256": "92e2fd1de051d8d08af37be29cc366347653580df6fabfdcd15773eff89b620f",
+      "runtimeBytes": 201612,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/characters/alice-reflective.png",
+      "sourceSha256": "11e793386dd474a0b409b43f6e12588c88690190d113d428216474fdbca28f3d",
+      "sourceBytes": 2386088,
+      "runtimePath": "assets/characters/alice-reflective.webp",
+      "runtimeSha256": "2fc960f04b3ee77047ff7e1d3a7a0f3ec64e4bca4016a9dc5f006d194bd63796",
+      "runtimeBytes": 260254,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/characters/eric-tender.png",
+      "sourceSha256": "552507c76a80e3487ac4f48275f59aeb27df19a15c4a7219d7ab34520aec5026",
+      "sourceBytes": 2396752,
+      "runtimePath": "assets/characters/eric-tender.webp",
+      "runtimeSha256": "a3c191780dc5dd2c175aa226377fed25b20e38c3dbf2a165eabd901bc09ff8de",
+      "runtimeBytes": 230764,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/characters/nick-serious.png",
+      "sourceSha256": "68ec60b8250b85f4dd475e39df8c4d6708dcb3ab41260aa16df19ce8865d0e4c",
+      "sourceBytes": 2285589,
+      "runtimePath": "assets/characters/nick-serious.webp",
+      "runtimeSha256": "1c026af51ac390789bc919424e31a6c160eeff70f9022a442c92f775389492b9",
+      "runtimeBytes": 202292,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/characters/damir-vulnerable.png",
+      "sourceSha256": "8b9e9f4abfb92c09d79e4b0171b7bd65282be8722623c0a401c3cee2cf8186be",
+      "sourceBytes": 2321999,
+      "runtimePath": "assets/characters/damir-vulnerable.webp",
+      "runtimeSha256": "bea050df29deee7a700e3238e17fe3bbdb4052b5c7fd803ef6695706d02286ae",
+      "runtimeBytes": 210338,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/characters/alice-stage.png",
+      "sourceSha256": "c2a47cbe11657e96e645c4a8daf19ac5ed294579a2ca580eaf9912cb3e4a3dcf",
+      "sourceBytes": 1487104,
+      "runtimePath": "assets/characters/alice-stage.webp",
+      "runtimeSha256": "e7bbc30ee34af4384c07a0b9e3247f517e0f33f861c0e2cac2c94cb2e27c7d78",
+      "runtimeBytes": 123224,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceMode": "RGBA",
+      "alpha": true,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/characters/eric-stage.png",
+      "sourceSha256": "5c396c694a2aa9cae9382330cb12911eedfd78a5821f7f2a7e83223db199ae0a",
+      "sourceBytes": 1130314,
+      "runtimePath": "assets/characters/eric-stage.webp",
+      "runtimeSha256": "c2b62a2c39cb85b3d54847b662ee712dea564b5f6f3beb88bd7db5d4f553d436",
+      "runtimeBytes": 101564,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceMode": "RGBA",
+      "alpha": true,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/characters/nick-stage.png",
+      "sourceSha256": "b1a691a2e4abfe060c916dea9ff08acf9f0115ae50233e85f7e009232454c9e4",
+      "sourceBytes": 1065382,
+      "runtimePath": "assets/characters/nick-stage.webp",
+      "runtimeSha256": "caf1ed912865f7a3b3f303bc192b19b635ed1a666665002c46cf24f3a6ecdece",
+      "runtimeBytes": 99470,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceMode": "RGBA",
+      "alpha": true,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/characters/damir-stage.png",
+      "sourceSha256": "fddd058838e918141c8525ace8627acdfad35b16f386ccc3d666a9a08698a1d3",
+      "sourceBytes": 1126083,
+      "runtimePath": "assets/characters/damir-stage.webp",
+      "runtimeSha256": "055b3627971857e0eca294f9e48bef176a352edd60a28c86767886f83e121aa6",
+      "runtimeBytes": 96728,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceMode": "RGBA",
+      "alpha": true,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/reykjavik-harbour-master.png",
+      "sourceSha256": "3d755af79e017335c9cc61757ddc2bac0bf020617a85ab675494660e58295057",
+      "sourceBytes": 2470370,
+      "runtimePath": "assets/backgrounds/reykjavik-harbour-master.webp",
+      "runtimeSha256": "7737a290f8acf0240fb44520f75a6946769c937915683ac13bded53b7793b79b",
+      "runtimeBytes": 344204,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/keflavik-airport-arrivals-v1.png",
+      "sourceSha256": "20d598392ad68f96c9f3ff1efaa416cdb1430f9dd381569706fb778e1f447f8d",
+      "sourceBytes": 2349667,
+      "runtimePath": "assets/backgrounds/keflavik-airport-arrivals-v1.webp",
+      "runtimeSha256": "1e0a93cba2ce8715296c5262a39a464fc9de8ed31479b060d43eff7c1a5aeb5a",
+      "runtimeBytes": 298774,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/reynisfjara-master.png",
+      "sourceSha256": "686558828c88c9201f1a21c4927e0fc0202752d04b22d6380de3a52cc995924f",
+      "sourceBytes": 2597988,
+      "runtimePath": "assets/backgrounds/reynisfjara-master.webp",
+      "runtimeSha256": "db337325e915712731d7a8bd6371e01142bb93860f01067f6250170a7797b451",
+      "runtimeBytes": 346810,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/thingvellir-master.png",
+      "sourceSha256": "bc08f30ea67b7777782d5e6f9031b7cfd044a85862293edc672f786f4bbac44f",
+      "sourceBytes": 2748807,
+      "runtimePath": "assets/backgrounds/thingvellir-master.webp",
+      "runtimeSha256": "bd2dc9a7e5b74a92506a0da81ac8e81eec546d499f65e831c732f218b8c8b7a2",
+      "runtimeBytes": 443746,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/skogafoss-master.png",
+      "sourceSha256": "c1f677b6dc347b2040c083ec4fc8ec46878850bbc392b5d0cb1e94cc542d1071",
+      "sourceBytes": 2749845,
+      "runtimePath": "assets/backgrounds/skogafoss-master.webp",
+      "runtimeSha256": "277976da1aa259a9f50171811de31888d4651842047b6954bb9b9e44ffaf714b",
+      "runtimeBytes": 398660,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/jokulsarlon-master.png",
+      "sourceSha256": "735738568f696d69c5e54a366c7336e6c6a6322546f2ec23349e37dd5c5a3bd6",
+      "sourceBytes": 2376401,
+      "runtimePath": "assets/backgrounds/jokulsarlon-master.webp",
+      "runtimeSha256": "0721cc3745cc93d3e44d04672130fab45b20bd5a843c7417a1853c270dfcd406",
+      "runtimeBytes": 300280,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/eastfjords-road-master.png",
+      "sourceSha256": "36a4f35cc18eae9d2ba9f9d613096ad6963991311444610599dbdb0d2f30b810",
+      "sourceBytes": 2526477,
+      "runtimePath": "assets/backgrounds/eastfjords-road-master.webp",
+      "runtimeSha256": "a2691afee93f0968f17bb5aea5f45309270caa55aaafe5c89bf90b2ee0de4371",
+      "runtimeBytes": 327396,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/akureyri-street-master.png",
+      "sourceSha256": "ba50fb5282814f2a515380eaa1b1ad09f92d20f764f50474ebb05d207b3e0ae4",
+      "sourceBytes": 2726193,
+      "runtimePath": "assets/backgrounds/akureyri-street-master.webp",
+      "runtimeSha256": "eb280fad1bbbbc6fe47cf661a47e2039d876e65aa70fe6b6f21300ad59206429",
+      "runtimeBytes": 439668,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/snaefellsnes-master.png",
+      "sourceSha256": "3ee9a0035623391f0e0f831b1b18cabfe01b7f5209f98b5f3f5eb911bd25514d",
+      "sourceBytes": 2646167,
+      "runtimePath": "assets/backgrounds/snaefellsnes-master.webp",
+      "runtimeSha256": "6949555cabd32c01bb5c8e9ea9f87ee5e0bc5fc94b2b05589ca817bd50e102ce",
+      "runtimeBytes": 368832,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/eric-route-hand.png",
+      "sourceSha256": "9401884c8743fb005f982aa205e5a664201af00e56299a938d1b719e9c87835f",
+      "sourceBytes": 2358548,
+      "runtimePath": "assets/cg/eric-route-hand.webp",
+      "runtimeSha256": "c618eab9ab683720eb320fe960090075b7388a8877bbbd283277ac0b5949aab6",
+      "runtimeBytes": 254012,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/nick-route-editing.png",
+      "sourceSha256": "b945b46767cf379e820eabb19519db45cc30408b90a97fb54ad68bdc118d3c61",
+      "sourceBytes": 2120905,
+      "runtimePath": "assets/cg/nick-route-editing.webp",
+      "runtimeSha256": "4e26f7a1fd1231484dedccbaf8da54c94ff51fba2da60d00ff2798a4313c85f4",
+      "runtimeBytes": 224370,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/damir-route-letter.png",
+      "sourceSha256": "1aafc4e3a2e6604a04eaaf06a0a043b7ab808baff66aa87a77ffbde6a3133f17",
+      "sourceBytes": 2233492,
+      "runtimePath": "assets/cg/damir-route-letter.webp",
+      "runtimeSha256": "43524723d3d1f5bec128ddb9d0e9fcac37ad842fb5853f34fafa4458f4b14424",
+      "runtimeBytes": 236390,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/alice-independent-ending.png",
+      "sourceSha256": "4f12cf21985b0be820c077c707beb514ca97cd288ffa02c165622a240bca4152",
+      "sourceBytes": 2401333,
+      "runtimePath": "assets/cg/alice-independent-ending.webp",
+      "runtimeSha256": "68d239a6503164d77d9e1b99901501f29d402f715fdba6fd1b3652f033bbbf53",
+      "runtimeBytes": 305290,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/eric-myvattn-dawn.png",
+      "sourceSha256": "f3f0cccb0d0a36e992b2b81a72655851b1c0fc40c6226318d1252896a95f1f5c",
+      "sourceBytes": 2499255,
+      "runtimePath": "assets/cg/eric-myvattn-dawn.webp",
+      "runtimeSha256": "453b601db39df724d39fad4619dce079dafe48635a234504703ea1ac0d434545",
+      "runtimeBytes": 278828,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/nick-akureyri-edit.png",
+      "sourceSha256": "3efec5cd22a7a6579c2896679d4e821d47b693632d9122873e997b11035f60e0",
+      "sourceBytes": 2219669,
+      "runtimePath": "assets/cg/nick-akureyri-edit.webp",
+      "runtimeSha256": "db6b289702458f18fa5263e554cc704db5e7fb30961ac26de9b103ffe5c3a881",
+      "runtimeBytes": 233840,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/damir-road-letter.png",
+      "sourceSha256": "7a054f68fb12d61ec3fa1469e5675ea4a8312ec8ca7c6e81d285478b1085ec14",
+      "sourceBytes": 2241784,
+      "runtimePath": "assets/cg/damir-road-letter.webp",
+      "runtimeSha256": "1f048baa301dae23caee6c40159ba69873746a9bf9a77a0b64e9a6b24bc1eb9e",
+      "runtimeBytes": 214884,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s13-skaftafell-travelers.png",
+      "sourceSha256": "b20479b93dd4d0ad3a3d9a1013a8c963b105b70ec4ab85f6501eb405a7a95c31",
+      "sourceBytes": 2587712,
+      "runtimePath": "assets/cg/s13-skaftafell-travelers.webp",
+      "runtimeSha256": "c6883632633276f0882ad1c532dd659762e0917f95d485df6f11718c40d809c2",
+      "runtimeBytes": 344416,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s13-skaftafell-travelers-portrait.png",
+      "sourceSha256": "0c299238e5d7c7668564a79370c21c3fd6b043b20f26a98570c0c85807889762",
+      "sourceBytes": 2839091,
+      "runtimePath": "assets/cg/s13-skaftafell-travelers-portrait.webp",
+      "runtimeSha256": "691bc288b3fa67b3296fffcf79ecd91e3a5e172a692dd955a6ecd2a8965fd893",
+      "runtimeBytes": 452654,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s18-hofn-dance-lights.png",
+      "sourceSha256": "9e39e79a56c4dbc28a0f2e0ecd5fda8dbd8f8907ceeb943a40c52e11fa86a8b1",
+      "sourceBytes": 2289216,
+      "runtimePath": "assets/cg/s18-hofn-dance-lights.webp",
+      "runtimeSha256": "e30079bce0c42a8bc4c713c220e76901c1c7b343000b12f0f9fa2c4ae183ae39",
+      "runtimeBytes": 274688,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s18-hofn-dance-lights-portrait.png",
+      "sourceSha256": "f1d8bcda88794c68a9cc0411b703bb82cfd0882f2737ea32640b26828a2c7a33",
+      "sourceBytes": 2528934,
+      "runtimePath": "assets/cg/s18-hofn-dance-lights-portrait.webp",
+      "runtimeSha256": "9d4e40a41a5365fbb4aa93ab599b3020e767f89306631e12a7173d4bcead90c5",
+      "runtimeBytes": 366330,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s45-reykjavik-warm-montage.png",
+      "sourceSha256": "16f1b501c2de4d2b3934208d6d06ed5ae8c1e913806e44e748d7674e8ec8c508",
+      "sourceBytes": 1998249,
+      "runtimePath": "assets/cg/s45-reykjavik-warm-montage.webp",
+      "runtimeSha256": "db1ac7683a73ae5acde33794d1635bad765ee5bc0c27114932972781cdedd89a",
+      "runtimeBytes": 201438,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s45-reykjavik-warm-montage-portrait.png",
+      "sourceSha256": "a7522f89c2d1abc5586ef138bb1df389aa35c39397885cad190f3ff6da3b02f8",
+      "sourceBytes": 1986269,
+      "runtimePath": "assets/cg/s45-reykjavik-warm-montage-portrait.webp",
+      "runtimeSha256": "fa79b0a0f13fbb67b5b42e5fa0025f022a856a81964410a8d0bb3fb71cf1dc56",
+      "runtimeBytes": 217584,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s46-airport-goodbye.png",
+      "sourceSha256": "9956381bedd545aa27baa3c74e10592146a1bb6a32488bd7fabf540f3d97e3ae",
+      "sourceBytes": 2200682,
+      "runtimePath": "assets/cg/s46-airport-goodbye.webp",
+      "runtimeSha256": "a22c08fb0160ffd0ef53ab3b88b73e935e89e98d729873bc67147554f3d7e26b",
+      "runtimeBytes": 238198,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s46-airport-goodbye-portrait.png",
+      "sourceSha256": "e3a20093fb7eb8d66be863dff81f58b23deecf31286e31ad5937dc27259b51cf",
+      "sourceBytes": 2294022,
+      "runtimePath": "assets/cg/s46-airport-goodbye-portrait.webp",
+      "runtimeSha256": "9ab17903569134015e8e428ce10ad38bac6ba6da21bcbdfc40c85ad77071b69d",
+      "runtimeBytes": 286690,
+      "dimensions": [
+        940,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s47-reykjavik-harbour-alice.png",
+      "sourceSha256": "1ba1f3f22038be90ac99887ca102367e7716c016f0e0ab3391f94cb35e264f47",
+      "sourceBytes": 2315266,
+      "runtimePath": "assets/cg/s47-reykjavik-harbour-alice.webp",
+      "runtimeSha256": "2af4cb5965b5c804f5e442141b29d9e9941ecfce17dc68c3838949d065592bc4",
+      "runtimeBytes": 288244,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s47-reykjavik-harbour-alice-portrait.png",
+      "sourceSha256": "645fb26d18e53c2deb5923707b1c53800c5975e812a1ec58658e858876b37234",
+      "sourceBytes": 2468942,
+      "runtimePath": "assets/cg/s47-reykjavik-harbour-alice-portrait.webp",
+      "runtimeSha256": "3231c723a0be5c70666f0799a75243043a9b259311af6a0603be76b7ae84d92d",
+      "runtimeBytes": 347576,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s44-eric-epilogue-month-later.png",
+      "sourceSha256": "d1987ead5dac9fd26c74694c8d64dadf73c6a79066c8c1c829f426cbf520a03b",
+      "sourceBytes": 2090878,
+      "runtimePath": "assets/cg/s44-eric-epilogue-month-later.webp",
+      "runtimeSha256": "9c59496977fa6bb7846d60b278b35c14463de851021c433373f1f6891104adbf",
+      "runtimeBytes": 219152,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s44-eric-epilogue-month-later-portrait.png",
+      "sourceSha256": "ef6869ce864369e5ee8384f2aed0cde47aa7ccbcebed1d0b645fab350d4dcb9e",
+      "sourceBytes": 2505082,
+      "runtimePath": "assets/cg/s44-eric-epilogue-month-later-portrait.webp",
+      "runtimeSha256": "83ae6ce657fb5bc77c70796569ada58cf35a4ea506544e4a47145d9ee1446541",
+      "runtimeBytes": 344762,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s45-nick-home-epilogue-month-later.png",
+      "sourceSha256": "0a95116942e8046ee71bd6d008faa0fcf3e2ea34b8e792f8b388b79c0f0a8734",
+      "sourceBytes": 2212614,
+      "runtimePath": "assets/cg/s45-nick-home-epilogue-month-later.webp",
+      "runtimeSha256": "41755a3c494fc5c40bf2b2f8f549378b0405cc36b739a0f63b5edb8a2e020eec",
+      "runtimeBytes": 251540,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s45-nick-home-epilogue-month-later-portrait.png",
+      "sourceSha256": "5d0835e92bc326bc7a6d46f92b23f805a2cea8a154ef1fa5e89456c27d3119bb",
+      "sourceBytes": 2199421,
+      "runtimePath": "assets/cg/s45-nick-home-epilogue-month-later-portrait.webp",
+      "runtimeSha256": "5142e7c3a0644470b801fca719d24b91c4e6fc97dc09f7219ad189ac6f3ccdf8",
+      "runtimeBytes": 273492,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s46-damir-epilogue-month-later.png",
+      "sourceSha256": "4ff183badac5d980da2565086c4e5be520cfb8bd824b19bb825bc1648960ce0e",
+      "sourceBytes": 2341492,
+      "runtimePath": "assets/cg/s46-damir-epilogue-month-later.webp",
+      "runtimeSha256": "68c509f9b9b030e02c4bf5464938eb1ec3201d01ac447ab0671fb85e72b34a45",
+      "runtimeBytes": 277208,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s46-damir-epilogue-month-later-portrait.png",
+      "sourceSha256": "0d6b51f9a549d67ddf0a38d2981257ffa450781171745123837c196c57ba9d18",
+      "sourceBytes": 2241820,
+      "runtimePath": "assets/cg/s46-damir-epilogue-month-later-portrait.webp",
+      "runtimeSha256": "d0dea60bf137581cbdffbf08adb85cecf9d7a3c43d0b910558e085a5e40bfafd",
+      "runtimeBytes": 267792,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s47-alice-home-epilogue-month-later.png",
+      "sourceSha256": "2642735a952673f22a43f373b67a03296f265624c27a6926e7ef64d06b0aea1d",
+      "sourceBytes": 2402487,
+      "runtimePath": "assets/cg/s47-alice-home-epilogue-month-later.webp",
+      "runtimeSha256": "2e76bed39e07861acefc5b65fda2a4fa55f041a9cedfc0316c1113977a7cdc94",
+      "runtimeBytes": 306676,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s47-alice-home-epilogue-month-later-portrait.png",
+      "sourceSha256": "085651ef09d16d2ecb3d861fc72184644e53c89ac198f25f9b4851bf6fb59792",
+      "sourceBytes": 2569237,
+      "runtimePath": "assets/cg/s47-alice-home-epilogue-month-later-portrait.webp",
+      "runtimeSha256": "cc4316a35e4aa6ea5e4a192e942d885bef5df70f3b55e367b82fb1fab63cdfb6",
+      "runtimeBytes": 360162,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/s02-roadside-cafe.png",
+      "sourceSha256": "f6d2adc4a65d2b30e9eb86203e34a848cc79c69a206a9f81a5a6c9b823bb1c13",
+      "sourceBytes": 2615801,
+      "runtimePath": "assets/backgrounds/s02-roadside-cafe.webp",
+      "runtimeSha256": "606c088b4adcf8a69e556f50cb189b6541ddaa2a1f37c55a88a4b51846e6f037",
+      "runtimeBytes": 363918,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s26-eric-choice.png",
+      "sourceSha256": "ef229a99516f80dd39cfac49ef021a25ac00630e01bf5e30d676a2401869721f",
+      "sourceBytes": 2303163,
+      "runtimePath": "assets/cg/s26-eric-choice.webp",
+      "runtimeSha256": "618a186c3248cb112958d470e28db0614d26122ced9fc4097a80a258413c2fd0",
+      "runtimeBytes": 264388,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s26-eric-choice-portrait.png",
+      "sourceSha256": "e5de1e45e1109835d2d214ab6b79244c95a20070330eb264c59851f22f048ffe",
+      "sourceBytes": 2702094,
+      "runtimePath": "assets/cg/s26-eric-choice-portrait.webp",
+      "runtimeSha256": "5a39d2c4d9f129742e0ae2d65828a81f012dddc60945dd58cecfa2ce39ca871d",
+      "runtimeBytes": 398936,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s23-eric-harbor-plan.png",
+      "sourceSha256": "5d49a086898a4dccbde332a8681ee3c99d52df326bc0236515512a51b979918e",
+      "sourceBytes": 2589431,
+      "runtimePath": "assets/cg/s23-eric-harbor-plan.webp",
+      "runtimeSha256": "b4d23a5bb5e956505972450fd151838e12fcbe83b6fd8e785779d38673e6f9bf",
+      "runtimeBytes": 340556,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s23-eric-harbor-plan-portrait.png",
+      "sourceSha256": "ae9272f20c3dd6864f62aca2fe25f1c04be9f7c9255e2421bd4c206466fbb14b",
+      "sourceBytes": 2737880,
+      "runtimePath": "assets/cg/s23-eric-harbor-plan-portrait.webp",
+      "runtimeSha256": "e699345cf9624d5bf6abcb366d54e1efe686fe09d0d56d5432ec0b8e54e03f7c",
+      "runtimeBytes": 407442,
+      "dimensions": [
+        961,
+        1637
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s24-nick-pier-consent.png",
+      "sourceSha256": "acd6f882a04dc2c35c509ee40eda183d531f6b8522afeb1b6a30f9a808b2e15a",
+      "sourceBytes": 2445799,
+      "runtimePath": "assets/cg/s24-nick-pier-consent.webp",
+      "runtimeSha256": "e49b7f0a95aa5c4bbbf74061def433c082c47d0a0fd7b9f97c0885a3f7c35062",
+      "runtimeBytes": 285028,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s24-nick-pier-consent-portrait.png",
+      "sourceSha256": "404c4e2501a0f0c12096b0cb2b8f7306bab8d40e5de25e8a23f9c73b2f99729a",
+      "sourceBytes": 2391999,
+      "runtimePath": "assets/cg/s24-nick-pier-consent-portrait.webp",
+      "runtimeSha256": "2200754b17a57a0888851a80a84b892861f973b6e87da001304d510de94bf642",
+      "runtimeBytes": 297976,
+      "dimensions": [
+        962,
+        1635
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s25-damir-clarity-talk.png",
+      "sourceSha256": "445889b4e4ec41e45eab64c36d64c48283530e7d892336108a5c8ab37dc5518b",
+      "sourceBytes": 2320055,
+      "runtimePath": "assets/cg/s25-damir-clarity-talk.webp",
+      "runtimeSha256": "249c61678a91e1c9a3c2c5cf65308b8c45038b4d2a6422e0666eb4c3a4513157",
+      "runtimeBytes": 271102,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s25-damir-clarity-talk-portrait.png",
+      "sourceSha256": "2f38ecf909d4c9d3b2dab5aeab000f3b9c25884c1fb53ead73dcc0f4e360fbab",
+      "sourceBytes": 2170667,
+      "runtimePath": "assets/cg/s25-damir-clarity-talk-portrait.webp",
+      "runtimeSha256": "2fdd0a1d99a27e05d82f9dd51d789edf1f6aa932b1df8735c9a4a1010150120f",
+      "runtimeBytes": 257704,
+      "dimensions": [
+        968,
+        1625
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s26-nick-choice.png",
+      "sourceSha256": "1320a9dce97e3905c1296de8d4c4634866614d3d0db3567ac10d3fb35827fa2b",
+      "sourceBytes": 2278308,
+      "runtimePath": "assets/cg/s26-nick-choice.webp",
+      "runtimeSha256": "627e797851e6935d7ca4aa272be5b2e88a475c6ef91a8209b5a7fdcf48dbebf7",
+      "runtimeBytes": 250688,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s26-nick-choice-portrait.png",
+      "sourceSha256": "ee6cf0336006de222d71ad4805d4a2b695096b1b383a4fc53e9f17f7d13f6b7b",
+      "sourceBytes": 2401008,
+      "runtimePath": "assets/cg/s26-nick-choice-portrait.webp",
+      "runtimeSha256": "1c7880f0c3888954c12f779ff0453bd131e65aae5aabf840e10da97aa424af83",
+      "runtimeBytes": 307208,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s26-damir-choice.png",
+      "sourceSha256": "16ec16e047283ab0fc858c6a52d7b54d6932c0037d04395cbd7a7835447cc206",
+      "sourceBytes": 2240398,
+      "runtimePath": "assets/cg/s26-damir-choice.webp",
+      "runtimeSha256": "11ee421b37fc103d535aa9c5a5a42aad02baace1e1ccf4da525153ffe91af928",
+      "runtimeBytes": 242682,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s26-damir-choice-portrait.png",
+      "sourceSha256": "11c5da7c3fc3cb7568bd15751d6902b6f8c47e9d4b3edb452d696b4ff5d35b43",
+      "sourceBytes": 2196178,
+      "runtimePath": "assets/cg/s26-damir-choice-portrait.webp",
+      "runtimeSha256": "faf3a407451c72d00ef6a1197f1f07ab920b2236f2a2b2befc3d8f34d2f08e88",
+      "runtimeBytes": 263530,
+      "dimensions": [
+        960,
+        1638
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s26-alice-choice.png",
+      "sourceSha256": "d6b566b4ec753e88603d0eb16822ea4bf9fb1d9415615fad7d4e0c96829cef4f",
+      "sourceBytes": 2160569,
+      "runtimePath": "assets/cg/s26-alice-choice.webp",
+      "runtimeSha256": "fdff8e2b032c4ecb23747aac4feeafbf3271c3cc5c80cfd44221ce7d2657c2e9",
+      "runtimeBytes": 242358,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s26-alice-choice-portrait.png",
+      "sourceSha256": "0e7ffbace60602f06b039c9732ab5e7858717a58220387fe87822ec383e06281",
+      "sourceBytes": 2300250,
+      "runtimePath": "assets/cg/s26-alice-choice-portrait.webp",
+      "runtimeSha256": "200fa5f3ab7e7e053e86bae47b7fe622809c51d14255549569dcfb541718cc33",
+      "runtimeBytes": 270386,
+      "dimensions": [
+        960,
+        1639
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/s66-hveragerdi-greenhouse.png",
+      "sourceSha256": "07b303976b97d186c37f3dc7950e5c4207c8f78a6681ae156733ef019e3c75af",
+      "sourceBytes": 3191882,
+      "runtimePath": "assets/backgrounds/s66-hveragerdi-greenhouse.webp",
+      "runtimeSha256": "3f2b250fd9f0d02978a52ff5ca330c84b23de864ec57e3d848c5aa39228fec47",
+      "runtimeBytes": 569500,
+      "dimensions": [
+        1832,
+        859
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/s66-hveragerdi-greenhouse-portrait.png",
+      "sourceSha256": "0e16bb094172c375208c71aa651cd1d273e781342f3b273acda026b1c8c8adda",
+      "sourceBytes": 3009681,
+      "runtimePath": "assets/backgrounds/s66-hveragerdi-greenhouse-portrait.webp",
+      "runtimeSha256": "5e4f65000345b3ab99b4b4acefa43e34b1e379456bc03f7f94d6f1531df14a20",
+      "runtimeBytes": 484634,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/s05-hveragerdi-road.png",
+      "sourceSha256": "a01b6ca5147810cdb88faefc7187053027fd69105e976b7ad2f42a586a6d030f",
+      "sourceBytes": 2733392,
+      "runtimePath": "assets/backgrounds/s05-hveragerdi-road.webp",
+      "runtimeSha256": "87d30acbe1f52186e6e50e62bd05c3c3e2a8c8cd89aff9f9ae52c9d81949b772",
+      "runtimeBytes": 409810,
+      "dimensions": [
+        1832,
+        859
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/s05-hveragerdi-road-portrait.png",
+      "sourceSha256": "b6e5924bc1830160fc5199677fe2a8c4919e23aee877da250b082b3b754fc8fe",
+      "sourceBytes": 2823765,
+      "runtimePath": "assets/backgrounds/s05-hveragerdi-road-portrait.webp",
+      "runtimeSha256": "c9eb12a6bf5851e9abe4491ab6c00051c86d830ef6ec35862a53f88f5a82eb69",
+      "runtimeBytes": 442028,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s06-hveragerdi-eric-alice.png",
+      "sourceSha256": "03541d251c355d14f35b2e6efc813a83a2a304b0729ef413d78b34553c21e8f9",
+      "sourceBytes": 2620501,
+      "runtimePath": "assets/cg/s06-hveragerdi-eric-alice.webp",
+      "runtimeSha256": "51e7e313e71203ab28132ab12f08aac0d8f9bf906bfe6588ca4b7831b98ec8f3",
+      "runtimeBytes": 336344,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s06-hveragerdi-eric-alice-portrait.png",
+      "sourceSha256": "7e7f017c10bcc5f86621bc80991f9d2767733e471451c0d4ac330b3b642000ca",
+      "sourceBytes": 2528730,
+      "runtimePath": "assets/cg/s06-hveragerdi-eric-alice-portrait.webp",
+      "runtimeSha256": "35ed73d5458f0c19738a2055bf98f5c486f47529654a16374d285083d0c28d30",
+      "runtimeBytes": 308918,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s07-kitchen-pasta.png",
+      "sourceSha256": "452ab108a997fd6371dd338635ddfe94bdbcf7b85a39fb552ae00fbcde3dd6df",
+      "sourceBytes": 2566971,
+      "runtimePath": "assets/cg/s07-kitchen-pasta.webp",
+      "runtimeSha256": "d6f74850880c97cd4e2d45f60cced919dfcf31fc66ffcbb0595d4938d728a7da",
+      "runtimeBytes": 348066,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s07-kitchen-pasta-portrait.png",
+      "sourceSha256": "552c38c03679ec662a94439fd33f6dc3c8dcb52215fc3dc6890f1135af801c2a",
+      "sourceBytes": 2460493,
+      "runtimePath": "assets/cg/s07-kitchen-pasta-portrait.webp",
+      "runtimeSha256": "6dc685c4d0c2152542c7bf6c4799f0cafe6c2f823f2706c5de9d0b75f3a2dd6b",
+      "runtimeBytes": 315760,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s07-kitchen-cards.png",
+      "sourceSha256": "ed50cfb8cad1615427df2b0e1802f32cc4c17f32b313cc6367403ebfeba73b8b",
+      "sourceBytes": 2532257,
+      "runtimePath": "assets/cg/s07-kitchen-cards.webp",
+      "runtimeSha256": "c3bccca8b994f086a872a2716c394b47c0538bec3b20e72490d565da074328f2",
+      "runtimeBytes": 341608,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s07-kitchen-cards-portrait.png",
+      "sourceSha256": "818353a9909aa12784d0379002315536ff219df4a514243f408f3cd04718ec95",
+      "sourceBytes": 2464204,
+      "runtimePath": "assets/cg/s07-kitchen-cards-portrait.webp",
+      "runtimeSha256": "1900a4fa4c4e21698ae3d4a657af4537f2f9045544e8f750bf7ac00f4c7e326f",
+      "runtimeBytes": 321400,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s08-guesthouse-strap.png",
+      "sourceSha256": "cd8e44eb13dcbec7a8d5ccd1612cdbda1a0c92edad3b93a77e3118e8cca990d6",
+      "sourceBytes": 2257497,
+      "runtimePath": "assets/cg/s08-guesthouse-strap.webp",
+      "runtimeSha256": "6e4527e5995b941327d073040299fcfbb443089bbcfe7ef3f7e2a7271936305a",
+      "runtimeBytes": 237772,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s08-guesthouse-strap-portrait.png",
+      "sourceSha256": "9533065cef3a31780e71b4f4de8c7325cc3a6dd48bb14f34079a02d03154abdf",
+      "sourceBytes": 2323340,
+      "runtimePath": "assets/cg/s08-guesthouse-strap-portrait.webp",
+      "runtimeSha256": "d9dc2e0e8c189de47c45ba9223fd677003dcedfa38a1e75dd834271e672f5c3a",
+      "runtimeBytes": 254568,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s10-vik-road-song.png",
+      "sourceSha256": "df56b1a22cbb3a94868c4e9a5815fe60fbe8a574375d5c3a5c89ae135f1acc93",
+      "sourceBytes": 2300135,
+      "runtimePath": "assets/cg/s10-vik-road-song.webp",
+      "runtimeSha256": "7a2f06374f80388c3a817aa504012346b0dc95d6be185eb9001dad32be78c220",
+      "runtimeBytes": 258496,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s10-vik-road-song-portrait.png",
+      "sourceSha256": "19fac68e95c05b60102651bc5019ff5039a5326d1bde4a6e5ffa05b8896cd0f8",
+      "sourceBytes": 2183252,
+      "runtimePath": "assets/cg/s10-vik-road-song-portrait.webp",
+      "runtimeSha256": "d3d3d09135988d6e6cd575c29decd152832f2aab1bd4daddaaa88bd6cbd3993f",
+      "runtimeBytes": 234782,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s12-vik-cafe-damir.png",
+      "sourceSha256": "7344fdda79eea8bf02bc3fb49e79bb94df78e93e387bd2a198a610cd648be99e",
+      "sourceBytes": 2519848,
+      "runtimePath": "assets/cg/s12-vik-cafe-damir.webp",
+      "runtimeSha256": "c428aa94349dd657b9347ee24c16b92d1087ecf08cdf353abe20e84edc03d2e0",
+      "runtimeBytes": 316872,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s12-vik-cafe-damir-portrait.png",
+      "sourceSha256": "a97c3311d0c181e54e083e741fbea1b0ca46d073ce5c53b050702ad14a0e36a4",
+      "sourceBytes": 2233556,
+      "runtimePath": "assets/cg/s12-vik-cafe-damir-portrait.webp",
+      "runtimeSha256": "775980ff9edbb9c717e228156f065a03e5f32803069244173c4cd18575fc2303",
+      "runtimeBytes": 260682,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s14-skaftafell-pace.png",
+      "sourceSha256": "e13e3a9296cea4cb8eef1dddcfa0c734bd0391f5a4f6e1fa5cc44c60d822406e",
+      "sourceBytes": 2670243,
+      "runtimePath": "assets/cg/s14-skaftafell-pace.webp",
+      "runtimeSha256": "88aeb674dea9cb8e4854b99ff0e589e52c5c378ee6bcb805968762e8af71d138",
+      "runtimeBytes": 363646,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s14-skaftafell-pace-portrait.png",
+      "sourceSha256": "c1b822b1f34851dd240b55f3003a8d0d38179bf7db0e441a3b686f23e557e345",
+      "sourceBytes": 2683243,
+      "runtimePath": "assets/cg/s14-skaftafell-pace-portrait.webp",
+      "runtimeSha256": "df42f2279fd5d6afe3fc18a2b16e83df41d4452d2c2b9dc9e264e40599f76476",
+      "runtimeBytes": 367870,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s16-guesthouse-help.png",
+      "sourceSha256": "8b492ae3e84d9dcdfc830e00fd0dcf18b3cfc0048748db67b49fa3fdd37d6656",
+      "sourceBytes": 2417353,
+      "runtimePath": "assets/cg/s16-guesthouse-help.webp",
+      "runtimeSha256": "a89255e15ff80390226522e3499a97751a5eea43351cdee442149127dc22f79a",
+      "runtimeBytes": 285016,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s16-guesthouse-help-portrait.png",
+      "sourceSha256": "50f5353ffacf349dcf7c13709ac654a03b9eb7112af16924e9f1e6fba7193550",
+      "sourceBytes": 2046172,
+      "runtimePath": "assets/cg/s16-guesthouse-help-portrait.webp",
+      "runtimeSha256": "807fddd5b74b716b48a2dc4824bd20c6ae75efe1ff68a0baba99c8c3ffe0ce0f",
+      "runtimeBytes": 197664,
+      "dimensions": [
+        981,
+        1602
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s16-kitchen-soup.png",
+      "sourceSha256": "4f5afd577454e72853bbdfcbde639801f2c127d9c8df9dc22520ac4e5db5e718",
+      "sourceBytes": 2450061,
+      "runtimePath": "assets/cg/s16-kitchen-soup.webp",
+      "runtimeSha256": "76388bf6a4cb407a6838df989bd06da21cda21b4d5ffce0e83e7978eeb138f54",
+      "runtimeBytes": 320128,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s16-kitchen-soup-portrait.png",
+      "sourceSha256": "65ef2c909502a7912d1799f2ba97d537c0a03b5d99f85d29fef6a8cb9c2147c6",
+      "sourceBytes": 2383378,
+      "runtimePath": "assets/cg/s16-kitchen-soup-portrait.webp",
+      "runtimeSha256": "098aa5a7684270edb81b1b343832ea8115f97d44437cfac64e009b3e4e76423c",
+      "runtimeBytes": 295458,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s17-hofn-guesthouse.png",
+      "sourceSha256": "385b4795f708736ac0caa56d860eff9f1c4090f094f5a8c5af8cb342ca2dcc37",
+      "sourceBytes": 2415883,
+      "runtimePath": "assets/cg/s17-hofn-guesthouse.webp",
+      "runtimeSha256": "4cbd94f73fa00735ee705356af2ffe07815b60672acf08720ba756f392edc6aa",
+      "runtimeBytes": 300036,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s17-hofn-guesthouse-portrait.png",
+      "sourceSha256": "ac09e422a2502d7f243c5be0303988ea467b093d9581908e1c65728cc0c4bd85",
+      "sourceBytes": 2273103,
+      "runtimePath": "assets/cg/s17-hofn-guesthouse-portrait.webp",
+      "runtimeSha256": "49a6387f735d2ddb5717dac866f860c7ba1f1e2c7cc0a9141993bf52104f0632",
+      "runtimeBytes": 267546,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s19-hofn-pool.png",
+      "sourceSha256": "f1d5704a588a699ddb09acc3dfc7f2d7ac9626544f349f93810156384d11d213",
+      "sourceBytes": 2156801,
+      "runtimePath": "assets/cg/s19-hofn-pool.webp",
+      "runtimeSha256": "2c0a10922ca5da09156164917a432171ad86338b5d163f01ff8efcd738feefa3",
+      "runtimeBytes": 238662,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s19-hofn-pool-portrait.png",
+      "sourceSha256": "399dde32c9c49a82c1c814c6a0c7ee94a56fe746d9c3656b16cedb6e9875b31e",
+      "sourceBytes": 1993267,
+      "runtimePath": "assets/cg/s19-hofn-pool-portrait.webp",
+      "runtimeSha256": "29fcdd027ec7a439a7461354409b46c15cf65f527834356005a9b82688fbdb7e",
+      "runtimeBytes": 207826,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s20-hofn-damir-kitchen.png",
+      "sourceSha256": "1dc4dc153162ed94c4d1315558576c23cc29964a090b30f02dc2c82deea70996",
+      "sourceBytes": 2385454,
+      "runtimePath": "assets/cg/s20-hofn-damir-kitchen.webp",
+      "runtimeSha256": "f654e9cdf2513a631056a6d0d8c034286c7f6215c8dc29de346845f59567447a",
+      "runtimeBytes": 285592,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s20-hofn-damir-kitchen-portrait.png",
+      "sourceSha256": "7af1f46bb7427bcbbc312598ab40fd1a8ac074c33415e57ccecd3d67ce4b7eb1",
+      "sourceBytes": 2414552,
+      "runtimePath": "assets/cg/s20-hofn-damir-kitchen-portrait.webp",
+      "runtimeSha256": "5b350dac7274c5121156cda869682fdb2d0408ddd987041da0cadfc92529374e",
+      "runtimeBytes": 306856,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s21-alice-hofn-room.png",
+      "sourceSha256": "0039e3ec3ddea4d771bb7b844d06a23f6c92a0ac1fc0ad42f0a2ffd64ce97683",
+      "sourceBytes": 1996348,
+      "runtimePath": "assets/cg/s21-alice-hofn-room.webp",
+      "runtimeSha256": "54ccdf2a83c33345d7cd7b4f39ce1d0c3ff2fb6ac5b1d584c73bae25a0fa0b20",
+      "runtimeBytes": 207268,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s21-alice-hofn-room-portrait.png",
+      "sourceSha256": "89669ca893d8b7cfc157d734962eef85ca9749a2f98120e99afa39f0f5a9e588",
+      "sourceBytes": 1981571,
+      "runtimePath": "assets/cg/s21-alice-hofn-room-portrait.webp",
+      "runtimeSha256": "a1a664ceb59673076b0a948388c1e3c115bb6da8a90aeab774237384ebb093e9",
+      "runtimeBytes": 201390,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/s61-hofn-streets.png",
+      "sourceSha256": "dd24ec408fbd1770d27dc5d9c72d468df7e6760ff9b3ce13829f202c91dc6ec8",
+      "sourceBytes": 3032898,
+      "runtimePath": "assets/backgrounds/s61-hofn-streets.webp",
+      "runtimeSha256": "3a70ac07633d890def4d062cc93bbf007c4b2e0800492ac823496523334c5554",
+      "runtimeBytes": 516030,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/s61-hofn-streets-portrait.png",
+      "sourceSha256": "98274ac64656b1bb6006daf825d57fb2e7c21d0606f5c5968a1a2acbce2f7863",
+      "sourceBytes": 2987666,
+      "runtimePath": "assets/backgrounds/s61-hofn-streets-portrait.webp",
+      "runtimeSha256": "55ff1315ba75a9064331887ad4fa4309a521ee86c0b7f386a0c719cf612d4c42",
+      "runtimeBytes": 512632,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s27-egilsstadir-boardwalk.png",
+      "sourceSha256": "2f8c46ad171940ca1b0ffaae9c8ece0ed72f7c470dc0cd81887b972b34fc26d6",
+      "sourceBytes": 2600591,
+      "runtimePath": "assets/cg/s27-egilsstadir-boardwalk.webp",
+      "runtimeSha256": "b7367d41ac963546ffb2cd8262c23cb8aeaf035cbc19b5706bfc43ff652be0fa",
+      "runtimeBytes": 332272,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s27-egilsstadir-boardwalk-portrait.png",
+      "sourceSha256": "e94b308e3bd380c183377ce6723b39b1a46edfd5f8fbda412f7c33108f4db461",
+      "sourceBytes": 2400693,
+      "runtimePath": "assets/cg/s27-egilsstadir-boardwalk-portrait.webp",
+      "runtimeSha256": "a126c8f48aeaf4d4dcbb177d28a40010393d719030e01a0ea125a5cea02871d2",
+      "runtimeBytes": 277306,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s28-hverfjall-hood.png",
+      "sourceSha256": "0627fea5615891262a1393b011eb4549b3130952ff55233f3e0d6c2f8825bb5c",
+      "sourceBytes": 4499624,
+      "runtimePath": "assets/cg/s28-hverfjall-hood.webp",
+      "runtimeSha256": "6ec4ff50b7d7e819b7483fc33e1d733e34de36851ce828f459e168ad1178c441",
+      "runtimeBytes": 318604,
+      "dimensions": [
+        1920,
+        900
+      ],
+      "sourceMode": "RGBA",
+      "alpha": true,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s28-hverfjall-hood-portrait.png",
+      "sourceSha256": "1c5b2e669a9953246c17772e2a9ef33224ac484fb7da0dfc92f9ba15b6061f30",
+      "sourceBytes": 842652,
+      "runtimePath": "assets/cg/s28-hverfjall-hood-portrait.webp",
+      "runtimeSha256": "45213d9613534a5e587145b2ce98c4b3979b7906debb8872bcbb9992d19d1667",
+      "runtimeBytes": 92796,
+      "dimensions": [
+        390,
+        844
+      ],
+      "sourceMode": "RGBA",
+      "alpha": true,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s49-reykjahlid-window-dance.png",
+      "sourceSha256": "35c546c606ed7d11be5ae5e3fad8bf737f52feae9e92e9fd334abe556c38b34f",
+      "sourceBytes": 4366410,
+      "runtimePath": "assets/cg/s49-reykjahlid-window-dance.webp",
+      "runtimeSha256": "9959b81ed268bbf657ed51da39c967c01bd62e789732a0b3d8bfe59603491f32",
+      "runtimeBytes": 259802,
+      "dimensions": [
+        1920,
+        900
+      ],
+      "sourceMode": "RGBA",
+      "alpha": true,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s49-reykjahlid-window-dance-portrait.png",
+      "sourceSha256": "b08be8ce1a6004a42a4450892001fd24ad48b11b29054ec4bd632bd42e760de4",
+      "sourceBytes": 879337,
+      "runtimePath": "assets/cg/s49-reykjahlid-window-dance-portrait.webp",
+      "runtimeSha256": "4dc8856cf245ea7631e43fed5430eb0ce88aa5a4cae0ebd027ee3264c0d098ea",
+      "runtimeBytes": 88278,
+      "dimensions": [
+        390,
+        844
+      ],
+      "sourceMode": "RGBA",
+      "alpha": true,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s30-damir-sleeve-promise.png",
+      "sourceSha256": "95f352b51c39c318394b673de98ee66bafbe34dffc918d1b4a7f271505059359",
+      "sourceBytes": 2360711,
+      "runtimePath": "assets/cg/s30-damir-sleeve-promise.webp",
+      "runtimeSha256": "93ba01e53165a74f7b1f67c50de7d2a7435c29058f8936700302486c1d3011b5",
+      "runtimeBytes": 277238,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s30-damir-sleeve-promise-portrait.png",
+      "sourceSha256": "3067cf10304648180c9b7ff41066d107d3bf09a081ccb33002517d56489d2a95",
+      "sourceBytes": 2182021,
+      "runtimePath": "assets/cg/s30-damir-sleeve-promise-portrait.webp",
+      "runtimeSha256": "809143ed75fd6f80867d1a05c958b2fe3e59d82b2709f183ef553e2817e0d98a",
+      "runtimeBytes": 234672,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s55-shum-first-step.png",
+      "sourceSha256": "cb6e4b31491e3d14d529b94dec95d8ecef345723dab7d7568feb2f14384a991e",
+      "sourceBytes": 2415661,
+      "runtimePath": "assets/cg/s55-shum-first-step.webp",
+      "runtimeSha256": "24063b015131a27b345da15398f91b79e5ff2ee2790f218d3ec604411a81ae96",
+      "runtimeBytes": 277000,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s55-shum-first-step-portrait.png",
+      "sourceSha256": "ca8a9a595e49101bed5c1753188052392bfecd1c8c72cfe953f489c4d5930a8e",
+      "sourceBytes": 2812205,
+      "runtimePath": "assets/cg/s55-shum-first-step-portrait.webp",
+      "runtimeSha256": "0f0392dc53031a27af473964320ff44cf1b814f40142695bdae06e0038a9ab9f",
+      "runtimeBytes": 400266,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s32-eric-calendar-crossroads.png",
+      "sourceSha256": "2c24734a24b7fbf58ea281e52f230813a9b07c5747dd7c590bc40a8800f1da92",
+      "sourceBytes": 2445600,
+      "runtimePath": "assets/cg/s32-eric-calendar-crossroads.webp",
+      "runtimeSha256": "b701add0d563b9919b9a9a2ac4db801fbccc77baad36c1af8d46c31de4927e22",
+      "runtimeBytes": 286030,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s32-eric-calendar-crossroads-portrait.png",
+      "sourceSha256": "9bbddaaafc0cb13262d049b62453749960421983298c9cdf4cf69e13a71aae2d",
+      "sourceBytes": 2698054,
+      "runtimePath": "assets/cg/s32-eric-calendar-crossroads-portrait.webp",
+      "runtimeSha256": "07cc41aed28498a4b69d7dc26f487600a0144b95e6a87e7110b7c897059e4b11",
+      "runtimeBytes": 392184,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s33-nick-teaser-reveal.png",
+      "sourceSha256": "c0ce7b64c632f148b8f984f2ae21eec01c09c0c958aa65f42629a8180b4556cb",
+      "sourceBytes": 2070767,
+      "runtimePath": "assets/cg/s33-nick-teaser-reveal.webp",
+      "runtimeSha256": "393d7d591ee5c447d13d49331a0e4939edd2be1648c785e1557748ff5dc0f96b",
+      "runtimeBytes": 196864,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s33-nick-teaser-reveal-portrait.png",
+      "sourceSha256": "cf54a3f12eebfe70b4282e3506b960dd77974cae7890c5e15b571d1365e40dd7",
+      "sourceBytes": 2166172,
+      "runtimePath": "assets/cg/s33-nick-teaser-reveal-portrait.webp",
+      "runtimeSha256": "c2adb6281bee534fca6a4d2464b116da8fbb26c47b93233457a7c26fec7aeaa8",
+      "runtimeBytes": 230482,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s53-nick-no-camera-pool.png",
+      "sourceSha256": "f1b6bb4204e8034520c5644f1e94e9019983c666962d67cfeb845ec94f29b8df",
+      "sourceBytes": 2423727,
+      "runtimePath": "assets/cg/s53-nick-no-camera-pool.webp",
+      "runtimeSha256": "963bc5265fdecff886f0d45fb76350c65888e39cdc6c926d11d786fe0ff8da4d",
+      "runtimeBytes": 270442,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s53-nick-no-camera-pool-portrait.png",
+      "sourceSha256": "3e0c7a37ff896e83d2d59a79a77130b16f9f532c9430584fe4a52bca4ae921e2",
+      "sourceBytes": 2321799,
+      "runtimePath": "assets/cg/s53-nick-no-camera-pool-portrait.webp",
+      "runtimeSha256": "2dd580bc10e954b815cdfedf33611730db1f86e6f850e3f787ee6d5bbaaf7d47",
+      "runtimeBytes": 258508,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/guesthouse-common-kitchen-evening.png",
+      "sourceSha256": "f6c3e566baf906961a9540d927f73477dcd1734cd8850051a1abce31af9e2fb8",
+      "sourceBytes": 2219028,
+      "runtimePath": "assets/backgrounds/guesthouse-common-kitchen-evening.webp",
+      "runtimeSha256": "9a7583edf6e678fb1a9551f12b101f6f4a90decc9702167c391b9ce02f805df7",
+      "runtimeBytes": 262032,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/small-icelandic-cafe-rain.png",
+      "sourceSha256": "8ee77c853233c5e9ccbca3a5714d46052d295284744e36550824181635c17411",
+      "sourceBytes": 2132915,
+      "runtimePath": "assets/backgrounds/small-icelandic-cafe-rain.webp",
+      "runtimeSha256": "4d352a03f8255170d9b1ebbdad823335ced0c56fb04e73de2712ffdfb0a870d6",
+      "runtimeBytes": 200218,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/south-coast-road-rain.png",
+      "sourceSha256": "6e5d7bc3fe561db6d0447b038f4f476a0730620dabc549b7d42b4b95fd4bc7c4",
+      "sourceBytes": 2088059,
+      "runtimePath": "assets/backgrounds/south-coast-road-rain.webp",
+      "runtimeSha256": "cd7d2b627079b1ef08543a10532034c81d1e5992fc7135de026b4b3ca97f4881",
+      "runtimeBytes": 228270,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/hofn-open-pool-evening.png",
+      "sourceSha256": "c9f0034f869c6a4ea574460c38ebe91549e847871e739ec39bbc58a90f08bef5",
+      "sourceBytes": 2230780,
+      "runtimePath": "assets/backgrounds/hofn-open-pool-evening.webp",
+      "runtimeSha256": "5b22c70cd84c692fa28536084a367b4a1f0e97b367dc2af6d3c8565709aa300e",
+      "runtimeBytes": 260208,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/lagarfljot-volunteer-trail.png",
+      "sourceSha256": "c75abb37b42483f40f47b37f75c047986d77c78b1a9fbf85f21c2d25064bef87",
+      "sourceBytes": 2763900,
+      "runtimePath": "assets/backgrounds/lagarfljot-volunteer-trail.webp",
+      "runtimeSha256": "331265d360de5792d8021e46c4f4553d2831242ac14d1e791af65fafd832f171",
+      "runtimeBytes": 413320,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/myvatn-rainy-lodge-interior.png",
+      "sourceSha256": "8d04133a79bca4dbc6f37664a144496c709902a8c5c09c5f3bcf0fafb4a23bf3",
+      "sourceBytes": 2182909,
+      "runtimePath": "assets/backgrounds/myvatn-rainy-lodge-interior.webp",
+      "runtimeSha256": "cb00b2821c74c11c1ee6b84fe36101bb31c37fd2f3e469bfb2a7f0e4ea45dd21",
+      "runtimeBytes": 225354,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/seydisfjordur-community-hall.png",
+      "sourceSha256": "f61a2ad71491201983c5dc892fbeff0974ba42d93674090f4143d23b5cc870df",
+      "sourceBytes": 2071938,
+      "runtimePath": "assets/backgrounds/seydisfjordur-community-hall.webp",
+      "runtimeSha256": "9a84e02f371929af62c8a9a96a18b3774cde6440a49dbf3fe91526a983328922",
+      "runtimeBytes": 211608,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/horse-farm-riding-lane.png",
+      "sourceSha256": "1844afcbd548c34acb1694e97bd925295a94c2a746bdb90bc31c4cebdd1a70a5",
+      "sourceBytes": 2775222,
+      "runtimePath": "assets/backgrounds/horse-farm-riding-lane.webp",
+      "runtimeSha256": "8587936505e359730472fff43a6b9c09219c3ffd3a0f502eef2162bebd03082c",
+      "runtimeBytes": 417758,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/road-trip-van-interior-rain.png",
+      "sourceSha256": "dbd19409c079c98e0141818e85935ae84ed14655d2897c0400953191d5a7c269",
+      "sourceBytes": 2148974,
+      "runtimePath": "assets/backgrounds/road-trip-van-interior-rain.webp",
+      "runtimeSha256": "84cf38930c45d7cadb49dc0f64ad0eb7fbbf256a2e61a11e27ee1b323e646dcd",
+      "runtimeBytes": 211934,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/seydisfjordur-guesthouse-smokehouse-morning.png",
+      "sourceSha256": "fb4f8a4497b43ac787fae9e2393e1c211c2b42680ecf9eec84cbd03a023dc92c",
+      "sourceBytes": 2923331,
+      "runtimePath": "assets/backgrounds/seydisfjordur-guesthouse-smokehouse-morning.webp",
+      "runtimeSha256": "783d10045e6cb6da313de9e9e533af9ff231098d1b8cca4e0c4e7543ef83c550",
+      "runtimeBytes": 458698,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/myvatn-hverfjall-viewpoint-overcast.png",
+      "sourceSha256": "c66c1ac0ee9942cc9cfc3add3f29399b8dc04ef8e5ef9993c78430ebedb85620",
+      "sourceBytes": 2578691,
+      "runtimePath": "assets/backgrounds/myvatn-hverfjall-viewpoint-overcast.webp",
+      "runtimeSha256": "864cfff816666953a486f3b3506e743252330b4e1b9f6d0f6f84e5a1d037c34e",
+      "runtimeBytes": 373432,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/keflavik-airport-departures.png",
+      "sourceSha256": "a232967851c5a47b21005c85d2622ee0a9bd75f985fe7d4609e8c8a399c79c05",
+      "sourceBytes": 2100297,
+      "runtimePath": "assets/backgrounds/keflavik-airport-departures.webp",
+      "runtimeSha256": "263a34aea75fbd027edac35bec62ab501eff1c34525449c3ac34cf52776855b8",
+      "runtimeBytes": 204042,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/snaefellsnes-bakery-dawn.png",
+      "sourceSha256": "bfc88acd5919b194d4de46cf00ba0f893a6977247b75ac404360a9c7d0b7e5fa",
+      "sourceBytes": 2249402,
+      "runtimePath": "assets/backgrounds/snaefellsnes-bakery-dawn.webp",
+      "runtimeSha256": "71e6b3899edb781f1dccb78490e10d326ba04becc6a267fcafe031912ca6973e",
+      "runtimeBytes": 262922,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/reykjahlid-bookshop-day.png",
+      "sourceSha256": "f08067b3a390987dde0d7b9de89bf88c90fb664ed04bb2d0af35948ecb1d15b9",
+      "sourceBytes": 2338004,
+      "runtimePath": "assets/backgrounds/reykjahlid-bookshop-day.webp",
+      "runtimeSha256": "2264277ab6aff530cdb2578be060d6e3efe64af60f7062c104913ea5f78d8974",
+      "runtimeBytes": 303816,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/hveragerdi-greenhouse-cafe.png",
+      "sourceSha256": "f19d430c65a0b92f313bc89ae57c45f63482da8bf10ff1018af862f8203d018f",
+      "sourceBytes": 2875522,
+      "runtimePath": "assets/backgrounds/hveragerdi-greenhouse-cafe.webp",
+      "runtimeSha256": "682359fbfad549052c1b363b77a66dfee5ad25b75ed297a4f14e23e13ebcb5af",
+      "runtimeBytes": 474456,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/s18-hofn-harbour.png",
+      "sourceSha256": "0d3a398d3db4a102ec3e7cd0b470c32a40641a164fdede90fa66a66aac80e93e",
+      "sourceBytes": 2299848,
+      "runtimePath": "assets/backgrounds/s18-hofn-harbour.webp",
+      "runtimeSha256": "e3da7e44e1407cbb615f46d1d541dfd581daed64429fe01249660344d70bab94",
+      "runtimeBytes": 288946,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": false,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s29-nick-playback.png",
+      "sourceSha256": "e338c1c3bfd8cc0e8f766d5dad82ec2489157018e513ea7da84467c8f45a7e88",
+      "sourceBytes": 2110328,
+      "runtimePath": "assets/cg/s29-nick-playback.webp",
+      "runtimeSha256": "6de857f94b82cfca1ded40a9ea859b59ffe66408b734d7d97105b50e4a1b3d1b",
+      "runtimeBytes": 218434,
+      "dimensions": [
+        1671,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s29-nick-playback-portrait.png",
+      "sourceSha256": "794d96c2689eb6dfb1924184fecf5216a022f152809eff8e2feef6b8bfd1b0ac",
+      "sourceBytes": 2171704,
+      "runtimePath": "assets/cg/s29-nick-playback-portrait.webp",
+      "runtimeSha256": "d0def99a8db1b9b4ca1e028b3b2173141eafdf7480aa4bf8f0ffb19a6b0048e4",
+      "runtimeBytes": 238828,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s52-glove-found.png",
+      "sourceSha256": "a1af4c3ba5e28b457fd1ca773ef1f0528c73a8ee4df9838f3c82bd7af975d8d8",
+      "sourceBytes": 2458895,
+      "runtimePath": "assets/cg/s52-glove-found.webp",
+      "runtimeSha256": "62baca9c9dea6701fd442f19530461da65eef798e61665a29367f6c29bc4c6a5",
+      "runtimeBytes": 304354,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s52-glove-found-portrait.png",
+      "sourceSha256": "65c062d5b9e49935bbab3a94d63f1a2d0e5cbe84773bb335d5d9bb0781e74528",
+      "sourceBytes": 2463591,
+      "runtimePath": "assets/cg/s52-glove-found-portrait.webp",
+      "runtimeSha256": "a9fe9c788c9964c2723a6c6826b48e6f89cb6fdeb5a4f11bdcdfe2d694a1d0d5",
+      "runtimeBytes": 309608,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s31-alice-independent-evening.png",
+      "sourceSha256": "b28b7075f513860e72d09b2e6f4be2ad36be2451677c4bb01a8497733850966f",
+      "sourceBytes": 2019343,
+      "runtimePath": "assets/cg/s31-alice-independent-evening.webp",
+      "runtimeSha256": "b6e79093d164c19aa7333aff81589d9ef50da26a1fa64887f379938586d0c7c2",
+      "runtimeBytes": 236218,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s31-alice-independent-evening-portrait.png",
+      "sourceSha256": "a77305a0969f573327791ef2e18feaaf69129d9407fa896ca2f7a4fd9dcb6180",
+      "sourceBytes": 2084193,
+      "runtimePath": "assets/cg/s31-alice-independent-evening-portrait.webp",
+      "runtimeSha256": "811d780769c2631b72bb0328c70f6009bc8490ae970e4d13d479d83c3030c42e",
+      "runtimeBytes": 245648,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s34-cancelled-evening.png",
+      "sourceSha256": "3cceac18f7698d6a8589b75ab077c88a6807c8353dc5f4ea4dab1ed9674a382d",
+      "sourceBytes": 2355764,
+      "runtimePath": "assets/cg/s34-cancelled-evening.webp",
+      "runtimeSha256": "7a3a2182aed85797e45d3268e590a88e7485017714cfdc38e5ef8f2fe1ee184b",
+      "runtimeBytes": 286050,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s34-cancelled-evening-portrait.png",
+      "sourceSha256": "ada136cd36903a05bf4846d4f755be97435026ed56e66dae23bc100262b5b5e7",
+      "sourceBytes": 2434066,
+      "runtimePath": "assets/cg/s34-cancelled-evening-portrait.webp",
+      "runtimeSha256": "fd62d8f21038a407bea9ec678af19733e711ffeea5f98cd9aa177f2335009913",
+      "runtimeBytes": 290840,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s56-cafe-musicians.png",
+      "sourceSha256": "8b07611b7854e1ac00ebc8d31608acbb71184ac996276bd1daf8511ccdeb1cb3",
+      "sourceBytes": 2381946,
+      "runtimePath": "assets/cg/s56-cafe-musicians.webp",
+      "runtimeSha256": "50b6d978cdecba97e5bedc2badc6e635d38968065b325c5b5c79beb9c3fad590",
+      "runtimeBytes": 295480,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s56-cafe-musicians-portrait.png",
+      "sourceSha256": "e434c8412c5c80542f3ba839bed19934984c97009a3f6f9b4aaec370822d6d8b",
+      "sourceBytes": 2308055,
+      "runtimePath": "assets/cg/s56-cafe-musicians-portrait.webp",
+      "runtimeSha256": "8ed8a320968608ffd01eda7f94617de91b8d3bf5d17813ab838520c326f9036a",
+      "runtimeBytes": 291672,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s62-alice-bookstore-choice.png",
+      "sourceSha256": "86ad9037811629288876b793f34d878e7b0dbb0916339e263cd67f3844c56f1f",
+      "sourceBytes": 2218553,
+      "runtimePath": "assets/cg/s62-alice-bookstore-choice.webp",
+      "runtimeSha256": "ff691e7bc432581d79aa572ad8623d3ddf37fc45775e5544f1ff6052dfcd2d04",
+      "runtimeBytes": 260570,
+      "dimensions": [
+        1672,
+        940
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s62-alice-bookstore-choice-portrait.png",
+      "sourceSha256": "d451dc921a48e214341b8e95a33a0e9cec5d393c9171b429891afd119379b6ad",
+      "sourceBytes": 2426343,
+      "runtimePath": "assets/cg/s62-alice-bookstore-choice-portrait.webp",
+      "runtimeSha256": "726c4edd948c8825d4365ccb9acb418c0dd208c0cb0f0f047d96ea73d9665ad5",
+      "runtimeBytes": 322146,
+      "dimensions": [
+        940,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s63-alice-solo-concert.png",
+      "sourceSha256": "2bba2031dd5008d41ccb04ca5843963ccf280df5b661677e32908600dc35da29",
+      "sourceBytes": 1910981,
+      "runtimePath": "assets/cg/s63-alice-solo-concert.webp",
+      "runtimeSha256": "215afee53da5ff0fe1f9f4ccb2bdb3cc43449cec2dfee1a32f33126efb69660e",
+      "runtimeBytes": 191498,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s63-alice-solo-concert-portrait.png",
+      "sourceSha256": "bd10b89eb9e08320dd8ca2c384e658e5d8dfc3b8c075bd2eeaabce65c5108d8b",
+      "sourceBytes": 2061707,
+      "runtimePath": "assets/cg/s63-alice-solo-concert-portrait.webp",
+      "runtimeSha256": "77d9945a3624896e67dabeaa0fa6989a850de6d552f0be92b25d1a60b3a98f21",
+      "runtimeBytes": 228724,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s37-eric-alice-cafe.png",
+      "sourceSha256": "f4f7ad3d04779377b34041f2c04e77e5e803bce933348f1d410d62eeae7b9839",
+      "sourceBytes": 2280361,
+      "runtimePath": "assets/cg/s37-eric-alice-cafe.webp",
+      "runtimeSha256": "8e067e89e6123bfb1749e7eb9822bbdd1ed4ffe0adc07dd17aaec73ed9c5a92c",
+      "runtimeBytes": 243924,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s37-eric-alice-cafe-portrait.png",
+      "sourceSha256": "d006a0fa4385d4a0bf6d146187801e34b765a6a4a32a7569cc113ed8d1e3a14c",
+      "sourceBytes": 2064459,
+      "runtimePath": "assets/cg/s37-eric-alice-cafe-portrait.webp",
+      "runtimeSha256": "81f630f3733aed2f6c5741d075c16c808026dc5ba086c2a263ee69a0d8e4e278",
+      "runtimeBytes": 209660,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 90,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": false,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/s03-reykjavik-guesthouse-morning.png",
+      "sourceSha256": "2ca12077112219ffbc9dfd916f504574ee624c2504a3a3c3fad90e741d3ed4bd",
+      "sourceBytes": 1195907,
+      "runtimePath": "assets/backgrounds/s03-reykjavik-guesthouse-morning.webp",
+      "runtimeSha256": "d5ae06ca9e31b38547111a612734f7834f33ffd56d877afc69ca45e7a3d314a8",
+      "runtimeBytes": 30718,
+      "dimensions": [
+        1920,
+        900
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 82,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/s06-hveragerdi-geothermal-day.png",
+      "sourceSha256": "0610dbae504ca1a3de51f9c74936f402b02d9af016f2c1020eb07ffb4dd6d1a7",
+      "sourceBytes": 2062238,
+      "runtimePath": "assets/backgrounds/s06-hveragerdi-geothermal-day.webp",
+      "runtimeSha256": "2d4a056cdcd159058393179629294cfeb80b60390f744ecfb062f6c068c1ab8f",
+      "runtimeBytes": 61924,
+      "dimensions": [
+        1920,
+        900
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 82,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/s09-guesthouse-to-skogafoss-morning.png",
+      "sourceSha256": "f47a9a30b9668d4c50e466d914e2612dc45c61bfc4ba46b85a29ea686df91a49",
+      "sourceBytes": 1821556,
+      "runtimePath": "assets/backgrounds/s09-guesthouse-to-skogafoss-morning.webp",
+      "runtimeSha256": "f953362e42614de3b5ef65e1741082bff9b3f42eed818c63b7cd7e57b536d001",
+      "runtimeBytes": 57178,
+      "dimensions": [
+        1920,
+        900
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 82,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/s10-vik-guesthouse-arrival.png",
+      "sourceSha256": "94356b1e97aa3ed8559b6864d4d948de03e96df4a07872b3f82dedbf98ddb894",
+      "sourceBytes": 1149647,
+      "runtimePath": "assets/backgrounds/s10-vik-guesthouse-arrival.webp",
+      "runtimeSha256": "86b62a622444e3e74f84eb77ca45a3664af0c982e9c2c48a5036d51b3e164c49",
+      "runtimeBytes": 29318,
+      "dimensions": [
+        1920,
+        900
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 82,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/s12-vik-street-day.png",
+      "sourceSha256": "31cbbebd5a782f5f0cfbb77495ef39cee2fbb14939feed6f44deea25c7b4b770",
+      "sourceBytes": 1836561,
+      "runtimePath": "assets/backgrounds/s12-vik-street-day.webp",
+      "runtimeSha256": "0c31da3caffd36992615acb19532962bbaa9bbd2b83fc7e8029259784810071a",
+      "runtimeBytes": 55798,
+      "dimensions": [
+        1920,
+        900
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 82,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/s13-skaftafell-visitor-parking.png",
+      "sourceSha256": "2b7425c0b1a6da2e03a78cd88ad07a5974c509530ea9cdacffa8c89674a782e7",
+      "sourceBytes": 1630504,
+      "runtimePath": "assets/backgrounds/s13-skaftafell-visitor-parking.webp",
+      "runtimeSha256": "b0b5a583d1150c75c623efafe4624a21c51e5129502689342c51ca9f79e5600c",
+      "runtimeBytes": 47812,
+      "dimensions": [
+        1920,
+        900
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 82,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/s14-lagoon-road.png",
+      "sourceSha256": "17c88d319dff19d82022a8369f51c0614b369391a1282f1422f07392108eb2a9",
+      "sourceBytes": 1281580,
+      "runtimePath": "assets/backgrounds/s14-lagoon-road.webp",
+      "runtimeSha256": "999547bd8f9baf38cf30487004f3907af16255dc4a493b9a6b3dbee9160999ee",
+      "runtimeBytes": 33660,
+      "dimensions": [
+        1920,
+        900
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 82,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/s15-jokulsarlon-parking-day.png",
+      "sourceSha256": "4ee1645d83e732806438c1c19156f06840c44b39b626b9332dce488c551447d8",
+      "sourceBytes": 1339640,
+      "runtimePath": "assets/backgrounds/s15-jokulsarlon-parking-day.webp",
+      "runtimeSha256": "9329c901aad09db600fbfab109ac66405b3400faef88bfb9717e804f05a54b7e",
+      "runtimeBytes": 41310,
+      "dimensions": [
+        1920,
+        900
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 82,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/s18-hofn-room-morning.png",
+      "sourceSha256": "fc75aa2d8fbd96ae2ac78a0d47906b8f211680bebdff8bf1f2443894ce33f2ed",
+      "sourceBytes": 1146311,
+      "runtimePath": "assets/backgrounds/s18-hofn-room-morning.webp",
+      "runtimeSha256": "a730fe2d3f11e89b2e023eb7ebe427e1bf17d9954dec820dfeb1720eca690ac6",
+      "runtimeBytes": 30422,
+      "dimensions": [
+        1920,
+        900
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 82,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/s18-hofn-breakfast-morning.png",
+      "sourceSha256": "c9ce23e9e1e82fdd2bc521a0b3501d5f76715b64e300dfc3e4be98fa8ddc2c8d",
+      "sourceBytes": 1540541,
+      "runtimePath": "assets/backgrounds/s18-hofn-breakfast-morning.webp",
+      "runtimeSha256": "8aa121f27e54ab175e2bd7569ba6901cd8ff96b24c211b06f6f24999369dbad5",
+      "runtimeBytes": 40240,
+      "dimensions": [
+        1920,
+        900
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 82,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/s26-eastfjords-guesthouse-courtyard.png",
+      "sourceSha256": "f165bd26a68f0c9c1ab1d4ec73d6fc6d28780fe9004fd5f965e781bc71ed9431",
+      "sourceBytes": 1656642,
+      "runtimePath": "assets/backgrounds/s26-eastfjords-guesthouse-courtyard.webp",
+      "runtimeSha256": "9f29c5c22848993f369852214839334eca65884a03b510a847dbe7d39bc1f91a",
+      "runtimeBytes": 43840,
+      "dimensions": [
+        1920,
+        900
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 82,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/s37-snaefellsnes-guesthouse-day.png",
+      "sourceSha256": "eaef888cc0f4d38058c4f8c58eba13818903dc1e26a264ae65fabd28050f60df",
+      "sourceBytes": 1164039,
+      "runtimePath": "assets/backgrounds/s37-snaefellsnes-guesthouse-day.webp",
+      "runtimeSha256": "3ae1ed7ca73fa822fe2e843d0e573b1ba845674a0056262c635ab2ad93d82d4d",
+      "runtimeBytes": 28358,
+      "dimensions": [
+        1920,
+        900
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 82,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/s39-alice-damir-cafe-walk.png",
+      "sourceSha256": "229f4d2898d66f135e027d6d871517363174c4e40c9fc580dbcf1fe0163f282e",
+      "sourceBytes": 1511085,
+      "runtimePath": "assets/backgrounds/s39-alice-damir-cafe-walk.webp",
+      "runtimeSha256": "3f9ed9d5db3b47c8b5e477e365bdc7fbf21c4eeb81cbae42a705802986b716e6",
+      "runtimeBytes": 40574,
+      "dimensions": [
+        1920,
+        900
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 82,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/s40-alice-room-laptop-window.png",
+      "sourceSha256": "7687839e21f6c71266779e7b2da273beec93b45985be7357fb3cc14399529a48",
+      "sourceBytes": 1328759,
+      "runtimePath": "assets/backgrounds/s40-alice-room-laptop-window.webp",
+      "runtimeSha256": "671a2370b2382b0aa6720e5119fd07a61572f12296015539d42ef3dba92a80c5",
+      "runtimeBytes": 32752,
+      "dimensions": [
+        1920,
+        900
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 82,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/s46-airport-bus-day.png",
+      "sourceSha256": "bdd60db4665ffbefb7d18a2b63f16e19042073920254a7aa8eac6a0a59a39c13",
+      "sourceBytes": 1160684,
+      "runtimePath": "assets/backgrounds/s46-airport-bus-day.webp",
+      "runtimeSha256": "bfbdc11d3a38a1d26d8ca1aef78221756ad2ef2aa861ea78789dcfd589f6ddfa",
+      "runtimeBytes": 33666,
+      "dimensions": [
+        1920,
+        900
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 82,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/s48-guesthouse-exit-morning.png",
+      "sourceSha256": "9548fc8a82ac62142694d65d182f7a6f6b799efffc0e564f8ebf8175c1ff2d37",
+      "sourceBytes": 1415637,
+      "runtimePath": "assets/backgrounds/s48-guesthouse-exit-morning.webp",
+      "runtimeSha256": "9c113b201a30979e3d1f3c1065d396f3f27565b26b0907262c6d4f2679295572",
+      "runtimeBytes": 34480,
+      "dimensions": [
+        1920,
+        900
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 82,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/backgrounds/s52-hofn-streets-post-workshop.png",
+      "sourceSha256": "05af3a95007cf4abbc07dc3f866c11d6974d36a29229d1302e1cd7304aff1332",
+      "sourceBytes": 1652917,
+      "runtimePath": "assets/backgrounds/s52-hofn-streets-post-workshop.webp",
+      "runtimeSha256": "df70ff4d5b26076e6df6d1cb7f9762c75f1b8331d15d535f7121141a10971be3",
+      "runtimeBytes": 49442,
+      "dimensions": [
+        1920,
+        900
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 82,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s03-editor-call-damir.png",
+      "sourceSha256": "aea38cdcffafe5233e8e6d3d93ad5618e41ab94addae40c0a143325a9b80561a",
+      "sourceBytes": 2140199,
+      "runtimePath": "assets/cg/s03-editor-call-damir.webp",
+      "runtimeSha256": "3a4e4b27631452f9336f89a6ef75a2d2010c02d3562fd02fba9a3e77b2c3661a",
+      "runtimeBytes": 162118,
+      "dimensions": [
+        1920,
+        900
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 82,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s03-editor-call-damir-portrait.png",
+      "sourceSha256": "c6933c24c457d53804cf284880db8bf6668b38abddd3da0ed7322487c9b764c1",
+      "sourceBytes": 1071906,
+      "runtimePath": "assets/cg/s03-editor-call-damir-portrait.webp",
+      "runtimeSha256": "beb882820d4744e03ae39752e87ef304731f04988c19a86897cee386b1074770",
+      "runtimeBytes": 84408,
+      "dimensions": [
+        1920,
+        900
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 82,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s18-hofn-breakfast-group.png",
+      "sourceSha256": "163e828c7eefaf887fd7276da86e906941ebf9fee0acafcb90456ff2794cf2b4",
+      "sourceBytes": 1787770,
+      "runtimePath": "assets/cg/s18-hofn-breakfast-group.webp",
+      "runtimeSha256": "ae9b6d0d1f6257418129063e7627c5f67fb19ae4527f6fb9e9977a72af41a815",
+      "runtimeBytes": 47528,
+      "dimensions": [
+        1920,
+        900
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 82,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s18-hofn-breakfast-group-portrait.png",
+      "sourceSha256": "5e2c19257f5df74e1d342f2ca785ae29564d8b27267bc7f5a148c843a56c01ea",
+      "sourceBytes": 1179105,
+      "runtimePath": "assets/cg/s18-hofn-breakfast-group-portrait.webp",
+      "runtimeSha256": "1f5ebae4ddf10a0c2a79ef12de68dd562c235a6b037683617273e828a6ffd546",
+      "runtimeBytes": 25170,
+      "dimensions": [
+        1920,
+        900
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 82,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s38-alice-nick-ordinary-day.png",
+      "sourceSha256": "c67f933507fe2e560fe805b15105eacdde757e419b0bdbded50eb4b553e6b935",
+      "sourceBytes": 2167030,
+      "runtimePath": "assets/cg/s38-alice-nick-ordinary-day.webp",
+      "runtimeSha256": "221c869a7dc6c5288bd4508e0497f4bc889163d1233b32aa959aafb9c5e72d4a",
+      "runtimeBytes": 72172,
+      "dimensions": [
+        1920,
+        900
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 82,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s38-alice-nick-ordinary-day-portrait.png",
+      "sourceSha256": "de68c959cc20d3777b31d2245abfbb00ed1e894d3fc5877b23d3063dbb5b2a76",
+      "sourceBytes": 1304952,
+      "runtimePath": "assets/cg/s38-alice-nick-ordinary-day-portrait.webp",
+      "runtimeSha256": "bb66741e4a6870b08d8d12b277dc83997a6178760e8f1349f8a827ebb3581c31",
+      "runtimeBytes": 31396,
+      "dimensions": [
+        1920,
+        900
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 82,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s54-alice-nick-karaoke.png",
+      "sourceSha256": "c9327f345d06886001e2e60edd2e32e0dbed7526f3a7a033530412ef4d4fc26e",
+      "sourceBytes": 1515243,
+      "runtimePath": "assets/cg/s54-alice-nick-karaoke.webp",
+      "runtimeSha256": "e9c1f83599bc19238c0265cce5dfb7f639eb38ca9ccb10fd8e171ba79231ad59",
+      "runtimeBytes": 36696,
+      "dimensions": [
+        1920,
+        900
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 82,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s54-alice-nick-karaoke-portrait.png",
+      "sourceSha256": "714b085399dfa81eed3ce7a6d3962648c932f42821dd318c989b8f52152975ba",
+      "sourceBytes": 940036,
+      "runtimePath": "assets/cg/s54-alice-nick-karaoke-portrait.webp",
+      "runtimeSha256": "2335eb4b5fbf99c85860f6bf7c986a226ec73d680588056a522752a5ffcde41a",
+      "runtimeBytes": 18602,
+      "dimensions": [
+        1920,
+        900
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 82,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s39-alice-damir-cafe.png",
+      "sourceSha256": "ac78f268a1d82832a34df2f930e98416c29a26e3454b750d6b15742e05899397",
+      "sourceBytes": 1595360,
+      "runtimePath": "assets/cg/s39-alice-damir-cafe.webp",
+      "runtimeSha256": "b9599b4c72da2a0302dabd7d9f3d3e6b530ee85744d0d384b808fe30ad299374",
+      "runtimeBytes": 41154,
+      "dimensions": [
+        1920,
+        900
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 82,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s39-alice-damir-cafe-portrait.png",
+      "sourceSha256": "b106909269f53d1f27eb7ed8f26b27bb30f5f5956dc31953bab0c8766b24f4e8",
+      "sourceBytes": 1176864,
+      "runtimePath": "assets/cg/s39-alice-damir-cafe-portrait.webp",
+      "runtimeSha256": "f12910921240f3e854d2b8b0c89be71174a132b42a99ec21367ed0b9e95b2d6c",
+      "runtimeBytes": 24160,
+      "dimensions": [
+        1920,
+        900
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 82,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s40-alice-laptop-window.png",
+      "sourceSha256": "8192692fe1b4baf4d0ec1228349a9732aa462b0079f0e11b01271983d656969c",
+      "sourceBytes": 1462824,
+      "runtimePath": "assets/cg/s40-alice-laptop-window.webp",
+      "runtimeSha256": "fc4107130f5268521b8786253cdbd08c9c24ac87cd515a4b452ac2ab6b43edfc",
+      "runtimeBytes": 33286,
+      "dimensions": [
+        1920,
+        900
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 82,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s40-alice-laptop-window-portrait.png",
+      "sourceSha256": "5a2a51086fc6a8b46a3c787c199d413e3449047c869d589db8aa3a967d8b5533",
+      "sourceBytes": 973257,
+      "runtimePath": "assets/cg/s40-alice-laptop-window-portrait.webp",
+      "runtimeSha256": "b01db1cf1a24683c69a01a9800529dd9cc7f3a852b8e0d868a2a636774307955",
+      "runtimeBytes": 18422,
+      "dimensions": [
+        1920,
+        900
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 82,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s64-alice-snaefellsnes-trail.png",
+      "sourceSha256": "697c61cfc89eae4fb8494dd15dd223258c920e7c6bfa940c55bd626819e0aab1",
+      "sourceBytes": 2211925,
+      "runtimePath": "assets/cg/s64-alice-snaefellsnes-trail.webp",
+      "runtimeSha256": "35f0754544e6610005046588ad23fee2a1a6b495c0f0e5dad590c370423b482c",
+      "runtimeBytes": 69554,
+      "dimensions": [
+        1920,
+        900
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 82,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s64-alice-snaefellsnes-trail-portrait.png",
+      "sourceSha256": "9a58b3b881d57ba3b0b043be1604839f1398f541c9a23c8abaf5369f362119b3",
+      "sourceBytes": 1283947,
+      "runtimePath": "assets/cg/s64-alice-snaefellsnes-trail-portrait.webp",
+      "runtimeSha256": "4e36045fd584cd4432647c18d857d0a49356b71656a40c69ecc034aab5a9dfbd",
+      "runtimeBytes": 29544,
+      "dimensions": [
+        1920,
+        900
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 82,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s26-eastfjords-courtyard-group.png",
+      "sourceSha256": "dff3a7f5738ef5ea7c6369fdefed6a81285dece3a3892a92146047144c0c05b9",
+      "sourceBytes": 1780155,
+      "runtimePath": "assets/cg/s26-eastfjords-courtyard-group.webp",
+      "runtimeSha256": "80490862f7cdccf1374c1fe514cdf202a8238293adcc6d19d3b1fb932422d891",
+      "runtimeBytes": 46400,
+      "dimensions": [
+        1920,
+        900
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 82,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s26-eastfjords-courtyard-group-portrait.png",
+      "sourceSha256": "ccc90cb87f985bdf8019ee2acd37b569f6747fff113f759f28bb8eb4a9f8995a",
+      "sourceBytes": 1066957,
+      "runtimePath": "assets/cg/s26-eastfjords-courtyard-group-portrait.webp",
+      "runtimeSha256": "611a410c4138161b42f40a7ebfc8b8188d2d87f5ca327daf82a88de280668abe",
+      "runtimeBytes": 21112,
+      "dimensions": [
+        1920,
+        900
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 82,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s48-guesthouse-exit-group.png",
+      "sourceSha256": "7a695ba7a055539dc80dd04f5c69563b264f6f74f634cb71b21af451aa29bc85",
+      "sourceBytes": 1893998,
+      "runtimePath": "assets/cg/s48-guesthouse-exit-group.webp",
+      "runtimeSha256": "c7e71567159b6e7c440db8015f530e5552d76ffa35465c011950e98911d0dd11",
+      "runtimeBytes": 52540,
+      "dimensions": [
+        1920,
+        900
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 82,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    },
+    {
+      "sourcePath": "assets/cg/s48-guesthouse-exit-group-portrait.png",
+      "sourceSha256": "c41e6549a0587d676ca3f3ef1136ba4b07c1af9d3ede90e923ec8f98d30ff03c",
+      "sourceBytes": 1091050,
+      "runtimePath": "assets/cg/s48-guesthouse-exit-group-portrait.webp",
+      "runtimeSha256": "88c84d1789601382926fa59e0b1db2c89f1510183e9e1975690adee8db8d2263",
+      "runtimeBytes": 23198,
+      "dimensions": [
+        1920,
+        900
+      ],
+      "sourceMode": "RGB",
+      "alpha": false,
+      "encoder": {
+        "format": "WEBP",
+        "quality": 82,
+        "method": 6,
+        "lossless": false
+      },
+      "sourceAcceptance": {
+        "manifestStatus": "integrated",
+        "rightsManifestEntry": true,
+        "formalProductionArtAcceptanceEntry": true,
+        "productionArtAcceptanceRecord": "artifacts/evidence/production-art-acceptance.json"
+      }
+    }
+  ],
+  "counts": {
+    "converted": 176,
+    "alphaConverted": 8,
+    "pngSources": 176
+  }
+}

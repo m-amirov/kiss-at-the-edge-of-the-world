@@ -19,7 +19,7 @@ test('production literary UI bundles the approved Cinematic Romance fonts locall
   assert.match(css, /url\('\.\.\/assets\/fonts\/CormorantGaramond\[wght\]\.ttf'\)/);
   assert.match(css, /url\('\.\.\/assets\/fonts\/Manrope\[wght\]\.ttf'\)/);
   assert.doesNotMatch(css, /fonts\.googleapis\.com|fonts\.gstatic\.com/);
-  assert.match(player, /const cover = '\.\.\/assets\/branding\/kiss-at-the-edge-cover\.png'/);
+ assert.match(player, /const cover = '\.\.\/assets\/branding\/menu-hero\.webp'/);
   assert.doesNotMatch(player, /const cover = '\.\/assets\/branding\/kiss-at-the-edge-cover\.png'/);
   assert.match(fs.readFileSync(fileURLToPath(new URL('../../literary.html', import.meta.url)), 'utf8'), /assets\/branding\/kiss-at-the-edge-icon\.png/);
 });

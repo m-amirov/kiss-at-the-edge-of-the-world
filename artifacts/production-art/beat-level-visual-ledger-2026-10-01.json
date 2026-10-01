@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "runId": "2026-10-01T18-36-42-265Z-production-art-4f6b0d",
+  "strategy": {
+    "establishingOrTransition": "environment background",
+    "dialogueRomanceInteractionMeaningfulAction": "dedicated CG with authored cast composed into environment",
+    "neutralLowStakes": "sprite over background only when spatial composition is not material"
+  },
+  "beats": [
+    {"scene":"S03","beat":"damir-enters","source":"chunk 4 paragraph 0","cast":["alice","damir"],"action":"morning guesthouse conversation","asset":"assets/cg/s03-editor-call-damir.webp","presentation":"cinematic"},
+    {"scene":"S38","beat":"s38-ordinary-day","source":"scene opening","cast":["alice","nick"],"action":"ordinary walk and museum day","asset":"assets/cg/s38-alice-nick-ordinary-day.webp","presentation":"cinematic"},
+    {"scene":"S54","beat":"s54-karaoke-evening","source":"scene opening","cast":["alice","nick"],"action":"karaoke evening","asset":"assets/cg/s54-alice-nick-karaoke.webp","presentation":"cinematic"},
+    {"scene":"S39","beat":"s39-cafe-conversation","source":"scene opening","cast":["alice","damir"],"action":"cafe conversation after walk","asset":"assets/cg/s39-alice-damir-cafe.webp","presentation":"cinematic"},
+    {"scene":"S40","beat":"s40-laptop-window","source":"scene opening","cast":["alice"],"action":"working at laptop by the window","asset":"assets/cg/s40-alice-laptop-window.webp","presentation":"cinematic"},
+    {"scene":"S64","beat":"s64-snaefellsnes-trail","source":"scene opening","cast":["alice"],"action":"solo Snæfellsnes trail","asset":"assets/cg/s64-alice-snaefellsnes-trail.webp","presentation":"cinematic"},
+    {"scene":"S18","beat":"hofn-breakfast","source":"chunk 5 paragraph 3","cast":["alice","eric","nick","damir"],"action":"group breakfast with spatial interaction","asset":"assets/cg/s18-hofn-breakfast-group.webp","presentation":"cinematic"},
+    {"scene":"S26","beat":"guesthouse-courtyard","source":"scene opening","cast":["alice","eric","nick","damir"],"action":"group courtyard transition and route choice","asset":"assets/cg/s26-eastfjords-courtyard-group.webp","presentation":"cinematic"},
+    {"scene":"S48","beat":"group-hotel-exit","source":"chunk 5 paragraph 0","cast":["alice","eric","nick","damir"],"action":"group guesthouse exit","asset":"assets/cg/s48-guesthouse-exit-group.webp","presentation":"cinematic"}
+  ],
+  "derivatives": {"desktop": "1920x900", "portrait": "941x1672"},
+  "audit": {"artlessStatesBefore": 197, "artlessStatesAfter": 0, "explicitNullTransitionsBefore": 10, "explicitNullTransitionsAfter": 0, "semanticMismatchBefore": 1, "semanticMismatchAfter": 0}
+}

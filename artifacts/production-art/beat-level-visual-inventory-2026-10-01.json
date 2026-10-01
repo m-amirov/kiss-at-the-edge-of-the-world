@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "commit": "5de266f7a1af06eebad32116aef3007cd8df1f6e",
+  "runId": "2026-10-01T18-36-42-265Z-production-art-4f6b0d",
+  "scope": "66 authored scenes, every reachable page/choice state",
+  "automaticAudit": {
+    "artlessPagePositions": 197,
+    "artlessScenes": 21,
+    "explicitNullCues": 10,
+    "artlessGroups": [
+      "S03/editor-call", "S03/damir-enters", "S04/scene-start", "S06/scene-start",
+      "S09/scene-start", "S10/s10-vik-arrival", "S12/s12-vik-street",
+      "S13/skaftafell-parking", "S14/s14-lagoon-road", "S15/scene-start",
+      "S18/hofn-day10-room", "S18/hofn-day10-breakfast", "S26/scene-start",
+      "S26/guesthouse-courtyard", "S26/route-eric", "S52/scene-start",
+      "S36/scene-start", "S37/scene-start", "S38/scene-start", "S54/scene-start",
+      "S39/scene-start", "S40/scene-start", "S64/scene-start",
+      "S46/airport-bus", "S48/group-hotel-exit"
+    ]
+  },
+  "classification": {
+    "SAFE_EXISTING_REUSE": ["S04/scene-start", "S14/s14-lagoon-road", "S36/scene-start"],
+    "DEDICATED_BACKGROUND_REQUIRED": [
+      "S03/editor-call", "S03/damir-enters", "S06/scene-start", "S09/scene-start",
+      "S10/s10-vik-arrival", "S12/s12-vik-street", "S13/skaftafell-parking",
+      "S15/scene-start", "S18/hofn-day10-room", "S18/hofn-day10-breakfast",
+      "S26/scene-start", "S26/guesthouse-courtyard", "S52/scene-start",
+      "S36/scene-start", "S37/scene-start", "S38/scene-start", "S39/scene-start",
+      "S40/scene-start", "S64/scene-start", "S46/airport-bus", "S48/group-hotel-exit"
+    ],
+    "DEDICATED_CG_REQUIRED": [],
+    "MAPPING_DEFECT": ["S13/scene-start"]
+  },
+  "stopLine": "Do not assign unrelated existing backgrounds; generate only after fresh CEOS capability challenge."
+}

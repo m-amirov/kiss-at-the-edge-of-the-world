@@ -88,6 +88,15 @@ const portraitAssetByDesktopAsset = {
   ,'s56-cafe-musicians.webp':'s56-cafe-musicians-portrait.webp'
   ,'s63-alice-solo-concert.webp':'s63-alice-solo-concert-portrait.webp'
   ,'s37-eric-alice-cafe.webp':'s37-eric-alice-cafe-portrait.webp'
+  ,'s03-editor-call-damir.webp':'s03-editor-call-damir-portrait.webp'
+  ,'s18-hofn-breakfast-group.webp':'s18-hofn-breakfast-group-portrait.webp'
+  ,'s38-alice-nick-ordinary-day.webp':'s38-alice-nick-ordinary-day-portrait.webp'
+  ,'s54-alice-nick-karaoke.webp':'s54-alice-nick-karaoke-portrait.webp'
+  ,'s39-alice-damir-cafe.webp':'s39-alice-damir-cafe-portrait.webp'
+  ,'s40-alice-laptop-window.webp':'s40-alice-laptop-window-portrait.webp'
+  ,'s64-alice-snaefellsnes-trail.webp':'s64-alice-snaefellsnes-trail-portrait.webp'
+  ,'s26-eastfjords-courtyard-group.webp':'s26-eastfjords-courtyard-group-portrait.webp'
+  ,'s48-guesthouse-exit-group.webp':'s48-guesthouse-exit-group-portrait.webp'
 };
 function assetFileForViewport(art){
   const portrait=window.matchMedia?.('(max-width: 680px) and (orientation: portrait)').matches;
@@ -96,7 +105,7 @@ function assetFileForViewport(art){
 const stageAsset = { alice:'alice-stage.webp', eric:'eric-stage.webp', nick:'nick-stage.webp', damir:'damir-stage.webp' };
 // This value is consumed by a url() inside src/literary.css; resolve from the
 // stylesheet directory so the cover never becomes /src/assets/... at runtime.
-const cover = '../assets/branding/kiss-at-the-edge-cover.png';
+const cover = '../assets/branding/menu-hero.webp';
 const blank = () => ({ schemaVersion:3,sceneId:'S01',position:0,choices:{},finished:false, visited:['S01'],runId:`literary-${Date.now()}-${crypto.randomUUID?.() ?? Math.random().toString(36).slice(2)}`, revision:0 });
 function parseSaved(raw) {
   try {
@@ -181,6 +190,7 @@ function bindStageNavigation(picture){
   picture.setAttribute('role','group');
   picture.setAttribute('aria-label','Нажмите на сцену или Enter, чтобы продолжить чтение');
   let pointer=null;
+  let suppressClickUntil=0;
   picture.addEventListener('pointerdown',event=>{
     if(event.button!==0 || isInteractiveTarget(event.target))return;
     pointer={id:event.pointerId,x:event.clientX,y:event.clientY};
@@ -189,7 +199,7 @@ function bindStageNavigation(picture){
     if(!pointer || pointer.id!==event.pointerId || isInteractiveTarget(event.target)){pointer=null;return;}
     const moved=Math.hypot(event.clientX-pointer.x,event.clientY-pointer.y)>tapThreshold;
     pointer=null;
-    if(moved)return;
+    if(moved){suppressClickUntil=performance.now()+300;return;}
     activateStage(event);
   });
   picture.addEventListener('pointercancel',()=>{pointer=null});
@@ -197,6 +207,7 @@ function bindStageNavigation(picture){
     // Pointer activation above already handles ordinary taps/clicks. This
     // fallback keeps keyboard-generated clicks and assistive-tech activation
     // safe without allowing a pointerup + click pair to advance twice.
+    if(performance.now()<suppressClickUntil)return;
     activateStage(event);
   });
   picture.addEventListener('keydown',event=>{
@@ -208,6 +219,7 @@ function bindStageNavigation(picture){
 }
 function bindStageTapTarget(node){
   let pointer=null;
+  let suppressClickUntil=0;
   node.addEventListener('pointerdown',event=>{
     if(event.button!==0 || isInteractiveTarget(event.target))return;
     pointer={id:event.pointerId,x:event.clientX,y:event.clientY};
@@ -216,11 +228,14 @@ function bindStageTapTarget(node){
     if(!pointer || pointer.id!==event.pointerId || isInteractiveTarget(event.target)){pointer=null;return;}
     const moved=Math.hypot(event.clientX-pointer.x,event.clientY-pointer.y)>tapThreshold;
     pointer=null;
-    if(moved)return;
+    if(moved){suppressClickUntil=performance.now()+300;return;}
     activateStage(event);
   });
   node.addEventListener('pointercancel',()=>{pointer=null});
-  node.addEventListener('click',event=>activateStage(event));
+  node.addEventListener('click',event=>{
+    if(performance.now()<suppressClickUntil)return;
+    activateStage(event);
+  });
 }
 function goHome(){menuOpen=true;modal=null;renderMenu()}
 function startNew(){

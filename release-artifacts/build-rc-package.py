@@ -3,22 +3,33 @@ import json
 import os
 import subprocess
 import zipfile
+import re
 
 root = os.getcwd()
 output = os.environ.get(
     "RC_ARCHIVE_PATH",
     os.path.join(root, "release-artifacts", "kiss-at-the-edge-of-the-world-rc-release-kiss-rc-2026-09-30.zip"),
 )
-files = subprocess.check_output(
-    ["git", "ls-files", "--", "index.html", "literary.html", "src", "assets/fonts", "assets/branding", "favicon.ico"],
-    text=True,
-).splitlines()
+entrypoints = ["src/entry.js"]
+runtime_sources = {"index.html", "literary.html"}
+runtime_sources.update(entrypoints)
+while entrypoints:
+    source = entrypoints.pop()
+    text = open(os.path.join(root, source), encoding="utf-8").read()
+    for specifier in re.findall(r"(?:import|export)\s*(?:[^'\"]*from\s*)?['\"](\./[^'\"]+|\.\./[^'\"]+)['\"]", text):
+        target = os.path.normpath(os.path.join(os.path.dirname(source), specifier)).replace(os.sep, "/")
+        if target.startswith("src/") and target.endswith(".js") and target not in runtime_sources:
+            runtime_sources.add(target)
+            entrypoints.append(target)
+files = sorted(runtime_sources | {"assets/fonts/CormorantGaramond[wght].ttf", "assets/fonts/Manrope[wght].ttf", "assets/branding/kiss-at-the-edge-cover.png", "assets/branding/kiss-at-the-edge-icon.png", "favicon.ico"})
+source_text = "\n".join(open(os.path.join(root, file), encoding="utf-8").read(errors="ignore") for file in runtime_sources)
 manifest = json.load(open(os.path.join(root, "assets", "asset-manifest.json"), encoding="utf-8"))
 manifest_assets = [
     entry
     for section in ("assets", "previewAssets")
     for entry in manifest.get(section, [])
-    if entry.get("status") == "integrated" or entry.get("runtimePath")
+    if (entry.get("status") == "integrated" or entry.get("runtimePath"))
+    and any(os.path.basename(candidate or "") in source_text for candidate in (entry.get("runtimePath"), entry.get("runtimePortraitAsset"), entry.get("path"), entry.get("portraitAsset")))
 ]
 files.extend(
     asset_path

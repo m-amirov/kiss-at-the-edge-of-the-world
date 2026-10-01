@@ -7,12 +7,14 @@ import { literarySaveKey } from '../../src/literary-engine.js';
 const { chromium } = await import(pathToFileURL('C:/Users/user/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs').href);
 const baseUrl = process.env.LITERARY_QA_URL ?? 'http://127.0.0.1:4173/literary.html?qa=full-route-interaction';
 const output = process.env.LITERARY_QA_OUTPUT ?? 'artifacts/evidence/full-route-interaction-regression-2026-10-01';
+const outputDir = output.endsWith('.json') ? path.dirname(output) : output;
+const evidenceFile = output.endsWith('.json') ? output : path.join(output, 'evidence.json');
 const routes = { eric: { code: 'A', ending: 'S44' }, nick: { code: 'B', ending: 'S45' }, damir: { code: 'C', ending: 'S46' }, alice: { code: 'D', ending: 'S47' } };
 const viewports = [{ name: 'desktop', width: 1920, height: 900 }, { name: 'mobile', width: 390, height: 844 }];
 const clone = value => JSON.parse(JSON.stringify(value));
 const sameProgress = (a, b) => JSON.stringify({ sceneId: a.sceneId, position: a.position, choices: a.choices, visited: a.visited }) === JSON.stringify({ sceneId: b.sceneId, position: b.position, choices: b.choices, visited: b.visited });
 
-await fs.mkdir(output, { recursive: true });
+await fs.mkdir(outputDir, { recursive: true });
 const browser = await chromium.launch({ executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: true });
 const results = [];
 
@@ -126,6 +128,6 @@ try {
 
 const pass = results.length === 8 && results.every(item => item.ending === item.expectedEnding && item.finished && item.saveLoadChecked && item.doubleAdvanceFailures === 0 && item.errors.length === 0 && item.failed.length === 0);
 const evidence = { schemaVersion: 1, status: pass ? 'PASS' : 'FAIL', generatedAt: new Date().toISOString(), head: process.env.GIT_HEAD ?? 'unbound-before-freeze', baseUrl, interactionModel: ['click', 'touch', 'keyboard'], requirements: ['choice boundary guard', 'menu/settings/episodes guard', 'save/load', '4/4 endings', 'no skipped chunks', 'no double-advance', 'no soft-lock'], results };
-await fs.writeFile(path.join(output, 'evidence.json'), JSON.stringify(evidence, null, 2));
+await fs.writeFile(evidenceFile, JSON.stringify(evidence, null, 2));
 console.log(JSON.stringify(evidence, null, 2));
 if (!pass) process.exitCode = 1;

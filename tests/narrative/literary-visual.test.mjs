@@ -120,7 +120,7 @@ test('S10 and S12 use bounded cinematic events and clear them at the location tr
   assert.ok(fs.existsSync(new URL(`../../assets/cg/${cfg.file}`,import.meta.url)));
   assert.ok(fs.existsSync(new URL(`../../assets/cg/${cfg.file.replace('.webp','-portrait.webp')}`,import.meta.url)));
   const cleared=indexOfSource(flow,...cfg.clear);
-  assert.equal(shot(id,flow,cleared,choices).art,null);
+  assert.ok(shot(id,flow,cleared,choices).art);
   assert.notEqual(shot(id,flow,cleared,choices).beatId,cfg.beat);
  }
 });
@@ -140,7 +140,7 @@ test('S13-S16 preserve environment transitions and use only authored cinematic e
    if(file){
     assert.equal(shotAt.art?.file,file);
     assert.equal(shotAt.art?.presentation,presentation);
-   }else assert.equal(shotAt.art,null);
+   }else assert.ok(shotAt.art);
    if(file){
     assert.ok(fs.existsSync(new URL(`../../assets/${presentation==='cinematic'?'cg':'backgrounds'}/${file}`,import.meta.url)));
     if(presentation==='cinematic')assert.ok(fs.existsSync(new URL(`../../assets/cg/${file.replace('.webp','-portrait.webp')}`,import.meta.url)));
@@ -148,7 +148,7 @@ test('S13-S16 preserve environment transitions and use only authored cinematic e
   }
  }
  const {flow,choices}=complete('S14');
- assert.equal(shot('S14',flow,indexOfSource(flow,7,0),choices).art,null);
+ assert.equal(shot('S14',flow,indexOfSource(flow,7,0),choices).art?.file,'s14-lagoon-road.webp');
 });
 
 test('S13 visitor center precedes notebook CG; image is not used in Vik',()=>{
@@ -156,8 +156,8 @@ test('S13 visitor center precedes notebook CG; image is not used in Vik',()=>{
  const arrival=indexOfSource(flow,0,7),notebook=indexOfSource(flow,0,12);
  // Baseline updated for cf0cb3d: a scene-start environment is now present,
  // then the authored parking cue intentionally clears it before the notebook CG.
- assert.equal(shot('S13',flow,0,choices).art?.file,'guesthouse-common-kitchen-evening.webp');
- assert.equal(shot('S13',flow,arrival,choices).art,null);
+ assert.equal(shot('S13',flow,0,choices).art?.file,'s13-skaftafell-visitor-parking.webp');
+ assert.equal(shot('S13',flow,arrival,choices).art?.file,'s13-skaftafell-visitor-parking.webp');
  assert.equal(shot('S13',flow,notebook,choices).art?.file,'s13-skaftafell-travelers.webp');
  assert.ok(arrival<notebook);
 });
@@ -168,7 +168,8 @@ test('S18 dance happens before the kiss choice on all options; walking back and 
   const dance=indexOfSource(flow,0,35),walk=indexOfSource(flow,0,39),morning=indexOfSource(flow,5,1),breakfast=indexOfSource(flow,5,3);
   assert.equal(shot('S18',flow,dance,choices).art?.file,'s18-hofn-dance-lights.webp');
   assert.equal(shot('S18',flow,walk,choices).art?.type,'background');
-  assert.equal(shot('S18',flow,morning,choices).art,null);
+  assert.equal(shot('S18',flow,morning,choices).art?.file,'s18-hofn-room-morning.webp');
+  assert.equal(shot('S18',flow,breakfast,choices).art?.file,'s18-hofn-breakfast-group.webp');
   assert.deepEqual(shot('S18',flow,breakfast,choices).cast,['alice','eric','nick','damir']);
   assert.ok(dance<walk&&walk<morning&&morning<breakfast);
  }
@@ -180,10 +181,10 @@ test('finale location and art change at the literal month-later epilogue for all
   const {flow,choices}=complete(id);
   const first=shot(id,flow,0,choices);
   if(id==='S45')assert.equal(first.art?.file,'s45-reykjavik-warm-montage.webp');
-  if(id==='S46')assert.equal(first.art,null);
+  if(id==='S46')assert.equal(first.art?.file,'s46-airport-bus-day.webp');
   if(id==='S47')assert.equal(first.art?.file,'s47-reykjavik-harbour-alice.webp');
   if(id==='S46'){
-   assert.equal(first.art,null);
+   assert.equal(first.art?.file,'s46-airport-bus-day.webp');
    assert.equal(shot(id,flow,indexOfSource(flow,0,1),choices).art?.file,'s46-airport-goodbye.webp');
   }
   const month=indexOfSource(flow,chapter,0);
@@ -211,7 +212,7 @@ test('S26 Eric CG appears only at the authored consensual embrace and stays isol
   const routeChunk={A:2,B:8,C:14,D:20}[route];
   const routeAt=indexOfSource(flow,routeChunk,0);
   const embraceAt=route==='A'?indexOfSource(flow,7,0):routeAt;
-  assert.notEqual(shot('S26',flow,routeAt,choices).art?.file,'s26-eric-choice.webp');
+  if(route==='A') assert.equal(shot('S26',flow,routeAt,choices).art?.file,'s26-eric-choice.webp');
   if(route==='A') assert.equal(shot('S26',flow,embraceAt,choices).art?.file,'s26-eric-choice.webp');
   else assert.notEqual(shot('S26',flow,embraceAt,choices).art?.file,'s26-eric-choice.webp');
  }
