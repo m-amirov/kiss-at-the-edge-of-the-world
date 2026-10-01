@@ -250,3 +250,24 @@ test('completion position retains the month-later CG and a fresh scene cannot in
    assert.equal(visualAt('S01',null,{},stageForScene('S01',{}).cast).art?.file,'keflavik-airport-arrivals-v1.webp');
  }
 });
+
+
+test('release reader has no artless visual states or explicit null-art transitions',()=>{
+  for(const [id,scene] of scenes){
+    const variants=id==='S26'?['A','B','C','D']:['A'];
+    for(const route of variants){
+      const overrides={'S17-C2':'A','S18-C1':'A'};
+      if(id==='S26')overrides['S26-C1']=route;
+      const {flow,choices}=complete(id,overrides);
+      for(const [index] of flow.entries()){
+        const direction=shot(id,flow,index,choices);
+        assert.ok(direction.art,`${id} position ${index} exposes an artless release stage at beat ${direction.beatId}`);
+      }
+    }
+  }
+  for(const [id,cues] of Object.entries(visualCues)){
+    for(const cue of cues){
+      assert.notEqual(cue.art,null,`${id}/${cue.id} explicitly clears release art`);
+    }
+  }
+});
