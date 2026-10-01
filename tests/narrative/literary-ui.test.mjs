@@ -47,6 +47,7 @@ test('main menu keeps only the supported actions and has no retired panels or fo
 test('narrative navigation is stage-first and retired text controls are absent', () => {
   assert.doesNotMatch(player, /Далее|К выбору|skip-to-choice/);
   assert.match(player, /bindStageNavigation\(picture\)/);
+  assert.match(player, /bindStageTapTarget\(sheet\)/);
   assert.match(player, /picture\.dataset\.stageAdvance='true'/);
   assert.match(player, /picture\.setAttribute\('aria-label','Нажмите на сцену или Enter, чтобы продолжить чтение'\)/);
   assert.match(player, /pointerdown/);
