@@ -22,10 +22,10 @@
             "S03.C000.P009": "\u201cSo far, it's keeping me awake.\u201d",
             "S03.C000.P010": "\u201cThen it stays out. An ex isn't a genre. I need people, not a coincidence for the cover.\u201d",
             "S03.C000.P011": "Alice felt relieved and irritated at the same time.",
-            "S03.C000.P012": "\u201cYou can choose someone else instead,\u201d Marina said. \u201cAn honest piece matters more to me.\u201d",
+            "S03.C000.P012": "\u201cYou can profile someone else instead,\u201d Marina said. \u201cAn honest piece matters more to me.\u201d",
             "S03.C000.P013": "\u201cI'll keep him for now. If I can't separate the interview from the personal history, I'll tell you.\u201d",
             "S03.C000.P014": "\u201cAgreed. I want the opening paragraph on the evening of day four, like we discussed yesterday. Not the whole piece.\u201d",
-            "S03.C000.P015": "Alice opened yesterday's notes. She did not have a title yet, but she had her first question to follow."
+            "S03.C000.P015": "Alice opened yesterday's notes. She did not have a title yet, but she had a first question to carry forward."
           }
         },
         "S03.C001": {
@@ -43,7 +43,7 @@
         "S03.C003": {
           "title": "If S02-C1 is C \u2014 own choice",
           "paragraphs": {
-            "S03.C003.P000": "She wrote down Damir's answer word for word and separated it with a line from the material for her editor. He had not given her permission to use it as an interview. For now, keeping her promise mattered more than securing a good quote."
+            "S03.C003.P000": "She wrote down Damir's answer word for word and separated it with a line from the interview material for her editor. He had not given her permission to use it in the interview material. For now, keeping her promise mattered more than securing a good quote."
           }
         },
         "S03.C004": {
@@ -57,7 +57,7 @@
             "S03.C004.P005": "\u201cIf you want it. Black, with a little milk on the side.\u201d",
             "S03.C004.P006": "He still remembered. Alice could have been angry at memory, but memory had asked neither of them for permission.",
             "S03.C004.P007": "\u201cYou have all three weeks off?\u201d Alice asked.",
-            "S03.C004.P008": "\u201cUntil the end of the month. After my last contract. If I sign the next one, I won't have this much time again. I decided to see the place they're asking me to live, not just the place they're asking me to work.\u201d",
+            "S03.C004.P008": "\u201cUntil the end of the month. After my last contract. If I sign the next one, I won't have this much time again. I decided to see the place they're asking me to live in, not just the place they're asking me to work.\u201d",
             "S03.C004.P009": "\u201cI see.\u201d",
             "S03.C004.P010": "He sat in the chair by the window. Not beside her.",
             "S03.C004.P011": "\u201cI didn't mean to make your work difficult,\u201d he said.",
@@ -76,7 +76,7 @@
         "S03.C006": {
           "title": "If Alice sat with Eric or Nick in S01-C1",
           "paragraphs": {
-            "S03.C006.P000": "\u201cI didn't ask you to talk alone yesterday,\u201d Damir said.",
+            "S03.C006.P000": "\u201cI didn't ask you to talk in private yesterday,\u201d Damir said.",
             "S03.C006.P001": "\u201cI noticed.\u201d",
             "S03.C006.P002": "He was about to add something, but a door slammed in the hall. Alice took the cup and did not ask him to continue."
           }
@@ -143,7 +143,7 @@
         "S03.C009": {
           "title": "A. Send him a short message",
           "paragraphs": {
-            "S03.C009.P000": "At the entrance, Alice texted Damir: \u201cThank you for not continuing the conversation by the water.\u201d His reply came while she was taking off her wet shoes: \u201cThank you too. See you at breakfast.\u201d She did not try to decide what that was supposed to mean."
+            "S03.C009.P000": "At the entrance, Alice texted Damir: \u201cThank you for not continuing the conversation by the water.\u201d His reply came while she was taking off her wet shoes: \u201cThank you too. See you by the car.\u201d She did not try to decide what that was supposed to mean."
           }
         },
         "S03.C010": {

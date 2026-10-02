@@ -27,3 +27,7 @@ Each scene received an English-only cold read, a voice pass against the approved
 - Damir's care is shown through restrained actions and explicit boundaries; his previous relationship with Alice remains unresolved without melodrama.
 
 No unresolved editorial decisions remain.
+
+## Final independent repair
+
+The final cold-read repair corrected S04 action ownership at `S04.C005.P035` so Nick, not Alice, is interested in the abandoned mitten. The canonical RU source and EN localization now say that the S03-C1 A acknowledgment happens “by the car” after the pharmacy walk. The remaining repairs are limited to idiomatic editorial wording in S65, S03, and S04; scene order, branching, state predicates, and approved S01/S02 prose remain unchanged.
