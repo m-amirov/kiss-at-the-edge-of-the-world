@@ -25,8 +25,9 @@ test('generated English runtime bundle matches every available scene file', () =
   assert.deepEqual(literaryLocaleBundles.en, mergedEnglish);
 });
 
-test('bounded local QA applies complete Episode 1-2 English without duplicating structure', () => {
-  const sceneIds = literarySeason.scenes.filter(scene => scene.episode <= 2).map(scene => scene.id);
+test('bounded local QA applies the available contiguous English corpus without an episode-number limit', () => {
+  const firstMissing = literarySeason.scenes.findIndex(scene => !literaryLocaleBundles.en.scenes?.[scene.id]);
+  const sceneIds = literarySeason.scenes.slice(0, firstMissing < 0 ? literarySeason.scenes.length : firstMissing).map(scene => scene.id);
   const scoped = {
     ...literaryLocaleBundles.en,
     scenes: Object.fromEntries(sceneIds.map(id => [id, literaryLocaleBundles.en.scenes[id]])),
@@ -38,7 +39,10 @@ test('bounded local QA applies complete Episode 1-2 English without duplicating 
   assert.equal(runtime.sceneOrder, literarySeason.sceneOrder);
   assert.equal(runtime.episodes, literarySeason.episodes);
   assert.equal(validateLiteraryLocale(literarySeason, scoped, { sceneIds }).status, 'PASS');
-  assert.equal(validateLiteraryInteractionLocale(interactionBeats, scoped, { sceneIds }).status, 'PASS');
+  const interactionSceneIds = sceneIds.filter(id => Object.prototype.hasOwnProperty.call(interactionBeats, id));
+  assert.equal(validateLiteraryInteractionLocale(interactionBeats, scoped, { sceneIds: interactionSceneIds }).status, 'PASS');
+  assert.ok(sceneIds.includes('S09'));
+  assert.ok(sceneIds.includes('S16'));
   const visible = runtime.scenes.flatMap(scene => [scene.title, ...scene.chunks.flatMap(chunk => [chunk.localizedTitle ?? chunk.title, ...chunk.paragraphs])]).join('\n');
   assert.doesNotMatch(visible, /[\u0400-\u04ff]/u);
 });

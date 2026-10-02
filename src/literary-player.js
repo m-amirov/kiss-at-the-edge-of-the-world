@@ -140,12 +140,17 @@ function loadRuntimeSeason(selectedLocale,qaLocaleOverride){
   if(selectedLocale==='ru')return literarySeason;
   const localeData=literaryLocaleBundles[selectedLocale];
   if(!localeData)throw Error(`BLOCKED_EN_CORPUS_INCOMPLETE: missing locale bundle ${selectedLocale}`);
-  const sceneIds=qaLocaleOverride==='en'?literarySeason.scenes.filter(scene=>scene.episode<=2).map(scene=>scene.id):literarySeason.scenes.map(scene=>scene.id);
+  const firstMissingSceneIndex=literarySeason.scenes.findIndex(scene=>!localeData.scenes?.[scene.id]);
+  const sceneIds=qaLocaleOverride==='en'
+    ?literarySeason.scenes.slice(0,firstMissingSceneIndex<0?literarySeason.scenes.length:firstMissingSceneIndex).map(scene=>scene.id)
+    :literarySeason.scenes.map(scene=>scene.id);
+  if(qaLocaleOverride==='en' && !sceneIds.length)throw Error('BLOCKED_EN_CORPUS_INCOMPLETE: no contiguous localized scenes');
   const scopedScenes=Object.fromEntries(sceneIds.map(id=>[id,localeData.scenes?.[id]]).filter(([,scene])=>scene));
   const scopedBeats=Object.fromEntries(sceneIds.map(id=>[id,localeData.interactionBeats?.[id]]).filter(([,beats])=>beats));
   const scopedEchoes=Object.fromEntries(Object.entries(localeData.interactionEchoes??{}).filter(([id])=>sceneIds.includes(id)));
   const boundedData=qaLocaleOverride==='en'?{...localeData,scenes:scopedScenes,interactionBeats:scopedBeats,interactionEchoes:scopedEchoes}:localeData;
-  const interactionReport=validateLiteraryInteractionLocale(interactionBeats,boundedData,{sceneIds});
+  const interactionSceneIds=sceneIds.filter(id=>Object.prototype.hasOwnProperty.call(interactionBeats,id));
+  const interactionReport=validateLiteraryInteractionLocale(interactionBeats,boundedData,{sceneIds:interactionSceneIds});
   if(interactionReport.status!=='PASS')throw Error('BLOCKED_EN_CORPUS_INCOMPLETE: '+interactionReport.errors.join('; '));
   return applyLiteraryLocale(literarySeason,boundedData,{sceneIds});
 }
