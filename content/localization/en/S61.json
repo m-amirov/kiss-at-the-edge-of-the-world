@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "sourceLocale": "ru",
+  "source": "content/season-1-literary-episode-05.md",
+  "scenes": {
+    "S61": {
+      "title": "Day 10. An Object Without a Purpose",
+      "chunks": {
+        "S61.C000": {"title": "", "paragraphs": {
+          "S61.C000.P000": "Alice went out alone after breakfast. In Höfn, there was no need to turn a free day into a tour of mandatory points. She took her wallet, notebook, and a thin hat; she put her phone deeper in her pocket. The small shops and cafés had their own hours. Alice checked them on the doors instead of assuming everything had to open for her walk.",
+          "S61.C000.P001": "She walked along the street to a small grocery shop where shelves held bread, jars of jam, and woollen things from local workshops. Before going in, Alice caught herself mentally preparing a line for Nick: “There's a good shot here.” She did not have to send it. Instead she chose a pastry and sat by the window of the café next door.",
+          "S61.C000.P002": "Ragna, the guesthouse owner Alice had seen with the towels in the kitchen yesterday, was arranging clean cups behind the counter. In the morning, Ragna worked at her café across the street and baked bread for both kitchens. She recognised Alice, but did not pretend they were old acquaintances.",
+          "S61.C000.P003": "“No group today?” she asked.",
+          "S61.C000.P004": "“Today I'm on my own.”",
+          "S61.C000.P005": "“Then take the table by the window. It is a good place not to hurry.”",
+          "S61.C000.P006": "Alice ordered coffee. When the woman brought it, Alice asked permission to write down one sentence about the town for her notebook. Ragna read her draft—about how “everyone here knows how to wait out bad weather”—and shook her head.",
+          "S61.C000.P007": "“Not everyone. I can't stand waiting, for example. That's why I bake extra bread in advance.”",
+          "S61.C000.P008": "Alice crossed out her beautiful generalisation. They talked about how much work Ragna had on days when there were few visitors. Alice did not ask for an article name; this was not an interview. The woman returned to the counter, while Alice finished her coffee and thought about how easy it was to assign calm to strangers when she wanted to find it in herself.",
+          "S61.C000.P009": "In the shop, she spent a long time choosing a small ceramic cup with uneven blue glaze. She had no practical need for it: there were already cups at home. She imagined explaining the purchase to Damir—“too heavy for the luggage”; to Nick—“the colour isn't the same in the picture”; to Eric—“I'll wrap it in clothes.” Then she realised that none of them needed an explanation for something she was buying for herself.",
+          "S61.C000.P010": "The shop assistant wrapped the cup in paper. Alice asked for another sheet, put it between the handle and the side of the box, and settled the purchase in her bag. The box did not fit in the side pocket; she had to make room among the notes. At home, she would decide where to put the cup.",
+          "S61.C000.P011": "On the way back, Marina called. Alice stopped beside a wall that protected her from the wind."
+        }},
+        "S61.C001": {"title": "S61-R-A — after the letter about the people", "paragraphs": {
+          "S61.C001.P000": "“In the drying-rack paragraph, everyone became one team too quickly,” Marina said. “Where is the irritation?”",
+          "S61.C001.P001": "“Nick spread his sweater across the shelves. I asked him to leave room, and he took it down at once. Eric found the second section—we would not have fitted otherwise.”",
+          "S61.C001.P002": "“Send me that. After you show them the recognisable lines.”"
+        }},
+        "S61.C002": {"title": "S61-R-B — after the letter about the place", "paragraphs": {
+          "S61.C002.P000": "“Did you find your Höfn today?” Marina asked.",
+          "S61.C002.P001": "“I found a person who bakes extra bread because she hates waiting for the weather. But that is not a quote for the article. I'll rewrite the place through what I saw myself: the café hours on the door, a wet receipt by the threshold, the light above the entrance.”",
+          "S61.C002.P002": "“Send me one paragraph. No generalisations about all the locals.”"
+        }},
+        "S61.C003": {"title": "S61-R-C — after the letter about her own decision", "paragraphs": {
+          "S61.C003.P000": "“You promised to show the cost of your edit,” Marina said.",
+          "S61.C003.P001": "“I removed Nick's confession and the tourist's story. That makes the first version seem shorter. Instead, I wrote about ten minutes of waiting by the car. I'll send you the page with visible edits, without the deleted private lines.”",
+          "S61.C003.P002": "“Now that's work. I'll look at the page.”"
+        }},
+        "S61.C004": {"title": "Common continuation of the conversation", "paragraphs": {
+          "S61.C004.P000": "Alice put away her phone and rearranged her bag: the box with the cup pressed against the notebook. At the corner, the wind tore a page from it with the morning edit. She caught the page by the café wall. The paper was wet at the edge; the saved line about ten minutes by the car was still readable. Alice decided to retype it before dinner, while she remembered the exact words, but first she walked back to the guesthouse at an ordinary pace. The work deadline existed even when no one was standing over her shoulder.",
+          "S61.C004.P001": "At the guesthouse, she heard the group's voices from the kitchen. She could go in at once and tell them about the coffee, the conversation, and the cup. She could walk alone a little longer before returning to people she was glad to see. Both wishes belonged to her."
+        }},
+        "S61.C005": {"title": "Choice S61-C1 — How will Alice end her independent day", "paragraphs": {}},
+        "S61.C006": {"title": "A. Stay alone for another hour", "paragraphs": {
+          "S61.C006.P000": "Alice wrote in the group chat: “I'm walking a little longer; I'll be back for dinner.” Eric replied with the guesthouse address in case she forgot it in her notes; Nick sent a picture of dry socks; Damir sent a brief “Okay.”",
+          "S61.C006.P001": "She reached a bench on the lit street, took out the pastry, and ate it without making notes. Then she returned on time. Nick moved a chair toward her without asking why she had not called him."
+        }},
+        "S61.C007": {"title": "B. Return to the group now", "paragraphs": {
+          "S61.C007.P000": "Alice entered the kitchen and put the paper-wrapped parcel beside her teacup.",
+          "S61.C007.P001": "“What did you buy?” Nick asked.",
+          "S61.C007.P002": "“A cup. For myself.”",
+          "S61.C007.P003": "“That sounds like the title of a film I didn't make.”",
+          "S61.C007.P004": "“And rightly so.”",
+          "S61.C007.P005": "Eric passed her the bread, and Damir cleared a place on the table. Alice told them about the café owner's remark without turning the woman into a character in their shared conversation. They discussed tomorrow's departure and went to pack."
+        }},
+        "S61.C008": {"title": "Common continuation S61", "paragraphs": {"S61.C008.P000": "That evening, Alice packed the cup between her scarf and sweater. She sent Marina one paragraph from the chosen angle and noticed that it was supported by observations made without someone else's confession. Then she helped the group check the departure time and went to bed. Morning of day 11 — S22."}},
+        "S61.C009": {"title": "If `S21-C2=A`", "paragraphs": {"S61.C009.P000": "In the morning, Alice received a reply from her friend: “Then we'll plan a walk when you get back.” She smiled and walked through town without needing to explain her route to anyone."}},
+        "S61.C010": {"title": "If `S21-C2=B`", "paragraphs": {"S61.C010.P000": "In the morning, Alice reached the bookshop she had marked on the map yesterday. It was small, with a narrow shelf of second-hand books, and she stayed longer than she had intended."}}
+      }
+    }
+  }
+}
