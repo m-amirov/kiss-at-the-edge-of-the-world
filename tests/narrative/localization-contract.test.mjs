@@ -17,6 +17,26 @@ test('production English S01 is complete and structurally identical',()=>{
  const visible=[english.scenes.S01.title,...Object.values(english.scenes.S01.chunks).flatMap(chunk=>[chunk.title,...Object.values(chunk.paragraphs)])].join('\n');
  assert.doesNotMatch(visible,/[\u0400-\u04ff]/u);
 });
+test('production English Episodes 3-4 are complete, structurally identical, and predicate-safe',()=>{
+ const expected={S09:{paragraphs:56,choices:1},S10:{paragraphs:52,choices:1},S11:{paragraphs:58,choices:1},S12:{paragraphs:97,choices:3},S13:{paragraphs:80,choices:1},S14:{paragraphs:64,choices:2},S15:{paragraphs:84,choices:1},S16:{paragraphs:40,choices:1}};
+ for(const [sceneId,counts] of Object.entries(expected)){
+  const english=JSON.parse(fs.readFileSync(new URL('../../content/localization/en/'+sceneId+'.json',import.meta.url),'utf8'));
+  const source=literarySeason.scenes.find(scene=>scene.id===sceneId);
+  const report=validateLiteraryLocale(literarySeason,english,{sceneIds:[sceneId]});
+  assert.deepEqual(report,{status:'PASS',errors:[],sceneCount:1},sceneId);
+  assert.deepEqual(Object.keys(english.scenes),[sceneId]);
+  assert.deepEqual(Object.keys(english.scenes[sceneId].chunks),source.chunks.map((_,index)=>sourceRef.chunk(sceneId,index)));
+  assert.equal(Object.values(english.scenes[sceneId].chunks).reduce((count,chunk)=>count+Object.keys(chunk.paragraphs).length,0),counts.paragraphs,sceneId+' paragraph count');
+  assert.equal(source.chunks.filter(chunk=>chunk.title.startsWith('Выбор ')).length,counts.choices,sceneId+' choice count');
+  source.chunks.forEach((chunk,index)=>{
+   const sourceTitle=chunk.title;
+   const translated=english.scenes[sceneId].chunks[sourceRef.chunk(sceneId,index)].title;
+   for(const token of sourceTitle.match(/S\d{2}-C\d+|`[^`]+`/g)??[])assert.ok(translated.includes(token),sceneId+' missing stable token '+token);
+  });
+  const visible=[english.scenes[sceneId].title,...Object.values(english.scenes[sceneId].chunks).flatMap(chunk=>[chunk.title,...Object.values(chunk.paragraphs)])].join('\n');
+  assert.doesNotMatch(visible,/[\u0400-\u04ff]/u,sceneId+' accidental Cyrillic');
+ }
+});
 test('production English S02 is complete and structurally identical',()=>{
  const english=JSON.parse(fs.readFileSync(new URL('../../content/localization/en/S02.json',import.meta.url),'utf8'));
  const source=literarySeason.scenes.find(scene=>scene.id==='S02');

@@ -1184,6 +1184,990 @@ export const literaryLocaleBundles = {
           }
         }
       },
+      "S09": {
+        "title": "Skógafoss, Day 5, Morning. Not a Postcard",
+        "chunks": {
+          "S09.C000": {
+            "title": "",
+            "paragraphs": {
+              "S09.C000.P000": "Nick carried three bags out of the guesthouse, along with the yellow hat he had stopped pretending was a joke. Eric checked the tire pressure; Damir went back for the thermos he had left behind. Alice paused at the door, rereading Marina’s message: “If you find something at the waterfall that isn’t another postcard, send me two lines.”",
+              "S09.C000.P001": "“I promised I’d find an unexpected place,” she said as she got into the car. “I didn’t promise it would be beautiful.”",
+              "S09.C000.P002": "“You promised we’d look together,” Nick reminded her.",
+              "S09.C000.P003": "Eric glanced at the rear-view mirror.",
+              "S09.C000.P004": "“We’ll get there first. If the rain gets worse, we stay at the bottom.”",
+              "S09.C000.P005": "“That’s why we brought an adult,” Nick said.",
+              "S09.C000.P006": "“I’m thirty-four,” Eric replied.",
+              "S09.C000.P007": "“You don’t have to support my theory with data.”",
+              "S09.C000.P008": "Buses stood at Skógafoss. People got out, took pictures by the railings, and returned to their warm seats, adjusting their wet hoods. Nick reached for his camera, then looked at Alice—not to ask permission to film her, but as if checking whether they were going to keep yesterday’s agreement.",
+              "S09.C000.P009": "“If all we find is the view from the front,” he said, “I have officially failed the assignment.”",
+              "S09.C000.P010": "“Then you’ll have to write about the failure,” Alice said.",
+              "S09.C000.P011": "They followed the marked path without going down to the wet rocks by the water. From the usual viewpoint, the waterfall looked so large that Alice couldn’t find anything of her own in it. Eric pointed out the trail to the lookout, but didn’t take them up at once: above the steps, the wind was turning the rain around. They took shelter behind a low building by the parking area. The waterfall was almost invisible from there. What they could hear was how it swallowed conversation whenever they stepped more than a few paces from the door.",
+              "S09.C000.P012": "Damir took the lid off the thermos.",
+              "S09.C000.P013": "“So our special place is next to the restroom?” he asked.",
+              "S09.C000.P014": "“Best one available so far,” Eric said.",
+              "S09.C000.P015": "Nick tried to record the sound and discovered the wind was hitting the microphone. He tucked the camera under his jacket and, for once, simply listened. A woman and a child hurried past them on the path. The child’s shoelace had come undone; the woman crouched, holding her hood in place with her chin. They didn’t look at the waterfall while she tied the knot. Then the boy looked up and laughed: the spray had reached even this far.",
+              "S09.C000.P016": "“Give it five minutes?” Alice suggested. “The wind might move on.”",
+              "S09.C000.P017": "Nick glanced at his watch but didn’t argue. In five minutes, the bus had left and the lookout had emptied. Eric checked the steps first, went down, and came back.",
+              "S09.C000.P018": "“It’s safe to go up now. Just don’t run. Staying here is also an option.”",
+              "S09.C000.P019": "Alice chose to go. Halfway up, she stopped to catch her breath and saw not the waterfall below but their car, small and absurdly domestic beside the buses. Damir was already farther up; he didn’t call for her to hurry. Nick had fallen behind to help a couple take a picture. Eric waited at the next landing, leaning on the railing, watching not the clock but the road they had taken.",
+              "S09.C000.P020": "At the top, the water fell with such force that they had to speak close to one another. Alice noticed a narrow strip of dry ground behind the railing where visitors left their gloves for a moment while wiping a lens. A child’s mitten lay there. Nick picked it up between two fingers.",
+              "S09.C000.P021": "“Our second lost item,” he said. “It’s a system now.”",
+              "S09.C000.P022": "“Put it somewhere visible,” Alice said. “They may come back.”",
+              "S09.C000.P023": "They fastened the mitten to the railing so the wind couldn’t take it. A minute later, the boy in the blue jacket came running back. His mother thanked them, almost shouting over the water. The boy waved to each of them separately, and for some reason waved twice at Damir.",
+              "S09.C000.P024": "Alice made one note in her notebook. No rainbow, no superlative. “We came to find a new view of the waterfall and first found the place where it couldn’t be seen.” When she looked up, all three men were looking in different directions: Nick after the boy, Eric at the clouds, Damir down at the tiny car."
+            }
+          },
+          "S09.C001": {
+            "title": "Choice S09-C1 — who should tell Alice about the place first?",
+            "paragraphs": {}
+          },
+          "S09.C002": {
+            "title": "A. Ask Eric to show her the place he remembers",
+            "paragraphs": {
+              "S09.C002.P000": "Alice went over to him.",
+              "S09.C002.P001": "“You’ve been here before. Show me the place you don’t take groups.”",
+              "S09.C002.P002": "“That’s an unfair assignment for a guide.”",
+              "S09.C002.P003": "“I’m asking you, not the guide.”",
+              "S09.C002.P004": "He hesitated, then pointed to a dark stretch of road far below.",
+              "S09.C002.P005": "“I once waited there for my sister after her first hike on her own. She was an hour late. I watched the waterfall until I stopped seeing it at all.”",
+              "S09.C002.P006": "“What did you say when she arrived?”",
+              "S09.C002.P007": "“That her shoelaces were undone. Then we went home.”",
+              "S09.C002.P008": "Alice didn’t write down his sister’s name. Eric noticed and gave a small nod. On the way back, he handed her a dry napkin for the notebook, though the rain was already easing."
+            }
+          },
+          "S09.C003": {
+            "title": "B. Ask Nick to name what the camera missed",
+            "paragraphs": {
+              "S09.C003.P000": "“Give me one frame you don’t have,” Alice said.",
+              "S09.C003.P001": "Nick turned the camera’s screen toward his palm.",
+              "S09.C003.P002": "“The boy waved at Damir twice. I was changing the battery.”",
+              "S09.C003.P003": "“Why him?”",
+              "S09.C003.P004": "“No idea. Maybe Damir was the only one who waved back like a normal person instead of waving at the lens.”",
+              "S09.C003.P005": "Damir heard his name, but the water took the rest of the sentence. Nick raised his voice:",
+              "S09.C003.P006": "“I’m saying random Icelandic children are showing you favoritism!”",
+              "S09.C003.P007": "Damir looked at Alice: Really? She laughed and shook her head. Nick lowered the camera instead of trying to reconstruct the missing second."
+            }
+          },
+          "S09.C004": {
+            "title": "C. Ask Damir to remember the climb",
+            "paragraphs": {
+              "S09.C004.P000": "“What did you see from here?” Alice asked Damir.",
+              "S09.C004.P001": "“The car. Ours, I think. You can’t confirm it from this distance.”",
+              "S09.C004.P002": "“A remarkably brave assumption.”",
+              "S09.C004.P003": "He handed her the thermos lid. The tea was still warm.",
+              "S09.C004.P004": "“I realized today is the first time I haven’t counted how long until the next place. I usually do that on trips. Even when I’m off duty.”",
+              "S09.C004.P005": "Alice took a sip and handed the lid back.",
+              "S09.C004.P006": "“What do you do instead?”",
+              "S09.C004.P007": "“Watch to see whether Nick flies away with his hat.”",
+              "S09.C004.P008": "Nick stood with his back to the wind, holding the hat down with both hands. Alice wrote the observation without Damir’s name; he hadn’t asked her to, but he noticed and said nothing."
+            }
+          },
+          "S09.C005": {
+            "title": "Shared continuation S09",
+            "paragraphs": {
+              "S09.C005.P000": "In the parking area, they found the boy in the blue jacket once more. Now he was showing his mitten to his father as something that had survived an adventure. Nick didn’t film him. In the car, Alice opened the draft message to Marina."
+            }
+          },
+          "S09.C006": {
+            "title": "If `careerThesis=people`",
+            "paragraphs": {
+              "S09.C006.P000": "She wrote: “At Skógafoss, we agreed to look for an unusual view, but first stood beside a wall where the waterfall was almost invisible. Then a boy lost his mitten, Nick turned off the camera, Eric waited for everyone to climb up, and Damir was the first to wave back. I want to write about people who stayed in one place and still carried different days away from it.”"
+            }
+          },
+          "S09.C007": {
+            "title": "If `careerThesis=place`",
+            "paragraphs": {
+              "S09.C007.P000": "She wrote: “To see Skógafoss, we first stood where it was almost impossible to see. Then the wind eased and we climbed the wet stairs. From above, there was more than water and a black slope: the parking area, the road, and our car all fit below. The place changes your sense of scale before it gives you a beautiful frame.”"
+            }
+          },
+          "S09.C008": {
+            "title": "If `careerThesis=own-choice`",
+            "paragraphs": {
+              "S09.C008.P000": "She wrote: “We could have taken the ordinary picture and moved on. Instead, we waited out the wind, climbed together, and found someone else’s lost mitten. Our unusual view of Skógafoss began with the decision to stay; no frame could have made us do that.”"
+            }
+          },
+          "S09.C009": {
+            "title": "Shared continuation",
+            "paragraphs": {
+              "S09.C009.P000": "Marina replied: “Keep that. But don’t pretend you all saw the same thing.” Alice put the phone away. Outside the window, the waterfall disappeared sooner than she expected; the road carried them toward Vík."
+            }
+          }
+        }
+      },
+      "S10": {
+        "title": "The Road to Vík, Day 5, Afternoon. A Song for Half an Hour",
+        "chunks": {
+          "S10.C000": {
+            "title": "",
+            "paragraphs": {
+              "S10.C000.P000": "At the gas station, Nick bought two kinds of gummy candy and asked Damir to decide which one was edible. While they argued by the register, Alice caught up with Eric at the car. He was wiping salt streaks from the side window.",
+              "S10.C000.P001": "“Are you choosing the music, or is Nick still blackmailing us with the hat?”",
+              "S10.C000.P002": "“His forty minutes ran out yesterday. Today is my turn.”",
+              "S10.C000.P003": "“Then I’m just in time.”",
+              "S10.C000.P004": "Eric opened the front passenger door. Alice sat down to help with navigation after the stop, and he started a recording—an old one, with a little hiss at the beginning. A woman was singing quietly in Icelandic, almost speaking. Alice didn’t understand a word, but she didn’t ask for a translation right away.",
+              "S10.C000.P005": "“Is this yours?” she asked when they pulled away from the station.",
+              "S10.C000.P006": "“My sister’s record. I transferred it to my phone.”",
+              "S10.C000.P007": "“You share one?”",
+              "S10.C000.P008": "“She has the real one. I have the illegal copy.”",
+              "S10.C000.P009": "Eric said it in such an even voice that Alice didn’t catch the joke at first. Behind them, Nick rustled a packet; Damir offered him water to end the expert assessment of sour gummies.",
+              "S10.C000.P010": "“Does she know about the crime?” Alice asked.",
+              "S10.C000.P011": "“Every year she threatens to take my cable.”",
+              "S10.C000.P012": "They drove several kilometres in silence. Eric didn’t explain every mountain that emerged from the rain. When the song ended, the next track came in fast, with a cheerfulness completely out of proportion to the first. Eric hurried to turn it down.",
+              "S10.C000.P013": "“Don’t,” Alice said.",
+              "S10.C000.P014": "“That was a recording error.”",
+              "S10.C000.P015": "“I don’t mean the music. Your face changes.”",
+              "S10.C000.P016": "“It doesn’t.”",
+              "S10.C000.P017": "“You’re arguing with me without taking your eyes off the road. That means it does.”",
+              "S10.C000.P018": "He turned the volume back up. Alice noticed his fingers tap the rhythm twice on the wheel before he caught himself.",
+              "S10.C000.P019": "At the next stop, he told her how, at sixteen, he had volunteered to play music at a family celebration and mixed up two similar cassettes. Instead of the ceremonial dance his parents expected, this ridiculous fast song came on. His father didn’t switch it off. He pulled his mother into a dance between the tables; his sister still insisted it had been the best evening.",
+              "S10.C000.P020": "“And you?” Alice asked.",
+              "S10.C000.P021": "“I stood by the player and waited to be thrown out of the house.”",
+              "S10.C000.P022": "“Were you?”",
+              "S10.C000.P023": "“Sent outside for more bread. A useful outcome.”",
+              "S10.C000.P024": "He smiled at the road. Alice pictured sixteen-year-old Eric by the record player—without a map, a radio, or responsibility for anyone else’s day.",
+              "S10.C000.P025": "When they stopped at a small shop before Vík, Nick took Damir to look for camera batteries. Alice noticed disposable rain ponchos and cheap postcards on the counter. On a postcard of the waterfall, someone had already written “test print” in pencil; it had been left in the box among the perfect views. She showed it to Eric.",
+              "S10.C000.P026": "“For your sister,” Alice suggested. “You can tell her the cassette is still travelling around the country.”",
+              "S10.C000.P027": "“She’ll say I stole it twice.”",
+              "S10.C000.P028": "“Then sign it for her and mail it to yourself.”",
+              "S10.C000.P029": "Eric took the card and tried to rub out the writing, but the pencil left a grey shadow. He put the postcard back.",
+              "S10.C000.P030": "“Not today. I have another one I’ve been meaning to finish.”",
+              "S10.C000.P031": "Alice didn’t ask who it was for. Instead, she picked up two small packets of nuts. She held one out to him.",
+              "S10.C000.P032": "“I’m buying you a snack for your song. If it comes on again, we’re both responsible now.”",
+              "S10.C000.P033": "He checked the ingredients and chose the unsalted packet.",
+              "S10.C000.P034": "“I didn’t know you accepted commitments this serious.”",
+              "S10.C000.P035": "“Only for the next hour.”",
+              "S10.C000.P036": "In the car, Alice put one of her own songs between his recordings for the first time—not as a competition, but to see whether he would be interested in something that belonged to her. Eric didn’t ask why that one. At a traffic light, he asked for the title and saved it to his phone once they were parked. Waking up, Nick announced that he had missed the music council’s meeting. Alice showed him the nuts; he took a handful and didn’t demand a review of the decision."
+            }
+          },
+          "S10.C001": {
+            "title": "If Alice spent the first hour of the drive with Eric in S01-C1",
+            "paragraphs": {
+              "S10.C001.P000": "“In Keflavík, you said you didn’t know how to choose music for strangers,” she reminded him.",
+              "S10.C001.P001": "“I didn’t know then whether you could survive a second song.”",
+              "S10.C001.P002": "“And now?”",
+              "S10.C001.P003": "“I’m still checking.”"
+            }
+          },
+          "S10.C002": {
+            "title": "If Alice sat with Nick or Damir in S01-C1",
+            "paragraphs": {
+              "S10.C002.P000": "“So this is what you play when you’re not discussing the weather,” Alice said.",
+              "S10.C002.P001": "“Sometimes I discuss the weather to music. I can combine them if you’re missing it.”",
+              "S10.C002.P002": "“No. Not yet.”"
+            }
+          },
+          "S10.C003": {
+            "title": "Choice S10-C1 — how Alice responds to the song",
+            "paragraphs": {}
+          },
+          "S10.C004": {
+            "title": "A. Play along",
+            "paragraphs": {
+              "S10.C004.P000": "Alice reached toward the console without touching a button.",
+              "S10.C004.P001": "“Can we hear that wrong song again?”",
+              "S10.C004.P002": "“Nick will wake up.”",
+              "S10.C004.P003": "“He’ll wake up when the gummies win anyway.”",
+              "S10.C004.P004": "Eric played it from the beginning. Alice tapped the rhythm against her knee on the chorus. He didn’t look at her while he drove, but later, in the guesthouse parking area, he quietly whistled the last two notes. She whistled them back."
+            }
+          },
+          "S10.C005": {
+            "title": "B. Leave the moment quiet",
+            "paragraphs": {
+              "S10.C005.P000": "“Play the first song,” Alice said. “I didn’t hear the end.”",
+              "S10.C005.P001": "Eric scrolled through the list. She rested her cheek in her hand and watched the window. After a few minutes, he told her the song’s title and the singer’s name without offering a translation. That was enough. When they reached Vík, Alice didn’t get out immediately; Eric waited for the final line to finish."
+            }
+          },
+          "S10.C006": {
+            "title": "Shared continuation S10",
+            "paragraphs": {
+              "S10.C006.P000": "In Vík, they checked into a small guesthouse for the night. Nick got the top bunk in the men’s room and announced that he would negotiate a transfer. Damir replied, “Tomorrow, if you survive.” Alice stayed in the room across the hall. A warning about the unpredictable waves at Reynisfjara hung on the board by the entrance. Eric asked everyone to read it before they left in the morning. Nick looked first and put his phone away."
+            }
+          }
+        }
+      },
+      "S11": {
+        "title": "Reynisfjara, Day 6, Late Morning. The Shot That Will Not Happen",
+        "chunks": {
+          "S11.C000": {
+            "title": "",
+            "paragraphs": {
+              "S11.C000.P000": "At the entrance to Reynisfjara, Eric stopped the group by the information board. He didn’t give a lecture: he showed them the marked safe part of the beach and said no one went near the water for a photograph, even when the sea looked calm. Alice looked around. The black sand was almost dry farther from the surf, while the waves at the edge behaved as if they had no shared schedule.",
+              "S11.C000.P001": "Nick checked the light. He was interested not in the surf but in the tracks in the sand: theirs and the ones already heading toward the cliffs. Damir caught Alice’s scarf when the wind pulled it from her shoulders. She took it back and noticed that he didn’t tie it for her, as he once would have."
+            }
+          },
+          "S11.C001": {
+            "title": "If Alice allowed recording in S04-C1",
+            "paragraphs": {
+              "S11.C001.P000": "Nick didn’t raise the camera immediately.",
+              "S11.C001.P001": "“At Þingvellir, you agreed to a short group shot. This is a different place. I can film you from behind, from a distance, if you want.”",
+              "S11.C001.P002": "“I haven’t decided,” Alice said.",
+              "S11.C001.P003": "“Then we’ll look without the camera first.”"
+            }
+          },
+          "S11.C002": {
+            "title": "If Alice refused recording in S04-C1",
+            "paragraphs": {
+              "S11.C002.P000": "Nick closed the case.",
+              "S11.C002.P001": "“You said ‘no filming’ then. I remember. I can keep you out of the frame today too.”",
+              "S11.C002.P002": "“Thanks. I’ll see what you’re filming.”",
+              "S11.C002.P003": "“Agreed. For now, only sand.”"
+            }
+          },
+          "S11.C003": {
+            "title": "If Alice suggested a group photo in S04-C1",
+            "paragraphs": {
+              "S11.C003.P000": "“Another group photo?” Nick asked, showing her the empty frame on his screen.",
+              "S11.C003.P001": "“Maybe. But not by the water.”",
+              "S11.C003.P002": "“Agreed. And first we check who actually wants to be in the shot.”"
+            }
+          },
+          "S11.C004": {
+            "title": "Shared continuation",
+            "paragraphs": {
+              "S11.C004.P000": "At first they simply walked along the inland side of the beach. Sand clung to their boots and made each step unexpectedly heavy. Alice wanted to find a place where the shore and the village were visible at once, but the houses disappeared behind a slope. Nick chose a patch of dry sand farther from the water and suggested trying a shot of their tracks. He set the camera on a stable surface and confirmed that the frame would contain boots only, not faces or voices. Alice agreed to that and nothing more. The others agreed too; only then did Nick press record.",
+              "S11.C004.P001": "It came out badly: Damir stopped to fix a shoelace, Eric looked back at the people by the sign, and Alice turned early because she saw a branch washed ashore. Nick showed them the recording. The four of them had not walked together for a single second.",
+              "S11.C004.P002": "“We can keep it,” Alice said. “At least nobody is pretending we know how to march.”",
+              "S11.C004.P003": "“For a film about this trip, it’s an aggressively honest opening,” Nick said, but he didn’t delete the shot.",
+              "S11.C004.P004": "He asked for a second try. Damir suggested walking more slowly so they could stay in one line. Eric agreed as long as they remained on the dry section. This time Alice didn’t want to repeat the movement for the camera. She stepped back toward the path and watched the other three spread out at different distances as soon as they stopped watching Nick. What interested her more were the moments between takes: Nick repositioning the camera, Damir shaking sand from his boot, Eric saying something to an older couple by the board and showing them the safe way back.",
+              "S11.C004.P005": "Around the bend, people had gathered around the cliffs. Nick saw a cloud reflected in a thin strip of water and crouched to catch it without people in the frame. He was several metres from the line Eric had marked as permissible. Eric came over and touched his shoulder.",
+              "S11.C004.P006": "“Not here. The water comes farther than it looks.”",
+              "S11.C004.P007": "“I’m not at the surf,” Nick said without looking away from the screen.",
+              "S11.C004.P008": "“Not yet.”",
+              "S11.C004.P009": "Nick looked up. For the first time on the trip, there was no smile in his voice.",
+              "S11.C004.P010": "“I can see where I’m standing.”",
+              "S11.C004.P011": "Eric didn’t argue about eyesight. He pointed to a track in the sand above their boots, fresh from a wave a minute earlier. Nick stopped recording but stayed crouched, unhappy that he had had to do it in front of everyone.",
+              "S11.C004.P012": "Alice came over. She liked the frame he had imagined; she didn’t like that she herself had only noticed the track now. Damir stood farther away, not intervening, but held the scarf the wind had pulled from her shoulders."
+            }
+          },
+          "S11.C005": {
+            "title": "Choice S11-C1 — how Alice responds to the unsafe shot",
+            "paragraphs": {}
+          },
+          "S11.C006": {
+            "title": "A. Suggest a safe place for the same idea",
+            "paragraphs": {
+              "S11.C006.P000": "“Nick, show me what you need at the bottom of the frame,” Alice said.",
+              "S11.C006.P001": "He turned the screen toward her. The cloud lay in the black sand almost like a second island.",
+              "S11.C006.P002": "“The reflection. It’s only here.”",
+              "S11.C006.P003": "“Then we won’t have this exact reflection,” Alice said. “We can film it disappearing as we move away. That’s part of what’s happening here too.”",
+              "S11.C006.P004": "Nick looked at the wave track, then stood. They moved to the higher strip of sand Eric had pointed out. Nick filmed for a few seconds—not Alice, not the tourists, but their boot prints as the wind began to smooth them. He let her watch the footage.",
+              "S11.C006.P005": "“Don’t publish my boots without a contract,” she said.",
+              "S11.C006.P006": "He laughed briefly, more from relief than amusement.",
+              "S11.C006.P007": "“I’ll make a consent list for footwear.”",
+              "S11.C006.P008": "“I’m serious about me: face and voice only after a separate question.”",
+              "S11.C006.P009": "“Yes. We don’t need either today.”",
+              "S11.C006.P010": "Eric went on first without celebrating a victory. Nick put the camera away himself before the next bend."
+            }
+          },
+          "S11.C007": {
+            "title": "B. Ask everyone to move away from the water and leave the shot for later",
+            "paragraphs": {
+              "S11.C007.P000": "“We’re moving back,” Alice said. “The shot can wait.”",
+              "S11.C007.P001": "Nick put the camera away more sharply than necessary, but went with them. On the path, he stopped by a bin and threw out a torn wrapper the wind had carried in. When Eric walked back to the car, Nick said to Alice:",
+              "S11.C007.P002": "“I wasn’t angry at you. I was almost finished filming and didn’t want to lose it.”",
+              "S11.C007.P003": "“I know. But you really didn’t see the track.”",
+              "S11.C007.P004": "“I see it now.”",
+              "S11.C007.P005": "He opened the recorded seconds and deleted the last ones himself, where the camera had still been too low. Alice didn’t ask for proof or praise him for the obvious. They walked in silence for several minutes."
+            }
+          },
+          "S11.C008": {
+            "title": "C. Check the rules first, then decide about filming",
+            "paragraphs": {
+              "S11.C008.P000": "“I didn’t notice how far the water had come either,” Alice said. “Let’s go back to the board. Nick, can you show us the idea afterward? I want to understand it, just not from here.”",
+              "S11.C008.P001": "He straightened slowly.",
+              "S11.C008.P002": "“Okay.”",
+              "S11.C008.P003": "On the path, Eric showed them the mark on the map again. Nick listened without the camera in his hands. Damir returned Alice’s scarf; she tied it more tightly. Once they were far enough away, Nick showed them a short piece of the reflection on the screen. There was no person in it, but the water had moved toward the lens faster than it seemed to in real life.",
+              "S11.C008.P004": "“I don’t want to keep this,” Nick said, deleting the file. “I’ll try from the path if you wait.”",
+              "S11.C008.P005": "“I won’t be in the frame,” Alice said.",
+              "S11.C008.P006": "“Understood. Then I’ll film the place only.”",
+              "S11.C008.P007": "The path produced a different shot: not a perfect mirrored strip, but people who had stopped by the board to argue about whether to go on. Nick lowered the camera before their faces could be distinguished."
+            }
+          },
+          "S11.C009": {
+            "title": "Shared continuation S11",
+            "paragraphs": {
+              "S11.C009.P000": "They didn’t leave immediately. From the path where the group had regrouped, the view was entirely different: bands of sand, low grass, and a line of people stopping by the warning board. Nick asked for five minutes—not for a shot by the water, but to record footsteps on the dry path. Eric checked the time, nodded, and went to call the guesthouse. Damir stayed with him. Alice and Nick walked a short stretch there and back while he held the microphone below their faces. In the headphones, the footsteps were louder than the sea. Nick gave her one earbud and kept the other. For a few seconds they heard the same footsteps, although in real life he was walking ahead of her.",
+              "S11.C009.P001": "“Will the film make it clear that we didn’t reach the edge?” Alice asked.",
+              "S11.C009.P002": "“It will make it clear that we’re walking back,” Nick said. “I won’t promise the rest.”",
+              "S11.C009.P003": "By the parking area, they noticed an older woman holding a map in both hands. She was looking for the bus stop, although the sign was on the other side of the road. Nick put away the microphone and showed her the path. Alice checked the wording on the sign; Damir took over the conversation when they learned the woman was going to Vík. They walked with her to the stop for several minutes. She wasn’t a confused tourist: she had come to visit her niece and had already walked this road three times. The bus had simply been moved to the other side that day because of work near the parking area. Alice had to cross out the ready-made story about helping a helpless person. The woman said her niece baked bread for one of the local cafés. Alice asked her name, but the woman laughed. “If you go in, you’ll meet her.” Alice didn’t write down a name she hadn’t been given.",
+              "S11.C009.P004": "The woman asked why Nick wasn’t filming such a beautiful beach. He answered simply:",
+              "S11.C009.P005": "“I’ve had enough for today.”",
+              "S11.C009.P006": "Eric heard him but didn’t turn around with a victorious look. At the car, he offered Nick the front seat; from there, it was easier to look together at the safe stopping points farther along the road. Nick agreed, still a little angry, but asked Eric where the hill beyond Vík could be seen from the road. Alice didn’t try to reconcile them on their behalf. She wrote in her notebook: “At the beach, we didn’t get the shot we had left the car for. We did walk a woman to her bus.” She still had to decide whether it belonged in the article, and whether it would turn a living woman into convenient evidence for Alice’s own idea."
+            }
+          }
+        }
+      },
+      "S12": {
+        "title": "Vík, Day 6, Afternoon. Two Different Towns",
+        "chunks": {
+          "S12.C000": {
+            "title": "",
+            "paragraphs": {
+              "S12.C000.P000": "At the Vík café, Alice ordered hot soup and didn’t take out her notebook until she had finished it. Damir stood by the window with two paper cups. He didn’t come over until she raised a hand.",
+              "S12.C000.P001": "“Sit down, if you’re not in a hurry.”",
+              "S12.C000.P002": "“Eric gave us forty minutes. Nick stayed behind to upload the material.”",
+              "S12.C000.P003": "“And you decided to spend them here?”",
+              "S12.C000.P004": "“I wanted coffee. I got a second one in case you wanted some too. Bad calculation—you have soup.”",
+              "S12.C000.P005": "He set the second cup in the middle of the table instead of pushing it toward her. Alice noticed that he no longer guessed her order from memory."
+            }
+          },
+          "S12.C001": {
+            "title": "If `damir-care=warm` — Alice offered him coffee in S08",
+            "paragraphs": {
+              "S12.C001.P000": "“Today it’s my turn to decide whether to drink your coffee,” she said.",
+              "S12.C001.P001": "“Fair. I already drank the one you brought me this morning.”",
+              "S12.C001.P002": "“And you didn’t mention that it was terrible?”",
+              "S12.C001.P003": "“It was hot. That saved it.”",
+              "S12.C001.P004": "She took the second cup, checked the temperature, and left it beside her plate."
+            }
+          },
+          "S12.C002": {
+            "title": "If `damir-care=neutral` — Alice kept her distance in S08",
+            "paragraphs": {
+              "S12.C002.P000": "“I didn’t ask for a second one,” Alice said.",
+              "S12.C002.P001": "“No. I can take it with me.”",
+              "S12.C002.P002": "He had already reached for it, but she stopped him.",
+              "S12.C002.P003": "“Leave it. If I want it, I’ll drink it. Just don’t count that as a continuation of the conversation.”",
+              "S12.C002.P004": "“I won’t.”",
+              "S12.C002.P005": "He sat not opposite her but beside the window, keeping the table between them."
+            }
+          },
+          "S12.C003": {
+            "title": "If `damir-care=personal` — Alice asked about Brussels in S08",
+            "paragraphs": {
+              "S12.C003.P000": "“Was it raining like this every day there?” she asked, nodding at the window.",
+              "S12.C003.P001": "“In Brussels, it at least pretends it will stop soon. Here it’s more honest.”",
+              "S12.C003.P002": "“There were bicycles in your photo. Do you still ride to work?”",
+              "S12.C003.P003": "“I did until I broke a fender. Then I started walking. I can show you the street I used to take, but it isn’t particularly beautiful.”",
+              "S12.C003.P004": "“You can show me after the soup. Not as a tour.”",
+              "S12.C003.P005": "Damir nodded and didn’t reach for his phone immediately."
+            }
+          },
+          "S12.C004": {
+            "title": "Shared continuation",
+            "paragraphs": {
+              "S12.C004.P000": "At the next table, a woman was explaining to an older couple that the bus would be late because of the weather. Alice caught herself wanting to know where they were going. Damir was picking grains of sand from his sleeve, left there after the beach. A new watchband mark circled his right wrist; she didn’t know when he had started wearing his watch so tightly.",
+              "S12.C004.P001": "“You said yesterday that you rarely get anywhere without hurrying,” she observed."
+            }
+          },
+          "S12.C005": {
+            "title": "If `skogafossVoice=damir`",
+            "paragraphs": {
+              "S12.C005.P000": "“At the waterfall, I asked what you do instead of counting stops. You answered about Nick’s hat. That was a detour.”",
+              "S12.C005.P001": "“It was,” he admitted. “I didn’t have a normal answer yet.”"
+            }
+          },
+          "S12.C006": {
+            "title": "If `skogafossVoice=eric` or `skogafossVoice=nick`",
+            "paragraphs": {
+              "S12.C006.P000": "“On the waterfall stairs, you didn’t wait for us by the car for the first time,” Alice said. “I noticed.”",
+              "S12.C006.P001": "“I surprised myself. Usually I go ahead, even when I don’t know where all of us are supposed to go.”"
+            }
+          },
+          "S12.C007": {
+            "title": "Shared continuation",
+            "paragraphs": {
+              "S12.C007.P000": "“What changed?” she asked.",
+              "S12.C007.P001": "“In Brussels, I moved out of the flat near the hospital. I rented a room farther away with someone I knew. I started eating dinner away from the computer. It sounds like an achievement for a person who couldn’t turn off the light in his office.”",
+              "S12.C007.P002": "“You left it on at home too.”",
+              "S12.C007.P003": "“I remember. You said my shifts were paying our electricity bills.”",
+              "S12.C007.P004": "Alice smiled. It was an exact memory, not an attempt to make the past better. Outside, the woman helped the older couple fold their map. Damir waited until Alice looked back at the table.",
+              "S12.C007.P005": "“I have friends there,” he said. “I learned to spend weekends without a hospital schedule. But I still sometimes take an extra shift if someone asks. I didn’t become an entirely different person.”",
+              "S12.C007.P006": "“I wasn’t looking for a different one.”",
+              "S12.C007.P007": "They both heard more in her sentence than she had meant to say. Damir didn’t rush to repair the awkwardness."
+            }
+          },
+          "S12.C008": {
+            "title": "Choice S12-C1 — ask about the people in his life now",
+            "paragraphs": {}
+          },
+          "S12.C009": {
+            "title": "A. Ask about the people who are around him now",
+            "paragraphs": {
+              "S12.C009.P000": "“Who was the friend you lived with?” Alice asked.",
+              "S12.C009.P001": "“Mathieu. We met in the emergency department when he brought his father in. Then we ran into each other at a bike shop. He has a daughter who made me learn bird names in French.”",
+              "S12.C009.P002": "“Did it work?”",
+              "S12.C009.P003": "“The first three. The fourth turns into a different bird every time.”",
+              "S12.C009.P004": "Damir showed her a photograph: an open children’s book on a table beside three bicycle helmets. No people were in the frame. Alice looked at the book and, for the first time, imagined his life without her without the sharp urge to compare it with what it might have been beside him.",
+              "S12.C009.P005": "“I’d like to meet them if I ever end up there,” she said, then added at once, “That isn’t a travel plan.”",
+              "S12.C009.P006": "“I understand.”"
+            }
+          },
+          "S12.C010": {
+            "title": "B. Ask to leave the conversation for today",
+            "paragraphs": {
+              "S12.C010.P000": "“Damir, let’s stop here,” Alice said. “I wanted to hear how you live, and I have. Right now I need to sit without a continuation.”",
+              "S12.C010.P001": "He looked at her unfinished soup, then at her.",
+              "S12.C010.P002": "“All right. I’ll get the bill.”",
+              "S12.C010.P003": "“Don’t pay for mine.”",
+              "S12.C010.P004": "“I was only going to pay for mine.”",
+              "S12.C010.P005": "It came out sharper than he intended. When he returned, he put the receipt beside his own cup and said:",
+              "S12.C010.P006": "“I’m sorry. I was defending myself against something you didn’t say.”",
+              "S12.C010.P007": "“So was I. Let’s just go outside.”",
+              "S12.C010.P008": "They reached the door together. Outside, the wind pulled Alice’s hood back; Damir didn’t fix it, only held the door while she fastened her coat."
+            }
+          },
+          "S12.C011": {
+            "title": "Shared continuation S12",
+            "paragraphs": {
+              "S12.C011.P000": "Outside, Alice opened her phone. Marina had sent a note about yesterday’s paragraph: “Good that you aren’t turning everyone into a symbol. Keep going.” Damir didn’t look at the screen. He stopped at the window of a small shop, where a box of pencils stood between the rain ponchos and postcards.",
+              "S12.C011.P001": "“You complained this morning that your last one broke,” he said. “Want to go in?”",
+              "S12.C011.P002": "“I didn’t complain. It broke in your hand when you asked me to write down the time.”",
+              "S12.C011.P003": "“That’s exactly why I remembered.”",
+              "S12.C011.P004": "Inside, Alice chose two ordinary pencils; Damir bought himself a small unlined notebook. He used to carry only a phone and schedule sheets. She asked what he planned to write in it.",
+              "S12.C011.P005": "“I don’t know. Yesterday I drew our car from above. It came out looking like an iron.”",
+              "S12.C011.P006": "“Will you show me?”",
+              "S12.C011.P007": "He opened the first page. The drawn car did have a heavy, pointed nose; beside it stood four little figures of different heights. Nick was taller than Eric, Eric was wider than the car, and Alice was holding something that looked like a shovel.",
+              "S12.C011.P008": "“It’s a notebook,” Damir explained.",
+              "S12.C011.P009": "“I was hoping it was a sign.”",
+              "S12.C011.P010": "She took the pencil and added a second boot to her figure. Damir didn’t correct the drawing, although the new boot ruined his entire perspective. At the shop door, the wind pressed an advertisement against the glass. They stood together while the clerk helped another customer carry out a box, then left without hurrying. Alice liked that Damir had a bad drawing he didn’t have to turn into a useful skill.",
+              "S12.C011.P011": "As they walked, she opened Marina’s message again. She wanted to show Damir the line about the beach—and realized it wasn’t a request for editorial advice. She wanted to know how he would read her observation."
+            }
+          },
+          "S12.C012": {
+            "title": "Choice S12-C2 — decide whether to share the draft",
+            "paragraphs": {}
+          },
+          "S12.C013": {
+            "title": "A. Show him the two lines",
+            "paragraphs": {
+              "S12.C013.P000": "“Can I have an opinion from neither a doctor nor an ex?” Alice asked.",
+              "S12.C013.P001": "“I can’t promise to stop being second-in-command.”",
+              "S12.C013.P002": "She gave him her phone with the two lines about the shot they hadn’t taken. Damir read them and handed the screen back without scrolling.",
+              "S12.C013.P003": "“It says ‘we,’” he observed. “You decided not to film too.”",
+              "S12.C013.P004": "“I don’t film.”",
+              "S12.C013.P005": "“You could have made it a story about Nick and Eric. You left yourself in it.”",
+              "S12.C013.P006": "Alice looked at the line again. He didn’t say whether it was good or bad, but pointed directly to the place where she had been afraid to hide.",
+              "S12.C013.P007": "“Thank you,” she said."
+            }
+          },
+          "S12.C014": {
+            "title": "B. Keep the draft to herself",
+            "paragraphs": {
+              "S12.C014.P000": "Alice turned off the screen.",
+              "S12.C014.P001": "“Not yet. I still haven’t decided which part is mine and which part belongs to someone else.”",
+              "S12.C014.P002": "“Then don’t show it.”",
+              "S12.C014.P003": "She expected him to ask why, but Damir pointed instead to the bus stop, where their neighbours from the guesthouse were arguing with the timetable. Alice took out her notebook and wrote down the route number. It was an ordinary journalistic act, not a defence of herself to him."
+            }
+          },
+          "S12.C015": {
+            "title": "Shared continuation S12",
+            "paragraphs": {
+              "S12.C015.P000": "Nick wrote in the group chat that he had uploaded the material. Eric replied with tomorrow’s departure time for the east. Alice and Damir returned to the guesthouse by different paths around the parking area: he stopped at the car, and she went in to buy a pencil. In the corridor, they met at the shared sink, made room for each other, and both smiled slightly. Neither had a ready-made role for the other, which let them simply walk into the common room.",
+              "S12.C015.P001": "Nick was trying to fit a deck of cards into a box that some previous guest had clearly packed with wet hands. Half the deck had swollen at the edges. He suggested a game: draw a card and name one thing each person would do for the trip tomorrow, or fold three towels the owner had left on the sofa instead. He drew first, looked at the card, and took the towels.",
+              "S12.C015.P002": "“Unfair. You know we’re interested too,” Alice said.",
+              "S12.C015.P003": "“That was the calculation. Help with the corners.”",
+              "S12.C015.P004": "Damir held the stack while Nick folded the first towel. The second had to be started again: Nick had made a long strip of it. Eric showed him how the owner had folded them that morning—once in half, then in thirds. Nick corrected it without calling the instruction an attack on creative freedom.",
+              "S12.C015.P005": "Eric drew a card and said he would check the open roads before they left in the morning. Damir promised to take food out of the shared fridge so nobody remembered it only after they were in the car. Alice wanted to say “I’ll write the article,” but that was too broad for tomorrow morning.",
+              "S12.C015.P006": "“I’ll show you what I’m planning to write about the beach,” she said. “Not the whole article. Everyone will see their words before Marina gets them.”",
+              "S12.C015.P007": "Nick stopped folding the towel.",
+              "S12.C015.P008": "“There aren’t many of my words in it yet,” he said.",
+              "S12.C015.P009": "“Then you’ll see what there is. And you can tell me where I got it wrong.”",
+              "S12.C015.P010": "“Me too?” Eric asked.",
+              "S12.C015.P011": "“Especially you. I don’t know how to describe the minute when you stopped the filming without turning either of you into a caricature.”",
+              "S12.C015.P012": "Damir left his towel on the stack.",
+              "S12.C015.P013": "“Do you need me in it?”",
+              "S12.C015.P014": "“Not yet. I may ask you separately later.”",
+              "S12.C015.P015": "He nodded. She wasn’t promising to turn their conversation into material simply so he wouldn’t feel left out.",
+              "S12.C015.P016": "Nick put the folded stack on the shelf by the door. The owner, passing with a set of keys, thanked them and marvelled that the towels now fit. Nick looked at Eric like a man who had just been praised for someone else’s method. Eric shrugged; by the end of the evening, it had become almost a friendly gesture.",
+              "S12.C015.P017": "When everyone had gone, Alice stayed behind to finish the action she had promised in her notebook—“show recognizable lines, ask separately about anything personal.” Then she set an alarm. Tomorrow began the long road to Skaftafell; now she had a concrete reason to open the notebook in front of the others, not only for herself."
+            }
+          },
+          "S12.C016": {
+            "title": "Choice S12-C3 — what Alice does on the way back after talking with Damir",
+            "paragraphs": {}
+          },
+          "S12.C017": {
+            "title": "A. Ask him to stop for hot chocolate",
+            "paragraphs": {
+              "S12.C017.P000": "“Ten minutes,” she said. They stopped at a café, and for the first time that day Damir asked not about the past but about her favourite place in Iceland. Alice said she hadn’t chosen one yet. He suggested they not hurry."
+            }
+          },
+          "S12.C018": {
+            "title": "B. Return to the group alone",
+            "paragraphs": {
+              "S12.C018.P000": "“See you at home,” Alice said, meaning the guesthouse, and surprised herself with the word. Damir nodded and went to buy food. On the way back, she was glad not to explain her mood to anyone."
+            }
+          }
+        }
+      },
+      "S13": {
+        "title": "Day 7. Skaftafell. Four People and One Notebook",
+        "chunks": {
+          "S13.C000": {
+            "title": "",
+            "paragraphs": {
+              "S13.C000.P000": "In Vík that morning, Damir knocked on Alice’s door only to tell her that the kettle in the shared kitchen finally worked. The day before, they had talked about his current life for exactly as long as Alice wanted to hear. Over breakfast, he discussed road sandwiches with Nick. Alice could look at him without continuing yesterday’s conversation.",
+              "S13.C000.P001": "Before they left, Nick put the camera in its case and asked Eric whether he would need it on the trail today.",
+              "S13.C000.P002": "“Not for walking,” Eric said. “For your work, decide after you understand where you’re allowed to go.”",
+              "S13.C000.P003": "Nick sighed.",
+              "S13.C000.P004": "“That’s the most polite way anyone has reminded me about the beach.”",
+              "S13.C000.P005": "“You reminded yourself,” Eric said.",
+              "S13.C000.P006": "Alice remembered yesterday’s argument at Reynisfjara. They had left the shore together, and the rest of the material still wasn’t sorted. In the car, the case sat between a bag of bread and her notebook.",
+              "S13.C000.P007": "They reached the Skaftafell parking area before noon. At the information centre, people folded up wet hoods, studied the trail map, and compared their boots with other people’s. Eric checked the open sections and the forecast on the board. He chose a marked walking trail with the same route back, showed the group where to turn around, and set the time by which they had to be at the car.",
+              "S13.C000.P008": "“I’m not taking you onto the glacier,” he said when he saw where Nick was looking on the map. “That needs a separate route and equipment. Today we walk beside it and look from a distance.”",
+              "S13.C000.P009": "“I was looking at the toilet symbol,” Nick objected.",
+              "S13.C000.P010": "“That’s in the other direction.”",
+              "S13.C000.P011": "“Good thing we discussed the map.”",
+              "S13.C000.P012": "After yesterday’s café, Alice wanted to work with something that had clear edges. She took out her notebook. Beside her notes about the beach was a sentence from Damir that she still hadn’t decided she had the right to use. She turned the page.",
+              "S13.C000.P013": "“I need today’s note to be more than four versions of ‘the ice was beautiful,’” she said. “Let’s each do something different. I’ll assemble the text. Eric, show us how you choose the limit of a walk. Nick, if you agree, record sounds and a wide shot without faces until you’ve asked each person separately. Damir, help me notice what I miss when I write on the move. You can refuse or suggest something else.”",
+              "S13.C000.P014": "Damir reached for his backpack, then stopped: Alice still hadn’t handed him the notebook.",
+              "S13.C000.P015": "“That works for me,” Damir said. “But I’m not reading over your shoulder.”",
+              "S13.C000.P016": "“Even if it contains your biography?”",
+              "S13.C000.P017": "“Especially then.”",
+              "S13.C000.P018": "Nick raised both hands.",
+              "S13.C000.P019": "“Sound without faces. What if I want a face?”",
+              "S13.C000.P020": "“Ask,” Alice said. “The camera stays closed for now.”",
+              "S13.C000.P021": "“Fair.”",
+              "S13.C000.P022": "Eric looked at his watch, then at her.",
+              "S13.C000.P023": "“You have until the turn for this work. When I say we go back, everyone goes back.”",
+              "S13.C000.P024": "“Agreed. I won’t turn a map into an artistic recommendation.”",
+              "S13.C000.P025": "Near a bench, a family was trying to pull a rain suit onto a child. The toddler looked at Alice as sternly as if she were responsible for the weather. She picked up a fallen mitten; when he took it, her pen stayed under the cover.",
+              "S13.C000.P026": "Damir noticed but said nothing. The silence made things easier.",
+              "S13.C000.P027": "On the climb, Alice pulled out the page with her old note about Skógafoss. It still had room for one voice—the voice she had asked for herself that day. The wind stuck the page to her wet cuff; she smoothed it against the cover and carried it open as they walked."
+            }
+          },
+          "S13.C001": {
+            "title": "If `skogafossVoice=eric`",
+            "paragraphs": {
+              "S13.C001.P000": "Eric saw the narrow strip of road she had drawn in the margin.",
+              "S13.C001.P001": "“That’s what you remembered?”",
+              "S13.C001.P002": "“You showed it to me. I didn’t write about waiting for your sister.”",
+              "S13.C001.P003": "He moved a finger over the drawing without touching the page.",
+              "S13.C001.P004": "“The road looks like a seam here. One day I’ll show you what it looks like without the waterfall.”",
+              "S13.C001.P005": "Alice left the drawing where it was and closed the notebook before he could see the blank line beside it."
+            }
+          },
+          "S13.C002": {
+            "title": "If `skogafossVoice=nick`",
+            "paragraphs": {
+              "S13.C002.P000": "On the page was her short note: “Two waves that aren’t in the recording.” Nick recognized his own words and stopped checking whether the lens cap was secure.",
+              "S13.C002.P001": "“The boy really did wave twice,” he said. “I thought you’d remember only my joke about Damir.”",
+              "S13.C002.P002": "“The joke was louder. But I was the one who asked you to show what you missed.”",
+              "S13.C002.P003": "He looked at the child by the bench and raised a hand for a second in answer to the child’s serious stare. The camera stayed on its strap."
+            }
+          },
+          "S13.C003": {
+            "title": "If `skogafossVoice=damir`",
+            "paragraphs": {
+              "S13.C003.P000": "On the page, Alice had kept the view of the car from the stairs and two small figures in the wind. Damir noticed the note about Nick’s hat.",
+              "S13.C003.P001": "“It looks as if we went there that day to rescue it,” he said.",
+              "S13.C003.P002": "“You chose to watch it instead of the clock.”",
+              "S13.C003.P003": "He straightened the map’s folded edge in her hands. They had already discussed that question in the café; here he didn’t repeat the answer, simply walking beside her to the next sign."
+            }
+          },
+          "S13.C004": {
+            "title": "Shared continuation",
+            "paragraphs": {
+              "S13.C004.P000": "For the first few hundred metres, the trail required a simple agreement: who went first, who waited at the fork, who carried the spare water. Nick wanted to stop and record the crunch of gravel. Eric showed him a widening where he wouldn’t block anyone. Damir moved the bottles from Alice’s side pockets into the shared pack after asking first. Alice caught herself tracking all of them at once and already assembling a finished scene in her head: the caring guide, the unserious cameraman, the impeccable doctor.",
+              "S13.C004.P001": "Real people immediately ruined her convenient outline. Eric forgot where he had put his own gloves; Nick found them under the backpack strap without making a joke. Damir admitted he had forgotten to charge his phone. Alice took the paper map from him with the smile of someone who had finally been asked not to fix a life, only to keep a sheet from the wind.",
+              "S13.C004.P002": "At the widening, Nick put the microphone on the railing and asked Alice to walk a few steps over the gravel. In the headphones, she heard her own breathing first. Nick shrugged: “That happens.” They changed places. Now the recording held the crunch of his boots and the jingle of someone else’s backpack buckle. Alice wanted to record the walk again and remove the accidental sound. Nick held the cable and said he would listen all the way through first. It was more convenient to think of him as someone always reaching for one more take. Meanwhile, he stopped recording and checked whether anyone was coming from behind. A couple with walking poles approached; they gave way without asking the people to walk “more quietly” for the sake of the material.",
+              "S13.C004.P003": "The map had a torn corner. Damir held it with two fingers while Alice opened it. At Skógafoss, they had shared the warm thermos lid; now only a wet fold of paper lay between their hands. She asked what he wanted to keep from today’s road if he couldn’t record a word. Damir looked at the slope and said, “The way Nick looked for Eric’s gloves, although yesterday they nearly argued about the camera.” Alice raised an eyebrow. “You can talk about other people after all.” He answered, “Sometimes it’s easier.” She didn’t write the line down at once. Damir let go of the map when the wind dropped and didn’t check whether it had reached the notebook.",
+              "S13.C004.P004": "On the wide lookout, Marina messaged: “How is the material moving? I want to know what we have instead of postcards.”",
+              "S13.C004.P005": "Alice typed “People learn to travel together” and deleted it. She typed “Weather makes people give way” and deleted that too. The third version was more honest: “Today I’ll try to write about who decides what stays out of frame.” She didn’t send it yet. A low grey line of ice showed farther along the trail. Before giving anyone a role in the piece, she had to hear whether they wanted it."
+            }
+          },
+          "S13.C005": {
+            "title": "Choice S13-C1 — how Alice will handle the work",
+            "paragraphs": {
+              "S13.C005.P000": "One fragment is selected. This is about Alice’s role in the piece, not access to the men."
+            }
+          },
+          "S13.C006": {
+            "title": "A. Keep the notes herself and answer for everyone’s consent",
+            "paragraphs": {
+              "S13.C006.P000": "“I’ll take responsibility for both the notes and the right to cut them,” Alice said, catching up with the others. “If anyone changes their mind about a quote or a sound, tell me directly. I don’t want to hide behind having usable material already.”",
+              "S13.C006.P001": "Nick turned the camera toward her, its lens cap closed.",
+              "S13.C006.P002": "“Here is my official ‘understood.’ If I forget, remind me again.”",
+              "S13.C006.P003": "“I will.”",
+              "S13.C006.P004": "Eric stopped so everyone could meet at the sign.",
+              "S13.C006.P005": "“Who reminds you to stop?” he asked.",
+              "S13.C006.P006": "Alice looked at the thin red line marking her time in the notes.",
+              "S13.C006.P007": "“You. About time and the trail. I’ll decide about the text myself.”",
+              "S13.C006.P008": "“Agreed.”",
+              "S13.C006.P009": "Damir handed her the map when the wind eased.",
+              "S13.C006.P010": "“Then tell me if you want someone simply to hold the page.”",
+              "S13.C006.P011": "She asked him to do that five minutes later. The page stopped flapping, and it turned out that delegating a small task did not mean handing him the whole piece."
+            }
+          },
+          "S13.C007": {
+            "title": "B. Step out of directing and agree to collect material equally",
+            "paragraphs": {
+              "S13.C007.P000": "Alice stopped when everyone reached the sign.",
+              "S13.C007.P001": "“I handed out assignments too quickly,” she said. “You aren’t my editorial office. Here’s another way: each person chooses one thing they want to keep from today, then asks the others in the evening whether it can be included. I don’t need to direct your impressions.”",
+              "S13.C007.P002": "“I’ve already chosen mine,” Nick said. “Eric looking for his gloves inside his own jacket.”",
+              "S13.C007.P003": "“You won’t get that in the film without permission,” Damir observed.",
+              "S13.C007.P004": "Eric took off a glove and held it up as if voting.",
+              "S13.C007.P005": "“A story about it is fine. My route schedule is fine too, as long as you don’t present it as a law of nature.”",
+              "S13.C007.P006": "“Noted,” Alice said. “And you, Damir?”",
+              "S13.C007.P007": "“I don’t know yet. Maybe nothing.”",
+              "S13.C007.P008": "She wanted to pull an answer out of him, to fill the empty square. She closed the notebook.",
+              "S13.C007.P009": "“‘Nothing’ can come to dinner too.”",
+              "S13.C007.P010": "He nodded with visible relief. This time she wasn’t leading, but the agreement had still begun with her."
+            }
+          },
+          "S13.C008": {
+            "title": "Shared continuation",
+            "paragraphs": {
+              "S13.C008.P000": "Before the narrow section, Eric gathered everyone and asked them to pass one at a time, without stopping for pictures where they would block the path. Alice repeated the condition to Nick when he checked the camera strap; Nick answered “heard” and moved it behind his back.",
+              "S13.C008.P001": "Damir brought Alice not an observation but a question:",
+              "S13.C008.P002": "“You keep writing down who takes care of whom. Who is taking care of your material today?”",
+              "S13.C008.P003": "She wanted to make a joke, but he waited for an answer like it was an ordinary question, without the undertow of yesterday’s conversation.",
+              "S13.C008.P004": "“I am, for now. That isn’t a bad start.”",
+              "S13.C008.P005": "At the fork, Eric announced a short stop. There was time for water, a photograph from the permitted point, and a few minutes in which nobody had to be a character. He went to check the return sign himself. Alice followed—not because she had been given a role, but because she wanted to hear what his voice sounded like when he didn’t have to address the whole group."
+            }
+          },
+          "S13.C009": {
+            "title": "If `S12-C3=A`",
+            "paragraphs": {
+              "S13.C009.P000": "Damir set a mug in front of Alice and quietly asked whether she wanted the hot chocolate from Vík again. She laughed: now they had at least one new memory that wasn’t tied to the past."
+            }
+          },
+          "S13.C010": {
+            "title": "If `S12-C3=B`",
+            "paragraphs": {
+              "S13.C010.P000": "When Damir returned with the bags, Alice helped him put the groceries away. Nick joked that they had organized a warehouse too quickly, and both of them answered “no” at the same time."
+            }
+          }
+        }
+      },
+      "S14": {
+        "title": "Day 7. Trail Above the Glacier Plain. Pace",
+        "chunks": {
+          "S14.C000": {
+            "title": "",
+            "paragraphs": {
+              "S14.C000.P000": "Eric stood by a wooden post, trying to get his hand into a wet glove. It stubbornly turned inside out. He noticed Alice and didn’t hide the struggle.",
+              "S14.C000.P001": "“You promised to watch the time,” she said.",
+              "S14.C000.P002": "“The time can wait. The glove can’t.”",
+              "S14.C000.P003": "“I think you’re the first Icelander to lose a fight with clothing.”",
+              "S14.C000.P004": "“I never said we had national immunity to gloves.”",
+              "S14.C000.P005": "She held the edge of the sleeve while he straightened the lining. When the glove finally settled, neither of them moved their hands away at once.",
+              "S14.C000.P006": "Beyond the lookout, the trail rose gently, then followed a rocky edge toward a viewpoint. Eric showed her a shorter way back on the map. By the bench, he agreed with Nick and Damir that they would wait there until the set time; if Alice and Eric returned early, they would walk to the car together. Nick repeated the time aloud and set a reminder on his phone. Damir gave a thumbs-up without taking his attention from his water bottle. Only then did the two of them go on."
+            }
+          },
+          "S14.C001": {
+            "title": "If `ericTone=playful`",
+            "paragraphs": {
+              "S14.C001.P000": "Eric whistled the last two notes of the song from the car. Alice immediately tapped the rhythm against her backpack strap.",
+              "S14.C001.P001": "“I was hoping you’d forgotten the chorus.”",
+              "S14.C001.P002": "“I did. Those two notes got stuck separately.”",
+              "S14.C001.P003": "He tried to whistle a third and lost the tune. Alice laughed first."
+            }
+          },
+          "S14.C002": {
+            "title": "If `ericTone=quiet`",
+            "paragraphs": {
+              "S14.C002.P000": "They were silent for a few steps. Eric noticed Alice slow down but didn’t check his watch immediately.",
+              "S14.C002.P001": "“Last time I let the song finish before you got out of the car,” he said. “We can stop when you want this time too.”",
+              "S14.C002.P002": "She looked at the light between the low clouds.",
+              "S14.C002.P003": "“Let’s keep going for now. I’ll tell you.”"
+            }
+          },
+          "S14.C003": {
+            "title": "Shared continuation",
+            "paragraphs": {
+              "S14.C003.P000": "“Does this stretch work for you?” Eric asked. “If your legs are tired, we turn around here. There’s no penalty for an unseen view.”",
+              "S14.C003.P001": "“What if I want to go farther?”",
+              "S14.C003.P002": "“Then we go farther. On the marked trail and until the turn-around time.”",
+              "S14.C003.P003": "She smiled.",
+              "S14.C003.P004": "“You issue even freedom with instructions.”",
+              "S14.C003.P005": "“I’m working on it. Can I just say: choose your pace?”",
+              "S14.C003.P006": "“You can.”",
+              "S14.C003.P007": "They walked on. The wind tugged at her jacket zip, low bushes darkened the slope, and beyond them the distant edge of the ice was white. Eric didn’t list facts about every stone. Sometimes he warned her where it was slippery, then fell silent again. With him, silence didn’t require Alice to fill it with a question. But on the third climb she realized she had sped up so she wouldn’t look like the person everyone had to wait for. The thought in her head was unpleasantly familiar: Am I in the way? Will I ruin the plan?",
+              "S14.C003.P008": "Someone’s forgotten knitted hat lay on a flat stone. Eric picked it up and hung it from a trail post where it would be visible on the way back. Alice asked if he was going to create a separate schedule for lost things. “I can,” he said, listing imaginary columns: time found, wind direction, owner’s level of despair. On the last word, his voice dropped lower and closer; Alice looked at him instead of the hat. He noticed and stopped joking. A family came around the bend; they moved to the edge of the wide lookout and let them pass. When the footsteps faded, Eric didn’t continue the list. There was room between them for something new, still without a name.",
+              "S14.C003.P009": "Eric stopped at a widening and took out the thermos.",
+              "S14.C003.P010": "“I usually drink tea here,” he said. “Even when I’m alone.”",
+              "S14.C003.P011": "“You’re capable of delaying your own route by yourself?”",
+              "S14.C003.P012": "“That’s why I walk alone.”",
+              "S14.C003.P013": "He poured tea into the lid and handed it to her. He didn’t mention that she was out of breath. Alice took the lid; her hands warmed before her face did.",
+              "S14.C003.P014": "“Why do you watch the time so closely?” she asked. “Apart from the obvious answer about safety.”",
+              "S14.C003.P015": "Eric looked toward where the trail curved behind a boulder.",
+              "S14.C003.P016": "“When you lead people, it’s easy to get used to being useful. Then they don’t ask whether you’re tired. I taught them that myself. I kept showing that I could keep up with everyone.”",
+              "S14.C003.P017": "“And now?”",
+              "S14.C003.P018": "“Now I’m trying to build a guide school. The other guides should be able to say: someone else will cover me today. It sounds simple. I’ve made three versions of the schedule and haven’t allowed myself a day off in any of them.”",
+              "S14.C003.P019": "Alice laughed. He did too, a little embarrassed, and put the thermos back in his pack.",
+              "S14.C003.P020": "“I used to think you just liked giving orders.”",
+              "S14.C003.P021": "“Sometimes I do. That’s part of the problem.”",
+              "S14.C003.P022": "“Today you asked.”",
+              "S14.C003.P023": "“Today I have someone to practise with.”",
+              "S14.C003.P024": "The last sentence stayed between them. Alice imagined him without a map or a schedule and suddenly wanted to be there when he managed to step out of the guide’s role.",
+              "S14.C003.P025": "She took out her phone to photograph the view for her notes. Eric neither moved away nor came closer. The frame held ice, low sky, and the edge of his sleeve. She put the phone away without taking the picture. After Vík, it was clearer how quickly “accidentally in the frame” became “why didn’t you ask?”"
+            }
+          },
+          "S14.C004": {
+            "title": "Choice S14-C1 — how to cover the remaining stretch",
+            "paragraphs": {
+              "S14.C004.P000": "Both options return Alice and Eric to the group by the agreed time."
+            }
+          },
+          "S14.C005": {
+            "title": "A. Ask to walk more slowly and name the reason",
+            "paragraphs": {
+              "S14.C005.P000": "“I want to reach the viewpoint,” Alice said, “but I’m walking faster than is comfortable. It isn’t my leg. I don’t want to be the person everyone has to wait for.”",
+              "S14.C005.P001": "Eric looked at his watch, then turned the face toward her.",
+              "S14.C005.P002": "“We have time for a slow pace and the walk back. I didn’t guess what would be comfortable for you. Thank you for telling me.”",
+              "S14.C005.P003": "She went first along the trail. He stayed beside her without pushing her with a word or a hand. The viewpoint had less dramatic ice than she expected, but there was a clear gap between the clouds, and they saw the light move across the valley.",
+              "S14.C005.P004": "“For the notes?” Eric asked.",
+              "S14.C005.P005": "“Maybe. For me first.”",
+              "S14.C005.P006": "He nodded and didn’t ask her to explain the difference."
+            }
+          },
+          "S14.C006": {
+            "title": "B. Suggest a short return and make the decision herself",
+            "paragraphs": {
+              "S14.C006.P000": "“Let’s turn around here,” Alice said. “I saw what I came for. I don’t want to go farther just because we can.”",
+              "S14.C006.P001": "Eric didn’t hide his surprise.",
+              "S14.C006.P002": "“Usually I have to convince people that the end of a trail doesn’t have to be the goal.”",
+              "S14.C006.P003": "“Today that’s my boring professional victory.”",
+              "S14.C006.P004": "“Do journalists get professional victories without publishing them?”",
+              "S14.C006.P005": "“I’ve just had one.”",
+              "S14.C006.P006": "On the way back, they walked slowly and stopped by a stream where water disappeared under dark stones. Eric asked whether she wanted to record the sound. Alice declined. They listened together until another couple approached, then gave up the place. Later, when they met the others, Eric said exactly what was true: “We chose the short route.” He didn’t call her tired or turn his own caution into her decision."
+            }
+          },
+          "S14.C007": {
+            "title": "Shared continuation",
+            "paragraphs": {
+              "S14.C007.P000": "At the car, Nick showed not a shot but his sheet of sound notes: “footsteps,” “backpack strap,” “canteen click.” He had recorded the last sound at the bench while waiting with Damir; Alice recognized the click of Damir’s bottle lid. Nick didn’t ask what they had been doing on the climb.",
+              "S14.C007.P001": "“You record small things too?” she asked.",
+              "S14.C007.P002": "“The big things get noticed without us.”",
+              "S14.C007.P003": "Eric asked each person whether they had enough water for the next stop. When it was Alice’s turn, he left a small pause for her answer.",
+              "S14.C007.P004": "“Enough,” she said.",
+              "S14.C007.P005": "The group planned to spend the night closer to the glacier lagoon. The road carried them from green slopes onto a wide plain. Damir took Nick’s place in the front because Nick wanted to sort the sound in his headphones, and Eric asked a second person to watch the signs. Nick put the camera in its case. Alice opened her notebook and wrote not someone else’s quote but her own sentence: “When I was offered a choice of pace, I didn’t believe at first that pace could be chosen.”"
+            }
+          },
+          "S14.C008": {
+            "title": "Choice S14-C2 — how Alice shows Eric she enjoyed the trail",
+            "paragraphs": {}
+          },
+          "S14.C009": {
+            "title": "A. Suggest a walk together after dinner",
+            "paragraphs": {
+              "S14.C009.P000": "“Without a list of stops,” Alice added. Eric looked briefly thrown, then agreed: after dinner they would walk to the nearest lamp and back. She was the one who made the plan, and it made her a little warmer under her jacket."
+            }
+          },
+          "S14.C010": {
+            "title": "B. Share a funny find from the trail",
+            "paragraphs": {
+              "S14.C010.P000": "Alice showed Eric a phone photo of small bird tracks in wet ground. He studied it for a long time and admitted he hadn’t noticed them himself. She kept the picture out of the article."
+            }
+          }
+        }
+      },
+      "S15": {
+        "title": "Day 8. Jökulsárlón. Not Filming Means Seeing",
+        "chunks": {
+          "S15.C000": {
+            "title": "",
+            "paragraphs": {
+              "S15.C000.P000": "That morning, the ice appeared before the lagoon: a pale strip on the horizon, like a light patch in an erased photograph. In the parking area, Eric asked everyone to zip their jackets and showed them the accessible walking zone. He didn’t promise they would approach the water’s edge. Nick checked the battery and immediately put the camera away when Alice looked at him.",
+              "S15.C000.P001": "“I can just walk around first,” he said.",
+              "S15.C000.P002": "“Then I’ll just look first too,” Alice replied.",
+              "S15.C000.P003": "“For me, that’s a bit of an exam.”",
+              "S15.C000.P004": "Nick found a spare battery in his pocket and set it on the railing beside the camera, like two objects between which he had to choose. Cold came off the water, and the metal bar beneath Alice’s palm was damp. Short voices carried from the shore, then were swallowed by the scrape of an ice floe against another. Nick leaned toward the camera, but took only the battery and put it away again. Alice noticed from the corner of her eye. She wanted to ask what he was thinking; she remembered how much she would have hated that question from someone with an open notebook first thing in the morning. She moved away from the railing, leaving him room beside her. Nick came over a few seconds later without touching the camera.",
+              "S15.C000.P005": "Ice floes moved slowly in the lagoon. Some looked cut from glass; others were grey with old sand. On the opposite shore, someone raised a phone overhead; from here, the person was a small gesture beside a huge white mass. Alice tried to invent an opening for the article and grew angry with herself. The ice did not need her metaphor. She wanted to stand there, feel the cold on her face, and not turn everything she heard into work.",
+              "S15.C000.P006": "Eric and Damir went over to the information board to check the time for the next stretch of road. Nick stood nearby, looking not through the viewfinder but at the band of ice.",
+              "S15.C000.P007": "“I listened to the trail recording again yesterday,” he said. “There’s more of my breathing than nature in it.”",
+              "S15.C000.P008": "“You can keep that.”",
+              "S15.C000.P009": "“I will. The question is who gets to hear it.”",
+              "S15.C000.P010": "Alice held out one of her gloves: Nick had one on his right hand, while the left was bare after wrestling with the strap. Nick pulled on the borrowed glove, waved fingers in two different colours, and said that for the film it would be a costume department failure. Alice asked him not to give it back immediately. Through the wool, he felt for her palm where she was holding his camera strap, and they both let go at once. Nick laughed too quickly; so did she. The conversation that might have remained an ordinary joke hung between them now.",
+              "S15.C000.P011": "He tried to smile, but didn’t quite manage it. Alice waited. Nick turned the ring on the camera strap twice, then let it go."
+            }
+          },
+          "S15.C001": {
+            "title": "If `skogafossVoice=nick`",
+            "paragraphs": {
+              "S15.C001.P000": "She opened the notebook to the Skógafoss page and showed him the line about the two waves. A drop of dried rain remained between the words.",
+              "S15.C001.P001": "“You didn’t cross it out,” Nick said.",
+              "S15.C001.P002": "“You noticed the boy while changing the battery. I wrote down what wasn’t in your frame.”",
+              "S15.C001.P003": "He ran a finger along the edge of the page without closing it.",
+              "S15.C001.P004": "“So even a failed cameraman can be a witness.”",
+              "S15.C001.P005": "“I didn’t draw that conclusion.”",
+              "S15.C001.P006": "He made a small sound and handed the notebook back."
+            }
+          },
+          "S15.C002": {
+            "title": "If `skogafossVoice=eric` or `skogafossVoice=damir`",
+            "paragraphs": {
+              "S15.C002.P000": "Alice opened the notebook but didn’t show the Skógafoss page: that was where she had asked someone else to tell a story. Nick noticed the movement and tightened the camera strap.",
+              "S15.C002.P001": "“What’s in there?”",
+              "S15.C002.P002": "“Yesterday’s trail. I don’t know how to write about it yet.”",
+              "S15.C002.P003": "“Then we both have a morning without a finished frame.”"
+            }
+          },
+          "S15.C003": {
+            "title": "Shared continuation",
+            "paragraphs": {
+              "S15.C003.P000": "“You wanted to make a film about people who change their lives,” Alice said. “And today you left the camera closed. What changed?”",
+              "S15.C003.P001": "“The film has a different title. A working one: The People Who Can’t Stop. I tell everyone I’m filming people on the threshold of change. It sounds more noble.”",
+              "S15.C003.P002": "The floe behind his shoulder turned almost imperceptibly. Nick watched it like the hand of a clock.",
+              "S15.C003.P003": "“At a premiere of one of my films, the lights went out in the room and I could still see the heroine looking for the exit between the rows. On screen, she was crying in a kitchen. After that came my beautiful ending: an empty room, morning sun, credits. After the screening she said, ‘You made it look as if I stayed alive in that day.’ I remember the red light above the door coming on before I found an answer.”",
+              "S15.C003.P004": "“Did you change the film?”",
+              "S15.C003.P005": "“I cut the kitchen from the next version. The producer argued until the end, but the first edit was my decision.”",
+              "S15.C003.P006": "Nick lifted the camera by its strap without taking it from the case.",
+              "S15.C003.P007": "“Now I film too much. Everything feels as if the next file might contain the frame that explains a person better.”",
+              "S15.C003.P008": "Alice imagined the red light above the door and her own folder of drafts. Nick stood close enough for the wind to move the edge of her scarf and his camera strap at the same time. She wanted to lay her hand over his fingers; she kept it on the notebook.",
+              "S15.C003.P009": "“At the beach, you were afraid of more than losing the shot,” she said.",
+              "S15.C003.P010": "“Eric stopped me before I put the camera away myself.”",
+              "S15.C003.P011": "“You were angry with him.”",
+              "S15.C003.P012": "“I was. Especially because he was right.”",
+              "S15.C003.P013": "A couple in matching yellow hats passed nearby. Nick waited until they had gone before speaking again.",
+              "S15.C003.P014": "“And I can’t finish this film. Every evening I promise I’ll open the footage. Then I charge the batteries and look for what to film tomorrow.”",
+              "S15.C003.P015": "Alice leaned against the railing. He moved aside to let the couple reach the viewpoint, then returned to the same place beside her. That small return warmed her cheeks more than the scarf had.",
+              "S15.C003.P016": "“I think you already have one important sentence,” she said. “About the editing button.”",
+              "S15.C003.P017": "“It’s too short for a film.”",
+              "S15.C003.P018": "“Start with it and see what can survive beside it.”",
+              "S15.C003.P019": "For a second, he smiled for real.",
+              "S15.C003.P020": "“Are you editing my film now?”",
+              "S15.C003.P021": "“No. It’s an invitation to open the folder. I can sit beside you and be quiet.”",
+              "S15.C003.P022": "“Can you?”",
+              "S15.C003.P023": "“You can check, if you ever invite me.”",
+              "S15.C003.P024": "They reached the safe viewpoint. The sun came out for a few minutes, and the water turned the colour of sky after rain. Nick raised the camera and asked, “Can I take a wide shot from here?” Alice nodded. He filmed a short view of the lagoon and lowered the lens when she entered the edge of the frame.",
+              "S15.C003.P025": "“I didn’t ask you to stop filming the landscape.”",
+              "S15.C003.P026": "“I can wait until you leave the frame. Or shoot it again if you want.”",
+              "S15.C003.P027": "She stayed by the railing for a second longer and watched him lower the camera. He didn’t hurry her with a step.",
+              "S15.C003.P028": "Alice’s phone still held the unfinished message to Marina. She looked at the screen and turned it off. The story about the premiere wanted to go straight into the article, but the person standing beside her had just trusted it to Alice, not to her editor."
+            }
+          },
+          "S15.C004": {
+            "title": "Choice S15-C1 — what to do with Nick’s personal story",
+            "paragraphs": {
+              "S15.C004.P000": "One fragment is selected; the premiere story remains outside the article."
+            }
+          },
+          "S15.C005": {
+            "title": "A. Protect his privacy: keep the conversation between them",
+            "paragraphs": {
+              "S15.C005.P000": "“I won’t put this in the article,” Alice said. “If you ever want to tell it yourself, I’ll listen. Today it isn’t my material.”",
+              "S15.C005.P001": "Nick looked at her closed notebook.",
+              "S15.C005.P002": "“You won’t even ask whether you can quote me?”",
+              "S15.C005.P003": "“No. Right now understanding you matters more than getting a quote.”",
+              "S15.C005.P004": "He rested the camera against his leg.",
+              "S15.C005.P005": "“All right. Then I’ll say something that won’t be in the credits: I don’t know how long I can keep filming if people stop answering my trust with trust.”",
+              "S15.C005.P006": "Alice stood beside him as a small floe slowly drifted away from a larger one. That evening she crossed out the line “Nick is afraid of failure.” Nick saw her closed notebook and offered to carry it to the car; she gave him the notebook and took his camera case instead."
+            }
+          },
+          "S15.C006": {
+            "title": "B. Keep the honest material, but name Nick’s exact boundaries",
+            "paragraphs": {
+              "S15.C006.P000": "“I want to write only what I saw: you asked before filming and lowered the camera. I won’t write about the premiere. I’ll show you the line before I send it.”",
+              "S15.C006.P001": "Nick was quiet. Alice didn’t push him toward agreement.",
+              "S15.C006.P002": "“What you saw is fine,” he said. “I may tell the explanation myself someday.”",
+              "S15.C006.P003": "“All right. It will be a short line.”",
+              "S15.C006.P004": "“That’s honest. And a little frightening.”",
+              "S15.C006.P005": "“It is for me too.”",
+              "S15.C006.P006": "She wrote: “Asked. Lowered the camera.” That evening, by the car, she opened the notebook to the line; Nick read it, nodded, and didn’t ask her to add the reason. They still didn’t sit down to make a shared draft for the editor."
+            }
+          },
+          "S15.C007": {
+            "title": "C. Choose one fragment together and give him the right to stop it",
+            "paragraphs": {
+              "S15.C007.P000": "“Choose one sound from this shore,” Alice said. “I’ll try to write two lines around it. Before I send anything, we’ll listen together.”",
+              "S15.C007.P001": "Nick tapped a finger against the camera case.",
+              "S15.C007.P002": "“Ice and water. The camera caught an ice floe touching the shore.”",
+              "S15.C007.P003": "“Are there other people’s voices in it?”",
+              "S15.C007.P004": "He looked at her, understood, and nodded.",
+              "S15.C007.P005": "“Someone laughs at the beginning. I’ll cut it. Leave only the water.”",
+              "S15.C007.P006": "“I may keep the two lines to myself.”",
+              "S15.C007.P007": "“Then we’ll have a sound no one is required to hear.”",
+              "S15.C007.P008": "They named the file “shore_without_voices.” Nick cut the beginning in front of her. Alice wrote two lines on the back of a receipt and folded it; they agreed to return to the file and the text tomorrow, when they looked over the material for the editor."
+            }
+          },
+          "S15.C008": {
+            "title": "Shared continuation",
+            "paragraphs": {
+              "S15.C008.P000": "By noon, the wind changed and Eric gathered the group at the car earlier than planned. Nick didn’t argue. Damir offered Alice the remaining pastry, asking whether she wanted it now or for the road. She chose half. He took the other half without turning the exchange into a sign of anything.",
+              "S15.C008.P001": "As they left, Nick asked Eric whether he minded a few seconds in which the guide’s voice named the return time.",
+              "S15.C008.P002": "“Let me hear it before publication,” Eric said. “And don’t make it the moment when I saved everyone.”",
+              "S15.C008.P003": "“Fine. Mostly you ask who has my gloves.”",
+              "S15.C008.P004": "“Excellent. Keep that too.”",
+              "S15.C008.P005": "In the car, Alice opened the draft, looked at the blank place she had left for Nick, and closed the file. She had until tomorrow’s conversation to choose words he would recognize."
+            }
+          },
+          "S15.C009": {
+            "title": "If `S14-C2=A`",
+            "paragraphs": {
+              "S15.C009.P000": "That evening, Eric reminded Alice about the short walk she had suggested. She took her jacket without another word, and they returned before the others, smiling at their small plan."
+            }
+          },
+          "S15.C010": {
+            "title": "If `S14-C2=B`",
+            "paragraphs": {
+              "S15.C010.P000": "That evening, Eric asked whether Alice had found the little bird’s name. They looked through a local guide together and discovered that they had both guessed its size wrong."
+            }
+          }
+        }
+      },
+      "S16": {
+        "title": "Day 8. Roadside Guesthouse. Someone Else’s Pain",
+        "chunks": {
+          "S16.C000": {
+            "title": "",
+            "paragraphs": {
+              "S16.C000.P000": "They reached the guesthouse in daylight. Two cars stood outside; one family was unloading bags, while another was unsuccessfully searching for its key among the gloves. The owner was showing Alice where the shared kitchen would be when a short cry came from the corridor.",
+              "S16.C000.P001": "A woman in a hiking jacket sat on a low bench. She had slipped at the entrance and twisted her ankle; her companion held her by the shoulders while trying to unlock her phone. Damir introduced himself as a doctor and asked whether he could look at the ankle. The woman nodded and moved the edge of her jacket so he could sit more easily.",
+              "S16.C000.P002": "Eric cleared the passage and asked the owner to bring a chair. Nick put the camera in the car. Alice offered the woman some water; she took the bottle in both hands. Damir had a calm professional voice Alice had barely heard during their life together: back then, he came home after a shift and told only the funny stories, or nothing.",
+              "S16.C000.P003": "“I can’t tell from one look whether there’s a fracture,” he explained. “Don’t put weight on it until someone examines you in person. Is there pain here? And here?”",
+              "S16.C000.P004": "She answered and showed him where it hurt. When she asked for a second, Damir removed his hands and waited. Her companion found the number for a local medical service; the owner helped confirm where they should go. Damir briefly described what he had seen and followed the instructions on the phone. Nick asked where to take the bags. The woman pointed toward the room door.",
+              "S16.C000.P005": "After a while, transport arranged by the companion and the owner arrived. Damir handed over the notes and stepped away. He washed his hands in silence at the sink by the kitchen and sat on the edge of an empty sofa. A wet stripe remained on his wrist; he wiped it with his sleeve.",
+              "S16.C000.P006": "Alice remembered waiting for him after shifts, when he brought home other people’s funny stories and left the difficult ones outside the door. Then there had been Brussels; even now, the word made her fingers tighten. She looked at his empty hands and stayed by the doorframe until he looked up.",
+              "S16.C000.P007": "“You don’t have to look at me like I’m an article,” Damir said when she stopped by the sofa.",
+              "S16.C000.P008": "“I’m trying. It doesn’t always work.”",
+              "S16.C000.P009": "“Then give me ten minutes without questions.”",
+              "S16.C000.P010": "She sat in the neighbouring chair, leaving a small table between them.",
+              "S16.C000.P011": "“All right. What do you need right now?”",
+              "S16.C000.P012": "“It’s already nine,” he said, looking at his watch. “Then dinner. If Nick doesn’t turn it into glue.”",
+              "S16.C000.P013": "Alice remembered yesterday’s conversation in the café. She didn’t want to return to it now, and Damir didn’t suggest it.",
+              "S16.C000.P014": "“I’ll go see what they found for the soup,” she said.",
+              "S16.C000.P015": "“If it’s only a can of beans, tell them I’m a doctor, not a miracle worker.”",
+              "S16.C000.P016": "Outside the window, Nick and Eric were arguing about whether soup could be made from food bought on the road. One held the bag, the other the trunk key. Their voices reached them muffled through the glass. Damir looked at Alice over the back of the sofa as if he were about to add something, but only nodded toward the kitchen. Alice nodded back."
+            }
+          },
+          "S16.C001": {
+            "title": "Choice S16-C1 — how Alice stays near him after he helps the tourist",
+            "paragraphs": {
+              "S16.C001.P000": "One fragment is selected; the café conversation remains for another day."
+            }
+          },
+          "S16.C002": {
+            "title": "A. Offer concrete care without asking for a conversation",
+            "paragraphs": {
+              "S16.C002.P000": "“I’ll make you tea,” Alice said. “Tell me if you don’t want it.”",
+              "S16.C002.P001": "“I do. No sugar, please.”",
+              "S16.C002.P002": "She put on the kettle and found two mismatched mugs: one with a faded map of the island, the other with a whale in an absurd scarf. She kept the map and handed Damir the whale. He looked at the drawing.",
+              "S16.C002.P003": "“You chose that on purpose?”",
+              "S16.C002.P004": "“No. But I’ll claim I did now.”",
+              "S16.C002.P005": "He smiled and wrapped both hands around the mug. They didn’t speak until the tea cooled enough for a first sip. When ten minutes had passed, Damir stood on his own.",
+              "S16.C002.P006": "“Shall we see what those two are calling soup?”",
+              "S16.C002.P007": "“After their pasta, I demand witnesses,” Alice said.",
+              "S16.C002.P008": "She opened the door and, as he passed, noticed that the whale on the mug had turned its nose toward him. Damir caught her look and grinned."
+            }
+          },
+          "S16.C003": {
+            "title": "B. Give him space and clearly name when they will see each other again",
+            "paragraphs": {
+              "S16.C003.P000": "“I’ll help with dinner,” Alice said. “You asked for ten minutes. If you want to join us afterward, we’ll be in the kitchen. If not, I’ll leave you a portion.”",
+              "S16.C003.P001": "Damir exhaled, almost silently.",
+              "S16.C003.P002": "“Thanks. For a clear schedule without Eric.”",
+              "S16.C003.P003": "“Don’t tell him. He’ll make me his deputy.”",
+              "S16.C003.P004": "She went to the kitchen. Half an hour later, Damir came in while Nick was unsuccessfully trying to open a jar and Eric was arguing that the soup could be saved only with another pot. Alice set a bowl in front of him; he rested his fingers on the warm rim and smiled at her across the table."
+            }
+          },
+          "S16.C004": {
+            "title": "Shared continuation",
+            "paragraphs": {
+              "S16.C004.P000": "Before bed, Alice opened the notebook. The page for today held three lines: “Eric waited by the stream. Nick lowered the camera. Damir sat on the edge of the sofa with a wet sleeve.” Her own line was: “I went back to the kitchen.”",
+              "S16.C004.P001": "In the kitchen, she said that tomorrow, on the way to Höfn, she would bring the draft: everyone would see the lines in which they could recognize themselves. She hadn’t included the premiere story or today’s help to the tourist. Nick asked whether she would have time to let him listen to his own file; she said they would first decide together whether it was needed at all. Eric asked everyone to finish eating.",
+              "S16.C004.P002": "Damir said:",
+              "S16.C004.P003": "“I’ll look at my section. If our conversation from yesterday is in it, I’ll ask you to remove it.”",
+              "S16.C004.P004": "“It isn’t,” Alice said. “I’ll show you the rest tomorrow.”",
+              "S16.C004.P005": "Nick pushed the bread toward her. Eric promised to check the road in the morning before naming a departure time. The soup was too salty; all four finished it with bread and agreed to look for proper food in Höfn tomorrow before arguing over an empty pot again. Nick planned to wash the travel clothes. Damir offered to get clothespins from the storage room if the owner allowed it. Alice closed the notebook.",
+              "S16.C004.P006": "Another shared day lay ahead. No one at the table had asked her to choose whom to spend the evening with, and she didn’t know the answer yet. She liked that not knowing could be left for tomorrow.",
+              "S16.C004.P007": "---"
+            }
+          }
+        }
+      },
       "S65": {
         "title": "Reykjavík, Evening. Dinner Without a Key",
         "chunks": {
@@ -1773,6 +2757,262 @@ export const literaryLocaleBundles = {
               "code": "B",
               "label": "The right not to decide anything about them today",
               "text": "Alice felt that a good evening did not need an immediate name."
+            }
+          ]
+        }
+      ],
+      "S09": [
+        {
+          "question": "At the waterfall, the noise drowns out the conversation. What should Alice do?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Move away and talk with Eric",
+              "text": "Eric led her to a dry patch. Only there did Alice hear him laugh without trying to compete with the water."
+            },
+            {
+              "code": "B",
+              "label": "Stay by the water and show that she understands",
+              "text": "Nick repeated her ridiculous gesture behind the camera. They both laughed without ever explaining the joke."
+            }
+          ]
+        },
+        {
+          "question": "The boy gets his lost mitten back. What should Alice suggest to Nick?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Keep the return in the film if the family agrees",
+              "text": "Nick asked the parents whether they wanted the moment included. Alice noted that small meetings like this could tell the story of a road better than a waterfall view."
+            },
+            {
+              "code": "B",
+              "label": "Do not film the child; record her own observation",
+              "text": "Alice opened her notebook. She did not need someone else’s close-up to keep the way everyone forgot about filming for a minute."
+            }
+          ]
+        }
+      ],
+      "S10": [
+        {
+          "question": "Alice notices how Eric changes when he hears a familiar song. What does she think?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Want to know what else he hides behind his calm",
+              "text": "She remembered his expression. Maybe one day he would tell her on his own where the music came from."
+            },
+            {
+              "code": "B",
+              "label": "Share the minute without asking questions",
+              "text": "Alice did not hurry to fill the silence with questions. The song was playing, and for once that was enough."
+            }
+          ]
+        },
+        {
+          "question": "Eric puts aside an old postcard he is not ready to sign. What should Alice do?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Do not demand an explanation",
+              "text": "She did not ask for the addressee’s name. Everyone carried things they had to return to in their own time."
+            },
+            {
+              "code": "B",
+              "label": "Offer help if he wants to talk",
+              "text": "“If you need a second reader, tell me,” Alice said. Eric nodded and put the postcard back."
+            }
+          ]
+        }
+      ],
+      "S11": [
+        {
+          "question": "Nick moves toward dangerous water for a reflection. How should Alice respond?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Ask him to move away immediately",
+              "text": "“Nick, not here,” Alice said. He looked up, and Eric was already walking toward him."
+            },
+            {
+              "code": "B",
+              "label": "Call Eric, who knows the safe boundary",
+              "text": "Alice called for Eric. He turned to Nick at once, while the wave was still far away."
+            }
+          ]
+        },
+        {
+          "question": "They move away from the dangerous surf. What should Alice say to Nick?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Thank him for giving up the shot",
+              "text": "“Thank you for stepping back,” she said. Nick nodded: the shot was not worth the price."
+            },
+            {
+              "code": "B",
+              "label": "Suggest finishing with safe footprints",
+              "text": "Nick showed her a short fragment and closed the lens. Alice looked at the disappearing tracks once more."
+            }
+          ]
+        }
+      ],
+      "S12": [
+        {
+          "question": "Damir says that his life continued after the breakup. What does Alice think?",
+          "options": [
+            {
+              "code": "A",
+              "label": "They each really had two separate years",
+              "text": "She noticed that she still measured his news against her own biography. Now she wanted to hear his story without comparison."
+            },
+            {
+              "code": "B",
+              "label": "This is not yet a promise of a new life together",
+              "text": "Alice did not mistake his openness for a ready-made decision. First they needed to understand who they had both become."
+            }
+          ]
+        },
+        {
+          "question": "Damir notices the word “we” in the draft. What does Alice want to emphasize?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Not filming was her own decision",
+              "text": "She remembered stepping away from the dangerous place herself. Four people had not needed one author for that decision."
+            },
+            {
+              "code": "B",
+              "label": "The others accepting it matters too",
+              "text": "Alice looked at Damir. Sometimes a shared “we” meant precisely that they could refuse together."
+            }
+          ]
+        }
+      ],
+      "S13": [
+        {
+          "question": "Nick asks what to do if a good piece of material needs someone’s face. What should Alice say?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Ask the person instead of relying on silence",
+              "text": "Alice suggested a simple order: the person first, the camera second. Nick went quiet and considered what that would change in the film."
+            },
+            {
+              "code": "B",
+              "label": "Keep sound or hands if the person does not want to be filmed",
+              "text": "“The story remains even without a face,” Alice said. Nick looked at the recorder in his bag."
+            }
+          ]
+        },
+        {
+          "question": "Marina asks what they will have instead of postcards. How should Alice answer?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Name one concrete moment from the road",
+              "text": "Alice remembered how they had made room for someone else’s pace. It was already the beginning of a story, not a slogan."
+            },
+            {
+              "code": "B",
+              "label": "Ask for time until the next stop",
+              "text": "She decided not to send a beautiful promise before she understood what she could actually show the reader."
+            }
+          ]
+        }
+      ],
+      "S14": [
+        {
+          "question": "Eric finally offers Alice the choice of pace. What will she decide?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Go first while he stays beside her",
+              "text": "Alice chose a short stretch and looked back: Eric was an arm’s length away, not correcting her choice."
+            },
+            {
+              "code": "B",
+              "label": "Ask him to walk beside her, not ahead",
+              "text": "“Then beside me,” she said. Eric put away the phone with the map and matched her step."
+            }
+          ]
+        },
+        {
+          "question": "Eric admits he is learning to ask instead of deciding for others. What will Alice say?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Support him with a simple invitation to continue together",
+              "text": "Alice nodded toward the trail. She liked that neither of them was turning the walk into a test."
+            },
+            {
+              "code": "B",
+              "label": "Say that arguing with him feels safe today",
+              "text": "She said it quietly. Eric smiled and, for once, did not answer with useful advice."
+            }
+          ]
+        }
+      ],
+      "S15": [
+        {
+          "question": "Nick pauses by the glacier lagoon. What should Alice do?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Ask why he is not reaching for the camera",
+              "text": "Nick looked at the water and spoke about a film he had once been afraid to show an audience."
+            },
+            {
+              "code": "B",
+              "label": "Wait until he decides to tell her",
+              "text": "Alice sat beside him. After a few minutes, Nick spoke not about the shot but about what remains after a screening."
+            }
+          ]
+        },
+        {
+          "question": "Nick leaves open the possibility of meeting after the trip. How should Alice respond?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Leave the possibility open",
+              "text": "Alice smiled. They still had time to find out what each of them had put into the words."
+            },
+            {
+              "code": "B",
+              "label": "Suggest talking about a specific day when it arrives",
+              "text": "She did not promise a future meeting instead of the closeness they had today. Nick heard her and did not demand an answer."
+            }
+          ]
+        }
+      ],
+      "S16": [
+        {
+          "question": "Damir falls silent before finishing a thought about the past. What should Alice do?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Ask whether he wants to finish",
+              "text": "“Yes, but not now,” he answered. Alice accepted that without trying to guess the rest, and for the first time felt that silence could be honest."
+            },
+            {
+              "code": "B",
+              "label": "Say that she has heard enough for today",
+              "text": "Damir did not continue. They reached the guesthouse door without turning the pause into another argument."
+            }
+          ]
+        },
+        {
+          "question": "The difficult conversation is over, but the tea is still warm. What will Alice choose?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Let the silence continue without another explanation",
+              "text": "She picked up the mug. Damir stayed beside her and stopped searching for the right sentence."
+            },
+            {
+              "code": "B",
+              "label": "Say they have discussed enough for today",
+              "text": "“That’s enough for today,” Alice said gently. Damir nodded and poured her more tea without returning to the past."
             }
           ]
         }
