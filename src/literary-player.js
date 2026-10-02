@@ -5,6 +5,7 @@ import { createCloudSaveQueue } from './save-state.js';
 import { stageForScene } from './literary-stage.js';
 import { visualAt, visualEntryForPosition } from './literary-visual-directions.js';
 import { compileInteractivePlayback } from './literary-pacing.js';
+import { createTranslator } from './localization.js';
 
 const byId = new Map(literarySeason.scenes.map(scene => [scene.id, scene]));
 const app = document.getElementById('literary-app');
@@ -127,6 +128,8 @@ let cloudCandidate=null;
 let menuOpen=true;
 let modal=null;
 let platform=null;
+let locale='ru';
+let t=createTranslator(locale);
 let cloudQueue=null;
 let settings=(()=>{try{return{scale:1,contrast:false,motion:false,...JSON.parse(localStorage.getItem(textSettingsKey)||'{}')}}catch{return{scale:1,contrast:false,motion:false}}})();
 function persist() {
@@ -239,13 +242,13 @@ function bindStageTapTarget(node){
 }
 function goHome(){menuOpen=true;modal=null;renderMenu()}
 function startNew(){
-  if(hasSave && !window.confirm('Начать новое прохождение? Текущий прогресс будет заменён.'))return;
+  if(hasSave && !window.confirm(t('confirmNew')))return;
   cloudLocked=true; reader=blank();persist();menuOpen=false;modal=null;renderReader();
 }
 function continueGame(){menuOpen=false;modal=null;renderReader()}
 function panel(heading,children){
   modal=heading;const section=el('','home-panel');section.append(el(heading,'section-title','h2'));
-  children(section);section.append(button('← К меню',()=>{modal=null;renderMenu()},'small-button'));
+  children(section);section.append(button(t('backMenu'),()=>{modal=null;renderMenu()},'small-button'));
   return section;
 }
 function episodeSelection(section){
@@ -276,16 +279,17 @@ function settingsPanel(section){
   draw();section.append(size,contrast,motion);
 }
 function renderMenu(){
+  platform?.setGameplayActive(false);
   menuOpen=true;app.className='literary-home';app.dataset.presentation=modal?`menu-${modal.toLowerCase()}`:'menu-home';app.style.setProperty('--cover',`url('${cover}')`);app.replaceChildren();
   const section=el('','literary-home-card');app.append(section);
   section.append(el('РОМАНТИЧЕСКАЯ ИСТОРИЯ · ИСЛАНДИЯ','kicker'),el('Поцелуй на краю света','home-title','h1'));
   if(modal){const draw={Эпизоды:episodeSelection,Настройки:settingsPanel}[modal];section.append(panel(modal,draw??(x=>x.append(el('Четыре самостоятельных исхода: Эрик, Ник, Дамир и Алиса. Прогресс этой редакции сохраняется отдельно от прежней короткой версии.','home-summary')))));return;}
   section.append(el('Три недели дороги. Три возможные истории любви. И возможность выбрать себя.','home-summary'));
   const actions=el('','home-actions');
-  if(hasSave)actions.append(button(`Продолжить · эпизод ${byId.get(reader.sceneId).episode}`,continueGame,'primary'));
-  actions.append(button('Новая игра',startNew,hasSave?'':'primary'));
+  if(hasSave)actions.append(button(t('continueEpisode',{episode:byId.get(reader.sceneId).episode}),continueGame,'primary'));
+  actions.append(button(t('newGame'),startNew,hasSave?'':'primary'));
   const secondary=el('','home-actions-secondary');
-  for(const name of ['Эпизоды','Настройки'])secondary.append(button(name,()=>{modal=name;renderMenu()}));
+  for(const [name,label] of [['Эпизоды',t('episodes')],['Настройки',t('settings')]])secondary.append(button(label,()=>{modal=name;renderMenu()}));
   actions.append(secondary);
   section.append(actions);
   if(cloudCandidate)section.append(button('Восстановить облачный прогресс',()=>{if(!window.confirm('Заменить текущее локальное сохранение облачным?'))return;cloudLocked=true;reader=cloudCandidate;cloudCandidate=null;persist();continueGame()}));
@@ -317,6 +321,7 @@ function artMode(scene, entry, choices, isEnding) {
 }
 function renderReader(){
   if(menuOpen)return renderMenu();
+  platform?.setGameplayActive(true);
   const scene=byId.get(reader.sceneId);if(!scene){goHome();return}
   const flow=compileInteractivePlayback(scene,reader.choices);reader.position=Math.min(reader.position,flow.at(-1)?.type==='choice'?Math.max(0,flow.length-1):flow.length);
   const isEnding=['S44','S45','S46','S47'].includes(scene.id);
@@ -333,7 +338,7 @@ function renderReader(){
   if(art?.presentation!=='cinematic') picture.append(renderStage({...direction,mode:direction.cast.length>2?'group':direction.cast.length===2?'pair':'solo',mood:stageForScene(scene.id,reader.choices).mood}));
   picture.append(el('','literary-vignette'));app.append(picture);bindStageNavigation(picture);
   const header=el('','reader-header');
-  header.append(button('☰ Меню',goHome,'small-button'),el(`ЭПИЗОД ${scene.episode} / 10`,'chapter-index'),el('ПОЦЕЛУЙ НА КРАЮ СВЕТА','draft-indicator'));
+  header.append(button('☰ '+t('menu'),goHome,'small-button'),el(t('episode')+` ${scene.episode} / 10`,'chapter-index'),el('ПОЦЕЛУЙ НА КРАЮ СВЕТА','draft-indicator'));
   header.setAttribute('aria-label',`${scene.title}. Эпизод ${scene.episode}`);
   app.append(header);
   const sheet=el('','reader-sheet');
@@ -349,7 +354,7 @@ function renderReader(){
     sheet.append(footer);
   } else if(current?.type==='choice'){
     const content=el('','reader-content');
-    content.append(el('ТВОЙ ВЫБОР','choice-label'));
+    content.append(el(t('yourChoice'),'choice-label'));
     if(current.question)content.append(el(current.question,'decision-question','p'));
     const options=el('','reader-options');
     for(const opt of current.options)options.append(button(cleanLiteraryText(opt.label),()=>{lastStageInput='none';lastPointerActivationAt=0;reader.choices[current.id]=opt.code;persist();renderReader()},'choice-button'));
@@ -357,13 +362,13 @@ function renderReader(){
     sheet.append(content);
   }else{
     const next=nextLiteraryScene(reader.sceneId,reader.choices);
-    if(next && byId.has(next))sheet.append(button(`Следующая сцена → ${next}`,()=>{lastStageInput='none';lastPointerActivationAt=0;reader.sceneId=next;reader.position=0;if(!reader.visited.includes(next))reader.visited.push(next);persist();renderReader()},'primary'));
+    if(next && byId.has(next))sheet.append(button(t('nextScene',{scene:next}),()=>{lastStageInput='none';lastPointerActivationAt=0;reader.sceneId=next;reader.position=0;if(!reader.visited.includes(next))reader.visited.push(next);persist();renderReader()},'primary'));
     else if(isEnding){
       if(!reader.finished){reader.finished=true;persist()}
       sheet.classList.add('terminal-sheet');
-      sheet.append(button('Вернуться в меню',goHome,'primary'));
+      sheet.append(button(t('returnMenu'),goHome,'primary'));
       sheet.prepend(el(endingHeadings[scene.id],'reader-scene','h2'));
-    }else{sheet.append(el('Следующая сцена недоступна: ошибка структуры сценария.','reader-paragraph'));sheet.append(button('В меню',goHome,'primary'))}
+    }else{sheet.append(el(t('structuralError'),'reader-paragraph'));sheet.append(button(t('returnMenu'),goHome,'primary'))}
   }
   bindStageTapTarget(sheet);
   app.append(sheet);
@@ -385,11 +390,22 @@ initYandexPlatform({cloudKey:literaryCloudKey,onCloudState:raw=>{
   if(menuOpen)renderMenu();
 }}).then(result=>{
   platform=result;
+  locale=platform.locale;
+  t=createTranslator(locale);
+  document.documentElement.lang=locale;
+  renderMenu();
+  platform.setGameplayActive(!menuOpen);
+  platform.markInteractiveReady();
   if(platform.mode==='yandex'){
     cloudQueue=createCloudSaveQueue(snapshot=>platform.save(snapshot));
     // Explicit new-game reset may have happened while SDK was initializing.
     if(cloudLocked)cloudQueue.enqueue(reader).catch(()=>{});
   }
+}).catch(error=>{
+  console.error(error);
+  app.className='literary-home';
+  app.dataset.qaFailure='yandex-sdk';
+  app.replaceChildren(el(t('sdkError'),'structural-error','p'));
 });
 window.__LITERARY_QA__={
   getState:()=>structuredClone(reader),

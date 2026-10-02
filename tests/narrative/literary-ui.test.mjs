@@ -34,9 +34,9 @@ test('production literary UI preserves mobile reading and control invariants', (
 });
 
 test('main menu keeps only the supported actions and has no retired panels or footer', () => {
-  assert.match(player, /for\(const name of \['Эпизоды','Настройки'\]\)/);
-  assert.match(player, /Продолжить · эпизод/);
-  assert.match(player, /button\('Новая игра',startNew/);
+  assert.match(player, /\['Эпизоды',t\('episodes'\)\]/);
+  assert.match(player, /t\('continueEpisode'/);
+  assert.match(player, /button\(t\('newGame'\),startNew/);
   assert.doesNotMatch(player, /Галерея|Об игре|История доступна от начала до одного из четырёх финалов/);
   assert.doesNotMatch(player, /galleryPanel|literary-gallery/);
   assert.doesNotMatch(css, /literary-gallery/);
