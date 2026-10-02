@@ -45,6 +45,26 @@ test('production English Episode 1 continuation scenes are complete and structur
   const choiceTitles=Object.values(english.scenes[sceneId].chunks).filter(chunk=>chunk.title.startsWith('Choice ')).map(chunk=>chunk.title);
   assert.equal(choiceTitles.length,counts.choices,sceneId+' choice count');
   const visible=[english.scenes[sceneId].title,...Object.values(english.scenes[sceneId].chunks).flatMap(chunk=>[chunk.title,...Object.values(chunk.paragraphs)])].join('\n');
+ assert.doesNotMatch(visible,/[\u0400-\u04ff]/u,sceneId+' accidental Cyrillic');
+ }
+});
+test('production English Episode 2 is complete, structurally identical, and predicate-safe',()=>{
+ const expected={S05:{paragraphs:103,choices:1},S06:{paragraphs:101,choices:1},S07:{paragraphs:122,choices:1},S08:{paragraphs:107,choices:1},S66:{paragraphs:105,choices:0}};
+ for(const [sceneId,counts] of Object.entries(expected)){
+  const english=JSON.parse(fs.readFileSync(new URL('../../content/localization/en/'+sceneId+'.json',import.meta.url),'utf8'));
+  const source=literarySeason.scenes.find(scene=>scene.id===sceneId);
+  const report=validateLiteraryLocale(literarySeason,english,{sceneIds:[sceneId]});
+  assert.deepEqual(report,{status:'PASS',errors:[],sceneCount:1},sceneId);
+  assert.deepEqual(Object.keys(english.scenes),[sceneId]);
+  assert.deepEqual(Object.keys(english.scenes[sceneId].chunks),source.chunks.map((_,index)=>sourceRef.chunk(sceneId,index)));
+  assert.equal(Object.values(english.scenes[sceneId].chunks).reduce((count,chunk)=>count+Object.keys(chunk.paragraphs).length,0),counts.paragraphs,sceneId+' paragraph count');
+  assert.equal(source.chunks.filter(chunk=>chunk.title.startsWith('Выбор ')).length,counts.choices,sceneId+' choice count');
+  source.chunks.forEach((chunk,index)=>{
+   const sourceTitle=chunk.title;
+   const translated=english.scenes[sceneId].chunks[sourceRef.chunk(sceneId,index)].title;
+   for(const token of sourceTitle.match(/S\d{2}-C\d+|`[^`]+`/g)??[])assert.ok(translated.includes(token),sceneId+' missing stable token '+token);
+  });
+  const visible=[english.scenes[sceneId].title,...Object.values(english.scenes[sceneId].chunks).flatMap(chunk=>[chunk.title,...Object.values(chunk.paragraphs)])].join('\n');
   assert.doesNotMatch(visible,/[\u0400-\u04ff]/u,sceneId+' accidental Cyrillic');
  }
 });

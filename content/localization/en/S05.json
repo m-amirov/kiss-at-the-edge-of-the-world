@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "sourceLocale": "ru",
+  "source": "content/season-1-vertical-slice-episodes-01-02.md",
+  "scenes": {
+    "S05": {
+      "title": "The Road to Hveragerði, Day 3. The Red Band",
+      "chunks": {
+        "S05.C000": {
+          "title": "",
+          "paragraphs": {
+            "S05.C000.P000": "On the third morning, they left the Reykjavík guesthouse with their luggage: the next two nights were booked in Hveragerði. A red warning band appeared on Eric's phone over breakfast. He read the message twice and set the screen down beside his plate.",
+            "S05.C000.P001": "\u201cWe're cancelling the long climb. The gusts will strengthen by noon.\u201d",
+            "S05.C000.P002": "Nick, who had been spreading jam on bread, froze.",
+            "S05.C000.P003": "\u201cI have a shoot there.\u201d",
+            "S05.C000.P004": "\u201cNot anymore.\u201d",
+            "S05.C000.P005": "\u201cWe could go up earlier.\u201d",
+            "S05.C000.P006": "\u201cWe could. And we could meet the wind in an exposed stretch earlier.\u201d",
+            "S05.C000.P007": "\u201cHow dangerous is it?\u201d",
+            "S05.C000.P008": "\u201cDangerous enough that I'm not taking the group up there.\u201d",
+            "S05.C000.P009": "Nick put down the knife. The usual performance disappeared from his face.",
+            "S05.C000.P010": "\u201cI get it. I just needed that shot.\u201d",
+            "S05.C000.P011": "\u201cYou'll find another one.\u201d",
+            "S05.C000.P012": "\u201cYou say that as if shots grow along the roadside.\u201d",
+            "S05.C000.P013": "\u201cIn your camera, maybe.\u201d",
+            "S05.C000.P014": "Alice expected the argument to continue, but Nick exhaled and asked:",
+            "S05.C000.P015": "\u201cWhat instead?\u201d",
+            "S05.C000.P016": "Eric unfolded the map. Today: a short valley and a geothermal trail, then check-in at Hveragerði. Tomorrow, if the rain did not stop, a greenhouse instead of an open-air walk. On the fifth day, the southern road to Skógafoss.",
+            "S05.C000.P017": "\u201cIt's safer there. I won't promise anything beautiful.\u201d",
+            "S05.C000.P018": "\u201cExcellent,\u201d Alice said. \u201cBeautiful things usually get in the way of looking.\u201d",
+            "S05.C000.P019": "Eric looked up at her.",
+            "S05.C000.P020": "\u201cIs that a line for the article?\u201d",
+            "S05.C000.P021": "\u201cNo. I can steal from old men too.\u201d",
+            "S05.C000.P022": "Damir brought the thermoses from the kitchen.",
+            "S05.C000.P023": "\u201cIf we're leaving early, I'm ready.\u201d",
+            "S05.C000.P024": "\u201cYou're always ready,\u201d Alice said.",
+            "S05.C000.P025": "He heard the old barb, but answered without defending himself:",
+            "S05.C000.P026": "\u201cNot always. I just try to check before I speak now.\u201d",
+            "S05.C000.P027": "Nick was quiet for twenty minutes in the car. Then he asked them to stop beside a small field where the wind drove waves through the grass. It was safe to film from the road. He set the camera low and caught not the mountain, but four pairs of boots passing by.",
+            "S05.C000.P028": "\u201cDifferent shot?\u201d Eric asked.",
+            "S05.C000.P029": "\u201cDon't get used to being right.\u201d",
+            "S05.C000.P030": "\u201cToo late.\u201d"
+          }
+        },
+        "S05.C001": {
+          "title": "Choice S05-C1",
+          "paragraphs": {}
+        },
+        "S05.C002": {
+          "title": "A. Help Nick (`weatherChoice=nick`)",
+          "paragraphs": {
+            "S05.C002.P000": "\u201cIf the landscape doesn't work today, film us changing clothes in the rain,\u201d Alice said. \u201cHands, wet jackets, the car door. No faces if anyone doesn't want them in it.\u201d",
+            "S05.C002.P001": "Nick looked at the gray strip of sky, then at his soaked sleeves.",
+            "S05.C002.P002": "\u201cI'll film myself first. If it turns out funny, I'll talk the others into it.\u201d",
+            "S05.C002.P003": "He took out the camera case; Alice held the door while he put the camera away from the rain. The argument about the lost view ended on its own."
+          }
+        },
+        "S05.C003": {
+          "title": "B. Ask Eric to explain the change (`weatherChoice=erik`)",
+          "paragraphs": {
+            "S05.C003.P000": "\u201cEric, tell us exactly what's cancelled. I've already mixed up two turns and one waterfall.\u201d",
+            "S05.C003.P001": "He showed her the stretch of trail and the wind direction on his phone. They would skip the exposed climb; the short sheltered path was still possible if the rain eased. When Nick asked whether he was sure, Eric answered:",
+            "S05.C003.P002": "\u201cNo. We'll decide at the trailhead. If it's the same there, we turn back.\u201d",
+            "S05.C003.P003": "Alice stopped building the failed day in her head: at least now it had two clear versions."
+          }
+        },
+        "S05.C004": {
+          "title": "C. Sit beside Damir (`weatherChoice=damir`)",
+          "paragraphs": {
+            "S05.C004.P000": "Alice moved to the empty window seat. Damir shifted his backpack to the floor, making room for her.",
+            "S05.C004.P001": "\u201cYou don't want to argue with the forecast either?\u201d he asked.",
+            "S05.C004.P002": "\u201cI've had enough wind for one morning.\u201d",
+            "S05.C004.P003": "For a while they watched the rain blur the window. Damir did not offer her coffee, conversation, or one of their old familiar jokes. When the car stopped, he only asked whether she wanted her jacket from the back seat. Alice took it herself; he held the door against the wind."
+          }
+        },
+        "S05.C005": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S05.C005.P000": "Before the short trail, they stopped at a small bakery. Because of the changed plan, it was the only place nearby that was open, and half the people the wind had driven off the routes had already gathered inside.",
+            "S05.C005.P001": "There was one table for four and a chair by the window. Nick put the camera on the chair and stayed standing.",
+            "S05.C005.P002": "\u201cThe camera doesn't eat,\u201d Damir said.",
+            "S05.C005.P003": "\u201cBut it's more expensive than I am.\u201d",
+            "S05.C005.P004": "Alice took the camera off the chair and set it beside her bag.",
+            "S05.C005.P005": "\u201cToday it sits on the floor.\u201d",
+            "S05.C005.P006": "\u201cYou establish a hierarchy quickly.\u201d",
+            "S05.C005.P007": "\u201cAt least it doesn't complain.\u201d",
+            "S05.C005.P008": "\u201cYou don't know it very well.\u201d",
+            "S05.C005.P009": "Eric returned with their order number and four glasses of water.",
+            "S05.C005.P010": "\u201cThe buns will be ready in ten minutes.\u201d",
+            "S05.C005.P011": "\u201cWhat kind?\u201d Nick asked.",
+            "S05.C005.P012": "\u201cI chose.\u201d",
+            "S05.C005.P013": "\u201cThat's a violation of the group's democratic principles.\u201d",
+            "S05.C005.P014": "\u201cYou bought beets and chocolate milk the day before yesterday.\u201d",
+            "S05.C005.P015": "\u201cThe people made mistakes, but that's no reason to cancel the elections.\u201d",
+            "S05.C005.P016": "Eric sat across from Alice.",
+            "S05.C005.P017": "\u201cThere are four different ones. You'll choose in order.\u201d",
+            "S05.C005.P018": "\u201cAnd who's last?\u201d",
+            "S05.C005.P019": "\u201cMe.\u201d",
+            "S05.C005.P020": "\u201cBecause you're noble?\u201d",
+            "S05.C005.P021": "\u201cBecause I know which one no one will take.\u201d",
+            "S05.C005.P022": "The plate arrived: cinnamon, cardamom, chocolate, and a strange green icing.",
+            "S05.C005.P023": "\u201cPistachio?\u201d Alice guessed.",
+            "S05.C005.P024": "\u201cSeaweed,\u201d Eric said.",
+            "S05.C005.P025": "Nick immediately took the green one.",
+            "S05.C005.P026": "\u201cI won't let you defeat the system.\u201d",
+            "S05.C005.P027": "\u201cI wasn't competing.\u201d",
+            "S05.C005.P028": "\u201cThat's what people who win quietly say.\u201d",
+            "S05.C005.P029": "Alice chose cardamom. Damir chose cinnamon. Eric was left with chocolate.",
+            "S05.C005.P030": "\u201cYou lied,\u201d Alice said.",
+            "S05.C005.P031": "\u201cAbout what?\u201d",
+            "S05.C005.P032": "\u201cYou wanted the chocolate one.\u201d",
+            "S05.C005.P033": "\u201cI was hoping for it.\u201d",
+            "S05.C005.P034": "\u201cAnd you placed it so no one would take it first.\u201d",
+            "S05.C005.P035": "Eric broke off a piece.",
+            "S05.C005.P036": "\u201cYou're observant.\u201d",
+            "S05.C005.P037": "\u201cI'm a journalist.\u201d",
+            "S05.C005.P038": "\u201cThat's a profession, not an excuse.\u201d",
+            "S05.C005.P039": "She reached over and broke off a small edge of his bun.",
+            "S05.C005.P040": "\u201cA tax on manipulation.\u201d",
+            "S05.C005.P041": "Eric looked at her fingers, then at the missing piece.",
+            "S05.C005.P042": "\u201cAnd what if I object?\u201d",
+            "S05.C005.P043": "\u201cDo you object?\u201d",
+            "S05.C005.P044": "He broke off a piece of her cardamom bun.",
+            "S05.C005.P045": "\u201cNot anymore.\u201d",
+            "S05.C005.P046": "Nick watched them over the green icing.",
+            "S05.C005.P047": "\u201cI wanted to say something witty, but the seaweed has taken away my future.\u201d",
+            "S05.C005.P048": "Damir pushed the water toward him.",
+            "S05.C005.P049": "\u201cDon't rush it. It may be temporary.\u201d",
+            "S05.C005.P050": "At the next table, a child dropped a mitten—blue, not red. Nick looked at Alice. She had noticed it too.",
+            "S05.C005.P051": "\u201cDon't start,\u201d she said.",
+            "S05.C005.P052": "\u201cWe definitely won't take the second mitten with us,\u201d Nick said.",
+            "S05.C005.P053": "\u201cThe child has already picked this one up,\u201d Alice replied.",
+            "S05.C005.P054": "Damir heard them and asked:",
+            "S05.C005.P055": "\u201cAnd the red one was left by the lake?\u201d",
+            "S05.C005.P056": "\u201cOn the post by the entrance,\u201d Alice answered. \u201cI hope its owner came back for it.\u201d",
+            "S05.C005.P057": "The waitress called out their order number for the bread to go. Eric got up to the counter; the others finished their water at the table. Nick looked at Alice as if he wanted to ask about Damir, but asked instead whether there would be enough buns for everyone.",
+            "S05.C005.P058": "\u201cIf you don't eat two on the way,\u201d she said.",
+            "S05.C005.P059": "When Eric brought the bag, they put on their jackets and went out to the car. Damir held the door for Alice; she went through first without trying to interpret the gesture."
+          }
+        }
+      }
+    }
+  }
+}

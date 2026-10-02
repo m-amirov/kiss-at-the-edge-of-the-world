@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "sourceLocale": "ru",
+  "source": "content/season-1-vertical-slice-episodes-01-02.md",
+  "scenes": {
+    "S08": {
+      "title": "The Guesthouse. The Strap",
+      "chunks": {
+        "S08.C000": {
+          "title": "",
+          "paragraphs": {
+            "S08.C000.P000": "On the morning of the fourth day, Alice left her notebook in the room for ten minutes, as she had promised over the cards. During that time, Eric played the song she had assigned him in the car, and Damir returned from the bakery with the driest bun he could find—both had completed their card tasks. When Alice went back to her notebook, she did not write down everything, only Nick's yellow hat and the way Eric kept quietly humming the chorus after turning off the music."
+          }
+        },
+        "S08.C001": {
+          "title": "If Alice sat beside Damir in S05-C1",
+          "paragraphs": {
+            "S08.C001.P000": "On the stairs, Damir asked whether she had rested after yesterday's drive. He did not mention their silence in the car; Alice understood anyway which hour he was asking about.",
+            "S08.C001.P001": "\u201cI did. Thank you for simply sitting beside me then.\u201d"
+          }
+        },
+        "S08.C002": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S08.C002.P000": "The strap on Alice's backpack tore in the hallway. Her water bottle rolled down the stairs and stopped at Damir's feet.",
+            "S08.C002.P001": "He picked it up.",
+            "S08.C002.P002": "\u201cI have a sewing needle.\u201d",
+            "S08.C002.P003": "\u201cA medical one?\u201d",
+            "S08.C002.P004": "\u201cFor gear. I wouldn't suggest using a medical needle to repair a backpack.\u201d",
+            "S08.C002.P005": "\u201cGood start.\u201d",
+            "S08.C002.P006": "Damir sat on a step, but did not take the backpack.",
+            "S08.C002.P007": "\u201cDo you want me to fix it?\u201d",
+            "S08.C002.P008": "Alice could have refused simply because, two years ago, he often did useful things before she had time to decide whether she needed them. But now he waited.",
+            "S08.C002.P009": "\u201cShow me what you're going to do first.\u201d",
+            "S08.C002.P010": "He laid out a small kit: a thick needle, thread, and a strip of webbing.",
+            "S08.C002.P011": "\u201cI'll reinforce both sides. It won't be pretty.\u201d",
+            "S08.C002.P012": "\u201cIt worries me how often you and Eric warn people that something won't be pretty.\u201d",
+            "S08.C002.P013": "\u201cPossibly a national program.\u201d",
+            "S08.C002.P014": "\u201cYou're not Icelandic.\u201d",
+            "S08.C002.P015": "\u201cI adapt quickly.\u201d",
+            "S08.C002.P016": "She handed him the backpack. Damir sewed slowly, biting his lip as he pushed the needle through the dense fabric. Alice remembered him sewing a button onto his shirt before their first New Year's Eve together. He had been just as focused then, as if someone's life depended on the result.",
+            "S08.C002.P017": "\u201cYou still make that face,\u201d she said.",
+            "S08.C002.P018": "\u201cWhat face?\u201d",
+            "S08.C002.P019": "\u201cAs if the backpack might not survive the operation.\u201d",
+            "S08.C002.P020": "\u201cThe prognosis is guarded.\u201d",
+            "S08.C002.P021": "\u201cHave the relatives been informed?\u201d",
+            "S08.C002.P022": "\u201cThe water bottle is waiting in the hallway.\u201d",
+            "S08.C002.P023": "They laughed. The laughter came too easily, and Alice felt fear rising behind it: if being together was still easy, did that mean two years had changed nothing?",
+            "S08.C002.P024": "Damir finished the stitch and tugged at the strap.",
+            "S08.C002.P025": "\u201cCheck it yourself.\u201d",
+            "S08.C002.P026": "She put on the backpack. The strap held.",
+            "S08.C002.P027": "\u201cThank you.\u201d",
+            "S08.C002.P028": "\u201cYou're welcome.\u201d",
+            "S08.C002.P029": "He gathered up the kit.",
+            "S08.C002.P030": "\u201cI started cycling in Brussels,\u201d he said. \u201cThat's the scar. And that's why I always carry the kit.\u201d",
+            "S08.C002.P031": "\u201cYou could have told me that on the first evening.\u201d",
+            "S08.C002.P032": "\u201cI could have. But you didn't have to listen to a whole story because of one question.\u201d",
+            "S08.C002.P033": "That was new. The old Damir would have explained everything—the route, the rain, the speed, the emergency department—and only afterward noticed that the conversation had taken twenty minutes.",
+            "S08.C002.P034": "\u201cWhat about the meeting in Akureyri?\u201d Alice asked.",
+            "S08.C002.P035": "\u201cThey're offering a year-long program. I haven't answered yet.\u201d",
+            "S08.C002.P036": "\u201cBecause you're looking at the place first?\u201d",
+            "S08.C002.P037": "\u201cAnd because I don't want to make decisions only because they look reasonable on paper anymore.\u201d",
+            "S08.C002.P038": "He did not add \u2018after us.\u2019 Alice was grateful, and a little disappointed, that he did not.",
+            "S08.C002.P039": "When Alice was about to leave, Nick came into the hallway and stopped by the door.",
+            "S08.C002.P040": "\u201cHave you seen the second one?\u201d",
+            "S08.C002.P041": "\u201cOn you?\u201d Damir asked.",
+            "S08.C002.P042": "Nick looked down. He had a boot on his left foot and a sock on his right.",
+            "S08.C002.P043": "\u201cI count this one as the first.\u201d",
+            "S08.C002.P044": "\u201cThe second is by the radiator,\u201d Alice said. \u201cYou put it there to dry after the trail.\u201d",
+            "S08.C002.P045": "\u201cWhy do you know more about my footwear than I do?\u201d",
+            "S08.C002.P046": "\u201cProfessional deformation.\u201d",
+            "S08.C002.P047": "Nick left, but returned a second later.",
+            "S08.C002.P048": "\u201cBy the way, in fifteen minutes I want to film a short introduction to the road from each of you. No personal questions. You can both refuse.\u201d",
+            "S08.C002.P049": "Damir asked:",
+            "S08.C002.P050": "\u201cWhat does an introduction to the road mean?\u201d",
+            "S08.C002.P051": "\u201cOne object you always bring, and why.\u201d",
+            "S08.C002.P052": "\u201cThat's a personal question,\u201d Alice noted.",
+            "S08.C002.P053": "\u201cFine. Then the object and a false reason.\u201d",
+            "S08.C002.P054": "\u201cMore interesting that way,\u201d Damir said.",
+            "S08.C002.P055": "Fifteen minutes later, they gathered by the car. Eric brought an old metal thermos with a dent in its side.",
+            "S08.C002.P056": "\u201cThe reason?\u201d Nick asked from behind the camera.",
+            "S08.C002.P057": "\u201cIt's useful for hammering in tent pegs.\u201d",
+            "S08.C002.P058": "\u201cFalse?\u201d",
+            "S08.C002.P059": "\u201cPossibly.\u201d",
+            "S08.C002.P060": "Alice showed them a thin notebook.",
+            "S08.C002.P061": "\u201cI use it as a shim under uneven tables.\u201d",
+            "S08.C002.P062": "Nick pointed the camera at Damir. He was holding the repair kit.",
+            "S08.C002.P063": "\u201cIt keeps me from using hotel sewing kits.\u201d",
+            "S08.C002.P064": "\u201cToo plausible.\u201d",
+            "S08.C002.P065": "\u201cThen: I use it to fend off journalists.\u201d",
+            "S08.C002.P066": "Alice stood beside the camera.",
+            "S08.C002.P067": "\u201cShow us the technique.\u201d",
+            "S08.C002.P068": "\u201cAfter the filming.\u201d",
+            "S08.C002.P069": "Nick put the camera on a tripod and stepped into the frame himself. His hands were empty.",
+            "S08.C002.P070": "\u201cI always bring a spare T-shirt.\u201d",
+            "S08.C002.P071": "\u201cWhere is it?\u201d Eric asked.",
+            "S08.C002.P072": "\u201cIn my suitcase.\u201d",
+            "S08.C002.P073": "\u201cThis is an introduction to the car, not the road.\u201d",
+            "S08.C002.P074": "Nick stepped out of the frame, found a small toy spinning top in his pocket, and showed it to them.",
+            "S08.C002.P075": "\u201cThen this.\u201d",
+            "S08.C002.P076": "\u201cWhy?\u201d Alice asked.",
+            "S08.C002.P077": "\u201cI use it to check whether a surface is level.\u201d",
+            "S08.C002.P078": "He spun the top on the hood. It turned and fell toward Eric.",
+            "S08.C002.P079": "\u201cThe car is parked on a slope,\u201d Eric said.",
+            "S08.C002.P080": "\u201cSee? An indispensable tool.\u201d",
+            "S08.C002.P081": "Nick stopped recording and showed them the footage at once. In the frame, they did not look like the heroes of a future story, but like people who had not yet decided who they would be beside one another.",
+            "S08.C002.P082": "\u201cKeep my answer,\u201d Alice said.",
+            "S08.C002.P083": "\u201cEven the tables?\u201d",
+            "S08.C002.P084": "\u201cEspecially the tables.\u201d",
+            "S08.C002.P085": "Damir asked him to remove the last second, in which he looked at Alice after the joke. Nick rewound, confirmed the boundary, and trimmed it in front of them.",
+            "S08.C002.P086": "\u201cIs this all right?\u201d",
+            "S08.C002.P087": "\u201cYes.\u201d",
+            "S08.C002.P088": "Alice noticed that, for the first time on the trip, Damir had asked to change something that concerned him instead of enduring it for everyone else's convenience. Perhaps a new life was made of exactly these small requests, too inexpressive for grand confessions.",
+            "S08.C002.P089": "Nick and Eric stayed by the car to put away the camera and check the luggage. Alice and Damir went back to the guesthouse for their jackets and the thermos. In the hall, they found themselves alone again."
+          }
+        },
+        "S08.C003": {
+          "title": "Choice S08-C1",
+          "paragraphs": {}
+        },
+        "S08.C004": {
+          "title": "A. Offer coffee (`damir-care=warm`)",
+          "paragraphs": {
+            "S08.C004.P000": "\u201cI was going to make coffee. Would you like one?\u201d",
+            "S08.C004.P001": "Damir looked at her with a careful pleasure he did not manage to hide.",
+            "S08.C004.P002": "\u201cIf you're going to the kitchen anyway. Black.\u201d",
+            "S08.C004.P003": "They stood by the window with hot mugs. He told her that he had tried to find the kind of apples he was used to at the shop yesterday and bought pears because he was embarrassed to ask the seller for the third time. Alice laughed at him, not at their past. When they finished their coffee, she was the first to say she needed to put on her jacket before the walk. Damir nodded and stayed to wash both mugs."
+          }
+        },
+        "S08.C005": {
+          "title": "B. Thank him and leave (`damir-care=neutral`)",
+          "paragraphs": {
+            "S08.C005.P000": "\u201cThank you for the backpack. I'll go get my jacket.\u201d",
+            "S08.C005.P001": "\u201cOf course.\u201d",
+            "S08.C005.P002": "Damir stepped aside to let her pass. On the stairs, Alice looked back: he was not watching her go, but trying to close his overstuffed backpack. She did not help. There were a few minutes left before they went out to the car, and what they had said was enough for both of them."
+          }
+        },
+        "S08.C006": {
+          "title": "C. Ask about Brussels (`damir-care=personal`)",
+          "paragraphs": {
+            "S08.C006.P000": "\u201cDid you like Brussels? Not the work. Brussels itself.\u201d",
+            "S08.C006.P001": "Damir lowered his eyes to the handle of her backpack.",
+            "S08.C006.P002": "\u201cSometimes. I have friends there. On Sundays we rode out of town, though I was the worst at keeping my balance on wet roads.\u201d",
+            "S08.C006.P003": "\u201cI remember that part.\u201d",
+            "S08.C006.P004": "He smiled, but did not return to the old story.",
+            "S08.C006.P005": "\u201cThe first winter was difficult. Then I found a home I wanted to return to. By the end, I understood that I could leave without losing everything that had been there.\u201d",
+            "S08.C006.P006": "Alice did not know whether she was glad to hear that answer. She asked him to show her a picture from those Sundays someday, if he wanted to. Damir said, \u201cAll right,\u201d and did not reach for his phone immediately."
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "sourceLocale": "ru",
+  "source": "content/season-1-vertical-slice-episodes-01-02.md",
+  "scenes": {
+    "S06": {
+      "title": "The Short Trail. Eric Without Instructions",
+      "chunks": {
+        "S06.C000": {
+          "title": "",
+          "paragraphs": {
+            "S06.C000.P000": "The valley met them with steam, wet earth, and the smell of sulfur. The short trail was nearly empty. Eric walked ahead, but after a few minutes he stopped at a fork.",
+            "S06.C000.P001": "\u201cWhich way?\u201d he asked Alice.",
+            "S06.C000.P002": "\u201cYou're the guide.\u201d",
+            "S06.C000.P003": "\u201cBoth trails are safe. One is shorter; the other runs closer to the stream.\u201d",
+            "S06.C000.P004": "\u201cAre you checking whether I read the map?\u201d",
+            "S06.C000.P005": "\u201cI'm checking whether you want to choose.\u201d",
+            "S06.C000.P006": "Alice pointed to the longer trail.",
+            "S06.C000.P007": "\u201cCloser to the stream.\u201d",
+            "S06.C000.P008": "\u201cThen lead the way.\u201d"
+          }
+        },
+        "S06.C001": {
+          "title": "If Alice asked Eric to explain the change in S05-C1",
+          "paragraphs": {
+            "S06.C001.P000": "Before they set off, he showed her the forecast on his screen again.",
+            "S06.C001.P001": "\u201cThe wind has died down. The longer path is open, but we can turn back at any point.\u201d",
+            "S06.C001.P002": "\u201cThen let's go,\u201d Alice said. She saw that he remembered her question from that morning."
+          }
+        },
+        "S06.C002": {
+          "title": "If Alice chose Nick or Damir in S05-C1",
+          "paragraphs": {
+            "S06.C002.P000": "Eric nodded, accepting her choice, and let her go first."
+          }
+        },
+        "S06.C003": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S06.C003.P000": "Nick and Damir stayed behind: Nick was filming the steam above the ground, while Damir tied his shoe cover. Alice went first. A hundred meters later, the trail split again, and she slowed down."
+          }
+        },
+        "S06.C004": {
+          "title": "If Alice rode with Eric in S01-C1",
+          "paragraphs": {
+            "S06.C004.P000": "Eric stopped beside her, but did not immediately point out the direction. She remembered asking him in the car to give her hints only when necessary, and checked the sign herself."
+          }
+        },
+        "S06.C005": {
+          "title": "If Alice rode with Nick or Damir in S01-C1",
+          "paragraphs": {
+            "S06.C005.P000": "Eric waited while she studied the sign, then came closer."
+          }
+        },
+        "S06.C006": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S06.C006.P000": "\u201cRight,\u201d Eric said.",
+            "S06.C006.P001": "\u201cYou couldn't resist.\u201d",
+            "S06.C006.P002": "\u201cThere's a short exit to the stream. The trail doesn't continue past it.\u201d",
+            "S06.C006.P003": "\u201cWhat if I wanted to see what was there?\u201d",
+            "S06.C006.P004": "Eric thought about it and nodded.",
+            "S06.C006.P005": "\u201cIf you want to, let's go right.\u201d",
+            "S06.C006.P006": "The dead end turned out to be a platform above the stream. Nothing remarkable: wooden rails, wet stone, scraps of steam. Alice leaned her elbows on the railing.",
+            "S06.C006.P007": "\u201cWorth it?\u201d",
+            "S06.C006.P008": "\u201cYes.\u201d",
+            "S06.C006.P009": "\u201cWhy?\u201d",
+            "S06.C006.P010": "\u201cYou were wrong.\u201d",
+            "S06.C006.P011": "\u201cIs that what you like in men?\u201d",
+            "S06.C006.P012": "The question was so unexpected that Alice turned. Eric was looking at the stream, but the corner of his mouth moved.",
+            "S06.C006.P013": "\u201cSometimes,\u201d she said. \u201cEspecially if they can survive it without a presentation.\u201d",
+            "S06.C006.P014": "\u201cI had a presentation. I left it in the car.\u201d",
+            "S06.C006.P015": "They laughed. The wind blew a strand of Alice's hair across her face. She tried to move it with her glove and only smeared more rainwater across her cheek. Eric reached out, stopped a few centimeters away, and asked:",
+            "S06.C006.P016": "\u201cMay I?\u201d",
+            "S06.C006.P017": "Alice nodded. He moved the strand aside quickly, almost matter-of-factly, but his fingers brushed her temple for a moment. The warmth lasted longer than the touch.",
+            "S06.C006.P018": "Nick's voice rose from below:",
+            "S06.C006.P019": "\u201cIf you've found a secret waterfall up there, I'm quitting!\u201d",
+            "S06.C006.P020": "\u201cWe found a dead end,\u201d Alice called back.",
+            "S06.C006.P021": "\u201cEven better! It has an honest plot.\u201d",
+            "S06.C006.P022": "On the way back, Eric told her how he had once led a group to a closed bridge because he had trusted an old map too much. The story was short and funny, with no lesson about leadership attached.",
+            "S06.C006.P023": "\u201cWhat did you do?\u201d Alice asked.",
+            "S06.C006.P024": "\u201cTold them it was a special lunch stop.\u201d",
+            "S06.C006.P025": "\u201cSo you lied.\u201d",
+            "S06.C006.P026": "\u201cThey liked lunch.\u201d",
+            "S06.C006.P027": "\u201cTerrible man.\u201d",
+            "S06.C006.P028": "\u201cI was hoping to make a better impression.\u201d",
+            "S06.C006.P029": "\u201cToo late. Now you'll have to try for the next three weeks.\u201d",
+            "S06.C006.P030": "He looked directly at her.",
+            "S06.C006.P031": "\u201cAll right.\u201d",
+            "S06.C006.P032": "An older couple caught up with them at the trailhead. The woman asked Eric in English how far it was to the hot river. Eric explained that the upper part of the route was closed because of the wind, showed them a short safe loop, and waited until they found it on the map.",
+            "S06.C006.P033": "\u201cYou could have just told them not to go,\u201d Alice remarked when the couple had left.",
+            "S06.C006.P034": "\u201cI could have. Then they would have decided I was being overcautious and gone to check.\u201d",
+            "S06.C006.P035": "\u201cAnd when you give them another option, they choose the sensible one themselves?\u201d",
+            "S06.C006.P036": "\u201cSometimes.\u201d",
+            "S06.C006.P037": "\u201cManipulation.\u201d",
+            "S06.C006.P038": "\u201cHospitality.\u201d",
+            "S06.C006.P039": "\u201cA fine line.\u201d",
+            "S06.C006.P040": "\u201cThat's why I don't write articles.\u201d",
+            "S06.C006.P041": "Nick finished filming the steam and joined them.",
+            "S06.C006.P042": "\u201cI heard everything. In the film, you'll be a devious Icelandic guide.\u201d",
+            "S06.C006.P043": "\u201cThen find a better-looking actor.\u201d",
+            "S06.C006.P044": "\u201cYou offered,\u201d Nick said, turning to Alice. \u201cI've got a witness.\u201d",
+            "S06.C006.P045": "Eric took off his glove and wiped a drop from his eyebrow.",
+            "S06.C006.P046": "\u201cI said \u2018better-looking,\u2019 not \u2018good-looking.\u2019\u201d",
+            "S06.C006.P047": "Nick fell silent for a second, then burst out laughing.",
+            "S06.C006.P048": "\u201cThe plan can defend itself.\u201d",
+            "S06.C006.P049": "At the trailhead, they took out the thermoses. Damir poured tea and accidentally handed Alice a cup without sugar, the way she used to drink it. She tasted it and grimaced.",
+            "S06.C006.P050": "\u201cSugar now.\u201d",
+            "S06.C006.P051": "\u201cSeriously?\u201d",
+            "S06.C006.P052": "\u201cFor a year now.\u201d",
+            "S06.C006.P053": "He held out the packets.",
+            "S06.C006.P054": "\u201cOne or two?\u201d",
+            "S06.C006.P055": "\u201cOne.\u201d",
+            "S06.C006.P056": "Damir nodded. He did not say that she had always hated sweet tea. He did not ask who had taught her to take it that way. He simply updated what he knew.",
+            "S06.C006.P057": "Nick drank straight from the thermos lid.",
+            "S06.C006.P058": "\u201cI propose a road reform. Every day, we learn one useless thing about each other.\u201d",
+            "S06.C006.P059": "\u201cWhy useless?\u201d Damir asked.",
+            "S06.C006.P060": "\u201cUseful things turn into obligations. Useless things turn into affection.\u201d",
+            "S06.C006.P061": "\u201cThat's suspiciously thoughtful,\u201d Alice said.",
+            "S06.C006.P062": "\u201cSometimes I run out of jokes.\u201d",
+            "S06.C006.P063": "\u201cMy useless thing,\u201d Eric said. \u201cI can't whistle.\u201d",
+            "S06.C006.P064": "Nick immediately demanded proof. Eric tried; the result was a quiet sound like a tired kettle.",
+            "S06.C006.P065": "Alice laughed into her sleeve. Eric watched her without offense, then tried again—worse.",
+            "S06.C006.P066": "\u201cYour turn,\u201d he said.",
+            "S06.C006.P067": "\u201cI'm afraid of fish if I can't see the bottom.\u201d",
+            "S06.C006.P068": "\u201cThat could be useful in Iceland.\u201d",
+            "S06.C006.P069": "\u201cDon't ruin the concept.\u201d",
+            "S06.C006.P070": "Nick admitted that he could not sleep without some kind of voice—a podcast, radio, or someone else's film. Damir thought for a long time and said he liked the smell of gasoline.",
+            "S06.C006.P071": "\u201cDoctor,\u201d Nick said reproachfully.",
+            "S06.C006.P072": "\u201cI don't drink it.\u201d",
+            "S06.C006.P073": "\u201cIt's too early to judge the trip.\u201d",
+            "S06.C006.P074": "On the path to the car, Alice walked beside Damir.",
+            "S06.C006.P075": "\u201cDo you really like the smell of gasoline?\u201d",
+            "S06.C006.P076": "\u201cSince I was a child. My father repaired the car in the yard.\u201d",
+            "S06.C006.P077": "\u201cYou never told me.\u201d",
+            "S06.C006.P078": "\u201cProbably because it was useless.\u201d",
+            "S06.C006.P079": "They looked at each other. The conversation could have turned toward how much they had not known after living together for three years. Alice did not want that today.",
+            "S06.C006.P080": "\u201cSo Nick's theory works,\u201d she said.",
+            "S06.C006.P081": "\u201cI'm afraid he'll become unbearable if he finds out.\u201d",
+            "S06.C006.P082": "They agreed not to tell him."
+          }
+        },
+        "S06.C007": {
+          "title": "Choice S06-C2 \u2014 What will Alice suggest to Eric while the others are still catching up?",
+          "paragraphs": {}
+        },
+        "S06.C008": {
+          "title": "A. Ask him to show her his favorite place on the trail",
+          "paragraphs": {
+            "S06.C008.P000": "\u201cJust not the most famous one,\u201d Alice said. Eric showed her a low outcrop overlooking the other side of the valley. They stood together counting birds until the group's voices rose behind them."
+          }
+        },
+        "S06.C009": {
+          "title": "B. Ask him to choose the music for the drive back",
+          "paragraphs": {
+            "S06.C009.P000": "\u201cJust no navigator's voice coming from the singer,\u201d Alice warned. Eric laughed briefly and named a song his sister played every summer. Alice promised to listen to it in the car."
+          }
+        }
+      }
+    }
+  }
+}
