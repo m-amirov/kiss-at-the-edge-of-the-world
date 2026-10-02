@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "status": "PASS",
   "evidenceType": "ENGLISH_RUNTIME_LOCALIZATION",
-  "head": "890806c47ca9f62d254a544f56418f0792d027a6",
+  "head": "cebb969c5843591a8feb04fca60422403666cf8c",
   "baseUrl": "http://127.0.0.1:4173/literary.html",
   "locales": {
     "productionSource": "Yandex SDK locale",
@@ -170,8 +170,8 @@
           "path": "output\\playwright\\english-runtime-localization\\S09-prose-1920x900.png",
           "width": 1920,
           "height": 900,
-          "bytes": 74032,
-          "sha256": "1c9a8a6a0589beb69abc326fba8c1a76ae9b9309656a3b403463315941fbe794"
+          "bytes": 1770513,
+          "sha256": "4f8ac93b14913616b8e277eb6aaca9acf826f13e636acc213eb38dac8e01b4dc"
         },
         {
           "path": "output\\playwright\\english-runtime-localization\\S09-choice-1920x900.png",
@@ -935,8 +935,8 @@
           "path": "output\\playwright\\english-runtime-localization\\S11-prose-360x640.png",
           "width": 360,
           "height": 640,
-          "bytes": 63566,
-          "sha256": "e1a4759042087e9ad7200a30bc7bbb84bc1d89e5c2d0e63677a0dcef98528477"
+          "bytes": 260775,
+          "sha256": "b70fecbb7ab5e04a2918a76f13a2b4a22ad81ae67f0bd34f22bc90861c8cdc50"
         },
         {
           "path": "output\\playwright\\english-runtime-localization\\S11-choice-360x640.png",
@@ -2465,8 +2465,8 @@
           "path": "output\\playwright\\english-runtime-localization\\S16-prose-1920x900.png",
           "width": 1920,
           "height": 900,
-          "bytes": 1710847,
-          "sha256": "36b57d5324384c210c5c0f454b7af15f4ce16db3c727dab12f17d4edb8d920bc"
+          "bytes": 96702,
+          "sha256": "412bb7d752e78682231d8dbfab8ecc7b22e00d7c9d9bbdb3656489aebe4cae5c"
         },
         {
           "path": "output\\playwright\\english-runtime-localization\\S16-choice-1920x900.png",
@@ -2792,7 +2792,9 @@
         "saveLoadPreserved": true,
         "ruRuntimePreserved": true,
         "localeSwitchPreserved": true,
+        "reverseLocaleSwitchPreserved": true,
         "localeAfterSwitch": "en",
+        "localeAfterReverseSwitch": "ru",
         "persistenceKeysStable": true,
         "states": {
           "beforeReload": {
@@ -2841,6 +2843,36 @@
             "migrationNotice": false
           },
           "afterLocaleSwitch": {
+            "schemaVersion": 3,
+            "sceneId": "S09",
+            "position": 9,
+            "choices": {
+              "S09-C90": "A"
+            },
+            "finished": false,
+            "visited": [
+              "S09"
+            ],
+            "runId": "english-runtime-S09",
+            "revision": 10,
+            "migrationNotice": false
+          },
+          "beforeReverseLocaleSwitch": {
+            "schemaVersion": 3,
+            "sceneId": "S09",
+            "position": 9,
+            "choices": {
+              "S09-C90": "A"
+            },
+            "finished": false,
+            "visited": [
+              "S09"
+            ],
+            "runId": "english-runtime-S09",
+            "revision": 10,
+            "migrationNotice": false
+          },
+          "afterReverseLocaleSwitch": {
             "schemaVersion": 3,
             "sceneId": "S09",
             "position": 9,
@@ -2874,7 +2906,9 @@
         "saveLoadPreserved": true,
         "ruRuntimePreserved": true,
         "localeSwitchPreserved": true,
+        "reverseLocaleSwitchPreserved": true,
         "localeAfterSwitch": "en",
+        "localeAfterReverseSwitch": "ru",
         "persistenceKeysStable": true,
         "states": {
           "beforeReload": {
@@ -2923,6 +2957,36 @@
             "migrationNotice": false
           },
           "afterLocaleSwitch": {
+            "schemaVersion": 3,
+            "sceneId": "S13",
+            "position": 13,
+            "choices": {
+              "S13-C90": "A"
+            },
+            "finished": false,
+            "visited": [
+              "S13"
+            ],
+            "runId": "english-runtime-S13",
+            "revision": 14,
+            "migrationNotice": false
+          },
+          "beforeReverseLocaleSwitch": {
+            "schemaVersion": 3,
+            "sceneId": "S13",
+            "position": 13,
+            "choices": {
+              "S13-C90": "A"
+            },
+            "finished": false,
+            "visited": [
+              "S13"
+            ],
+            "runId": "english-runtime-S13",
+            "revision": 14,
+            "migrationNotice": false
+          },
+          "afterReverseLocaleSwitch": {
             "schemaVersion": 3,
             "sceneId": "S13",
             "position": 13,
@@ -2981,7 +3045,7 @@
     "no viewport overflow/clipping",
     "local save/load",
     "RU runtime remains Cyrillic and usable",
-    "locale switch leaves structural save unchanged",
+    "RU→EN and EN→RU locale switches leave scene, position, choices and structural save unchanged",
     "stable local/cloud persistence keys",
     "zero console errors",
     "zero failed asset requests"

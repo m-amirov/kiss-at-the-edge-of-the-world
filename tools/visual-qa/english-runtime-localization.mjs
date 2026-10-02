@@ -170,13 +170,21 @@ async function checkSaveLoadCase(sceneId) {
     await page.getByRole('button', { name: /Continue/ }).first().click();
     await page.locator('.reader-sheet').waitFor();
     const afterLocaleSwitch = await page.evaluate(() => ({ state: window.__LITERARY_QA__.getState(), keys: window.__LITERARY_QA__.getPersistenceKeys(), locale: window.__LITERARY_QA__.getLocale() }));
+    const beforeReverseLocaleSwitch = clone(afterLocaleSwitch.state);
+    await page.goto(urlFor('ru'), { waitUntil: 'networkidle' });
+    await page.waitForFunction(() => Boolean(window.__LITERARY_QA__ && document.querySelector('.literary-home')));
+    await page.getByRole('button', { name: /Продолжить/ }).first().click();
+    await page.locator('.reader-sheet').waitFor();
+    const afterReverseLocaleSwitch = await page.evaluate(() => ({ state: window.__LITERARY_QA__.getState(), locale: window.__LITERARY_QA__.getLocale() }));
     return {
       saveLoadPreserved: sameStructuralState(beforeReload, afterReload),
       ruRuntimePreserved: ruRuntime.locale === 'ru' && ruRuntime.russianUiLeak && !ruRuntime.overflow && ruRuntime.clipped === 0,
       localeSwitchPreserved: sameStructuralState(beforeLocaleSwitch, afterLocaleSwitch.state),
+      reverseLocaleSwitchPreserved: sameStructuralState(beforeReverseLocaleSwitch, afterReverseLocaleSwitch.state),
       localeAfterSwitch: afterLocaleSwitch.locale,
+      localeAfterReverseSwitch: afterReverseLocaleSwitch.locale,
       persistenceKeysStable: JSON.stringify(keysBefore) === JSON.stringify(afterLocaleSwitch.keys) && keysBefore.local === literarySaveKey,
-      states: { beforeReload, afterReload, beforeLocaleSwitch, afterLocaleSwitch: afterLocaleSwitch.state },
+      states: { beforeReload, afterReload, beforeLocaleSwitch, afterLocaleSwitch: afterLocaleSwitch.state, beforeReverseLocaleSwitch, afterReverseLocaleSwitch: afterReverseLocaleSwitch.state },
       keys: { before: keysBefore, after: afterLocaleSwitch.keys },
       sceneId,
       consoleErrors, failedRequests
@@ -191,7 +199,7 @@ async function checkSaveLoadAndLocaleSwitch() {
   for (const sceneId of ['S09', 'S13']) cases[sceneId] = await checkSaveLoadCase(sceneId);
   return {
     cases,
-    pass: Object.values(cases).every(item => item.saveLoadPreserved && item.ruRuntimePreserved && item.localeSwitchPreserved && item.localeAfterSwitch === 'en' && item.persistenceKeysStable && item.consoleErrors.length === 0 && item.failedRequests.length === 0),
+    pass: Object.values(cases).every(item => item.saveLoadPreserved && item.ruRuntimePreserved && item.localeSwitchPreserved && item.reverseLocaleSwitchPreserved && item.localeAfterSwitch === 'en' && item.localeAfterReverseSwitch === 'ru' && item.persistenceKeysStable && item.consoleErrors.length === 0 && item.failedRequests.length === 0),
     consoleErrors: Object.values(cases).flatMap(item => item.consoleErrors),
     failedRequests: Object.values(cases).flatMap(item => item.failedRequests)
   };
@@ -219,7 +227,7 @@ const evidence = {
   captures,
   saveLoadAndLocaleSwitch: switchResult,
   coverage: { homeMenu: true, episodesPanel: true, settingsPanel: true, normalNarrative: true, authoredChoice: true, interactivePacingChoice: true, cloudRestore: { status: 'NOT_TESTABLE', reason: 'Requires an authenticated Yandex SDK cloud candidate.' }, endingScreen: { status: 'NOT_TESTABLE', reason: 'The bounded EN QA corpus currently ends at Episode 4; production EN correctly fails closed before the remaining declared scenes.' } },
-  assertions: ['rendered EN UI and accessibility text contain no Cyrillic', 'actual English prose', 'English authored and interactive choice labels', 'no Russian narrative leakage', 'no viewport overflow/clipping', 'local save/load', 'RU runtime remains Cyrillic and usable', 'locale switch leaves structural save unchanged', 'stable local/cloud persistence keys', 'zero console errors', 'zero failed asset requests']
+  assertions: ['rendered EN UI and accessibility text contain no Cyrillic', 'actual English prose', 'English authored and interactive choice labels', 'no Russian narrative leakage', 'no viewport overflow/clipping', 'local save/load', 'RU runtime remains Cyrillic and usable', 'RU→EN and EN→RU locale switches leave scene, position, choices and structural save unchanged', 'stable local/cloud persistence keys', 'zero console errors', 'zero failed asset requests']
 };
 await fs.mkdir(path.dirname(evidenceFile), { recursive: true });
 await fs.writeFile(evidenceFile, `${JSON.stringify(evidence, null, 2)}\n`);
