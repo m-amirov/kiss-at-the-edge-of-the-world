@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "sourceLocale": "ru",
+  "source": "content/season-1-vertical-slice-episodes-01-02.md",
+  "scenes": {
+    "S03": {
+      "title": "Reykjavík, Day 2. The Assignment",
+      "chunks": {
+        "S03.C000": {
+          "title": "",
+          "paragraphs": {
+            "S03.C000.P000": "By morning, the rain had thinned to a fine mist. Alice woke before her alarm and found the sitting room empty. On the table lay a map with a note from Eric: \u201cForecast changed. Þingvellir after ten. Breakfast before nine. Coffee on the left.\u201d",
+            "S03.C000.P001": "A jar of instant coffee stood on the right.",
+            "S03.C000.P002": "Alice smiled and called her editor.",
+            "S03.C000.P003": "\u201cYou made it?\u201d Marina asked instead of saying hello.",
+            "S03.C000.P004": "\u201cYes. I've spoken to all three participants. There's something you need to know about one of them.\u201d",
+            "S03.C000.P005": "Alice ran a finger along the edge of the map.",
+            "S03.C000.P006": "\u201cHe's my ex.\u201d",
+            "S03.C000.P007": "Marina was silent for a moment.",
+            "S03.C000.P008": "\u201cDoes that help the story?\u201d",
+            "S03.C000.P009": "\u201cSo far, it's keeping me awake.\u201d",
+            "S03.C000.P010": "\u201cThen it stays out. An ex isn't a genre. I need people, not a coincidence for the cover.\u201d",
+            "S03.C000.P011": "Alice felt relieved and irritated at the same time.",
+            "S03.C000.P012": "\u201cYou can choose someone else instead,\u201d Marina said. \u201cAn honest piece matters more to me.\u201d",
+            "S03.C000.P013": "\u201cI'll keep him for now. If I can't separate the interview from the personal history, I'll tell you.\u201d",
+            "S03.C000.P014": "\u201cAgreed. I want the opening paragraph on the evening of day four, like we discussed yesterday. Not the whole piece.\u201d",
+            "S03.C000.P015": "Alice opened yesterday's notes. She did not have a title yet, but she had her first question to follow."
+          }
+        },
+        "S03.C001": {
+          "title": "If S02-C1 is A \u2014 people",
+          "paragraphs": {
+            "S03.C001.P000": "She circled yesterday's line about the way each of them had held the silence after Damir's answer. Marina did not need a conclusion yet. Alice wanted to see whether it would hold on the road, once they were all tired."
+          }
+        },
+        "S03.C002": {
+          "title": "If S02-C1 is B \u2014 place",
+          "paragraphs": {
+            "S03.C002.P000": "She checked the name of the roadside café and the distance to the next one. Marina had asked for portraits of people, but Alice wanted to reveal them through the places that forced them out of their habits."
+          }
+        },
+        "S03.C003": {
+          "title": "If S02-C1 is C \u2014 own choice",
+          "paragraphs": {
+            "S03.C003.P000": "She wrote down Damir's answer word for word and separated it with a line from the material for her editor. He had not given her permission to use it as an interview. For now, keeping her promise mattered more than securing a good quote."
+          }
+        },
+        "S03.C004": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S03.C004.P000": "Damir came into the sitting room carrying two cups.",
+            "S03.C004.P001": "\u201cI didn't expect to find you here this early,\u201d he said.",
+            "S03.C004.P002": "\u201cNeither did I. We only have one kitchen.\u201d",
+            "S03.C004.P003": "He set one cup on the far edge of the table without sliding it toward her.",
+            "S03.C004.P004": "\u201cIs that for me?\u201d",
+            "S03.C004.P005": "\u201cIf you want it. Black, with a little milk on the side.\u201d",
+            "S03.C004.P006": "He still remembered. Alice could have been angry at memory, but memory had asked neither of them for permission.",
+            "S03.C004.P007": "\u201cYou have all three weeks off?\u201d Alice asked.",
+            "S03.C004.P008": "\u201cUntil the end of the month. After my last contract. If I sign the next one, I won't have this much time again. I decided to see the place they're asking me to live, not just the place they're asking me to work.\u201d",
+            "S03.C004.P009": "\u201cI see.\u201d",
+            "S03.C004.P010": "He sat in the chair by the window. Not beside her.",
+            "S03.C004.P011": "\u201cI didn't mean to make your work difficult,\u201d he said.",
+            "S03.C004.P012": "\u201cYou already have. Just not on purpose.\u201d",
+            "S03.C004.P013": "Damir accepted the answer, though Alice could tell by the way he held his cup that he wanted to argue."
+          }
+        },
+        "S03.C005": {
+          "title": "If Alice sat beside Damir in S01-C1",
+          "paragraphs": {
+            "S03.C005.P000": "\u201cIt was easier in the car yesterday,\u201d he said.",
+            "S03.C005.P001": "\u201cWe could look out the window. Here we have to decide what to talk about.\u201d",
+            "S03.C005.P002": "He nodded and moved the second cup closer to her. Alice picked it up herself."
+          }
+        },
+        "S03.C006": {
+          "title": "If Alice sat with Eric or Nick in S01-C1",
+          "paragraphs": {
+            "S03.C006.P000": "\u201cI didn't ask you to talk alone yesterday,\u201d Damir said.",
+            "S03.C006.P001": "\u201cI noticed.\u201d",
+            "S03.C006.P002": "He was about to add something, but a door slammed in the hall. Alice took the cup and did not ask him to continue."
+          }
+        },
+        "S03.C007": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S03.C007.P000": "Damir smiled. Alice did too, just a little. The awkwardness did not disappear, but it stopped taking up the whole room.",
+            "S03.C007.P001": "After breakfast, they had forty minutes before departure. Nick went to find an adapter, Eric checked the car, and Damir went upstairs for his jacket. Alice decided to walk one block toward the harbor and discovered that Damir was heading the same way\u2014not after her, but toward the pharmacy on the corner.",
+            "S03.C007.P002": "\u201cI'm not following you,\u201d he said.",
+            "S03.C007.P003": "\u201cGood of you to clarify.\u201d",
+            "S03.C007.P004": "\u201cBad coincidence of routes.\u201d",
+            "S03.C007.P005": "\u201cWe have three weeks of bad route coincidences ahead of us.\u201d",
+            "S03.C007.P006": "They stopped beside each other at a traffic light. The street was almost empty; the rain hung in the air without falling.",
+            "S03.C007.P007": "\u201cDid you tell your editor?\u201d Damir asked.",
+            "S03.C007.P008": "\u201cThat you're here? Yes.\u201d",
+            "S03.C007.P009": "\u201cAnd?\u201d",
+            "S03.C007.P010": "\u201cShe said an ex isn't a genre.\u201d",
+            "S03.C007.P011": "\u201cI like your editor.\u201d",
+            "S03.C007.P012": "\u201cGive her time. She may still ask for your medical records as a sidebar.\u201d",
+            "S03.C007.P013": "Damir smiled, then grew more serious.",
+            "S03.C007.P014": "\u201cIf you don't want to write about me, I'll understand.\u201d",
+            "S03.C007.P015": "\u201cI'm supposed to write about all three participants.\u201d",
+            "S03.C007.P016": "\u201cThen I could answer in writing only.\u201d",
+            "S03.C007.P017": "\u201cThat would look cowardly.\u201d",
+            "S03.C007.P018": "\u201cBut careful.\u201d",
+            "S03.C007.P019": "\u201cYou always chose careful.\u201d",
+            "S03.C007.P020": "The words came out sharper than she intended. The light turned green. They crossed without continuing.",
+            "S03.C007.P021": "By the water, gulls were fighting over a paper bag. Alice stopped to watch. So did Damir.",
+            "S03.C007.P022": "\u201cI didn't choose the job because it mattered more than you,\u201d he said. \u201cI chose the option where I didn't have to risk being told no.\u201d",
+            "S03.C007.P023": "\u201cThat's a very convenient distinction.\u201d",
+            "S03.C007.P024": "\u201cYes.\u201d",
+            "S03.C007.P025": "He did not defend himself. It made anger harder to hold on to.",
+            "S03.C007.P026": "\u201cI don't want to go through this now,\u201d Alice said.",
+            "S03.C007.P027": "\u201cThen we won't.\u201d",
+            "S03.C007.P028": "\u201cAnd don't expect the trip to fix everything.\u201d",
+            "S03.C007.P029": "\u201cI don't.\u201d",
+            "S03.C007.P030": "One gull tore the bag free and took off. The other remained on the pavement, shrieking after it in outrage.",
+            "S03.C007.P031": "\u201cThat one has expectations,\u201d Damir said.",
+            "S03.C007.P032": "Alice snorted.",
+            "S03.C007.P033": "\u201cDon't you dare defuse this conversation with a gull.\u201d",
+            "S03.C007.P034": "\u201cToo late. It makes a convincing case.\u201d",
+            "S03.C007.P035": "They reached the pharmacy. Damir bought bandages and motion-sickness medicine for the group, though no one had asked him to.",
+            "S03.C007.P036": "\u201cNow that is still an old habit,\u201d Alice said.",
+            "S03.C007.P037": "\u201cWhich one?\u201d",
+            "S03.C007.P038": "\u201cDeciding what everyone will need.\u201d",
+            "S03.C007.P039": "He looked at the things he had bought.",
+            "S03.C007.P040": "\u201cShould I return them?\u201d",
+            "S03.C007.P041": "She expected an explanation of why bandages were objectively useful. Instead, Damir actually turned back toward the register.",
+            "S03.C007.P042": "\u201cNo. Just ask later if they should go in the shared pack.\u201d",
+            "S03.C007.P043": "\u201cI will.\u201d",
+            "S03.C007.P044": "Outside, he handed her the receipt.",
+            "S03.C007.P045": "\u201cWhy?\u201d",
+            "S03.C007.P046": "\u201cYou're a journalist. You may need evidence of my progress.\u201d",
+            "S03.C007.P047": "\u201cSo far, it's evidence that you bought bandages.\u201d",
+            "S03.C007.P048": "\u201cSmall steps.\u201d",
+            "S03.C007.P049": "They returned to the guesthouse separately. Damir stopped at a coffee shop and Alice walked on. It was almost meaningless, but she liked that he understood why those twenty meters mattered."
+          }
+        },
+        "S03.C008": {
+          "title": "Choice S03-C1 \u2014 how will Alice end the conversation with Damir after the pharmacy?",
+          "paragraphs": {}
+        },
+        "S03.C009": {
+          "title": "A. Send him a short message",
+          "paragraphs": {
+            "S03.C009.P000": "At the entrance, Alice texted Damir: \u201cThank you for not continuing the conversation by the water.\u201d His reply came while she was taking off her wet shoes: \u201cThank you too. See you at breakfast.\u201d She did not try to decide what that was supposed to mean."
+          }
+        },
+        "S03.C010": {
+          "title": "B. Let the walk end there",
+          "paragraphs": {
+            "S03.C010.P000": "Alice put her phone in her pocket. She wanted to remember the walk separately from everything else. When Damir came to the group dinner, she greeted him as another member of the group, and it did not feel like pretending."
+          }
+        }
+      }
+    }
+  }
+}

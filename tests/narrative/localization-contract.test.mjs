@@ -32,3 +32,19 @@ test('production English S02 is complete and structurally identical',()=>{
  const visible=[english.scenes.S02.title,...Object.values(english.scenes.S02.chunks).flatMap(chunk=>[chunk.title,...Object.values(chunk.paragraphs)])].join('\n');
  assert.doesNotMatch(visible,/[\u0400-\u04ff]/u);
 });
+test('production English Episode 1 continuation scenes are complete and structurally identical',()=>{
+ const expected={S65:{paragraphs:106,choices:0},S03:{paragraphs:91,choices:1},S04:{paragraphs:136,choices:1}};
+ for(const [sceneId,counts] of Object.entries(expected)){
+  const english=JSON.parse(fs.readFileSync(new URL('../../content/localization/en/'+sceneId+'.json',import.meta.url),'utf8'));
+  const source=literarySeason.scenes.find(scene=>scene.id===sceneId);
+  const report=validateLiteraryLocale(literarySeason,english,{sceneIds:[sceneId]});
+  assert.deepEqual(report,{status:'PASS',errors:[],sceneCount:1},sceneId);
+  assert.deepEqual(Object.keys(english.scenes),[sceneId]);
+  assert.deepEqual(Object.keys(english.scenes[sceneId].chunks),source.chunks.map((_,index)=>sourceRef.chunk(sceneId,index)));
+  assert.equal(Object.values(english.scenes[sceneId].chunks).reduce((count,chunk)=>count+Object.keys(chunk.paragraphs).length,0),counts.paragraphs,sceneId+' paragraph count');
+  const choiceTitles=Object.values(english.scenes[sceneId].chunks).filter(chunk=>chunk.title.startsWith('Choice ')).map(chunk=>chunk.title);
+  assert.equal(choiceTitles.length,counts.choices,sceneId+' choice count');
+  const visible=[english.scenes[sceneId].title,...Object.values(english.scenes[sceneId].chunks).flatMap(chunk=>[chunk.title,...Object.values(chunk.paragraphs)])].join('\n');
+  assert.doesNotMatch(visible,/[\u0400-\u04ff]/u,sceneId+' accidental Cyrillic');
+ }
+});
