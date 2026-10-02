@@ -1,0 +1,5547 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "evidenceType": "EP05_EP06_EN_INTERACTION_CONTINUITY",
+  "testedSourceHead": "0145436f6e3cec1d77cba3144f86fe138b30817c",
+  "locale": "en",
+  "baseUrl": "http://127.0.0.1:4173/literary.html",
+  "viewports": [
+    {
+      "width": 1920,
+      "height": 900
+    },
+    {
+      "width": 390,
+      "height": 844
+    },
+    {
+      "width": 360,
+      "height": 640
+    }
+  ],
+  "scenes": {
+    "episode5": [
+      "S17",
+      "S18",
+      "S19",
+      "S20",
+      "S21",
+      "S61"
+    ],
+    "episode6": [
+      "S22",
+      "S23",
+      "S24",
+      "S25",
+      "S58",
+      "S26"
+    ]
+  },
+  "branchMatrix": [
+    {
+      "scene": "S17",
+      "authoredBranch": {
+        "S17-C1": "A",
+        "S17-C2": "A"
+      },
+      "extraChoiceId": "S17-C90",
+      "reachable": true,
+      "expectedPosition": 14
+    },
+    {
+      "scene": "S17",
+      "authoredBranch": {
+        "S17-C1": "A",
+        "S17-C2": "A"
+      },
+      "extraChoiceId": "S17-C91",
+      "reachable": true,
+      "expectedPosition": 29
+    },
+    {
+      "scene": "S17",
+      "authoredBranch": {
+        "S17-C1": "A",
+        "S17-C2": "B"
+      },
+      "extraChoiceId": "S17-C90",
+      "reachable": true,
+      "expectedPosition": 14
+    },
+    {
+      "scene": "S17",
+      "authoredBranch": {
+        "S17-C1": "A",
+        "S17-C2": "B"
+      },
+      "extraChoiceId": "S17-C91",
+      "reachable": true,
+      "expectedPosition": 29
+    },
+    {
+      "scene": "S17",
+      "authoredBranch": {
+        "S17-C1": "A",
+        "S17-C2": "C"
+      },
+      "extraChoiceId": "S17-C90",
+      "reachable": true,
+      "expectedPosition": 14
+    },
+    {
+      "scene": "S17",
+      "authoredBranch": {
+        "S17-C1": "A",
+        "S17-C2": "C"
+      },
+      "extraChoiceId": "S17-C91",
+      "reachable": true,
+      "expectedPosition": 29
+    },
+    {
+      "scene": "S17",
+      "authoredBranch": {
+        "S17-C1": "A",
+        "S17-C2": "D"
+      },
+      "extraChoiceId": "S17-C90",
+      "reachable": true,
+      "expectedPosition": 14
+    },
+    {
+      "scene": "S17",
+      "authoredBranch": {
+        "S17-C1": "A",
+        "S17-C2": "D"
+      },
+      "extraChoiceId": "S17-C91",
+      "reachable": true,
+      "expectedPosition": 29
+    },
+    {
+      "scene": "S17",
+      "authoredBranch": {
+        "S17-C1": "B",
+        "S17-C2": "A"
+      },
+      "extraChoiceId": "S17-C90",
+      "reachable": true,
+      "expectedPosition": 14
+    },
+    {
+      "scene": "S17",
+      "authoredBranch": {
+        "S17-C1": "B",
+        "S17-C2": "A"
+      },
+      "extraChoiceId": "S17-C91",
+      "reachable": true,
+      "expectedPosition": 29
+    },
+    {
+      "scene": "S17",
+      "authoredBranch": {
+        "S17-C1": "B",
+        "S17-C2": "B"
+      },
+      "extraChoiceId": "S17-C90",
+      "reachable": true,
+      "expectedPosition": 14
+    },
+    {
+      "scene": "S17",
+      "authoredBranch": {
+        "S17-C1": "B",
+        "S17-C2": "B"
+      },
+      "extraChoiceId": "S17-C91",
+      "reachable": true,
+      "expectedPosition": 29
+    },
+    {
+      "scene": "S17",
+      "authoredBranch": {
+        "S17-C1": "B",
+        "S17-C2": "C"
+      },
+      "extraChoiceId": "S17-C90",
+      "reachable": true,
+      "expectedPosition": 14
+    },
+    {
+      "scene": "S17",
+      "authoredBranch": {
+        "S17-C1": "B",
+        "S17-C2": "C"
+      },
+      "extraChoiceId": "S17-C91",
+      "reachable": true,
+      "expectedPosition": 29
+    },
+    {
+      "scene": "S17",
+      "authoredBranch": {
+        "S17-C1": "B",
+        "S17-C2": "D"
+      },
+      "extraChoiceId": "S17-C90",
+      "reachable": true,
+      "expectedPosition": 14
+    },
+    {
+      "scene": "S17",
+      "authoredBranch": {
+        "S17-C1": "B",
+        "S17-C2": "D"
+      },
+      "extraChoiceId": "S17-C91",
+      "reachable": true,
+      "expectedPosition": 29
+    },
+    {
+      "scene": "S17",
+      "authoredBranch": {
+        "S17-C1": "C",
+        "S17-C2": "A"
+      },
+      "extraChoiceId": "S17-C90",
+      "reachable": true,
+      "expectedPosition": 14
+    },
+    {
+      "scene": "S17",
+      "authoredBranch": {
+        "S17-C1": "C",
+        "S17-C2": "A"
+      },
+      "extraChoiceId": "S17-C91",
+      "reachable": true,
+      "expectedPosition": 29
+    },
+    {
+      "scene": "S17",
+      "authoredBranch": {
+        "S17-C1": "C",
+        "S17-C2": "B"
+      },
+      "extraChoiceId": "S17-C90",
+      "reachable": true,
+      "expectedPosition": 14
+    },
+    {
+      "scene": "S17",
+      "authoredBranch": {
+        "S17-C1": "C",
+        "S17-C2": "B"
+      },
+      "extraChoiceId": "S17-C91",
+      "reachable": true,
+      "expectedPosition": 29
+    },
+    {
+      "scene": "S17",
+      "authoredBranch": {
+        "S17-C1": "C",
+        "S17-C2": "C"
+      },
+      "extraChoiceId": "S17-C90",
+      "reachable": true,
+      "expectedPosition": 14
+    },
+    {
+      "scene": "S17",
+      "authoredBranch": {
+        "S17-C1": "C",
+        "S17-C2": "C"
+      },
+      "extraChoiceId": "S17-C91",
+      "reachable": true,
+      "expectedPosition": 29
+    },
+    {
+      "scene": "S17",
+      "authoredBranch": {
+        "S17-C1": "C",
+        "S17-C2": "D"
+      },
+      "extraChoiceId": "S17-C90",
+      "reachable": true,
+      "expectedPosition": 14
+    },
+    {
+      "scene": "S17",
+      "authoredBranch": {
+        "S17-C1": "C",
+        "S17-C2": "D"
+      },
+      "extraChoiceId": "S17-C91",
+      "reachable": true,
+      "expectedPosition": 29
+    },
+    {
+      "scene": "S17",
+      "authoredBranch": {
+        "S17-C1": "D",
+        "S17-C2": "A"
+      },
+      "extraChoiceId": "S17-C90",
+      "reachable": true,
+      "expectedPosition": 14
+    },
+    {
+      "scene": "S17",
+      "authoredBranch": {
+        "S17-C1": "D",
+        "S17-C2": "A"
+      },
+      "extraChoiceId": "S17-C91",
+      "reachable": true,
+      "expectedPosition": 29
+    },
+    {
+      "scene": "S17",
+      "authoredBranch": {
+        "S17-C1": "D",
+        "S17-C2": "B"
+      },
+      "extraChoiceId": "S17-C90",
+      "reachable": true,
+      "expectedPosition": 14
+    },
+    {
+      "scene": "S17",
+      "authoredBranch": {
+        "S17-C1": "D",
+        "S17-C2": "B"
+      },
+      "extraChoiceId": "S17-C91",
+      "reachable": true,
+      "expectedPosition": 29
+    },
+    {
+      "scene": "S17",
+      "authoredBranch": {
+        "S17-C1": "D",
+        "S17-C2": "C"
+      },
+      "extraChoiceId": "S17-C90",
+      "reachable": true,
+      "expectedPosition": 14
+    },
+    {
+      "scene": "S17",
+      "authoredBranch": {
+        "S17-C1": "D",
+        "S17-C2": "C"
+      },
+      "extraChoiceId": "S17-C91",
+      "reachable": true,
+      "expectedPosition": 29
+    },
+    {
+      "scene": "S17",
+      "authoredBranch": {
+        "S17-C1": "D",
+        "S17-C2": "D"
+      },
+      "extraChoiceId": "S17-C90",
+      "reachable": true,
+      "expectedPosition": 14
+    },
+    {
+      "scene": "S17",
+      "authoredBranch": {
+        "S17-C1": "D",
+        "S17-C2": "D"
+      },
+      "extraChoiceId": "S17-C91",
+      "reachable": true,
+      "expectedPosition": 29
+    },
+    {
+      "scene": "S18",
+      "authoredBranch": {
+        "S18-C1": "A",
+        "S18-C2": "A"
+      },
+      "extraChoiceId": "S18-C90",
+      "reachable": true,
+      "expectedPosition": 13
+    },
+    {
+      "scene": "S18",
+      "authoredBranch": {
+        "S18-C1": "A",
+        "S18-C2": "A"
+      },
+      "extraChoiceId": "S18-C91",
+      "reachable": true,
+      "expectedPosition": 29
+    },
+    {
+      "scene": "S18",
+      "authoredBranch": {
+        "S18-C1": "A",
+        "S18-C2": "B"
+      },
+      "extraChoiceId": "S18-C90",
+      "reachable": true,
+      "expectedPosition": 13
+    },
+    {
+      "scene": "S18",
+      "authoredBranch": {
+        "S18-C1": "A",
+        "S18-C2": "B"
+      },
+      "extraChoiceId": "S18-C91",
+      "reachable": true,
+      "expectedPosition": 29
+    },
+    {
+      "scene": "S18",
+      "authoredBranch": {
+        "S18-C1": "B",
+        "S18-C2": "A"
+      },
+      "extraChoiceId": "S18-C90",
+      "reachable": true,
+      "expectedPosition": 13
+    },
+    {
+      "scene": "S18",
+      "authoredBranch": {
+        "S18-C1": "B",
+        "S18-C2": "A"
+      },
+      "extraChoiceId": "S18-C91",
+      "reachable": true,
+      "expectedPosition": 29
+    },
+    {
+      "scene": "S18",
+      "authoredBranch": {
+        "S18-C1": "B",
+        "S18-C2": "B"
+      },
+      "extraChoiceId": "S18-C90",
+      "reachable": true,
+      "expectedPosition": 13
+    },
+    {
+      "scene": "S18",
+      "authoredBranch": {
+        "S18-C1": "B",
+        "S18-C2": "B"
+      },
+      "extraChoiceId": "S18-C91",
+      "reachable": true,
+      "expectedPosition": 29
+    },
+    {
+      "scene": "S18",
+      "authoredBranch": {
+        "S18-C1": "C",
+        "S18-C2": "A"
+      },
+      "extraChoiceId": "S18-C90",
+      "reachable": true,
+      "expectedPosition": 13
+    },
+    {
+      "scene": "S18",
+      "authoredBranch": {
+        "S18-C1": "C",
+        "S18-C2": "A"
+      },
+      "extraChoiceId": "S18-C91",
+      "reachable": true,
+      "expectedPosition": 29
+    },
+    {
+      "scene": "S18",
+      "authoredBranch": {
+        "S18-C1": "C",
+        "S18-C2": "B"
+      },
+      "extraChoiceId": "S18-C90",
+      "reachable": true,
+      "expectedPosition": 13
+    },
+    {
+      "scene": "S18",
+      "authoredBranch": {
+        "S18-C1": "C",
+        "S18-C2": "B"
+      },
+      "extraChoiceId": "S18-C91",
+      "reachable": true,
+      "expectedPosition": 29
+    },
+    {
+      "scene": "S19",
+      "authoredBranch": {
+        "S19-C1": "A",
+        "S19-C2": "A",
+        "S19-C3": "A"
+      },
+      "extraChoiceId": "S19-C90",
+      "reachable": true,
+      "expectedPosition": 14
+    },
+    {
+      "scene": "S19",
+      "authoredBranch": {
+        "S19-C1": "A",
+        "S19-C2": "A",
+        "S19-C3": "A"
+      },
+      "extraChoiceId": "S19-C91",
+      "reachable": true,
+      "expectedPosition": 33
+    },
+    {
+      "scene": "S19",
+      "authoredBranch": {
+        "S19-C1": "A",
+        "S19-C2": "A",
+        "S19-C3": "B"
+      },
+      "extraChoiceId": "S19-C90",
+      "reachable": true,
+      "expectedPosition": 14
+    },
+    {
+      "scene": "S19",
+      "authoredBranch": {
+        "S19-C1": "A",
+        "S19-C2": "A",
+        "S19-C3": "B"
+      },
+      "extraChoiceId": "S19-C91",
+      "reachable": true,
+      "expectedPosition": 33
+    },
+    {
+      "scene": "S19",
+      "authoredBranch": {
+        "S19-C1": "A",
+        "S19-C2": "B",
+        "S19-C3": "A"
+      },
+      "extraChoiceId": "S19-C90",
+      "reachable": true,
+      "expectedPosition": 14
+    },
+    {
+      "scene": "S19",
+      "authoredBranch": {
+        "S19-C1": "A",
+        "S19-C2": "B",
+        "S19-C3": "A"
+      },
+      "extraChoiceId": "S19-C91",
+      "reachable": true,
+      "expectedPosition": 33
+    },
+    {
+      "scene": "S19",
+      "authoredBranch": {
+        "S19-C1": "A",
+        "S19-C2": "B",
+        "S19-C3": "B"
+      },
+      "extraChoiceId": "S19-C90",
+      "reachable": true,
+      "expectedPosition": 14
+    },
+    {
+      "scene": "S19",
+      "authoredBranch": {
+        "S19-C1": "A",
+        "S19-C2": "B",
+        "S19-C3": "B"
+      },
+      "extraChoiceId": "S19-C91",
+      "reachable": true,
+      "expectedPosition": 33
+    },
+    {
+      "scene": "S19",
+      "authoredBranch": {
+        "S19-C1": "A",
+        "S19-C2": "C",
+        "S19-C3": "A"
+      },
+      "extraChoiceId": "S19-C90",
+      "reachable": true,
+      "expectedPosition": 14
+    },
+    {
+      "scene": "S19",
+      "authoredBranch": {
+        "S19-C1": "A",
+        "S19-C2": "C",
+        "S19-C3": "A"
+      },
+      "extraChoiceId": "S19-C91",
+      "reachable": true,
+      "expectedPosition": 33
+    },
+    {
+      "scene": "S19",
+      "authoredBranch": {
+        "S19-C1": "A",
+        "S19-C2": "C",
+        "S19-C3": "B"
+      },
+      "extraChoiceId": "S19-C90",
+      "reachable": true,
+      "expectedPosition": 14
+    },
+    {
+      "scene": "S19",
+      "authoredBranch": {
+        "S19-C1": "A",
+        "S19-C2": "C",
+        "S19-C3": "B"
+      },
+      "extraChoiceId": "S19-C91",
+      "reachable": true,
+      "expectedPosition": 33
+    },
+    {
+      "scene": "S19",
+      "authoredBranch": {
+        "S19-C1": "B",
+        "S19-C2": "A",
+        "S19-C3": "A"
+      },
+      "extraChoiceId": "S19-C90",
+      "reachable": true,
+      "expectedPosition": 14
+    },
+    {
+      "scene": "S19",
+      "authoredBranch": {
+        "S19-C1": "B",
+        "S19-C2": "A",
+        "S19-C3": "A"
+      },
+      "extraChoiceId": "S19-C91",
+      "reachable": true,
+      "expectedPosition": 33
+    },
+    {
+      "scene": "S19",
+      "authoredBranch": {
+        "S19-C1": "B",
+        "S19-C2": "A",
+        "S19-C3": "B"
+      },
+      "extraChoiceId": "S19-C90",
+      "reachable": true,
+      "expectedPosition": 14
+    },
+    {
+      "scene": "S19",
+      "authoredBranch": {
+        "S19-C1": "B",
+        "S19-C2": "A",
+        "S19-C3": "B"
+      },
+      "extraChoiceId": "S19-C91",
+      "reachable": true,
+      "expectedPosition": 33
+    },
+    {
+      "scene": "S19",
+      "authoredBranch": {
+        "S19-C1": "B",
+        "S19-C2": "B",
+        "S19-C3": "A"
+      },
+      "extraChoiceId": "S19-C90",
+      "reachable": true,
+      "expectedPosition": 14
+    },
+    {
+      "scene": "S19",
+      "authoredBranch": {
+        "S19-C1": "B",
+        "S19-C2": "B",
+        "S19-C3": "A"
+      },
+      "extraChoiceId": "S19-C91",
+      "reachable": true,
+      "expectedPosition": 33
+    },
+    {
+      "scene": "S19",
+      "authoredBranch": {
+        "S19-C1": "B",
+        "S19-C2": "B",
+        "S19-C3": "B"
+      },
+      "extraChoiceId": "S19-C90",
+      "reachable": true,
+      "expectedPosition": 14
+    },
+    {
+      "scene": "S19",
+      "authoredBranch": {
+        "S19-C1": "B",
+        "S19-C2": "B",
+        "S19-C3": "B"
+      },
+      "extraChoiceId": "S19-C91",
+      "reachable": true,
+      "expectedPosition": 33
+    },
+    {
+      "scene": "S19",
+      "authoredBranch": {
+        "S19-C1": "B",
+        "S19-C2": "C",
+        "S19-C3": "A"
+      },
+      "extraChoiceId": "S19-C90",
+      "reachable": true,
+      "expectedPosition": 14
+    },
+    {
+      "scene": "S19",
+      "authoredBranch": {
+        "S19-C1": "B",
+        "S19-C2": "C",
+        "S19-C3": "A"
+      },
+      "extraChoiceId": "S19-C91",
+      "reachable": true,
+      "expectedPosition": 33
+    },
+    {
+      "scene": "S19",
+      "authoredBranch": {
+        "S19-C1": "B",
+        "S19-C2": "C",
+        "S19-C3": "B"
+      },
+      "extraChoiceId": "S19-C90",
+      "reachable": true,
+      "expectedPosition": 14
+    },
+    {
+      "scene": "S19",
+      "authoredBranch": {
+        "S19-C1": "B",
+        "S19-C2": "C",
+        "S19-C3": "B"
+      },
+      "extraChoiceId": "S19-C91",
+      "reachable": true,
+      "expectedPosition": 33
+    },
+    {
+      "scene": "S19",
+      "authoredBranch": {
+        "S19-C1": "C",
+        "S19-C2": "A",
+        "S19-C3": "A"
+      },
+      "extraChoiceId": "S19-C90",
+      "reachable": true,
+      "expectedPosition": 14
+    },
+    {
+      "scene": "S19",
+      "authoredBranch": {
+        "S19-C1": "C",
+        "S19-C2": "A",
+        "S19-C3": "A"
+      },
+      "extraChoiceId": "S19-C91",
+      "reachable": true,
+      "expectedPosition": 33
+    },
+    {
+      "scene": "S19",
+      "authoredBranch": {
+        "S19-C1": "C",
+        "S19-C2": "A",
+        "S19-C3": "B"
+      },
+      "extraChoiceId": "S19-C90",
+      "reachable": true,
+      "expectedPosition": 14
+    },
+    {
+      "scene": "S19",
+      "authoredBranch": {
+        "S19-C1": "C",
+        "S19-C2": "A",
+        "S19-C3": "B"
+      },
+      "extraChoiceId": "S19-C91",
+      "reachable": true,
+      "expectedPosition": 33
+    },
+    {
+      "scene": "S19",
+      "authoredBranch": {
+        "S19-C1": "C",
+        "S19-C2": "B",
+        "S19-C3": "A"
+      },
+      "extraChoiceId": "S19-C90",
+      "reachable": true,
+      "expectedPosition": 14
+    },
+    {
+      "scene": "S19",
+      "authoredBranch": {
+        "S19-C1": "C",
+        "S19-C2": "B",
+        "S19-C3": "A"
+      },
+      "extraChoiceId": "S19-C91",
+      "reachable": true,
+      "expectedPosition": 33
+    },
+    {
+      "scene": "S19",
+      "authoredBranch": {
+        "S19-C1": "C",
+        "S19-C2": "B",
+        "S19-C3": "B"
+      },
+      "extraChoiceId": "S19-C90",
+      "reachable": true,
+      "expectedPosition": 14
+    },
+    {
+      "scene": "S19",
+      "authoredBranch": {
+        "S19-C1": "C",
+        "S19-C2": "B",
+        "S19-C3": "B"
+      },
+      "extraChoiceId": "S19-C91",
+      "reachable": true,
+      "expectedPosition": 33
+    },
+    {
+      "scene": "S19",
+      "authoredBranch": {
+        "S19-C1": "C",
+        "S19-C2": "C",
+        "S19-C3": "A"
+      },
+      "extraChoiceId": "S19-C90",
+      "reachable": true,
+      "expectedPosition": 14
+    },
+    {
+      "scene": "S19",
+      "authoredBranch": {
+        "S19-C1": "C",
+        "S19-C2": "C",
+        "S19-C3": "A"
+      },
+      "extraChoiceId": "S19-C91",
+      "reachable": true,
+      "expectedPosition": 33
+    },
+    {
+      "scene": "S19",
+      "authoredBranch": {
+        "S19-C1": "C",
+        "S19-C2": "C",
+        "S19-C3": "B"
+      },
+      "extraChoiceId": "S19-C90",
+      "reachable": true,
+      "expectedPosition": 14
+    },
+    {
+      "scene": "S19",
+      "authoredBranch": {
+        "S19-C1": "C",
+        "S19-C2": "C",
+        "S19-C3": "B"
+      },
+      "extraChoiceId": "S19-C91",
+      "reachable": true,
+      "expectedPosition": 33
+    },
+    {
+      "scene": "S20",
+      "authoredBranch": {
+        "S20-C1": "A",
+        "S20-C2": "A"
+      },
+      "extraChoiceId": "S20-C90",
+      "reachable": true,
+      "expectedPosition": 13
+    },
+    {
+      "scene": "S20",
+      "authoredBranch": {
+        "S20-C1": "A",
+        "S20-C2": "A"
+      },
+      "extraChoiceId": "S20-C91",
+      "reachable": true,
+      "expectedPosition": 28
+    },
+    {
+      "scene": "S20",
+      "authoredBranch": {
+        "S20-C1": "A",
+        "S20-C2": "B"
+      },
+      "extraChoiceId": "S20-C90",
+      "reachable": true,
+      "expectedPosition": 13
+    },
+    {
+      "scene": "S20",
+      "authoredBranch": {
+        "S20-C1": "A",
+        "S20-C2": "B"
+      },
+      "extraChoiceId": "S20-C91",
+      "reachable": true,
+      "expectedPosition": 28
+    },
+    {
+      "scene": "S20",
+      "authoredBranch": {
+        "S20-C1": "B",
+        "S20-C2": "A"
+      },
+      "extraChoiceId": "S20-C90",
+      "reachable": true,
+      "expectedPosition": 13
+    },
+    {
+      "scene": "S20",
+      "authoredBranch": {
+        "S20-C1": "B",
+        "S20-C2": "A"
+      },
+      "extraChoiceId": "S20-C91",
+      "reachable": true,
+      "expectedPosition": 28
+    },
+    {
+      "scene": "S20",
+      "authoredBranch": {
+        "S20-C1": "B",
+        "S20-C2": "B"
+      },
+      "extraChoiceId": "S20-C90",
+      "reachable": true,
+      "expectedPosition": 13
+    },
+    {
+      "scene": "S20",
+      "authoredBranch": {
+        "S20-C1": "B",
+        "S20-C2": "B"
+      },
+      "extraChoiceId": "S20-C91",
+      "reachable": true,
+      "expectedPosition": 28
+    },
+    {
+      "scene": "S20",
+      "authoredBranch": {
+        "S20-C1": "C",
+        "S20-C2": "A"
+      },
+      "extraChoiceId": "S20-C90",
+      "reachable": true,
+      "expectedPosition": 13
+    },
+    {
+      "scene": "S20",
+      "authoredBranch": {
+        "S20-C1": "C",
+        "S20-C2": "A"
+      },
+      "extraChoiceId": "S20-C91",
+      "reachable": true,
+      "expectedPosition": 28
+    },
+    {
+      "scene": "S20",
+      "authoredBranch": {
+        "S20-C1": "C",
+        "S20-C2": "B"
+      },
+      "extraChoiceId": "S20-C90",
+      "reachable": true,
+      "expectedPosition": 13
+    },
+    {
+      "scene": "S20",
+      "authoredBranch": {
+        "S20-C1": "C",
+        "S20-C2": "B"
+      },
+      "extraChoiceId": "S20-C91",
+      "reachable": true,
+      "expectedPosition": 28
+    },
+    {
+      "scene": "S21",
+      "authoredBranch": {
+        "S21-C1": "A",
+        "S21-C2": "A"
+      },
+      "extraChoiceId": "S21-C90",
+      "reachable": true,
+      "expectedPosition": 6
+    },
+    {
+      "scene": "S21",
+      "authoredBranch": {
+        "S21-C1": "A",
+        "S21-C2": "A"
+      },
+      "extraChoiceId": "S21-C91",
+      "reachable": true,
+      "expectedPosition": 17
+    },
+    {
+      "scene": "S21",
+      "authoredBranch": {
+        "S21-C1": "A",
+        "S21-C2": "B"
+      },
+      "extraChoiceId": "S21-C90",
+      "reachable": true,
+      "expectedPosition": 6
+    },
+    {
+      "scene": "S21",
+      "authoredBranch": {
+        "S21-C1": "A",
+        "S21-C2": "B"
+      },
+      "extraChoiceId": "S21-C91",
+      "reachable": true,
+      "expectedPosition": 17
+    },
+    {
+      "scene": "S21",
+      "authoredBranch": {
+        "S21-C1": "B",
+        "S21-C2": "A"
+      },
+      "extraChoiceId": "S21-C90",
+      "reachable": true,
+      "expectedPosition": 6
+    },
+    {
+      "scene": "S21",
+      "authoredBranch": {
+        "S21-C1": "B",
+        "S21-C2": "A"
+      },
+      "extraChoiceId": "S21-C91",
+      "reachable": true,
+      "expectedPosition": 17
+    },
+    {
+      "scene": "S21",
+      "authoredBranch": {
+        "S21-C1": "B",
+        "S21-C2": "B"
+      },
+      "extraChoiceId": "S21-C90",
+      "reachable": true,
+      "expectedPosition": 6
+    },
+    {
+      "scene": "S21",
+      "authoredBranch": {
+        "S21-C1": "B",
+        "S21-C2": "B"
+      },
+      "extraChoiceId": "S21-C91",
+      "reachable": true,
+      "expectedPosition": 17
+    },
+    {
+      "scene": "S21",
+      "authoredBranch": {
+        "S21-C1": "C",
+        "S21-C2": "A"
+      },
+      "extraChoiceId": "S21-C90",
+      "reachable": true,
+      "expectedPosition": 6
+    },
+    {
+      "scene": "S21",
+      "authoredBranch": {
+        "S21-C1": "C",
+        "S21-C2": "A"
+      },
+      "extraChoiceId": "S21-C91",
+      "reachable": true,
+      "expectedPosition": 17
+    },
+    {
+      "scene": "S21",
+      "authoredBranch": {
+        "S21-C1": "C",
+        "S21-C2": "B"
+      },
+      "extraChoiceId": "S21-C90",
+      "reachable": true,
+      "expectedPosition": 6
+    },
+    {
+      "scene": "S21",
+      "authoredBranch": {
+        "S21-C1": "C",
+        "S21-C2": "B"
+      },
+      "extraChoiceId": "S21-C91",
+      "reachable": true,
+      "expectedPosition": 17
+    },
+    {
+      "scene": "S61",
+      "authoredBranch": {
+        "S61-C1": "A"
+      },
+      "extraChoiceId": "S61-C90",
+      "reachable": true,
+      "expectedPosition": 7
+    },
+    {
+      "scene": "S61",
+      "authoredBranch": {
+        "S61-C1": "A"
+      },
+      "extraChoiceId": "S61-C91",
+      "reachable": true,
+      "expectedPosition": 15
+    },
+    {
+      "scene": "S61",
+      "authoredBranch": {
+        "S61-C1": "B"
+      },
+      "extraChoiceId": "S61-C90",
+      "reachable": true,
+      "expectedPosition": 7
+    },
+    {
+      "scene": "S61",
+      "authoredBranch": {
+        "S61-C1": "B"
+      },
+      "extraChoiceId": "S61-C91",
+      "reachable": true,
+      "expectedPosition": 15
+    },
+    {
+      "scene": "S22",
+      "authoredBranch": {
+        "S22-C1": "A",
+        "S22-C2": "A"
+      },
+      "extraChoiceId": "S22-C90",
+      "reachable": true,
+      "expectedPosition": 13
+    },
+    {
+      "scene": "S22",
+      "authoredBranch": {
+        "S22-C1": "A",
+        "S22-C2": "A"
+      },
+      "extraChoiceId": "S22-C91",
+      "reachable": true,
+      "expectedPosition": 24
+    },
+    {
+      "scene": "S22",
+      "authoredBranch": {
+        "S22-C1": "A",
+        "S22-C2": "B"
+      },
+      "extraChoiceId": "S22-C90",
+      "reachable": true,
+      "expectedPosition": 13
+    },
+    {
+      "scene": "S22",
+      "authoredBranch": {
+        "S22-C1": "A",
+        "S22-C2": "B"
+      },
+      "extraChoiceId": "S22-C91",
+      "reachable": true,
+      "expectedPosition": 24
+    },
+    {
+      "scene": "S22",
+      "authoredBranch": {
+        "S22-C1": "B",
+        "S22-C2": "A"
+      },
+      "extraChoiceId": "S22-C90",
+      "reachable": true,
+      "expectedPosition": 13
+    },
+    {
+      "scene": "S22",
+      "authoredBranch": {
+        "S22-C1": "B",
+        "S22-C2": "A"
+      },
+      "extraChoiceId": "S22-C91",
+      "reachable": true,
+      "expectedPosition": 24
+    },
+    {
+      "scene": "S22",
+      "authoredBranch": {
+        "S22-C1": "B",
+        "S22-C2": "B"
+      },
+      "extraChoiceId": "S22-C90",
+      "reachable": true,
+      "expectedPosition": 13
+    },
+    {
+      "scene": "S22",
+      "authoredBranch": {
+        "S22-C1": "B",
+        "S22-C2": "B"
+      },
+      "extraChoiceId": "S22-C91",
+      "reachable": true,
+      "expectedPosition": 24
+    },
+    {
+      "scene": "S23",
+      "authoredBranch": {
+        "S23-C1": "A"
+      },
+      "extraChoiceId": "S23-C90",
+      "reachable": true,
+      "expectedPosition": 9
+    },
+    {
+      "scene": "S23",
+      "authoredBranch": {
+        "S23-C1": "A"
+      },
+      "extraChoiceId": "S23-C91",
+      "reachable": true,
+      "expectedPosition": 19
+    },
+    {
+      "scene": "S23",
+      "authoredBranch": {
+        "S23-C1": "B"
+      },
+      "extraChoiceId": "S23-C90",
+      "reachable": true,
+      "expectedPosition": 9
+    },
+    {
+      "scene": "S23",
+      "authoredBranch": {
+        "S23-C1": "B"
+      },
+      "extraChoiceId": "S23-C91",
+      "reachable": true,
+      "expectedPosition": 19
+    },
+    {
+      "scene": "S24",
+      "authoredBranch": {
+        "S24-C1": "A"
+      },
+      "extraChoiceId": "S24-C90",
+      "reachable": true,
+      "expectedPosition": 7
+    },
+    {
+      "scene": "S24",
+      "authoredBranch": {
+        "S24-C1": "A"
+      },
+      "extraChoiceId": "S24-C91",
+      "reachable": true,
+      "expectedPosition": 15
+    },
+    {
+      "scene": "S24",
+      "authoredBranch": {
+        "S24-C1": "B"
+      },
+      "extraChoiceId": "S24-C90",
+      "reachable": true,
+      "expectedPosition": 7
+    },
+    {
+      "scene": "S24",
+      "authoredBranch": {
+        "S24-C1": "B"
+      },
+      "extraChoiceId": "S24-C91",
+      "reachable": true,
+      "expectedPosition": 15
+    },
+    {
+      "scene": "S25",
+      "authoredBranch": {
+        "S25-C1": "A"
+      },
+      "extraChoiceId": "S25-C90",
+      "reachable": true,
+      "expectedPosition": 10
+    },
+    {
+      "scene": "S25",
+      "authoredBranch": {
+        "S25-C1": "A"
+      },
+      "extraChoiceId": "S25-C91",
+      "reachable": true,
+      "expectedPosition": 18
+    },
+    {
+      "scene": "S25",
+      "authoredBranch": {
+        "S25-C1": "B"
+      },
+      "extraChoiceId": "S25-C90",
+      "reachable": true,
+      "expectedPosition": 10
+    },
+    {
+      "scene": "S25",
+      "authoredBranch": {
+        "S25-C1": "B"
+      },
+      "extraChoiceId": "S25-C91",
+      "reachable": true,
+      "expectedPosition": 18
+    },
+    {
+      "scene": "S58",
+      "authoredBranch": {
+        "S58-C1": "A"
+      },
+      "extraChoiceId": "S58-C90",
+      "reachable": true,
+      "expectedPosition": 8
+    },
+    {
+      "scene": "S58",
+      "authoredBranch": {
+        "S58-C1": "A"
+      },
+      "extraChoiceId": "S58-C91",
+      "reachable": true,
+      "expectedPosition": 18
+    },
+    {
+      "scene": "S58",
+      "authoredBranch": {
+        "S58-C1": "B"
+      },
+      "extraChoiceId": "S58-C90",
+      "reachable": true,
+      "expectedPosition": 8
+    },
+    {
+      "scene": "S58",
+      "authoredBranch": {
+        "S58-C1": "B"
+      },
+      "extraChoiceId": "S58-C91",
+      "reachable": true,
+      "expectedPosition": 17
+    },
+    {
+      "scene": "S58",
+      "authoredBranch": {
+        "S58-C1": "C"
+      },
+      "extraChoiceId": "S58-C90",
+      "reachable": true,
+      "expectedPosition": 8
+    },
+    {
+      "scene": "S58",
+      "authoredBranch": {
+        "S58-C1": "C"
+      },
+      "extraChoiceId": "S58-C91",
+      "reachable": true,
+      "expectedPosition": 15
+    },
+    {
+      "scene": "S58",
+      "authoredBranch": {
+        "S58-C1": "D"
+      },
+      "extraChoiceId": "S58-C90",
+      "reachable": true,
+      "expectedPosition": 12
+    },
+    {
+      "scene": "S58",
+      "authoredBranch": {
+        "S58-C1": "D"
+      },
+      "extraChoiceId": "S58-C91",
+      "reachable": true,
+      "expectedPosition": 22
+    },
+    {
+      "scene": "S26",
+      "authoredBranch": {
+        "S26-C1": "A"
+      },
+      "extraChoiceId": "S26-C90",
+      "reachable": true,
+      "expectedPosition": 5
+    },
+    {
+      "scene": "S26",
+      "authoredBranch": {
+        "S26-C1": "A"
+      },
+      "extraChoiceId": "S26-C91",
+      "reachable": true,
+      "expectedPosition": 9
+    },
+    {
+      "scene": "S26",
+      "authoredBranch": {
+        "S26-C1": "B"
+      },
+      "extraChoiceId": "S26-C90",
+      "reachable": true,
+      "expectedPosition": 5
+    },
+    {
+      "scene": "S26",
+      "authoredBranch": {
+        "S26-C1": "B"
+      },
+      "extraChoiceId": "S26-C91",
+      "reachable": true,
+      "expectedPosition": 10
+    },
+    {
+      "scene": "S26",
+      "authoredBranch": {
+        "S26-C1": "C"
+      },
+      "extraChoiceId": "S26-C90",
+      "reachable": true,
+      "expectedPosition": 5
+    },
+    {
+      "scene": "S26",
+      "authoredBranch": {
+        "S26-C1": "C"
+      },
+      "extraChoiceId": "S26-C91",
+      "reachable": true,
+      "expectedPosition": 9
+    },
+    {
+      "scene": "S26",
+      "authoredBranch": {
+        "S26-C1": "D"
+      },
+      "extraChoiceId": "S26-C90",
+      "reachable": true,
+      "expectedPosition": 5
+    },
+    {
+      "scene": "S26",
+      "authoredBranch": {
+        "S26-C1": "D"
+      },
+      "extraChoiceId": "S26-C91",
+      "reachable": true,
+      "expectedPosition": 10
+    }
+  ],
+  "interactionBeats": {
+    "S17": {
+      "extraChoiceIds": [
+        "S17-C90",
+        "S17-C91"
+      ],
+      "authoredChoiceIds": [
+        "S17-C1",
+        "S17-C2"
+      ],
+      "sourceInteractionEchoes": []
+    },
+    "S18": {
+      "extraChoiceIds": [
+        "S18-C90",
+        "S18-C91"
+      ],
+      "authoredChoiceIds": [
+        "S18-C1",
+        "S18-C2"
+      ],
+      "sourceInteractionEchoes": []
+    },
+    "S19": {
+      "extraChoiceIds": [
+        "S19-C90",
+        "S19-C91"
+      ],
+      "authoredChoiceIds": [
+        "S19-C1",
+        "S19-C2",
+        "S19-C3"
+      ],
+      "sourceInteractionEchoes": []
+    },
+    "S20": {
+      "extraChoiceIds": [
+        "S20-C90",
+        "S20-C91"
+      ],
+      "authoredChoiceIds": [
+        "S20-C1",
+        "S20-C2"
+      ],
+      "sourceInteractionEchoes": []
+    },
+    "S21": {
+      "extraChoiceIds": [
+        "S21-C90",
+        "S21-C91"
+      ],
+      "authoredChoiceIds": [
+        "S21-C1",
+        "S21-C2"
+      ],
+      "sourceInteractionEchoes": []
+    },
+    "S61": {
+      "extraChoiceIds": [
+        "S61-C90",
+        "S61-C91"
+      ],
+      "authoredChoiceIds": [
+        "S61-C1"
+      ],
+      "sourceInteractionEchoes": []
+    },
+    "S22": {
+      "extraChoiceIds": [
+        "S22-C90",
+        "S22-C91"
+      ],
+      "authoredChoiceIds": [
+        "S22-C1",
+        "S22-C2"
+      ],
+      "sourceInteractionEchoes": [
+        "S17-C90"
+      ]
+    },
+    "S23": {
+      "extraChoiceIds": [
+        "S23-C90",
+        "S23-C91"
+      ],
+      "authoredChoiceIds": [
+        "S23-C1"
+      ],
+      "sourceInteractionEchoes": []
+    },
+    "S24": {
+      "extraChoiceIds": [
+        "S24-C90",
+        "S24-C91"
+      ],
+      "authoredChoiceIds": [
+        "S24-C1"
+      ],
+      "sourceInteractionEchoes": []
+    },
+    "S25": {
+      "extraChoiceIds": [
+        "S25-C90",
+        "S25-C91"
+      ],
+      "authoredChoiceIds": [
+        "S25-C1"
+      ],
+      "sourceInteractionEchoes": []
+    },
+    "S58": {
+      "extraChoiceIds": [
+        "S58-C90",
+        "S58-C91"
+      ],
+      "authoredChoiceIds": [
+        "S58-C1"
+      ],
+      "sourceInteractionEchoes": []
+    },
+    "S26": {
+      "extraChoiceIds": [
+        "S26-C90",
+        "S26-C91"
+      ],
+      "authoredChoiceIds": [
+        "S26-C1"
+      ],
+      "sourceInteractionEchoes": []
+    }
+  },
+  "semanticCases": [
+    {
+      "scene": "S17",
+      "episode": 5,
+      "authoredBranch": {
+        "S17-C1": "A",
+        "S17-C2": "A"
+      },
+      "authoredChoices": [
+        {
+          "id": "S17-C1",
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        {
+          "id": "S17-C2",
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        }
+      ],
+      "extraChoiceId": "S17-C90",
+      "selectedOptionCode": "A",
+      "precedingSourceRefs": [
+        "S17.C000.P012",
+        "S17.C000.P012",
+        "S17.C000.P014"
+      ],
+      "precedingSourceText": {
+        "sourceRefs": [
+          "S17.C000.P012",
+          "S17.C000.P012",
+          "S17.C000.P014"
+        ],
+        "ru": [
+          {
+            "ref": "S17.C000.P012",
+            "text": "За соседним столом две женщины обсуждали поездку, которую пришлось сократить из-за погоды. Одна из них смеялась слишком громко, потом сказала: «Зато мы успели здесь». Алиса записала последние слова в телефон, но не лица и не чужую историю. Поездка была полна решений, которые не принадлежали ей."
+          },
+          {
+            "ref": "S17.C000.P012",
+            "text": "За соседним столом две женщины обсуждали поездку, которую пришлось сократить из-за погоды. Одна из них смеялась слишком громко, потом сказала: «Зато мы успели здесь». Алиса записала последние слова в телефон, но не лица и не чужую историю. Поездка была полна решений, которые не принадлежали ей."
+          },
+          {
+            "ref": "S17.C000.P014",
+            "text": "— Завтра остаёмся здесь, — сказал он. — Стирка, запас еды, отдых. Послезавтра выедем утром. Мне нужно ещё раз сверить дорогу и время остановок."
+          }
+        ],
+        "en": [
+          {
+            "ref": "S17.C000.P012",
+            "text": "At the next table, two women discussed a trip they had had to shorten because of the weather. One laughed too loudly, then said, “At least we made it here.” Alice saved the last words in her phone, but not their faces or someone else's story. The trip was full of decisions that did not belong to her."
+          },
+          {
+            "ref": "S17.C000.P012",
+            "text": "At the next table, two women discussed a trip they had had to shorten because of the weather. One laughed too loudly, then said, “At least we made it here.” Alice saved the last words in her phone, but not their faces or someone else's story. The trip was full of decisions that did not belong to her."
+          },
+          {
+            "ref": "S17.C000.P014",
+            "text": "“We stay here tomorrow,” he said. “Laundry, supplies, rest. We leave in the morning the day after. I need to check the road and the stop times once more.”"
+          }
+        ]
+      },
+      "renderedQuestion": "After the shared dinner, Alice has some time. What should she do?",
+      "renderedOptions": [
+        {
+          "code": "A",
+          "label": "Help clear the table and stay by the map"
+        },
+        {
+          "code": "B",
+          "label": "Step outside to the car for a few minutes"
+        }
+      ],
+      "runtimeQuestion": null,
+      "runtimeOptions": [
+        "Help clear the table and stay by the map",
+        "Step outside to the car for a few minutes"
+      ],
+      "resultingText": "Alice stacked plates by the sink. Eric unfolded the map, and for a few more minutes the evening belonged to all four of them.",
+      "contradictionCount": 0,
+      "inventedEventCount": 0,
+      "leakedMarkupCount": 0,
+      "cyrillicCount": 0,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "runtimeErrors": [],
+      "failedRequests": [],
+      "premiseConfirmed": true,
+      "authoredChoicePreserved": true,
+      "onlyExpectedExtraChoicePersisted": true,
+      "responseAddsRelationshipFact": false,
+      "responseAddsConsentEvent": false,
+      "responseAddsCharacterKnowledge": false
+    },
+    {
+      "scene": "S17",
+      "episode": 5,
+      "authoredBranch": {
+        "S17-C1": "A",
+        "S17-C2": "A"
+      },
+      "authoredChoices": [
+        {
+          "id": "S17-C1",
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        {
+          "id": "S17-C2",
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        }
+      ],
+      "extraChoiceId": "S17-C91",
+      "selectedOptionCode": "A",
+      "precedingSourceRefs": [
+        "S17.C000.P026",
+        "S17.C001.P001",
+        "S17.C001.P003"
+      ],
+      "precedingSourceText": {
+        "sourceRefs": [
+          "S17.C000.P026",
+          "S17.C001.P001",
+          "S17.C001.P003"
+        ],
+        "ru": [
+          {
+            "ref": "S17.C000.P026",
+            "text": "Нику она повернула экран с абзацем о том, как он остановил камеру у воды."
+          },
+          {
+            "ref": "S17.C001.P001",
+            "text": "— Ты правда оставила пустоту."
+          },
+          {
+            "ref": "S17.C001.P003",
+            "text": "— Пусть остаётся так. Про камеру — верно, но покажи мне окончательный вариант до отправки."
+          }
+        ],
+        "en": [
+          {
+            "ref": "S17.C000.P026",
+            "text": "She turned the screen toward Nick with the paragraph about how he had stopped the camera by the water."
+          },
+          {
+            "ref": "S17.C001.P001",
+            "text": "“You really left it empty.”"
+          },
+          {
+            "ref": "S17.C001.P003",
+            "text": "“Let it stay that way. The part about the camera is right, but show me the final version before you send it.”"
+          }
+        ]
+      },
+      "renderedQuestion": "Before accepting an invitation, Alice asks herself...",
+      "renderedOptions": [
+        {
+          "code": "A",
+          "label": "Do I want to stay close to this person?"
+        },
+        {
+          "code": "B",
+          "label": "Do I need quiet tonight?"
+        }
+      ],
+      "runtimeQuestion": null,
+      "runtimeOptions": [
+        "Do I want to stay close to this person?",
+        "Do I need quiet tonight?"
+      ],
+      "resultingText": "She decided to answer an invitation from her own desire, not from fear of hurting someone. The evening became a little simpler.",
+      "contradictionCount": 0,
+      "inventedEventCount": 0,
+      "leakedMarkupCount": 0,
+      "cyrillicCount": 0,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "runtimeErrors": [],
+      "failedRequests": [],
+      "premiseConfirmed": true,
+      "authoredChoicePreserved": true,
+      "onlyExpectedExtraChoicePersisted": true,
+      "responseAddsRelationshipFact": false,
+      "responseAddsConsentEvent": false,
+      "responseAddsCharacterKnowledge": false
+    },
+    {
+      "scene": "S18",
+      "episode": 5,
+      "authoredBranch": {
+        "S18-C1": "A",
+        "S18-C2": "A"
+      },
+      "authoredChoices": [
+        {
+          "id": "S18-C1",
+          "options": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "id": "S18-C2",
+          "options": [
+            "A",
+            "B"
+          ]
+        }
+      ],
+      "extraChoiceId": "S18-C90",
+      "selectedOptionCode": "A",
+      "precedingSourceRefs": [
+        "S18.C000.P017",
+        "S18.C000.P018",
+        "S18.C000.P018"
+      ],
+      "precedingSourceText": {
+        "sourceRefs": [
+          "S18.C000.P017",
+          "S18.C000.P018",
+          "S18.C000.P018"
+        ],
+        "ru": [
+          {
+            "ref": "S18.C000.P017",
+            "text": "— Можешь спорить и сейчас. Иногда я выбираю короткий ответ, потому что длинный похож на оправдание."
+          },
+          {
+            "ref": "S18.C000.P018",
+            "text": "Ей понравилось, что он не стал сразу объяснять ей её чувство. Она рассказала, как в детстве боялась отстать от экскурсии: мама шла быстро, а она всё находила камни и вывески, которые хотелось прочитать. Эрик слушал, не превращая воспоминание в урок о правильном темпе."
+          },
+          {
+            "ref": "S18.C000.P018",
+            "text": "Ей понравилось, что он не стал сразу объяснять ей её чувство. Она рассказала, как в детстве боялась отстать от экскурсии: мама шла быстро, а она всё находила камни и вывески, которые хотелось прочитать. Эрик слушал, не превращая воспоминание в урок о правильном темпе."
+          }
+        ],
+        "en": [
+          {
+            "ref": "S18.C000.P017",
+            "text": "“You can argue now too. Sometimes I choose the short answer because the long one sounds like an excuse.”"
+          },
+          {
+            "ref": "S18.C000.P018",
+            "text": "She liked that he did not immediately explain her feeling to her. She told him how, as a child, she had been afraid of falling behind on a tour: her mother walked quickly, while Alice kept finding stones and signs she wanted to read. Eric listened without turning the memory into a lesson about the right pace."
+          },
+          {
+            "ref": "S18.C000.P018",
+            "text": "She liked that he did not immediately explain her feeling to her. She told him how, as a child, she had been afraid of falling behind on a tour: her mother walked quickly, while Alice kept finding stones and signs she wanted to read. Eric listened without turning the memory into a lesson about the right pace."
+          }
+        ]
+      },
+      "renderedQuestion": "Eric listens to Alice's story about childhood. How will she continue?",
+      "renderedOptions": [
+        {
+          "code": "A",
+          "label": "Ask about his own habits"
+        },
+        {
+          "code": "B",
+          "label": "Admit she sometimes fears falling behind people close to her"
+        }
+      ],
+      "runtimeQuestion": null,
+      "runtimeOptions": [
+        "Ask about his own habits",
+        "Admit she sometimes fears falling behind people close to her"
+      ],
+      "resultingText": "“Where do you hurry when no one is paying you to plan a route?” Alice asked. The question was more personal than she had intended.",
+      "contradictionCount": 0,
+      "inventedEventCount": 0,
+      "leakedMarkupCount": 0,
+      "cyrillicCount": 0,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "runtimeErrors": [],
+      "failedRequests": [],
+      "premiseConfirmed": true,
+      "authoredChoicePreserved": true,
+      "onlyExpectedExtraChoicePersisted": true,
+      "responseAddsRelationshipFact": false,
+      "responseAddsConsentEvent": false,
+      "responseAddsCharacterKnowledge": false
+    },
+    {
+      "scene": "S18",
+      "episode": 5,
+      "authoredBranch": {
+        "S18-C1": "A",
+        "S18-C2": "A"
+      },
+      "authoredChoices": [
+        {
+          "id": "S18-C1",
+          "options": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "id": "S18-C2",
+          "options": [
+            "A",
+            "B"
+          ]
+        }
+      ],
+      "extraChoiceId": "S18-C91",
+      "selectedOptionCode": "A",
+      "precedingSourceRefs": [
+        "S18.C000.P035",
+        "S18.C000.P035",
+        "S18.C000.P037"
+      ],
+      "precedingSourceText": {
+        "sourceRefs": [
+          "S18.C000.P035",
+          "S18.C000.P035",
+          "S18.C000.P037"
+        ],
+        "ru": [
+          {
+            "ref": "S18.C000.P035",
+            "text": "Эрик сделал два шага в сторону, Алиса попыталась повторить, и оба остановились, когда из заведения вышли люди. Смешно стало не от ошибки, а от серьёзного лица Эрика: он пытался вспомнить третье движение. Алиса придумала своё и потянула его за собой. Песня закончилась прежде, чем у них получилось что-то похожее на танец."
+          },
+          {
+            "ref": "S18.C000.P035",
+            "text": "Эрик сделал два шага в сторону, Алиса попыталась повторить, и оба остановились, когда из заведения вышли люди. Смешно стало не от ошибки, а от серьёзного лица Эрика: он пытался вспомнить третье движение. Алиса придумала своё и потянула его за собой. Песня закончилась прежде, чем у них получилось что-то похожее на танец."
+          },
+          {
+            "ref": "S18.C000.P037",
+            "text": "— Она утверждает, что да. Когда-нибудь проверишь, если встретитесь."
+          }
+        ],
+        "en": [
+          {
+            "ref": "S18.C000.P035",
+            "text": "Eric took two steps to the side, Alice tried to copy him, and they both stopped when people came out of the place. It was not the mistake that made them laugh, but Eric's serious face as he tried to remember a third move. Alice invented one of her own and pulled him along. The song ended before they produced anything resembling a dance."
+          },
+          {
+            "ref": "S18.C000.P035",
+            "text": "Eric took two steps to the side, Alice tried to copy him, and they both stopped when people came out of the place. It was not the mistake that made them laugh, but Eric's serious face as he tried to remember a third move. Alice invented one of her own and pulled him along. The song ended before they produced anything resembling a dance."
+          },
+          {
+            "ref": "S18.C000.P037",
+            "text": "“She claims she does. You can check one day, if you meet her.”"
+          }
+        ]
+      },
+      "renderedQuestion": "After the dance, Eric returns Alice's thermos. How will she answer the closeness?",
+      "renderedOptions": [
+        {
+          "code": "A",
+          "label": "Take his hand carefully herself"
+        },
+        {
+          "code": "B",
+          "label": "Smile and leave some air between them"
+        }
+      ],
+      "runtimeQuestion": null,
+      "runtimeOptions": [
+        "Take his hand carefully herself",
+        "Smile and leave some air between them"
+      ],
+      "resultingText": "Alice touched his fingers. Eric answered the movement, but did not pull her closer without asking.",
+      "contradictionCount": 0,
+      "inventedEventCount": 0,
+      "leakedMarkupCount": 0,
+      "cyrillicCount": 0,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "runtimeErrors": [],
+      "failedRequests": [],
+      "premiseConfirmed": true,
+      "authoredChoicePreserved": true,
+      "onlyExpectedExtraChoicePersisted": true,
+      "responseAddsRelationshipFact": false,
+      "responseAddsConsentEvent": false,
+      "responseAddsCharacterKnowledge": false
+    },
+    {
+      "scene": "S19",
+      "episode": 5,
+      "authoredBranch": {
+        "S19-C1": "A",
+        "S19-C2": "A",
+        "S19-C3": "A"
+      },
+      "authoredChoices": [
+        {
+          "id": "S19-C1",
+          "options": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "id": "S19-C2",
+          "options": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "id": "S19-C3",
+          "options": [
+            "A",
+            "B"
+          ]
+        }
+      ],
+      "extraChoiceId": "S19-C90",
+      "selectedOptionCode": "A",
+      "precedingSourceRefs": [
+        "S19.C000.P019",
+        "S19.C000.P019",
+        "S19.C000.P020"
+      ],
+      "precedingSourceText": {
+        "sourceRefs": [
+          "S19.C000.P019",
+          "S19.C000.P019",
+          "S19.C000.P020"
+        ],
+        "ru": [
+          {
+            "ref": "S19.C000.P019",
+            "text": "Он рассмеялся. Через несколько минут Ник предложил игру: каждый должен придумать по одному невозможному названию для фильма об их сегодняшнем дне. Его вариант был «Человек, победивший молнию на сумке». Алиса назвала свой «Восемь минут, которых никто не получит». Ник не переспросил, для кого фильм. Он просто запомнил название."
+          },
+          {
+            "ref": "S19.C000.P019",
+            "text": "Он рассмеялся. Через несколько минут Ник предложил игру: каждый должен придумать по одному невозможному названию для фильма об их сегодняшнем дне. Его вариант был «Человек, победивший молнию на сумке». Алиса назвала свой «Восемь минут, которых никто не получит». Ник не переспросил, для кого фильм. Он просто запомнил название."
+          },
+          {
+            "ref": "S19.C000.P020",
+            "text": "У противоположного края бассейна освободилась дорожка. Алиса предложила доплыть до неё без соревнования, но Ник немедленно спросил, какие призы дают за второе место. На середине он потерял ритм, остановился и пропустил её вперёд. Она коснулась бортика первой и оглянулась. Он плыл медленно, без показной лёгкости, с упрямо сведёнными бровями. Она подождала, пока он доплывёт, не превращая его заминку в повод спасать."
+          }
+        ],
+        "en": [
+          {
+            "ref": "S19.C000.P019",
+            "text": "He laughed. A few minutes later Nick suggested a game: each of them had to invent an impossible title for a film about their day. His was “The Man Who Defeated the Zip.” Alice called hers “Eight Minutes No One Will Get.” Nick did not ask who the film was for. He simply remembered the title."
+          },
+          {
+            "ref": "S19.C000.P019",
+            "text": "He laughed. A few minutes later Nick suggested a game: each of them had to invent an impossible title for a film about their day. His was “The Man Who Defeated the Zip.” Alice called hers “Eight Minutes No One Will Get.” Nick did not ask who the film was for. He simply remembered the title."
+          },
+          {
+            "ref": "S19.C000.P020",
+            "text": "A lane opened at the far end of the pool. Alice suggested they swim to it without racing, but Nick immediately asked what prize came with second place. Halfway there, he lost his rhythm, stopped, and let her go ahead. She touched the wall first and looked back. He swam slowly, without performed ease, his brows drawn together with stubborn concentration. She waited until he reached her, without turning the pause into a reason to rescue him."
+          }
+        ]
+      },
+      "renderedQuestion": "Nick turns the pool game into a competition. What will Alice do?",
+      "renderedOptions": [
+        {
+          "code": "A",
+          "label": "Play along with his sporting ambition"
+        },
+        {
+          "code": "B",
+          "label": "Suggest simply swimming beside him"
+        }
+      ],
+      "runtimeQuestion": null,
+      "runtimeOptions": [
+        "Play along with his sporting ambition",
+        "Suggest simply swimming beside him"
+      ],
+      "resultingText": "“All right, but no attempts to re-edit the finish!” Alice said. Nick promised to lose only once.",
+      "contradictionCount": 0,
+      "inventedEventCount": 0,
+      "leakedMarkupCount": 0,
+      "cyrillicCount": 0,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "runtimeErrors": [],
+      "failedRequests": [],
+      "premiseConfirmed": true,
+      "authoredChoicePreserved": true,
+      "onlyExpectedExtraChoicePersisted": true,
+      "responseAddsRelationshipFact": false,
+      "responseAddsConsentEvent": false,
+      "responseAddsCharacterKnowledge": false
+    },
+    {
+      "scene": "S19",
+      "episode": 5,
+      "authoredBranch": {
+        "S19-C1": "A",
+        "S19-C2": "A",
+        "S19-C3": "A"
+      },
+      "authoredChoices": [
+        {
+          "id": "S19-C1",
+          "options": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "id": "S19-C2",
+          "options": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "id": "S19-C3",
+          "options": [
+            "A",
+            "B"
+          ]
+        }
+      ],
+      "extraChoiceId": "S19-C91",
+      "selectedOptionCode": "A",
+      "precedingSourceRefs": [
+        "S19.C000.P039",
+        "S19.C000.P041",
+        "S19.C002.P000"
+      ],
+      "precedingSourceText": {
+        "sourceRefs": [
+          "S19.C000.P039",
+          "S19.C000.P041",
+          "S19.C002.P000"
+        ],
+        "ru": [
+          {
+            "ref": "S19.C000.P039",
+            "text": "Пока они обувались, Ник рассказал, как однажды смонтировал из чужой растерянности смешную сцену. Человек на просмотре смеялся, а на другой день попросил её убрать. Ник убрал, но запомнил своё первое раздражение. Алиса не похвалила его за удаление. Он впервые договорил историю без шуточного выхода."
+          },
+          {
+            "ref": "S19.C000.P041",
+            "text": "Она видела, как хочется ему поймать изображение. Ей было приятно, что он спросил до того, как достал телефон. И неприятно, что вопрос всё равно возник. Это были два разных чувства, ни одно не требовало срочно отменить другое."
+          },
+          {
+            "ref": "S19.C002.P000",
+            "text": "— На мой, — сказала Алиса. — Один снимок. Он останется у меня, пока я сама не решу иначе."
+          }
+        ],
+        "en": [
+          {
+            "ref": "S19.C000.P039",
+            "text": "While they put on their shoes, Nick told her how he had once edited a funny scene out of someone else's confusion. The person laughed during the screening, then asked him to remove it the next day. Nick did, but remembered his first irritation. Alice did not praise him for deleting it. For the first time, he finished the story without a joking escape hatch."
+          },
+          {
+            "ref": "S19.C000.P041",
+            "text": "She could see how much he wanted to catch the image. She liked that he had asked before taking out the phone. And she disliked that the question had arisen at all. They were two different feelings, and neither required her to cancel the other immediately."
+          },
+          {
+            "ref": "S19.C002.P000",
+            "text": "“On mine,” Alice said. “One picture. It stays with me until I decide otherwise.”"
+          }
+        ]
+      },
+      "renderedQuestion": "Two figures will appear in the window's reflection. How will Alice suggest the picture?",
+      "renderedOptions": [
+        {
+          "code": "A",
+          "label": "Keep them both in the frame"
+        },
+        {
+          "code": "B",
+          "label": "Take it without a close-up of their faces"
+        }
+      ],
+      "runtimeQuestion": null,
+      "runtimeOptions": [
+        "Keep them both in the frame",
+        "Take it without a close-up of their faces"
+      ],
+      "resultingText": "She took out her phone and asked Nick not to leave the reflection. He was surprised, but stayed beside her.",
+      "contradictionCount": 0,
+      "inventedEventCount": 0,
+      "leakedMarkupCount": 0,
+      "cyrillicCount": 0,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "runtimeErrors": [],
+      "failedRequests": [],
+      "premiseConfirmed": true,
+      "authoredChoicePreserved": true,
+      "onlyExpectedExtraChoicePersisted": true,
+      "responseAddsRelationshipFact": false,
+      "responseAddsConsentEvent": false,
+      "responseAddsCharacterKnowledge": false
+    },
+    {
+      "scene": "S20",
+      "episode": 5,
+      "authoredBranch": {
+        "S20-C1": "A",
+        "S20-C2": "A"
+      },
+      "authoredChoices": [
+        {
+          "id": "S20-C1",
+          "options": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "id": "S20-C2",
+          "options": [
+            "A",
+            "B"
+          ]
+        }
+      ],
+      "extraChoiceId": "S20-C90",
+      "selectedOptionCode": "A",
+      "precedingSourceRefs": [
+        "S20.C000.P011",
+        "S20.C000.P011",
+        "S20.C000.P012"
+      ],
+      "precedingSourceText": {
+        "sourceRefs": [
+          "S20.C000.P011",
+          "S20.C000.P011",
+          "S20.C000.P012"
+        ],
+        "ru": [
+          {
+            "ref": "S20.C000.P011",
+            "text": "У выхода пакет порвался у ручки. Дамир поймал перловку, Алиса — пучок зелени. Они присели на корточки прямо у двери, раскладывая покупки по двум сумкам, и расхохотались от того, что каждый прижал к груди свою добычу. Продавец вынес им новый пакет. Когда они поднялись, Дамир предложил нести тяжёлое; Алиса отдала ему именно рыбу, а перловку оставила себе. По дороге назад он признался, что впервые за долгое время купил продукты без мысленного плана на три дня."
+          },
+          {
+            "ref": "S20.C000.P011",
+            "text": "У выхода пакет порвался у ручки. Дамир поймал перловку, Алиса — пучок зелени. Они присели на корточки прямо у двери, раскладывая покупки по двум сумкам, и расхохотались от того, что каждый прижал к груди свою добычу. Продавец вынес им новый пакет. Когда они поднялись, Дамир предложил нести тяжёлое; Алиса отдала ему именно рыбу, а перловку оставила себе. По дороге назад он признался, что впервые за долгое время купил продукты без мысленного плана на три дня."
+          },
+          {
+            "ref": "S20.C000.P012",
+            "text": "— Ты ведь врач, — сказала Алиса. — Как ты переживёшь отсутствие плана?"
+          }
+        ],
+        "en": [
+          {
+            "ref": "S20.C000.P011",
+            "text": "The bag tore at the handle by the exit. Damir caught the barley; Alice caught the bunch of herbs. They crouched right by the door, sorting the groceries into two bags, and burst out laughing because each was clutching their own prize. The shopkeeper brought them a new bag. When they stood, Damir offered to carry the heavy things; Alice gave him the fish and kept the barley. On the way back, he admitted that for the first time in a long while he had bought food without a mental three-day plan."
+          },
+          {
+            "ref": "S20.C000.P011",
+            "text": "The bag tore at the handle by the exit. Damir caught the barley; Alice caught the bunch of herbs. They crouched right by the door, sorting the groceries into two bags, and burst out laughing because each was clutching their own prize. The shopkeeper brought them a new bag. When they stood, Damir offered to carry the heavy things; Alice gave him the fish and kept the barley. On the way back, he admitted that for the first time in a long while he had bought food without a mental three-day plan."
+          },
+          {
+            "ref": "S20.C000.P012",
+            "text": "“You are a doctor,” Alice said. “How will you survive without a plan?”"
+          }
+        ]
+      },
+      "renderedQuestion": "The shopping bag tears by the store entrance. How will Alice react?",
+      "renderedOptions": [
+        {
+          "code": "A",
+          "label": "Laugh with Damir"
+        },
+        {
+          "code": "B",
+          "label": "Thank him for helping without looking back at the past"
+        }
+      ],
+      "runtimeQuestion": null,
+      "runtimeOptions": [
+        "Laugh with Damir",
+        "Thank him for helping without looking back at the past"
+      ],
+      "resultingText": "She did not look for someone to blame for the torn handle. Damir gathered the scattered food and smiled back at her.",
+      "contradictionCount": 0,
+      "inventedEventCount": 0,
+      "leakedMarkupCount": 0,
+      "cyrillicCount": 0,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "runtimeErrors": [],
+      "failedRequests": [],
+      "premiseConfirmed": true,
+      "authoredChoicePreserved": true,
+      "onlyExpectedExtraChoicePersisted": true,
+      "responseAddsRelationshipFact": false,
+      "responseAddsConsentEvent": false,
+      "responseAddsCharacterKnowledge": false
+    },
+    {
+      "scene": "S20",
+      "episode": 5,
+      "authoredBranch": {
+        "S20-C1": "A",
+        "S20-C2": "A"
+      },
+      "authoredChoices": [
+        {
+          "id": "S20-C1",
+          "options": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "id": "S20-C2",
+          "options": [
+            "A",
+            "B"
+          ]
+        }
+      ],
+      "extraChoiceId": "S20-C91",
+      "selectedOptionCode": "A",
+      "precedingSourceRefs": [
+        "S20.C000.P028",
+        "S20.C000.P028",
+        "S20.C000.P028"
+      ],
+      "precedingSourceText": {
+        "sourceRefs": [
+          "S20.C000.P028",
+          "S20.C000.P028",
+          "S20.C000.P028"
+        ],
+        "ru": [
+          {
+            "ref": "S20.C000.P028",
+            "text": "Когда таймер зазвенел, в кухню вошла пожилая пара с кастрюлей и хлебом. Они искали свободное место для своей еды. Дамир уже собирался сдвинуть чужую посуду, но Алиса остановила его и спросила гостей, нужна ли им конфорка сейчас. Оказалось, они хотели только подогреть воду. Алиса освободила свою половину стола; Дамир перенёс их сковороду на подставку. Пара получила плиту, а они — десять минут, чтобы попробовать ужин без спешки. Дамир тихо сказал, что раньше счёл бы это помехой их разговору. «А я раньше промолчала бы и злилась», — ответила Алиса. Они доели первую порцию, пока чайник соседей шумел рядом."
+          },
+          {
+            "ref": "S20.C000.P028",
+            "text": "Когда таймер зазвенел, в кухню вошла пожилая пара с кастрюлей и хлебом. Они искали свободное место для своей еды. Дамир уже собирался сдвинуть чужую посуду, но Алиса остановила его и спросила гостей, нужна ли им конфорка сейчас. Оказалось, они хотели только подогреть воду. Алиса освободила свою половину стола; Дамир перенёс их сковороду на подставку. Пара получила плиту, а они — десять минут, чтобы попробовать ужин без спешки. Дамир тихо сказал, что раньше счёл бы это помехой их разговору. «А я раньше промолчала бы и злилась», — ответила Алиса. Они доели первую порцию, пока чайник соседей шумел рядом."
+          },
+          {
+            "ref": "S20.C000.P028",
+            "text": "Когда таймер зазвенел, в кухню вошла пожилая пара с кастрюлей и хлебом. Они искали свободное место для своей еды. Дамир уже собирался сдвинуть чужую посуду, но Алиса остановила его и спросила гостей, нужна ли им конфорка сейчас. Оказалось, они хотели только подогреть воду. Алиса освободила свою половину стола; Дамир перенёс их сковороду на подставку. Пара получила плиту, а они — десять минут, чтобы попробовать ужин без спешки. Дамир тихо сказал, что раньше счёл бы это помехой их разговору. «А я раньше промолчала бы и злилась», — ответила Алиса. Они доели первую порцию, пока чайник соседей шумел рядом."
+          }
+        ],
+        "en": [
+          {
+            "ref": "S20.C000.P028",
+            "text": "When the timer rang, an older couple entered the kitchen with a pot and bread. They were looking for a free place for their food. Damir was about to move someone else's dishes, but Alice stopped him and asked the guests whether they needed the burner now. It turned out they only wanted to heat water. Alice cleared her half of the table; Damir moved their pan onto a trivet. The couple got the stove, and the two of them got ten minutes to taste dinner without hurrying. Damir quietly said that before, he would have considered this an interruption to their conversation. “And I would have stayed silent and been angry,” Alice replied. They finished the first serving while the neighbours' kettle hummed beside them."
+          },
+          {
+            "ref": "S20.C000.P028",
+            "text": "When the timer rang, an older couple entered the kitchen with a pot and bread. They were looking for a free place for their food. Damir was about to move someone else's dishes, but Alice stopped him and asked the guests whether they needed the burner now. It turned out they only wanted to heat water. Alice cleared her half of the table; Damir moved their pan onto a trivet. The couple got the stove, and the two of them got ten minutes to taste dinner without hurrying. Damir quietly said that before, he would have considered this an interruption to their conversation. “And I would have stayed silent and been angry,” Alice replied. They finished the first serving while the neighbours' kettle hummed beside them."
+          },
+          {
+            "ref": "S20.C000.P028",
+            "text": "When the timer rang, an older couple entered the kitchen with a pot and bread. They were looking for a free place for their food. Damir was about to move someone else's dishes, but Alice stopped him and asked the guests whether they needed the burner now. It turned out they only wanted to heat water. Alice cleared her half of the table; Damir moved their pan onto a trivet. The couple got the stove, and the two of them got ten minutes to taste dinner without hurrying. Damir quietly said that before, he would have considered this an interruption to their conversation. “And I would have stayed silent and been angry,” Alice replied. They finished the first serving while the neighbours' kettle hummed beside them."
+          }
+        ]
+      },
+      "renderedQuestion": "At dinner, Damir tells her about the two years after the breakup. What will Alice ask?",
+      "renderedOptions": [
+        {
+          "code": "A",
+          "label": "How did he learn to eat dinner alone?"
+        },
+        {
+          "code": "B",
+          "label": "What would he like to try differently now?"
+        }
+      ],
+      "runtimeQuestion": null,
+      "runtimeOptions": [
+        "How did he learn to eat dinner alone?",
+        "What would he like to try differently now?"
+      ],
+      "resultingText": "Alice waited until he finished. The ordinary skill seemed more important than a beautiful account of change.",
+      "contradictionCount": 0,
+      "inventedEventCount": 0,
+      "leakedMarkupCount": 0,
+      "cyrillicCount": 0,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "runtimeErrors": [],
+      "failedRequests": [],
+      "premiseConfirmed": true,
+      "authoredChoicePreserved": true,
+      "onlyExpectedExtraChoicePersisted": true,
+      "responseAddsRelationshipFact": false,
+      "responseAddsConsentEvent": false,
+      "responseAddsCharacterKnowledge": false
+    },
+    {
+      "scene": "S21",
+      "episode": 5,
+      "authoredBranch": {
+        "S21-C1": "A",
+        "S21-C2": "A"
+      },
+      "authoredChoices": [
+        {
+          "id": "S21-C1",
+          "options": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "id": "S21-C2",
+          "options": [
+            "A",
+            "B"
+          ]
+        }
+      ],
+      "extraChoiceId": "S21-C90",
+      "selectedOptionCode": "A",
+      "precedingSourceRefs": [
+        "S21.C000.P002",
+        "S21.C000.P003",
+        "S21.C000.P003"
+      ],
+      "precedingSourceText": {
+        "sourceRefs": [
+          "S21.C000.P002",
+          "S21.C000.P003",
+          "S21.C000.P003"
+        ],
+        "ru": [
+          {
+            "ref": "S21.C000.P002",
+            "text": "Алиса открыла письмо редактору. Написала: «Я предлагаю изменить серию». Удалила слово «предлагаю», потому что слышала в нём просьбу разрешить ей иметь мысль. Вернула его: редактор имела право обсудить формат, и честность не требовала резкости."
+          },
+          {
+            "ref": "S21.C000.P003",
+            "text": "Она набрала: «Сейчас мне интереснее, как люди договариваются о маршруте, чем причины, по которым они в него отправились». Потом остановилась. Было легко сделать из спутников убедительные примеры. Но ни один из них не соглашался стать иллюстрацией её тезиса. Ей следовало сначала найти форму, которую можно защитить без чужих личных сцен."
+          },
+          {
+            "ref": "S21.C000.P003",
+            "text": "Она набрала: «Сейчас мне интереснее, как люди договариваются о маршруте, чем причины, по которым они в него отправились». Потом остановилась. Было легко сделать из спутников убедительные примеры. Но ни один из них не соглашался стать иллюстрацией её тезиса. Ей следовало сначала найти форму, которую можно защитить без чужих личных сцен."
+          }
+        ],
+        "en": [
+          {
+            "ref": "S21.C000.P002",
+            "text": "Alice opened an email to her editor. She wrote: “I suggest changing the series.” She deleted “suggest” because it sounded like asking permission to have a thought. Then she put it back: the editor had the right to discuss the format, and honesty did not require sharpness."
+          },
+          {
+            "ref": "S21.C000.P003",
+            "text": "She typed: “Right now I am more interested in how people negotiate a route than in the reasons they set out on it.” Then she stopped. It was easy to turn her companions into convincing examples. But none of them had agreed to become illustrations of her thesis. First she needed a form she could defend without someone else's private scenes."
+          },
+          {
+            "ref": "S21.C000.P003",
+            "text": "She typed: “Right now I am more interested in how people negotiate a route than in the reasons they set out on it.” Then she stopped. It was easy to turn her companions into convincing examples. But none of them had agreed to become illustrations of her thesis. First she needed a form she could defend without someone else's private scenes."
+          }
+        ]
+      },
+      "renderedQuestion": "Alice edits her letter to Marina. What principle should remain at the heart of the piece?",
+      "renderedOptions": [
+        {
+          "code": "A",
+          "label": "Write about concrete shared decisions, not other people's private secrets"
+        },
+        {
+          "code": "B",
+          "label": "Do not hide her own role in the journey"
+        }
+      ],
+      "runtimeQuestion": null,
+      "runtimeOptions": [
+        "Write about concrete shared decisions, not other people's private secrets",
+        "Do not hide her own role in the journey"
+      ],
+      "resultingText": "She returned to the paragraph about the group and removed a detail no one had given permission to publish.",
+      "contradictionCount": 0,
+      "inventedEventCount": 0,
+      "leakedMarkupCount": 0,
+      "cyrillicCount": 0,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "runtimeErrors": [],
+      "failedRequests": [],
+      "premiseConfirmed": true,
+      "authoredChoicePreserved": true,
+      "onlyExpectedExtraChoicePersisted": true,
+      "responseAddsRelationshipFact": false,
+      "responseAddsConsentEvent": false,
+      "responseAddsCharacterKnowledge": false
+    },
+    {
+      "scene": "S21",
+      "episode": 5,
+      "authoredBranch": {
+        "S21-C1": "A",
+        "S21-C2": "A"
+      },
+      "authoredChoices": [
+        {
+          "id": "S21-C1",
+          "options": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "id": "S21-C2",
+          "options": [
+            "A",
+            "B"
+          ]
+        }
+      ],
+      "extraChoiceId": "S21-C91",
+      "selectedOptionCode": "A",
+      "precedingSourceRefs": [
+        "S21.C000.P006",
+        "S21.C002.P000",
+        "S21.C002.P001"
+      ],
+      "precedingSourceText": {
+        "sourceRefs": [
+          "S21.C000.P006",
+          "S21.C002.P000",
+          "S21.C002.P001"
+        ],
+        "ru": [
+          {
+            "ref": "S21.C000.P006",
+            "text": "В комнате она открыла письмо ещё раз. Начало осталось прежним, но дальше появились конкретные границы: места и общие решения можно описывать; частные разговоры — только с отдельного согласия; никто не обязан давать истории убедительную развязку. Она не знала, понравится ли Марине эта версия. Решение отправить её всё же принадлежало Алисе."
+          },
+          {
+            "ref": "S21.C002.P000",
+            "text": "«Марина, в этой поездке я всё чаще замечаю не тех, кто громко говорит о переменах, а тех, кто делает место другому за столом. Предлагаю серию о маленьких договорённостях в дороге. Личные эпизоды появятся только там, где человек согласится на них отдельно»."
+          },
+          {
+            "ref": "S21.C002.P001",
+            "text": "Алиса перечитала письмо и добавила один пример без имён: группа переставила сушилку, чтобы проход остался свободным. Она нажала «отправить»."
+          }
+        ],
+        "en": [
+          {
+            "ref": "S21.C000.P006",
+            "text": "In her room, she opened the letter again. The beginning stayed the same, but specific boundaries appeared after it: places and shared decisions could be described; private conversations required separate permission; no one had to give a story a convincing ending. She did not know whether Marina would like this version. The decision to send it still belonged to Alice."
+          },
+          {
+            "ref": "S21.C002.P000",
+            "text": "“Marina, on this trip I keep noticing not the people who speak loudly about change, but the people who make room for someone else at the table. I suggest a series about small agreements on the road. Personal episodes will appear only where a person agrees to them separately.”"
+          },
+          {
+            "ref": "S21.C002.P001",
+            "text": "Alice reread the letter and added one example without names: the group moved the drying rack so the passage stayed clear. She pressed send."
+          }
+        ]
+      },
+      "renderedQuestion": "After sending the letter to Marina, how will Alice spend the rest of the evening?",
+      "renderedOptions": [
+        {
+          "code": "A",
+          "label": "Go out briefly to the waterfront"
+        },
+        {
+          "code": "B",
+          "label": "Read the letter once more and let it go"
+        }
+      ],
+      "runtimeQuestion": null,
+      "runtimeOptions": [
+        "Go out briefly to the waterfront",
+        "Read the letter once more and let it go"
+      ],
+      "resultingText": "She put her phone on charge and took her jacket. A night walk did not have to become another assignment for the article.",
+      "contradictionCount": 0,
+      "inventedEventCount": 0,
+      "leakedMarkupCount": 0,
+      "cyrillicCount": 0,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "runtimeErrors": [],
+      "failedRequests": [],
+      "premiseConfirmed": true,
+      "authoredChoicePreserved": true,
+      "onlyExpectedExtraChoicePersisted": true,
+      "responseAddsRelationshipFact": false,
+      "responseAddsConsentEvent": false,
+      "responseAddsCharacterKnowledge": false
+    },
+    {
+      "scene": "S61",
+      "episode": 5,
+      "authoredBranch": {
+        "S61-C1": "A"
+      },
+      "authoredChoices": [
+        {
+          "id": "S61-C1",
+          "options": [
+            "A",
+            "B"
+          ]
+        }
+      ],
+      "extraChoiceId": "S61-C90",
+      "selectedOptionCode": "A",
+      "precedingSourceRefs": [
+        "S61.C000.P002",
+        "S61.C000.P004",
+        "S61.C000.P006"
+      ],
+      "precedingSourceText": {
+        "sourceRefs": [
+          "S61.C000.P002",
+          "S61.C000.P004",
+          "S61.C000.P006"
+        ],
+        "ru": [
+          {
+            "ref": "S61.C000.P002",
+            "text": "За стойкой Рагна, хозяйка гостевого дома, которую Алиса вчера видела с полотенцами на кухне, раскладывала чистые чашки. Утром Рагна работала в своём кафе через улицу и пекла хлеб для обеих кухонь. Она узнала Алису, но не стала изображать старую знакомую."
+          },
+          {
+            "ref": "S61.C000.P004",
+            "text": "— Сегодня я за себя."
+          },
+          {
+            "ref": "S61.C000.P006",
+            "text": "Алиса заказала кофе. Когда женщина принесла его, Алиса попросила разрешения записать одну фразу о городе для своего блокнота. Та прочитала её черновик — о том, что здесь «все умеют ждать непогоды», — и покачала головой."
+          }
+        ],
+        "en": [
+          {
+            "ref": "S61.C000.P002",
+            "text": "Ragna, the guesthouse owner Alice had seen with the towels in the kitchen yesterday, was arranging clean cups behind the counter. In the morning, Ragna worked at her café across the street and baked bread for both kitchens. She recognised Alice, but did not pretend they were old acquaintances."
+          },
+          {
+            "ref": "S61.C000.P004",
+            "text": "“Today I'm on my own.”"
+          },
+          {
+            "ref": "S61.C000.P006",
+            "text": "Alice ordered coffee. When the woman brought it, Alice asked permission to write down one sentence about the town for her notebook. Ragna read her draft—about how “everyone here knows how to wait out bad weather”—and shook her head."
+          }
+        ]
+      },
+      "renderedQuestion": "Ragna tells Alice about her work at the small café. What will Alice ask?",
+      "renderedOptions": [
+        {
+          "code": "A",
+          "label": "What is a day like when there are few guests?"
+        },
+        {
+          "code": "B",
+          "label": "What does she herself like most about this place?"
+        }
+      ],
+      "runtimeQuestion": null,
+      "runtimeOptions": [
+        "What is a day like when there are few guests?",
+        "What does she herself like most about this place?"
+      ],
+      "resultingText": "Ragna described an ordinary morning and laughed: there was less free time than tourists imagined.",
+      "contradictionCount": 0,
+      "inventedEventCount": 0,
+      "leakedMarkupCount": 0,
+      "cyrillicCount": 0,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "runtimeErrors": [],
+      "failedRequests": [],
+      "premiseConfirmed": true,
+      "authoredChoicePreserved": true,
+      "onlyExpectedExtraChoicePersisted": true,
+      "responseAddsRelationshipFact": false,
+      "responseAddsConsentEvent": false,
+      "responseAddsCharacterKnowledge": false
+    },
+    {
+      "scene": "S61",
+      "episode": 5,
+      "authoredBranch": {
+        "S61-C1": "A"
+      },
+      "authoredChoices": [
+        {
+          "id": "S61-C1",
+          "options": [
+            "A",
+            "B"
+          ]
+        }
+      ],
+      "extraChoiceId": "S61-C91",
+      "selectedOptionCode": "A",
+      "precedingSourceRefs": [
+        "S61.C000.P010",
+        "S61.C000.P010",
+        "S61.C001.P000"
+      ],
+      "precedingSourceText": {
+        "sourceRefs": [
+          "S61.C000.P010",
+          "S61.C000.P010",
+          "S61.C001.P000"
+        ],
+        "ru": [
+          {
+            "ref": "S61.C000.P010",
+            "text": "Продавщица завернула чашку в бумагу. Алиса попросила ещё лист, сама проложила его между ручкой и стенкой коробки и уложила покупку в сумку. Коробка не помещалась в боковой карман; пришлось освободить место среди записей. Дома она решит, где поставить чашку."
+          },
+          {
+            "ref": "S61.C000.P010",
+            "text": "Продавщица завернула чашку в бумагу. Алиса попросила ещё лист, сама проложила его между ручкой и стенкой коробки и уложила покупку в сумку. Коробка не помещалась в боковой карман; пришлось освободить место среди записей. Дома она решит, где поставить чашку."
+          },
+          {
+            "ref": "S61.C001.P000",
+            "text": "— В абзаце про сушилку у тебя все слишком быстро стали одной командой, — сказала Марина. — Где раздражение?"
+          }
+        ],
+        "en": [
+          {
+            "ref": "S61.C000.P010",
+            "text": "The shop assistant wrapped the cup in paper. Alice asked for another sheet, put it between the handle and the side of the box, and settled the purchase in her bag. The box did not fit in the side pocket; she had to make room among the notes. At home, she would decide where to put the cup."
+          },
+          {
+            "ref": "S61.C000.P010",
+            "text": "The shop assistant wrapped the cup in paper. Alice asked for another sheet, put it between the handle and the side of the box, and settled the purchase in her bag. The box did not fit in the side pocket; she had to make room among the notes. At home, she would decide where to put the cup."
+          },
+          {
+            "ref": "S61.C001.P000",
+            "text": "“In the drying-rack paragraph, everyone became one team too quickly,” Marina said. “Where is the irritation?”"
+          }
+        ]
+      },
+      "renderedQuestion": "After the conversation and buying the cup, what will Alice keep for herself?",
+      "renderedOptions": [
+        {
+          "code": "A",
+          "label": "Not justify the purchase to her friends"
+        },
+        {
+          "code": "B",
+          "label": "Tell the group about meeting Ragna, not about the object"
+        }
+      ],
+      "runtimeQuestion": null,
+      "runtimeOptions": [
+        "Not justify the purchase to her friends",
+        "Tell the group about meeting Ragna, not about the object"
+      ],
+      "resultingText": "Alice adjusted the box in her bag. She did not have to explain why an ordinary cup mattered today.",
+      "contradictionCount": 0,
+      "inventedEventCount": 0,
+      "leakedMarkupCount": 0,
+      "cyrillicCount": 0,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "runtimeErrors": [],
+      "failedRequests": [],
+      "premiseConfirmed": true,
+      "authoredChoicePreserved": true,
+      "onlyExpectedExtraChoicePersisted": true,
+      "responseAddsRelationshipFact": false,
+      "responseAddsConsentEvent": false,
+      "responseAddsCharacterKnowledge": false
+    },
+    {
+      "scene": "S22",
+      "episode": 6,
+      "authoredBranch": {
+        "S22-C1": "A",
+        "S22-C2": "A"
+      },
+      "authoredChoices": [
+        {
+          "id": "S22-C1",
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "id": "S22-C2",
+          "options": [
+            "A",
+            "B"
+          ]
+        }
+      ],
+      "extraChoiceId": "S22-C90",
+      "selectedOptionCode": "A",
+      "precedingSourceRefs": [
+        "S22.C000.P011",
+        "S22.C003.P001",
+        "S22.C003.P002"
+      ],
+      "precedingSourceText": {
+        "sourceRefs": [
+          "S22.C000.P011",
+          "S22.C003.P001",
+          "S22.C003.P002"
+        ],
+        "ru": [
+          {
+            "ref": "S22.C000.P011",
+            "text": "Эрик развернул бумажную карту на капоте. Ветер поднял её угол. Алиса придержала его ладонью и вдруг вспомнила тот день у Hveragerði, когда ветер впервые поменял их план. Тогда отмена казалась личным поражением. Теперь перед ней были имена людей, которым придётся сообщить, что их время потрачено зря."
+          },
+          {
+            "ref": "S22.C003.P001",
+            "text": "Эрик провёл пальцем по карте."
+          },
+          {
+            "ref": "S22.C003.P002",
+            "text": "— Встречу к полудню — нельзя. Место на дороге — тоже не наше решение. Если перевал открыт, доедем в Seyðisfjörður вечером. Если нет, ночуем ближе к Egilsstaðir и звоним хозяйке дома. Я должен был предупредить вас раньше, что этот участок после дождя уязвим."
+          }
+        ],
+        "en": [
+          {
+            "ref": "S22.C000.P011",
+            "text": "Eric unfolded the paper map on the bonnet. The wind lifted one corner. Alice held it down with her palm and suddenly remembered the day near Hveragerði, when the wind first changed their plans. Then the cancellation had felt like a personal defeat. Now there were names in front of her—people who would have to be told that their time had been wasted."
+          },
+          {
+            "ref": "S22.C003.P001",
+            "text": "Eric ran a finger over the map."
+          },
+          {
+            "ref": "S22.C003.P002",
+            "text": "“The meeting by noon cannot be saved. The road section isn't our decision either. If the pass is open, we'll reach Seyðisfjörður in the evening. If not, we'll stay closer to Egilsstaðir and call the guesthouse. I should have warned you earlier that this stretch is vulnerable after rain.”"
+          }
+        ]
+      },
+      "renderedQuestion": "The weather changes the group's route. What will Alice do?",
+      "renderedOptions": [
+        {
+          "code": "A",
+          "label": "Suggest stopping to discuss the plan calmly"
+        },
+        {
+          "code": "B",
+          "label": "Ask Eric to suggest a safe option"
+        }
+      ],
+      "runtimeQuestion": null,
+      "runtimeOptions": [
+        "Suggest stopping to discuss the plan calmly",
+        "Ask Eric to suggest a safe option"
+      ],
+      "resultingText": "Eric parked by the service station. While everyone looked at the map, Alice wrote down what could not be promised to the reader.",
+      "contradictionCount": 0,
+      "inventedEventCount": 0,
+      "leakedMarkupCount": 0,
+      "cyrillicCount": 0,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "runtimeErrors": [],
+      "failedRequests": [],
+      "premiseConfirmed": true,
+      "authoredChoicePreserved": true,
+      "onlyExpectedExtraChoicePersisted": true,
+      "responseAddsRelationshipFact": false,
+      "responseAddsConsentEvent": false,
+      "responseAddsCharacterKnowledge": false
+    },
+    {
+      "scene": "S22",
+      "episode": 6,
+      "authoredBranch": {
+        "S22-C1": "A",
+        "S22-C2": "A"
+      },
+      "authoredChoices": [
+        {
+          "id": "S22-C1",
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "id": "S22-C2",
+          "options": [
+            "A",
+            "B"
+          ]
+        }
+      ],
+      "extraChoiceId": "S22-C91",
+      "selectedOptionCode": "A",
+      "precedingSourceRefs": [
+        "S22.C005.P008",
+        "S22.C005.P010",
+        "S22.C005.P012"
+      ],
+      "precedingSourceText": {
+        "sourceRefs": [
+          "S22.C005.P008",
+          "S22.C005.P010",
+          "S22.C005.P012"
+        ],
+        "ru": [
+          {
+            "ref": "S22.C005.P008",
+            "text": "— Тогда красивый поворот увидит кто-то другой."
+          },
+          {
+            "ref": "S22.C005.P010",
+            "text": "— Сделай мне хотя бы начало к вечеру, — попросила Марина. — Мне нужен человек, который меняет планы, а не сводка о состоянии дороги."
+          },
+          {
+            "ref": "S22.C005.P012",
+            "text": "— Я напишу о выборе, который можно показать, — сказала она. — И согласую с людьми то, что касается их лично."
+          }
+        ],
+        "en": [
+          {
+            "ref": "S22.C005.P008",
+            "text": "“Then someone else will see the beautiful turn.”"
+          },
+          {
+            "ref": "S22.C005.P010",
+            "text": "“Give me at least the beginning by evening,” Marina asked. “I need a person who changes plans, not a report on the state of the road.”"
+          },
+          {
+            "ref": "S22.C005.P012",
+            "text": "“I'll write about a choice I can show,” she said. “And I'll agree with people on anything that concerns them personally.”"
+          }
+        ]
+      },
+      "renderedQuestion": "Alice says what she will write after the route changes. How will she keep her voice?",
+      "renderedOptions": [
+        {
+          "code": "A",
+          "label": "Show her own decision, not only the group's agreement"
+        },
+        {
+          "code": "B",
+          "label": "Do not make herself the hero of other people's stories"
+        }
+      ],
+      "runtimeQuestion": null,
+      "runtimeOptions": [
+        "Show her own decision, not only the group's agreement",
+        "Do not make herself the hero of other people's stories"
+      ],
+      "resultingText": "She singled out the moment when she herself suggested another road. It belonged in the article.",
+      "contradictionCount": 0,
+      "inventedEventCount": 0,
+      "leakedMarkupCount": 0,
+      "cyrillicCount": 0,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "runtimeErrors": [],
+      "failedRequests": [],
+      "premiseConfirmed": true,
+      "authoredChoicePreserved": true,
+      "onlyExpectedExtraChoicePersisted": true,
+      "responseAddsRelationshipFact": false,
+      "responseAddsConsentEvent": false,
+      "responseAddsCharacterKnowledge": false
+    },
+    {
+      "scene": "S23",
+      "episode": 6,
+      "authoredBranch": {
+        "S23-C1": "A"
+      },
+      "authoredChoices": [
+        {
+          "id": "S23-C1",
+          "options": [
+            "A",
+            "B"
+          ]
+        }
+      ],
+      "extraChoiceId": "S23-C90",
+      "selectedOptionCode": "A",
+      "precedingSourceRefs": [
+        "S23.C000.P008",
+        "S23.C000.P009",
+        "S23.C002.P000"
+      ],
+      "precedingSourceText": {
+        "sourceRefs": [
+          "S23.C000.P008",
+          "S23.C000.P009",
+          "S23.C002.P000"
+        ],
+        "ru": [
+          {
+            "ref": "S23.C000.P008",
+            "text": "После двух дней в Höfn Алиса уже знала, как внимательно Эрик складывает карту, когда не уверен в решении. Теперь он держал смету двумя пальцами, будто лист может соскользнуть в воду. Она хотела коснуться его руки, но прежде спросила:"
+          },
+          {
+            "ref": "S23.C000.P009",
+            "text": "— Ты позвал меня из-за листа? Или просто хотел побыть вдвоём?"
+          },
+          {
+            "ref": "S23.C002.P000",
+            "text": "— У маяка ты говорил об этом легче, — заметила Алиса."
+          }
+        ],
+        "en": [
+          {
+            "ref": "S23.C000.P008",
+            "text": "After two days in Höfn, Alice already knew how carefully Eric folded a map when he was unsure of a decision. Now he held the budget with two fingers, as if the sheet might slide into the water. She wanted to touch his hand, but asked first:"
+          },
+          {
+            "ref": "S23.C000.P009",
+            "text": "“Did you invite me because of the paper? Or did you simply want to be alone together?”"
+          },
+          {
+            "ref": "S23.C002.P000",
+            "text": "“You talked about it more lightly at the lighthouse,” Alice observed."
+          }
+        ]
+      },
+      "renderedQuestion": "Eric says that the school will affect his ordinary life. What will Alice ask?",
+      "renderedOptions": [
+        {
+          "code": "A",
+          "label": "How does he want to combine school and personal time?"
+        },
+        {
+          "code": "B",
+          "label": "Does he need Alice's participation in the decision now?"
+        }
+      ],
+      "runtimeQuestion": null,
+      "runtimeOptions": [
+        "How does he want to combine school and personal time?",
+        "Does he need Alice's participation in the decision now?"
+      ],
+      "resultingText": "Eric did not promise a ready answer. He honestly named the days when he would not even be able to call.",
+      "contradictionCount": 0,
+      "inventedEventCount": 0,
+      "leakedMarkupCount": 0,
+      "cyrillicCount": 0,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "runtimeErrors": [],
+      "failedRequests": [],
+      "premiseConfirmed": true,
+      "authoredChoicePreserved": true,
+      "onlyExpectedExtraChoicePersisted": true,
+      "responseAddsRelationshipFact": false,
+      "responseAddsConsentEvent": false,
+      "responseAddsCharacterKnowledge": false
+    },
+    {
+      "scene": "S23",
+      "episode": 6,
+      "authoredBranch": {
+        "S23-C1": "A"
+      },
+      "authoredChoices": [
+        {
+          "id": "S23-C1",
+          "options": [
+            "A",
+            "B"
+          ]
+        }
+      ],
+      "extraChoiceId": "S23-C91",
+      "selectedOptionCode": "A",
+      "precedingSourceRefs": [
+        "S23.C009.P005",
+        "S23.C009.P006",
+        "S23.C009.P006"
+      ],
+      "precedingSourceText": {
+        "sourceRefs": [
+          "S23.C009.P005",
+          "S23.C009.P006",
+          "S23.C009.P006"
+        ],
+        "ru": [
+          {
+            "ref": "S23.C009.P005",
+            "text": "— Я напишу разные сценарии. Не обещание, что всем будет удобно. Способ назвать, кто за что отвечает."
+          },
+          {
+            "ref": "S23.C009.P006",
+            "text": "Ветер поднял край листа. Алиса прижала его ладонью рядом с рукой Эрика; он посмотрел на неё и замер. Она сама убрала руку, почувствовав, как приятно было бы не убирать. Ей хотелось узнать не только о школе, но и почему он побоялся позвать её просто так."
+          },
+          {
+            "ref": "S23.C009.P006",
+            "text": "Ветер поднял край листа. Алиса прижала его ладонью рядом с рукой Эрика; он посмотрел на неё и замер. Она сама убрала руку, почувствовав, как приятно было бы не убирать. Ей хотелось узнать не только о школе, но и почему он побоялся позвать её просто так."
+          }
+        ],
+        "en": [
+          {
+            "ref": "S23.C009.P005",
+            "text": "“I'll write different scenarios. Not a promise that everyone will be comfortable. A way to name who is responsible for what.”"
+          },
+          {
+            "ref": "S23.C009.P006",
+            "text": "The wind lifted the edge of the sheet. Alice pressed it down with her palm beside Eric's hand; he looked at her and went still. She removed her hand herself, feeling how pleasant it would have been not to. She wanted to know not only about the school, but why he had been afraid to ask her out without a reason."
+          },
+          {
+            "ref": "S23.C009.P006",
+            "text": "The wind lifted the edge of the sheet. Alice pressed it down with her palm beside Eric's hand; he looked at her and went still. She removed her hand herself, feeling how pleasant it would have been not to. She wanted to know not only about the school, but why he had been afraid to ask her out without a reason."
+          }
+        ]
+      },
+      "renderedQuestion": "Eric offers to show Alice the first version of his text. How will she agree?",
+      "renderedOptions": [
+        {
+          "code": "A",
+          "label": "Read one page over breakfast"
+        },
+        {
+          "code": "B",
+          "label": "Clarify which comments he actually wants from her"
+        }
+      ],
+      "runtimeQuestion": null,
+      "runtimeOptions": [
+        "Read one page over breakfast",
+        "Clarify which comments he actually wants from her"
+      ],
+      "resultingText": "She could give useful feedback without becoming the editor of his entire work.",
+      "contradictionCount": 0,
+      "inventedEventCount": 0,
+      "leakedMarkupCount": 0,
+      "cyrillicCount": 0,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "runtimeErrors": [],
+      "failedRequests": [],
+      "premiseConfirmed": true,
+      "authoredChoicePreserved": true,
+      "onlyExpectedExtraChoicePersisted": true,
+      "responseAddsRelationshipFact": false,
+      "responseAddsConsentEvent": false,
+      "responseAddsCharacterKnowledge": false
+    },
+    {
+      "scene": "S24",
+      "episode": 6,
+      "authoredBranch": {
+        "S24-C1": "A"
+      },
+      "authoredChoices": [
+        {
+          "id": "S24-C1",
+          "options": [
+            "A",
+            "B"
+          ]
+        }
+      ],
+      "extraChoiceId": "S24-C90",
+      "selectedOptionCode": "A",
+      "precedingSourceRefs": [
+        "S24.C000.P005",
+        "S24.C002.P000",
+        "S24.C002.P002"
+      ],
+      "precedingSourceText": {
+        "sourceRefs": [
+          "S24.C000.P005",
+          "S24.C002.P000",
+          "S24.C002.P002"
+        ],
+        "ru": [
+          {
+            "ref": "S24.C000.P005",
+            "text": "Вода под причалом двигалась медленно. Алиса вспомнила руки Ника на камере у ветреной дороги и его вчерашнее сообщение водителю. Он учился не бежать впереди согласия, но письмо от продюсера могло снова сделать бег соблазнительным."
+          },
+          {
+            "ref": "S24.C002.P000",
+            "text": "— Ты не обязан обсуждать со мной свои письма, чтобы выяснить, что было у меня с Эриком в Höfn, — сказала Алиса."
+          },
+          {
+            "ref": "S24.C002.P002",
+            "text": "— Не знаю, что было. Плохо знаю и то, что будет у меня. Письмо касается твоего лица и голоса — поэтому я здесь. Если хочешь, мы можем вернуться к нему с Эриком рядом."
+          }
+        ],
+        "en": [
+          {
+            "ref": "S24.C000.P005",
+            "text": "The water moved slowly beneath the pier. Alice remembered Nick's hands on the camera on the windy road and his message to the driver yesterday. He was learning not to run ahead of consent, but the producer's email could make running tempting again."
+          },
+          {
+            "ref": "S24.C002.P000",
+            "text": "“You don't have to discuss your emails with me to find out what happened between Eric and me in Höfn,” Alice said."
+          },
+          {
+            "ref": "S24.C002.P002",
+            "text": "“I don't know what happened. I barely know what will happen to me. The email concerns your face and voice—that's why I'm here. If you want, we can return to it with Eric beside us.”"
+          }
+        ]
+      },
+      "renderedQuestion": "Nick offers to review film fragments featuring Alice. What will she answer?",
+      "renderedOptions": [
+        {
+          "code": "A",
+          "label": "Agree to see only the shots with herself"
+        },
+        {
+          "code": "B",
+          "label": "Remind him to get the other participants' consent first"
+        }
+      ],
+      "runtimeQuestion": null,
+      "runtimeOptions": [
+        "Agree to see only the shots with herself",
+        "Remind him to get the other participants' consent first"
+      ],
+      "resultingText": "“Let's start with the parts where I am,” Alice said. The other people's stories required separate conversations with their subjects.",
+      "contradictionCount": 0,
+      "inventedEventCount": 0,
+      "leakedMarkupCount": 0,
+      "cyrillicCount": 0,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "runtimeErrors": [],
+      "failedRequests": [],
+      "premiseConfirmed": true,
+      "authoredChoicePreserved": true,
+      "onlyExpectedExtraChoicePersisted": true,
+      "responseAddsRelationshipFact": false,
+      "responseAddsConsentEvent": false,
+      "responseAddsCharacterKnowledge": false
+    },
+    {
+      "scene": "S24",
+      "episode": 6,
+      "authoredBranch": {
+        "S24-C1": "A"
+      },
+      "authoredChoices": [
+        {
+          "id": "S24-C1",
+          "options": [
+            "A",
+            "B"
+          ]
+        }
+      ],
+      "extraChoiceId": "S24-C91",
+      "selectedOptionCode": "A",
+      "precedingSourceRefs": [
+        "S24.C009.P003",
+        "S24.C009.P005",
+        "S24.C009.P007"
+      ],
+      "precedingSourceText": {
+        "sourceRefs": [
+          "S24.C009.P003",
+          "S24.C009.P005",
+          "S24.C009.P007"
+        ],
+        "ru": [
+          {
+            "ref": "S24.C009.P003",
+            "text": "— Я спросил разрешения снимать общий день, — сказал он. — Не спросил, можно ли отправлять твоё лицо в тизере. Это моя ошибка."
+          },
+          {
+            "ref": "S24.C009.P005",
+            "text": "Он не попросил похвалить его за признание. Алиса сама предложила позднее обсудить, какие общие кадры вообще допустимы для показа; сейчас ей хотелось допить кофе рядом с ним."
+          },
+          {
+            "ref": "S24.C009.P007",
+            "text": "— Посмотреть вместе оставшиеся три фрагмента. Или уйти пить кофе и разрешить мне самому сказать продюсеру, что людей я пока не показываю. Это два разных приглашения. Одно рабочее, другое — просто остаться."
+          }
+        ],
+        "en": [
+          {
+            "ref": "S24.C009.P003",
+            "text": "“I asked permission to film the shared day,” he said. “I didn't ask whether I could send your face in the teaser. That's my mistake.”"
+          },
+          {
+            "ref": "S24.C009.P005",
+            "text": "He did not ask her to praise him for admitting it. Alice herself suggested discussing later which shared shots could be shown at all; for now she wanted to finish her coffee beside him."
+          },
+          {
+            "ref": "S24.C009.P007",
+            "text": "“To look at the remaining three fragments together. Or to leave for coffee and let me tell the producer myself that I am not showing people yet. Those are two different invitations. One is work; the other is simply staying.”"
+          }
+        ]
+      },
+      "renderedQuestion": "They agree to ten minutes of viewing. How will they use them?",
+      "renderedOptions": [
+        {
+          "code": "A",
+          "label": "Pause on the shots she wants to ask about"
+        },
+        {
+          "code": "B",
+          "label": "Ask him to show the order of the fragments first"
+        }
+      ],
+      "runtimeQuestion": null,
+      "runtimeOptions": [
+        "Pause on the shots she wants to ask about",
+        "Ask him to show the order of the fragments first"
+      ],
+      "resultingText": "Alice moved closer to the screen. Nick showed her the pause button instead of explaining every frame in advance.",
+      "contradictionCount": 0,
+      "inventedEventCount": 0,
+      "leakedMarkupCount": 0,
+      "cyrillicCount": 0,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "runtimeErrors": [],
+      "failedRequests": [],
+      "premiseConfirmed": true,
+      "authoredChoicePreserved": true,
+      "onlyExpectedExtraChoicePersisted": true,
+      "responseAddsRelationshipFact": false,
+      "responseAddsConsentEvent": false,
+      "responseAddsCharacterKnowledge": false
+    },
+    {
+      "scene": "S25",
+      "episode": 6,
+      "authoredBranch": {
+        "S25-C1": "A"
+      },
+      "authoredChoices": [
+        {
+          "id": "S25-C1",
+          "options": [
+            "A",
+            "B"
+          ]
+        }
+      ],
+      "extraChoiceId": "S25-C90",
+      "selectedOptionCode": "A",
+      "precedingSourceRefs": [
+        "S25.C000.P008",
+        "S25.C002.P000",
+        "S25.C002.P001"
+      ],
+      "precedingSourceText": {
+        "sourceRefs": [
+          "S25.C000.P008",
+          "S25.C002.P000",
+          "S25.C002.P001"
+        ],
+        "ru": [
+          {
+            "ref": "S25.C000.P008",
+            "text": "Он не назвал вакансию судьбой. Алиса впервые увидела в нём человека, который может хотеть работу и одновременно не знать, как она изменит отношения. Желание перестало быть обвинением, но вопрос о расстоянии никуда не делся."
+          },
+          {
+            "ref": "S25.C002.P000",
+            "text": "— Ты видел, что в Höfn я ушла с Эриком, — сказала Алиса. — Я не хочу делать этот разговор тайной, которая будет звучать иначе потом."
+          },
+          {
+            "ref": "S25.C002.P001",
+            "text": "— Видел, — ответил Дамир. — Не знаю, что между вами, и не прошу отчёта. Я сказал бы тебе о вакансии в любом случае. Это моя работа и моя ответственность."
+          }
+        ],
+        "en": [
+          {
+            "ref": "S25.C000.P008",
+            "text": "He did not call the vacancy fate. For the first time, Alice saw a person who could want a job and still not know how it would change a relationship. Desire stopped being an accusation, but the question of distance remained."
+          },
+          {
+            "ref": "S25.C002.P000",
+            "text": "“You saw me leave with Eric in Höfn,” Alice said. “I don't want to turn this conversation into a secret that sounds different later.”"
+          },
+          {
+            "ref": "S25.C002.P001",
+            "text": "“I saw,” Damir answered. “I don't know what is between you, and I'm not asking for a report. I would have told you about the vacancy anyway. It is my work and my responsibility.”"
+          }
+        ]
+      },
+      "renderedQuestion": "Alice admits that Damir saw her evening with Eric. How will she continue the conversation?",
+      "renderedOptions": [
+        {
+          "code": "A",
+          "label": "Talk about her choice without defending it"
+        },
+        {
+          "code": "B",
+          "label": "Ask whether Damir is ready to speak without comparisons"
+        }
+      ],
+      "runtimeQuestion": null,
+      "runtimeOptions": [
+        "Talk about her choice without defending it",
+        "Ask whether Damir is ready to speak without comparisons"
+      ],
+      "resultingText": "She did not pretend another person's invitation had been a mistake. Damir listened without asking for an account of someone else's feelings.",
+      "contradictionCount": 0,
+      "inventedEventCount": 0,
+      "leakedMarkupCount": 0,
+      "cyrillicCount": 0,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "runtimeErrors": [],
+      "failedRequests": [],
+      "premiseConfirmed": true,
+      "authoredChoicePreserved": true,
+      "onlyExpectedExtraChoicePersisted": true,
+      "responseAddsRelationshipFact": false,
+      "responseAddsConsentEvent": false,
+      "responseAddsCharacterKnowledge": false
+    },
+    {
+      "scene": "S25",
+      "episode": 6,
+      "authoredBranch": {
+        "S25-C1": "A"
+      },
+      "authoredChoices": [
+        {
+          "id": "S25-C1",
+          "options": [
+            "A",
+            "B"
+          ]
+        }
+      ],
+      "extraChoiceId": "S25-C91",
+      "selectedOptionCode": "A",
+      "precedingSourceRefs": [
+        "S25.C009.P001",
+        "S25.C009.P003",
+        "S25.C009.P004"
+      ],
+      "precedingSourceText": {
+        "sourceRefs": [
+          "S25.C009.P001",
+          "S25.C009.P003",
+          "S25.C009.P004"
+        ],
+        "ru": [
+          {
+            "ref": "S25.C009.P001",
+            "text": "— Почему ты хочешь именно этого? — спросила она."
+          },
+          {
+            "ref": "S25.C009.P003",
+            "text": "Он говорил с неожиданной живостью. Алиса вспомнила, как он когда-то терпеливо показывал ей, почему болит лямка рюкзака, и как этой же терпеливостью иногда заменял вопрос о её желании. Хорошее качество не отменяло плохой привычки. Новая работа не доказывала, что привычка исчезла."
+          },
+          {
+            "ref": "S25.C009.P004",
+            "text": "— А если тебя возьмут? — спросила она."
+          }
+        ],
+        "en": [
+          {
+            "ref": "S25.C009.P001",
+            "text": "“Why do you want this one?” she asked."
+          },
+          {
+            "ref": "S25.C009.P003",
+            "text": "He spoke with unexpected animation. Alice remembered how he once patiently showed her why her backpack strap hurt, and how he sometimes used that same patience instead of asking what she wanted. A good quality did not cancel a bad habit. A new job did not prove the habit was gone."
+          },
+          {
+            "ref": "S25.C009.P004",
+            "text": "“And if they take you?” she asked."
+          }
+        ]
+      },
+      "renderedQuestion": "They discuss the date of Damir's interview. How will they agree on the next conversation?",
+      "renderedOptions": [
+        {
+          "code": "A",
+          "label": "Ask him to share a confirmed date, not a promise"
+        },
+        {
+          "code": "B",
+          "label": "Discuss the result separately, not while travelling"
+        }
+      ],
+      "runtimeQuestion": null,
+      "runtimeOptions": [
+        "Ask him to share a confirmed date, not a promise",
+        "Discuss the result separately, not while travelling"
+      ],
+      "resultingText": "Alice wanted a real decision, not deadlines that could change without her.",
+      "contradictionCount": 0,
+      "inventedEventCount": 0,
+      "leakedMarkupCount": 0,
+      "cyrillicCount": 0,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "runtimeErrors": [],
+      "failedRequests": [],
+      "premiseConfirmed": true,
+      "authoredChoicePreserved": true,
+      "onlyExpectedExtraChoicePersisted": true,
+      "responseAddsRelationshipFact": false,
+      "responseAddsConsentEvent": false,
+      "responseAddsCharacterKnowledge": false
+    },
+    {
+      "scene": "S58",
+      "episode": 6,
+      "authoredBranch": {
+        "S58-C1": "A"
+      },
+      "authoredChoices": [
+        {
+          "id": "S58-C1",
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        }
+      ],
+      "extraChoiceId": "S58-C90",
+      "selectedOptionCode": "A",
+      "precedingSourceRefs": [
+        "S58.C000.P006",
+        "S58.C000.P006",
+        "S58.C002.P001"
+      ],
+      "precedingSourceText": {
+        "sourceRefs": [
+          "S58.C000.P006",
+          "S58.C000.P006",
+          "S58.C002.P001"
+        ],
+        "ru": [
+          {
+            "ref": "S58.C000.P006",
+            "text": "В магазине нашлись картофель, лук, морковь, банка фасоли, хлеб и небольшая упаковка сливок. Ник держал две пачки печенья с видом человека, которому поручили международные переговоры. Эрик проверял, хватит ли кастрюли на четверых. Дамир спрашивал у продавщицы, какой хлеб лучше взять к густому супу. Алиса выбирала между петрушкой и укропом, не в силах решить, что из них более похоже на их поездку."
+          },
+          {
+            "ref": "S58.C000.P006",
+            "text": "В магазине нашлись картофель, лук, морковь, банка фасоли, хлеб и небольшая упаковка сливок. Ник держал две пачки печенья с видом человека, которому поручили международные переговоры. Эрик проверял, хватит ли кастрюли на четверых. Дамир спрашивал у продавщицы, какой хлеб лучше взять к густому супу. Алиса выбирала между петрушкой и укропом, не в силах решить, что из них более похоже на их поездку."
+          },
+          {
+            "ref": "S58.C002.P001",
+            "text": "— Мы точно хотим эту? Я уже сегодня трижды говорил «точно» слишком рано."
+          }
+        ],
+        "en": [
+          {
+            "ref": "S58.C000.P006",
+            "text": "The shop had potatoes, onions, carrots, a tin of beans, bread, and a small carton of cream. Nick held two packets of biscuits like someone entrusted with international negotiations. Eric checked whether the pot would hold enough for four. Damir asked the shop assistant which bread was best with thick soup. Alice chose between parsley and dill, unable to decide which was more like their trip."
+          },
+          {
+            "ref": "S58.C000.P006",
+            "text": "The shop had potatoes, onions, carrots, a tin of beans, bread, and a small carton of cream. Nick held two packets of biscuits like someone entrusted with international negotiations. Eric checked whether the pot would hold enough for four. Damir asked the shop assistant which bread was best with thick soup. Alice chose between parsley and dill, unable to decide which was more like their trip."
+          },
+          {
+            "ref": "S58.C002.P001",
+            "text": "“Are we sure we want this? I've already said ‘sure’ too early three times today.”"
+          }
+        ]
+      },
+      "renderedQuestion": "Eric asks again whether the group chose the right bread. What will Alice say?",
+      "renderedOptions": [
+        {
+          "code": "A",
+          "label": "Confirm that she herself wants this loaf"
+        },
+        {
+          "code": "B",
+          "label": "Support his joke about excessive precision"
+        }
+      ],
+      "runtimeQuestion": null,
+      "runtimeOptions": [
+        "Confirm that she herself wants this loaf",
+        "Support his joke about excessive precision"
+      ],
+      "resultingText": "Alice took the bread from the shelf. After the day's changes, she liked that today's decision could be this simple.",
+      "contradictionCount": 0,
+      "inventedEventCount": 0,
+      "leakedMarkupCount": 0,
+      "cyrillicCount": 0,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "runtimeErrors": [],
+      "failedRequests": [],
+      "premiseConfirmed": true,
+      "authoredChoicePreserved": true,
+      "onlyExpectedExtraChoicePersisted": true,
+      "responseAddsRelationshipFact": false,
+      "responseAddsConsentEvent": false,
+      "responseAddsCharacterKnowledge": false
+    },
+    {
+      "scene": "S58",
+      "episode": 6,
+      "authoredBranch": {
+        "S58-C1": "A"
+      },
+      "authoredChoices": [
+        {
+          "id": "S58-C1",
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        }
+      ],
+      "extraChoiceId": "S58-C91",
+      "selectedOptionCode": "A",
+      "precedingSourceRefs": [
+        "S58.C008.P000",
+        "S58.C009.P001",
+        "S58.C009.P001"
+      ],
+      "precedingSourceText": {
+        "sourceRefs": [
+          "S58.C008.P000",
+          "S58.C009.P001",
+          "S58.C009.P001"
+        ],
+        "ru": [
+          {
+            "ref": "S58.C008.P000",
+            "text": "Алиса взяла два небольших клубня, Дамир — самый крупный. Ник предложил поменяться, чтобы никому не досталась вся трудная работа, и они действительно поменялись. Пока чистили, никто не руководил остальными из-за стола."
+          },
+          {
+            "ref": "S58.C009.P001",
+            "text": "Когда суп начал тихо кипеть, хозяйка дома заглянула узнать, не нужен ли им ещё стул. Услышав историю с закрытым кафе, она принесла маленькую банку горчицы и сказала, что так ужин будет менее похож на наказание погодой. Они предложили ей попробовать позже. Она сказала, что сначала закончит убирать комнаты, и оставила им четыре дополнительные ложки «на случай, если вы опять пригласите половину города»."
+          },
+          {
+            "ref": "S58.C009.P001",
+            "text": "Когда суп начал тихо кипеть, хозяйка дома заглянула узнать, не нужен ли им ещё стул. Услышав историю с закрытым кафе, она принесла маленькую банку горчицы и сказала, что так ужин будет менее похож на наказание погодой. Они предложили ей попробовать позже. Она сказала, что сначала закончит убирать комнаты, и оставила им четыре дополнительные ложки «на случай, если вы опять пригласите половину города»."
+          }
+        ],
+        "en": [
+          {
+            "ref": "S58.C008.P000",
+            "text": "Alice took two small potatoes, and Damir took the largest. Nick suggested trading so no one got all the difficult work, and they actually traded. While they peeled, no one directed the others from across the table."
+          },
+          {
+            "ref": "S58.C009.P001",
+            "text": "When the soup began to simmer quietly, the owner came in to ask whether they needed another chair. Hearing about the closed café, she brought a small jar of mustard and said dinner would then feel less like punishment by weather. They offered to let her try it later. She said she had to finish cleaning the rooms first, and left them four extra spoons “in case you invite half the town again.”"
+          },
+          {
+            "ref": "S58.C009.P001",
+            "text": "When the soup began to simmer quietly, the owner came in to ask whether they needed another chair. Hearing about the closed café, she brought a small jar of mustard and said dinner would then feel less like punishment by weather. They offered to let her try it later. She said she had to finish cleaning the rooms first, and left them four extra spoons “in case you invite half the town again.”"
+          }
+        ]
+      },
+      "renderedQuestion": "The owner brings mustard to their dinner. How will Alice accept the help?",
+      "renderedOptions": [
+        {
+          "code": "A",
+          "label": "Thank her and offer her a seat for a minute"
+        },
+        {
+          "code": "B",
+          "label": "Help her clear the table for the other guests"
+        }
+      ],
+      "runtimeQuestion": null,
+      "runtimeOptions": [
+        "Thank her and offer her a seat for a minute",
+        "Help her clear the table for the other guests"
+      ],
+      "resultingText": "The owner smiled and declined: other guests were waiting. But she told them where she had bought the mustard.",
+      "contradictionCount": 0,
+      "inventedEventCount": 0,
+      "leakedMarkupCount": 0,
+      "cyrillicCount": 0,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "runtimeErrors": [],
+      "failedRequests": [],
+      "premiseConfirmed": true,
+      "authoredChoicePreserved": true,
+      "onlyExpectedExtraChoicePersisted": true,
+      "responseAddsRelationshipFact": false,
+      "responseAddsConsentEvent": false,
+      "responseAddsCharacterKnowledge": false
+    },
+    {
+      "scene": "S26",
+      "episode": 6,
+      "authoredBranch": {
+        "S26-C1": "A"
+      },
+      "authoredChoices": [
+        {
+          "id": "S26-C1",
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        }
+      ],
+      "extraChoiceId": "S26-C90",
+      "selectedOptionCode": "A",
+      "precedingSourceRefs": [
+        "S26.C000.P001",
+        "S26.C000.P002",
+        "S26.C000.P002"
+      ],
+      "precedingSourceText": {
+        "sourceRefs": [
+          "S26.C000.P001",
+          "S26.C000.P002",
+          "S26.C000.P002"
+        ],
+        "ru": [
+          {
+            "ref": "S26.C000.P001",
+            "text": "Она перечитала свой первый абзац и дописала: «Закрытая дорога не сказала нам, кого любить. Она заставила спросить, кто имеет право решать за другого». Формулировка показалась слишком ровной для того, как неровно билось сердце. Алиса вычеркнула её. Статья могла подождать до утра. Разговор, который она откладывала под видом работы, — нет."
+          },
+          {
+            "ref": "S26.C000.P002",
+            "text": "Она вышла во двор. Трое мужчин оставались поблизости: Эрик укладывал карту в машину, Ник пил воду у ступеней, Дамир возвращал хозяйке пустую кастрюлю. Каждый мог выслушать честный ответ. Никто не мог вынести его вместо неё. Вечер в Höfn не заключил за Алису договор; сегодняшний ужин тоже. Она решала, с кем хочет продолжить близость после этой поездки — или хочет ли сейчас выбирать отношения вообще."
+          },
+          {
+            "ref": "S26.C000.P002",
+            "text": "Она вышла во двор. Трое мужчин оставались поблизости: Эрик укладывал карту в машину, Ник пил воду у ступеней, Дамир возвращал хозяйке пустую кастрюлю. Каждый мог выслушать честный ответ. Никто не мог вынести его вместо неё. Вечер в Höfn не заключил за Алису договор; сегодняшний ужин тоже. Она решала, с кем хочет продолжить близость после этой поездки — или хочет ли сейчас выбирать отношения вообще."
+          }
+        ],
+        "en": [
+          {
+            "ref": "S26.C000.P001",
+            "text": "She reread her first paragraph and added: “The closed road did not tell us whom to love. It made us ask who has the right to decide for someone else.” The sentence felt too even for the uneven beating of her heart. Alice crossed it out. The article could wait until morning. The conversation she had been postponing under the name of work could not."
+          },
+          {
+            "ref": "S26.C000.P002",
+            "text": "She went into the yard. The three men were still nearby: Eric was putting the map in the car, Nick was drinking water by the steps, and Damir was returning the empty pot to the owner. Each of them could hear an honest answer. None of them could give it for her. The evening in Höfn had not signed a contract on Alice's behalf; neither had tonight's dinner. She was deciding with whom she wanted to continue a closeness after the trip—or whether she wanted to choose a relationship at all right now."
+          },
+          {
+            "ref": "S26.C000.P002",
+            "text": "She went into the yard. The three men were still nearby: Eric was putting the map in the car, Nick was drinking water by the steps, and Damir was returning the empty pot to the owner. Each of them could hear an honest answer. None of them could give it for her. The evening in Höfn had not signed a contract on Alice's behalf; neither had tonight's dinner. She was deciding with whom she wanted to continue a closeness after the trip—or whether she wanted to choose a relationship at all right now."
+          }
+        ]
+      },
+      "renderedQuestion": "Before choosing a direction, Alice understands...",
+      "renderedOptions": [
+        {
+          "code": "A",
+          "label": "I need to take the first step myself"
+        },
+        {
+          "code": "B",
+          "label": "I have the right not to answer out of politeness"
+        }
+      ],
+      "runtimeQuestion": null,
+      "runtimeOptions": [
+        "I need to take the first step myself",
+        "I have the right not to answer out of politeness"
+      ],
+      "resultingText": "She put away her phone and decided to name her desire first, then hear the other person's answer.",
+      "contradictionCount": 0,
+      "inventedEventCount": 0,
+      "leakedMarkupCount": 0,
+      "cyrillicCount": 0,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "runtimeErrors": [],
+      "failedRequests": [],
+      "premiseConfirmed": true,
+      "authoredChoicePreserved": true,
+      "onlyExpectedExtraChoicePersisted": true,
+      "responseAddsRelationshipFact": false,
+      "responseAddsConsentEvent": false,
+      "responseAddsCharacterKnowledge": false
+    },
+    {
+      "scene": "S26",
+      "episode": 6,
+      "authoredBranch": {
+        "S26-C1": "A"
+      },
+      "authoredChoices": [
+        {
+          "id": "S26-C1",
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        }
+      ],
+      "extraChoiceId": "S26-C91",
+      "selectedOptionCode": "A",
+      "precedingSourceRefs": [
+        "S26.C002.P000",
+        "S26.C002.P001",
+        "S26.C002.P003"
+      ],
+      "precedingSourceText": {
+        "sourceRefs": [
+          "S26.C002.P000",
+          "S26.C002.P001",
+          "S26.C002.P003"
+        ],
+        "ru": [
+          {
+            "ref": "S26.C002.P000",
+            "text": "Алиса подошла к машине. Эрик закрыл багажник и не двинулся навстречу, пока она не сказала:"
+          },
+          {
+            "ref": "S26.C002.P001",
+            "text": "— Я хочу продолжить разговор, который начался не у твоей карты, а там, где ты позволил мне с ней не согласиться. Мне хочется попробовать быть с тобой. Без обещания переехать и без роли человека, который исправит твою школу."
+          },
+          {
+            "ref": "S26.C002.P003",
+            "text": "— Я хочу того же. И мне придётся учиться спрашивать, когда я привык действовать быстро."
+          }
+        ],
+        "en": [
+          {
+            "ref": "S26.C002.P000",
+            "text": "Alice approached the car. Eric closed the boot and did not move toward her until she spoke:"
+          },
+          {
+            "ref": "S26.C002.P001",
+            "text": "“I want to continue the conversation that began not by your map, but where you let me disagree with you about it. I want to try being with you. Without promising to move and without becoming the person who fixes your school.”"
+          },
+          {
+            "ref": "S26.C002.P003",
+            "text": "“I want that too. And I will have to learn to ask when I am used to acting quickly.”"
+          }
+        ]
+      },
+      "renderedQuestion": "What does Alice want to say to the person she chooses?",
+      "renderedOptions": [
+        {
+          "code": "A",
+          "label": "I like the present, not the promise of an ideal future"
+        },
+        {
+          "code": "B",
+          "label": "It matters to me to keep my own space"
+        }
+      ],
+      "runtimeQuestion": null,
+      "runtimeOptions": [
+        "I like the present, not the promise of an ideal future",
+        "It matters to me to keep my own space"
+      ],
+      "resultingText": "She repeated a short sentence in her mind and stopped looking for a beautiful one. She wanted to be understood the first time.",
+      "contradictionCount": 0,
+      "inventedEventCount": 0,
+      "leakedMarkupCount": 0,
+      "cyrillicCount": 0,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "runtimeErrors": [],
+      "failedRequests": [],
+      "premiseConfirmed": true,
+      "authoredChoicePreserved": true,
+      "onlyExpectedExtraChoicePersisted": true,
+      "responseAddsRelationshipFact": false,
+      "responseAddsConsentEvent": false,
+      "responseAddsCharacterKnowledge": false
+    }
+  ],
+  "visualCases": [
+    {
+      "scene": "S17",
+      "episode": 5,
+      "viewport": {
+        "width": 1920,
+        "height": 900
+      },
+      "initial": {
+        "sceneId": "S17",
+        "position": 0,
+        "locale": "en",
+        "text": "They reached Höfn late in the afternoon. After the glacier lagoon, conversation in the car came and went: each of them was trying to hold on to their own impression without getting in the others' way. Alice watched a fingerprint trail on the fogged window.",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 1920,
+          "height": 900
+        }
+      },
+      "choice": {
+        "sceneId": "S17",
+        "position": 14,
+        "locale": "en",
+        "text": "After the shared dinner, Alice has some time. What should she do?\nHelp clear the table and stay by the map\nStep outside to the car for a few minutes",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 1920,
+          "height": 900
+        }
+      },
+      "choiceReached": true,
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S17-initial-1920x900.png",
+          "sha256": "9a1e2fae3910df560099f326fa5289141d022ae62594ef33fabaa1993dbec495",
+          "bytes": 88845
+        },
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S17-choice-1920x900.png",
+          "sha256": "3792a8b99e8a81b0993af66d037e25bc996639a0d7cb02f0a126dab042645932",
+          "bytes": 1963809
+        }
+      ],
+      "runtimeErrors": [],
+      "failedRequests": []
+    },
+    {
+      "scene": "S17",
+      "episode": 5,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "initial": {
+        "sceneId": "S17",
+        "position": 0,
+        "locale": "en",
+        "text": "They reached Höfn late in the afternoon. After the glacier lagoon, conversation in the car came and went: each of them was trying to hold on to their own impression without getting in the others' way. Alice watched a fingerprint trail on the fogged window.",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      "choice": {
+        "sceneId": "S17",
+        "position": 14,
+        "locale": "en",
+        "text": "After the shared dinner, Alice has some time. What should she do?\nHelp clear the table and stay by the map\nStep outside to the car for a few minutes",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      "choiceReached": true,
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S17-initial-390x844.png",
+          "sha256": "13314504e5c8f4f7ffe58fd68e6b764b5940dfcbd892fb7ad3abf9c1865a07a0",
+          "bytes": 55360
+        },
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S17-choice-390x844.png",
+          "sha256": "b832121f6eec57ecf7cd96073965e98ef6c591d62d46b42cb2ca247ea1228ac6",
+          "bytes": 450164
+        }
+      ],
+      "runtimeErrors": [],
+      "failedRequests": []
+    },
+    {
+      "scene": "S17",
+      "episode": 5,
+      "viewport": {
+        "width": 360,
+        "height": 640
+      },
+      "initial": {
+        "sceneId": "S17",
+        "position": 0,
+        "locale": "en",
+        "text": "They reached Höfn late in the afternoon. After the glacier lagoon, conversation in the car came and went: each of them was trying to hold on to their own impression without getting in the others' way. Alice watched a fingerprint trail on the fogged window.",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 360,
+          "height": 640
+        }
+      },
+      "choice": {
+        "sceneId": "S17",
+        "position": 14,
+        "locale": "en",
+        "text": "After the shared dinner, Alice has some time. What should she do?\nHelp clear the table and stay by the map\nStep outside to the car for a few minutes",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 360,
+          "height": 640
+        }
+      },
+      "choiceReached": true,
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S17-initial-360x640.png",
+          "sha256": "e8ba9cb39e279d8c00d255a841a68beee414a4fa8dd2cbcc9ee1ae99cb15f564",
+          "bytes": 54935
+        },
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S17-choice-360x640.png",
+          "sha256": "692042b92a81aee55cebe79652f20b9764f7735043147fc9f508fb6287f66205",
+          "bytes": 305582
+        }
+      ],
+      "runtimeErrors": [],
+      "failedRequests": []
+    },
+    {
+      "scene": "S19",
+      "episode": 5,
+      "viewport": {
+        "width": 1920,
+        "height": 900
+      },
+      "initial": {
+        "sceneId": "S19",
+        "position": 0,
+        "locale": "en",
+        "text": "By the entrance, Nick held his phone up for Alice to see: the schedule said the pool was open until nine today, on a weekday.\n“The last hour is open. If we spend it discussing whether to go, it will be a very modern date.”",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 1920,
+          "height": 900
+        }
+      },
+      "choice": {
+        "sceneId": "S19",
+        "position": 14,
+        "locale": "en",
+        "text": "Nick turns the pool game into a competition. What will Alice do?\nPlay along with his sporting ambition\nSuggest simply swimming beside him",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 1920,
+          "height": 900
+        }
+      },
+      "choiceReached": true,
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S19-initial-1920x900.png",
+          "sha256": "bce9b2ad6a709c4450067b123182ab6b210cbdde91c6ff48194c66c1b2d2b1f8",
+          "bytes": 83892
+        },
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S19-choice-1920x900.png",
+          "sha256": "e1d44b1d87665c93c4bc64f3f8cd319869ba44d323216071300f5cfdcbee74bc",
+          "bytes": 1750304
+        }
+      ],
+      "runtimeErrors": [],
+      "failedRequests": []
+    },
+    {
+      "scene": "S19",
+      "episode": 5,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "initial": {
+        "sceneId": "S19",
+        "position": 0,
+        "locale": "en",
+        "text": "By the entrance, Nick held his phone up for Alice to see: the schedule said the pool was open until nine today, on a weekday.\n“The last hour is open. If we spend it discussing whether to go, it will be a very modern date.”",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      "choice": {
+        "sceneId": "S19",
+        "position": 14,
+        "locale": "en",
+        "text": "Nick turns the pool game into a competition. What will Alice do?\nPlay along with his sporting ambition\nSuggest simply swimming beside him",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      "choiceReached": true,
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S19-initial-390x844.png",
+          "sha256": "09bf7f586740bb545640e5a257702148018258ac404101b40c1faa96dfb623c3",
+          "bytes": 50497
+        },
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S19-choice-390x844.png",
+          "sha256": "aa8446bb009e1620133351057c6b4a7b69a463c30b357532d0e2f0662543eb03",
+          "bytes": 398040
+        }
+      ],
+      "runtimeErrors": [],
+      "failedRequests": []
+    },
+    {
+      "scene": "S19",
+      "episode": 5,
+      "viewport": {
+        "width": 360,
+        "height": 640
+      },
+      "initial": {
+        "sceneId": "S19",
+        "position": 0,
+        "locale": "en",
+        "text": "By the entrance, Nick held his phone up for Alice to see: the schedule said the pool was open until nine today, on a weekday.\n“The last hour is open. If we spend it discussing whether to go, it will be a very modern date.”",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 360,
+          "height": 640
+        }
+      },
+      "choice": {
+        "sceneId": "S19",
+        "position": 14,
+        "locale": "en",
+        "text": "Nick turns the pool game into a competition. What will Alice do?\nPlay along with his sporting ambition\nSuggest simply swimming beside him",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 360,
+          "height": 640
+        }
+      },
+      "choiceReached": true,
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S19-initial-360x640.png",
+          "sha256": "348616fc844bbda029f9c9a197c0713ecec167a9b34e54b28fcc748235e4802e",
+          "bytes": 48142
+        },
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S19-choice-360x640.png",
+          "sha256": "4e9994c557d3e4d30c236d77367c76fa58119e26239aeeeb0fcfc76e144c5d11",
+          "bytes": 278419
+        }
+      ],
+      "runtimeErrors": [],
+      "failedRequests": []
+    },
+    {
+      "scene": "S21",
+      "episode": 5,
+      "viewport": {
+        "width": 1920,
+        "height": 900
+      },
+      "initial": {
+        "sceneId": "S21",
+        "position": 0,
+        "locale": "en",
+        "text": "After making her choice, Alice returned to her room before the others. Cars moved slowly beyond the window; the wind worried at the guesthouse sign. She felt hungry even though she had just eaten: it was a familiar feeling before a difficult letter.",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 1920,
+          "height": 900
+        }
+      },
+      "choice": {
+        "sceneId": "S21",
+        "position": 6,
+        "locale": "en",
+        "text": "Alice edits her letter to Marina. What principle should remain at the heart of the piece?\nWrite about concrete shared decisions, not other people's private secrets\nDo not hide her own role in the journey",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 1920,
+          "height": 900
+        }
+      },
+      "choiceReached": true,
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S21-initial-1920x900.png",
+          "sha256": "672b82080586f3ed0227191c105e5fe496bfb2250e0f46468609bf1d8d55a229",
+          "bytes": 86873
+        },
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S21-choice-1920x900.png",
+          "sha256": "4b7291e0165a2fdbe20dedff2ec80502cc993a62deb2aeb7d20b6a2bd4b75760",
+          "bytes": 1562979
+        }
+      ],
+      "runtimeErrors": [],
+      "failedRequests": []
+    },
+    {
+      "scene": "S21",
+      "episode": 5,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "initial": {
+        "sceneId": "S21",
+        "position": 0,
+        "locale": "en",
+        "text": "After making her choice, Alice returned to her room before the others. Cars moved slowly beyond the window; the wind worried at the guesthouse sign. She felt hungry even though she had just eaten: it was a familiar feeling before a difficult letter.",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      "choice": {
+        "sceneId": "S21",
+        "position": 6,
+        "locale": "en",
+        "text": "Alice edits her letter to Marina. What principle should remain at the heart of the piece?\nWrite about concrete shared decisions, not other people's private secrets\nDo not hide her own role in the journey",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      "choiceReached": true,
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S21-initial-390x844.png",
+          "sha256": "d2c3d75a29a36ed49ab9b8dd46000771c3a4cd1ec52039cebf227b2dbf522e0a",
+          "bytes": 54811
+        },
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S21-choice-390x844.png",
+          "sha256": "7aca3a45a1021287a59732fe17621ee4301f1714543d2a3977b60e84929169b9",
+          "bytes": 375984
+        }
+      ],
+      "runtimeErrors": [],
+      "failedRequests": []
+    },
+    {
+      "scene": "S21",
+      "episode": 5,
+      "viewport": {
+        "width": 360,
+        "height": 640
+      },
+      "initial": {
+        "sceneId": "S21",
+        "position": 0,
+        "locale": "en",
+        "text": "After making her choice, Alice returned to her room before the others. Cars moved slowly beyond the window; the wind worried at the guesthouse sign. She felt hungry even though she had just eaten: it was a familiar feeling before a difficult letter.",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 360,
+          "height": 640
+        }
+      },
+      "choice": {
+        "sceneId": "S21",
+        "position": 6,
+        "locale": "en",
+        "text": "Alice edits her letter to Marina. What principle should remain at the heart of the piece?\nWrite about concrete shared decisions, not other people's private secrets\nDo not hide her own role in the journey",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 360,
+          "height": 640
+        }
+      },
+      "choiceReached": true,
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S21-initial-360x640.png",
+          "sha256": "7ec9cb41c842adf41a1f1afc72f6cefc382057bce951de074eaf636b7093fdab",
+          "bytes": 53330
+        },
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S21-choice-360x640.png",
+          "sha256": "c4da47d2e3cfde760cce04205347e1109d383a172353fb389d1b29275488be29",
+          "bytes": 249786
+        }
+      ],
+      "runtimeErrors": [],
+      "failedRequests": []
+    },
+    {
+      "scene": "S61",
+      "episode": 5,
+      "viewport": {
+        "width": 1920,
+        "height": 900
+      },
+      "initial": {
+        "sceneId": "S61",
+        "position": 0,
+        "locale": "en",
+        "text": "Alice went out alone after breakfast. In Höfn, there was no need to turn a free day into a tour of mandatory points. She took her wallet, notebook, and a thin hat; she put her phone deeper in her pocket. The small shops and cafés had their own hours.",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 1920,
+          "height": 900
+        }
+      },
+      "choice": {
+        "sceneId": "S61",
+        "position": 7,
+        "locale": "en",
+        "text": "Ragna tells Alice about her work at the small café. What will Alice ask?\nWhat is a day like when there are few guests?\nWhat does she herself like most about this place?",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 1920,
+          "height": 900
+        }
+      },
+      "choiceReached": true,
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S61-initial-1920x900.png",
+          "sha256": "f0625eed2d2aad922d667948c18f5af7a2d788a899ce8489e1b5d0849d360c2b",
+          "bytes": 85612
+        },
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S61-choice-1920x900.png",
+          "sha256": "40952a30bcb869083efa55f426ff94449e1e052aaeb9b5498c5ee52e51bf6e6a",
+          "bytes": 2165280
+        }
+      ],
+      "runtimeErrors": [],
+      "failedRequests": []
+    },
+    {
+      "scene": "S61",
+      "episode": 5,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "initial": {
+        "sceneId": "S61",
+        "position": 0,
+        "locale": "en",
+        "text": "Alice went out alone after breakfast. In Höfn, there was no need to turn a free day into a tour of mandatory points. She took her wallet, notebook, and a thin hat; she put her phone deeper in her pocket. The small shops and cafés had their own hours.",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      "choice": {
+        "sceneId": "S61",
+        "position": 7,
+        "locale": "en",
+        "text": "Ragna tells Alice about her work at the small café. What will Alice ask?\nWhat is a day like when there are few guests?\nWhat does she herself like most about this place?",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      "choiceReached": true,
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S61-initial-390x844.png",
+          "sha256": "70b56f5ebb3dcaec0185e7cf102c713ea4c33587983cb448e203c94005b92ac0",
+          "bytes": 58202
+        },
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S61-choice-390x844.png",
+          "sha256": "996b4b32737c66b59090d89b143a04740097ae85d2f38aa4a7e897a175131b1c",
+          "bytes": 521988
+        }
+      ],
+      "runtimeErrors": [],
+      "failedRequests": []
+    },
+    {
+      "scene": "S61",
+      "episode": 5,
+      "viewport": {
+        "width": 360,
+        "height": 640
+      },
+      "initial": {
+        "sceneId": "S61",
+        "position": 0,
+        "locale": "en",
+        "text": "Alice went out alone after breakfast. In Höfn, there was no need to turn a free day into a tour of mandatory points. She took her wallet, notebook, and a thin hat; she put her phone deeper in her pocket. The small shops and cafés had their own hours.",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 360,
+          "height": 640
+        }
+      },
+      "choice": {
+        "sceneId": "S61",
+        "position": 7,
+        "locale": "en",
+        "text": "Ragna tells Alice about her work at the small café. What will Alice ask?\nWhat is a day like when there are few guests?\nWhat does she herself like most about this place?",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 360,
+          "height": 640
+        }
+      },
+      "choiceReached": true,
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S61-initial-360x640.png",
+          "sha256": "88aa8c276d5dfc812d8587d7df15ca1d04a25911ad8d056c8fe3ae74d1074fa4",
+          "bytes": 57796
+        },
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S61-choice-360x640.png",
+          "sha256": "8f5ac9ec3e62e765d0173af474a1f3a3c1f42af8e4803b22864fa94a1fac0839",
+          "bytes": 347874
+        }
+      ],
+      "runtimeErrors": [],
+      "failedRequests": []
+    },
+    {
+      "scene": "S22",
+      "episode": 6,
+      "viewport": {
+        "width": 1920,
+        "height": 900
+      },
+      "initial": {
+        "sceneId": "S22",
+        "position": 0,
+        "locale": "en",
+        "text": "In the morning, the sea was on the right, then on the left, then disappeared altogether. The road curved around a slope, and Alice saw a narrow strip of shore below: a house, a pier, and three boats pulled onto the grass. On the map, the route looked straight.",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 1920,
+          "height": 900
+        }
+      },
+      "choice": {
+        "sceneId": "S22",
+        "position": 13,
+        "locale": "en",
+        "text": "The weather changes the group's route. What will Alice do?\nSuggest stopping to discuss the plan calmly\nAsk Eric to suggest a safe option",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 1920,
+          "height": 900
+        }
+      },
+      "choiceReached": true,
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S22-initial-1920x900.png",
+          "sha256": "bb8bde2afb534c97aeae3593d38d3fe91beb5d08475294b308b353cce4175306",
+          "bytes": 1789419
+        },
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S22-choice-1920x900.png",
+          "sha256": "cd2ab3df5054c7df62a26d58a0ebb3d0f720ba9301bf8aaa32c178a7fe7d9d64",
+          "bytes": 1801876
+        }
+      ],
+      "runtimeErrors": [],
+      "failedRequests": []
+    },
+    {
+      "scene": "S22",
+      "episode": 6,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "initial": {
+        "sceneId": "S22",
+        "position": 0,
+        "locale": "en",
+        "text": "In the morning, the sea was on the right, then on the left, then disappeared altogether. The road curved around a slope, and Alice saw a narrow strip of shore below: a house, a pier, and three boats pulled onto the grass. On the map, the route looked straight.",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      "choice": {
+        "sceneId": "S22",
+        "position": 13,
+        "locale": "en",
+        "text": "The weather changes the group's route. What will Alice do?\nSuggest stopping to discuss the plan calmly\nAsk Eric to suggest a safe option",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      "choiceReached": true,
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S22-initial-390x844.png",
+          "sha256": "06884cc1c3450bef3c7f3df00ef16d991f1b127909e57e93ffdf0f7c436ad9f7",
+          "bytes": 62215
+        },
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S22-choice-390x844.png",
+          "sha256": "a2f9a127235917a8908d40d406d66e9310df3d526d437df5328e88b6cb1defe5",
+          "bytes": 332769
+        }
+      ],
+      "runtimeErrors": [],
+      "failedRequests": []
+    },
+    {
+      "scene": "S22",
+      "episode": 6,
+      "viewport": {
+        "width": 360,
+        "height": 640
+      },
+      "initial": {
+        "sceneId": "S22",
+        "position": 0,
+        "locale": "en",
+        "text": "In the morning, the sea was on the right, then on the left, then disappeared altogether. The road curved around a slope, and Alice saw a narrow strip of shore below: a house, a pier, and three boats pulled onto the grass. On the map, the route looked straight.",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 360,
+          "height": 640
+        }
+      },
+      "choice": {
+        "sceneId": "S22",
+        "position": 13,
+        "locale": "en",
+        "text": "The weather changes the group's route. What will Alice do?\nSuggest stopping to discuss the plan calmly\nAsk Eric to suggest a safe option",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 360,
+          "height": 640
+        }
+      },
+      "choiceReached": true,
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S22-initial-360x640.png",
+          "sha256": "067bf1a41693340dd5fa78b29fc0134894a95031b83592923ca6d03728c81fc6",
+          "bytes": 249462
+        },
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S22-choice-360x640.png",
+          "sha256": "92f18bad3fde1fce388c1ccb638d382ff182204761134d9a8ed018d925d9d089",
+          "bytes": 244736
+        }
+      ],
+      "runtimeErrors": [],
+      "failedRequests": []
+    },
+    {
+      "scene": "S23",
+      "episode": 6,
+      "viewport": {
+        "width": 1920,
+        "height": 900
+      },
+      "initial": {
+        "sceneId": "S23",
+        "position": 0,
+        "locale": "en",
+        "text": "The boats sat low in the water. Nets dried on the concrete slabs; gulls argued over an empty crate as fiercely as if fish were still inside. Eric led Alice past the warehouse and stopped at the edge, out of the way of the work. He did not tell her the name of every boat.",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 1920,
+          "height": 900
+        }
+      },
+      "choice": {
+        "sceneId": "S23",
+        "position": 9,
+        "locale": "en",
+        "text": "Eric says that the school will affect his ordinary life. What will Alice ask?\nHow does he want to combine school and personal time?\nDoes he need Alice's participation in the decision now?",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 1920,
+          "height": 900
+        }
+      },
+      "choiceReached": true,
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S23-initial-1920x900.png",
+          "sha256": "b2eebf8d1cdee2226ab1ad401888bafe181e62fc4837839286491f77b68f7f6e",
+          "bytes": 90749
+        },
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S23-choice-1920x900.png",
+          "sha256": "1ff14fb2708aa0167a5b03052eb958035820f6f17f9de80e16546dd9e8f90b80",
+          "bytes": 1960174
+        }
+      ],
+      "runtimeErrors": [],
+      "failedRequests": []
+    },
+    {
+      "scene": "S23",
+      "episode": 6,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "initial": {
+        "sceneId": "S23",
+        "position": 0,
+        "locale": "en",
+        "text": "The boats sat low in the water. Nets dried on the concrete slabs; gulls argued over an empty crate as fiercely as if fish were still inside. Eric led Alice past the warehouse and stopped at the edge, out of the way of the work. He did not tell her the name of every boat.",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      "choice": {
+        "sceneId": "S23",
+        "position": 9,
+        "locale": "en",
+        "text": "Eric says that the school will affect his ordinary life. What will Alice ask?\nHow does he want to combine school and personal time?\nDoes he need Alice's participation in the decision now?",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      "choiceReached": true,
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S23-initial-390x844.png",
+          "sha256": "d2387b5b8266d386770f113309ff10ad5657cad398f228ea28193b990ac601e2",
+          "bytes": 56271
+        },
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S23-choice-390x844.png",
+          "sha256": "899d548beea2c16b4612a96b9b9c46f4ffde1666cde7691578ee4323531f8d77",
+          "bytes": 468236
+        }
+      ],
+      "runtimeErrors": [],
+      "failedRequests": []
+    },
+    {
+      "scene": "S23",
+      "episode": 6,
+      "viewport": {
+        "width": 360,
+        "height": 640
+      },
+      "initial": {
+        "sceneId": "S23",
+        "position": 0,
+        "locale": "en",
+        "text": "The boats sat low in the water. Nets dried on the concrete slabs; gulls argued over an empty crate as fiercely as if fish were still inside. Eric led Alice past the warehouse and stopped at the edge, out of the way of the work. He did not tell her the name of every boat.",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 360,
+          "height": 640
+        }
+      },
+      "choice": {
+        "sceneId": "S23",
+        "position": 9,
+        "locale": "en",
+        "text": "Eric says that the school will affect his ordinary life. What will Alice ask?\nHow does he want to combine school and personal time?\nDoes he need Alice's participation in the decision now?",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 360,
+          "height": 640
+        }
+      },
+      "choiceReached": true,
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S23-initial-360x640.png",
+          "sha256": "3b077a0976b98ffdac8c0dbac955f0d42096029ab10fa9e0d109714b1cd33ff6",
+          "bytes": 54888
+        },
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S23-choice-360x640.png",
+          "sha256": "261bdfb3d7473415f0b129189eef6692841ee93a9cdb31f7b2fcdc1ec6970249",
+          "bytes": 337153
+        }
+      ],
+      "runtimeErrors": [],
+      "failedRequests": []
+    },
+    {
+      "scene": "S25",
+      "episode": 6,
+      "viewport": {
+        "width": 1920,
+        "height": 900
+      },
+      "initial": {
+        "sceneId": "S25",
+        "position": 0,
+        "locale": "en",
+        "text": "Damir found Alice by the guesthouse entrance while she was writing the meeting time in her notebook. He held his phone as if he had just ended a call, although the screen had gone dark a while ago.",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 1920,
+          "height": 900
+        }
+      },
+      "choice": {
+        "sceneId": "S25",
+        "position": 10,
+        "locale": "en",
+        "text": "Alice admits that Damir saw her evening with Eric. How will she continue the conversation?\nTalk about her choice without defending it\nAsk whether Damir is ready to speak without comparisons",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 1920,
+          "height": 900
+        }
+      },
+      "choiceReached": true,
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S25-initial-1920x900.png",
+          "sha256": "2a0addedf1571b7c81b2fc0b0b1f92a606cbd247ab1fcd843464f3ddee7bb8d1",
+          "bytes": 76765
+        },
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S25-choice-1920x900.png",
+          "sha256": "730fa3bc90dca9f17c3a787571925d45bb2f6451e52966684965906d47fa20ce",
+          "bytes": 1843048
+        }
+      ],
+      "runtimeErrors": [],
+      "failedRequests": []
+    },
+    {
+      "scene": "S25",
+      "episode": 6,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "initial": {
+        "sceneId": "S25",
+        "position": 0,
+        "locale": "en",
+        "text": "Damir found Alice by the guesthouse entrance while she was writing the meeting time in her notebook. He held his phone as if he had just ended a call, although the screen had gone dark a while ago.",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      "choice": {
+        "sceneId": "S25",
+        "position": 10,
+        "locale": "en",
+        "text": "Alice admits that Damir saw her evening with Eric. How will she continue the conversation?\nTalk about her choice without defending it\nAsk whether Damir is ready to speak without comparisons",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      "choiceReached": true,
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S25-initial-390x844.png",
+          "sha256": "6a7d267d6d00a6ad1d18723710917864590eeb1c0a49cef667405272edbd0ebf",
+          "bytes": 47262
+        },
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S25-choice-390x844.png",
+          "sha256": "84b54e3002574605e87c635964f7635520e726a4dea81796c21dcd9ce77db1d0",
+          "bytes": 432036
+        }
+      ],
+      "runtimeErrors": [],
+      "failedRequests": []
+    },
+    {
+      "scene": "S25",
+      "episode": 6,
+      "viewport": {
+        "width": 360,
+        "height": 640
+      },
+      "initial": {
+        "sceneId": "S25",
+        "position": 0,
+        "locale": "en",
+        "text": "Damir found Alice by the guesthouse entrance while she was writing the meeting time in her notebook. He held his phone as if he had just ended a call, although the screen had gone dark a while ago.",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 360,
+          "height": 640
+        }
+      },
+      "choice": {
+        "sceneId": "S25",
+        "position": 10,
+        "locale": "en",
+        "text": "Alice admits that Damir saw her evening with Eric. How will she continue the conversation?\nTalk about her choice without defending it\nAsk whether Damir is ready to speak without comparisons",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 360,
+          "height": 640
+        }
+      },
+      "choiceReached": true,
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S25-initial-360x640.png",
+          "sha256": "1154c92db873eab84623c4ea38e0ac01fd4853ac6a750f31c13fe236f9be3c3f",
+          "bytes": 45563
+        },
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S25-choice-360x640.png",
+          "sha256": "c368e8866e8ca2d65a7811bd81c8d74be641748b65898f87e3c0b689e693a8b9",
+          "bytes": 311523
+        }
+      ],
+      "runtimeErrors": [],
+      "failedRequests": []
+    },
+    {
+      "scene": "S26",
+      "episode": 6,
+      "viewport": {
+        "width": 1920,
+        "height": 900
+      },
+      "initial": {
+        "sceneId": "S26",
+        "position": 0,
+        "locale": "en",
+        "text": "They were due to leave for Egilsstaðir in the morning. The kitchen light went out in the guesthouse; only the lamp above the entrance remained on in the hall. Alice went back for her notebook and found it on the sill beside the paper map, where a smear of cream had dried.",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 1920,
+          "height": 900
+        }
+      },
+      "choice": {
+        "sceneId": "S26",
+        "position": 5,
+        "locale": "en",
+        "text": "Before choosing a direction, Alice understands...\nI need to take the first step myself\nI have the right not to answer out of politeness",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 1920,
+          "height": 900
+        }
+      },
+      "choiceReached": true,
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S26-initial-1920x900.png",
+          "sha256": "77887fbb7ab396465ec8e2570baca4b1eaf0538b3814ce95c4c2f332d47df497",
+          "bytes": 1614252
+        },
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S26-choice-1920x900.png",
+          "sha256": "2f5fdefdf5c129209c452fc212fd8cc08c8bff679576213d381d1388f43cc29e",
+          "bytes": 1706393
+        }
+      ],
+      "runtimeErrors": [],
+      "failedRequests": []
+    },
+    {
+      "scene": "S26",
+      "episode": 6,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "initial": {
+        "sceneId": "S26",
+        "position": 0,
+        "locale": "en",
+        "text": "They were due to leave for Egilsstaðir in the morning. The kitchen light went out in the guesthouse; only the lamp above the entrance remained on in the hall. Alice went back for her notebook and found it on the sill beside the paper map, where a smear of cream had dried.",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      "choice": {
+        "sceneId": "S26",
+        "position": 5,
+        "locale": "en",
+        "text": "Before choosing a direction, Alice understands...\nI need to take the first step myself\nI have the right not to answer out of politeness",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      "choiceReached": true,
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S26-initial-390x844.png",
+          "sha256": "168c5d0b78aee1d9906546e53d1259e03783dc6a3032a2d1d29e913d8fc6d288",
+          "bytes": 63163
+        },
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S26-choice-390x844.png",
+          "sha256": "d081b153d9901bc49bb3e38709823d630a9e33c4d63b65d1524f3509adcdf278",
+          "bytes": 41527
+        }
+      ],
+      "runtimeErrors": [],
+      "failedRequests": []
+    },
+    {
+      "scene": "S26",
+      "episode": 6,
+      "viewport": {
+        "width": 360,
+        "height": 640
+      },
+      "initial": {
+        "sceneId": "S26",
+        "position": 0,
+        "locale": "en",
+        "text": "They were due to leave for Egilsstaðir in the morning. The kitchen light went out in the guesthouse; only the lamp above the entrance remained on in the hall. Alice went back for her notebook and found it on the sill beside the paper map, where a smear of cream had dried.",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 360,
+          "height": 640
+        }
+      },
+      "choice": {
+        "sceneId": "S26",
+        "position": 5,
+        "locale": "en",
+        "text": "Before choosing a direction, Alice understands...\nI need to take the first step myself\nI have the right not to answer out of politeness",
+        "cyrillicNarrativeCount": 0,
+        "cyrillicUiAriaCount": 0,
+        "leakedMarkupCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 360,
+          "height": 640
+        }
+      },
+      "choiceReached": true,
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S26-initial-360x640.png",
+          "sha256": "9b41c26616ada7d56e03e7153408d9afe88c7d9952dbe3807b4d2f1ccbd4bf31",
+          "bytes": 61254
+        },
+        {
+          "path": "output\\playwright\\ep05-06-interaction-continuity\\S26-choice-360x640.png",
+          "sha256": "7de3ebce171ba4ce371b61caa4b671039dc05399385cf63095665e3b281c746d",
+          "bytes": 236593
+        }
+      ],
+      "runtimeErrors": [],
+      "failedRequests": []
+    }
+  ],
+  "routeSave": {
+    "checkpoints": [
+      {
+        "name": "after-extra-S26-C90",
+        "state": {
+          "schemaVersion": 3,
+          "sceneId": "S26",
+          "position": 5,
+          "choices": {
+            "S02-C1": "A",
+            "S04-C1": "A",
+            "S05-C1": "B",
+            "S08-C1": "A",
+            "S09-C1": "A",
+            "S10-C1": "A",
+            "S13-C1": "A",
+            "S15-C1": "A",
+            "S16-C1": "A",
+            "S17-C2": "A",
+            "S18-C1": "A",
+            "S18-C2": "A",
+            "S19-C1": "A",
+            "S19-C2": "A",
+            "S20-C1": "A",
+            "S21-C1": "A",
+            "S22-C1": "A",
+            "S23-C1": "A",
+            "S58-C1": "A",
+            "S26-C90": "A"
+          },
+          "finished": false,
+          "visited": [
+            "S26"
+          ],
+          "runId": "ep05-06-S26",
+          "revision": 1,
+          "migrationNotice": false
+        }
+      },
+      {
+        "name": "before-authored-choice",
+        "state": {
+          "schemaVersion": 3,
+          "sceneId": "S26",
+          "position": 6,
+          "choices": {
+            "S02-C1": "A",
+            "S04-C1": "A",
+            "S05-C1": "B",
+            "S08-C1": "A",
+            "S09-C1": "A",
+            "S10-C1": "A",
+            "S13-C1": "A",
+            "S15-C1": "A",
+            "S16-C1": "A",
+            "S17-C2": "A",
+            "S18-C1": "A",
+            "S18-C2": "A",
+            "S19-C1": "A",
+            "S19-C2": "A",
+            "S20-C1": "A",
+            "S21-C1": "A",
+            "S22-C1": "A",
+            "S23-C1": "A",
+            "S58-C1": "A",
+            "S26-C90": "A"
+          },
+          "finished": false,
+          "visited": [
+            "S26"
+          ],
+          "runId": "ep05-06-S26",
+          "revision": 0,
+          "migrationNotice": false
+        }
+      },
+      {
+        "name": "after-authored-choice",
+        "state": {
+          "schemaVersion": 3,
+          "sceneId": "S26",
+          "position": 6,
+          "choices": {
+            "S02-C1": "A",
+            "S04-C1": "A",
+            "S05-C1": "B",
+            "S08-C1": "A",
+            "S09-C1": "A",
+            "S10-C1": "A",
+            "S13-C1": "A",
+            "S15-C1": "A",
+            "S16-C1": "A",
+            "S17-C2": "A",
+            "S18-C1": "A",
+            "S18-C2": "A",
+            "S19-C1": "A",
+            "S19-C2": "A",
+            "S20-C1": "A",
+            "S21-C1": "A",
+            "S22-C1": "A",
+            "S23-C1": "A",
+            "S58-C1": "A",
+            "S26-C90": "A",
+            "S26-C1": "A"
+          },
+          "finished": false,
+          "visited": [
+            "S26"
+          ],
+          "runId": "ep05-06-S26",
+          "revision": 1,
+          "migrationNotice": false
+        },
+        "routeIntent": "A"
+      },
+      {
+        "name": "after-extra-S26-C91",
+        "state": {
+          "schemaVersion": 3,
+          "sceneId": "S26",
+          "position": 9,
+          "choices": {
+            "S02-C1": "A",
+            "S04-C1": "A",
+            "S05-C1": "B",
+            "S08-C1": "A",
+            "S09-C1": "A",
+            "S10-C1": "A",
+            "S13-C1": "A",
+            "S15-C1": "A",
+            "S16-C1": "A",
+            "S17-C2": "A",
+            "S18-C1": "A",
+            "S18-C2": "A",
+            "S19-C1": "A",
+            "S19-C2": "A",
+            "S20-C1": "A",
+            "S21-C1": "A",
+            "S22-C1": "A",
+            "S23-C1": "A",
+            "S58-C1": "A",
+            "S26-C1": "A",
+            "S26-C90": "A",
+            "S26-C91": "B"
+          },
+          "finished": false,
+          "visited": [
+            "S26"
+          ],
+          "runId": "ep05-06-S26",
+          "revision": 1,
+          "migrationNotice": false
+        }
+      }
+    ],
+    "localeSwitch": {
+      "before": {
+        "sceneId": "S26",
+        "position": 9,
+        "choices": {
+          "S02-C1": "A",
+          "S04-C1": "A",
+          "S05-C1": "B",
+          "S08-C1": "A",
+          "S09-C1": "A",
+          "S10-C1": "A",
+          "S13-C1": "A",
+          "S15-C1": "A",
+          "S16-C1": "A",
+          "S17-C2": "A",
+          "S18-C1": "A",
+          "S18-C2": "A",
+          "S19-C1": "A",
+          "S19-C2": "A",
+          "S20-C1": "A",
+          "S21-C1": "A",
+          "S22-C1": "A",
+          "S23-C1": "A",
+          "S58-C1": "A",
+          "S26-C1": "A",
+          "S26-C90": "A",
+          "S26-C91": "B"
+        },
+        "finished": false,
+        "visited": [
+          "S26"
+        ]
+      },
+      "en": {
+        "sceneId": "S26",
+        "position": 9,
+        "choices": {
+          "S02-C1": "A",
+          "S04-C1": "A",
+          "S05-C1": "B",
+          "S08-C1": "A",
+          "S09-C1": "A",
+          "S10-C1": "A",
+          "S13-C1": "A",
+          "S15-C1": "A",
+          "S16-C1": "A",
+          "S17-C2": "A",
+          "S18-C1": "A",
+          "S18-C2": "A",
+          "S19-C1": "A",
+          "S19-C2": "A",
+          "S20-C1": "A",
+          "S21-C1": "A",
+          "S22-C1": "A",
+          "S23-C1": "A",
+          "S58-C1": "A",
+          "S26-C1": "A",
+          "S26-C90": "A",
+          "S26-C91": "B"
+        },
+        "finished": false,
+        "visited": [
+          "S26"
+        ]
+      },
+      "ru": {
+        "sceneId": "S26",
+        "position": 9,
+        "choices": {
+          "S02-C1": "A",
+          "S04-C1": "A",
+          "S05-C1": "B",
+          "S08-C1": "A",
+          "S09-C1": "A",
+          "S10-C1": "A",
+          "S13-C1": "A",
+          "S15-C1": "A",
+          "S16-C1": "A",
+          "S17-C2": "A",
+          "S18-C1": "A",
+          "S18-C2": "A",
+          "S19-C1": "A",
+          "S19-C2": "A",
+          "S20-C1": "A",
+          "S21-C1": "A",
+          "S22-C1": "A",
+          "S23-C1": "A",
+          "S58-C1": "A",
+          "S26-C1": "A",
+          "S26-C90": "A",
+          "S26-C91": "B"
+        },
+        "finished": false,
+        "visited": [
+          "S26"
+        ]
+      },
+      "enLocale": "en",
+      "ruLocale": "ru",
+      "persistenceKeys": {
+        "local": "kiss-at-the-edge-of-the-world:literary-draft:v1",
+        "cloud": "kiss-at-the-edge-of-the-world:literary-season:v1"
+      },
+      "preservedEn": true,
+      "preservedRu": true,
+      "localeAbsent": true
+    },
+    "errors": []
+  },
+  "summary": {
+    "semanticCaseCount": 24,
+    "visualCaptureCount": 24,
+    "contradictionCount": 0,
+    "inventedEventCount": 0,
+    "leakedMarkupCount": 0,
+    "cyrillicCount": 0,
+    "runtimeErrors": [],
+    "failedRequests": [],
+    "interactionPass": true,
+    "visualPass": true,
+    "savePass": true
+  },
+  "assertions": [
+    "Every Episode 5-6 extra beat C90/C91 is reached in the real English runtime for every authored branch combination.",
+    "Canonical RU and generated EN preceding refs/text are recorded before each extra beat.",
+    "Rendered question/options and resulting response are recorded; no relationship, consent, or knowledge event is introduced by the interaction layer.",
+    "Representative first/choice states pass at 1920x900, 390x844, and 360x640.",
+    "S26 authored route choice and both extra beats survive save checkpoints and RU->EN->RU without locale in structural save."
+  ]
+}
