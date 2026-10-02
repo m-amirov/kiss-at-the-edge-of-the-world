@@ -17,3 +17,18 @@ test('production English S01 is complete and structurally identical',()=>{
  const visible=[english.scenes.S01.title,...Object.values(english.scenes.S01.chunks).flatMap(chunk=>[chunk.title,...Object.values(chunk.paragraphs)])].join('\n');
  assert.doesNotMatch(visible,/[\u0400-\u04ff]/u);
 });
+test('production English S02 is complete and structurally identical',()=>{
+ const english=JSON.parse(fs.readFileSync(new URL('../../content/localization/en/S02.json',import.meta.url),'utf8'));
+ const source=literarySeason.scenes.find(scene=>scene.id==='S02');
+ const report=validateLiteraryLocale(literarySeason,english,{sceneIds:['S02']});
+ assert.deepEqual(report,{status:'PASS',errors:[],sceneCount:1});
+ assert.deepEqual(Object.keys(english.scenes),['S02']);
+ assert.deepEqual(Object.keys(english.scenes.S02.chunks),source.chunks.map((_,index)=>sourceRef.chunk('S02',index)));
+ assert.equal(Object.values(english.scenes.S02.chunks).reduce((count,chunk)=>count+Object.keys(chunk.paragraphs).length,0),77);
+ assert.match(english.scenes.S02.chunks['S02.C001'].title,/S02-C1/);
+ assert.deepEqual(['S02.C002','S02.C003','S02.C004'].map(ref=>english.scenes.S02.chunks[ref].title.slice(0,1)),['A','B','C']);
+ const titles=['S02.C002','S02.C003','S02.C004'].map(ref=>english.scenes.S02.chunks[ref].title).join('\n');
+ for(const predicate of ['careerThesis=people','careerThesis=place','careerThesis=own-choice','damirDirect=true'])assert.ok(titles.includes('`'+predicate+'`'));
+ const visible=[english.scenes.S02.title,...Object.values(english.scenes.S02.chunks).flatMap(chunk=>[chunk.title,...Object.values(chunk.paragraphs)])].join('\n');
+ assert.doesNotMatch(visible,/[\u0400-\u04ff]/u);
+});
