@@ -10,7 +10,7 @@ const { chromium } = await import(pathToFileURL('C:/Users/user/.cache/codex-runt
 const baseUrl = process.env.LITERARY_QA_URL ?? 'http://127.0.0.1:4173/literary.html';
 const outputDir = process.env.LITERARY_QA_OUTPUT ?? 'output/playwright/english-runtime-localization';
 const evidenceFile = process.env.LITERARY_QA_EVIDENCE ?? 'artifacts/evidence/english-runtime-localization.json';
-const targets = ['S01', 'S05', 'S08', 'S66'];
+const targets = ['S09', 'S11', 'S12', 'S13', 'S15', 'S16'];
 const viewports = [{ width: 1920, height: 900 }, { width: 390, height: 844 }, { width: 360, height: 640 }];
 const stateFor = sceneId => ({ schemaVersion: 3, sceneId, position: 0, choices: {}, finished: false, visited: [sceneId], runId: `english-runtime-${sceneId}`, revision: 0 });
 const clone = value => JSON.parse(JSON.stringify(value));
@@ -144,7 +144,7 @@ async function captureTarget(sceneId, viewport) {
   }
 }
 
-async function checkSaveLoadAndLocaleSwitch() {
+async function checkSaveLoadCase(sceneId) {
   const context = await browser.newContext({ viewport: { width: 390, height: 844 }, reducedMotion: 'reduce' });
   const page = await context.newPage();
   const consoleErrors = []; const failedRequests = [];
@@ -152,10 +152,11 @@ async function checkSaveLoadAndLocaleSwitch() {
   page.on('console', message => { if (message.type() === 'error') consoleErrors.push(message.text()); });
   page.on('requestfailed', request => failedRequests.push(request.url()));
   try {
-    await page.addInitScript(({ key, value }) => { if (localStorage.getItem(key) === null) localStorage.setItem(key, JSON.stringify(value)); }, { key: literarySaveKey, value: stateFor('S05') });
+    await page.addInitScript(({ key, value }) => { if (localStorage.getItem(key) === null) localStorage.setItem(key, JSON.stringify(value)); }, { key: literarySaveKey, value: stateFor(sceneId) });
     await boot(page, 'ru');
     const ruRuntime = await inspect(page);
-    await clickStage(page);
+    await advanceToChoice(page);
+    await page.locator('.choice-button').first().click();
     const beforeReload = await page.evaluate(() => window.__LITERARY_QA__.getState());
     const keysBefore = await page.evaluate(() => window.__LITERARY_QA__.getPersistenceKeys());
     await page.reload({ waitUntil: 'networkidle' });
@@ -177,11 +178,23 @@ async function checkSaveLoadAndLocaleSwitch() {
       persistenceKeysStable: JSON.stringify(keysBefore) === JSON.stringify(afterLocaleSwitch.keys) && keysBefore.local === literarySaveKey,
       states: { beforeReload, afterReload, beforeLocaleSwitch, afterLocaleSwitch: afterLocaleSwitch.state },
       keys: { before: keysBefore, after: afterLocaleSwitch.keys },
+      sceneId,
       consoleErrors, failedRequests
     };
   } finally {
     await context.close();
   }
+}
+
+async function checkSaveLoadAndLocaleSwitch() {
+  const cases = {};
+  for (const sceneId of ['S09', 'S13']) cases[sceneId] = await checkSaveLoadCase(sceneId);
+  return {
+    cases,
+    pass: Object.values(cases).every(item => item.saveLoadPreserved && item.ruRuntimePreserved && item.localeSwitchPreserved && item.localeAfterSwitch === 'en' && item.persistenceKeysStable && item.consoleErrors.length === 0 && item.failedRequests.length === 0),
+    consoleErrors: Object.values(cases).flatMap(item => item.consoleErrors),
+    failedRequests: Object.values(cases).flatMap(item => item.failedRequests)
+  };
 }
 
 let switchResult;
@@ -194,7 +207,7 @@ try {
 
 const surfacePass = captures.every(item => [item.surfaces.home, item.surfaces.episodes, item.surfaces.settings].every(surface => !surface.russianUiLeak && !surface.overflow && surface.clipped === 0));
 const capturePass = captures.length === targets.length * viewports.length && surfacePass && captures.every(item => item.initial.hasEnglishProse && !item.initial.russianNarrativeLeak && !item.initial.russianUiLeak && !item.choice.russianNarrativeLeak && !item.choice.russianUiLeak && item.choice.choiceLabelsEnglish && !item.initial.overflow && !item.choice.overflow && !item.initial.internalScroll && !item.choice.internalScroll && item.initial.clipped === 0 && item.choice.clipped === 0 && item.consoleErrors.length === 0 && item.failedRequests.length === 0);
-const status = capturePass && switchResult.saveLoadPreserved && switchResult.ruRuntimePreserved && switchResult.localeSwitchPreserved && switchResult.localeAfterSwitch === 'en' && switchResult.persistenceKeysStable && switchResult.consoleErrors.length === 0 && switchResult.failedRequests.length === 0 ? 'PASS' : 'FAIL';
+const status = capturePass && switchResult.pass ? 'PASS' : 'FAIL';
 const evidence = {
   schemaVersion: 1,
   status,
@@ -205,10 +218,10 @@ const evidence = {
   targets, viewports,
   captures,
   saveLoadAndLocaleSwitch: switchResult,
-  coverage: { homeMenu: true, episodesPanel: true, settingsPanel: true, normalNarrative: true, authoredChoice: true, interactivePacingChoice: true, cloudRestore: { status: 'NOT_TESTABLE', reason: 'Requires an authenticated Yandex SDK cloud candidate.' }, endingScreen: { status: 'NOT_TESTABLE', reason: 'The bounded EN QA corpus currently contains Episodes 1-2 only; production EN correctly fails closed before ending scenes.' } },
+  coverage: { homeMenu: true, episodesPanel: true, settingsPanel: true, normalNarrative: true, authoredChoice: true, interactivePacingChoice: true, cloudRestore: { status: 'NOT_TESTABLE', reason: 'Requires an authenticated Yandex SDK cloud candidate.' }, endingScreen: { status: 'NOT_TESTABLE', reason: 'The bounded EN QA corpus currently ends at Episode 4; production EN correctly fails closed before the remaining declared scenes.' } },
   assertions: ['rendered EN UI and accessibility text contain no Cyrillic', 'actual English prose', 'English authored and interactive choice labels', 'no Russian narrative leakage', 'no viewport overflow/clipping', 'local save/load', 'RU runtime remains Cyrillic and usable', 'locale switch leaves structural save unchanged', 'stable local/cloud persistence keys', 'zero console errors', 'zero failed asset requests']
 };
 await fs.mkdir(path.dirname(evidenceFile), { recursive: true });
 await fs.writeFile(evidenceFile, `${JSON.stringify(evidence, null, 2)}\n`);
-console.log(JSON.stringify({ status, captures: captures.length, choicesWithEnglish: captures.filter(item => item.choice.choiceLabelsEnglish).length, consoleErrors: captures.reduce((n, item) => n + item.consoleErrors.length, 0) + (switchResult?.consoleErrors.length ?? 0), failedRequests: captures.reduce((n, item) => n + item.failedRequests.length, 0) + (switchResult?.failedRequests.length ?? 0), saveLoad: switchResult?.saveLoadPreserved, localeSwitch: switchResult?.localeSwitchPreserved, evidenceFile }, null, 2));
+console.log(JSON.stringify({ status, captures: captures.length, choicesWithEnglish: captures.filter(item => item.choice.choiceLabelsEnglish).length, consoleErrors: captures.reduce((n, item) => n + item.consoleErrors.length, 0) + (switchResult?.consoleErrors.length ?? 0), failedRequests: captures.reduce((n, item) => n + item.failedRequests.length, 0) + (switchResult?.failedRequests.length ?? 0), saveLoad: switchResult?.pass, evidenceFile }, null, 2));
 if (status !== 'PASS') process.exitCode = 1;
