@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "sourceLocale": "ru",
+  "source": "content/season-1-literary-episode-03.md",
+  "scenes": {
+    "S10": {
+      "title": "The Road to Vík, Day 5, Afternoon. A Song for Half an Hour",
+      "chunks": {
+        "S10.C000":{"title":"","paragraphs":{
+          "S10.C000.P000":"At the gas station, Nick bought two kinds of gummy candy and asked Damir to decide which one was edible. While they argued by the register, Alice caught up with Eric at the car. He was wiping salt streaks from the side window.",
+          "S10.C000.P001":"“Are you choosing the music, or is Nick still blackmailing us with the hat?”",
+          "S10.C000.P002":"“His forty minutes ran out yesterday. Today is my turn.”",
+          "S10.C000.P003":"“Then I’m just in time.”",
+          "S10.C000.P004":"Eric opened the front passenger door. Alice sat down to help with navigation after the stop, and he started a recording—an old one, with a little hiss at the beginning. A woman was singing quietly in Icelandic, almost speaking. Alice didn’t understand a word, but she didn’t ask for a translation right away.",
+          "S10.C000.P005":"“Is this yours?” she asked when they pulled away from the station.",
+          "S10.C000.P006":"“My sister’s record. I transferred it to my phone.”",
+          "S10.C000.P007":"“You share one?”",
+          "S10.C000.P008":"“She has the real one. I have the illegal copy.”",
+          "S10.C000.P009":"Eric said it in such an even voice that Alice didn’t catch the joke at first. Behind them, Nick rustled a packet; Damir offered him water to end the expert assessment of sour gummies.",
+          "S10.C000.P010":"“Does she know about the crime?” Alice asked.",
+          "S10.C000.P011":"“Every year she threatens to take my cable.”",
+          "S10.C000.P012":"They drove several kilometres in silence. Eric didn’t explain every mountain that emerged from the rain. When the song ended, the next track came in fast, with a cheerfulness completely out of proportion to the first. Eric hurried to turn it down.",
+          "S10.C000.P013":"“Don’t,” Alice said.",
+          "S10.C000.P014":"“That was a recording error.”",
+          "S10.C000.P015":"“I don’t mean the music. Your face changes.”",
+          "S10.C000.P016":"“It doesn’t.”",
+          "S10.C000.P017":"“You’re arguing with me without taking your eyes off the road. That means it does.”",
+          "S10.C000.P018":"He turned the volume back up. Alice noticed his fingers tap the rhythm twice on the wheel before he caught himself.",
+          "S10.C000.P019":"At the next stop, he told her how, at sixteen, he had volunteered to play music at a family celebration and mixed up two similar cassettes. Instead of the ceremonial dance his parents expected, this ridiculous fast song came on. His father didn’t switch it off. He pulled his mother into a dance between the tables; his sister still insisted it had been the best evening.",
+          "S10.C000.P020":"“And you?” Alice asked.",
+          "S10.C000.P021":"“I stood by the player and waited to be thrown out of the house.”",
+          "S10.C000.P022":"“Were you?”",
+          "S10.C000.P023":"“Sent outside for more bread. A useful outcome.”",
+          "S10.C000.P024":"He smiled at the road. Alice pictured sixteen-year-old Eric by the record player—without a map, a radio, or responsibility for anyone else’s day.",
+          "S10.C000.P025":"When they stopped at a small shop before Vík, Nick took Damir to look for camera batteries. Alice noticed disposable rain ponchos and cheap postcards on the counter. On a postcard of the waterfall, someone had already written “test print” in pencil; it had been left in the box among the perfect views. She showed it to Eric.",
+          "S10.C000.P026":"“For your sister,” Alice suggested. “You can tell her the cassette is still travelling around the country.”",
+          "S10.C000.P027":"“She’ll say I stole it twice.”",
+          "S10.C000.P028":"“Then sign it for her and mail it to yourself.”",
+          "S10.C000.P029":"Eric took the card and tried to rub out the writing, but the pencil left a grey shadow. He put the postcard back.",
+          "S10.C000.P030":"“Not today. I have another one I’ve been meaning to finish.”",
+          "S10.C000.P031":"Alice didn’t ask who it was for. Instead, she picked up two small packets of nuts. She held one out to him.",
+          "S10.C000.P032":"“I’m buying you a snack for your song. If it comes on again, we’re both responsible now.”",
+          "S10.C000.P033":"He checked the ingredients and chose the unsalted packet.",
+          "S10.C000.P034":"“I didn’t know you accepted commitments this serious.”",
+          "S10.C000.P035":"“Only for the next hour.”",
+          "S10.C000.P036":"In the car, Alice put one of her own songs between his recordings for the first time—not as a competition, but to see whether he would be interested in something that belonged to her. Eric didn’t ask why that one. At a traffic light, he asked for the title and saved it to his phone once they were parked. Waking up, Nick announced that he had missed the music council’s meeting. Alice showed him the nuts; he took a handful and didn’t demand a review of the decision."
+        }},
+        "S10.C001":{"title":"If Alice spent the first hour of the drive with Eric in S01-C1","paragraphs":{
+          "S10.C001.P000":"“In Keflavík, you said you didn’t know how to choose music for strangers,” she reminded him.",
+          "S10.C001.P001":"“I didn’t know then whether you could survive a second song.”",
+          "S10.C001.P002":"“And now?”",
+          "S10.C001.P003":"“I’m still checking.”"
+        }},
+        "S10.C002":{"title":"If Alice sat with Nick or Damir in S01-C1","paragraphs":{
+          "S10.C002.P000":"“So this is what you play when you’re not discussing the weather,” Alice said.",
+          "S10.C002.P001":"“Sometimes I discuss the weather to music. I can combine them if you’re missing it.”",
+          "S10.C002.P002":"“No. Not yet.”"
+        }},
+        "S10.C003":{"title":"Choice S10-C1 — how Alice responds to the song","paragraphs":{}},
+        "S10.C004":{"title":"A. Play along","paragraphs":{
+          "S10.C004.P000":"Alice reached toward the console without touching a button.",
+          "S10.C004.P001":"“Can we hear that wrong song again?”",
+          "S10.C004.P002":"“Nick will wake up.”",
+          "S10.C004.P003":"“He’ll wake up when the gummies win anyway.”",
+          "S10.C004.P004":"Eric played it from the beginning. Alice tapped the rhythm against her knee on the chorus. He didn’t look at her while he drove, but later, in the guesthouse parking area, he quietly whistled the last two notes. She whistled them back."
+        }},
+        "S10.C005":{"title":"B. Leave the moment quiet","paragraphs":{
+          "S10.C005.P000":"“Play the first song,” Alice said. “I didn’t hear the end.”",
+          "S10.C005.P001":"Eric scrolled through the list. She rested her cheek in her hand and watched the window. After a few minutes, he told her the song’s title and the singer’s name without offering a translation. That was enough. When they reached Vík, Alice didn’t get out immediately; Eric waited for the final line to finish."
+        }},
+        "S10.C006":{"title":"Shared continuation S10","paragraphs":{"S10.C006.P000":"In Vík, they checked into a small guesthouse for the night. Nick got the top bunk in the men’s room and announced that he would negotiate a transfer. Damir replied, “Tomorrow, if you survive.” Alice stayed in the room across the hall. A warning about the unpredictable waves at Reynisfjara hung on the board by the entrance. Eric asked everyone to read it before they left in the morning. Nick looked first and put his phone away."
+        }}
+      }
+    }
+  }
+}

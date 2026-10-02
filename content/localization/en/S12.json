@@ -1,0 +1,133 @@
+{
+  "schemaVersion":1,"locale":"en","sourceLocale":"ru","source":"content/season-1-literary-episode-03.md","scenes":{"S12":{"title":"Vík, Day 6, Afternoon. Two Different Towns","chunks":{
+    "S12.C000":{"title":"","paragraphs":{
+      "S12.C000.P000":"At the Vík café, Alice ordered hot soup and didn’t take out her notebook until she had finished it. Damir stood by the window with two paper cups. He didn’t come over until she raised a hand.",
+      "S12.C000.P001":"“Sit down, if you’re not in a hurry.”",
+      "S12.C000.P002":"“Eric gave us forty minutes. Nick stayed behind to upload the material.”",
+      "S12.C000.P003":"“And you decided to spend them here?”",
+      "S12.C000.P004":"“I wanted coffee. I got a second one in case you wanted some too. Bad calculation—you have soup.”",
+      "S12.C000.P005":"He set the second cup in the middle of the table instead of pushing it toward her. Alice noticed that he no longer guessed her order from memory."
+    }},
+    "S12.C001":{"title":"If `damir-care=warm` — Alice offered him coffee in S08","paragraphs":{
+      "S12.C001.P000":"“Today it’s my turn to decide whether to drink your coffee,” she said.",
+      "S12.C001.P001":"“Fair. I already drank the one you brought me this morning.”",
+      "S12.C001.P002":"“And you didn’t mention that it was terrible?”",
+      "S12.C001.P003":"“It was hot. That saved it.”",
+      "S12.C001.P004":"She took the second cup, checked the temperature, and left it beside her plate."
+    }},
+    "S12.C002":{"title":"If `damir-care=neutral` — Alice kept her distance in S08","paragraphs":{
+      "S12.C002.P000":"“I didn’t ask for a second one,” Alice said.",
+      "S12.C002.P001":"“No. I can take it with me.”",
+      "S12.C002.P002":"He had already reached for it, but she stopped him.",
+      "S12.C002.P003":"“Leave it. If I want it, I’ll drink it. Just don’t count that as a continuation of the conversation.”",
+      "S12.C002.P004":"“I won’t.”",
+      "S12.C002.P005":"He sat not opposite her but beside the window, keeping the table between them."
+    }},
+    "S12.C003":{"title":"If `damir-care=personal` — Alice asked about Brussels in S08","paragraphs":{
+      "S12.C003.P000":"“Was it raining like this every day there?” she asked, nodding at the window.",
+      "S12.C003.P001":"“In Brussels, it at least pretends it will stop soon. Here it’s more honest.”",
+      "S12.C003.P002":"“There were bicycles in your photo. Do you still ride to work?”",
+      "S12.C003.P003":"“I did until I broke a fender. Then I started walking. I can show you the street I used to take, but it isn’t particularly beautiful.”",
+      "S12.C003.P004":"“You can show me after the soup. Not as a tour.”",
+      "S12.C003.P005":"Damir nodded and didn’t reach for his phone immediately."
+    }},
+    "S12.C004":{"title":"Shared continuation","paragraphs":{
+      "S12.C004.P000":"At the next table, a woman was explaining to an older couple that the bus would be late because of the weather. Alice caught herself wanting to know where they were going. Damir was picking grains of sand from his sleeve, left there after the beach. A new watchband mark circled his right wrist; she didn’t know when he had started wearing his watch so tightly.",
+      "S12.C004.P001":"“You said yesterday that you rarely get anywhere without hurrying,” she observed."
+    }},
+    "S12.C005":{"title":"If `skogafossVoice=damir`","paragraphs":{
+      "S12.C005.P000":"“At the waterfall, I asked what you do instead of counting stops. You answered about Nick’s hat. That was a detour.”",
+      "S12.C005.P001":"“It was,” he admitted. “I didn’t have a normal answer yet.”"
+    }},
+    "S12.C006":{"title":"If `skogafossVoice=eric` or `skogafossVoice=nick`","paragraphs":{
+      "S12.C006.P000":"“On the waterfall stairs, you didn’t wait for us by the car for the first time,” Alice said. “I noticed.”",
+      "S12.C006.P001":"“I surprised myself. Usually I go ahead, even when I don’t know where all of us are supposed to go.”"
+    }},
+    "S12.C007":{"title":"Shared continuation","paragraphs":{
+      "S12.C007.P000":"“What changed?” she asked.",
+      "S12.C007.P001":"“In Brussels, I moved out of the flat near the hospital. I rented a room farther away with someone I knew. I started eating dinner away from the computer. It sounds like an achievement for a person who couldn’t turn off the light in his office.”",
+      "S12.C007.P002":"“You left it on at home too.”",
+      "S12.C007.P003":"“I remember. You said my shifts were paying our electricity bills.”",
+      "S12.C007.P004":"Alice smiled. It was an exact memory, not an attempt to make the past better. Outside, the woman helped the older couple fold their map. Damir waited until Alice looked back at the table.",
+      "S12.C007.P005":"“I have friends there,” he said. “I learned to spend weekends without a hospital schedule. But I still sometimes take an extra shift if someone asks. I didn’t become an entirely different person.”",
+      "S12.C007.P006":"“I wasn’t looking for a different one.”",
+      "S12.C007.P007":"They both heard more in her sentence than she had meant to say. Damir didn’t rush to repair the awkwardness."
+    }},
+    "S12.C008":{"title":"Choice S12-C1 — ask about the people in his life now","paragraphs":{}},
+    "S12.C009":{"title":"A. Ask about the people who are around him now","paragraphs":{
+      "S12.C009.P000":"“Who was the friend you lived with?” Alice asked.",
+      "S12.C009.P001":"“Mathieu. We met in the emergency department when he brought his father in. Then we ran into each other at a bike shop. He has a daughter who made me learn bird names in French.”",
+      "S12.C009.P002":"“Did it work?”",
+      "S12.C009.P003":"“The first three. The fourth turns into a different bird every time.”",
+      "S12.C009.P004":"Damir showed her a photograph: an open children’s book on a table beside three bicycle helmets. No people were in the frame. Alice looked at the book and, for the first time, imagined his life without her without the sharp urge to compare it with what it might have been beside him.",
+      "S12.C009.P005":"“I’d like to meet them if I ever end up there,” she said, then added at once, “That isn’t a travel plan.”",
+      "S12.C009.P006":"“I understand.”"
+    }},
+    "S12.C010":{"title":"B. Ask to leave the conversation for today","paragraphs":{
+      "S12.C010.P000":"“Damir, let’s stop here,” Alice said. “I wanted to hear how you live, and I have. Right now I need to sit without a continuation.”",
+      "S12.C010.P001":"He looked at her unfinished soup, then at her.",
+      "S12.C010.P002":"“All right. I’ll get the bill.”",
+      "S12.C010.P003":"“Don’t pay for mine.”",
+      "S12.C010.P004":"“I was only going to pay for mine.”",
+      "S12.C010.P005":"It came out sharper than he intended. When he returned, he put the receipt beside his own cup and said:",
+      "S12.C010.P006":"“I’m sorry. I was defending myself against something you didn’t say.”",
+      "S12.C010.P007":"“So was I. Let’s just go outside.”",
+      "S12.C010.P008":"They reached the door together. Outside, the wind pulled Alice’s hood back; Damir didn’t fix it, only held the door while she fastened her coat."
+    }},
+    "S12.C011":{"title":"Shared continuation S12","paragraphs":{
+      "S12.C011.P000":"Outside, Alice opened her phone. Marina had sent a note about yesterday’s paragraph: “Good that you aren’t turning everyone into a symbol. Keep going.” Damir didn’t look at the screen. He stopped at the window of a small shop, where a box of pencils stood between the rain ponchos and postcards.",
+      "S12.C011.P001":"“You complained this morning that your last one broke,” he said. “Want to go in?”",
+      "S12.C011.P002":"“I didn’t complain. It broke in your hand when you asked me to write down the time.”",
+      "S12.C011.P003":"“That’s exactly why I remembered.”",
+      "S12.C011.P004":"Inside, Alice chose two ordinary pencils; Damir bought himself a small unlined notebook. He used to carry only a phone and schedule sheets. She asked what he planned to write in it.",
+      "S12.C011.P005":"“I don’t know. Yesterday I drew our car from above. It came out looking like an iron.”",
+      "S12.C011.P006":"“Will you show me?”",
+      "S12.C011.P007":"He opened the first page. The drawn car did have a heavy, pointed nose; beside it stood four little figures of different heights. Nick was taller than Eric, Eric was wider than the car, and Alice was holding something that looked like a shovel.",
+      "S12.C011.P008":"“It’s a notebook,” Damir explained.",
+      "S12.C011.P009":"“I was hoping it was a sign.”",
+      "S12.C011.P010":"She took the pencil and added a second boot to her figure. Damir didn’t correct the drawing, although the new boot ruined his entire perspective. At the shop door, the wind pressed an advertisement against the glass. They stood together while the clerk helped another customer carry out a box, then left without hurrying. Alice liked that Damir had a bad drawing he didn’t have to turn into a useful skill.",
+      "S12.C011.P011":"As they walked, she opened Marina’s message again. She wanted to show Damir the line about the beach—and realized it wasn’t a request for editorial advice. She wanted to know how he would read her observation."
+    }},
+    "S12.C012":{"title":"Choice S12-C2 — decide whether to share the draft","paragraphs":{}},
+    "S12.C013":{"title":"A. Show him the two lines","paragraphs":{
+      "S12.C013.P000":"“Can I have an opinion from neither a doctor nor an ex?” Alice asked.",
+      "S12.C013.P001":"“I can’t promise to stop being second-in-command.”",
+      "S12.C013.P002":"She gave him her phone with the two lines about the shot they hadn’t taken. Damir read them and handed the screen back without scrolling.",
+      "S12.C013.P003":"“It says ‘we,’” he observed. “You decided not to film too.”",
+      "S12.C013.P004":"“I don’t film.”",
+      "S12.C013.P005":"“You could have made it a story about Nick and Eric. You left yourself in it.”",
+      "S12.C013.P006":"Alice looked at the line again. He didn’t say whether it was good or bad, but pointed directly to the place where she had been afraid to hide.",
+      "S12.C013.P007":"“Thank you,” she said."
+    }},
+    "S12.C014":{"title":"B. Keep the draft to herself","paragraphs":{
+      "S12.C014.P000":"Alice turned off the screen.",
+      "S12.C014.P001":"“Not yet. I still haven’t decided which part is mine and which part belongs to someone else.”",
+      "S12.C014.P002":"“Then don’t show it.”",
+      "S12.C014.P003":"She expected him to ask why, but Damir pointed instead to the bus stop, where their neighbours from the guesthouse were arguing with the timetable. Alice took out her notebook and wrote down the route number. It was an ordinary journalistic act, not a defence of herself to him."
+    }},
+    "S12.C015":{"title":"Shared continuation S12","paragraphs":{
+      "S12.C015.P000":"Nick wrote in the group chat that he had uploaded the material. Eric replied with tomorrow’s departure time for the east. Alice and Damir returned to the guesthouse by different paths around the parking area: he stopped at the car, and she went in to buy a pencil. In the corridor, they met at the shared sink, made room for each other, and both smiled slightly. Neither had a ready-made role for the other, which let them simply walk into the common room.",
+      "S12.C015.P001":"Nick was trying to fit a deck of cards into a box that some previous guest had clearly packed with wet hands. Half the deck had swollen at the edges. He suggested a game: draw a card and name one thing each person would do for the trip tomorrow, or fold three towels the owner had left on the sofa instead. He drew first, looked at the card, and took the towels.",
+      "S12.C015.P002":"“Unfair. You know we’re interested too,” Alice said.",
+      "S12.C015.P003":"“That was the calculation. Help with the corners.”",
+      "S12.C015.P004":"Damir held the stack while Nick folded the first towel. The second had to be started again: Nick had made a long strip of it. Eric showed him how the owner had folded them that morning—once in half, then in thirds. Nick corrected it without calling the instruction an attack on creative freedom.",
+      "S12.C015.P005":"Eric drew a card and said he would check the open roads before they left in the morning. Damir promised to take food out of the shared fridge so nobody remembered it only after they were in the car. Alice wanted to say “I’ll write the article,” but that was too broad for tomorrow morning.",
+      "S12.C015.P006":"“I’ll show you what I’m planning to write about the beach,” she said. “Not the whole article. Everyone will see their words before Marina gets them.”",
+      "S12.C015.P007":"Nick stopped folding the towel.",
+      "S12.C015.P008":"“There aren’t many of my words in it yet,” he said.",
+      "S12.C015.P009":"“Then you’ll see what there is. And you can tell me where I got it wrong.”",
+      "S12.C015.P010":"“Me too?” Eric asked.",
+      "S12.C015.P011":"“Especially you. I don’t know how to describe the minute when you stopped the filming without turning either of you into a caricature.”",
+      "S12.C015.P012":"Damir left his towel on the stack.",
+      "S12.C015.P013":"“Do you need me in it?”",
+      "S12.C015.P014":"“Not yet. I may ask you separately later.”",
+      "S12.C015.P015":"He nodded. She wasn’t promising to turn their conversation into material simply so he wouldn’t feel left out.",
+      "S12.C015.P016":"Nick put the folded stack on the shelf by the door. The owner, passing with a set of keys, thanked them and marvelled that the towels now fit. Nick looked at Eric like a man who had just been praised for someone else’s method. Eric shrugged; by the end of the evening, it had become almost a friendly gesture.",
+      "S12.C015.P017":"When everyone had gone, Alice stayed behind to finish the action she had promised in her notebook—“show recognizable lines, ask separately about anything personal.” Then she set an alarm. Tomorrow began the long road to Skaftafell; now she had a concrete reason to open the notebook in front of the others, not only for herself."
+    }},
+    "S12.C016":{"title":"Choice S12-C3 — what Alice does on the way back after talking with Damir","paragraphs":{}},
+    "S12.C017":{"title":"A. Ask him to stop for hot chocolate","paragraphs":{"S12.C017.P000":"“Ten minutes,” she said. They stopped at a café, and for the first time that day Damir asked not about the past but about her favourite place in Iceland. Alice said she hadn’t chosen one yet. He suggested they not hurry."}},
+    "S12.C018":{"title":"B. Return to the group alone","paragraphs":{"S12.C018.P000":"“See you at home,” Alice said, meaning the guesthouse, and surprised herself with the word. Damir nodded and went to buy food. On the way back, she was glad not to explain her mood to anyone."
+    }}
+  }}}
+}
