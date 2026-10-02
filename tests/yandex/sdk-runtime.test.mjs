@@ -26,6 +26,6 @@ test('cloud read/write and diagnostics are observable',async()=>{
   assert.equal(await p.save({sceneId:'S01'}),true);assert.equal(h.calls.getData,1);assert.equal(h.calls.setData,1);assert.ok(events.some(x=>x.area==='cloud-read'&&x.status==='success'));assert.ok(events.some(x=>x.area==='cloud-write'&&x.status==='success'));
 });
 test('SDK failure falls back locally without a failing request and fails explicitly elsewhere',async()=>{
-  resetYandexSdkForTests();let h=harness({loadFails:true});let p=await initYandexPlatform({...h,location:{protocol:'http:',hostname:'localhost',search:'?lang=en'}});assert.equal(p.mode,'local-fallback');assert.equal(p.locale,'en');assert.equal(h.calls.append,0);
+  resetYandexSdkForTests();let h=harness({loadFails:true});let p=await initYandexPlatform({...h,location:{protocol:'http:',hostname:'localhost',search:'?lang=en'}});assert.equal(p.mode,'local-fallback');assert.equal(p.locale,'en');assert.equal(p.qaLocaleOverride,'en');assert.equal(h.calls.append,0);
   resetYandexSdkForTests();h=harness({loadFails:true});await assert.rejects(()=>initYandexPlatform({...h,location:{protocol:'https:',hostname:'cdn.example',search:'?lang=ru'}}),/YANDEX_RUNTIME_SDK_REQUIRED/);
 });

@@ -1,6 +1,7 @@
 import { compileScenePlayback } from './literary-engine.js';
 import { visualBoundary } from './literary-visual-directions.js';
 import { interactionBeats, interactionEchoes, interactionTargets } from './literary-interactive-beats.js';
+import { literaryLocaleBundles } from './literary-localization-bundle.js';
 
 // Counts refer to the fully resolved manuscript's canonical A read. They are
 // placement markers, not generated text and not a count of mutually exclusive
@@ -21,9 +22,11 @@ const splitSentences = text => text.trim().split(/(?<=[.!?…])\s+(?=[—«„A-
  * comes first. No manuscript sentence is deleted or paraphrased. A choice and
  * its selected response always begin fresh pages so save positions stay stable.
  */
-export function compileInteractivePlayback(scene, choices={}) {
+export function compileInteractivePlayback(scene, choices={}, locale='ru') {
   const original=compileScenePlayback(scene,choices);
-  const beats=interactionBeats[scene.id]||[];
+  const activeBeats=locale==='en'?literaryLocaleBundles.en.interactionBeats:interactionBeats;
+  const activeEchoes=locale==='en'?literaryLocaleBundles.en.interactionEchoes:interactionEchoes;
+  const beats=activeBeats[scene.id]||[];
   const targets=interactionTargets(scene,paragraphCount[scene.id]);
   const result=[];
   let pending=[],words=0,start=0,paragraphNumber=0,beatIndex=0;
@@ -70,7 +73,7 @@ export function compileInteractivePlayback(scene, choices={}) {
       if(visualBoundary(scene.id,entry.sourceRef))flush();
       addReadableParagraph(entry.text,index,entry.sourceRef);paragraphNumber++;
       if(paragraphNumber===1){
-        for(const [id,a,b] of interactionEchoes[scene.id]||[]){
+        for(const [id,a,b] of activeEchoes?.[scene.id]||[]){
           const echo=choices[id]==='A'?a:choices[id]==='B'?b:null;
           if(echo){flush();result.push({type:'page',paragraphs:[echo],text:echo,sourceStart:index,sourceEnd:index,sourceStartRef:entry.sourceRef,sourceEndRef:entry.sourceRef,echoOf:id});}
         }

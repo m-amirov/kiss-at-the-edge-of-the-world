@@ -25,17 +25,18 @@ function loadSdkScript({ document = globalThis.document, window = globalThis.win
   return sdkLoadPromise;
 }
 export function resetYandexSdkForTests() { sdkLoadPromise = null; }
-function localPlatform(locale, diagnostic) {
+function localPlatform(locale, diagnostic, qaLocaleOverride = null) {
   diagnostic('sdk', 'local-fallback');
-  return { mode:'local-fallback', locale, language:locale, markInteractiveReady(){}, setGameplayActive(){}, save:async()=>false, showFullscreenAd:async()=>false, dispose(){} };
+  return { mode:'local-fallback', locale, language:locale, qaLocaleOverride, markInteractiveReady(){}, setGameplayActive(){}, save:async()=>false, showFullscreenAd:async()=>false, dispose(){} };
 }
 export async function initYandexPlatform({ onCloudState, onLanguage, onPause, onResume, onDiagnostic, cloudKey=CLOUD_KEY, location=globalThis.location, document=globalThis.document, window=globalThis.window }={}) {
   const events=[];
   const diagnostic=(area,status,detail=null)=>{const event={area,status,...(detail?{detail}:{})};events.push(event);onDiagnostic?.(event);};
-  if(isLocalDevelopment(location) && !window?.YaGames)return localPlatform(requestedQaLocale(location)||'ru',diagnostic);
+  const qaLocaleOverride=isLocalDevelopment(location)?requestedQaLocale(location):null;
+  if(isLocalDevelopment(location) && !window?.YaGames)return localPlatform(qaLocaleOverride||'ru',diagnostic,qaLocaleOverride);
   let YaGames;
   try { YaGames=await loadSdkScript({document,window}); }
-  catch(error){ if(isLocalDevelopment(location))return localPlatform(requestedQaLocale(location)||'ru',diagnostic); diagnostic('sdk','failed',error.message); throw new Error(`YANDEX_RUNTIME_SDK_REQUIRED: ${error.message}`,{cause:error}); }
+  catch(error){ if(isLocalDevelopment(location))return localPlatform(qaLocaleOverride||'ru',diagnostic,qaLocaleOverride); diagnostic('sdk','failed',error.message); throw new Error(`YANDEX_RUNTIME_SDK_REQUIRED: ${error.message}`,{cause:error}); }
   let ysdk;
   try { ysdk=await YaGames.init(); diagnostic('sdk','initialized'); }
   catch(error){ diagnostic('sdk','init-failed',error?.message||String(error)); throw new Error(`YANDEX_SDK_INIT_FAILED: ${error?.message||error}`,{cause:error}); }
@@ -46,7 +47,7 @@ export async function initYandexPlatform({ onCloudState, onLanguage, onPause, on
   let readySent=false,gameplayWanted=false,platformPaused=false,gameplayReported=false;
   const syncGameplay=()=>{const active=gameplayWanted&&!platformPaused;if(active===gameplayReported)return;gameplayReported=active;ysdk.features?.GameplayAPI?.[active?'start':'stop']?.();diagnostic('gameplay',active?'started':'stopped');};
   const pause=()=>{platformPaused=true;syncGameplay();onPause?.();};const resume=()=>{platformPaused=false;syncGameplay();onResume?.();};ysdk.on?.('game_api_pause',pause);ysdk.on?.('game_api_resume',resume);
-  return {mode:'yandex',locale,language:locale,diagnostics:events,
+  return {mode:'yandex',locale,language:locale,qaLocaleOverride:null,diagnostics:events,
     markInteractiveReady(){if(readySent)return false;readySent=true;ysdk.features?.LoadingAPI?.ready?.();diagnostic('loading','ready');return true;},
     setGameplayActive(active){gameplayWanted=Boolean(active);syncGameplay();},
     async save(state){if(!player?.setData){diagnostic('cloud-write','unavailable');return false;}try{await player.setData({[cloudKey]:state},false);diagnostic('cloud-write','success');return true;}catch(error){diagnostic('cloud-write','failed',error?.message||String(error));return false;}},

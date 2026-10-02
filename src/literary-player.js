@@ -5,9 +5,13 @@ import { createCloudSaveQueue } from './save-state.js';
 import { stageForScene } from './literary-stage.js';
 import { visualAt, visualEntryForPosition } from './literary-visual-directions.js';
 import { compileInteractivePlayback } from './literary-pacing.js';
-import { createTranslator } from './localization.js';
+import { applyLiteraryLocale, createTranslator, validateLiteraryInteractionLocale } from './localization.js';
+import { literaryLocaleBundles } from './literary-localization-bundle.js';
+import { interactionBeats } from './literary-interactive-beats.js';
 
-const byId = new Map(literarySeason.scenes.map(scene => [scene.id, scene]));
+const canonicalById = new Map(literarySeason.scenes.map(scene => [scene.id, scene]));
+let runtimeSeason = literarySeason;
+let byId = canonicalById;
 const app = document.getElementById('literary-app');
 const textSettingsKey = 'kiss-at-the-edge-of-the-world:literary-settings:v1';
 const literaryCloudKey = 'kiss-at-the-edge-of-the-world:literary-season:v1';
@@ -111,11 +115,11 @@ const blank = () => ({ schemaVersion:3,sceneId:'S01',position:0,choices:{},finis
 function parseSaved(raw) {
   try {
     const s=typeof raw==='string'?JSON.parse(raw):raw;
-    if(![1,2,3].includes(s?.schemaVersion) || !byId.has(s.sceneId) || !Number.isInteger(s.position) || s.position<0 ||
+    if(![1,2,3].includes(s?.schemaVersion) || !canonicalById.has(s.sceneId) || !Number.isInteger(s.position) || s.position<0 ||
        !s.choices || typeof s.choices!=='object' || Array.isArray(s.choices))return null;
     if(Object.entries(s.choices).some(([id,code])=> !/^S\d{2}-C\d+$/.test(id)|| !/^[A-D]$/.test(code)))return null;
     return { ...s, schemaVersion:3, position:s.schemaVersion<3?0:s.position,
-      migrationNotice:s.schemaVersion<3, visited:Array.isArray(s.visited)?s.visited.filter(id=>byId.has(id)):[s.sceneId],revision:s.revision??0 };
+      migrationNotice:s.schemaVersion<3, visited:Array.isArray(s.visited)?s.visited.filter(id=>canonicalById.has(id)):[s.sceneId],revision:s.revision??0 };
   } catch { return null; }
 }
 function loadLocal(){try{const saved=localStorage.getItem(literarySaveKey);const parsed=parseSaved(saved);
@@ -132,6 +136,19 @@ let locale='ru';
 let t=createTranslator(locale);
 let cloudQueue=null;
 let settings=(()=>{try{return{scale:1,contrast:false,motion:false,...JSON.parse(localStorage.getItem(textSettingsKey)||'{}')}}catch{return{scale:1,contrast:false,motion:false}}})();
+function loadRuntimeSeason(selectedLocale,qaLocaleOverride){
+  if(selectedLocale==='ru')return literarySeason;
+  const localeData=literaryLocaleBundles[selectedLocale];
+  if(!localeData)throw Error(`BLOCKED_EN_CORPUS_INCOMPLETE: missing locale bundle ${selectedLocale}`);
+  const sceneIds=qaLocaleOverride==='en'?literarySeason.scenes.filter(scene=>scene.episode<=2).map(scene=>scene.id):literarySeason.scenes.map(scene=>scene.id);
+  const scopedScenes=Object.fromEntries(sceneIds.map(id=>[id,localeData.scenes?.[id]]).filter(([,scene])=>scene));
+  const scopedBeats=Object.fromEntries(sceneIds.map(id=>[id,localeData.interactionBeats?.[id]]).filter(([,beats])=>beats));
+  const scopedEchoes=Object.fromEntries(Object.entries(localeData.interactionEchoes??{}).filter(([id])=>sceneIds.includes(id)));
+  const boundedData=qaLocaleOverride==='en'?{...localeData,scenes:scopedScenes,interactionBeats:scopedBeats,interactionEchoes:scopedEchoes}:localeData;
+  const interactionReport=validateLiteraryInteractionLocale(interactionBeats,boundedData,{sceneIds});
+  if(interactionReport.status!=='PASS')throw Error('BLOCKED_EN_CORPUS_INCOMPLETE: '+interactionReport.errors.join('; '));
+  return applyLiteraryLocale(literarySeason,boundedData,{sceneIds});
+}
 function persist() {
   reader.revision=(reader.revision??0)+1;
   try {localStorage.setItem(literarySaveKey,JSON.stringify(reader));hasSave=true;}catch{}
@@ -157,7 +174,7 @@ function isInteractiveTarget(target){return target instanceof Element && Boolean
 function advanceNarrative(){
   if(menuOpen)return false;
   const scene=byId.get(reader.sceneId);if(!scene)return false;
-  const flow=compileInteractivePlayback(scene,reader.choices);
+  const flow=compileInteractivePlayback(scene,reader.choices,locale);
   const current=flow[reader.position];
   if(current?.type==='page'){
     reader.position=Math.min(reader.position+1,flow.length);
@@ -254,9 +271,10 @@ function panel(heading,children){
 function episodeSelection(section){
   section.append(el('Открываются по мере прохождения. При возвращении к прочитанной сцене ваши поздние решения будут сброшены, чтобы не смешивать разные варианты истории.','small-note'));
   const known=new Set(reader.visited||[]);
-  for(let ep=1;ep<=literarySeason.episodes;ep++){
-    const first=literarySeason.scenes.find(s=>s.episode===ep);
-    const unlocked=literarySeason.scenes.some(s=>s.episode===ep&&known.has(s.id));
+  const episodes=[...new Set(runtimeSeason.scenes.map(scene=>scene.episode))].sort((a,b)=>a-b);
+  for(const ep of episodes){
+    const first=runtimeSeason.scenes.find(s=>s.episode===ep);
+    const unlocked=runtimeSeason.scenes.some(s=>s.episode===ep&&known.has(s.id));
     const item=button(`Эпизод ${ep}${unlocked?' · открыт':' · пока не пройден'}`,()=>{
       if(!unlocked)return;
       if(!window.confirm(`Вернуться к началу эпизода ${ep}? Выборы, сделанные позже, будут сброшены.`))return;
@@ -323,7 +341,7 @@ function renderReader(){
   if(menuOpen)return renderMenu();
   platform?.setGameplayActive(true);
   const scene=byId.get(reader.sceneId);if(!scene){goHome();return}
-  const flow=compileInteractivePlayback(scene,reader.choices);reader.position=Math.min(reader.position,flow.at(-1)?.type==='choice'?Math.max(0,flow.length-1):flow.length);
+  const flow=compileInteractivePlayback(scene,reader.choices,locale);reader.position=Math.min(reader.position,flow.at(-1)?.type==='choice'?Math.max(0,flow.length-1):flow.length);
   const isEnding=['S44','S45','S46','S47'].includes(scene.id);
   const mode=artMode(scene,flow[reader.position],reader.choices,isEnding);
   app.className='literary-reader';app.dataset.presentation=mode;app.replaceChildren();
@@ -377,22 +395,34 @@ window.addEventListener('keydown',event=>{
   if(menuOpen || !['Enter',' ','Spacebar','ArrowRight'].includes(event.key) || event.altKey || event.ctrlKey || event.metaKey || isInteractiveTarget(event.target) || isInteractiveTarget(document.activeElement) || document.activeElement?.closest?.('[data-stage-advance]'))return;
   if(advanceNarrative())event.preventDefault();
 });
-applySettings();renderMenu();
+function renderBootFailure(error){
+  platform?.setGameplayActive(false);
+  app.className='literary-home';
+  app.dataset.qaFailure=String(error?.message||'').startsWith('BLOCKED_EN_CORPUS_INCOMPLETE')?'en-corpus':'yandex-sdk';
+  const message=app.dataset.qaFailure==='en-corpus'?String(error.message):t('sdkError');
+  app.replaceChildren(el(message,'structural-error','p'));
+}
+applySettings();
 // Versioned cloud key: never interpret old 12-episode progression as new literary scenes.
 // A late cloud response cannot overwrite deliberate new-game actions or a local save.
 const bootHadLocal=hasSave;
-initYandexPlatform({cloudKey:literaryCloudKey,onCloudState:raw=>{
-  const candidate=parseSaved(raw);
-  if(!candidate || cloudLocked)return;
-  if(bootHadLocal || hasSave){cloudCandidate=candidate; if(menuOpen)renderMenu();return}
-  reader=candidate;hasSave=true;
-  try{localStorage.setItem(literarySaveKey,JSON.stringify(reader))}catch{}
-  if(menuOpen)renderMenu();
-}}).then(result=>{
+async function boot(){
+ try{
+  const result=await initYandexPlatform({cloudKey:literaryCloudKey,onCloudState:raw=>{
+   const candidate=parseSaved(raw);
+   if(!candidate || cloudLocked)return;
+   if(bootHadLocal || hasSave){cloudCandidate=candidate; if(menuOpen)renderMenu();return}
+   reader=candidate;hasSave=true;
+   try{localStorage.setItem(literarySaveKey,JSON.stringify(reader))}catch{}
+   if(menuOpen)renderMenu();
+  }});
   platform=result;
   locale=platform.locale;
   t=createTranslator(locale);
   document.documentElement.lang=locale;
+  runtimeSeason=loadRuntimeSeason(locale,platform.qaLocaleOverride);
+  byId=new Map(runtimeSeason.scenes.map(scene=>[scene.id,scene]));
+  if(!byId.has(reader.sceneId))throw Error(`BLOCKED_EN_CORPUS_INCOMPLETE: missing scene ${reader.sceneId}`);
   renderMenu();
   platform.setGameplayActive(!menuOpen);
   platform.markInteractiveReady();
@@ -401,16 +431,19 @@ initYandexPlatform({cloudKey:literaryCloudKey,onCloudState:raw=>{
     // Explicit new-game reset may have happened while SDK was initializing.
     if(cloudLocked)cloudQueue.enqueue(reader).catch(()=>{});
   }
-}).catch(error=>{
-  console.error(error);
-  app.className='literary-home';
-  app.dataset.qaFailure='yandex-sdk';
-  app.replaceChildren(el(t('sdkError'),'structural-error','p'));
-});
+ }catch(error){
+   console.error(error);
+   renderBootFailure(error);
+ }
+}
 window.__LITERARY_QA__={
   getState:()=>structuredClone(reader),
-  getFlow:()=>compileInteractivePlayback(byId.get(reader.sceneId),reader.choices),
-  getScenes:()=>literarySeason.scenes.map(s=>s.id),
+  getFlow:()=>compileInteractivePlayback(byId.get(reader.sceneId),reader.choices,locale),
+  getScenes:()=>runtimeSeason.scenes.map(s=>s.id),
+  getLocale:()=>locale,
+  getPlatformMode:()=>platform?.mode??'booting',
+  getPersistenceKeys:()=>({local:literarySaveKey,cloud:literaryCloudKey}),
   getScreen:()=>({menuOpen,sceneId:reader.sceneId,position:reader.position}),
   // QA methods are strictly read-only; preview and the old game have separate state keys.
 };
+boot();
