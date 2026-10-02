@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "status": "PASS",
   "evidenceType": "ENGLISH_RUNTIME_LOCALIZATION",
-  "head": "5ea7917409663eb088a4414f1796ea6646c512d4",
+  "head": "4968c9c66df8d3895441d3073a3dfaf0c4106432",
   "baseUrl": "http://127.0.0.1:4173/literary.html",
   "locales": {
     "productionSource": "Yandex SDK locale",
@@ -627,8 +627,8 @@
           "path": "output\\playwright\\english-runtime-localization\\S05-prose-1920x900.png",
           "width": 1920,
           "height": 900,
-          "bytes": 1572793,
-          "sha256": "d8ad457c9778207cab5345834534962dd1f502e974464296200d4667d87e45bf"
+          "bytes": 109553,
+          "sha256": "2aa88306999a8a875111f1aa1f85e98b9e65ad662a1fc190843c6fd99d9ff4f2"
         },
         {
           "path": "output\\playwright\\english-runtime-localization\\S05-choice-1920x900.png",
@@ -1246,8 +1246,8 @@
           "path": "output\\playwright\\english-runtime-localization\\S08-choice-390x844.png",
           "width": 390,
           "height": 844,
-          "bytes": 420554,
-          "sha256": "9d8660ba9985ce6f5125e13346ddc654c9d3b0d001dbeb1decb317b9032b90ec"
+          "bytes": 420932,
+          "sha256": "b71f064a9a08235a21f9604a90ac50a6493fcb69b1165da3abd81743d51e1e1f"
         }
       ],
       "consoleErrors": [],
@@ -1545,8 +1545,8 @@
           "path": "output\\playwright\\english-runtime-localization\\S66-prose-1920x900.png",
           "width": 1920,
           "height": 900,
-          "bytes": 99813,
-          "sha256": "9e7e7514382c42139d43e464feb563d51f532946255b03c93dde4e35aea69466"
+          "bytes": 2226151,
+          "sha256": "dbfea7b1d7b943df4bea4389c8b89f3e6459544f2c2a291dcb7348ac9ed0bf91"
         },
         {
           "path": "output\\playwright\\english-runtime-localization\\S66-choice-1920x900.png",
@@ -1851,8 +1851,8 @@
           "path": "output\\playwright\\english-runtime-localization\\S66-prose-360x640.png",
           "width": 360,
           "height": 640,
-          "bytes": 68482,
-          "sha256": "39ec97f20211ffc5edb8bbfacd989544a9bd4f10ef9bb358fe8731eb89df3117"
+          "bytes": 354796,
+          "sha256": "2514bc6b17fe2dca678000d8b7611284e4be9ba275baf16642cb3ea33214e6e7"
         },
         {
           "path": "output\\playwright\\english-runtime-localization\\S66-choice-360x640.png",
