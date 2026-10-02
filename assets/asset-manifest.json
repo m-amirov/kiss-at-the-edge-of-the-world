@@ -1060,12 +1060,11 @@
       "id": "s18-hofn-breakfast-morning",
       "family": "background",
       "path": "assets/backgrounds/s18-hofn-breakfast-morning.png",
-      "status": "integrated",
+      "status": "unused-candidate",
       "runtime": "authored beat-level environment background",
       "creationMethod": "Codex imagegen, current production-art run, environment-only",
       "createdAt": "2026-10-01",
-      "dimensions": "1920x900",
-      "runtimePath": "assets/backgrounds/s18-hofn-breakfast-morning.webp"
+      "dimensions": "1920x900"
     },
     {
       "id": "s26-eastfjords-guesthouse-courtyard",
@@ -1093,23 +1092,21 @@
       "id": "s39-alice-damir-cafe-walk",
       "family": "background",
       "path": "assets/backgrounds/s39-alice-damir-cafe-walk.png",
-      "status": "integrated",
+      "status": "unused-candidate",
       "runtime": "authored beat-level environment background",
       "creationMethod": "Codex imagegen, current production-art run, environment-only",
       "createdAt": "2026-10-01",
-      "dimensions": "1920x900",
-      "runtimePath": "assets/backgrounds/s39-alice-damir-cafe-walk.webp"
+      "dimensions": "1920x900"
     },
     {
       "id": "s40-alice-room-laptop-window",
       "family": "background",
       "path": "assets/backgrounds/s40-alice-room-laptop-window.png",
-      "status": "integrated",
+      "status": "unused-candidate",
       "runtime": "authored beat-level environment background",
       "creationMethod": "Codex imagegen, current production-art run, environment-only",
       "createdAt": "2026-10-01",
-      "dimensions": "1920x900",
-      "runtimePath": "assets/backgrounds/s40-alice-room-laptop-window.webp"
+      "dimensions": "1920x900"
     },
     {
       "id": "s46-airport-bus-day",
@@ -1126,12 +1123,11 @@
       "id": "s48-guesthouse-exit-morning",
       "family": "background",
       "path": "assets/backgrounds/s48-guesthouse-exit-morning.png",
-      "status": "integrated",
+      "status": "unused-candidate",
       "runtime": "authored beat-level environment background",
       "creationMethod": "Codex imagegen, current production-art run, environment-only",
       "createdAt": "2026-10-01",
-      "dimensions": "1920x900",
-      "runtimePath": "assets/backgrounds/s48-guesthouse-exit-morning.webp"
+      "dimensions": "1920x900"
     },
     {
       "id": "s52-hofn-streets-post-workshop",
@@ -1152,7 +1148,7 @@
       "runtime": "S03 authored Damir-enters morning guesthouse conversation",
       "creationMethod": "Codex imagegen current production-art run using canonical character references; independent desktop and portrait derivatives",
       "createdAt": "2026-10-01",
-      "dimensions": "1920x900",
+      "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s03-editor-call-damir-portrait.png",
       "portraitDimensions": "941x1672",

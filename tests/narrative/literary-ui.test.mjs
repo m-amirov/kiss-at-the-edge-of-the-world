@@ -64,7 +64,9 @@ test('narrative navigation is stage-first and retired text controls are absent',
   assert.match(css, /\.advance-cue\{/);
   assert.match(css, /\.literary-picture\[data-stage-advance\]:focus-visible/);
   assert.match(css, /\.choice-button::before\{/);
-  assert.match(css, /\.choice-button::after\{/);
+  assert.match(css, /\.choice-button::before\{[\s\S]*?border-right:2px solid[\s\S]*?border-bottom:2px solid[\s\S]*?rotate\(-45deg\)/);
+  assert.match(css, /\.choice-button::after\{\s*content:none/);
+  assert.doesNotMatch(css, /\.choice-button::(?:before|after)\{[^}]*content:\s*['"][^'"]+['"]/);
   assert.match(css, /\.choice-button\{[\s\S]*?min-height:56px/);
 });
 

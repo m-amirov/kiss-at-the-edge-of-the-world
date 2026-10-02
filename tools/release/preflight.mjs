@@ -58,7 +58,7 @@ export function releasePreflight(){
  if(starterKitStatus.status!=='clean')block('STARTER_KIT_DRIFT',`Starter Kit target status is ${starterKitStatus.status}; resolve managed drift without bypassing the guard.`);
  const routeQa=exists('artifacts/evidence/full-route-runtime-qa-2026-09-30.json')?JSON.parse(fs.readFileSync(path.join(root,'artifacts/evidence/full-route-runtime-qa-2026-09-30.json'),'utf8')):null;
  const currentHead=execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).trim();
- const routeQaPass=routeQa?.status==='PASS'&&routeQa.head===currentHead&&routeQa.results?.length===8&&routeQa.results.every(item=>item.ending===item.expectedEnding&&item.finished&&item.errors?.length===0&&item.failed?.length===0);
+ const routeQaPass=routeQa?.status==='PASS'&&routeQa.head===currentHead&&routeQa.results?.length===8&&routeQa.results.every(item=>item.ending===item.expectedEnding&&item.finished&&item.softLocks===0&&item.errors?.length===0&&item.failed?.length===0);
  if(!routeQaPass)block('FINAL_QA_MISSING','Fresh full-route browser evidence for all four routes and both required viewports is missing or does not match the audited HEAD.');
  return {status:blockers.length?'BLOCKED':'PASS',releaseCandidateReady:!blockers.length,newSeasonEpisodesPlanned:10,literaryEpisodesPlayable:literarySeason.episodes,literarySceneCount:literarySeason.scenes.length,defaultEdition:'new-ten-episode',legacyAvailableOnExplicitQuery:false,routeSamples:routes,artAcceptance,blockers};
 }

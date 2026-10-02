@@ -9,8 +9,13 @@ const manifestFile = path.join(root, 'assets/asset-manifest.json');
 const sha256 = value => crypto.createHash('sha256').update(fs.readFileSync(value)).digest('hex');
 const manifest = JSON.parse(fs.readFileSync(manifestFile, 'utf8'));
 const record = JSON.parse(fs.readFileSync(file, 'utf8'));
-const current = manifest.assets.filter(entry => entry.path?.endsWith('.png') && entry.creationMethod?.includes('current production-art run'));
-const bySource = new Map((record.runtimeAssets ?? []).map(asset => [asset.sourcePath, asset]));
+const runtimeSource = [...fs.globSync('src/**/*.{js,css}'), 'index.html', 'literary.html']
+  .filter(item => fs.existsSync(path.join(root, item)))
+  .map(item => fs.readFileSync(path.join(root, item), 'utf8'))
+  .join('\n');
+const isMapped = entry => Boolean(entry.runtimePath && runtimeSource.includes(path.basename(entry.runtimePath)));
+const current = manifest.assets.filter(entry => entry.path?.endsWith('.png') && entry.creationMethod?.includes('current production-art run') && isMapped(entry));
+const bySource = new Map((record.runtimeAssets ?? []).filter(asset => runtimeSource.includes(path.basename(asset.runtimePath))).map(asset => [asset.sourcePath, asset]));
 for (const entry of current) {
   for (const [sourceField, runtimeField] of [['path', 'runtimePath'], ['portraitAsset', 'runtimePortraitAsset']]) {
     const sourcePath = entry[sourceField];

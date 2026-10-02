@@ -15,6 +15,7 @@
     "skills:validate": "node tools/starter-kit/self-test.mjs",
     "literary:compile": "node tools/literary/compile.mjs",
     "release:preflight": "node tools/release/preflight.mjs",
+    "release:local-freeze": "node tools/release/local-freeze.mjs",
     "dev": "node tools/dev-server.mjs"
   },
   "type": "module"
