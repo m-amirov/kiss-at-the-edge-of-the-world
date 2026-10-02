@@ -50,9 +50,19 @@ Total: 4 scenes, 46 chunks, 263 RU paragraphs, 6 choice IDs. Chunk and paragraph
 
 PASS across Episode 3 and the Episode 2 → Episode 3 boundary. Day/time advances from the previous episode into day 5 morning/afternoon and day 6 late morning/afternoon; the route moves through Skógafoss, the road to Vík, Reynisfjara, and Vík; weather and travel decisions remain bounded by the source. Existing camera-consent state, Alice/Damir history, Eric and Nick callbacks, the notebook, and Marina's assignment are carried forward without contradiction.
 
-## Source-level continuity defects
+## Bounded repair update — 2026-10-02
 
-None identified. No `SOURCE_CONTINUITY_DEFECT` was found; no RU repair was required.
+Audit verdict: `REQUIRES_EP03_EP04_SOURCE_INTERACTION_REPAIR`. The repair was limited to Episode 3–4 refs; Episode 5 was not started.
+
+Source/runtime defects found and repaired:
+
+- `S12.C013.P001`: the EN line incorrectly rendered `вторым` as a deputy/second-in-command role. It now reads “I can’t promise not to be the latter.”
+- `S12.C015.P000`: the RU and EN continuation incorrectly added a second pencil purchase. Damir now stops at the car and Alice goes inside the guesthouse; no new purchase is introduced.
+- `S11-C91` / runtime `S11-C91`: the extra beat no longer praises Nick for basic safety compliance; it is a route-neutral choice about Alice and Nick walking/listening on the dry path after moving away from the water.
+
+Preserved: scene IDs, authored choice IDs, extra choice IDs (`S11-C90/C91`), option codes, predicates, route graph and save schema. Episode 1–2 English source files remained byte-unchanged. Canonical literary data and the locale bundle were regenerated with `npm run literary:compile`.
+
+The durable semantic runtime record is `artifacts/evidence/ep03-04-interaction-continuity.json`; it covers RU and EN, authored outcomes, both extra beats, and the three requested viewports.
 
 ## Unresolved editorial decisions
 

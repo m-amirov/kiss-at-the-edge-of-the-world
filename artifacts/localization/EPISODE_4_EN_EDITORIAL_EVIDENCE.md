@@ -18,9 +18,9 @@ The scene order and IDs agree across the current `literarySeason`, the Episode 4
 | 1 | `S13` | Day 7. Skaftafell. Four people and one notebook | 11 | 80 | `S13-C1` | reads `skogafossVoice`; reads `S12-C3=A|B`; writes `alice-leads`/equal-collection state |
 | 2 | `S14` | Day 7. Trail above the glacier plain. Pace | 11 | 64 | `S14-C1`, `S14-C2` | reads/writes `ericTone`; `S14-C2` writes the Eric response used by S15 |
 | 3 | `S15` | Day 8. Jökulsárlón. Not filming means seeing | 11 | 84 | `S15-C1` | reads `skogafossVoice`; reads `S14-C2`; preserves Nick camera-consent boundaries |
-| 4 | `S16` | Day 8. Roadside guesthouse. Someone else’s pain | 5 | 40 | `S16-C1` | route-independent Eric support choice; preserves immediate and delayed relationship beats |
+| 4 | `S16` | Day 8. Roadside guesthouse. Someone else’s pain | 5 | 39 | `S16-C1` | route-independent Eric support choice; preserves immediate and delayed relationship beats |
 
-Total: 4 scenes, 38 chunks, 268 RU paragraphs, 5 choice IDs. Chunk and paragraph references are stable `Sxx.Cxxx` / `Sxx.Cxxx.Pxxx` identifiers; technical IDs, option codes, predicates, and state values are not translated.
+Total: 4 scenes, 38 chunks, 267 RU paragraphs, 5 choice IDs. Chunk and paragraph references are stable `Sxx.Cxxx` / `Sxx.Cxxx.Pxxx` identifiers; technical IDs, option codes, predicates, and state values are not translated.
 
 ## Choice and state parity ledger
 
@@ -49,9 +49,21 @@ Total: 4 scenes, 38 chunks, 268 RU paragraphs, 5 choice IDs. Chunk and paragraph
 
 PASS across Episode 4 and the Episode 3 → Episode 4 boundary. The route, day/time, accommodation, weather, Marina/article pressure, Alice/Damir history, Eric and Nick progression, notebook/music/camera motifs, and previously learned personal facts remain consistent. `skogafossVoice`, `ericTone`, `S12-C3`, camera consent, and the Episode 3 choice callbacks are carried into the correct Episode 4 scenes.
 
-## Source-level continuity defects
+## Bounded repair update — 2026-10-02
 
-None identified. No `SOURCE_CONTINUITY_DEFECT` was found; no RU repair was required.
+Audit verdict: `REQUIRES_EP03_EP04_SOURCE_INTERACTION_REPAIR`. The repair was limited to Episode 3–4 refs; Episode 5 was not started.
+
+Source/runtime defects found and repaired:
+
+- `S15-C91` / runtime `S15-C91`: the stale post-trip meeting premise was replaced with a draft/material boundary grounded in Nick’s unfinished film, trust discussion and the next-day review.
+- `S16-C90` / runtime `S16-C90`: the stale unfinished-thought premise was replaced with Alice respecting Damir’s ten-minute, no-questions boundary after he helps the injured tourist.
+- `S16-C91` / runtime `S16-C91`: the tea-only premise was replaced with the route-neutral kitchen/draft boundary shared by both authored `S16-C1` outcomes.
+- `S16.C004.P007`: the canonical `---` separator was leaked as runtime prose. It was removed from RU and EN; S16 now has 39 EN paragraphs and the Episode 4 total is 267 RU paragraphs.
+- Exact EN polish was applied at `S15.C003.P016`, `S15.C005.P005`, `S16.C000.P000` and `S16.C000.P012` only.
+
+Preserved: scene IDs, authored choice IDs, extra choice IDs (`S15-C90/C91`, `S16-C90/C91`), option codes, predicates, route graph and save schema. Episode 1–2 English source files remained byte-unchanged. Canonical literary data and the locale bundle were regenerated with `npm run literary:compile`.
+
+The durable semantic runtime record is `artifacts/evidence/ep03-04-interaction-continuity.json`; it covers RU and EN, authored outcomes, both extra beats, and the three requested viewports.
 
 ## Unresolved editorial decisions
 
