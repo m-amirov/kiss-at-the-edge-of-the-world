@@ -21,14 +21,16 @@ await fs.mkdir(outputDir, { recursive: true });
 const browser = await chromium.launch({ executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: true });
 const captures = [];
 
-async function boot(page, locale) {
+async function boot(page, locale, { enterReader = true } = {}) {
   await page.goto(urlFor(locale), { waitUntil: 'networkidle' });
   await page.waitForFunction(() => Boolean(window.__LITERARY_QA__ && document.querySelector('.literary-home, [data-qa-failure]')));
   const boot = await page.evaluate(() => ({ locale: window.__LITERARY_QA__?.getLocale?.(), mode: window.__LITERARY_QA__?.getPlatformMode?.(), failure: document.querySelector('[data-qa-failure]')?.dataset.qaFailure ?? null }));
   if (boot.failure) throw new Error(`boot failure ${boot.failure}`);
   if (boot.locale !== locale) throw new Error(`locale mismatch: expected ${locale}, got ${boot.locale}`);
-  await page.getByRole('button', { name: locale === 'en' ? /Continue/ : /Продолжить/ }).first().click();
-  await page.locator('.reader-sheet').waitFor();
+  if (enterReader) {
+    await page.getByRole('button', { name: locale === 'en' ? /Continue/ : /Продолжить/ }).first().click();
+    await page.locator('.reader-sheet').waitFor();
+  }
   return boot;
 }
 
@@ -36,6 +38,15 @@ async function inspect(page) {
   return page.evaluate(() => {
     const narrative = [...document.querySelectorAll('.reader-scene,.reader-paragraph,.decision-question,.choice-button')];
     const text = narrative.map(node => node.textContent ?? '').join('\n');
+    const renderedUiText = document.body.innerText ?? '';
+    const accessibilityText = [
+      document.title,
+      ...[...document.querySelectorAll('[aria-label],[title]')]
+        .filter(node => node.getAttribute('aria-hidden') !== 'true')
+        .flatMap(node => [node.getAttribute('aria-label'), node.getAttribute('title')])
+        .filter(Boolean)
+    ].join('\n');
+    const cyrillic = /[\u0400-\u04ff]/u;
     const clipped = narrative.filter(node => {
       const rect = node.getBoundingClientRect();
       return rect.left < -1 || rect.right > innerWidth + 1 || rect.top < -1 || rect.bottom > innerHeight + 1 || node.scrollWidth > node.clientWidth + 1 || node.scrollHeight > node.clientHeight + 1;
@@ -46,8 +57,11 @@ async function inspect(page) {
       sceneId: window.__LITERARY_QA__.getScreen().sceneId,
       locale: window.__LITERARY_QA__.getLocale(),
       narrativeText: text,
+      renderedUiText,
+      accessibilityText,
       hasEnglishProse: Boolean(document.querySelector('.reader-paragraph')),
       russianNarrativeLeak: /[\u0400-\u04ff]/u.test(text),
+      russianUiLeak: cyrillic.test(renderedUiText) || cyrillic.test(accessibilityText),
       choiceLabels: choices,
       choiceLabelsEnglish: choices.length > 0 && choices.every(label => !/[\u0400-\u04ff]/u.test(label)),
       overflow: document.documentElement.scrollWidth > innerWidth + 1 || document.documentElement.scrollHeight > innerHeight + 1,
@@ -87,7 +101,26 @@ async function captureTarget(sceneId, viewport) {
   page.on('requestfailed', request => failedRequests.push(request.url()));
   try {
     await page.addInitScript(({ key, value }) => { if (localStorage.getItem(key) === null) localStorage.setItem(key, JSON.stringify(value)); }, { key: literarySaveKey, value: stateFor(sceneId) });
-    const bootState = await boot(page, 'en');
+    const bootState = await boot(page, 'en', { enterReader: false });
+    const surfaceScreenshots = {};
+    const captureSurface = async name => {
+      const screenshot = path.join(outputDir, `${sceneId}-${name}-${viewport.width}x${viewport.height}.png`);
+      await page.screenshot({ path: screenshot });
+      const bytes = await fs.readFile(screenshot);
+      surfaceScreenshots[name] = { path: screenshot, width: viewport.width, height: viewport.height, bytes: bytes.length, sha256: crypto.createHash('sha256').update(bytes).digest('hex') };
+    };
+    const home = await inspect(page);
+    await captureSurface('home');
+    await page.getByRole('button', { name: 'Episodes', exact: true }).click();
+    const episodes = await inspect(page);
+    await captureSurface('episodes');
+    await page.getByRole('button', { name: '← Menu', exact: true }).click();
+    await page.getByRole('button', { name: 'Settings', exact: true }).click();
+    const settings = await inspect(page);
+    await captureSurface('settings');
+    await page.getByRole('button', { name: '← Menu', exact: true }).click();
+    await page.getByRole('button', { name: /Continue/ }).first().click();
+    await page.locator('.reader-sheet').waitFor();
     const initial = await inspect(page);
     const initialScreenshot = path.join(outputDir, `${sceneId}-prose-${viewport.width}x${viewport.height}.png`);
     await page.screenshot({ path: initialScreenshot });
@@ -98,7 +131,7 @@ async function captureTarget(sceneId, viewport) {
     await page.screenshot({ path: choiceScreenshot });
     const choiceBytes = await fs.readFile(choiceScreenshot);
     const result = {
-      sceneId, viewport, boot: bootState, initial, choice,
+      sceneId, viewport, boot: bootState, surfaces: { home, episodes, settings }, surfaceScreenshots, initial, choice,
       screenshots: [
         { path: initialScreenshot, width: viewport.width, height: viewport.height, bytes: initialBytes.length, sha256: crypto.createHash('sha256').update(initialBytes).digest('hex') },
         { path: choiceScreenshot, width: viewport.width, height: viewport.height, bytes: choiceBytes.length, sha256: crypto.createHash('sha256').update(choiceBytes).digest('hex') }
@@ -121,6 +154,7 @@ async function checkSaveLoadAndLocaleSwitch() {
   try {
     await page.addInitScript(({ key, value }) => { if (localStorage.getItem(key) === null) localStorage.setItem(key, JSON.stringify(value)); }, { key: literarySaveKey, value: stateFor('S05') });
     await boot(page, 'ru');
+    const ruRuntime = await inspect(page);
     await clickStage(page);
     const beforeReload = await page.evaluate(() => window.__LITERARY_QA__.getState());
     const keysBefore = await page.evaluate(() => window.__LITERARY_QA__.getPersistenceKeys());
@@ -137,6 +171,7 @@ async function checkSaveLoadAndLocaleSwitch() {
     const afterLocaleSwitch = await page.evaluate(() => ({ state: window.__LITERARY_QA__.getState(), keys: window.__LITERARY_QA__.getPersistenceKeys(), locale: window.__LITERARY_QA__.getLocale() }));
     return {
       saveLoadPreserved: sameStructuralState(beforeReload, afterReload),
+      ruRuntimePreserved: ruRuntime.locale === 'ru' && ruRuntime.russianUiLeak && !ruRuntime.overflow && ruRuntime.clipped === 0,
       localeSwitchPreserved: sameStructuralState(beforeLocaleSwitch, afterLocaleSwitch.state),
       localeAfterSwitch: afterLocaleSwitch.locale,
       persistenceKeysStable: JSON.stringify(keysBefore) === JSON.stringify(afterLocaleSwitch.keys) && keysBefore.local === literarySaveKey,
@@ -157,8 +192,9 @@ try {
   await browser.close();
 }
 
-const capturePass = captures.length === targets.length * viewports.length && captures.every(item => item.initial.hasEnglishProse && !item.initial.russianNarrativeLeak && !item.choice.russianNarrativeLeak && item.choice.choiceLabelsEnglish && !item.initial.overflow && !item.choice.overflow && !item.initial.internalScroll && !item.choice.internalScroll && item.initial.clipped === 0 && item.choice.clipped === 0 && item.consoleErrors.length === 0 && item.failedRequests.length === 0);
-const status = capturePass && switchResult.saveLoadPreserved && switchResult.localeSwitchPreserved && switchResult.localeAfterSwitch === 'en' && switchResult.persistenceKeysStable && switchResult.consoleErrors.length === 0 && switchResult.failedRequests.length === 0 ? 'PASS' : 'FAIL';
+const surfacePass = captures.every(item => [item.surfaces.home, item.surfaces.episodes, item.surfaces.settings].every(surface => !surface.russianUiLeak && !surface.overflow && surface.clipped === 0));
+const capturePass = captures.length === targets.length * viewports.length && surfacePass && captures.every(item => item.initial.hasEnglishProse && !item.initial.russianNarrativeLeak && !item.initial.russianUiLeak && !item.choice.russianNarrativeLeak && !item.choice.russianUiLeak && item.choice.choiceLabelsEnglish && !item.initial.overflow && !item.choice.overflow && !item.initial.internalScroll && !item.choice.internalScroll && item.initial.clipped === 0 && item.choice.clipped === 0 && item.consoleErrors.length === 0 && item.failedRequests.length === 0);
+const status = capturePass && switchResult.saveLoadPreserved && switchResult.ruRuntimePreserved && switchResult.localeSwitchPreserved && switchResult.localeAfterSwitch === 'en' && switchResult.persistenceKeysStable && switchResult.consoleErrors.length === 0 && switchResult.failedRequests.length === 0 ? 'PASS' : 'FAIL';
 const evidence = {
   schemaVersion: 1,
   status,
@@ -169,7 +205,8 @@ const evidence = {
   targets, viewports,
   captures,
   saveLoadAndLocaleSwitch: switchResult,
-  assertions: ['actual English prose', 'English choice labels', 'no Russian narrative leakage', 'no viewport overflow/clipping', 'local save/load', 'locale switch leaves structural save unchanged', 'stable local/cloud persistence keys', 'zero console errors', 'zero failed asset requests']
+  coverage: { homeMenu: true, episodesPanel: true, settingsPanel: true, normalNarrative: true, authoredChoice: true, interactivePacingChoice: true, cloudRestore: { status: 'NOT_TESTABLE', reason: 'Requires an authenticated Yandex SDK cloud candidate.' }, endingScreen: { status: 'NOT_TESTABLE', reason: 'The bounded EN QA corpus currently contains Episodes 1-2 only; production EN correctly fails closed before ending scenes.' } },
+  assertions: ['rendered EN UI and accessibility text contain no Cyrillic', 'actual English prose', 'English authored and interactive choice labels', 'no Russian narrative leakage', 'no viewport overflow/clipping', 'local save/load', 'RU runtime remains Cyrillic and usable', 'locale switch leaves structural save unchanged', 'stable local/cloud persistence keys', 'zero console errors', 'zero failed asset requests']
 };
 await fs.mkdir(path.dirname(evidenceFile), { recursive: true });
 await fs.writeFile(evidenceFile, `${JSON.stringify(evidence, null, 2)}\n`);

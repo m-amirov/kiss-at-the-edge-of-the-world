@@ -572,7 +572,7 @@ export const literaryLocaleBundles = {
               "S05.C000.P018": "“Excellent,” Alice said. “Beautiful things usually get in the way of looking.”",
               "S05.C000.P019": "Eric looked up at her.",
               "S05.C000.P020": "“Is that a line for the article?”",
-              "S05.C000.P021": "“No. I steal from old men too.”",
+              "S05.C000.P021": "“No. I steal lines from old men too.”",
               "S05.C000.P022": "Damir brought the thermoses from the kitchen.",
               "S05.C000.P023": "“If we're leaving early, I'm ready.”",
               "S05.C000.P024": "“You're always ready,” Alice said.",
