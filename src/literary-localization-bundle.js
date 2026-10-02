@@ -1632,7 +1632,7 @@ export const literaryLocaleBundles = {
             "title": "A. Show him the two lines",
             "paragraphs": {
               "S12.C013.P000": "“Can I have an opinion from neither a doctor nor an ex?” Alice asked.",
-              "S12.C013.P001": "“I can’t promise to stop being second-in-command.”",
+              "S12.C013.P001": "“I can’t promise not to be the latter.”",
               "S12.C013.P002": "She gave him her phone with the two lines about the shot they hadn’t taken. Damir read them and handed the screen back without scrolling.",
               "S12.C013.P003": "“It says ‘we,’” he observed. “You decided not to film too.”",
               "S12.C013.P004": "“I don’t film.”",
@@ -1653,7 +1653,7 @@ export const literaryLocaleBundles = {
           "S12.C015": {
             "title": "Shared continuation S12",
             "paragraphs": {
-              "S12.C015.P000": "Nick wrote in the group chat that he had uploaded the material. Eric replied with tomorrow’s departure time for the east. Alice and Damir returned to the guesthouse by different paths around the parking area: he stopped at the car, and she went in to buy a pencil. In the corridor, they met at the shared sink, made room for each other, and both smiled slightly. Neither had a ready-made role for the other, which let them simply walk into the common room.",
+              "S12.C015.P000": "Nick wrote in the group chat that he had uploaded the material. Eric replied with tomorrow’s departure time for the east. Alice and Damir returned to the guesthouse by different paths around the parking area: Damir stopped at the car, and Alice went inside the guesthouse. In the corridor, they met at the shared sink, made room for each other, and both smiled slightly. Neither had a ready-made role for the other, which let them simply walk into the common room.",
               "S12.C015.P001": "Nick was trying to fit a deck of cards into a box that some previous guest had clearly packed with wet hands. Half the deck had swollen at the edges. He suggested a game: draw a card and name one thing each person would do for the trip tomorrow, or fold three towels the owner had left on the sofa instead. He drew first, looked at the card, and took the towels.",
               "S12.C015.P002": "“Unfair. You know we’re interested too,” Alice said.",
               "S12.C015.P003": "“That was the calculation. Help with the corners.”",
@@ -2014,7 +2014,7 @@ export const literaryLocaleBundles = {
               "S15.C003.P013": "A couple in matching yellow hats passed nearby. Nick waited until they had gone before speaking again.",
               "S15.C003.P014": "“And I can’t finish this film. Every evening I promise I’ll open the footage. Then I charge the batteries and look for what to film tomorrow.”",
               "S15.C003.P015": "Alice leaned against the railing. He moved aside to let the couple reach the viewpoint, then returned to the same place beside her. That small return warmed her cheeks more than the scarf had.",
-              "S15.C003.P016": "“I think you already have one important sentence,” she said. “About the editing button.”",
+              "S15.C003.P016": "“I think you already have one important sentence,” she said. “About the edit button.”",
               "S15.C003.P017": "“It’s too short for a film.”",
               "S15.C003.P018": "“Start with it and see what can survive beside it.”",
               "S15.C003.P019": "For a second, he smiled for real.",
@@ -2043,7 +2043,7 @@ export const literaryLocaleBundles = {
               "S15.C005.P002": "“You won’t even ask whether you can quote me?”",
               "S15.C005.P003": "“No. Right now understanding you matters more than getting a quote.”",
               "S15.C005.P004": "He rested the camera against his leg.",
-              "S15.C005.P005": "“All right. Then I’ll say something that won’t be in the credits: I don’t know how long I can keep filming if people stop answering my trust with trust.”",
+              "S15.C005.P005": "“All right. Then I’ll say something that won’t be in the credits: I don’t know how long I can keep filming if people stop returning my trust with their own.”",
               "S15.C005.P006": "Alice stood beside him as a small floe slowly drifted away from a larger one. That evening she crossed out the line “Nick is afraid of failure.” Nick saw her closed notebook and offered to carry it to the car; she gave him the notebook and took his camera case instead."
             }
           },
@@ -2104,7 +2104,7 @@ export const literaryLocaleBundles = {
           "S16.C000": {
             "title": "",
             "paragraphs": {
-              "S16.C000.P000": "They reached the guesthouse in daylight. Two cars stood outside; one family was unloading bags, while another was unsuccessfully searching for its key among the gloves. The owner was showing Alice where the shared kitchen would be when a short cry came from the corridor.",
+              "S16.C000.P000": "They reached the guesthouse in daylight. Two cars stood outside; one family was unloading bags, while another was unsuccessfully searching for their key among the gloves. The owner was showing Alice where the shared kitchen would be when a short cry came from the corridor.",
               "S16.C000.P001": "A woman in a hiking jacket sat on a low bench. She had slipped at the entrance and twisted her ankle; her companion held her by the shoulders while trying to unlock her phone. Damir introduced himself as a doctor and asked whether he could look at the ankle. The woman nodded and moved the edge of her jacket so he could sit more easily.",
               "S16.C000.P002": "Eric cleared the passage and asked the owner to bring a chair. Nick put the camera in the car. Alice offered the woman some water; she took the bottle in both hands. Damir had a calm professional voice Alice had barely heard during their life together: back then, he came home after a shift and told only the funny stories, or nothing.",
               "S16.C000.P003": "“I can’t tell from one look whether there’s a fracture,” he explained. “Don’t put weight on it until someone examines you in person. Is there pain here? And here?”",
@@ -2116,7 +2116,7 @@ export const literaryLocaleBundles = {
               "S16.C000.P009": "“Then give me ten minutes without questions.”",
               "S16.C000.P010": "She sat in the neighbouring chair, leaving a small table between them.",
               "S16.C000.P011": "“All right. What do you need right now?”",
-              "S16.C000.P012": "“It’s already nine,” he said, looking at his watch. “Then dinner. If Nick doesn’t turn it into glue.”",
+              "S16.C000.P012": "“It’s nine already,” he said, looking at his watch. “Then dinner. If Nick doesn’t turn it into glue.”",
               "S16.C000.P013": "Alice remembered yesterday’s conversation in the café. She didn’t want to return to it now, and Damir didn’t suggest it.",
               "S16.C000.P014": "“I’ll go see what they found for the soup,” she said.",
               "S16.C000.P015": "“If it’s only a can of beans, tell them I’m a doctor, not a miracle worker.”",
@@ -2162,8 +2162,7 @@ export const literaryLocaleBundles = {
               "S16.C004.P003": "“I’ll look at my section. If our conversation from yesterday is in it, I’ll ask you to remove it.”",
               "S16.C004.P004": "“It isn’t,” Alice said. “I’ll show you the rest tomorrow.”",
               "S16.C004.P005": "Nick pushed the bread toward her. Eric promised to check the road in the morning before naming a departure time. The soup was too salty; all four finished it with bread and agreed to look for proper food in Höfn tomorrow before arguing over an empty pot again. Nick planned to wash the travel clothes. Damir offered to get clothespins from the storage room if the owner allowed it. Alice closed the notebook.",
-              "S16.C004.P006": "Another shared day lay ahead. No one at the table had asked her to choose whom to spend the evening with, and she didn’t know the answer yet. She liked that not knowing could be left for tomorrow.",
-              "S16.C004.P007": "---"
+              "S16.C004.P006": "Another shared day lay ahead. No one at the table had asked her to choose whom to spend the evening with, and she didn’t know the answer yet. She liked that not knowing could be left for tomorrow."
             }
           }
         }
@@ -2842,17 +2841,17 @@ export const literaryLocaleBundles = {
           ]
         },
         {
-          "question": "They move away from the dangerous surf. What should Alice say to Nick?",
+          "question": "After the group moves away from the water, what will Alice do with Nick?",
           "options": [
             {
               "code": "A",
-              "label": "Thank him for giving up the shot",
-              "text": "“Thank you for stepping back,” she said. Nick nodded: the shot was not worth the price."
+              "label": "Walk the dry path with him",
+              "text": "Alice walked a short stretch there and back with Nick while he recorded their footsteps instead of another risky shot."
             },
             {
               "code": "B",
-              "label": "Suggest finishing with safe footprints",
-              "text": "Nick showed her a short fragment and closed the lens. Alice looked at the disappearing tracks once more."
+              "label": "Listen to the footsteps together",
+              "text": "She took one earbud. They heard the same footsteps on the dry path without deciding in advance what belonged in the film."
             }
           ]
         }
@@ -2970,49 +2969,49 @@ export const literaryLocaleBundles = {
           ]
         },
         {
-          "question": "Nick leaves open the possibility of meeting after the trip. How should Alice respond?",
+          "question": "After Nick talks about the unfinished film, what will Alice leave in the draft until tomorrow?",
           "options": [
             {
               "code": "A",
-              "label": "Leave the possibility open",
-              "text": "Alice smiled. They still had time to find out what each of them had put into the words."
+              "label": "Keep only the boundary she actually saw",
+              "text": "She left room for the line about Nick lowering the camera, but did not explain his fear for him. He should recognize his own words."
             },
             {
               "code": "B",
-              "label": "Suggest talking about a specific day when it arrives",
-              "text": "She did not promise a future meeting instead of the closeness they had today. Nick heard her and did not demand an answer."
+              "label": "Leave the material open for both of them to review",
+              "text": "Alice closed the file with a blank space for Nick. Until their conversation, she would not turn his personal confession into a finished paragraph."
             }
           ]
         }
       ],
       "S16": [
         {
-          "question": "Damir falls silent before finishing a thought about the past. What should Alice do?",
+          "question": "Damir has just helped the injured tourist and asks for ten minutes without questions. How will Alice respect that boundary?",
           "options": [
             {
               "code": "A",
-              "label": "Ask whether he wants to finish",
-              "text": "“Yes, but not now,” he answered. Alice accepted that without trying to guess the rest, and for the first time felt that silence could be honest."
+              "label": "Stay nearby without pulling him into a talk",
+              "text": "Alice sat in the neighbouring chair and left the small table between them. She did not turn his help into another examination of their past."
             },
             {
               "code": "B",
-              "label": "Say that she has heard enough for today",
-              "text": "Damir did not continue. They reached the guesthouse door without turning the pause into another argument."
+              "label": "Give him quiet without guessing his answer",
+              "text": "She nodded and let the room stay quiet. Damir could decide whether to join the others later, without her reading his silence as an answer."
             }
           ]
         },
         {
-          "question": "The difficult conversation is over, but the tea is still warm. What will Alice choose?",
+          "question": "At the kitchen table, what boundary will Alice keep around tomorrow’s draft?",
           "options": [
             {
               "code": "A",
-              "label": "Let the silence continue without another explanation",
-              "text": "She picked up the mug. Damir stayed beside her and stopped searching for the right sentence."
+              "label": "Show each person only recognizable lines",
+              "text": "Alice said that each person would see the lines where they could recognize themselves before anything went to Marina. The draft would not speak for them."
             },
             {
               "code": "B",
-              "label": "Say they have discussed enough for today",
-              "text": "“That’s enough for today,” Alice said gently. Damir nodded and poured her more tea without returning to the past."
+              "label": "Leave today’s help outside the draft",
+              "text": "She kept the tourist’s injury out of the draft. It happened in front of everyone, but it was not Alice’s material without a separate agreement."
             }
           ]
         }

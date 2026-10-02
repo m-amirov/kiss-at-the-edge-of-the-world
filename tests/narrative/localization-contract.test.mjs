@@ -18,7 +18,7 @@ test('production English S01 is complete and structurally identical',()=>{
  assert.doesNotMatch(visible,/[\u0400-\u04ff]/u);
 });
 test('production English Episodes 3-4 are complete, structurally identical, and predicate-safe',()=>{
- const expected={S09:{paragraphs:56,choices:1},S10:{paragraphs:52,choices:1},S11:{paragraphs:58,choices:1},S12:{paragraphs:97,choices:3},S13:{paragraphs:80,choices:1},S14:{paragraphs:64,choices:2},S15:{paragraphs:84,choices:1},S16:{paragraphs:40,choices:1}};
+ const expected={S09:{paragraphs:56,choices:1},S10:{paragraphs:52,choices:1},S11:{paragraphs:58,choices:1},S12:{paragraphs:97,choices:3},S13:{paragraphs:80,choices:1},S14:{paragraphs:64,choices:2},S15:{paragraphs:84,choices:1},S16:{paragraphs:39,choices:1}};
  for(const [sceneId,counts] of Object.entries(expected)){
   const english=JSON.parse(fs.readFileSync(new URL('../../content/localization/en/'+sceneId+'.json',import.meta.url),'utf8'));
   const source=literarySeason.scenes.find(scene=>scene.id===sceneId);
