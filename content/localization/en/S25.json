@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "sourceLocale": "ru",
+  "source": "content/season-1-literary-episode-06.md",
+  "scenes": {
+    "S25": {
+      "title": "Day 12. A Conversation Before the Decision",
+      "chunks": {
+        "S25.C000": {"title": "", "paragraphs": {
+          "S25.C000.P000": "Damir found Alice by the guesthouse entrance while she was writing the meeting time in her notebook. He held his phone as if he had just ended a call, although the screen had gone dark a while ago.",
+          "S25.C000.P001": "“I had a conversation about work,” he said. “Nothing urgent. If you have ten minutes, I wanted to tell you before I answer them.”",
+          "S25.C000.P002": "Alice closed the notebook. In the past, the words “I've already decided” would have been enough for her body to remember its old anger. Here there was a “before.” Damir suggested walking to the side path, where they would not block people coming in, and waited for her agreement.",
+          "S25.C000.P003": "A clinic in another country had offered him an interview for a position with a long contract. It was not a job offer yet. For the next stage, he had to confirm his interest by the end of the week. He did not ask Alice to go with him; he did not promise to stay if she asked him to.",
+          "S25.C000.P004": "“I want to take the interview,” he said. “I don't know yet whether I'll accept afterwards. I'm telling you now not so you can decide for me. Last time I told you about the end of a conversation. Today this is the beginning.”",
+          "S25.C000.P005": "The wind pulled Alice's hood over her eyes. She pushed it back.",
+          "S25.C000.P006": "“The beginning of what?” she asked.",
+          "S25.C000.P007": "“A conversation about what you need to know if we try to be close again. Even if we don't, I don't want to pretend my choice has no effect on the trip.”",
+          "S25.C000.P008": "He did not call the vacancy fate. For the first time, Alice saw a person who could want a job and still not know how it would change a relationship. Desire stopped being an accusation, but the question of distance remained."
+        }},
+        "S25.C001": {"title": "Response to the evening of episode 5 — select exactly one fragment by `eveningState`", "paragraphs": {}},
+        "S25.C002": {"title": "A. After an evening with Eric (`eveningState=eric`)", "paragraphs": {
+          "S25.C002.P000": "“You saw me leave with Eric in Höfn,” Alice said. “I don't want to turn this conversation into a secret that sounds different later.”",
+          "S25.C002.P001": "“I saw,” Damir answered. “I don't know what is between you, and I'm not asking for a report. I would have told you about the vacancy anyway. It is my work and my responsibility.”",
+          "S25.C002.P002": "She felt relieved that he did not use his new honesty as an application for her. Their past remained a shared fact, but it did not give him the right to ask about the present with Eric."
+        }},
+        "S25.C003": {"title": "B. After an evening with Nick (`eveningState=nick`)", "paragraphs": {
+          "S25.C003.P000": "“You're telling me this after I was with Nick in Höfn. It's too late to choose a moment for a competition,” Alice said.",
+          "S25.C003.P001": "Damir endured the unpleasant pause.",
+          "S25.C003.P002": "“It's fair that it looks that way. The call was arranged on the morning of day nine. I planned to talk regardless of where you spent the evening. I can show you the email, but you do not have to verify me with documents.”",
+          "S25.C003.P003": "“I don't have to,” she repeated. “Tell me in your own words.”",
+          "S25.C003.P004": "He put away the phone. She stayed not because she believed his defence, but because she saw that he was ready not to make her a judge."
+        }},
+        "S25.C004": {"title": "C. After an evening with Damir (`eveningState=damir`)", "paragraphs": {
+          "S25.C004.P000": "“You knew about it during our evening?” Alice asked.",
+          "S25.C004.P001": "“I knew about a possibility, not an interview invitation. I should have told you about the possibility when we talked about the future. I was afraid of turning our evening into negotiations. That is not an excuse.”",
+          "S25.C004.P002": "She remembered the warmth of the kitchen and how easily a pause could be mistaken for the absence of a hidden question. If she had let him come closer, it did not mean she agreed to wait for the next letter without knowing.",
+          "S25.C004.P003": "“Today we are negotiating,” she said. “And I need every circumstance you know.”"
+        }},
+        "S25.C005": {"title": "D. After an evening alone (`eveningState=alice`)", "paragraphs": {
+          "S25.C005.P000": "“In Höfn, I chose to be alone,” Alice said. “That is not an invitation to return me to our old story through a grand confession.”",
+          "S25.C005.P001": "“I don't want to return to the old story either,” Damir answered. “I can limit this to information: a possible job, no decision yet. I don't expect anything more from you now.”",
+          "S25.C005.P002": "She checked herself: the curiosity was hers, not a concession to the past. So she asked what attracted him to the job and gave him time to answer not as her ex, but as a person at a crossroads."
+        }},
+        "S25.C006": {"title": "S25-I-K — after the new kiss", "paragraphs": {
+          "S25.C006.P000": "“I kissed you myself in Höfn,” Alice said. “I didn't know about this job then.”",
+          "S25.C006.P001": "“I know. I should have named it before dinner.”",
+          "S25.C006.P002": "She stepped away from the wall so she could see his face. The wish to kiss him again had not disappeared, but now she wanted to finish the conversation."
+        }},
+        "S25.C007": {"title": "S25-I-T — after tea without touching", "paragraphs": {
+          "S25.C007.P000": "“Do you remember the list for our dinner?” Alice asked. “We left the proportions blank.”",
+          "S25.C007.P001": "“Today I have one new line. I didn't want to fill it in for you.”",
+          "S25.C007.P002": "Alice grimaced: he was trying to hide uncomfortable news behind a beautiful phrase again. Damir noticed.",
+          "S25.C007.P003": "“I'm sorry. I simply should have said it earlier.”",
+          "S25.C007.P004": "Now she could ask about the job itself."
+        }},
+        "S25.C008": {"title": "S25-I-L — after the early departure", "paragraphs": {
+          "S25.C008.P000": "“I left then because I needed a pause,” Alice said. “Don't take today's conversation as permission to return to that evening.”",
+          "S25.C008.P001": "“I don't. I came with news about work. You can end this conversation now too.”",
+          "S25.C008.P002": "Alice stayed—not out of politeness, but because she wanted to know his present life."
+        }},
+        "S25.C009": {"title": "Common continuation", "paragraphs": {
+          "S25.C009.P000": "Damir told her about the programme: a small team, the chance to run a practice and teach young doctors. He was concerned whether there would be room for patients who could not be given the standard fifteen minutes. He did not mention the higher salary first, but did not hide it when Alice asked.",
+          "S25.C009.P001": "“Why do you want this one?” she asked.",
+          "S25.C009.P002": "“I like explaining things until a person understands what is happening. At the old clinic, that counted as extra time. Here they promise to count it as part of the work. I want to find out whether that is true.”",
+          "S25.C009.P003": "He spoke with unexpected animation. Alice remembered how he once patiently showed her why her backpack strap hurt, and how he sometimes used that same patience instead of asking what she wanted. A good quality did not cancel a bad habit. A new job did not prove the habit was gone.",
+          "S25.C009.P004": "“And if they take you?” she asked.",
+          "S25.C009.P005": "“I'll learn the conditions first, then decide. And I'll tell you when I know. You don't have to promise that it will work for you.”"
+        }},
+        "S25.C010": {"title": "Choice S25-C1 — What clarity will Alice ask for", "paragraphs": {}},
+        "S25.C011": {"title": "A. Ask for a specific time to talk", "paragraphs": {
+          "S25.C011.P000": "“If the interview happens, tell me the date,” Alice said. “And let's talk about the result separately afterwards. Not on the road between breakfast and departure. I don't want to guess from your face what has already been decided.”",
+          "S25.C011.P001": "“Agreed. I'll write when the date is confirmed. And I'll ask when it is convenient for you to talk.”",
+          "S25.C011.P002": "She noticed that he had repeated not only the deadline but also her right to choose the time. A small thing that could be checked through action."
+        }},
+        "S25.C012": {"title": "B. Give him time without promising to wait", "paragraphs": {
+          "S25.C012.P000": "“Take the interview,” Alice said. “I won't build hypotheses for you now. But don't call my silence agreement with any outcome. When you have the conditions, come with them as news, not as a ready decision about us.”",
+          "S25.C012.P001": "“I hear you. I won't ask for support in advance that I haven't earned.”",
+          "S25.C012.P002": "He exhaled. Alice understood that giving time was also an action, if she named its boundary aloud."
+        }},
+        "S25.C013": {"title": "Common continuation", "paragraphs": {
+          "S25.C013.P000": "By the door, Nick called to them: the guesthouse owner had been found and was ready to take Alice to the smokehouse on her way. Eric confirmed that Alice could return by local bus, but left the decision to her. For a moment, all three men stood before her with offers, and none required a romantic answer.",
+          "S25.C013.P001": "“I'll go,” Alice said. “I'll just take a recorder and ask permission to record when I arrive.”",
+          "S25.C013.P002": "Damir held the door while she got her jacket. This time she let him help; it was not a promise to start again. Nick wished her a good question. Eric reminded her that they were staying in town today and leaving for Egilsstaðir on the morning of day thirteen. These simple actions made the group whole again after a conversation that could have split it into camps.",
+          "S25.C013.P003": "At the smokehouse, the owner first showed her where to put her wet boots. Then she explained how, on days when the road was closed, people called one another before calling the services—not for a forecast, but to understand who could not deliver a child, groceries, or a replacement worker. Alice asked whether she could record her words. The woman agreed to audio for transcription, asking to see the quotations before publication. Alice recorded the condition aloud at the beginning of the file. After returning, she checked the article's opening against the recording, removed a sentence that had assigned pity for travellers to the woman, and sent Marina a corrected paragraph. Marina replied: “Now I can see the owner, not your delay.”",
+          "S25.C013.P004": "When Alice returned, Nick showed her his reply to the producer, as promised. He had offered a teaser without her face or voice; he promised to show footage of Eric and Damir only after speaking with each of them. Damir had already told the clinic that he accepted the interview and was waiting for a date. None of these pieces of news decided Alice's life. But each man had done what he had named."
+        }},
+        "S25.C014": {"title": "S25-E-PAGE — after reading the page", "paragraphs": {"S25.C014.P000": "Over breakfast, Alice returned the first page to Eric with two questions in the margins. After she came back from the smokehouse, he said he would take the page to a trial conversation with future participants instead of asking Alice to rewrite the course. Her help had a continuation, but did not become a new obligation."}},
+        "S25.C015": {"title": "S25-E-READERS — after refusing the adviser role", "paragraphs": {"S25.C015.P000": "Eric showed Alice two messages: he had asked two acquaintances who were new to hiking to read the trial programme and answer where they would want to stop. He asked nothing from her. Alice asked whether he was nervous about their response; Eric admitted that he was, and the conversation about the school ended there."}},
+        "S25.C016": {"title": "If `S20-C2=A`", "paragraphs": {"S25.C016.P000": "Before the conversation by the guesthouse, Damir offered to show Alice the new shopping list. She laughed: this time he really had asked the group instead of deciding for everyone."}},
+        "S25.C017": {"title": "If `S20-C2=B`", "paragraphs": {"S25.C017.P000": "Before the conversation by the guesthouse, Damir noticed the same sign they had seen on their walk. Alice smiled at him first: they had a simple new memory."
+        }}
+      }
+    }
+  }
+}

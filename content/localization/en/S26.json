@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "sourceLocale": "ru",
+  "source": "content/season-1-literary-episode-06.md",
+  "scenes": {
+    "S26": {
+      "title": "Day 12. Naming Her Direction",
+      "chunks": {
+        "S26.C000": {"title": "", "paragraphs": {
+          "S26.C000.P000": "They were due to leave for Egilsstaðir in the morning. The kitchen light went out in the guesthouse; only the lamp above the entrance remained on in the hall. Alice went back for her notebook and found it on the sill beside the paper map, where a smear of cream had dried.",
+          "S26.C000.P001": "She reread her first paragraph and added: “The closed road did not tell us whom to love. It made us ask who has the right to decide for someone else.” The sentence felt too even for the uneven beating of her heart. Alice crossed it out. The article could wait until morning. The conversation she had been postponing under the name of work could not.",
+          "S26.C000.P002": "She went into the yard. The three men were still nearby: Eric was putting the map in the car, Nick was drinking water by the steps, and Damir was returning the empty pot to the owner. Each of them could hear an honest answer. None of them could give it for her. The evening in Höfn had not signed a contract on Alice's behalf; neither had tonight's dinner. She was deciding with whom she wanted to continue a closeness after the trip—or whether she wanted to choose a relationship at all right now."
+        }},
+        "S26.C001": {"title": "Choice S26-C1 — A conscious intention. Exactly one outcome", "paragraphs": {}},
+        "S26.C002": {"title": "A. Choose Eric (`routeIntent=eric`)", "paragraphs": {
+          "S26.C002.P000": "Alice approached the car. Eric closed the boot and did not move toward her until she spoke:",
+          "S26.C002.P001": "“I want to continue the conversation that began not by your map, but where you let me disagree with you about it. I want to try being with you. Without promising to move and without becoming the person who fixes your school.”",
+          "S26.C002.P002": "Eric lowered the hand holding his keys.",
+          "S26.C002.P003": "“I want that too. And I will have to learn to ask when I am used to acting quickly.”",
+          "S26.C002.P004": "“I will have to say no at once instead of waiting until I am angry.”",
+          "S26.C002.P005": "They agreed on the nearest thing: tomorrow on the lakeside trail in Egilsstaðir, Alice would tell him which section she wanted to walk on her own. Eric would stay nearby, but would not lead her without being asked. It did not sound like a promise for life. That was what made it more honest."
+        }},
+        "S26.C003": {"title": "S26-E-N — earlier evening with Nick", "paragraphs": {
+          "S26.C003.P000": "Alice found Nick by the steps before he saw her beside Eric in the car.",
+          "S26.C003.P001": "“That evening at the pool mattered to me. Today I decided to try a relationship with Eric. I wanted to tell you myself.”",
+          "S26.C003.P002": "Nick looked at his bottle, then put it in his jacket pocket.",
+          "S26.C003.P003": "“I need a minute,” he said. “I'm still going with you tomorrow. Let's just not make me joke over breakfast.”",
+          "S26.C003.P004": "“I won't.”"
+        }},
+        "S26.C004": {"title": "S26-E-D — earlier evening with Damir", "paragraphs": {
+          "S26.C004.P000": "Damir paused at the entrance when Alice called him. She told him about her choice without repeating Eric's words or defending their evening in the kitchen.",
+          "S26.C004.P001": "“It hurts,” Damir answered. “I'm glad you said it plainly. I'll stay with the group tomorrow; tonight I want to be alone.”",
+          "S26.C004.P002": "Alice did not stop him with a question about the past. He went inside, holding the door for the owner as she came out."
+        }},
+        "S26.C005": {"title": "S26-E-E — earlier evening with Eric", "paragraphs": {"S26.C005.P000": "Eric noticed Alice looking at the hand holding his keys and put them on the roof of the car. They both remembered the harbour in Höfn; she said that today's answer concerned more than that evening. Eric nodded: he wanted the same thing."}},
+        "S26.C006": {"title": "S26-E-A — earlier evening alone", "paragraphs": {"S26.C006.P000": "Alice remembered her walk through Höfn and the cup she had bought. She had come to Eric today because she wanted to, not because an evening alone had been a mistake. She told him that, and he did not ask her to explain the choice further."}},
+        "S26.C007": {"title": "Common continuation of the Eric outcome", "paragraphs": {"S26.C007.P000": "Eric asked, “Can I hug you?” Alice stepped closer and said, “Now you can.” He hugged her without the force he usually used to hold down a map in the wind. When she stepped back, he let go at once. By the door they stopped, hearing Nick look for his mug, and returned to ordinary life with a new intention that still had to be proved through action."}},
+        "S26.C008": {"title": "B. Choose Nick (`routeIntent=nick`)", "paragraphs": {
+          "S26.C008.P000": "Nick stood by the steps trying to close a bottle with one hand. Alice took it, tightened the cap, and handed it back.",
+          "S26.C008.P001": "“I want to see the evening without a camera that you asked about,” she said. “And not only the evening. I want to know how we are beside each other when there is nothing for editing to rescue. I want to try a relationship with you, if you want it too—without a contract that my life becomes your film.”",
+          "S26.C008.P002": "Nick opened his mouth for a joke, closed it, and nodded.",
+          "S26.C008.P003": "“I do. And I'm afraid I'll be interesting again only while I'm going somewhere. I'm not asking you to disprove that. I'm telling you in advance.”",
+          "S26.C008.P004": "“Then tomorrow, when I need quiet for the article, you will give it to me. And I will tell you when I can come.”",
+          "S26.C008.P005": "“That already sounds like an evening without a camera, only harder.”"
+        }},
+        "S26.C009": {"title": "S26-N-E — earlier evening with Eric", "paragraphs": {
+          "S26.C009.P000": "Alice found Eric by the car and said she had liked their walk in Höfn, but now wanted to try a relationship with Nick. Eric looked at the folded map for a long time.",
+          "S26.C009.P001": "“I hoped for something else,” he said. “I'll ask someone else to read the programme page. Not today.”",
+          "S26.C009.P002": "“All right. I'm sorry this hurts.”",
+          "S26.C009.P003": "He nodded and returned to the boot door. Alice did not demand from him an ease she would not have felt herself."
+        }},
+        "S26.C010": {"title": "S26-N-D — earlier evening with Damir", "paragraphs": {
+          "S26.C010.P000": "Damir listened to her at the entrance. Alice called their dinner real, but said that now she wanted to be with Nick. Damir leaned against the railing and was quiet.",
+          "S26.C010.P001": "“I will need time to get used to it,” he said. “I told you about the interview not for this answer. And tomorrow I won't take back what I said.”",
+          "S26.C010.P002": "She thanked him. He let her into the house first, but stayed outside."
+        }},
+        "S26.C011": {"title": "S26-N-N — earlier evening with Nick", "paragraphs": {"S26.C011.P000": "Nick remembered the pool and, for the first time that evening, smiled without trying to cheer Alice up. She said she was choosing him now not because of one successful date; he answered that he also wanted to see what they would be like on an ordinary day."}},
+        "S26.C012": {"title": "S26-N-A — earlier evening alone", "paragraphs": {"S26.C012.P000": "Alice took the receipt from Höfn out of her pocket; she still intended to keep it for herself. She told Nick that she could want a walk of her own and a relationship with him at the same time. Nick asked what a walk he was invited to looked like. “I'll tell you myself,” she answered, and he agreed to wait for an invitation without filming the waiting."}},
+        "S26.C013": {"title": "Common continuation of the Nick outcome", "paragraphs": {"S26.C013.P000": "Nick held out his palm. Alice placed hers in it, and Nick said quietly, “This is what I won't film.” She answered, “Better remember it.” A minute later, he let go of her hand to pick up two mugs. They carried them into the kitchen together; in the morning they would have to speak to the others as members of the same group, not hide behind a frame."}},
+        "S26.C014": {"title": "C. Choose Damir (`routeIntent=damir`)", "paragraphs": {
+          "S26.C014.P000": "Damir came out from the owner with empty hands. Alice waited until he stopped by the steps.",
+          "S26.C014.P001": "“I don't want to return to where we ended,” she said. “I want to try starting from today. I choose you if you are ready not to decide for both of us, even when you are sure it would be easier.”",
+          "S26.C014.P002": "“I'm ready to try,” he said. “But I won't promise never to fall into the old habit. I can promise to notice and correct it when you name it. And not hide emails to preserve a good evening.”",
+          "S26.C014.P003": "“I need a conversation before a decision, not a perfect answer.”",
+          "S26.C014.P004": "They agreed to return to the question of distance after the interview without making concessions in advance. Tomorrow, on the road to Egilsstaðir, they would not recreate the familiar shape of a couple in front of the group. They would start simply: sit beside each other if both wanted to, and ask in the morning."
+        }},
+        "S26.C015": {"title": "S26-D-E — earlier evening with Eric", "paragraphs": {
+          "S26.C015.P000": "Alice stopped Eric by the car and told him about her decision. She did not call the walk in Höfn a mistake. He answered after a pause:",
+          "S26.C015.P001": "“I need some time. Let's not talk about the school today.”",
+          "S26.C015.P002": "“Agreed.”",
+          "S26.C015.P003": "She returned to the house without trying to comfort him with the closeness she had just declined."
+        }},
+        "S26.C016": {"title": "S26-D-N — earlier evening with Nick", "paragraphs": {
+          "S26.C016.P000": "“I'm not taking our evening back,” Alice told Nick. “But now I want to try a relationship with Damir.”",
+          "S26.C016.P001": "Nick looked toward the harbour.",
+          "S26.C016.P002": "“I understand. Just don't ask me to pretend today that I'm not sad at all.”",
+          "S26.C016.P003": "“I won't.”"
+        }},
+        "S26.C017": {"title": "S26-D-D — earlier evening with Damir", "paragraphs": {"S26.C017.P000": "Damir remembered their new kitchen in Höfn; Alice said she was choosing not the memory of it but the chance to keep learning who he was today. He did not answer with a promise that everything would be different now. Instead he asked when she would want to talk after the interview."}},
+        "S26.C018": {"title": "S26-D-A — earlier evening alone", "paragraphs": {"S26.C018.P000": "Alice thought about the cup she had bought for herself in Höfn. Spending that day alone did not make choosing Damir a concession. She told him she would not trade her work or her travels for closeness. “I'm not asking you to,” he answered; she would have to check that later."}},
+        "S26.C019": {"title": "Common continuation of the Damir outcome", "paragraphs": {"S26.C019.P000": "Damir asked whether he could hug her. Alice said, “Not yet. Let's start with what we agreed.” He nodded without turning her refusal into a test or hiding his happiness at her words. Later she opened her notebook and, beside the interview time, wrote down a future meeting with Marina of her own: her work remained her work within the closeness she had chosen."}},
+        "S26.C020": {"title": "D. Choose Alice (`routeIntent=alice`)", "paragraphs": {
+          "S26.C020.P000": "Alice did not wait for someone to ask first. She gathered the three men in the kitchen, where the smell of soup still lingered, and said:",
+          "S26.C020.P001": "“It mattered to me to be with each of you on this trip. I want to continue it as a journalist and as your friend. I am not choosing a romantic relationship now. This is my decision, not a request for anyone to prove that I am wrong.”",
+          "S26.C020.P002": "Nick put his mug on the table. Eric nodded, checking that he had heard correctly. Damir looked at her as if he wanted to ask a personal question, but held back: this was a shared conversation and did not require a report on the past."
+        }},
+        "S26.C021": {"title": "S26-A-E — earlier evening with Eric", "paragraphs": {
+          "S26.C021.P000": "Later, when the others had gone, Alice told Eric that the walk to the lighthouse had not been a deception: she had wanted to be close then, but she was not choosing a couple now. He leaned against the doorframe.",
+          "S26.C021.P001": "“I'm disappointed,” he said. “And I don't want to pretend it is easy. But you could not have known the answer in Höfn.”",
+          "S26.C021.P002": "She left him the option of leaving first. He took it."
+        }},
+        "S26.C022": {"title": "S26-A-N — earlier evening with Nick", "paragraphs": {
+          "S26.C022.P000": "Nick stopped by the sink when Alice asked for a minute. She said that the evening without a camera would remain her memory, but she was not choosing a relationship. He turned on the tap, then closed it without washing the mug.",
+          "S26.C022.P001": "“I understand,” he said. “I liked hoping. Tomorrow I will probably be quieter than usual.”",
+          "S26.C022.P002": "“That is allowed.”"
+        }},
+        "S26.C023": {"title": "S26-A-D — earlier evening with Damir", "paragraphs": {"S26.C023.P000": "Alice told Damir that the new dinner had not cancelled her wish to go on independently. He thanked her for the direct answer and did not ask her to reconsider because of their shared past. In the kitchen, they set their cups beside each other, then went to different rooms."}},
+        "S26.C024": {"title": "S26-A-A — earlier evening alone", "paragraphs": {"S26.C024.P000": "Alice remembered walking alone through Höfn while the others tended to their own things. Today's answer was not that evening continuing by inertia: she had listened to herself after each conversation and still wanted to keep this route for herself."}},
+        "S26.C025": {"title": "Common continuation of the Alice outcome", "paragraphs": {
+          "S26.C025.P000": "“And tomorrow?” Nick asked at the table. “Are we travelling together?”",
+          "S26.C025.P001": "“Together,” Alice answered. “I need your help with the road and your right not to take part in the article. I want to finish it so the place is not a backdrop for my choice.”",
+          "S26.C025.P002": "Eric offered to show her the lakeside trail without accompanying her as a guide, if she wanted to walk alone. Damir asked whether he could leave her a copy of the morning schedule. Nick offered not to film her while she worked. They did not hurry to prove that everything was already easy. Alice washed four mugs and took her notebook from the sill. Ahead lay a journey she was choosing for herself."
+        }}
+      }
+    }
+  }
+}
