@@ -13,6 +13,8 @@
 
 The complete English scene was reread without the Russian source. The pass checked dialogue punctuation, pronoun and reference clarity, article and preposition use, sentence-pattern repetition, register, humor, and narrative flow from the car to the café. The prose consistently uses official Icelandic spelling, including `Reykjavík`, and preserves the established spelling of `Akureyri`, `Eastfjords`, and `Vogar`.
 
+An independent cold read then identified seven minor points of residual translationese or overstatement. The repair tightened booking language, removed the unsupported assumption that Alice works for a magazine, naturalized Nick's description of his previous film and Damir's possible year in Akureyri, and restored the exact professional-versus-personal distinction in the direct-choice branch. No other accepted prose was revised.
+
 ## Character-voice pass against approved S01
 
 - Alice remains observant and professionally analytical, with dry restraint rather than generic banter. Her distinction between journalistic questions and personal curiosity remains explicit.
@@ -34,8 +36,8 @@ Every source paragraph was compared by stable reference. Events, speaker and act
 ## Deliberate adaptation decisions
 
 - `Her tax return` preserves Eric's sparse deadpan joke without explaining it.
-- `I don't want to make another catalog of views` keeps Nick's dissatisfaction with scenic-only filmmaking while sounding natural in contemporary English.
+- `I don't want to make another film that's nothing but pretty views` keeps Nick's dissatisfaction with scenic-only filmmaking in conversational English.
 - `The air around the table tightened` renders the social pressure without adding melodrama or changing anyone's action.
-- `without shutting her out as a person` preserves the contrast between Damir refusing an interview and not rejecting Alice personally.
+- `without pulling away from her as a person` preserves the contrast between Damir refusing an interview and not distancing himself from Alice personally.
 
 No unresolved editorial decisions remain.
