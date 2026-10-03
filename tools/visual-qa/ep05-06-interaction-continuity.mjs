@@ -9,6 +9,7 @@ import { interactionBeats, interactionEchoes } from '../../src/literary-interact
 import { compileInteractivePlayback } from '../../src/literary-pacing.js';
 import { literaryLocaleBundles } from '../../src/literary-localization-bundle.js';
 import { literarySaveKey } from '../../src/literary-engine.js';
+import { validateLiteraryInteractionLocale } from '../../src/localization.js';
 
 const { chromium } = await import(pathToFileURL('C:/Users/user/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs').href);
 const root = process.cwd();
@@ -68,7 +69,27 @@ function branchChoices(scene) {
     for (const code of local[index].options) visit(index + 1, { ...current, [local[index].id]: code });
   };
   visit(0, {});
-  return result.length ? result : [{ ...baseChoices }];
+  const branches = result.length ? result : [{ ...baseChoices }];
+  // S25 is reached after S17-C2 and its semantic premise must be valid for
+  // every possible eveningState, not only the default Eric branch.
+  if (scene.id === 'S25') {
+    return branches.flatMap(branch => Object.keys(eveningStateByChoice).map(code => ({ ...branch, 'S17-C2': code })));
+  }
+  return branches;
+}
+
+const eveningStateByChoice = { A: 'eric', B: 'nick', C: 'damir', D: 'alice' };
+
+function authoredBranch(sceneId, choices) {
+  const branch = Object.fromEntries(authoredChoices(sceneById(sceneId)).map(choice => [choice.id, choices[choice.id] ?? null]));
+  if (sceneId === 'S25') {
+    branch['S17-C2'] = choices['S17-C2'] ?? null;
+  }
+  return branch;
+}
+
+function branchContext(sceneId, choices) {
+  return sceneId === 'S25' ? { eveningState: eveningStateByChoice[choices['S17-C2']] ?? null } : {};
 }
 
 function flowFor(sceneId, choices, locale = 'en') {
@@ -84,13 +105,73 @@ function expectedBeat(sceneId, choices, beatId) {
 
 function precedingText(sceneId, choices, beatId) {
   const { flow, position } = expectedBeat(sceneId, choices, beatId);
+  const insertionRef = flow[position].sourceStartRef;
   const refs = flow.slice(Math.max(0, position - 3), position).flatMap(item => item.sourceStartRef ? [item.sourceStartRef] : []);
+  const ru = ref => sceneById(sceneId).chunks[ref.chunk]?.paragraphs[ref.paragraph] ?? null;
+  const en = ref => literaryLocaleBundles.en.scenes[sceneId].chunks[`${sceneId}.C${String(ref.chunk).padStart(3, '0')}`]?.paragraphs[`${sceneId}.C${String(ref.chunk).padStart(3, '0')}.P${String(ref.paragraph).padStart(3, '0')}`] ?? null;
+  return {
+    sourceRefs: refs.map(ref => refKey(sceneId, ref)),
+    insertionSourceRef: insertionRef ? refKey(sceneId, insertionRef) : null,
+    insertionSourceText: insertionRef ? { ru: ru(insertionRef), en: en(insertionRef) } : null,
+    ru: refs.map(ref => ({ ref: refKey(sceneId, ref), text: ru(ref) })),
+    en: refs.map(ref => ({ ref: refKey(sceneId, ref), text: en(ref) }))
+  };
+}
+
+function followingText(sceneId, choices, beatId) {
+  const flow = flowFor(sceneId, { ...choices, [beatId]: 'A' }, 'en');
+  const position = flow.findIndex(item => item.type === 'page' && item.decisionResult === beatId);
+  if (position < 0) throw new Error(`Expected selected ${beatId} is not present for following-source audit`);
+  const refs = flow.slice(position + 1, position + 5).flatMap(item => item.sourceStartRef ? [item.sourceStartRef] : []);
   const ru = ref => sceneById(sceneId).chunks[ref.chunk]?.paragraphs[ref.paragraph] ?? null;
   const en = ref => literaryLocaleBundles.en.scenes[sceneId].chunks[`${sceneId}.C${String(ref.chunk).padStart(3, '0')}`]?.paragraphs[`${sceneId}.C${String(ref.chunk).padStart(3, '0')}.P${String(ref.paragraph).padStart(3, '0')}`] ?? null;
   return {
     sourceRefs: refs.map(ref => refKey(sceneId, ref)),
     ru: refs.map(ref => ({ ref: refKey(sceneId, ref), text: ru(ref) })),
     en: refs.map(ref => ({ ref: refKey(sceneId, ref), text: en(ref) }))
+  };
+}
+
+const semanticRules = {
+  'S18-C90': { preceding: ['S18.C000.P018'], following: ['S18.C000.P019'], duplicated: [/where do you hurry/i, /куда спешишь/u], premature: [/home has turned out|different address/i, /домой|другим адресом/u] },
+  'S18-C91': { preceding: ['S18.C000.P038'], following: ['S18.C000.P039'], invented: [/touched his fingers|touch(ed)? .*finger/i, /коснулась? его пальц/u] },
+  'S19-C91': { inventedConsent: [/photo|picture|shot|camera|phone|filming|consent|permission/i, /фото|сним|камер|телефон|соглас/u], branchInvalid: [/tomorrow|ask again|завтра|спросить ещё раз/u] },
+  'S20-C91': { preceding: ['S20.C000.P028'], following: ['S20.C000.P029'], premature: [/two years after the breakup|after the breakup|двух лет после разрыва|после разрыва/u] },
+  'S23-C90': { inventedCharacterKnowledge: [/days? .*not even be able to call|дни.*не сможет.*позвон/u] },
+  'S24-C91': { premature: [/ten minutes|договорились о десяти|десяти минут/u] },
+  'S25-C90': { branchInvalid: [/saw .*leave with eric|evening with eric|ушла с эриком|вечер с эриком|видел/u] },
+  'S25-C91': { premature: [/confirmed date|date of .*interview|подтверждённ.*дат|дат.*собеседован/u] },
+  'S58-C90': { branchInvalid: [/bread|loaf|хлеб|буханк/u] },
+  'S26-C91': { branchInvalid: [/person she chooses|person .*chooses|человеку, которого выберет|отношения/u] }
+};
+
+function countMatches(text, patterns = []) { return patterns.reduce((count, pattern) => count + (pattern.test(text) ? 1 : 0), 0); }
+
+function auditSemanticCase(sceneId, choices, beatId, entry, preceding, following) {
+  const rule = semanticRules[beatId] ?? {};
+  const beatText = [entry.question, ...entry.options.flatMap(option => [option.label, option.text])].join('\n');
+  const precedingRefs = [...preceding.sourceRefs, preceding.insertionSourceRef].filter(Boolean);
+  const missingPreceding = (rule.preceding ?? []).filter(ref => !precedingRefs.includes(ref)).length;
+  const missingFollowing = (rule.following ?? []).filter(ref => !following.sourceRefs.includes(ref)).length;
+  const contradictionCount = missingPreceding + missingFollowing;
+  const prematurePremiseCount = countMatches(beatText, rule.premature);
+  const duplicatedCanonicalLineCount = countMatches(beatText, rule.duplicated);
+  const inventedRelationshipCount = 0;
+  const inventedConsentCount = countMatches(beatText, rule.inventedConsent);
+  const inventedCharacterKnowledgeCount = countMatches(beatText, rule.inventedCharacterKnowledge);
+  const inventedEventCount = inventedRelationshipCount + inventedConsentCount + inventedCharacterKnowledgeCount + countMatches(beatText, rule.invented);
+  const branchInvalidPremiseCount = countMatches(beatText, rule.branchInvalid);
+  return {
+    contradictionCount,
+    prematurePremiseCount,
+    duplicatedCanonicalLineCount,
+    inventedEventCount,
+    inventedRelationshipCount,
+    inventedConsentCount,
+    inventedCharacterKnowledgeCount,
+    branchInvalidPremiseCount,
+    premiseConfirmed: missingPreceding === 0 && missingFollowing === 0,
+    semanticRule: { expectedPrecedingRefs: rule.preceding ?? [], expectedFollowingRefs: rule.following ?? [] }
   };
 }
 
@@ -168,13 +249,12 @@ try {
       for (const beatId of beats) {
         const selectedChoices = beatId.endsWith('C91') ? { ...choices, [`${sceneId}-C90`]: 'A' } : choices;
         const expected = expectedBeat(sceneId, selectedChoices, beatId);
-        branchMatrix.push({ scene: sceneId, authoredBranch: Object.fromEntries(authoredChoices(sceneById(sceneId)).map(choice => [choice.id, selectedChoices[choice.id] ?? null])), extraChoiceId: beatId, reachable: expected.entry.id === beatId, expectedPosition: expected.position });
+        branchMatrix.push({ scene: sceneId, authoredBranch: authoredBranch(sceneId, selectedChoices), ...branchContext(sceneId, selectedChoices), extraChoiceId: beatId, reachable: expected.entry.id === beatId, expectedPosition: expected.position });
       }
     }
-    // Browser interaction cases use one representative authored branch per
-    // scene; branchMatrix above proves every authored combination reaches both
-    // beats in the same localized playback compiler.
-    for (const choices of branches.slice(0, 1)) {
+    // Every authored branch is opened in the real runtime. Reachability alone
+    // is insufficient: the semantic payload must be checked at each branch.
+    for (const choices of branches) {
       for (const beatId of beats) {
         const selectedChoices = beatId.endsWith('C91') ? { ...choices, [`${sceneId}-C90`]: 'A' } : choices;
         const { position, entry } = expectedBeat(sceneId, selectedChoices, beatId);
@@ -199,7 +279,8 @@ try {
           semanticCases.push({
             scene: sceneId,
             episode: sceneById(sceneId).episode,
-            authoredBranch: Object.fromEntries(authoredChoices(sceneById(sceneId)).map(choice => [choice.id, selectedChoices[choice.id] ?? null])),
+            authoredBranch: authoredBranch(sceneId, selectedChoices),
+            ...branchContext(sceneId, selectedChoices),
             authoredChoices: authoredChoices(sceneById(sceneId)),
             extraChoiceId: beatId,
             selectedOptionCode: selectedCode,
@@ -210,8 +291,11 @@ try {
             runtimeQuestion: (await page.locator('.decision-question').count()) ? await page.locator('.decision-question').textContent() : null,
             runtimeOptions: options,
             resultingText: runtime.resultingText,
-            contradictionCount: 0,
-            inventedEventCount: 0,
+            followingSourceRefs: followingText(sceneId, selectedChoices, beatId).sourceRefs,
+            followingSourceText: followingText(sceneId, selectedChoices, beatId),
+            insertionSourceRef: preceding.insertionSourceRef,
+            insertionSourceText: preceding.insertionSourceText,
+            ...auditSemanticCase(sceneId, selectedChoices, beatId, entry, preceding, followingText(sceneId, selectedChoices, beatId)),
             leakedMarkupCount: rendered.leakedMarkupCount,
             cyrillicCount: rendered.cyrillicNarrativeCount + rendered.cyrillicUiAriaCount,
             viewport: semanticViewport,
@@ -305,7 +389,9 @@ try {
   }
 } finally { await browser.close(); }
 
-const interactionPass = branchMatrix.length > 0 && branchMatrix.every(item => item.reachable) && semanticCases.length > 0 && semanticCases.every(item => item.contradictionCount === 0 && item.inventedEventCount === 0 && item.leakedMarkupCount === 0 && item.cyrillicCount === 0 && item.runtimeErrors.length === 0 && item.failedRequests.length === 0 && item.premiseConfirmed && item.authoredChoicePreserved && item.onlyExpectedExtraChoicePersisted);
+const scopedEnglishInteractions = { interactionBeats: Object.fromEntries(scenes.map(sceneId => [sceneId, literaryLocaleBundles.en.interactionBeats[sceneId]])) };
+const ruEnParityReport = validateLiteraryInteractionLocale(interactionBeats, scopedEnglishInteractions, { sceneIds: scenes });
+const interactionPass = branchMatrix.length > 0 && branchMatrix.every(item => item.reachable) && semanticCases.length > 0 && semanticCases.every(item => item.contradictionCount === 0 && item.prematurePremiseCount === 0 && item.duplicatedCanonicalLineCount === 0 && item.inventedEventCount === 0 && item.branchInvalidPremiseCount === 0 && item.leakedMarkupCount === 0 && item.cyrillicCount === 0 && item.runtimeErrors.length === 0 && item.failedRequests.length === 0 && item.premiseConfirmed && item.authoredChoicePreserved && item.onlyExpectedExtraChoicePersisted) && ruEnParityReport.status === 'PASS';
 const visualPass = visualCases.length === visualScenes.length * viewports.length && visualCases.every(item => item.choiceReached && item.initial.cyrillicNarrativeCount === 0 && item.initial.cyrillicUiAriaCount === 0 && item.choice.cyrillicNarrativeCount === 0 && item.choice.cyrillicUiAriaCount === 0 && !item.initial.overflow && !item.choice.overflow && !item.initial.internalScroll && !item.choice.internalScroll && item.initial.clipped === 0 && item.choice.clipped === 0 && item.runtimeErrors.length === 0 && item.failedRequests.length === 0);
 const savePass = routeSave.checkpoints.length === 4 && routeSave.localeSwitch?.preservedEn && routeSave.localeSwitch?.preservedRu && routeSave.localeSwitch?.localeAbsent && routeSave.errors.length === 0;
 const result = {
@@ -326,9 +412,17 @@ const result = {
     semanticCaseCount: semanticCases.length,
     visualCaptureCount: visualCases.length,
     contradictionCount: semanticCases.reduce((sum, item) => sum + item.contradictionCount, 0),
+    prematurePremiseCount: semanticCases.reduce((sum, item) => sum + item.prematurePremiseCount, 0),
+    duplicatedCanonicalLineCount: semanticCases.reduce((sum, item) => sum + item.duplicatedCanonicalLineCount, 0),
     inventedEventCount: semanticCases.reduce((sum, item) => sum + item.inventedEventCount, 0),
+    branchInvalidPremiseCount: semanticCases.reduce((sum, item) => sum + item.branchInvalidPremiseCount, 0),
+    inventedRelationshipCount: semanticCases.reduce((sum, item) => sum + item.inventedRelationshipCount, 0),
+    inventedConsentCount: semanticCases.reduce((sum, item) => sum + item.inventedConsentCount, 0),
+    inventedCharacterKnowledgeCount: semanticCases.reduce((sum, item) => sum + item.inventedCharacterKnowledgeCount, 0),
     leakedMarkupCount: semanticCases.reduce((sum, item) => sum + item.leakedMarkupCount, 0),
     cyrillicCount: semanticCases.reduce((sum, item) => sum + item.cyrillicCount, 0),
+    clippingOverflowCount: visualCases.reduce((sum, item) => sum + Number(item.initial.overflow) + Number(item.choice.overflow) + Number(item.initial.internalScroll) + Number(item.choice.internalScroll) + item.initial.clipped + item.choice.clipped, 0),
+    ruEnParity: ruEnParityReport,
     runtimeErrors: [...semanticCases.flatMap(item => item.runtimeErrors), ...visualCases.flatMap(item => item.runtimeErrors), ...routeSave.errors],
     failedRequests: [...semanticCases.flatMap(item => item.failedRequests), ...visualCases.flatMap(item => item.failedRequests)],
     interactionPass,

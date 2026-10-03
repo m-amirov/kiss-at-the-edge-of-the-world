@@ -2495,7 +2495,7 @@ export const literaryLocaleBundles = {
               "S19.C000.P017": "“I was going to ask who designed this ladder. But now I'm interested in the answer.”",
               "S19.C000.P018": "“You look like someone who forgot his glasses and is too proud to squint.”",
               "S19.C000.P019": "He laughed. A few minutes later Nick suggested a game: each of them had to invent an impossible title for a film about their day. His was “The Man Who Defeated the Zip.” Alice called hers “Eight Minutes No One Will Get.” Nick did not ask who the film was for. He simply remembered the title.",
-              "S19.C000.P020": "A lane opened at the far end of the pool. Alice suggested they swim to it without racing, but Nick immediately asked what prize came with second place. Halfway there, he lost his rhythm, stopped, and let her go ahead. She touched the wall first and looked back. He swam slowly, without performed ease, his brows drawn together with stubborn concentration. She waited until he reached her, without turning the pause into a reason to rescue him.",
+              "S19.C000.P020": "A lane opened at the far end of the pool. Alice suggested they swim to it without racing, but Nick immediately asked what prize came with second place. Halfway there, he lost his rhythm, stopped, and let her go ahead. She touched the wall first and looked back. He swam slowly, without any show of ease, his brows drawn together with stubborn concentration. She waited until he reached her, without turning the pause into a reason to rescue him.",
               "S19.C000.P021": "“You can say I lost,” Nick panted.",
               "S19.C000.P022": "“We weren't racing.”",
               "S19.C000.P023": "“Then why was I trying so hard?”",
@@ -2689,7 +2689,7 @@ export const literaryLocaleBundles = {
               "S20.C000.P007": "They found a small packet of pearl barley, local mushrooms, and fresh herbs. Damir suggested adding smoked fish, but Alice was not sure the combination would work. The shopkeeper helped them choose a milder flavour. While the man weighed the piece, Alice noticed a rack of local postcards by the till: on one, the fish looked so ceremonious it might have been elected mayor of the town. Damir saw what she was looking at and bought the postcard instead of another tin of spices.",
               "S20.C000.P008": "“Don't try to bribe me with fish,” Alice said.",
               "S20.C000.P009": "“I bought it for myself. I have an empty wall at home.”",
-              "S20.C000.P010": "She remembered the flat where there had once been no room for anything useless. She had not seen Damir's new address. He showed her a photograph of the wall—small, with a shelf for books and one crookedly nailed hook. Alice pointed out where the postcard would look worst. He said that was where he would hang it: in the morning it would be the first thing he saw. It was an absurd but entirely his own future detail, not addressed to her.",
+              "S20.C000.P010": "She remembered the flat where there had once been no room for anything useless. She had not seen Damir's new address. He showed her a photograph of the wall—small, with a shelf for books and one hook nailed in crookedly. Alice pointed out where the postcard would look worst. He said that was where he would hang it: in the morning it would be the first thing he saw. It was an absurd but entirely his own future detail, not addressed to her.",
               "S20.C000.P011": "The bag tore at the handle by the exit. Damir caught the barley; Alice caught the bunch of herbs. They crouched right by the door, sorting the groceries into two bags, and burst out laughing because each was clutching their own prize. The shopkeeper brought them a new bag. When they stood, Damir offered to carry the heavy things; Alice gave him the fish and kept the barley. On the way back, he admitted that for the first time in a long while he had bought food without a mental three-day plan.",
               "S20.C000.P012": "“You are a doctor,” Alice said. “How will you survive without a plan?”",
               "S20.C000.P013": "“Very professionally. I will panic on the inside.”",
@@ -3352,7 +3352,7 @@ export const literaryLocaleBundles = {
             "paragraphs": {
               "S25.C002.P000": "“You saw me leave with Eric in Höfn,” Alice said. “I don't want to turn this conversation into a secret that sounds different later.”",
               "S25.C002.P001": "“I saw,” Damir answered. “I don't know what is between you, and I'm not asking for a report. I would have told you about the vacancy anyway. It is my work and my responsibility.”",
-              "S25.C002.P002": "She felt relieved that he did not use his new honesty as an application for her. Their past remained a shared fact, but it did not give him the right to ask about the present with Eric."
+              "S25.C002.P002": "She felt relieved that he did not use his new honesty as a bid for her. Their past remained a shared fact, but it did not give him the right to ask about the present with Eric."
             }
           },
           "S25.C003": {
@@ -4752,32 +4752,32 @@ export const literaryLocaleBundles = {
       ],
       "S18": [
         {
-          "question": "Eric listens to Alice's story about childhood. How will she continue?",
+          "question": "After the story about childhood, Alice wants to name her own pace more precisely. What will she say?",
           "options": [
             {
               "code": "A",
-              "label": "Ask about his own habits",
-              "text": "“Where do you hurry when no one is paying you to plan a route?” Alice asked. The question was more personal than she had intended."
+              "label": "That she does not have to hurry beside him",
+              "text": "“I don't have to keep up with someone else's pace,” Alice said. Eric nodded without turning her words into a ready-made explanation."
             },
             {
               "code": "B",
-              "label": "Admit she sometimes fears falling behind people close to her",
-              "text": "She added that she used to quicken her pace instead of asking someone to wait. Eric did not explain her feeling to her."
+              "label": "That the memory needs no conclusion",
+              "text": "She smiled: sometimes it was enough to remember where she had once feared falling behind, without making it a rule for today."
             }
           ]
         },
         {
-          "question": "After the dance, Eric returns Alice's thermos. How will she answer the closeness?",
+          "question": "Alice has returned Eric's thermos, and they walk on. How will she answer the closeness?",
           "options": [
             {
               "code": "A",
-              "label": "Take his hand carefully herself",
-              "text": "Alice touched his fingers. Eric answered the movement, but did not pull her closer without asking."
+              "label": "Leave the pleasant possibility without a promise",
+              "text": "Alice let the pleasant possibility remain only a possibility. They walked side by side to the guesthouse without assigning a continuation to the moment."
             },
             {
               "code": "B",
-              "label": "Smile and leave some air between them",
-              "text": "She adjusted her scarf and looked at him. Eric smiled back: the evening did not require rushing toward the next step."
+              "label": "Return to the conversation about the road",
+              "text": "She pointed to the sign turned by the wind. Instead of guessing about the future, Alice suggested checking the nearest turn."
             }
           ]
         }
@@ -4799,17 +4799,17 @@ export const literaryLocaleBundles = {
           ]
         },
         {
-          "question": "Two figures will appear in the window's reflection. How will Alice suggest the picture?",
+          "question": "Nick asked before acting. What will Alice notice in that?",
           "options": [
             {
               "code": "A",
-              "label": "Keep them both in the frame",
-              "text": "She took out her phone and asked Nick not to leave the reflection. He was surprised, but stayed beside her."
+              "label": "The question came before her answer",
+              "text": "She noted not the evening's result but its order: first the question, then her answer. That was enough to see a change without making new promises."
             },
             {
               "code": "B",
-              "label": "Take it without a close-up of their faces",
-              "text": "Alice chose an angle that showed only two uneven shadows. Nick admitted he liked this version better than a staged one."
+              "label": "Not turn the question into proof",
+              "text": "Alice did not turn one question into a conclusion about him or about them. What mattered was that he had left room for her own answer today."
             }
           ]
         }
@@ -4831,17 +4831,17 @@ export const literaryLocaleBundles = {
           ]
         },
         {
-          "question": "At dinner, Damir tells her about the two years after the breakup. What will Alice ask?",
+          "question": "After they made room for the neighbours in the kitchen, what will Alice notice?",
           "options": [
             {
               "code": "A",
-              "label": "How did he learn to eat dinner alone?",
-              "text": "Alice waited until he finished. The ordinary skill seemed more important than a beautiful account of change."
+              "label": "A conversation need not displace other people's lives",
+              "text": "She noticed that their conversation continued not because the others disappeared, but because there was room for everyone."
             },
             {
               "code": "B",
-              "label": "What would he like to try differently now?",
-              "text": "She did not recall their old menu. Damir began talking on his own about how his everyday life had changed."
+              "label": "A pause did not break their conversation",
+              "text": "When the neighbours' kettle began to hum, Alice did not force the conversation back to its earlier pace. The pause became part of the evening."
             }
           ]
         }
@@ -4949,7 +4949,7 @@ export const literaryLocaleBundles = {
             {
               "code": "A",
               "label": "How does he want to combine school and personal time?",
-              "text": "Eric did not promise a ready answer. He honestly named the days when he would not even be able to call."
+              "text": "Eric did not promise a ready schedule. Alice asked how he planned to leave room in the future school for ordinary life, not only classes."
             },
             {
               "code": "B",
@@ -4991,66 +4991,66 @@ export const literaryLocaleBundles = {
           ]
         },
         {
-          "question": "They agree to ten minutes of viewing. How will they use them?",
+          "question": "Nick has offered two different possibilities. What will Alice clarify before choosing?",
           "options": [
             {
               "code": "A",
-              "label": "Pause on the shots she wants to ask about",
-              "text": "Alice moved closer to the screen. Nick showed her the pause button instead of explaining every frame in advance."
+              "label": "What the viewing would ask of her",
+              "text": "She kept the work invitation separate from the simple wish to stay together. She could consider one without answering the other immediately."
             },
             {
               "code": "B",
-              "label": "Ask him to show the order of the fragments first",
-              "text": "Nick briefly listed the scenes, then played the first one. It became easier for Alice to understand what she was deciding."
+              "label": "Whether she can stay beside him without opening the material",
+              "text": "Alice kept both possibilities distinct: she could continue the morning beside Nick or discuss the fragments, without turning one into a promise of the other."
             }
           ]
         }
       ],
       "S25": [
         {
-          "question": "Alice admits that Damir saw her evening with Eric. How will she continue the conversation?",
+          "question": "Damir has already told her about a possible interview, but there is no decision yet. What will Alice keep in the conversation?",
           "options": [
             {
               "code": "A",
-              "label": "Talk about her choice without defending it",
-              "text": "She did not pretend another person's invitation had been a mistake. Damir listened without asking for an account of someone else's feelings."
+              "label": "Separate his work choice from her feelings",
+              "text": "She heard a possible job in his account, not a request to choose for him. One did not cancel out the other."
             },
             {
               "code": "B",
-              "label": "Ask whether Damir is ready to speak without comparisons",
-              "text": "“I don't want to turn this evening into a competition,” Alice said. Damir nodded before answering."
+              "label": "Not turn uncertainty into a promise",
+              "text": "Alice left room for the question of distance: they did not yet have to decide for both of them what the interview would bring."
             }
           ]
         },
         {
-          "question": "They discuss the date of Damir's interview. How will they agree on the next conversation?",
+          "question": "Before S25-C1, what clarity does Alice want to keep for herself?",
           "options": [
             {
               "code": "A",
-              "label": "Ask him to share a confirmed date, not a promise",
-              "text": "Alice wanted a real decision, not deadlines that could change without her."
+              "label": "Separate what is known from what is not decided",
+              "text": "She held on to two facts: the interview was possible, and its result was still unknown. That was enough not to decide everything in one conversation."
             },
             {
               "code": "B",
-              "label": "Discuss the result separately, not while travelling",
-              "text": "She decided not to return to the difficult conversation between breakfast and departure. Damir agreed to find a calm time."
+              "label": "Name the question that needs an honest answer",
+              "text": "She formulated the question of what would change if Damir left, without demanding an answer he did not have yet."
             }
           ]
         }
       ],
       "S58": [
         {
-          "question": "Eric asks again whether the group chose the right bread. What will Alice say?",
+          "question": "Everyone in the shop has taken on part of the shared dinner. What will Alice notice?",
           "options": [
             {
               "code": "A",
-              "label": "Confirm that she herself wants this loaf",
-              "text": "Alice took the bread from the shelf. After the day's changes, she liked that today's decision could be this simple."
+              "label": "No one has to decide for everyone",
+              "text": "She looked at the purchases and understood: Eric checked the pot, Nick argued about sweets, Damir chose ingredients, and she could choose her own step."
             },
             {
               "code": "B",
-              "label": "Support his joke about excessive precision",
-              "text": "“This time I'm responsible for the bread,” she said. Eric laughed and stopped checking the packaging."
+              "label": "Different decisions can become one dinner",
+              "text": "She did not compare their ways of helping. One dinner could hold precision, a joke, and the right to choose separately."
             }
           ]
         },
@@ -5087,17 +5087,17 @@ export const literaryLocaleBundles = {
           ]
         },
         {
-          "question": "What does Alice want to say to the person she chooses?",
+          "question": "What principle does Alice want to keep in the decision she has just made?",
           "options": [
             {
               "code": "A",
-              "label": "I like the present, not the promise of an ideal future",
-              "text": "She repeated a short sentence in her mind and stopped looking for a beautiful one. She wanted to be understood the first time."
+              "label": "Not turn someone else's desire into her obligation",
+              "text": "She kept a simple principle beside the decision: someone else's hope did not become her obligation. Her answer had to begin with her own choice."
             },
             {
               "code": "B",
-              "label": "It matters to me to keep my own space",
-              "text": "She formed it without the words “sorry” or “probably”. Future closeness should not require her to give herself up."
+              "label": "Leave room for her own pace",
+              "text": "Alice reminded herself that clarity did not require giving up work, friendship, or time alone. The decision had to fit into her life, not replace it."
             }
           ]
         }
