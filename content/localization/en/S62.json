@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "source": "content/season-1-literary-episode-07.md",
+  "scenes": {
+    "S62": {
+      "title": "Day 14. The Bookshop Where No One Was Waiting for Her",
+      "chunks": {
+        "S62.C000": {
+          "title": "",
+          "paragraphs": {
+            "S62.C000.P000": "In the morning Alice told the group she would meet them for dinner. Nick offered to send her his list of beautiful places. She thanked him and left the phone in her pocket. That day she wanted to answer only her own questions.",
+            "S62.C000.P001": "In the bookshop, a shelf of books in several languages stood by the till. Alice spent a long time turning through a slim collection of stories she could not read without a dictionary, then chose a book with photographs of old Icelandic kitchens. Someone had written a recipe by hand on one page. The bookseller explained that the local library brought them in after exchanges: if Alice wanted, she could leave her own book there when she passed through again.",
+            "S62.C000.P002": "The pool was quiet. Alice swam a few lengths, then sat at the edge and watched an older woman teach her grandson to float. There was no camera in her hands and no notebook in the pocket of her robe. For an hour, no one asked her to decide whom to spend the evening with."
+          }
+        },
+        "S62.C001": {
+          "title": "Choice S62-C1 — Whom will she write to after the pool?",
+          "paragraphs": {}
+        },
+        "S62.C002": {
+          "title": "A. A friend she had not seen in a long time",
+          "paragraphs": {
+            "S62.C002.P000": "“I bought a book and remembered that I simply want to come and see you when I get back.” The reply did not come at once, but her friend sent a picture of her new kettle and asked whether Saturday suited Alice."
+          }
+        },
+        "S62.C003": {
+          "title": "B. No one: leave the day without a report",
+          "paragraphs": {
+            "S62.C003.P000": "Alice put the phone away, sat in a little café, and ate a hot bun before it cooled. That evening she told the group about the book anyway; the difference was that she told them when she wanted to."
+          }
+        },
+        "S62.C004": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S62.C004.P000": "At dinner, Damir asked how her day had gone. Alice showed him the page with the recipe. Eric tried to read the handwriting; Nick suggested cooking the dish on the last night of the trip. She agreed to think about it. Her day belonged to none of them, but there was room for them in the story she chose to tell."
+          }
+        },
+        "S62.C005": {
+          "title": "If `S31-C2=A`",
+          "paragraphs": {
+            "S62.C005.P000": "In the morning, Alice reread the letter to herself from the guesthouse. She added one line: “You do not have to do everything at once.” Then she went calmly to the bookshop."
+          }
+        },
+        "S62.C006": {
+          "title": "If `S31-C2=B`",
+          "paragraphs": {
+            "S62.C006.P000": "In the morning, Alice found the recommended shop and bought breakfast without hurrying. The bookshop opened later, leaving her time simply to sit by the window."
+          }
+        }
+      }
+    }
+  }
+}

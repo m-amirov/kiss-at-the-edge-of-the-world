@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "source": "content/season-1-literary-episode-07.md",
+  "scenes": {
+    "S52": {
+      "title": "Day 14. A Glove with Someone Else’s Initials",
+      "chunks": {
+        "S52.C000": {
+          "title": "",
+          "paragraphs": {
+            "S52.C000.P000": "Nick had lost a glove. Not his own—the one issued for the volunteer work. Inga’s initials were stitched into the palm, and she had asked him to return the pair before they left. Nick had put the gloves in his jacket pocket, but now he found only one. The driver was already about to go for the keys, and Nick asked Alice to help retrace yesterday’s stops.",
+            "S52.C000.P001": "They checked the boot, the stand by the entrance, and the café where they had bought coffee. At the café, the owner offered them a completely different child’s mitten with a broken elastic strap. Alice thanked her and left it on the counter: someone else’s loss was not the solution to their problem.",
+            "S52.C000.P002": "At the post office, Nick admitted that he sometimes found it easy to turn other people’s inconveniences into quests because it was simpler than sitting with his own irritation. Alice looked at his wet hair—he had not put up his hood and was now no less cold than she was.",
+            "S52.C000.P003": "“You can just be angry,” she said. “The glove will not become any more lost because of it.”",
+            "S52.C000.P004": "“I can. But then you’ll have a very boring date.”",
+            "S52.C000.P005": "“Is this a date?”",
+            "S52.C000.P006": "Nick stopped. He had clearly not meant to say it aloud, and for the first time that day he had no prepared joke.",
+            "S52.C000.P007": "They found the glove by the workshop door, where Nick had helped carry in a heavy box the day before. It lay on the windowsill; someone had carefully spread the fingers so the fabric could dry."
+          }
+        },
+        "S52.C001": {
+          "title": "Choice S52-C1 — What does Alice say?",
+          "paragraphs": {}
+        },
+        "S52.C002": {
+          "title": "A. Call the walk a date",
+          "paragraphs": {
+            "S52.C002.P000": "“Then this is a good date,” Alice said. “Just no more lost things next time.”",
+            "S52.C002.P001": "Nick put both gloves in his pocket and promised to try, but not to guarantee anything. On the way back, he took her hand first; she did not let go."
+          }
+        },
+        "S52.C003": {
+          "title": "B. Suggest an ordinary walk tomorrow",
+          "paragraphs": {
+            "S52.C003.P000": "“Tomorrow, let’s just go out together. Without an occasion and without searching for things.”",
+            "S52.C003.P001": "Nick nodded. He did not ask whether that counted as a date. On the way back they compared the windows of the houses: which ones lit up first and which had plants on the sills."
+          }
+        },
+        "S52.C004": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S52.C004.P000": "Inga replied to their message almost at once: “Thank you. I thought they had left with you forever.” Nick showed Alice the reply, then put away his phone. They were five minutes from the guesthouse. They walked slowly and did not talk about the camera."
+          }
+        },
+        "S52.C005": {
+          "title": "If `S29-C2=A`",
+          "paragraphs": {
+            "S52.C005.P000": "In the shop, Alice recognised a postcard like the one they had chosen without a camera. Nick noticed her smile and suggested sending a real postcard instead of filming another video."
+          }
+        },
+        "S52.C006": {
+          "title": "If `S29-C2=B`",
+          "paragraphs": {
+            "S52.C006.P000": "In the shop, Nick spotted a small picture frame and asked whether Alice remembered her silent film. She said she remembered his face in the frame more than the rest of the road."
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "source": "content/season-1-literary-episode-07.md",
+  "scenes": {
+    "S28": {
+      "title": "Day 14. Not Where the Finger Pointed",
+      "chunks": {
+        "S28.C000": {
+          "title": "",
+          "paragraphs": {
+            "S28.C000.P000": "Eric asked Alice to walk ahead on a short marked section of trail. Not as a lesson: his phone was down to eight percent, and he had left the paper map in the car, deciding not to carry anything unnecessary. At the fork stood a sign with two arrows and a crossed-out marker for a closed trail. Alice chose the open path to the lookout. Eric did not correct her, although before he would certainly have explained why the other route was slightly shorter.",
+            "S28.C000.P001": "“Are you deliberately keeping quiet?” she asked.",
+            "S28.C000.P002": "“Yes. But if we miss the turn back to the car, I’ll say so.”",
+            "S28.C000.P003": "At the lookout, the wind knocked back her hood. Eric caught the edge of her jacket before the fabric covered Alice’s eyes. He did not pull her back; he simply held the collar while she zipped it. Below them lay the lake, dull beneath a grey sky. No view made the day ceremonial. They were both hungry after yesterday’s work, Alice had a wet sock, and Eric was failing to remember where he had left the spare batteries.",
+            "S28.C000.P004": "“I wanted to ask you about breakfast,” Alice said.",
+            "S28.C000.P005": "“A dangerous subject after a hike.”",
+            "S28.C000.P006": "“You eat standing up every time while the others are getting ready. Could you just sit with us tomorrow?”",
+            "S28.C000.P007": "He was more surprised than if she had suggested changing the route. Over several years of work, he had got used to arriving first and checking that the car was started, the food ordered, and the hot water running. At weekends his sister invited him to breakfast, but he still got up before everyone else and washed dishes while they were eating.",
+            "S28.C000.P008": "“Then tomorrow I’ll wash the cups,” Alice offered.",
+            "S28.C000.P009": "“No. Tomorrow I’ll eat first.”",
+            "S28.C000.P010": "She laughed and stored the promise away. It was small, and that made her want to find out whether he could keep it."
+          }
+        },
+        "S28.C001": {
+          "title": "Choice S28-C1 — At the fork on the way back",
+          "paragraphs": {}
+        },
+        "S28.C002": {
+          "title": "A. Ask Eric to show her the calmer route",
+          "paragraphs": {
+            "S28.C002.P000": "“Will you lead on the way back? I’m tired of watching the signs.”",
+            "S28.C002.P001": "He took a map from his pocket—a small one folded into quarters; he had brought a paper map after all. Alice gave him a pointed look. Eric admitted he could not leave without a backup plan, then let her choose the more comfortable path from the map."
+          }
+        },
+        "S28.C003": {
+          "title": "B. Suggest that they walk side by side without a leader",
+          "paragraphs": {
+            "S28.C003.P000": "They walked together. At the fork Alice read the sign aloud; Eric saw the trail and said it led to the car park. The decision took ten seconds, and both of them were satisfied. On the way back they discussed not the route but which music Eric could not stand at family celebrations."
+          }
+        },
+        "S28.C004": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S28.C004.P000": "At the car, Eric took dry socks from the boot—his own, far too large for Alice. She put them on anyway. That evening he remembered them when the group gathered to decide where to go after dinner. For the first time, he asked not “will we make it?” but “do you want to?” Alice said that she did. Not because they had time."
+          }
+        },
+        "S28.C005": {
+          "title": "Choice S28-C2 — What will Alice suggest Eric do that evening?",
+          "paragraphs": {}
+        },
+        "S28.C006": {
+          "title": "A. Play that song and invite him to dance",
+          "paragraphs": {
+            "S28.C006.P000": "“Even if there’s no dance hall here,” Alice said. Eric looked at her outstretched hand, then at the boots stained by the trail, and agreed. They took two steps beside the car and both started laughing."
+          }
+        },
+        "S28.C007": {
+          "title": "B. Spend a quiet evening together without plans",
+          "paragraphs": {
+            "S28.C007.P000": "“I just want to sit beside you,” Alice said. Eric did not take out the map. He asked whether they should get tea at the guesthouse. She said tea was fine, but a schedule was not."
+          }
+        }
+      }
+    }
+  }
+}

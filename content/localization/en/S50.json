@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "source": "content/season-1-literary-episode-08.md",
+  "scenes": {
+    "S50": {
+      "title": "Day 15. A City Without a Map",
+      "chunks": {
+        "S50.C000": {
+          "title": "If `routeStatus=active`",
+          "paragraphs": {
+            "S50.C000.P000": "Eric left the paper map and the route app on his phone at the hotel. He suggested that Alice choose one street, and then he would choose the next. There was one condition: they had to return for dinner, stay inside the lit centre, and not argue if one of them got tired. Alice led them to a shop with bright postcards because a funny wooden bird stood in the window. Eric chose the stairs to an old church. At the top it was so windy that they immediately went back down.",
+            "S50.C000.P001": "In a little bookshop, Eric found a cookbook he had tried to use with his sister as a child. Alice asked to see the page for the dish that had gone worst. He opened it at random: sticky potato cakes they had once baked so hard that their father suggested using them as hot-plate stands. Alice was laughing when the bookseller brought them two paper bookmarks.",
+            "S50.C000.P002": "On the way back, Eric did talk about winter—not about what either of them would sacrifice, but about when Alice usually felt at home. She told him about Sunday mornings when she could read the paper without answering the phone. Eric said home, for him, was the evening after a long drive: taking off his boots and hearing someone put the kettle on in the kitchen. They did not promise each other a shared address. But at the crossroads, Alice took his hand."
+          }
+        },
+        "S50.C001": {
+          "title": "If `routeStatus=paused`",
+          "paragraphs": {
+            "S50.C001.P000": "They met by the hotel stairs and went to the bookshop because it sold a city map for Nick. Eric did not try to take Alice’s hand. They discussed a present for his sister and the photograph of the repaired boardwalk Inga had sent. When Alice asked him to wait by the window, he said “of course” and stayed outside. It was unfamiliar—not cold, simply different. She had time to understand whether she wanted to walk beside him again because she wanted to."
+          }
+        },
+        "S50.C002": {
+          "title": "Choice S50-C1 — What does Alice take from the city?",
+          "paragraphs": {}
+        },
+        "S50.C003": {
+          "title": "A. Buy a postcard for herself, not for the article",
+          "paragraphs": {
+            "S50.C003.P000": "She chose a card with a winter window, although it was raining in the city now. On the back she wrote: “Here, we did not know what came next.” She put the postcard inside the book she planned to finish at home."
+          }
+        },
+        "S50.C004": {
+          "title": "B. Give Eric a wooden-bird bookmark",
+          "paragraphs": {
+            "S50.C004.P000": "Eric looked at the small paper rectangle as if he had not expected an object like that to count as a present. Then he put it in the inside pocket of his jacket, where he kept his documents, and thanked Alice without a joke."
+          }
+        },
+        "S50.C005": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S50.C005.P000": "They returned in time for dinner. Nick asked whether they had got lost. Alice said it was difficult to get lost in central Akureyri if you looked into shop windows every five minutes. Eric did not challenge that description of the day."
+          }
+        },
+        "S50.C006": {
+          "title": "Choice S50-C2 — What will Alice suggest Eric do before the walk ends?",
+          "paragraphs": {}
+        },
+        "S50.C007": {
+          "title": "A. Ask him about his favourite family evening",
+          "paragraphs": {
+            "S50.C007.P000": "Eric remembered how his sister used to make everyone play a board game whose rules she changed halfway through. Alice laughed and suggested they try it one day. It was an invitation, not a demand for a date."
+          }
+        },
+        "S50.C008": {
+          "title": "B. Invite him to choose a small present for his sister together",
+          "paragraphs": {
+            "S50.C008.P000": "They went into a shop and chose a wooden bird for Eric’s sister. Alice insisted that he sign the card himself. Eric took a long time choosing the words while she stood beside him and looked at the window."
+          }
+        }
+      }
+    }
+  }
+}

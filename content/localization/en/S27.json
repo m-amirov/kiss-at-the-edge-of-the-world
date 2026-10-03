@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "source": "content/season-1-literary-episode-07.md",
+  "scenes": {
+    "S27": {
+      "title": "Day 13. The Shore That Never Made the Frame",
+      "chunks": {
+        "S27.C000": {
+          "title": "",
+          "paragraphs": {
+            "S27.C000.P000": "The next morning Eric said the next place they had to sleep was less than three hours away, and Nick immediately suggested filming three locations on the road. Then Eric showed him a message from Inga: the boardwalk by the lake had been washed loose the day before, and local volunteers were going to replace two boards, collect debris blown in by the wind, and take apart the old fastenings. There was work for visitors—not heroic work, simply necessary work. If the group wanted to join, they had to arrive before ten and follow instructions.",
+            "S27.C000.P001": "“Are you sure we won’t get in the way?” Alice asked.",
+            "S27.C000.P002": "“I checked. Inga says there are four pairs of gloves, we shouldn’t film local people’s faces without asking, and no one is putting a saw in our hands.”",
+            "S27.C000.P003": "Inga was waiting at the start of the trail in a red hat. She did not tell the visitors how important it was to protect nature. She handed them sacks, showed them where they could not walk, and asked them not to touch the boards stacked for repairs. Nick tried to lift a sack with one hand and discovered it held soaked rope rather than empty bottles. Damir took the other end. Eric went with Inga to fetch the tools. Under a bush, Alice found a child’s lost mitten, shook off the dirt, and put it in a separate bag.",
+            "S27.C000.P004": "Halfway through the work they spread out along the edge of the trail. Alice was alone for a moment. The lake was barely visible: wet, low trees stood between her and the water. But she could hear Nick laughing when the rope caught on a root again, and Damir’s brief “this way.” She had come to write about a beautiful country; for half a day, she had to watch the ground.",
+            "S27.C000.P005": "Inga stopped beside her, assessed the two filled sacks, and suggested a break. Nick raised the camera but did not turn it on.",
+            "S27.C000.P006": "“Can I film the boards and our hands?” he asked. “No local faces if they don’t want to be in it.”",
+            "S27.C000.P007": "“Ask Inga first,” Alice said. “And show her what you get afterward.”",
+            "S27.C000.P008": "Inga agreed to one wide shot of the trail, but asked them not to turn the repair into a story about tourists arriving to save someone. Nick lowered the lens. The frame held four pairs of muddy gloves and an old board the local volunteers carried past them.",
+            "S27.C000.P009": "Alice remembered Marina’s editorial message: she wanted a noticeable turn in the story. There was no turn here. There was a person who had noticed the loose board yesterday and come to replace it today. Alice made a note without calling Inga a heroine."
+          }
+        },
+        "S27.C001": {
+          "title": "Choice S27-C1 — How Alice will spend the last hour of work",
+          "paragraphs": {}
+        },
+        "S27.C002": {
+          "title": "A. Stay with Inga and finish the boardwalk",
+          "paragraphs": {
+            "S27.C002.P000": "Alice handed Inga the fastenings and listened as she explained why the board could not simply be laid flat on the ground. Alice wrote down a few precise details about the trail and asked whether she could use them in the article. Inga corrected the place name in her notes and smiled when she saw it written correctly."
+          }
+        },
+        "S27.C003": {
+          "title": "B. Help Nick film without getting in the way",
+          "paragraphs": {
+            "S27.C003.P000": "Nick trusted Alice with the tripod while he carried the boards. She chose a position where the camera did not block the path. The result was a short, still shot: first an empty trail, then people carrying a heavy board along it, then an empty trail again. Nick watched it and made no comment."
+          }
+        },
+        "S27.C004": {
+          "title": "C. Carry the full sacks over and come back for the rest",
+          "paragraphs": {
+            "S27.C004.P000": "Alice carried the sacks to the coordinator’s car, checked that none of the volunteers’ tools had ended up inside, and brought everyone water. It was not the most visible job, but she caught Damir quietly changing his glove when the old one split at the seam. Without a word, Alice handed him a spare."
+          }
+        },
+        "S27.C005": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S27.C005.P000": "Before they left, Inga photographed the repaired section on her phone to send a report to the people who had been unable to come. She asked the four travellers to stand aside: the boards, not the travellers, belonged in the picture. Nick was the first to step off the trail.",
+            "S27.C005.P001": "On the way back to the guesthouse, Eric asked whether they wanted to spend more time by Mývatn tomorrow. Nick said he was ready to look at anything, as long as he did not have to carry soaked rope. Damir fell asleep with one hand pressed around a warm paper cup. Alice did not wake him, although she wanted to show him the picture of the child’s mitten: the guesthouse owner had promised to ask the neighbours whether someone had lost it."
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "source": "content/season-1-literary-episode-08.md",
+  "scenes": {
+    "S53": {
+      "title": "Day 16. One Day Without a Camera",
+      "chunks": {
+        "S53.C000": {
+          "title": "If `routeStatus=active`",
+          "paragraphs": {
+            "S53.C000.P000": "Nick put the camera in the boot and closed the car. Then he came back to make sure he had left the spare battery there too. Alice had not asked him to give up his profession for a day; he said himself that he wanted to find out what they would do when there was nothing to film and no need to invent a plan for the next shot.",
+            "S53.C000.P001": "At the pool, they swam a few lengths each and sat for a long time on a bench, warming their fingers around paper cups of tea. Nick did not make a story out of every moment. He watched a child learn to hold on to the edge and quietly admitted that he had been afraid of deep water as a child. Alice asked who had taught him to swim. He answered: his younger sister, although the age difference made it sound absurd. She had stood patiently in the shallow water and told him he could get out at any time. Alice thought of yesterday’s conversation, but did not turn the memory into a lesson.",
+            "S53.C000.P002": "After the pool they went to a bakery. Nick took a long time choosing between two equally large buns and picked the one with more cinnamon. He admitted that he liked ordinary mornings, but often did not know how to stay in one: he began looking for the next event as if it were the thing keeping him alive. Alice suggested they eat the bun while it was warm and talk about that later. He agreed and really did not take out his phone."
+          }
+        },
+        "S53.C001": {
+          "title": "If `routeStatus=paused`",
+          "paragraphs": {
+            "S53.C001.P000": "They met over breakfast with the group and walked together only as far as the bakery. Nick did not suggest a date. Alice asked whether the personal fragment had been deleted from every working copy; he showed her the producer’s message confirming it. Then each of them chose a bun. The conversation was calm and slightly unfamiliar. It turned out that a pause could not be played like a romantic scene, and Alice did not try."
+          }
+        },
+        "S53.C002": {
+          "title": "Choice S53-C1 — What do they do after the bakery?",
+          "paragraphs": {}
+        },
+        "S53.C003": {
+          "title": "A. Go to the bookshop without a purpose or a camera",
+          "paragraphs": {
+            "S53.C003.P000": "They spent a long time choosing a postcard with the strangest picture of the city, then sent it to Nick’s sister. Outside, Alice realised she had not remembered half the shop signs. She liked that: not every day had to become someone’s material."
+          }
+        },
+        "S53.C004": {
+          "title": "B. Return to the group without demanding that the day continue",
+          "paragraphs": {
+            "S53.C004.P000": "They reached the car by different paths. At dinner, Nick sat beside Eric and told the story of losing the glove. Alice could listen without immediately deciding what their shared day meant."
+          }
+        },
+        "S53.C005": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S53.C005.P000": "That night Nick sent her a picture of an empty memory card with the caption: “Didn’t film anything today.” Alice replied with a picture of the cinnamon-bun wrapper. He put a heart under the reply and wrote nothing else."
+          }
+        },
+        "S53.C006": {
+          "title": "Choice S53-C2 — What will Alice suggest Nick do at the end of their camera-free day?",
+          "paragraphs": {}
+        },
+        "S53.C007": {
+          "title": "A. Agree on a short date after they get home",
+          "paragraphs": {
+            "S53.C007.P000": "“Without a filming schedule,” Alice added. Nick stopped smiling for a second, then suggested a specific café near her office. They did not book a table; Alice liked that he did not turn the invitation into a joke."
+          }
+        },
+        "S53.C008": {
+          "title": "B. Exchange their favourite books from their travel bags",
+          "paragraphs": {
+            "S53.C008.P000": "Alice brought her unfinished novel, and Nick brought a battered collection of stories. They exchanged books until the last day of the trip. Nick promised not to look at her margin notes and actually closed the cover."
+          }
+        }
+      }
+    }
+  }
+}
