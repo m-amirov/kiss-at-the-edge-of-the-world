@@ -15,10 +15,10 @@ const output = process.env.LITERARY_QA_OUTPUT ?? path.join(root, 'artifacts/evid
 const evidencePath = process.env.LITERARY_QA_EVIDENCE ?? path.join(root, 'artifacts/evidence/ep07-08-route-browser.json');
 const viewports = [{ width: 1920, height: 900 }, { width: 390, height: 844 }, { width: 360, height: 640 }];
 const routes = {
-  eric: { code: 'A', final: 'S50', scenes: ['S27', 'S59', 'S28', 'S49', 'S32', 'S50'] },
-  nick: { code: 'B', final: 'S53', scenes: ['S27', 'S59', 'S29', 'S52', 'S33', 'S53'] },
-  damir: { code: 'C', final: 'S56', scenes: ['S27', 'S59', 'S30', 'S55', 'S34', 'S56'] },
-  alice: { code: 'D', final: 'S63', scenes: ['S27', 'S59', 'S31', 'S62', 'S35', 'S63'] }
+  eric: { code: 'A', final: 'S50', scenes: ['S27', 'S59', 'S28', 'S49', 'S32', 'S50'], variants: [{ routeStatus: 'active', predecessor: 'S32-C1', selected: 'A' }, { routeStatus: 'paused', predecessor: 'S32-C1', selected: 'B' }] },
+  nick: { code: 'B', final: 'S53', scenes: ['S27', 'S59', 'S29', 'S52', 'S33', 'S53'], variants: [{ routeStatus: 'active', predecessor: 'S33-C1', selected: 'A' }, { routeStatus: 'paused', predecessor: 'S33-C1', selected: 'B' }] },
+  damir: { code: 'C', final: 'S56', scenes: ['S27', 'S59', 'S30', 'S55', 'S34', 'S56'], variants: [{ routeStatus: 'active', predecessor: 'S34-C1', selected: 'A' }, { routeStatus: 'paused', predecessor: 'S34-C1', selected: 'B' }] },
+  alice: { code: 'D', final: 'S63', scenes: ['S27', 'S59', 'S31', 'S62', 'S35', 'S63'], variants: [{ routeStatus: 'active', predecessor: 'S35-C1', selected: 'A' }] }
 };
 const cyrillic = /[А-Яа-яЁё]/u;
 
@@ -59,9 +59,10 @@ async function main() {
   const browser = await chromium.launch({ executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: true });
   const results = [];
   try {
-    for (const [route, contract] of Object.entries(routes)) {
+    for (const [route, contract] of Object.entries(routes)) for (const variant of contract.variants) {
       for (const viewport of viewports) {
         const choices = allAuthoredChoices(contract.code);
+        choices[variant.predecessor] = variant.selected;
         const s26Choices = { ...choices };
         delete s26Choices['S26-C1'];
         const s26Flow = compileInteractivePlayback(literarySeason.scenes.find((scene) => scene.id === 'S26'), s26Choices, 'en');
@@ -120,7 +121,7 @@ async function main() {
             previousScene = sceneId;
             captures.push({ phase: 'scene-entry', sceneId, route, viewport, header: before.header, cyrillicCount: before.cyrillicCount, overflow: before.overflow, internalScroll: before.internalScroll, controlsWithinViewport: before.controlsWithinViewport, screenshot: null });
             if (contract.scenes.includes(sceneId) && ['S27', 'S59', 'S28', 'S49', 'S29', 'S52', 'S30', 'S55', 'S31', 'S62', 'S32', 'S50', 'S33', 'S53', 'S34', 'S56', 'S35', 'S63'].includes(sceneId)) {
-              const screenshot = path.join(output, `${route}-${viewport.width}x${viewport.height}-${sceneId}.png`);
+              const screenshot = path.join(output, `${route}-${variant.routeStatus}-${viewport.width}x${viewport.height}-${sceneId}.png`);
               await page.screenshot({ path: screenshot });
               const bytes = await fs.readFile(screenshot);
               captures.at(-1).screenshot = { path: screenshot, sha256: crypto.createHash('sha256').update(bytes).digest('hex'), bytes: bytes.length };
@@ -152,12 +153,15 @@ async function main() {
             }
           }
           if (before.current?.type === 'choice') {
-            const selected = before.current.id.endsWith('-C1') && before.current.id === 'S26-C1' ? contract.code : 'A';
+            const selected = before.current.id === 'S26-C1' ? contract.code : (before.current.id === variant.predecessor ? variant.selected : 'A');
             const optionIndex = before.current.options.findIndex((option) => option.code === selected);
             if (optionIndex < 0) throw new Error(`Missing option ${selected} at ${before.current.id}`);
             if (before.current.id.endsWith('-C90')) {
+              const screenshot = path.join(output, `${route}-${variant.routeStatus}-${viewport.width}x${viewport.height}-${sceneId}-${before.current.id}.png`);
+              await page.screenshot({ path: screenshot });
+              const bytes = await fs.readFile(screenshot);
               const afterState = { ...before.saved, position: before.saved.position + 1 };
-              interactionCases.push({ sceneId, extraChoiceId: before.current.id, insertionSourceRef: before.current.sourceStartRef, precedingVisibleText: before.visibleText, renderedQuestion: before.current.question, renderedOptions: before.current.options, selectedOption: selected, routeBefore: routeAtScene(sceneId, before.saved.choices) });
+              interactionCases.push({ sceneId, extraChoiceId: before.current.id, insertionSourceRef: before.current.sourceStartRef, precedingVisibleText: before.visibleText, renderedQuestion: before.current.question, renderedOptions: before.current.options, selectedOption: selected, routeBefore: routeAtScene(sceneId, before.saved.choices), screenshot: { path: screenshot, sha256: crypto.createHash('sha256').update(bytes).digest('hex'), bytes: bytes.length } });
               await page.locator('.choice-button').nth(optionIndex).click();
               const after = await read();
               interactionCases.at(-1).resultingText = after.current?.text ?? '';
@@ -187,7 +191,7 @@ async function main() {
           const after = await read();
           if (after.saved.sceneId === contract.final && after.saved.position === 0) {
             saveChecks.push({ checkpoint: 'Episode-8-representative-state', state: after.saved });
-            const screenshot = path.join(output, `${route}-${viewport.width}x${viewport.height}-${contract.final}.png`);
+            const screenshot = path.join(output, `${route}-${variant.routeStatus}-${viewport.width}x${viewport.height}-${contract.final}.png`);
             await page.screenshot({ path: screenshot });
             const bytes = await fs.readFile(screenshot);
             captures.push({ phase: 'scene-entry', sceneId: contract.final, route, viewport, header: after.header, cyrillicCount: after.cyrillicCount, overflow: after.overflow, internalScroll: after.internalScroll, controlsWithinViewport: after.controlsWithinViewport, screenshot: { path: screenshot, sha256: crypto.createHash('sha256').update(bytes).digest('hex'), bytes: bytes.length } });
@@ -200,18 +204,19 @@ async function main() {
         const sceneSet = captures.filter((capture) => capture.phase === 'scene-entry').map((capture) => capture.sceneId);
         const expectedSceneSet = ['S26', ...contract.scenes];
         const routeStateMismatches = sceneSet.filter((sceneId) => !expectedSceneSet.includes(sceneId)).length;
-        results.push({ sourceHead, route, viewport, sceneSet, expectedSceneSet: contract.scenes, finalScene: finalState.saved.sceneId, steps, captures, interactionCases, saveChecks, localeSwitch, errors, failed, routeStateMismatches, cyrillicCount: captures.reduce((sum, capture) => sum + capture.cyrillicCount, 0), overflowCount: captures.filter((capture) => capture.overflow).length, internalScrollCount: captures.filter((capture) => capture.internalScroll).length });
+        results.push({ sourceHead, route, routeStatus: variant.routeStatus, predecessor: `${variant.predecessor}=${variant.selected}`, viewport, sceneSet, expectedSceneSet: contract.scenes, finalScene: finalState.saved.sceneId, steps, captures, interactionCases, saveChecks, localeSwitch, errors, failed, routeStateMismatches, cyrillicCount: captures.reduce((sum, capture) => sum + capture.cyrillicCount, 0), overflowCount: captures.filter((capture) => capture.overflow).length, internalScrollCount: captures.filter((capture) => capture.internalScroll).length });
         await context.close();
       }
     }
   } finally {
     await browser.close();
   }
-  const pass = results.length === 12 && results.every((result) => result.sceneSet.filter((sceneId) => sceneId !== 'S26').join(',') === routes[result.route].scenes.join(',') && result.finalScene === routes[result.route].final && result.errors.length === 0 && result.failed.length === 0 && result.routeStateMismatches === 0 && result.cyrillicCount === 0 && result.overflowCount === 0 && result.internalScrollCount === 0 && result.localeSwitch?.sameScene && result.localeSwitch.ruCyrillicCount > 0 && result.localeSwitch.enCyrillicCount === 0);
-  const evidence = { schemaVersion: 1, status: pass ? 'PASS' : 'BLOCKED', sourceHead, generatedAt: new Date().toISOString(), baseUrl, viewports, routes, saveKey: literarySaveKey, results };
+  const expectedRuns = Object.values(routes).reduce((sum, contract) => sum + contract.variants.length * viewports.length, 0);
+  const pass = results.length === expectedRuns && results.every((result) => result.sceneSet.filter((sceneId) => sceneId !== 'S26').join(',') === routes[result.route].scenes.join(',') && result.finalScene === routes[result.route].final && result.errors.length === 0 && result.failed.length === 0 && result.routeStateMismatches === 0 && result.cyrillicCount === 0 && result.overflowCount === 0 && result.internalScrollCount === 0 && result.localeSwitch?.sameScene && result.localeSwitch.ruCyrillicCount > 0 && result.localeSwitch.enCyrillicCount === 0);
+  const evidence = { schemaVersion: 2, status: pass ? 'PASS' : 'BLOCKED', sourceHead, testedSourceHead: sourceHead, generatedAt: new Date().toISOString(), baseUrl, viewports, routes, saveKey: literarySaveKey, results };
   await fs.writeFile(path.join(output, 'evidence.json'), JSON.stringify(evidence, null, 2));
   await fs.writeFile(evidencePath, JSON.stringify(evidence, null, 2));
-  console.log(JSON.stringify({ status: evidence.status, sourceHead, results: results.map(({ route, viewport, sceneSet, finalScene, errors, failed, routeStateMismatches, cyrillicCount, overflowCount, internalScrollCount, localeSwitch }) => ({ route, viewport, sceneSet, finalScene, errors, failed, routeStateMismatches, cyrillicCount, overflowCount, internalScrollCount, localeSwitch })) }, null, 2));
+  console.log(JSON.stringify({ status: evidence.status, sourceHead, results: results.map(({ route, routeStatus, predecessor, viewport, sceneSet, finalScene, errors, failed, routeStateMismatches, cyrillicCount, overflowCount, internalScrollCount, localeSwitch }) => ({ route, routeStatus, predecessor, viewport, sceneSet, finalScene, errors, failed, routeStateMismatches, cyrillicCount, overflowCount, internalScrollCount, localeSwitch })) }, null, 2));
   if (!pass) process.exitCode = 2;
 }
 

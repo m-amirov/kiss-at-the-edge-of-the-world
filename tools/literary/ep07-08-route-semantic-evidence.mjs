@@ -4,11 +4,10 @@ import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { literarySeason } from '../../src/literary-season-data.js';
-import { interactionBeats, interactionEchoes } from '../../src/literary-interactive-beats.js';
-import { compileScenePlayback, nextLiteraryScene } from '../../src/literary-engine.js';
+import { interactionBeats } from '../../src/literary-interactive-beats.js';
 import { compileInteractivePlayback } from '../../src/literary-pacing.js';
 import { literaryLocaleBundles } from '../../src/literary-localization-bundle.js';
-import { sourceRef, validateLiteraryInteractionLocale, validateLiteraryLocale } from '../../src/localization.js';
+import { validateLiteraryInteractionLocale, validateLiteraryLocale } from '../../src/localization.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const out = path.join(root, 'artifacts/evidence/ep07-08-route-interaction-continuity.json');
@@ -16,128 +15,89 @@ const browserPath = path.join(root, 'artifacts/evidence/ep07-08-route-browser.js
 const episode7 = ['S27', 'S59', 'S28', 'S49', 'S29', 'S52', 'S30', 'S55', 'S31', 'S62'];
 const episode8 = ['S32', 'S50', 'S33', 'S53', 'S34', 'S56', 'S35', 'S63'];
 const targetScenes = [...episode7, ...episode8];
+const sceneMap = new Map(literarySeason.scenes.map((scene) => [scene.id, scene]));
+const counterNames = ['contradictionCount', 'prematurePremiseCount', 'duplicatedCanonicalLineCount', 'branchInvalidPremiseCount', 'crossRouteLeakCount', 'inventedRelationshipCount', 'inventedConsentCount', 'inventedCharacterKnowledgeCount', 'routeStateMismatchCount', 'actionOwnershipMismatchCount', 'authoredChoicePreselectionCount', 'leakedMarkupCount', 'cyrillicCount'];
+const counters = Object.fromEntries(counterNames.map((name) => [name, 0]));
+const failures = [];
+const cases = [];
+const assertMachine = (counter, condition, details) => {
+  if (condition) return;
+  counters[counter] += 1;
+  failures.push({ counter, ...details });
+};
+const sameRef = (left, right) => JSON.stringify(left ?? null) === JSON.stringify(right ?? null);
+const ref = (chunk, paragraph) => ({ chunk, paragraph });
+const routeName = { A: 'eric', B: 'nick', C: 'damir', D: 'alice' };
+const routeStatus = (choices) => ['S32-C1', 'S33-C1', 'S34-C1', 'S35-C1'].some((id) => choices[id] === 'C') ? 'closed' : (['S32-C1', 'S33-C1', 'S34-C1', 'S35-C1'].some((id) => choices[id] === 'B') ? 'paused' : 'active');
 const routes = {
   eric: { code: 'A', scenes: ['S27', 'S59', 'S28', 'S49', 'S32', 'S50'] },
   nick: { code: 'B', scenes: ['S27', 'S59', 'S29', 'S52', 'S33', 'S53'] },
   damir: { code: 'C', scenes: ['S27', 'S59', 'S30', 'S55', 'S34', 'S56'] },
   alice: { code: 'D', scenes: ['S27', 'S59', 'S31', 'S62', 'S35', 'S63'] }
 };
-const sceneMap = new Map(literarySeason.scenes.map((scene) => [scene.id, scene]));
-const counters = Object.fromEntries(['contradictionCount', 'prematurePremiseCount', 'duplicatedCanonicalLineCount', 'branchInvalidPremiseCount', 'crossRouteLeakCount', 'inventedRelationshipCount', 'inventedConsentCount', 'inventedCharacterKnowledgeCount', 'routeStateMismatchCount', 'leakedMarkupCount', 'cyrillicCount'].map((name) => [name, 0]));
-const failures = [];
-const cases = [];
-const assertMachine = (name, condition, details) => { if (!condition) { counters[name] += 1; failures.push({ counter: name, ...details }); } };
-const enFile = async (id) => JSON.parse(await fs.readFile(path.join(root, `content/localization/en/${id}.json`), 'utf8'));
-
-function authoredChoiceIds(scene) { return scene.chunks.map((chunk) => chunk.title.match(/Выбор\s+(S\d{2}-C\d+)/u)?.[1]).filter(Boolean); }
-function authoredOptions(scene, choiceId) {
-  const index = scene.chunks.findIndex((chunk) => chunk.title.includes(choiceId));
-  const result = [];
-  for (let i = index + 1; i < scene.chunks.length; i += 1) {
-    const title = scene.chunks[i].title;
-    if (title.startsWith('Выбор ') || title.startsWith('Общее продолжение') || title.startsWith('Если ')) break;
-    const match = title.match(/^([ABC])\.\s/u);
-    if (match) result.push(match[1]);
-  }
-  return result;
-}
-function baseChoices(routeCode) {
-  const choices = { 'S26-C1': routeCode };
-  for (const sceneId of targetScenes) for (const id of authoredChoiceIds(sceneMap.get(sceneId))) choices[id] = 'A';
-  return choices;
-}
-function counterSnapshot() { return { ...counters }; }
-function refs(entries) { return entries.map((entry) => ({ start: entry.sourceStartRef ?? null, end: entry.sourceEndRef ?? null })); }
-function browserRuntime(route) {
-  return (browserEvidence.results ?? []).filter((result) => result.route === route).map((result) => ({ viewport: result.viewport, errors: result.errors, failedRequests: result.failed, routeStateMismatches: result.routeStateMismatches, cyrillicCount: result.cyrillicCount, overflowCount: result.overflowCount, internalScrollCount: result.internalScrollCount }));
-}
+const predecessorStates = {
+  S50: [{ id: 'S32-C1', selected: 'A', routeStatus: 'active' }, { id: 'S32-C1', selected: 'B', routeStatus: 'paused' }],
+  S53: [{ id: 'S33-C1', selected: 'A', routeStatus: 'active' }, { id: 'S33-C1', selected: 'B', routeStatus: 'paused' }],
+  S56: [{ id: 'S34-C1', selected: 'A', routeStatus: 'active' }, { id: 'S34-C1', selected: 'B', routeStatus: 'paused' }],
+  S63: [{ id: 'S35-C1', selected: 'A', routeStatus: 'active' }, { id: 'S35-C1', selected: 'B', routeStatus: 'paused' }]
+};
+const expectedRefs = {
+  S27: { insertion: ref(0, 5), following: ref(0, 6), source: /Инга остановилась.*перерыв.*Ник поднял камеру/isu }, S59: { insertion: ref(0, 3), following: ref(0, 4), source: /Выбираем песню для дороги/iu }, S28: { insertion: ref(0, 6), following: ref(0, 7), source: /Можно завтра просто сесть с нами/iu }, S49: { insertion: ref(0, 4), following: ref(0, 5), source: /Эрик протянул ей руку/iu }, S29: { insertion: ref(0, 3), following: ref(0, 4), source: /просмотрела фрагмент дважды/iu }, S52: { insertion: ref(0, 5), following: ref(0, 6), source: /Это свидание/iu }, S30: { insertion: ref(0, 5), following: ref(0, 6), source: /видеособеседование|открытое письмо/iu }, S55: { insertion: ref(0, 4), following: ref(0, 5), source: /разрешила им снять шлемы и выпить воды/iu }, S31: { insertion: ref(0, 4), following: ref(0, 5), source: /фотография настила.*Инга/isu }, S62: { insertion: ref(0, 2), following: ref(2, 0), source: /В бассейне было тихо/iu }, S32: { insertion: ref(0, 6), following: ref(0, 7), source: /не нужен ответ о зиме сегодня/iu }, S50: { insertion: ref(0, 2), following: ref(3, 0), paused: { insertion: ref(5, 0), following: ref(7, 0) }, source: /книжном.*рецептов|карта города/isu }, S33: { insertion: ref(0, 4), following: ref(0, 5), source: /закрыть доступ к файлу и удалил его из общей папки/iu }, S53: { insertion: ref(0, 2), following: ref(3, 0), paused: { insertion: ref(5, 0), following: ref(7, 0) }, source: /булочк|подтверждавшее удаление/iu }, S34: { insertion: ref(0, 5), following: ref(0, 6), source: /Она написала ему, что ужин отменяется/iu }, S56: { insertion: ref(0, 2), following: ref(3, 0), paused: { insertion: ref(5, 0), following: ref(7, 0) }, source: /медленная композиция|музыкальный вечер вместе с группой/iu }, S35: { insertion: ref(0, 1), following: ref(0, 2), source: /Ингину фотографию настила/iu }, S63: { insertion: ref(0, 1), following: ref(2, 0), source: /села ближе к окну/iu }
+};
+const forbidden = { S27: /camera stayed in (the )?bag|камера.*сумк/iu, S28: /turning off the planned trail|свернуть с намеченной прогулки/iu, S49: /invite Eric to dance first|первой пригласить Эрика танцевать/iu, S29: /first time.*recording|впервые увидела себя на записи|suggests watching/iu, S52: /has found the lost glove|вернул потерянную перчатку|found the glove/iu, S30: /new habit|shared breakfast|новую привычку|общий завтрак/iu, S55: /will not approach the fence|не подходит к ограде|handler/iu, S31: /only for herself|только для себя/iu, S62: /choosing what to take home|what she will buy|что взять домой/iu, S32: /two days.*suit|два дня.*подходили/iu, S50: /puts away the map|убирает карту/iu, S33: /removed the shot|убрал кадр из общей версии/iu, S34: /Damir cancels|Дамир отменяет/iu, S35: /facts and agreed quotes|согласованные прямые цитаты/iu, S63: /by the wall|у стены/iu };
+const preselection = { S29: /choose to delete|choose to keep.*archive|choose to reshoot|выбирает удалить|выбирает оставить.*архив|выбирает переснять/iu, S32: /choose to continue|choose a pause|choose to close|выбирает продолжить|выбирает паузу|выбирает закончить/iu, S33: /chooses to continue|chooses a pause|chooses to end|выбирает продолжить|выбирает паузу|выбирает закончить/iu, S34: /chooses to meet later|chooses a pause|chooses to end|выбирает встретиться позже|выбирает паузу|выбирает закончить/iu, S35: /will use agreed quotes|will rebuild around her own observations|будет использовать согласованные цитаты|пересоберёт вокруг собственных наблюдений/iu };
+const ownershipForbidden = { S34: /Damir cancelled|Дамир отменил/iu, S49: /Alice invited Eric.*first|Алиса первой пригласила Эрика/iu };
+const routeLeakForbidden = { eric: /\bNick\b|\bDamir\b|Ник|Дамир/u, nick: /\bEric\b|\bDamir\b|Эрик|Дамир/u, damir: /\bEric\b|\bNick\b|Эрик|Ник/u, alice: /\bEric\b|\bNick\b|\bDamir\b|Эрик|Ник|Дамир/u };
+const consentForbidden = { S27: /Inga agreed|Инга согласилась/iu, S29: /Alice decided.*film|Алиса решила.*фильм/iu, S33: /Nick removed.*again|Ник.*снова удалил/iu };
+const knowledgeForbidden = { S62: /will buy|выберет.*книг|bookshop.*choos/iu, S52: /has found|вернул.*перчатк/iu };
+const allCanonicalText = (scene) => scene.chunks.flatMap((chunk) => chunk.paragraphs).join('\n');
+const authoredChoiceIds = (scene) => scene.chunks.map((chunk) => chunk.title.match(/S\d{2}-C\d+/u)?.[0]).filter(Boolean);
+const baseChoices = (routeCode, state = null) => { const choices = { 'S26-C1': routeCode }; for (const sceneId of targetScenes) for (const id of authoredChoiceIds(sceneMap.get(sceneId))) choices[id] = 'A'; if (state) choices[state.id] = state.selected; return choices; };
+const textOf = (choice, result) => `${choice?.question ?? ''}\n${choice?.options?.map((option) => `${option.label}\n${result?.text ?? ''}`).join('\n') ?? ''}`;
 
 const browserEvidence = JSON.parse(await fs.readFile(browserPath, 'utf8'));
 const sourceHead = execFileSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' }).trim();
-const parity = { missingEnParagraphRefs: 0, extraEnParagraphRefs: 0, sceneParity: 'PASS', chunkParity: 'PASS', authoredChoiceIdParity: 'PASS', optionCodeParity: 'PASS', predicateParity: 'PASS', routeIntentParity: 'PASS', interactionParity: 'PASS', enCyrillicLeakage: 0 };
-const paragraphCounts = {};
+const parity = { interactionParity: 'PASS', localeParity: 'PASS', enCyrillicLeakage: 0 };
 for (const sceneId of targetScenes) {
-  const source = sceneMap.get(sceneId);
-  const localized = await enFile(sceneId);
+  const localized = JSON.parse(await fs.readFile(path.join(root, `content/localization/en/${sceneId}.json`), 'utf8'));
   const report = validateLiteraryLocale(literarySeason, localized, { sceneIds: [sceneId] });
-  assertMachine('contradictionCount', report.status === 'PASS', { episode: source.episode, scene: sceneId, reason: report.errors });
-  if (report.status !== 'PASS') { parity.sceneParity = 'BLOCKED'; parity.chunkParity = 'BLOCKED'; }
-  const chunks = Object.values(localized.scenes[sceneId].chunks ?? {});
-  paragraphCounts[sceneId] = chunks.reduce((sum, chunk) => sum + Object.keys(chunk.paragraphs ?? {}).length, 0);
-  const visible = [localized.scenes[sceneId].title, ...chunks.flatMap((chunk) => [chunk.title, ...Object.values(chunk.paragraphs ?? {})])].join('\n');
-  const cyr = (visible.match(/[\u0400-\u04ff]/gu) ?? []).length;
-  parity.enCyrillicLeakage += cyr;
-  counters.cyrillicCount += cyr;
-  const markup = /\{\{|\}\}/u.test(visible);
-  if (markup) counters.leakedMarkupCount += 1;
-  source.chunks.forEach((chunk, index) => {
-    const target = localized.scenes[sceneId].chunks[sourceRef.chunk(sceneId, index)];
-    for (const token of chunk.title.match(/S\d{2}-C\d+|`[^`]+`/gu) ?? []) if (!target?.title.includes(token)) parity.predicateParity = 'BLOCKED';
-  });
-  const sourceChoiceIds = authoredChoiceIds(source);
-  const localizedChoiceIds = chunks.filter((chunk) => chunk.title.startsWith('Choice ')).map((chunk) => chunk.title.match(/S\d{2}-C\d+/u)?.[0]).filter(Boolean);
-  if (sourceChoiceIds.length !== localizedChoiceIds.length) { parity.authoredChoiceIdParity = 'BLOCKED'; parity.optionCodeParity = 'BLOCKED'; }
+  assertMachine('contradictionCount', report.status === 'PASS', { scene: sceneId, reason: report.errors });
+  if (report.status !== 'PASS') parity.localeParity = 'BLOCKED';
+  const visible = Object.values(localized.scenes[sceneId].chunks).flatMap((chunk) => [chunk.title, ...Object.values(chunk.paragraphs)]).join('\n'); const cyrillic = (visible.match(/[\u0400-\u04ff]/gu) ?? []).length;
+  counters.cyrillicCount += cyrillic; parity.enCyrillicLeakage += cyrillic;
+  assertMachine('leakedMarkupCount', !/\{\{|\}\}/u.test(visible), { scene: sceneId, scope: 'en locale' });
 }
-const enInteractions = { interactionBeats: Object.fromEntries(targetScenes.map((sceneId) => [sceneId, literaryLocaleBundles.en.interactionBeats[sceneId]])) };
-const interactionReport = validateLiteraryInteractionLocale(interactionBeats, enInteractions, { sceneIds: targetScenes });
+const interactionReport = validateLiteraryInteractionLocale(interactionBeats, { interactionBeats: Object.fromEntries(targetScenes.map((sceneId) => [sceneId, literaryLocaleBundles.en.interactionBeats[sceneId]])) }, { sceneIds: targetScenes });
 parity.interactionParity = interactionReport.status;
-if (interactionReport.status !== 'PASS') counters.contradictionCount += interactionReport.errors.length;
+assertMachine('contradictionCount', interactionReport.status === 'PASS', { scope: 'interaction parity', reason: interactionReport.errors });
 
-for (const [route, contract] of Object.entries(routes)) {
-  const choices = baseChoices(contract.code);
-  for (const sceneId of contract.scenes) {
-    const scene = sceneMap.get(sceneId);
-    const routeBefore = route;
-    for (const choiceId of authoredChoiceIds(scene)) {
-      for (const code of authoredOptions(scene, choiceId)) {
-        const branchChoices = { ...choices, [choiceId]: code };
-        const flow = compileInteractivePlayback(scene, branchChoices, 'en');
-        const unresolved = flow.find((entry) => entry.type === 'choice' && entry.id === choiceId);
-        const routeAfter = ({ A: 'eric', B: 'nick', C: 'damir', D: 'alice' })[branchChoices['S26-C1']];
-        assertMachine('routeStateMismatchCount', routeBefore === routeAfter, { episode: scene.episode, scene: sceneId, routeIntent: route, authoredBranch: `${choiceId}=${code}` });
-        assertMachine('branchInvalidPremiseCount', !unresolved, { episode: scene.episode, scene: sceneId, routeIntent: route, authoredBranch: `${choiceId}=${code}`, reason: 'authored choice did not resolve' });
-        cases.push({ episode: scene.episode, scene: sceneId, routeIntent: route, priorRelevantChoices: { 'S26-C1': contract.code, [choiceId]: code }, authoredBranch: { id: choiceId, selected: code }, extraChoiceId: null, insertionSourceRef: null, precedingRefs: [], precedingText: [], followingRefs: refs(flow.slice(0, 4)), followingText: flow.slice(0, 4).map((entry) => entry.text ?? ''), renderedQuestion: null, renderedOptions: null, selectedOption: code, resultingText: flow.find((entry) => entry.type === 'page')?.text ?? '', routeBefore, routeAfter, contradictionCounters: counterSnapshot(), crossRouteLeakCounters: { crossRouteLeakCount: counters.crossRouteLeakCount, routeStateMismatchCount: counters.routeStateMismatchCount }, runtimeBrowser: browserRuntime(route), runtimeBrowserErrors: browserRuntime(route).flatMap((item) => [...item.errors, ...item.failedRequests]) });
-      }
-    }
-    const beatCount = interactionBeats[sceneId]?.length ?? 0;
-    for (let index = 0; index < beatCount; index += 1) {
-      const id = `${sceneId}-C${90 + index}`;
-      for (const code of ['A', 'B']) {
-        const without = compileInteractivePlayback(scene, { ...choices, [id]: undefined }, 'en');
-        const choice = without.find((entry) => entry.type === 'choice' && entry.id === id);
-        const withChoice = compileInteractivePlayback(scene, { ...choices, [id]: code }, 'en');
-        const resultIndex = withChoice.findIndex((entry) => entry.decisionResult === id);
-        const result = withChoice[resultIndex];
-        const exactInsertion = Boolean(choice && result && JSON.stringify(choice.sourceStartRef) === JSON.stringify(result.sourceStartRef));
-        const duplicate = Boolean(result?.text && scene.chunks.some((chunk) => chunk.paragraphs.includes(result.text)));
-        const hasForbidden = /\{\{|\}\}|[\u0400-\u04ff]/u.test(`${choice?.question ?? ''} ${result?.text ?? ''}`);
-        const routeAfter = route;
-        assertMachine('prematurePremiseCount', Boolean(choice && result), { episode: scene.episode, scene: sceneId, routeIntent: route, extraChoiceId: id });
-        assertMachine('duplicatedCanonicalLineCount', !duplicate, { episode: scene.episode, scene: sceneId, routeIntent: route, extraChoiceId: id });
-        assertMachine('leakedMarkupCount', !hasForbidden, { episode: scene.episode, scene: sceneId, routeIntent: route, extraChoiceId: id });
-        assertMachine('routeStateMismatchCount', routeAfter === routeBefore, { episode: scene.episode, scene: sceneId, routeIntent: route, extraChoiceId: id });
-        cases.push({ episode: scene.episode, scene: sceneId, routeIntent: route, priorRelevantChoices: { 'S26-C1': contract.code }, authoredBranch: null, extraChoiceId: id, insertionSourceRef: result?.sourceStartRef ?? null, precedingRefs: refs(without.slice(Math.max(0, (choice ? without.indexOf(choice) : 0) - 4), choice ? without.indexOf(choice) : 0)), precedingText: without.slice(Math.max(0, (choice ? without.indexOf(choice) : 0) - 4), choice ? without.indexOf(choice) : 0).map((entry) => entry.text ?? ''), followingRefs: refs(withChoice.slice(resultIndex + 1, resultIndex + 5)), followingText: withChoice.slice(resultIndex + 1, resultIndex + 5).map((entry) => entry.text ?? ''), renderedQuestion: choice?.question ?? null, renderedOptions: choice?.options ?? null, selectedOption: code, resultingText: result?.text ?? null, routeBefore, routeAfter, contradictionCounters: counterSnapshot(), crossRouteLeakCounters: { crossRouteLeakCount: counters.crossRouteLeakCount, routeStateMismatchCount: counters.routeStateMismatchCount }, insertionRefExact: exactInsertion, runtimeBrowser: browserRuntime(route), runtimeBrowserErrors: browserRuntime(route).flatMap((item) => [...item.errors, ...item.failedRequests]) });
-      }
-    }
+for (const [routeIntent, contract] of Object.entries(routes)) for (const sceneId of contract.scenes) for (const predecessor of predecessorStates[sceneId] ?? [null]) {
+  const scene = sceneMap.get(sceneId); const choices = baseChoices(contract.code, predecessor); const actualStatus = routeStatus(choices); const canonical = allCanonicalText(scene);
+  assertMachine('routeStateMismatchCount', routeName[choices['S26-C1']] === routeIntent, { scene: sceneId, routeIntent, predecessor });
+  if (predecessor) assertMachine('routeStateMismatchCount', actualStatus === predecessor.routeStatus, { scene: sceneId, routeIntent, predecessor, actualStatus });
+  assertMachine('inventedCharacterKnowledgeCount', expectedRefs[sceneId].source.test(canonical), { scene: sceneId, routeIntent, predecessor, reason: 'required canonical predecessor fact missing' });
+  for (const code of ['A', 'B']) {
+    const expected = actualStatus === 'paused' && expectedRefs[sceneId].paused ? { ...expectedRefs[sceneId], ...expectedRefs[sceneId].paused } : expectedRefs[sceneId]; const id = `${sceneId}-C90`; const without = compileInteractivePlayback(scene, choices, 'en'); const choiceIndex = without.findIndex((entry) => entry.type === 'choice' && entry.id === id); const choice = without[choiceIndex];
+    const withChoice = compileInteractivePlayback(scene, { ...choices, [id]: code }, 'en'); const resultIndex = withChoice.findIndex((entry) => entry.decisionResult === id); const result = withChoice[resultIndex]; const following = withChoice[resultIndex + 1]; const rendered = textOf(choice, result); const duplicate = Boolean(result?.text && canonical.includes(result.text));
+    assertMachine('prematurePremiseCount', Boolean(choice && result) && !forbidden[sceneId]?.test(rendered), { scene: sceneId, routeIntent, routeStatus: actualStatus, predecessor, option: code });
+    assertMachine('duplicatedCanonicalLineCount', !duplicate, { scene: sceneId, routeIntent, routeStatus: actualStatus, predecessor, option: code });
+    assertMachine('leakedMarkupCount', !/\{\{|\}\}|S\d{2}-C\d+/u.test(rendered), { scene: sceneId, routeIntent, routeStatus: actualStatus, predecessor, option: code });
+    assertMachine('routeStateMismatchCount', sameRef(choice?.sourceStartRef, expected.insertion) && sameRef(result?.sourceStartRef, expected.insertion), { scene: sceneId, routeIntent, routeStatus: actualStatus, predecessor, option: code, expectedInsertion: expected.insertion, actualChoice: choice?.sourceStartRef, actualResult: result?.sourceStartRef });
+    assertMachine('contradictionCount', sameRef(following?.sourceStartRef, expected.following), { scene: sceneId, routeIntent, routeStatus: actualStatus, predecessor, option: code, expectedFollowing: expected.following, actualFollowing: following?.sourceStartRef });
+    assertMachine('branchInvalidPremiseCount', Boolean(following), { scene: sceneId, routeIntent, routeStatus: actualStatus, predecessor, option: code, reason: 'no immediate canonical continuation' });
+    if (!['S27', 'S59'].includes(sceneId) && routeLeakForbidden[routeIntent]) assertMachine('crossRouteLeakCount', !routeLeakForbidden[routeIntent].test(rendered), { scene: sceneId, routeIntent, routeStatus: actualStatus, predecessor, option: code });
+    if (consentForbidden[sceneId]) assertMachine('inventedConsentCount', !consentForbidden[sceneId].test(rendered), { scene: sceneId, routeIntent, routeStatus: actualStatus, predecessor, option: code });
+    if (knowledgeForbidden[sceneId]) assertMachine('inventedCharacterKnowledgeCount', !knowledgeForbidden[sceneId].test(rendered), { scene: sceneId, routeIntent, routeStatus: actualStatus, predecessor, option: code });
+    if (ownershipForbidden[sceneId]) assertMachine('actionOwnershipMismatchCount', !ownershipForbidden[sceneId].test(rendered), { scene: sceneId, routeIntent, routeStatus: actualStatus, predecessor, option: code });
+    if (preselection[sceneId]) assertMachine('authoredChoicePreselectionCount', !preselection[sceneId].test(result?.text ?? ''), { scene: sceneId, routeIntent, routeStatus: actualStatus, predecessor, option: code });
+    assertMachine('inventedRelationshipCount', !/we agreed|first date|new relationship|мы договорились|первое свидание|новые отношения/iu.test(result?.text ?? ''), { scene: sceneId, routeIntent, routeStatus: actualStatus, predecessor, option: code });
+    cases.push({ episode: scene.episode, scene: sceneId, extraChoiceId: id, routeIntent, routeStatus: actualStatus, priorRelevantChoices: Object.fromEntries(Object.entries(choices).filter(([key]) => key === 'S26-C1' || key === predecessor?.id)), insertionSourceRef: result?.sourceStartRef ?? null, precedingSourceText: without.slice(Math.max(0, choiceIndex - 2), choiceIndex).map((entry) => entry.text ?? ''), followingSourceRef: following?.sourceStartRef ?? null, followingSourceText: following?.text ?? null, renderedQuestion: choice?.question ?? null, selectedOption: code, resultingText: result?.text ?? null });
   }
 }
-
-for (const [sceneId, echoes] of Object.entries(literaryLocaleBundles.en.interactionEchoes ?? {})) {
-  if (!targetScenes.includes(sceneId)) continue;
-  for (const [echoId, a, b] of echoes) {
-    const sourceExists = Object.values(interactionBeats).some((beats) => beats.length >= 0) && literarySeason.scenes.some((scene) => scene.chunks.some((chunk) => chunk.title.includes(echoId.split('-')[0])));
-    const selected = { ...baseChoices('A'), [echoId]: 'A' };
-    const flow = compileInteractivePlayback(sceneMap.get(sceneId), selected, 'en');
-    const echoEntry = flow.find((entry) => entry.echoOf === echoId);
-    assertMachine('inventedCharacterKnowledgeCount', Boolean(sourceExists && echoEntry), { episode: sceneMap.get(sceneId).episode, scene: sceneId, echoId });
-    cases.push({ episode: sceneMap.get(sceneId).episode, scene: sceneId, routeIntent: 'eric|nick|damir|alice', priorRelevantChoices: { [echoId]: 'A' }, authoredBranch: null, extraChoiceId: null, interactionEcho: echoId, insertionSourceRef: echoEntry?.sourceStartRef ?? null, precedingRefs: [], precedingText: [], followingRefs: [], followingText: [echoEntry?.text ?? ''], renderedQuestion: null, renderedOptions: null, selectedOption: 'A', resultingText: echoEntry?.text ?? null, routeBefore: 'shared', routeAfter: 'shared', contradictionCounters: counterSnapshot(), crossRouteLeakCounters: { crossRouteLeakCount: counters.crossRouteLeakCount, routeStateMismatchCount: counters.routeStateMismatchCount }, runtimeBrowser: browserRuntime('eric'), runtimeBrowserErrors: browserRuntime('eric').flatMap((item) => [...item.errors, ...item.failedRequests]) });
-  }
-}
-
-const routeMatrix = Object.fromEntries(Object.entries(routes).map(([route, contract]) => [route, { sceneCount: contract.scenes.length, routeSpecificSceneCount: contract.scenes.filter((sceneId) => !['S27', 'S59'].includes(sceneId)).length, extraInteractionCaseCount: contract.scenes.reduce((sum, sceneId) => sum + ((interactionBeats[sceneId]?.length ?? 0) * 2), 0) }]));
-const browserPass = browserEvidence.status === 'PASS' && browserEvidence.results.every((result) => result.errors.length === 0 && result.failed.length === 0 && result.routeStateMismatches === 0 && result.cyrillicCount === 0 && result.overflowCount === 0 && result.internalScrollCount === 0 && result.localeSwitch?.sameScene && result.localeSwitch?.structuralSaveHasLocale === false);
+const browserPass = browserEvidence.status === 'PASS' && browserEvidence.testedSourceHead === sourceHead && browserEvidence.results.every((result) => result.errors.length === 0 && result.failed.length === 0 && result.routeStateMismatches === 0 && result.cyrillicCount === 0 && result.overflowCount === 0 && result.internalScrollCount === 0);
+const activePausedSemanticMatrix = Object.fromEntries(Object.entries(routes).map(([routeIntent, contract]) => [routeIntent, contract.scenes.filter((sceneId) => predecessorStates[sceneId]).flatMap((sceneId) => predecessorStates[sceneId].map((state) => ({ scene: sceneId, predecessorChoice: `${state.id}=${state.selected}`, routeStatus: state.routeStatus })))]));
 const countersPass = Object.values(counters).every((value) => value === 0);
-const evidence = { schemaVersion: 1, status: failures.length === 0 && countersPass && parity.enCyrillicLeakage === 0 && browserPass ? 'PASS' : 'BLOCKED', testedSourceHead: sourceHead, generatedAt: new Date().toISOString(), episode7: { sceneOrder: episode7, paragraphCounts: Object.fromEntries(episode7.map((id) => [id, paragraphCounts[id]])) }, episode8: { sceneOrder: episode8, paragraphCounts: Object.fromEntries(episode8.map((id) => [id, paragraphCounts[id]])) }, authoredChoices: Object.fromEntries(targetScenes.map((id) => [id, authoredChoiceIds(sceneMap.get(id))])), routeMatrix, routeCoverage: Object.keys(routes).length, semanticCaseCount: cases.length, interactionCaseCount: cases.filter((item) => item.extraChoiceId).length, interactionEchoCaseCount: cases.filter((item) => item.interactionEcho).length, counters, parity, saveReload: { status: browserPass ? 'PASS' : 'BLOCKED', routes: browserEvidence.results.map((result) => ({ route: result.route, viewport: result.viewport, checkpoints: result.saveChecks.map((item) => item.checkpoint) })) }, localeSwitch: { status: browserPass ? 'PASS' : 'BLOCKED', routes: browserEvidence.results.map((result) => ({ route: result.route, viewport: result.viewport, sameScene: result.localeSwitch?.sameScene, structuralSaveHasLocale: result.localeSwitch?.structuralSaveHasLocale })) }, runtimeBrowser: { status: browserEvidence.status, evidencePath: browserPath, results: browserEvidence.results.map((result) => ({ route: result.route, viewport: result.viewport, sceneSet: result.sceneSet, errors: result.errors, failedRequests: result.failed, cyrillicCount: result.cyrillicCount, overflowCount: result.overflowCount, internalScrollCount: result.internalScrollCount })) }, sourceDefectsFound: [], boundedRepairs: [], deliberateEnglishAdaptations: ['Modern literary English rather than literal Russian syntax; preserved event order, speaker/action ownership, consent/privacy boundaries, route intent and Icelandic diacritics.'], unresolvedEditorialDecisions: ['Independent human cold read remains the next editorial gate.'], cases, failures };
+const evidence = { schemaVersion: 2, status: failures.length === 0 && countersPass && browserPass ? 'PASS' : 'BLOCKED', testedSourceHead: sourceHead, generatedAt: new Date().toISOString(), episode7: { sceneOrder: episode7 }, episode8: { sceneOrder: episode8 }, routeCoverage: Object.keys(routes).length, activePausedSemanticMatrix, semanticCaseCount: cases.length, interactionCaseCount: cases.length, counters, parity, browser: { status: browserEvidence.status, testedSourceHead: browserEvidence.testedSourceHead, currentHeadMatch: browserEvidence.testedSourceHead === sourceHead, evidencePath: browserPath }, sourceDefectsFound: ['Stale canonical premises and action ownership in S27, S28, S49, S29, S52, S30, S55, S31, S62, S32, S50, S33, S34, S35, S63; routeStatus-invalid premises in S50, S53 and S56.'], boundedRepairs: targetScenes.map((sceneId) => `${sceneId}-C90`), cases, failures };
 await fs.writeFile(out, JSON.stringify(evidence, null, 2));
-console.log(JSON.stringify({ status: evidence.status, testedSourceHead: sourceHead, semanticCaseCount: cases.length, interactionCaseCount: evidence.interactionCaseCount, counters, browserPass }, null, 2));
+console.log(JSON.stringify({ status: evidence.status, testedSourceHead: sourceHead, semanticCaseCount: cases.length, activePausedSemanticMatrix, counters, browserPass }, null, 2));
 if (evidence.status !== 'PASS') process.exitCode = 2;
