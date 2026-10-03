@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "status": "PASS",
-  "sourceHead": "4fea62f475731ebe0625674bc92c244b4cbd5e0a",
-  "generatedAt": "2026-10-03T07:24:00.567Z",
+  "sourceHead": "3748a82e2d3ce683e2da02d85b93669c34271c99",
+  "generatedAt": "2026-10-03T09:32:50.360Z",
   "baseUrl": "http://127.0.0.1:4174/literary.html",
   "viewports": [
     {
@@ -71,7 +71,7 @@
   "saveKey": "kiss-at-the-edge-of-the-world:literary-draft:v1",
   "results": [
     {
-      "sourceHead": "4fea62f475731ebe0625674bc92c244b4cbd5e0a",
+      "sourceHead": "3748a82e2d3ce683e2da02d85b93669c34271c99",
       "route": "eric",
       "viewport": {
         "width": 1920,
@@ -263,7 +263,7 @@
               "S01",
               "S26"
             ],
-            "runId": "ep07-08-S26-1791012158136",
+            "runId": "ep07-08-S26-1791019887722",
             "revision": 2,
             "migrationNotice": false
           }
@@ -304,7 +304,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791012158136",
+            "runId": "ep07-08-S26-1791019887722",
             "revision": 13,
             "migrationNotice": false
           }
@@ -345,7 +345,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791012158136",
+            "runId": "ep07-08-S26-1791019887722",
             "revision": 23,
             "migrationNotice": false
           }
@@ -388,7 +388,7 @@
               "S27",
               "S59"
             ],
-            "runId": "ep07-08-S26-1791012158136",
+            "runId": "ep07-08-S26-1791019887722",
             "revision": 37,
             "migrationNotice": false
           }
@@ -433,7 +433,7 @@
               "S59",
               "S28"
             ],
-            "runId": "ep07-08-S26-1791012158136",
+            "runId": "ep07-08-S26-1791019887722",
             "revision": 52,
             "migrationNotice": false
           }
@@ -481,7 +481,7 @@
               "S28",
               "S49"
             ],
-            "runId": "ep07-08-S26-1791012158136",
+            "runId": "ep07-08-S26-1791019887722",
             "revision": 68,
             "migrationNotice": false
           }
@@ -531,7 +531,7 @@
               "S49",
               "S32"
             ],
-            "runId": "ep07-08-S26-1791012158136",
+            "runId": "ep07-08-S26-1791019887722",
             "revision": 85,
             "migrationNotice": false
           }
@@ -582,7 +582,7 @@
               "S49",
               "S32"
             ],
-            "runId": "ep07-08-S26-1791012158136",
+            "runId": "ep07-08-S26-1791019887722",
             "revision": 91,
             "migrationNotice": false
           }
@@ -634,7 +634,7 @@
               "S32",
               "S50"
             ],
-            "runId": "ep07-08-S26-1791012158136",
+            "runId": "ep07-08-S26-1791019887722",
             "revision": 95,
             "migrationNotice": false
           }
@@ -658,7 +658,7 @@
       "internalScrollCount": 0
     },
     {
-      "sourceHead": "4fea62f475731ebe0625674bc92c244b4cbd5e0a",
+      "sourceHead": "3748a82e2d3ce683e2da02d85b93669c34271c99",
       "route": "eric",
       "viewport": {
         "width": 390,
@@ -771,8 +771,8 @@
           "controlsWithinViewport": true,
           "screenshot": {
             "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-git\\artifacts\\evidence\\ep07-08-route-runtime\\eric-390x844-S49.png",
-            "sha256": "53f0327e3b21f47b10683355dcfa625c067b81a283f2e49daa417a754dc2903b",
-            "bytes": 179603
+            "sha256": "deedbcff9d3998da42aec0a65742d9893b5ebddfa8cdd1eaa3052e7f7235f32c",
+            "bytes": 55157
           }
         },
         {
@@ -809,8 +809,8 @@
           "controlsWithinViewport": true,
           "screenshot": {
             "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-git\\artifacts\\evidence\\ep07-08-route-runtime\\eric-390x844-S50.png",
-            "sha256": "1630c569f8775fd3a5dfbc22a1c99831d0ae04e5748fb43380b92ed2f5c27ca5",
-            "bytes": 62348
+            "sha256": "b3b652cf086be940fed7ba181cd5b1a9bff9a00c9bdbdfa38cc5c29667f3d0a0",
+            "bytes": 190936
           }
         }
       ],
@@ -850,7 +850,7 @@
               "S01",
               "S26"
             ],
-            "runId": "ep07-08-S26-1791012165358",
+            "runId": "ep07-08-S26-1791019895042",
             "revision": 2,
             "migrationNotice": false
           }
@@ -891,7 +891,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791012165358",
+            "runId": "ep07-08-S26-1791019895042",
             "revision": 13,
             "migrationNotice": false
           }
@@ -932,7 +932,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791012165358",
+            "runId": "ep07-08-S26-1791019895042",
             "revision": 23,
             "migrationNotice": false
           }
@@ -975,7 +975,7 @@
               "S27",
               "S59"
             ],
-            "runId": "ep07-08-S26-1791012165358",
+            "runId": "ep07-08-S26-1791019895042",
             "revision": 37,
             "migrationNotice": false
           }
@@ -1020,7 +1020,7 @@
               "S59",
               "S28"
             ],
-            "runId": "ep07-08-S26-1791012165358",
+            "runId": "ep07-08-S26-1791019895042",
             "revision": 52,
             "migrationNotice": false
           }
@@ -1068,7 +1068,7 @@
               "S28",
               "S49"
             ],
-            "runId": "ep07-08-S26-1791012165358",
+            "runId": "ep07-08-S26-1791019895042",
             "revision": 68,
             "migrationNotice": false
           }
@@ -1118,7 +1118,7 @@
               "S49",
               "S32"
             ],
-            "runId": "ep07-08-S26-1791012165358",
+            "runId": "ep07-08-S26-1791019895042",
             "revision": 85,
             "migrationNotice": false
           }
@@ -1169,7 +1169,7 @@
               "S49",
               "S32"
             ],
-            "runId": "ep07-08-S26-1791012165358",
+            "runId": "ep07-08-S26-1791019895042",
             "revision": 91,
             "migrationNotice": false
           }
@@ -1221,7 +1221,7 @@
               "S32",
               "S50"
             ],
-            "runId": "ep07-08-S26-1791012165358",
+            "runId": "ep07-08-S26-1791019895042",
             "revision": 95,
             "migrationNotice": false
           }
@@ -1245,7 +1245,7 @@
       "internalScrollCount": 0
     },
     {
-      "sourceHead": "4fea62f475731ebe0625674bc92c244b4cbd5e0a",
+      "sourceHead": "3748a82e2d3ce683e2da02d85b93669c34271c99",
       "route": "eric",
       "viewport": {
         "width": 360,
@@ -1437,7 +1437,7 @@
               "S01",
               "S26"
             ],
-            "runId": "ep07-08-S26-1791012172125",
+            "runId": "ep07-08-S26-1791019901847",
             "revision": 2,
             "migrationNotice": false
           }
@@ -1478,7 +1478,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791012172125",
+            "runId": "ep07-08-S26-1791019901847",
             "revision": 13,
             "migrationNotice": false
           }
@@ -1519,7 +1519,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791012172125",
+            "runId": "ep07-08-S26-1791019901847",
             "revision": 23,
             "migrationNotice": false
           }
@@ -1562,7 +1562,7 @@
               "S27",
               "S59"
             ],
-            "runId": "ep07-08-S26-1791012172125",
+            "runId": "ep07-08-S26-1791019901847",
             "revision": 37,
             "migrationNotice": false
           }
@@ -1607,7 +1607,7 @@
               "S59",
               "S28"
             ],
-            "runId": "ep07-08-S26-1791012172125",
+            "runId": "ep07-08-S26-1791019901847",
             "revision": 52,
             "migrationNotice": false
           }
@@ -1655,7 +1655,7 @@
               "S28",
               "S49"
             ],
-            "runId": "ep07-08-S26-1791012172125",
+            "runId": "ep07-08-S26-1791019901847",
             "revision": 68,
             "migrationNotice": false
           }
@@ -1705,7 +1705,7 @@
               "S49",
               "S32"
             ],
-            "runId": "ep07-08-S26-1791012172125",
+            "runId": "ep07-08-S26-1791019901847",
             "revision": 85,
             "migrationNotice": false
           }
@@ -1756,7 +1756,7 @@
               "S49",
               "S32"
             ],
-            "runId": "ep07-08-S26-1791012172125",
+            "runId": "ep07-08-S26-1791019901847",
             "revision": 91,
             "migrationNotice": false
           }
@@ -1808,7 +1808,7 @@
               "S32",
               "S50"
             ],
-            "runId": "ep07-08-S26-1791012172125",
+            "runId": "ep07-08-S26-1791019901847",
             "revision": 95,
             "migrationNotice": false
           }
@@ -1832,7 +1832,7 @@
       "internalScrollCount": 0
     },
     {
-      "sourceHead": "4fea62f475731ebe0625674bc92c244b4cbd5e0a",
+      "sourceHead": "3748a82e2d3ce683e2da02d85b93669c34271c99",
       "route": "nick",
       "viewport": {
         "width": 1920,
@@ -2024,7 +2024,7 @@
               "S01",
               "S26"
             ],
-            "runId": "ep07-08-S26-1791012179111",
+            "runId": "ep07-08-S26-1791019908730",
             "revision": 2,
             "migrationNotice": false
           }
@@ -2065,7 +2065,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791012179111",
+            "runId": "ep07-08-S26-1791019908730",
             "revision": 14,
             "migrationNotice": false
           }
@@ -2106,7 +2106,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791012179111",
+            "runId": "ep07-08-S26-1791019908730",
             "revision": 24,
             "migrationNotice": false
           }
@@ -2149,7 +2149,7 @@
               "S27",
               "S59"
             ],
-            "runId": "ep07-08-S26-1791012179111",
+            "runId": "ep07-08-S26-1791019908730",
             "revision": 38,
             "migrationNotice": false
           }
@@ -2194,7 +2194,7 @@
               "S59",
               "S29"
             ],
-            "runId": "ep07-08-S26-1791012179111",
+            "runId": "ep07-08-S26-1791019908730",
             "revision": 51,
             "migrationNotice": false
           }
@@ -2242,7 +2242,7 @@
               "S29",
               "S52"
             ],
-            "runId": "ep07-08-S26-1791012179111",
+            "runId": "ep07-08-S26-1791019908730",
             "revision": 66,
             "migrationNotice": false
           }
@@ -2292,7 +2292,7 @@
               "S52",
               "S33"
             ],
-            "runId": "ep07-08-S26-1791012179111",
+            "runId": "ep07-08-S26-1791019908730",
             "revision": 81,
             "migrationNotice": false
           }
@@ -2343,7 +2343,7 @@
               "S52",
               "S33"
             ],
-            "runId": "ep07-08-S26-1791012179111",
+            "runId": "ep07-08-S26-1791019908730",
             "revision": 85,
             "migrationNotice": false
           }
@@ -2395,7 +2395,7 @@
               "S33",
               "S53"
             ],
-            "runId": "ep07-08-S26-1791012179111",
+            "runId": "ep07-08-S26-1791019908730",
             "revision": 90,
             "migrationNotice": false
           }
@@ -2419,7 +2419,7 @@
       "internalScrollCount": 0
     },
     {
-      "sourceHead": "4fea62f475731ebe0625674bc92c244b4cbd5e0a",
+      "sourceHead": "3748a82e2d3ce683e2da02d85b93669c34271c99",
       "route": "nick",
       "viewport": {
         "width": 390,
@@ -2611,7 +2611,7 @@
               "S01",
               "S26"
             ],
-            "runId": "ep07-08-S26-1791012186138",
+            "runId": "ep07-08-S26-1791019915757",
             "revision": 2,
             "migrationNotice": false
           }
@@ -2652,7 +2652,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791012186138",
+            "runId": "ep07-08-S26-1791019915757",
             "revision": 14,
             "migrationNotice": false
           }
@@ -2693,7 +2693,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791012186138",
+            "runId": "ep07-08-S26-1791019915757",
             "revision": 24,
             "migrationNotice": false
           }
@@ -2736,7 +2736,7 @@
               "S27",
               "S59"
             ],
-            "runId": "ep07-08-S26-1791012186138",
+            "runId": "ep07-08-S26-1791019915757",
             "revision": 38,
             "migrationNotice": false
           }
@@ -2781,7 +2781,7 @@
               "S59",
               "S29"
             ],
-            "runId": "ep07-08-S26-1791012186138",
+            "runId": "ep07-08-S26-1791019915757",
             "revision": 51,
             "migrationNotice": false
           }
@@ -2829,7 +2829,7 @@
               "S29",
               "S52"
             ],
-            "runId": "ep07-08-S26-1791012186138",
+            "runId": "ep07-08-S26-1791019915757",
             "revision": 66,
             "migrationNotice": false
           }
@@ -2879,7 +2879,7 @@
               "S52",
               "S33"
             ],
-            "runId": "ep07-08-S26-1791012186138",
+            "runId": "ep07-08-S26-1791019915757",
             "revision": 81,
             "migrationNotice": false
           }
@@ -2930,7 +2930,7 @@
               "S52",
               "S33"
             ],
-            "runId": "ep07-08-S26-1791012186138",
+            "runId": "ep07-08-S26-1791019915757",
             "revision": 85,
             "migrationNotice": false
           }
@@ -2982,7 +2982,7 @@
               "S33",
               "S53"
             ],
-            "runId": "ep07-08-S26-1791012186138",
+            "runId": "ep07-08-S26-1791019915757",
             "revision": 90,
             "migrationNotice": false
           }
@@ -3006,7 +3006,7 @@
       "internalScrollCount": 0
     },
     {
-      "sourceHead": "4fea62f475731ebe0625674bc92c244b4cbd5e0a",
+      "sourceHead": "3748a82e2d3ce683e2da02d85b93669c34271c99",
       "route": "nick",
       "viewport": {
         "width": 360,
@@ -3198,7 +3198,7 @@
               "S01",
               "S26"
             ],
-            "runId": "ep07-08-S26-1791012192813",
+            "runId": "ep07-08-S26-1791019922442",
             "revision": 2,
             "migrationNotice": false
           }
@@ -3239,7 +3239,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791012192813",
+            "runId": "ep07-08-S26-1791019922442",
             "revision": 14,
             "migrationNotice": false
           }
@@ -3280,7 +3280,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791012192813",
+            "runId": "ep07-08-S26-1791019922442",
             "revision": 24,
             "migrationNotice": false
           }
@@ -3323,7 +3323,7 @@
               "S27",
               "S59"
             ],
-            "runId": "ep07-08-S26-1791012192813",
+            "runId": "ep07-08-S26-1791019922442",
             "revision": 38,
             "migrationNotice": false
           }
@@ -3368,7 +3368,7 @@
               "S59",
               "S29"
             ],
-            "runId": "ep07-08-S26-1791012192813",
+            "runId": "ep07-08-S26-1791019922442",
             "revision": 51,
             "migrationNotice": false
           }
@@ -3416,7 +3416,7 @@
               "S29",
               "S52"
             ],
-            "runId": "ep07-08-S26-1791012192813",
+            "runId": "ep07-08-S26-1791019922442",
             "revision": 66,
             "migrationNotice": false
           }
@@ -3466,7 +3466,7 @@
               "S52",
               "S33"
             ],
-            "runId": "ep07-08-S26-1791012192813",
+            "runId": "ep07-08-S26-1791019922442",
             "revision": 81,
             "migrationNotice": false
           }
@@ -3517,7 +3517,7 @@
               "S52",
               "S33"
             ],
-            "runId": "ep07-08-S26-1791012192813",
+            "runId": "ep07-08-S26-1791019922442",
             "revision": 85,
             "migrationNotice": false
           }
@@ -3569,7 +3569,7 @@
               "S33",
               "S53"
             ],
-            "runId": "ep07-08-S26-1791012192813",
+            "runId": "ep07-08-S26-1791019922442",
             "revision": 90,
             "migrationNotice": false
           }
@@ -3593,7 +3593,7 @@
       "internalScrollCount": 0
     },
     {
-      "sourceHead": "4fea62f475731ebe0625674bc92c244b4cbd5e0a",
+      "sourceHead": "3748a82e2d3ce683e2da02d85b93669c34271c99",
       "route": "damir",
       "viewport": {
         "width": 1920,
@@ -3785,7 +3785,7 @@
               "S01",
               "S26"
             ],
-            "runId": "ep07-08-S26-1791012199658",
+            "runId": "ep07-08-S26-1791019929337",
             "revision": 2,
             "migrationNotice": false
           }
@@ -3826,7 +3826,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791012199658",
+            "runId": "ep07-08-S26-1791019929337",
             "revision": 13,
             "migrationNotice": false
           }
@@ -3867,7 +3867,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791012199658",
+            "runId": "ep07-08-S26-1791019929337",
             "revision": 23,
             "migrationNotice": false
           }
@@ -3910,7 +3910,7 @@
               "S27",
               "S59"
             ],
-            "runId": "ep07-08-S26-1791012199658",
+            "runId": "ep07-08-S26-1791019929337",
             "revision": 37,
             "migrationNotice": false
           }
@@ -3955,7 +3955,7 @@
               "S59",
               "S30"
             ],
-            "runId": "ep07-08-S26-1791012199658",
+            "runId": "ep07-08-S26-1791019929337",
             "revision": 51,
             "migrationNotice": false
           }
@@ -4003,7 +4003,7 @@
               "S30",
               "S55"
             ],
-            "runId": "ep07-08-S26-1791012199658",
+            "runId": "ep07-08-S26-1791019929337",
             "revision": 66,
             "migrationNotice": false
           }
@@ -4053,7 +4053,7 @@
               "S55",
               "S34"
             ],
-            "runId": "ep07-08-S26-1791012199658",
+            "runId": "ep07-08-S26-1791019929337",
             "revision": 83,
             "migrationNotice": false
           }
@@ -4104,7 +4104,7 @@
               "S55",
               "S34"
             ],
-            "runId": "ep07-08-S26-1791012199658",
+            "runId": "ep07-08-S26-1791019929337",
             "revision": 87,
             "migrationNotice": false
           }
@@ -4156,7 +4156,7 @@
               "S34",
               "S56"
             ],
-            "runId": "ep07-08-S26-1791012199658",
+            "runId": "ep07-08-S26-1791019929337",
             "revision": 91,
             "migrationNotice": false
           }
@@ -4180,7 +4180,7 @@
       "internalScrollCount": 0
     },
     {
-      "sourceHead": "4fea62f475731ebe0625674bc92c244b4cbd5e0a",
+      "sourceHead": "3748a82e2d3ce683e2da02d85b93669c34271c99",
       "route": "damir",
       "viewport": {
         "width": 390,
@@ -4372,7 +4372,7 @@
               "S01",
               "S26"
             ],
-            "runId": "ep07-08-S26-1791012206808",
+            "runId": "ep07-08-S26-1791019936432",
             "revision": 2,
             "migrationNotice": false
           }
@@ -4413,7 +4413,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791012206808",
+            "runId": "ep07-08-S26-1791019936432",
             "revision": 13,
             "migrationNotice": false
           }
@@ -4454,7 +4454,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791012206808",
+            "runId": "ep07-08-S26-1791019936432",
             "revision": 23,
             "migrationNotice": false
           }
@@ -4497,7 +4497,7 @@
               "S27",
               "S59"
             ],
-            "runId": "ep07-08-S26-1791012206808",
+            "runId": "ep07-08-S26-1791019936432",
             "revision": 37,
             "migrationNotice": false
           }
@@ -4542,7 +4542,7 @@
               "S59",
               "S30"
             ],
-            "runId": "ep07-08-S26-1791012206808",
+            "runId": "ep07-08-S26-1791019936432",
             "revision": 51,
             "migrationNotice": false
           }
@@ -4590,7 +4590,7 @@
               "S30",
               "S55"
             ],
-            "runId": "ep07-08-S26-1791012206808",
+            "runId": "ep07-08-S26-1791019936432",
             "revision": 66,
             "migrationNotice": false
           }
@@ -4640,7 +4640,7 @@
               "S55",
               "S34"
             ],
-            "runId": "ep07-08-S26-1791012206808",
+            "runId": "ep07-08-S26-1791019936432",
             "revision": 83,
             "migrationNotice": false
           }
@@ -4691,7 +4691,7 @@
               "S55",
               "S34"
             ],
-            "runId": "ep07-08-S26-1791012206808",
+            "runId": "ep07-08-S26-1791019936432",
             "revision": 87,
             "migrationNotice": false
           }
@@ -4743,7 +4743,7 @@
               "S34",
               "S56"
             ],
-            "runId": "ep07-08-S26-1791012206808",
+            "runId": "ep07-08-S26-1791019936432",
             "revision": 91,
             "migrationNotice": false
           }
@@ -4767,7 +4767,7 @@
       "internalScrollCount": 0
     },
     {
-      "sourceHead": "4fea62f475731ebe0625674bc92c244b4cbd5e0a",
+      "sourceHead": "3748a82e2d3ce683e2da02d85b93669c34271c99",
       "route": "damir",
       "viewport": {
         "width": 360,
@@ -4899,8 +4899,8 @@
           "controlsWithinViewport": true,
           "screenshot": {
             "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-git\\artifacts\\evidence\\ep07-08-route-runtime\\damir-360x640-S34.png",
-            "sha256": "9a004adb860607331cfb3cf6b69237fe203580f75af7bbe854ea3884ef307c18",
-            "bytes": 57421
+            "sha256": "42c1ef036b385521a12060accb4fb172f52b62674cf2a8e5d837f3089bbcb2ae",
+            "bytes": 157487
           }
         },
         {
@@ -4959,7 +4959,7 @@
               "S01",
               "S26"
             ],
-            "runId": "ep07-08-S26-1791012213558",
+            "runId": "ep07-08-S26-1791019943315",
             "revision": 2,
             "migrationNotice": false
           }
@@ -5000,7 +5000,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791012213558",
+            "runId": "ep07-08-S26-1791019943315",
             "revision": 13,
             "migrationNotice": false
           }
@@ -5041,7 +5041,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791012213558",
+            "runId": "ep07-08-S26-1791019943315",
             "revision": 23,
             "migrationNotice": false
           }
@@ -5084,7 +5084,7 @@
               "S27",
               "S59"
             ],
-            "runId": "ep07-08-S26-1791012213558",
+            "runId": "ep07-08-S26-1791019943315",
             "revision": 37,
             "migrationNotice": false
           }
@@ -5129,7 +5129,7 @@
               "S59",
               "S30"
             ],
-            "runId": "ep07-08-S26-1791012213558",
+            "runId": "ep07-08-S26-1791019943315",
             "revision": 51,
             "migrationNotice": false
           }
@@ -5177,7 +5177,7 @@
               "S30",
               "S55"
             ],
-            "runId": "ep07-08-S26-1791012213558",
+            "runId": "ep07-08-S26-1791019943315",
             "revision": 66,
             "migrationNotice": false
           }
@@ -5227,7 +5227,7 @@
               "S55",
               "S34"
             ],
-            "runId": "ep07-08-S26-1791012213558",
+            "runId": "ep07-08-S26-1791019943315",
             "revision": 83,
             "migrationNotice": false
           }
@@ -5278,7 +5278,7 @@
               "S55",
               "S34"
             ],
-            "runId": "ep07-08-S26-1791012213558",
+            "runId": "ep07-08-S26-1791019943315",
             "revision": 87,
             "migrationNotice": false
           }
@@ -5330,7 +5330,7 @@
               "S34",
               "S56"
             ],
-            "runId": "ep07-08-S26-1791012213558",
+            "runId": "ep07-08-S26-1791019943315",
             "revision": 91,
             "migrationNotice": false
           }
@@ -5354,7 +5354,7 @@
       "internalScrollCount": 0
     },
     {
-      "sourceHead": "4fea62f475731ebe0625674bc92c244b4cbd5e0a",
+      "sourceHead": "3748a82e2d3ce683e2da02d85b93669c34271c99",
       "route": "alice",
       "viewport": {
         "width": 1920,
@@ -5546,7 +5546,7 @@
               "S01",
               "S26"
             ],
-            "runId": "ep07-08-S26-1791012220392",
+            "runId": "ep07-08-S26-1791019950137",
             "revision": 2,
             "migrationNotice": false
           }
@@ -5587,7 +5587,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791012220392",
+            "runId": "ep07-08-S26-1791019950137",
             "revision": 13,
             "migrationNotice": false
           }
@@ -5628,7 +5628,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791012220392",
+            "runId": "ep07-08-S26-1791019950137",
             "revision": 23,
             "migrationNotice": false
           }
@@ -5671,7 +5671,7 @@
               "S27",
               "S59"
             ],
-            "runId": "ep07-08-S26-1791012220392",
+            "runId": "ep07-08-S26-1791019950137",
             "revision": 37,
             "migrationNotice": false
           }
@@ -5716,7 +5716,7 @@
               "S59",
               "S31"
             ],
-            "runId": "ep07-08-S26-1791012220392",
+            "runId": "ep07-08-S26-1791019950137",
             "revision": 49,
             "migrationNotice": false
           }
@@ -5764,7 +5764,7 @@
               "S31",
               "S62"
             ],
-            "runId": "ep07-08-S26-1791012220392",
+            "runId": "ep07-08-S26-1791019950137",
             "revision": 64,
             "migrationNotice": false
           }
@@ -5814,7 +5814,7 @@
               "S62",
               "S35"
             ],
-            "runId": "ep07-08-S26-1791012220392",
+            "runId": "ep07-08-S26-1791019950137",
             "revision": 74,
             "migrationNotice": false
           }
@@ -5866,7 +5866,7 @@
               "S35",
               "S63"
             ],
-            "runId": "ep07-08-S26-1791012220392",
+            "runId": "ep07-08-S26-1791019950137",
             "revision": 80,
             "migrationNotice": false
           }
@@ -5890,7 +5890,7 @@
       "internalScrollCount": 0
     },
     {
-      "sourceHead": "4fea62f475731ebe0625674bc92c244b4cbd5e0a",
+      "sourceHead": "3748a82e2d3ce683e2da02d85b93669c34271c99",
       "route": "alice",
       "viewport": {
         "width": 390,
@@ -6082,7 +6082,7 @@
               "S01",
               "S26"
             ],
-            "runId": "ep07-08-S26-1791012227300",
+            "runId": "ep07-08-S26-1791019957016",
             "revision": 2,
             "migrationNotice": false
           }
@@ -6123,7 +6123,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791012227300",
+            "runId": "ep07-08-S26-1791019957016",
             "revision": 13,
             "migrationNotice": false
           }
@@ -6164,7 +6164,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791012227300",
+            "runId": "ep07-08-S26-1791019957016",
             "revision": 23,
             "migrationNotice": false
           }
@@ -6207,7 +6207,7 @@
               "S27",
               "S59"
             ],
-            "runId": "ep07-08-S26-1791012227300",
+            "runId": "ep07-08-S26-1791019957016",
             "revision": 37,
             "migrationNotice": false
           }
@@ -6252,7 +6252,7 @@
               "S59",
               "S31"
             ],
-            "runId": "ep07-08-S26-1791012227300",
+            "runId": "ep07-08-S26-1791019957016",
             "revision": 49,
             "migrationNotice": false
           }
@@ -6300,7 +6300,7 @@
               "S31",
               "S62"
             ],
-            "runId": "ep07-08-S26-1791012227300",
+            "runId": "ep07-08-S26-1791019957016",
             "revision": 64,
             "migrationNotice": false
           }
@@ -6350,7 +6350,7 @@
               "S62",
               "S35"
             ],
-            "runId": "ep07-08-S26-1791012227300",
+            "runId": "ep07-08-S26-1791019957016",
             "revision": 74,
             "migrationNotice": false
           }
@@ -6402,7 +6402,7 @@
               "S35",
               "S63"
             ],
-            "runId": "ep07-08-S26-1791012227300",
+            "runId": "ep07-08-S26-1791019957016",
             "revision": 80,
             "migrationNotice": false
           }
@@ -6426,7 +6426,7 @@
       "internalScrollCount": 0
     },
     {
-      "sourceHead": "4fea62f475731ebe0625674bc92c244b4cbd5e0a",
+      "sourceHead": "3748a82e2d3ce683e2da02d85b93669c34271c99",
       "route": "alice",
       "viewport": {
         "width": 360,
@@ -6558,8 +6558,8 @@
           "controlsWithinViewport": true,
           "screenshot": {
             "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-git\\artifacts\\evidence\\ep07-08-route-runtime\\alice-360x640-S35.png",
-            "sha256": "fd89c457cdeaa5c193ab6b4c4d466ed6b165b8772a030305481b8dd840b95328",
-            "bytes": 82682
+            "sha256": "8dd15122e22c3609eef7e962fe7b0b1e165de370bdc9e1423af55b0f4de6de54",
+            "bytes": 50356
           }
         },
         {
@@ -6618,7 +6618,7 @@
               "S01",
               "S26"
             ],
-            "runId": "ep07-08-S26-1791012233904",
+            "runId": "ep07-08-S26-1791019963643",
             "revision": 2,
             "migrationNotice": false
           }
@@ -6659,7 +6659,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791012233904",
+            "runId": "ep07-08-S26-1791019963643",
             "revision": 13,
             "migrationNotice": false
           }
@@ -6700,7 +6700,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791012233904",
+            "runId": "ep07-08-S26-1791019963643",
             "revision": 23,
             "migrationNotice": false
           }
@@ -6743,7 +6743,7 @@
               "S27",
               "S59"
             ],
-            "runId": "ep07-08-S26-1791012233904",
+            "runId": "ep07-08-S26-1791019963643",
             "revision": 37,
             "migrationNotice": false
           }
@@ -6788,7 +6788,7 @@
               "S59",
               "S31"
             ],
-            "runId": "ep07-08-S26-1791012233904",
+            "runId": "ep07-08-S26-1791019963643",
             "revision": 49,
             "migrationNotice": false
           }
@@ -6836,7 +6836,7 @@
               "S31",
               "S62"
             ],
-            "runId": "ep07-08-S26-1791012233904",
+            "runId": "ep07-08-S26-1791019963643",
             "revision": 64,
             "migrationNotice": false
           }
@@ -6886,7 +6886,7 @@
               "S62",
               "S35"
             ],
-            "runId": "ep07-08-S26-1791012233904",
+            "runId": "ep07-08-S26-1791019963643",
             "revision": 74,
             "migrationNotice": false
           }
@@ -6938,7 +6938,7 @@
               "S35",
               "S63"
             ],
-            "runId": "ep07-08-S26-1791012233904",
+            "runId": "ep07-08-S26-1791019963643",
             "revision": 80,
             "migrationNotice": false
           }

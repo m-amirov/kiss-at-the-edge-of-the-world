@@ -1,6 +1,6 @@
 # Episode 8 — English editorial evidence
 
-- Tested source HEAD: `4fea62f475731ebe0625674bc92c244b4cbd5e0a` (worktree localization changes are uncommitted at evidence generation).
+- Tested source HEAD: `3748a82e2d3ce683e2da02d85b93669c34271c99`.
 - Canonical order from `literarySeason.sceneOrder`, RU manuscript, runtime route graph, and localization batch: `S32 → S50 → S33 → S53 → S34 → S56 → S35 → S63`.
 - Paragraph slots: `S32=18, S50=9, S33=15, S53=9, S34=17, S56=9, S35=6, S63=7`.
 
