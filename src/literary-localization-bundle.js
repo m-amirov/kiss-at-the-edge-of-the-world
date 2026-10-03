@@ -4233,7 +4233,7 @@ export const literaryLocaleBundles = {
           "S50.C005": {
             "title": "Common continuation",
             "paragraphs": {
-              "S50.C005.P000": "They returned in time for dinner. Nick asked whether they had got lost. Alice said it was difficult to get lost in central Akureyri if you looked into shop windows every five minutes. Eric did not challenge that description of the day."
+              "S50.C005.P000": "There was still time before dinner. Nick asked in the group chat whether they had got lost. Alice said it was difficult to get lost in central Akureyri if you looked into shop windows every five minutes. Eric did not challenge that description of the day, and they kept walking."
             }
           },
           "S50.C006": {
@@ -6084,13 +6084,13 @@ export const literaryLocaleBundles = {
           "options": [
             {
               "code": "A",
-              "label": "Repeat the small promise aloud",
-              "text": "Alice repeated his promise to sit down and eat first. Eric was not used to hearing that care for the schedule should not replace breakfast itself."
+              "label": "Clarify that it is an invitation, not an obligation",
+              "text": "Alice explained that tomorrow he could simply sit with everyone if he wanted to. Eric was not used to hearing that care for the schedule should not replace breakfast itself."
             },
             {
               "code": "B",
-              "label": "Leave the promise untested",
-              "text": "She smiled and did not turn tomorrow's breakfast into a test. If Eric started with the cups again, that would be his own choice."
+              "label": "Do not turn breakfast into a test",
+              "text": "She smiled and did not decide in advance how Eric would behave tomorrow. If he started with the cups again, that would be his own choice."
             }
           ]
         }
@@ -6233,7 +6233,7 @@ export const literaryLocaleBundles = {
       ],
       "S50": [
         {
-          "question": "After their walk through the city, what does Alice want to leave unhurried?",
+          "question": "While their walk through the city is still going, what does Alice want to leave unhurried?",
           "options": [
             {
               "code": "A",
@@ -6242,8 +6242,8 @@ export const literaryLocaleBundles = {
             },
             {
               "code": "B",
-              "label": "Return to the group without explaining the whole day",
-              "text": "Alice suggested going back for dinner without giving the walk a final meaning. Eric agreed: not every good day had to become a plan at once."
+              "label": "Choose one more street without a final meaning",
+              "text": "Alice suggested turning into the next street without giving the walk a final meaning. Eric agreed: not every good day had to become a plan at once."
             }
           ]
         }
@@ -6267,17 +6267,17 @@ export const literaryLocaleBundles = {
       ],
       "S53": [
         {
-          "question": "After breakfast and the bakery, what shared question remains for Alice on either the active line or the pause?",
+          "question": "After a day that gave them time to talk, what shared question remains for Alice on either the active line or the pause?",
           "options": [
             {
               "code": "A",
-              "label": "Separate a calm day from a promise to continue",
-              "text": "Alice noticed that an ordinary morning could be calm without a romantic conclusion. Nick put away his phone, and she did not turn that into a promise."
+              "label": "Separate calm from a promise to continue",
+              "text": "Alice noticed that a calm day did not have to become a romantic conclusion. She did not turn that quiet into a promise."
             },
             {
               "code": "B",
               "label": "Understand which boundary to keep after the conversation",
-              "text": "She remembered the confirmation that the personal fragment had been deleted and the quiet of the morning. The day could stay kind without cancelling the pause or demanding a decision now."
+              "text": "She did not let a calm conversation cancel the pause or demand a decision right away. The day could stay kind without a new definition of their relationship."
             }
           ]
         }
@@ -6301,17 +6301,17 @@ export const literaryLocaleBundles = {
       ],
       "S56": [
         {
-          "question": "The music evening continues after both the active line and the pause. What can Alice choose now?",
+          "question": "After an evening that unfolded differently on the active line and the pause, what can Alice keep for herself?",
           "options": [
             {
               "code": "A",
-              "label": "Stay with the music without the old script",
-              "text": "Alice listened to the new song and did not return the evening to the way they had danced before. The music was shared, but it did not require their old closeness."
+              "label": "Remember a new melody without the old script",
+              "text": "Alice held on to the new song and did not return the evening to the way they had danced before. The music could remain shared without requiring their old closeness."
             },
             {
               "code": "B",
-              "label": "Leave without turning the evening into a test",
-              "text": "She decided to leave if that was more honest, without calling it punishment or a promise. One music evening did not have to decide their story."
+              "label": "Let the evening end without a verdict on the relationship",
+              "text": "She did not turn the evening into punishment or a promise. One shared impression did not have to decide their story."
             }
           ]
         }
