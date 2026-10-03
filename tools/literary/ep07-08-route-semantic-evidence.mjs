@@ -16,7 +16,7 @@ const episode7 = ['S27', 'S59', 'S28', 'S49', 'S29', 'S52', 'S30', 'S55', 'S31',
 const episode8 = ['S32', 'S50', 'S33', 'S53', 'S34', 'S56', 'S35', 'S63'];
 const targetScenes = [...episode7, ...episode8];
 const sceneMap = new Map(literarySeason.scenes.map((scene) => [scene.id, scene]));
-const counterNames = ['contradictionCount', 'prematurePremiseCount', 'duplicatedCanonicalLineCount', 'branchInvalidPremiseCount', 'crossRouteLeakCount', 'inventedRelationshipCount', 'inventedConsentCount', 'inventedCharacterKnowledgeCount', 'routeStateMismatchCount', 'actionOwnershipMismatchCount', 'authoredChoicePreselectionCount', 'leakedMarkupCount', 'cyrillicCount'];
+const counterNames = ['contradictionCount', 'prematurePremiseCount', 'duplicatedCanonicalLineCount', 'branchInvalidPremiseCount', 'crossRouteLeakCount', 'inventedRelationshipCount', 'inventedConsentCount', 'inventedCharacterKnowledgeCount', 'routeStateMismatchCount', 'actionOwnershipMismatchCount', 'authoredChoicePreselectionCount', 'temporalRewindCount', 'leakedMarkupCount', 'cyrillicCount'];
 const counters = Object.fromEntries(counterNames.map((name) => [name, 0]));
 const failures = [];
 const cases = [];
@@ -51,6 +51,22 @@ const routeLeakForbidden = { eric: /\bNick\b|\bDamir\b|Ник|Дамир/u, nick
 const consentForbidden = { S27: /Inga agreed|Инга согласилась/iu, S29: /Alice decided.*film|Алиса решила.*фильм/iu, S33: /Nick removed.*again|Ник.*снова удалил/iu };
 const knowledgeForbidden = { S62: /will buy|выберет.*книг|bookshop.*choos/iu, S52: /has found|вернул.*перчатк/iu };
 const allCanonicalText = (scene) => scene.chunks.flatMap((chunk) => chunk.paragraphs).join('\n');
+const allCanonicalMaterial = (scene) => scene.chunks.flatMap((chunk) => [chunk.title, ...chunk.paragraphs]).join('\n');
+const temporalContracts = {
+  S28: { all: { predecessor: /Можно завтра просто сесть с нами/iu, forbiddenRendered: /promise|promised/iu, reason: 'future breakfast promise is treated as already completed' } },
+  S50: {
+    active: { predecessor: /Они не обещали друг другу общего адреса/iu, forbiddenRendered: /returned.*dinner|return.*dinner|back for dinner|group chat.*dinner/iu, canonicalRequired: /До ужина оставалось время[\s\S]*пошли дальше по улице/iu, followingRequired: /S50-C2[\s\S]*завершением прогулки/iu, reason: 'walk ends before S50-C2 still says it is ongoing' },
+    paused: { predecessor: /Это было непривычно/iu, forbiddenRendered: /returned.*dinner|return.*dinner|back for dinner|group chat.*dinner/iu, canonicalRequired: /До ужина оставалось время[\s\S]*пошли дальше по улице/iu, followingRequired: /S50-C2[\s\S]*завершением прогулки/iu, reason: 'walk ends before S50-C2 still says it is ongoing' }
+  },
+  S53: {
+    active: { predecessor: /После бассейна они вышли в пекарню/iu, forbiddenRendered: /breakfast|bakery|phone|camera.*boot/iu, reason: 'completed day action is replayed by the interaction' },
+    paused: { predecessor: /Оказалось, паузу нельзя/iu, forbiddenRendered: /breakfast|bakery|phone|camera.*boot/iu, reason: 'completed day action is replayed by the interaction' }
+  },
+  S56: {
+    active: { predecessor: /Когда началась медленная композиция/iu, forbiddenRendered: /decided to leave|leave the evening|walk to the hotel|hotel/iu, reason: 'active music context is rewound or ended before its authored continuation' },
+    paused: { predecessor: /У дверей гостиницы/iu, forbiddenRendered: /decided to leave|leave the evening|walk to the hotel|hotel/iu, reason: 'paused hotel state is rewound to a decision to leave' }
+  }
+};
 const authoredChoiceIds = (scene) => scene.chunks.map((chunk) => chunk.title.match(/S\d{2}-C\d+/u)?.[0]).filter(Boolean);
 const baseChoices = (routeCode, state = null) => { const choices = { 'S26-C1': routeCode }; for (const sceneId of targetScenes) for (const id of authoredChoiceIds(sceneMap.get(sceneId))) choices[id] = 'A'; if (state) choices[state.id] = state.selected; return choices; };
 const textOf = (choice, result) => `${choice?.question ?? ''}\n${choice?.options?.map((option) => `${option.label}\n${result?.text ?? ''}`).join('\n') ?? ''}`;
@@ -78,7 +94,7 @@ for (const [routeIntent, contract] of Object.entries(routes)) for (const sceneId
   assertMachine('inventedCharacterKnowledgeCount', expectedRefs[sceneId].source.test(canonical), { scene: sceneId, routeIntent, predecessor, reason: 'required canonical predecessor fact missing' });
   for (const code of ['A', 'B']) {
     const expected = actualStatus === 'paused' && expectedRefs[sceneId].paused ? { ...expectedRefs[sceneId], ...expectedRefs[sceneId].paused } : expectedRefs[sceneId]; const id = `${sceneId}-C90`; const without = compileInteractivePlayback(scene, choices, 'en'); const choiceIndex = without.findIndex((entry) => entry.type === 'choice' && entry.id === id); const choice = without[choiceIndex];
-    const withChoice = compileInteractivePlayback(scene, { ...choices, [id]: code }, 'en'); const resultIndex = withChoice.findIndex((entry) => entry.decisionResult === id); const result = withChoice[resultIndex]; const following = withChoice[resultIndex + 1]; const rendered = textOf(choice, result); const duplicate = Boolean(result?.text && canonical.includes(result.text));
+    const withChoice = compileInteractivePlayback(scene, { ...choices, [id]: code }, 'en'); const resultIndex = withChoice.findIndex((entry) => entry.decisionResult === id); const result = withChoice[resultIndex]; const following = withChoice[resultIndex + 1]; const rendered = textOf(choice, result); const duplicate = Boolean(result?.text && canonical.includes(result.text)); const precedingText = without.slice(Math.max(0, choiceIndex - 2), choiceIndex).map((entry) => entry.text ?? '').join('\n'); const temporal = temporalContracts[sceneId]?.[actualStatus] ?? temporalContracts[sceneId]?.all;
     assertMachine('prematurePremiseCount', Boolean(choice && result) && !forbidden[sceneId]?.test(rendered), { scene: sceneId, routeIntent, routeStatus: actualStatus, predecessor, option: code });
     assertMachine('duplicatedCanonicalLineCount', !duplicate, { scene: sceneId, routeIntent, routeStatus: actualStatus, predecessor, option: code });
     assertMachine('leakedMarkupCount', !/\{\{|\}\}|S\d{2}-C\d+/u.test(rendered), { scene: sceneId, routeIntent, routeStatus: actualStatus, predecessor, option: code });
@@ -90,6 +106,7 @@ for (const [routeIntent, contract] of Object.entries(routes)) for (const sceneId
     if (knowledgeForbidden[sceneId]) assertMachine('inventedCharacterKnowledgeCount', !knowledgeForbidden[sceneId].test(rendered), { scene: sceneId, routeIntent, routeStatus: actualStatus, predecessor, option: code });
     if (ownershipForbidden[sceneId]) assertMachine('actionOwnershipMismatchCount', !ownershipForbidden[sceneId].test(rendered), { scene: sceneId, routeIntent, routeStatus: actualStatus, predecessor, option: code });
     if (preselection[sceneId]) assertMachine('authoredChoicePreselectionCount', !preselection[sceneId].test(result?.text ?? ''), { scene: sceneId, routeIntent, routeStatus: actualStatus, predecessor, option: code });
+    if (temporal) assertMachine('temporalRewindCount', (!temporal.predecessor || temporal.predecessor.test(precedingText)) && (!temporal.forbiddenRendered || !temporal.forbiddenRendered.test(rendered)) && (!temporal.canonicalRequired || temporal.canonicalRequired.test(canonical)) && (!temporal.followingRequired || temporal.followingRequired.test(allCanonicalMaterial(scene))), { scene: sceneId, routeIntent, routeStatus: actualStatus, predecessor, option: code, reason: temporal.reason, precedingText, renderedQuestion: choice?.question ?? null, resultingText: result?.text ?? null });
     assertMachine('inventedRelationshipCount', !/we agreed|first date|new relationship|мы договорились|первое свидание|новые отношения/iu.test(result?.text ?? ''), { scene: sceneId, routeIntent, routeStatus: actualStatus, predecessor, option: code });
     cases.push({ episode: scene.episode, scene: sceneId, extraChoiceId: id, routeIntent, routeStatus: actualStatus, priorRelevantChoices: Object.fromEntries(Object.entries(choices).filter(([key]) => key === 'S26-C1' || key === predecessor?.id)), insertionSourceRef: result?.sourceStartRef ?? null, precedingSourceText: without.slice(Math.max(0, choiceIndex - 2), choiceIndex).map((entry) => entry.text ?? ''), followingSourceRef: following?.sourceStartRef ?? null, followingSourceText: following?.text ?? null, renderedQuestion: choice?.question ?? null, selectedOption: code, resultingText: result?.text ?? null });
   }

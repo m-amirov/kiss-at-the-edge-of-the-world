@@ -1,10 +1,10 @@
 {
   "schemaVersion": 2,
   "status": "PASS",
-  "sourceHead": "995e8d543799a5befa4b34296a358a84a7db622f",
-  "testedSourceHead": "995e8d543799a5befa4b34296a358a84a7db622f",
-  "generatedAt": "2026-10-03T11:37:23.232Z",
-  "baseUrl": "http://127.0.0.1:4174/literary.html",
+  "sourceHead": "f0261e14b1b56189d0aa2c23239dba2cb34de477",
+  "testedSourceHead": "f0261e14b1b56189d0aa2c23239dba2cb34de477",
+  "generatedAt": "2026-10-03T14:53:56.666Z",
+  "baseUrl": "http://127.0.0.1:4173/literary.html",
   "viewports": [
     {
       "width": 1920,
@@ -115,7 +115,7 @@
   "saveKey": "kiss-at-the-edge-of-the-world:literary-draft:v1",
   "results": [
     {
-      "sourceHead": "995e8d543799a5befa4b34296a358a84a7db622f",
+      "sourceHead": "f0261e14b1b56189d0aa2c23239dba2cb34de477",
       "route": "eric",
       "routeStatus": "active",
       "predecessor": "S32-C1=A",
@@ -192,8 +192,8 @@
           "controlsWithinViewport": true,
           "screenshot": {
             "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-git\\artifacts\\evidence\\ep07-08-route-runtime\\eric-active-1920x900-S59.png",
-            "sha256": "1b4e743f8f352cf27e618ba3ba8cdaa60848e32d6e3f3946f49d3ef8d262bc92",
-            "bytes": 1709300
+            "sha256": "5141c4d372d47323841a1e67b9dfef8ab80f1ede3b053af00cc2b2fe550afe85",
+            "bytes": 100919
           }
         },
         {
@@ -310,7 +310,7 @@
               "S01",
               "S26"
             ],
-            "runId": "ep07-08-S26-1791027281070",
+            "runId": "ep07-08-S26-1791039092719",
             "revision": 2,
             "migrationNotice": false
           }
@@ -352,7 +352,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027281070",
+            "runId": "ep07-08-S26-1791039092719",
             "revision": 13,
             "migrationNotice": false
           }
@@ -394,7 +394,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027281070",
+            "runId": "ep07-08-S26-1791039092719",
             "revision": 23,
             "migrationNotice": false
           }
@@ -438,7 +438,7 @@
               "S27",
               "S59"
             ],
-            "runId": "ep07-08-S26-1791027281070",
+            "runId": "ep07-08-S26-1791039092719",
             "revision": 37,
             "migrationNotice": false
           }
@@ -484,7 +484,7 @@
               "S59",
               "S28"
             ],
-            "runId": "ep07-08-S26-1791027281070",
+            "runId": "ep07-08-S26-1791039092719",
             "revision": 52,
             "migrationNotice": false
           }
@@ -533,7 +533,7 @@
               "S28",
               "S49"
             ],
-            "runId": "ep07-08-S26-1791027281070",
+            "runId": "ep07-08-S26-1791039092719",
             "revision": 68,
             "migrationNotice": false
           }
@@ -584,7 +584,7 @@
               "S49",
               "S32"
             ],
-            "runId": "ep07-08-S26-1791027281070",
+            "runId": "ep07-08-S26-1791039092719",
             "revision": 85,
             "migrationNotice": false
           }
@@ -636,7 +636,7 @@
               "S32",
               "S50"
             ],
-            "runId": "ep07-08-S26-1791027281070",
+            "runId": "ep07-08-S26-1791039092719",
             "revision": 94,
             "migrationNotice": false
           }
@@ -660,7 +660,7 @@
       "internalScrollCount": 0
     },
     {
-      "sourceHead": "995e8d543799a5befa4b34296a358a84a7db622f",
+      "sourceHead": "f0261e14b1b56189d0aa2c23239dba2cb34de477",
       "route": "eric",
       "routeStatus": "active",
       "predecessor": "S32-C1=A",
@@ -775,8 +775,8 @@
           "controlsWithinViewport": true,
           "screenshot": {
             "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-git\\artifacts\\evidence\\ep07-08-route-runtime\\eric-active-390x844-S49.png",
-            "sha256": "deedbcff9d3998da42aec0a65742d9893b5ebddfa8cdd1eaa3052e7f7235f32c",
-            "bytes": 55157
+            "sha256": "53f0327e3b21f47b10683355dcfa625c067b81a283f2e49daa417a754dc2903b",
+            "bytes": 179603
           }
         },
         {
@@ -813,8 +813,8 @@
           "controlsWithinViewport": true,
           "screenshot": {
             "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-git\\artifacts\\evidence\\ep07-08-route-runtime\\eric-active-390x844-S50.png",
-            "sha256": "b3b652cf086be940fed7ba181cd5b1a9bff9a00c9bdbdfa38cc5c29667f3d0a0",
-            "bytes": 190936
+            "sha256": "1630c569f8775fd3a5dfbc22a1c99831d0ae04e5748fb43380b92ed2f5c27ca5",
+            "bytes": 62348
           }
         }
       ],
@@ -855,7 +855,7 @@
               "S01",
               "S26"
             ],
-            "runId": "ep07-08-S26-1791027289553",
+            "runId": "ep07-08-S26-1791039100083",
             "revision": 2,
             "migrationNotice": false
           }
@@ -897,7 +897,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027289553",
+            "runId": "ep07-08-S26-1791039100083",
             "revision": 13,
             "migrationNotice": false
           }
@@ -939,7 +939,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027289553",
+            "runId": "ep07-08-S26-1791039100083",
             "revision": 23,
             "migrationNotice": false
           }
@@ -983,7 +983,7 @@
               "S27",
               "S59"
             ],
-            "runId": "ep07-08-S26-1791027289553",
+            "runId": "ep07-08-S26-1791039100083",
             "revision": 37,
             "migrationNotice": false
           }
@@ -1029,7 +1029,7 @@
               "S59",
               "S28"
             ],
-            "runId": "ep07-08-S26-1791027289553",
+            "runId": "ep07-08-S26-1791039100083",
             "revision": 52,
             "migrationNotice": false
           }
@@ -1078,7 +1078,7 @@
               "S28",
               "S49"
             ],
-            "runId": "ep07-08-S26-1791027289553",
+            "runId": "ep07-08-S26-1791039100083",
             "revision": 68,
             "migrationNotice": false
           }
@@ -1129,7 +1129,7 @@
               "S49",
               "S32"
             ],
-            "runId": "ep07-08-S26-1791027289553",
+            "runId": "ep07-08-S26-1791039100083",
             "revision": 85,
             "migrationNotice": false
           }
@@ -1181,7 +1181,7 @@
               "S32",
               "S50"
             ],
-            "runId": "ep07-08-S26-1791027289553",
+            "runId": "ep07-08-S26-1791039100083",
             "revision": 94,
             "migrationNotice": false
           }
@@ -1205,7 +1205,7 @@
       "internalScrollCount": 0
     },
     {
-      "sourceHead": "995e8d543799a5befa4b34296a358a84a7db622f",
+      "sourceHead": "f0261e14b1b56189d0aa2c23239dba2cb34de477",
       "route": "eric",
       "routeStatus": "active",
       "predecessor": "S32-C1=A",
@@ -1282,8 +1282,8 @@
           "controlsWithinViewport": true,
           "screenshot": {
             "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-git\\artifacts\\evidence\\ep07-08-route-runtime\\eric-active-360x640-S59.png",
-            "sha256": "3e924f16b085a14368a5dc88c2befab3d48448cbd869d96e86545fd60e3a9df4",
-            "bytes": 281237
+            "sha256": "038b5fb30dd74fa279a8e4f0e524c3bb3d7d916260e874e8c096014682f903e7",
+            "bytes": 69191
           }
         },
         {
@@ -1320,8 +1320,8 @@
           "controlsWithinViewport": true,
           "screenshot": {
             "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-git\\artifacts\\evidence\\ep07-08-route-runtime\\eric-active-360x640-S49.png",
-            "sha256": "f36a381a36a2f511031cc459129182bdad081897f43b02e36d4e92f23ee13646",
-            "bytes": 158554
+            "sha256": "b45916dedf3aa7044b19b86d1349d811ea70f712b35c7a228bbe84e9fd3e2beb",
+            "bytes": 53057
           }
         },
         {
@@ -1358,8 +1358,8 @@
           "controlsWithinViewport": true,
           "screenshot": {
             "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-git\\artifacts\\evidence\\ep07-08-route-runtime\\eric-active-360x640-S50.png",
-            "sha256": "d0c01a59b50e75cd59cf37a0732c49549cca313ee41b1b8ca3711eb951a0c6bf",
-            "bytes": 62152
+            "sha256": "0b6ef658d517ad0a85e55835c5e93898a725017d5b031633e49a7e0ccf9d03e6",
+            "bytes": 162502
           }
         }
       ],
@@ -1400,7 +1400,7 @@
               "S01",
               "S26"
             ],
-            "runId": "ep07-08-S26-1791027297005",
+            "runId": "ep07-08-S26-1791039106878",
             "revision": 2,
             "migrationNotice": false
           }
@@ -1442,7 +1442,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027297005",
+            "runId": "ep07-08-S26-1791039106878",
             "revision": 13,
             "migrationNotice": false
           }
@@ -1484,7 +1484,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027297005",
+            "runId": "ep07-08-S26-1791039106878",
             "revision": 23,
             "migrationNotice": false
           }
@@ -1528,7 +1528,7 @@
               "S27",
               "S59"
             ],
-            "runId": "ep07-08-S26-1791027297005",
+            "runId": "ep07-08-S26-1791039106878",
             "revision": 37,
             "migrationNotice": false
           }
@@ -1574,7 +1574,7 @@
               "S59",
               "S28"
             ],
-            "runId": "ep07-08-S26-1791027297005",
+            "runId": "ep07-08-S26-1791039106878",
             "revision": 52,
             "migrationNotice": false
           }
@@ -1623,7 +1623,7 @@
               "S28",
               "S49"
             ],
-            "runId": "ep07-08-S26-1791027297005",
+            "runId": "ep07-08-S26-1791039106878",
             "revision": 68,
             "migrationNotice": false
           }
@@ -1674,7 +1674,7 @@
               "S49",
               "S32"
             ],
-            "runId": "ep07-08-S26-1791027297005",
+            "runId": "ep07-08-S26-1791039106878",
             "revision": 85,
             "migrationNotice": false
           }
@@ -1726,7 +1726,7 @@
               "S32",
               "S50"
             ],
-            "runId": "ep07-08-S26-1791027297005",
+            "runId": "ep07-08-S26-1791039106878",
             "revision": 94,
             "migrationNotice": false
           }
@@ -1750,7 +1750,7 @@
       "internalScrollCount": 0
     },
     {
-      "sourceHead": "995e8d543799a5befa4b34296a358a84a7db622f",
+      "sourceHead": "f0261e14b1b56189d0aa2c23239dba2cb34de477",
       "route": "eric",
       "routeStatus": "paused",
       "predecessor": "S32-C1=B",
@@ -1827,8 +1827,8 @@
           "controlsWithinViewport": true,
           "screenshot": {
             "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-git\\artifacts\\evidence\\ep07-08-route-runtime\\eric-paused-1920x900-S59.png",
-            "sha256": "1b4e743f8f352cf27e618ba3ba8cdaa60848e32d6e3f3946f49d3ef8d262bc92",
-            "bytes": 1709300
+            "sha256": "5141c4d372d47323841a1e67b9dfef8ab80f1ede3b053af00cc2b2fe550afe85",
+            "bytes": 100919
           }
         },
         {
@@ -1865,8 +1865,8 @@
           "controlsWithinViewport": true,
           "screenshot": {
             "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-git\\artifacts\\evidence\\ep07-08-route-runtime\\eric-paused-1920x900-S49.png",
-            "sha256": "b8850050d4d100114bdd4222e23c6d78964a7fa3a4bc05fb2371eeaa3c25c728",
-            "bytes": 79152
+            "sha256": "ad01b9e4080d318baf34b8655b5258c692a636aa52b3dce01611f024c8ec0448",
+            "bytes": 368234
           }
         },
         {
@@ -1945,7 +1945,7 @@
               "S01",
               "S26"
             ],
-            "runId": "ep07-08-S26-1791027304625",
+            "runId": "ep07-08-S26-1791039113730",
             "revision": 2,
             "migrationNotice": false
           }
@@ -1987,7 +1987,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027304625",
+            "runId": "ep07-08-S26-1791039113730",
             "revision": 13,
             "migrationNotice": false
           }
@@ -2029,7 +2029,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027304625",
+            "runId": "ep07-08-S26-1791039113730",
             "revision": 23,
             "migrationNotice": false
           }
@@ -2073,7 +2073,7 @@
               "S27",
               "S59"
             ],
-            "runId": "ep07-08-S26-1791027304625",
+            "runId": "ep07-08-S26-1791039113730",
             "revision": 37,
             "migrationNotice": false
           }
@@ -2119,7 +2119,7 @@
               "S59",
               "S28"
             ],
-            "runId": "ep07-08-S26-1791027304625",
+            "runId": "ep07-08-S26-1791039113730",
             "revision": 52,
             "migrationNotice": false
           }
@@ -2168,7 +2168,7 @@
               "S28",
               "S49"
             ],
-            "runId": "ep07-08-S26-1791027304625",
+            "runId": "ep07-08-S26-1791039113730",
             "revision": 68,
             "migrationNotice": false
           }
@@ -2219,7 +2219,7 @@
               "S49",
               "S32"
             ],
-            "runId": "ep07-08-S26-1791027304625",
+            "runId": "ep07-08-S26-1791039113730",
             "revision": 85,
             "migrationNotice": false
           }
@@ -2271,7 +2271,7 @@
               "S32",
               "S50"
             ],
-            "runId": "ep07-08-S26-1791027304625",
+            "runId": "ep07-08-S26-1791039113730",
             "revision": 94,
             "migrationNotice": false
           }
@@ -2295,7 +2295,7 @@
       "internalScrollCount": 0
     },
     {
-      "sourceHead": "995e8d543799a5befa4b34296a358a84a7db622f",
+      "sourceHead": "f0261e14b1b56189d0aa2c23239dba2cb34de477",
       "route": "eric",
       "routeStatus": "paused",
       "predecessor": "S32-C1=B",
@@ -2410,8 +2410,8 @@
           "controlsWithinViewport": true,
           "screenshot": {
             "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-git\\artifacts\\evidence\\ep07-08-route-runtime\\eric-paused-390x844-S49.png",
-            "sha256": "53f0327e3b21f47b10683355dcfa625c067b81a283f2e49daa417a754dc2903b",
-            "bytes": 179603
+            "sha256": "deedbcff9d3998da42aec0a65742d9893b5ebddfa8cdd1eaa3052e7f7235f32c",
+            "bytes": 55157
           }
         },
         {
@@ -2490,7 +2490,7 @@
               "S01",
               "S26"
             ],
-            "runId": "ep07-08-S26-1791027312879",
+            "runId": "ep07-08-S26-1791039120787",
             "revision": 2,
             "migrationNotice": false
           }
@@ -2532,7 +2532,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027312879",
+            "runId": "ep07-08-S26-1791039120787",
             "revision": 13,
             "migrationNotice": false
           }
@@ -2574,7 +2574,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027312879",
+            "runId": "ep07-08-S26-1791039120787",
             "revision": 23,
             "migrationNotice": false
           }
@@ -2618,7 +2618,7 @@
               "S27",
               "S59"
             ],
-            "runId": "ep07-08-S26-1791027312879",
+            "runId": "ep07-08-S26-1791039120787",
             "revision": 37,
             "migrationNotice": false
           }
@@ -2664,7 +2664,7 @@
               "S59",
               "S28"
             ],
-            "runId": "ep07-08-S26-1791027312879",
+            "runId": "ep07-08-S26-1791039120787",
             "revision": 52,
             "migrationNotice": false
           }
@@ -2713,7 +2713,7 @@
               "S28",
               "S49"
             ],
-            "runId": "ep07-08-S26-1791027312879",
+            "runId": "ep07-08-S26-1791039120787",
             "revision": 68,
             "migrationNotice": false
           }
@@ -2764,7 +2764,7 @@
               "S49",
               "S32"
             ],
-            "runId": "ep07-08-S26-1791027312879",
+            "runId": "ep07-08-S26-1791039120787",
             "revision": 85,
             "migrationNotice": false
           }
@@ -2816,7 +2816,7 @@
               "S32",
               "S50"
             ],
-            "runId": "ep07-08-S26-1791027312879",
+            "runId": "ep07-08-S26-1791039120787",
             "revision": 94,
             "migrationNotice": false
           }
@@ -2840,7 +2840,7 @@
       "internalScrollCount": 0
     },
     {
-      "sourceHead": "995e8d543799a5befa4b34296a358a84a7db622f",
+      "sourceHead": "f0261e14b1b56189d0aa2c23239dba2cb34de477",
       "route": "eric",
       "routeStatus": "paused",
       "predecessor": "S32-C1=B",
@@ -3035,7 +3035,7 @@
               "S01",
               "S26"
             ],
-            "runId": "ep07-08-S26-1791027320220",
+            "runId": "ep07-08-S26-1791039127575",
             "revision": 2,
             "migrationNotice": false
           }
@@ -3077,7 +3077,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027320220",
+            "runId": "ep07-08-S26-1791039127575",
             "revision": 13,
             "migrationNotice": false
           }
@@ -3119,7 +3119,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027320220",
+            "runId": "ep07-08-S26-1791039127575",
             "revision": 23,
             "migrationNotice": false
           }
@@ -3163,7 +3163,7 @@
               "S27",
               "S59"
             ],
-            "runId": "ep07-08-S26-1791027320220",
+            "runId": "ep07-08-S26-1791039127575",
             "revision": 37,
             "migrationNotice": false
           }
@@ -3209,7 +3209,7 @@
               "S59",
               "S28"
             ],
-            "runId": "ep07-08-S26-1791027320220",
+            "runId": "ep07-08-S26-1791039127575",
             "revision": 52,
             "migrationNotice": false
           }
@@ -3258,7 +3258,7 @@
               "S28",
               "S49"
             ],
-            "runId": "ep07-08-S26-1791027320220",
+            "runId": "ep07-08-S26-1791039127575",
             "revision": 68,
             "migrationNotice": false
           }
@@ -3309,7 +3309,7 @@
               "S49",
               "S32"
             ],
-            "runId": "ep07-08-S26-1791027320220",
+            "runId": "ep07-08-S26-1791039127575",
             "revision": 85,
             "migrationNotice": false
           }
@@ -3361,7 +3361,7 @@
               "S32",
               "S50"
             ],
-            "runId": "ep07-08-S26-1791027320220",
+            "runId": "ep07-08-S26-1791039127575",
             "revision": 94,
             "migrationNotice": false
           }
@@ -3385,7 +3385,7 @@
       "internalScrollCount": 0
     },
     {
-      "sourceHead": "995e8d543799a5befa4b34296a358a84a7db622f",
+      "sourceHead": "f0261e14b1b56189d0aa2c23239dba2cb34de477",
       "route": "nick",
       "routeStatus": "active",
       "predecessor": "S33-C1=A",
@@ -3462,8 +3462,8 @@
           "controlsWithinViewport": true,
           "screenshot": {
             "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-git\\artifacts\\evidence\\ep07-08-route-runtime\\nick-active-1920x900-S59.png",
-            "sha256": "1caab677edf9bf5aeb5959b0a6009d7d31bf959fc2894ea4a135dc51f7f6c4e4",
-            "bytes": 1712985
+            "sha256": "5141c4d372d47323841a1e67b9dfef8ab80f1ede3b053af00cc2b2fe550afe85",
+            "bytes": 100919
           }
         },
         {
@@ -3580,7 +3580,7 @@
               "S01",
               "S26"
             ],
-            "runId": "ep07-08-S26-1791027327612",
+            "runId": "ep07-08-S26-1791039134426",
             "revision": 2,
             "migrationNotice": false
           }
@@ -3622,7 +3622,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027327612",
+            "runId": "ep07-08-S26-1791039134426",
             "revision": 14,
             "migrationNotice": false
           }
@@ -3664,7 +3664,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027327612",
+            "runId": "ep07-08-S26-1791039134426",
             "revision": 24,
             "migrationNotice": false
           }
@@ -3708,7 +3708,7 @@
               "S27",
               "S59"
             ],
-            "runId": "ep07-08-S26-1791027327612",
+            "runId": "ep07-08-S26-1791039134426",
             "revision": 38,
             "migrationNotice": false
           }
@@ -3754,7 +3754,7 @@
               "S59",
               "S29"
             ],
-            "runId": "ep07-08-S26-1791027327612",
+            "runId": "ep07-08-S26-1791039134426",
             "revision": 51,
             "migrationNotice": false
           }
@@ -3803,7 +3803,7 @@
               "S29",
               "S52"
             ],
-            "runId": "ep07-08-S26-1791027327612",
+            "runId": "ep07-08-S26-1791039134426",
             "revision": 66,
             "migrationNotice": false
           }
@@ -3854,7 +3854,7 @@
               "S52",
               "S33"
             ],
-            "runId": "ep07-08-S26-1791027327612",
+            "runId": "ep07-08-S26-1791039134426",
             "revision": 81,
             "migrationNotice": false
           }
@@ -3906,7 +3906,7 @@
               "S33",
               "S53"
             ],
-            "runId": "ep07-08-S26-1791027327612",
+            "runId": "ep07-08-S26-1791039134426",
             "revision": 89,
             "migrationNotice": false
           }
@@ -3930,7 +3930,7 @@
       "internalScrollCount": 0
     },
     {
-      "sourceHead": "995e8d543799a5befa4b34296a358a84a7db622f",
+      "sourceHead": "f0261e14b1b56189d0aa2c23239dba2cb34de477",
       "route": "nick",
       "routeStatus": "active",
       "predecessor": "S33-C1=A",
@@ -4064,8 +4064,8 @@
           "controlsWithinViewport": true,
           "screenshot": {
             "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-git\\artifacts\\evidence\\ep07-08-route-runtime\\nick-active-390x844-S33.png",
-            "sha256": "086c3c4e003f3f54e2d5636ffca0aac8f07d3e335539d7816eccb47928d307a0",
-            "bytes": 161524
+            "sha256": "8cf82dfa4379abfbbfba12984f57314a2316156d50813ca7e01c49c6c9812043",
+            "bytes": 40426
           }
         },
         {
@@ -4125,7 +4125,7 @@
               "S01",
               "S26"
             ],
-            "runId": "ep07-08-S26-1791027335579",
+            "runId": "ep07-08-S26-1791039141444",
             "revision": 2,
             "migrationNotice": false
           }
@@ -4167,7 +4167,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027335579",
+            "runId": "ep07-08-S26-1791039141444",
             "revision": 14,
             "migrationNotice": false
           }
@@ -4209,7 +4209,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027335579",
+            "runId": "ep07-08-S26-1791039141444",
             "revision": 24,
             "migrationNotice": false
           }
@@ -4253,7 +4253,7 @@
               "S27",
               "S59"
             ],
-            "runId": "ep07-08-S26-1791027335579",
+            "runId": "ep07-08-S26-1791039141444",
             "revision": 38,
             "migrationNotice": false
           }
@@ -4299,7 +4299,7 @@
               "S59",
               "S29"
             ],
-            "runId": "ep07-08-S26-1791027335579",
+            "runId": "ep07-08-S26-1791039141444",
             "revision": 51,
             "migrationNotice": false
           }
@@ -4348,7 +4348,7 @@
               "S29",
               "S52"
             ],
-            "runId": "ep07-08-S26-1791027335579",
+            "runId": "ep07-08-S26-1791039141444",
             "revision": 66,
             "migrationNotice": false
           }
@@ -4399,7 +4399,7 @@
               "S52",
               "S33"
             ],
-            "runId": "ep07-08-S26-1791027335579",
+            "runId": "ep07-08-S26-1791039141444",
             "revision": 81,
             "migrationNotice": false
           }
@@ -4451,7 +4451,7 @@
               "S33",
               "S53"
             ],
-            "runId": "ep07-08-S26-1791027335579",
+            "runId": "ep07-08-S26-1791039141444",
             "revision": 89,
             "migrationNotice": false
           }
@@ -4475,7 +4475,7 @@
       "internalScrollCount": 0
     },
     {
-      "sourceHead": "995e8d543799a5befa4b34296a358a84a7db622f",
+      "sourceHead": "f0261e14b1b56189d0aa2c23239dba2cb34de477",
       "route": "nick",
       "routeStatus": "active",
       "predecessor": "S33-C1=A",
@@ -4609,8 +4609,8 @@
           "controlsWithinViewport": true,
           "screenshot": {
             "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-git\\artifacts\\evidence\\ep07-08-route-runtime\\nick-active-360x640-S33.png",
-            "sha256": "6dff2270ac9246b32e1679076c51264193151dd603bfe6e3c1023357f622567e",
-            "bytes": 144647
+            "sha256": "75741d2be054f398f7143cdece9d7d597f9300d8353877f26b359a89a0e4d4c4",
+            "bytes": 38132
           }
         },
         {
@@ -4670,7 +4670,7 @@
               "S01",
               "S26"
             ],
-            "runId": "ep07-08-S26-1791027342803",
+            "runId": "ep07-08-S26-1791039148123",
             "revision": 2,
             "migrationNotice": false
           }
@@ -4712,7 +4712,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027342803",
+            "runId": "ep07-08-S26-1791039148123",
             "revision": 14,
             "migrationNotice": false
           }
@@ -4754,7 +4754,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027342803",
+            "runId": "ep07-08-S26-1791039148123",
             "revision": 24,
             "migrationNotice": false
           }
@@ -4798,7 +4798,7 @@
               "S27",
               "S59"
             ],
-            "runId": "ep07-08-S26-1791027342803",
+            "runId": "ep07-08-S26-1791039148123",
             "revision": 38,
             "migrationNotice": false
           }
@@ -4844,7 +4844,7 @@
               "S59",
               "S29"
             ],
-            "runId": "ep07-08-S26-1791027342803",
+            "runId": "ep07-08-S26-1791039148123",
             "revision": 51,
             "migrationNotice": false
           }
@@ -4893,7 +4893,7 @@
               "S29",
               "S52"
             ],
-            "runId": "ep07-08-S26-1791027342803",
+            "runId": "ep07-08-S26-1791039148123",
             "revision": 66,
             "migrationNotice": false
           }
@@ -4944,7 +4944,7 @@
               "S52",
               "S33"
             ],
-            "runId": "ep07-08-S26-1791027342803",
+            "runId": "ep07-08-S26-1791039148123",
             "revision": 81,
             "migrationNotice": false
           }
@@ -4996,7 +4996,7 @@
               "S33",
               "S53"
             ],
-            "runId": "ep07-08-S26-1791027342803",
+            "runId": "ep07-08-S26-1791039148123",
             "revision": 89,
             "migrationNotice": false
           }
@@ -5020,7 +5020,7 @@
       "internalScrollCount": 0
     },
     {
-      "sourceHead": "995e8d543799a5befa4b34296a358a84a7db622f",
+      "sourceHead": "f0261e14b1b56189d0aa2c23239dba2cb34de477",
       "route": "nick",
       "routeStatus": "paused",
       "predecessor": "S33-C1=B",
@@ -5135,8 +5135,8 @@
           "controlsWithinViewport": true,
           "screenshot": {
             "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-git\\artifacts\\evidence\\ep07-08-route-runtime\\nick-paused-1920x900-S52.png",
-            "sha256": "13247fe6dc3157b0c6ec8e82d9d4ea8dfedd4c1cf4ae80cd0805110487329494",
-            "bytes": 1807133
+            "sha256": "c027187134e679b59aa4d9cc95a568cd968888ec77dce7de199b98509bf14cf4",
+            "bytes": 364535
           }
         },
         {
@@ -5215,7 +5215,7 @@
               "S01",
               "S26"
             ],
-            "runId": "ep07-08-S26-1791027350178",
+            "runId": "ep07-08-S26-1791039154858",
             "revision": 2,
             "migrationNotice": false
           }
@@ -5257,7 +5257,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027350178",
+            "runId": "ep07-08-S26-1791039154858",
             "revision": 14,
             "migrationNotice": false
           }
@@ -5299,7 +5299,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027350178",
+            "runId": "ep07-08-S26-1791039154858",
             "revision": 24,
             "migrationNotice": false
           }
@@ -5343,7 +5343,7 @@
               "S27",
               "S59"
             ],
-            "runId": "ep07-08-S26-1791027350178",
+            "runId": "ep07-08-S26-1791039154858",
             "revision": 38,
             "migrationNotice": false
           }
@@ -5389,7 +5389,7 @@
               "S59",
               "S29"
             ],
-            "runId": "ep07-08-S26-1791027350178",
+            "runId": "ep07-08-S26-1791039154858",
             "revision": 51,
             "migrationNotice": false
           }
@@ -5438,7 +5438,7 @@
               "S29",
               "S52"
             ],
-            "runId": "ep07-08-S26-1791027350178",
+            "runId": "ep07-08-S26-1791039154858",
             "revision": 66,
             "migrationNotice": false
           }
@@ -5489,7 +5489,7 @@
               "S52",
               "S33"
             ],
-            "runId": "ep07-08-S26-1791027350178",
+            "runId": "ep07-08-S26-1791039154858",
             "revision": 81,
             "migrationNotice": false
           }
@@ -5541,7 +5541,7 @@
               "S33",
               "S53"
             ],
-            "runId": "ep07-08-S26-1791027350178",
+            "runId": "ep07-08-S26-1791039154858",
             "revision": 89,
             "migrationNotice": false
           }
@@ -5565,7 +5565,7 @@
       "internalScrollCount": 0
     },
     {
-      "sourceHead": "995e8d543799a5befa4b34296a358a84a7db622f",
+      "sourceHead": "f0261e14b1b56189d0aa2c23239dba2cb34de477",
       "route": "nick",
       "routeStatus": "paused",
       "predecessor": "S33-C1=B",
@@ -5680,8 +5680,8 @@
           "controlsWithinViewport": true,
           "screenshot": {
             "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-git\\artifacts\\evidence\\ep07-08-route-runtime\\nick-paused-390x844-S52.png",
-            "sha256": "c2b3e68b0edc63a76784208bffafda84154d657dc8db11155fed73ff24a4f086",
-            "bytes": 397256
+            "sha256": "d714d1c5aac082e6e67a1193b9deb28a08492ed79be3574a50d5e00ec2b2bd26",
+            "bytes": 179751
           }
         },
         {
@@ -5699,8 +5699,8 @@
           "controlsWithinViewport": true,
           "screenshot": {
             "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-git\\artifacts\\evidence\\ep07-08-route-runtime\\nick-paused-390x844-S33.png",
-            "sha256": "086c3c4e003f3f54e2d5636ffca0aac8f07d3e335539d7816eccb47928d307a0",
-            "bytes": 161524
+            "sha256": "8cf82dfa4379abfbbfba12984f57314a2316156d50813ca7e01c49c6c9812043",
+            "bytes": 40426
           }
         },
         {
@@ -5760,7 +5760,7 @@
               "S01",
               "S26"
             ],
-            "runId": "ep07-08-S26-1791027358280",
+            "runId": "ep07-08-S26-1791039162064",
             "revision": 2,
             "migrationNotice": false
           }
@@ -5802,7 +5802,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027358280",
+            "runId": "ep07-08-S26-1791039162064",
             "revision": 14,
             "migrationNotice": false
           }
@@ -5844,7 +5844,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027358280",
+            "runId": "ep07-08-S26-1791039162064",
             "revision": 24,
             "migrationNotice": false
           }
@@ -5888,7 +5888,7 @@
               "S27",
               "S59"
             ],
-            "runId": "ep07-08-S26-1791027358280",
+            "runId": "ep07-08-S26-1791039162064",
             "revision": 38,
             "migrationNotice": false
           }
@@ -5934,7 +5934,7 @@
               "S59",
               "S29"
             ],
-            "runId": "ep07-08-S26-1791027358280",
+            "runId": "ep07-08-S26-1791039162064",
             "revision": 51,
             "migrationNotice": false
           }
@@ -5983,7 +5983,7 @@
               "S29",
               "S52"
             ],
-            "runId": "ep07-08-S26-1791027358280",
+            "runId": "ep07-08-S26-1791039162064",
             "revision": 66,
             "migrationNotice": false
           }
@@ -6034,7 +6034,7 @@
               "S52",
               "S33"
             ],
-            "runId": "ep07-08-S26-1791027358280",
+            "runId": "ep07-08-S26-1791039162064",
             "revision": 81,
             "migrationNotice": false
           }
@@ -6086,7 +6086,7 @@
               "S33",
               "S53"
             ],
-            "runId": "ep07-08-S26-1791027358280",
+            "runId": "ep07-08-S26-1791039162064",
             "revision": 89,
             "migrationNotice": false
           }
@@ -6110,7 +6110,7 @@
       "internalScrollCount": 0
     },
     {
-      "sourceHead": "995e8d543799a5befa4b34296a358a84a7db622f",
+      "sourceHead": "f0261e14b1b56189d0aa2c23239dba2cb34de477",
       "route": "nick",
       "routeStatus": "paused",
       "predecessor": "S33-C1=B",
@@ -6187,8 +6187,8 @@
           "controlsWithinViewport": true,
           "screenshot": {
             "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-git\\artifacts\\evidence\\ep07-08-route-runtime\\nick-paused-360x640-S59.png",
-            "sha256": "3e924f16b085a14368a5dc88c2befab3d48448cbd869d96e86545fd60e3a9df4",
-            "bytes": 281237
+            "sha256": "038b5fb30dd74fa279a8e4f0e524c3bb3d7d916260e874e8c096014682f903e7",
+            "bytes": 69191
           }
         },
         {
@@ -6244,8 +6244,8 @@
           "controlsWithinViewport": true,
           "screenshot": {
             "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-git\\artifacts\\evidence\\ep07-08-route-runtime\\nick-paused-360x640-S33.png",
-            "sha256": "51113e08d8bda6d29e9a9c3ca27adc5ded53dbc121459aa30f46e7dff16ae1a5",
-            "bytes": 286222
+            "sha256": "6dff2270ac9246b32e1679076c51264193151dd603bfe6e3c1023357f622567e",
+            "bytes": 144647
           }
         },
         {
@@ -6305,7 +6305,7 @@
               "S01",
               "S26"
             ],
-            "runId": "ep07-08-S26-1791027366024",
+            "runId": "ep07-08-S26-1791039168705",
             "revision": 2,
             "migrationNotice": false
           }
@@ -6347,7 +6347,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027366024",
+            "runId": "ep07-08-S26-1791039168705",
             "revision": 14,
             "migrationNotice": false
           }
@@ -6389,7 +6389,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027366024",
+            "runId": "ep07-08-S26-1791039168705",
             "revision": 24,
             "migrationNotice": false
           }
@@ -6433,7 +6433,7 @@
               "S27",
               "S59"
             ],
-            "runId": "ep07-08-S26-1791027366024",
+            "runId": "ep07-08-S26-1791039168705",
             "revision": 38,
             "migrationNotice": false
           }
@@ -6479,7 +6479,7 @@
               "S59",
               "S29"
             ],
-            "runId": "ep07-08-S26-1791027366024",
+            "runId": "ep07-08-S26-1791039168705",
             "revision": 51,
             "migrationNotice": false
           }
@@ -6528,7 +6528,7 @@
               "S29",
               "S52"
             ],
-            "runId": "ep07-08-S26-1791027366024",
+            "runId": "ep07-08-S26-1791039168705",
             "revision": 66,
             "migrationNotice": false
           }
@@ -6579,7 +6579,7 @@
               "S52",
               "S33"
             ],
-            "runId": "ep07-08-S26-1791027366024",
+            "runId": "ep07-08-S26-1791039168705",
             "revision": 81,
             "migrationNotice": false
           }
@@ -6631,7 +6631,7 @@
               "S33",
               "S53"
             ],
-            "runId": "ep07-08-S26-1791027366024",
+            "runId": "ep07-08-S26-1791039168705",
             "revision": 89,
             "migrationNotice": false
           }
@@ -6655,7 +6655,7 @@
       "internalScrollCount": 0
     },
     {
-      "sourceHead": "995e8d543799a5befa4b34296a358a84a7db622f",
+      "sourceHead": "f0261e14b1b56189d0aa2c23239dba2cb34de477",
       "route": "damir",
       "routeStatus": "active",
       "predecessor": "S34-C1=A",
@@ -6732,8 +6732,8 @@
           "controlsWithinViewport": true,
           "screenshot": {
             "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-git\\artifacts\\evidence\\ep07-08-route-runtime\\damir-active-1920x900-S59.png",
-            "sha256": "1caab677edf9bf5aeb5959b0a6009d7d31bf959fc2894ea4a135dc51f7f6c4e4",
-            "bytes": 1712985
+            "sha256": "5141c4d372d47323841a1e67b9dfef8ab80f1ede3b053af00cc2b2fe550afe85",
+            "bytes": 100919
           }
         },
         {
@@ -6850,7 +6850,7 @@
               "S01",
               "S26"
             ],
-            "runId": "ep07-08-S26-1791027373866",
+            "runId": "ep07-08-S26-1791039175452",
             "revision": 2,
             "migrationNotice": false
           }
@@ -6892,7 +6892,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027373866",
+            "runId": "ep07-08-S26-1791039175452",
             "revision": 13,
             "migrationNotice": false
           }
@@ -6934,7 +6934,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027373866",
+            "runId": "ep07-08-S26-1791039175452",
             "revision": 23,
             "migrationNotice": false
           }
@@ -6978,7 +6978,7 @@
               "S27",
               "S59"
             ],
-            "runId": "ep07-08-S26-1791027373866",
+            "runId": "ep07-08-S26-1791039175452",
             "revision": 37,
             "migrationNotice": false
           }
@@ -7024,7 +7024,7 @@
               "S59",
               "S30"
             ],
-            "runId": "ep07-08-S26-1791027373866",
+            "runId": "ep07-08-S26-1791039175452",
             "revision": 51,
             "migrationNotice": false
           }
@@ -7073,7 +7073,7 @@
               "S30",
               "S55"
             ],
-            "runId": "ep07-08-S26-1791027373866",
+            "runId": "ep07-08-S26-1791039175452",
             "revision": 66,
             "migrationNotice": false
           }
@@ -7124,7 +7124,7 @@
               "S55",
               "S34"
             ],
-            "runId": "ep07-08-S26-1791027373866",
+            "runId": "ep07-08-S26-1791039175452",
             "revision": 83,
             "migrationNotice": false
           }
@@ -7176,7 +7176,7 @@
               "S34",
               "S56"
             ],
-            "runId": "ep07-08-S26-1791027373866",
+            "runId": "ep07-08-S26-1791039175452",
             "revision": 90,
             "migrationNotice": false
           }
@@ -7200,7 +7200,7 @@
       "internalScrollCount": 0
     },
     {
-      "sourceHead": "995e8d543799a5befa4b34296a358a84a7db622f",
+      "sourceHead": "f0261e14b1b56189d0aa2c23239dba2cb34de477",
       "route": "damir",
       "routeStatus": "active",
       "predecessor": "S34-C1=A",
@@ -7277,8 +7277,8 @@
           "controlsWithinViewport": true,
           "screenshot": {
             "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-git\\artifacts\\evidence\\ep07-08-route-runtime\\damir-active-390x844-S59.png",
-            "sha256": "a8ccb91b3124db32e2b09e4fa4118a281da99bfb5a71d0627b47c4b385cf0d45",
-            "bytes": 380074
+            "sha256": "80265ceb380975d38418335d3dde190e34f8bfa0e64058c278006acd46c2f4c5",
+            "bytes": 68385
           }
         },
         {
@@ -7315,8 +7315,8 @@
           "controlsWithinViewport": true,
           "screenshot": {
             "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-git\\artifacts\\evidence\\ep07-08-route-runtime\\damir-active-390x844-S55.png",
-            "sha256": "1709dd180679093b657fa910289bfbec5fa7430503b5d50a99cc5de4e84043a9",
-            "bytes": 398844
+            "sha256": "e85e0b3a6fc31a32b9f5ddbb85fa3068c19e8d522ef5e749130aab8d088ee14a",
+            "bytes": 179506
           }
         },
         {
@@ -7334,8 +7334,8 @@
           "controlsWithinViewport": true,
           "screenshot": {
             "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-git\\artifacts\\evidence\\ep07-08-route-runtime\\damir-active-390x844-S34.png",
-            "sha256": "8ad7185156c48a78f07369dfd7d41fdfbaed93ce2cb2b8a0799cc2907aa29495",
-            "bytes": 180935
+            "sha256": "4f73f4adf2ea3b13c42d2834c7290cabbbb3cad25db320c9028d58b66c5542e8",
+            "bytes": 58388
           }
         },
         {
@@ -7395,7 +7395,7 @@
               "S01",
               "S26"
             ],
-            "runId": "ep07-08-S26-1791027382071",
+            "runId": "ep07-08-S26-1791039182485",
             "revision": 2,
             "migrationNotice": false
           }
@@ -7437,7 +7437,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027382071",
+            "runId": "ep07-08-S26-1791039182485",
             "revision": 13,
             "migrationNotice": false
           }
@@ -7479,7 +7479,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027382071",
+            "runId": "ep07-08-S26-1791039182485",
             "revision": 23,
             "migrationNotice": false
           }
@@ -7523,7 +7523,7 @@
               "S27",
               "S59"
             ],
-            "runId": "ep07-08-S26-1791027382071",
+            "runId": "ep07-08-S26-1791039182485",
             "revision": 37,
             "migrationNotice": false
           }
@@ -7569,7 +7569,7 @@
               "S59",
               "S30"
             ],
-            "runId": "ep07-08-S26-1791027382071",
+            "runId": "ep07-08-S26-1791039182485",
             "revision": 51,
             "migrationNotice": false
           }
@@ -7618,7 +7618,7 @@
               "S30",
               "S55"
             ],
-            "runId": "ep07-08-S26-1791027382071",
+            "runId": "ep07-08-S26-1791039182485",
             "revision": 66,
             "migrationNotice": false
           }
@@ -7669,7 +7669,7 @@
               "S55",
               "S34"
             ],
-            "runId": "ep07-08-S26-1791027382071",
+            "runId": "ep07-08-S26-1791039182485",
             "revision": 83,
             "migrationNotice": false
           }
@@ -7721,7 +7721,7 @@
               "S34",
               "S56"
             ],
-            "runId": "ep07-08-S26-1791027382071",
+            "runId": "ep07-08-S26-1791039182485",
             "revision": 90,
             "migrationNotice": false
           }
@@ -7745,7 +7745,7 @@
       "internalScrollCount": 0
     },
     {
-      "sourceHead": "995e8d543799a5befa4b34296a358a84a7db622f",
+      "sourceHead": "f0261e14b1b56189d0aa2c23239dba2cb34de477",
       "route": "damir",
       "routeStatus": "active",
       "predecessor": "S34-C1=A",
@@ -7879,8 +7879,8 @@
           "controlsWithinViewport": true,
           "screenshot": {
             "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-git\\artifacts\\evidence\\ep07-08-route-runtime\\damir-active-360x640-S34.png",
-            "sha256": "784562e89e5c82788fd88cee226dd18e27c17b1142981e78a420b9a05557ab64",
-            "bytes": 301296
+            "sha256": "e7dcc3682029b8c1873aa7c32cff8df890fc9bbd30a1b6432dcb73cd2a4ee952",
+            "bytes": 157470
           }
         },
         {
@@ -7940,7 +7940,7 @@
               "S01",
               "S26"
             ],
-            "runId": "ep07-08-S26-1791027390130",
+            "runId": "ep07-08-S26-1791039189225",
             "revision": 2,
             "migrationNotice": false
           }
@@ -7982,7 +7982,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027390130",
+            "runId": "ep07-08-S26-1791039189225",
             "revision": 13,
             "migrationNotice": false
           }
@@ -8024,7 +8024,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027390130",
+            "runId": "ep07-08-S26-1791039189225",
             "revision": 23,
             "migrationNotice": false
           }
@@ -8068,7 +8068,7 @@
               "S27",
               "S59"
             ],
-            "runId": "ep07-08-S26-1791027390130",
+            "runId": "ep07-08-S26-1791039189225",
             "revision": 37,
             "migrationNotice": false
           }
@@ -8114,7 +8114,7 @@
               "S59",
               "S30"
             ],
-            "runId": "ep07-08-S26-1791027390130",
+            "runId": "ep07-08-S26-1791039189225",
             "revision": 51,
             "migrationNotice": false
           }
@@ -8163,7 +8163,7 @@
               "S30",
               "S55"
             ],
-            "runId": "ep07-08-S26-1791027390130",
+            "runId": "ep07-08-S26-1791039189225",
             "revision": 66,
             "migrationNotice": false
           }
@@ -8214,7 +8214,7 @@
               "S55",
               "S34"
             ],
-            "runId": "ep07-08-S26-1791027390130",
+            "runId": "ep07-08-S26-1791039189225",
             "revision": 83,
             "migrationNotice": false
           }
@@ -8266,7 +8266,7 @@
               "S34",
               "S56"
             ],
-            "runId": "ep07-08-S26-1791027390130",
+            "runId": "ep07-08-S26-1791039189225",
             "revision": 90,
             "migrationNotice": false
           }
@@ -8290,7 +8290,7 @@
       "internalScrollCount": 0
     },
     {
-      "sourceHead": "995e8d543799a5befa4b34296a358a84a7db622f",
+      "sourceHead": "f0261e14b1b56189d0aa2c23239dba2cb34de477",
       "route": "damir",
       "routeStatus": "paused",
       "predecessor": "S34-C1=B",
@@ -8367,8 +8367,8 @@
           "controlsWithinViewport": true,
           "screenshot": {
             "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-git\\artifacts\\evidence\\ep07-08-route-runtime\\damir-paused-1920x900-S59.png",
-            "sha256": "1b4e743f8f352cf27e618ba3ba8cdaa60848e32d6e3f3946f49d3ef8d262bc92",
-            "bytes": 1709300
+            "sha256": "5141c4d372d47323841a1e67b9dfef8ab80f1ede3b053af00cc2b2fe550afe85",
+            "bytes": 100919
           }
         },
         {
@@ -8485,7 +8485,7 @@
               "S01",
               "S26"
             ],
-            "runId": "ep07-08-S26-1791027398174",
+            "runId": "ep07-08-S26-1791039196009",
             "revision": 2,
             "migrationNotice": false
           }
@@ -8527,7 +8527,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027398174",
+            "runId": "ep07-08-S26-1791039196009",
             "revision": 13,
             "migrationNotice": false
           }
@@ -8569,7 +8569,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027398174",
+            "runId": "ep07-08-S26-1791039196009",
             "revision": 23,
             "migrationNotice": false
           }
@@ -8613,7 +8613,7 @@
               "S27",
               "S59"
             ],
-            "runId": "ep07-08-S26-1791027398174",
+            "runId": "ep07-08-S26-1791039196009",
             "revision": 37,
             "migrationNotice": false
           }
@@ -8659,7 +8659,7 @@
               "S59",
               "S30"
             ],
-            "runId": "ep07-08-S26-1791027398174",
+            "runId": "ep07-08-S26-1791039196009",
             "revision": 51,
             "migrationNotice": false
           }
@@ -8708,7 +8708,7 @@
               "S30",
               "S55"
             ],
-            "runId": "ep07-08-S26-1791027398174",
+            "runId": "ep07-08-S26-1791039196009",
             "revision": 66,
             "migrationNotice": false
           }
@@ -8759,7 +8759,7 @@
               "S55",
               "S34"
             ],
-            "runId": "ep07-08-S26-1791027398174",
+            "runId": "ep07-08-S26-1791039196009",
             "revision": 83,
             "migrationNotice": false
           }
@@ -8811,7 +8811,7 @@
               "S34",
               "S56"
             ],
-            "runId": "ep07-08-S26-1791027398174",
+            "runId": "ep07-08-S26-1791039196009",
             "revision": 90,
             "migrationNotice": false
           }
@@ -8835,7 +8835,7 @@
       "internalScrollCount": 0
     },
     {
-      "sourceHead": "995e8d543799a5befa4b34296a358a84a7db622f",
+      "sourceHead": "f0261e14b1b56189d0aa2c23239dba2cb34de477",
       "route": "damir",
       "routeStatus": "paused",
       "predecessor": "S34-C1=B",
@@ -9030,7 +9030,7 @@
               "S01",
               "S26"
             ],
-            "runId": "ep07-08-S26-1791027406610",
+            "runId": "ep07-08-S26-1791039203036",
             "revision": 2,
             "migrationNotice": false
           }
@@ -9072,7 +9072,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027406610",
+            "runId": "ep07-08-S26-1791039203036",
             "revision": 13,
             "migrationNotice": false
           }
@@ -9114,7 +9114,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027406610",
+            "runId": "ep07-08-S26-1791039203036",
             "revision": 23,
             "migrationNotice": false
           }
@@ -9158,7 +9158,7 @@
               "S27",
               "S59"
             ],
-            "runId": "ep07-08-S26-1791027406610",
+            "runId": "ep07-08-S26-1791039203036",
             "revision": 37,
             "migrationNotice": false
           }
@@ -9204,7 +9204,7 @@
               "S59",
               "S30"
             ],
-            "runId": "ep07-08-S26-1791027406610",
+            "runId": "ep07-08-S26-1791039203036",
             "revision": 51,
             "migrationNotice": false
           }
@@ -9253,7 +9253,7 @@
               "S30",
               "S55"
             ],
-            "runId": "ep07-08-S26-1791027406610",
+            "runId": "ep07-08-S26-1791039203036",
             "revision": 66,
             "migrationNotice": false
           }
@@ -9304,7 +9304,7 @@
               "S55",
               "S34"
             ],
-            "runId": "ep07-08-S26-1791027406610",
+            "runId": "ep07-08-S26-1791039203036",
             "revision": 83,
             "migrationNotice": false
           }
@@ -9356,7 +9356,7 @@
               "S34",
               "S56"
             ],
-            "runId": "ep07-08-S26-1791027406610",
+            "runId": "ep07-08-S26-1791039203036",
             "revision": 90,
             "migrationNotice": false
           }
@@ -9380,7 +9380,7 @@
       "internalScrollCount": 0
     },
     {
-      "sourceHead": "995e8d543799a5befa4b34296a358a84a7db622f",
+      "sourceHead": "f0261e14b1b56189d0aa2c23239dba2cb34de477",
       "route": "damir",
       "routeStatus": "paused",
       "predecessor": "S34-C1=B",
@@ -9514,8 +9514,8 @@
           "controlsWithinViewport": true,
           "screenshot": {
             "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-git\\artifacts\\evidence\\ep07-08-route-runtime\\damir-paused-360x640-S34.png",
-            "sha256": "1ee0555240267d47364831fbb13b64b1a400f5b820be2d5f9ae7bdd58e4a2dcd",
-            "bytes": 57403
+            "sha256": "e7dcc3682029b8c1873aa7c32cff8df890fc9bbd30a1b6432dcb73cd2a4ee952",
+            "bytes": 157470
           }
         },
         {
@@ -9575,7 +9575,7 @@
               "S01",
               "S26"
             ],
-            "runId": "ep07-08-S26-1791027413853",
+            "runId": "ep07-08-S26-1791039209717",
             "revision": 2,
             "migrationNotice": false
           }
@@ -9617,7 +9617,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027413853",
+            "runId": "ep07-08-S26-1791039209717",
             "revision": 13,
             "migrationNotice": false
           }
@@ -9659,7 +9659,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027413853",
+            "runId": "ep07-08-S26-1791039209717",
             "revision": 23,
             "migrationNotice": false
           }
@@ -9703,7 +9703,7 @@
               "S27",
               "S59"
             ],
-            "runId": "ep07-08-S26-1791027413853",
+            "runId": "ep07-08-S26-1791039209717",
             "revision": 37,
             "migrationNotice": false
           }
@@ -9749,7 +9749,7 @@
               "S59",
               "S30"
             ],
-            "runId": "ep07-08-S26-1791027413853",
+            "runId": "ep07-08-S26-1791039209717",
             "revision": 51,
             "migrationNotice": false
           }
@@ -9798,7 +9798,7 @@
               "S30",
               "S55"
             ],
-            "runId": "ep07-08-S26-1791027413853",
+            "runId": "ep07-08-S26-1791039209717",
             "revision": 66,
             "migrationNotice": false
           }
@@ -9849,7 +9849,7 @@
               "S55",
               "S34"
             ],
-            "runId": "ep07-08-S26-1791027413853",
+            "runId": "ep07-08-S26-1791039209717",
             "revision": 83,
             "migrationNotice": false
           }
@@ -9901,7 +9901,7 @@
               "S34",
               "S56"
             ],
-            "runId": "ep07-08-S26-1791027413853",
+            "runId": "ep07-08-S26-1791039209717",
             "revision": 90,
             "migrationNotice": false
           }
@@ -9925,7 +9925,7 @@
       "internalScrollCount": 0
     },
     {
-      "sourceHead": "995e8d543799a5befa4b34296a358a84a7db622f",
+      "sourceHead": "f0261e14b1b56189d0aa2c23239dba2cb34de477",
       "route": "alice",
       "routeStatus": "active",
       "predecessor": "S35-C1=A",
@@ -10059,8 +10059,8 @@
           "controlsWithinViewport": true,
           "screenshot": {
             "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-git\\artifacts\\evidence\\ep07-08-route-runtime\\alice-active-1920x900-S35.png",
-            "sha256": "50ca532009728a0228e2845e3b8661aebe8653f6568a8a458d3e58345a68f350",
-            "bytes": 215466
+            "sha256": "e843a11d0344cef8fe038a4c0fa361095f057898a2d9a2aeefca3d53f1209071",
+            "bytes": 74994
           }
         },
         {
@@ -10120,7 +10120,7 @@
               "S01",
               "S26"
             ],
-            "runId": "ep07-08-S26-1791027421445",
+            "runId": "ep07-08-S26-1791039216492",
             "revision": 2,
             "migrationNotice": false
           }
@@ -10162,7 +10162,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027421445",
+            "runId": "ep07-08-S26-1791039216492",
             "revision": 13,
             "migrationNotice": false
           }
@@ -10204,7 +10204,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027421445",
+            "runId": "ep07-08-S26-1791039216492",
             "revision": 23,
             "migrationNotice": false
           }
@@ -10248,7 +10248,7 @@
               "S27",
               "S59"
             ],
-            "runId": "ep07-08-S26-1791027421445",
+            "runId": "ep07-08-S26-1791039216492",
             "revision": 37,
             "migrationNotice": false
           }
@@ -10294,7 +10294,7 @@
               "S59",
               "S31"
             ],
-            "runId": "ep07-08-S26-1791027421445",
+            "runId": "ep07-08-S26-1791039216492",
             "revision": 49,
             "migrationNotice": false
           }
@@ -10343,7 +10343,7 @@
               "S31",
               "S62"
             ],
-            "runId": "ep07-08-S26-1791027421445",
+            "runId": "ep07-08-S26-1791039216492",
             "revision": 64,
             "migrationNotice": false
           }
@@ -10394,7 +10394,7 @@
               "S62",
               "S35"
             ],
-            "runId": "ep07-08-S26-1791027421445",
+            "runId": "ep07-08-S26-1791039216492",
             "revision": 74,
             "migrationNotice": false
           }
@@ -10446,7 +10446,7 @@
               "S35",
               "S63"
             ],
-            "runId": "ep07-08-S26-1791027421445",
+            "runId": "ep07-08-S26-1791039216492",
             "revision": 79,
             "migrationNotice": false
           }
@@ -10470,7 +10470,7 @@
       "internalScrollCount": 0
     },
     {
-      "sourceHead": "995e8d543799a5befa4b34296a358a84a7db622f",
+      "sourceHead": "f0261e14b1b56189d0aa2c23239dba2cb34de477",
       "route": "alice",
       "routeStatus": "active",
       "predecessor": "S35-C1=A",
@@ -10604,8 +10604,8 @@
           "controlsWithinViewport": true,
           "screenshot": {
             "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-git\\artifacts\\evidence\\ep07-08-route-runtime\\alice-active-390x844-S35.png",
-            "sha256": "88fd4c02a6c6f73cf6204a8064033edd1913d96317a8d9777034e415da770de3",
-            "bytes": 51092
+            "sha256": "0dd675fd3f772c6cf2ad4d49503528861eee32a6f1fbabf732dad6e3d45d2845",
+            "bytes": 88605
           }
         },
         {
@@ -10665,7 +10665,7 @@
               "S01",
               "S26"
             ],
-            "runId": "ep07-08-S26-1791027428882",
+            "runId": "ep07-08-S26-1791039223373",
             "revision": 2,
             "migrationNotice": false
           }
@@ -10707,7 +10707,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027428882",
+            "runId": "ep07-08-S26-1791039223373",
             "revision": 13,
             "migrationNotice": false
           }
@@ -10749,7 +10749,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027428882",
+            "runId": "ep07-08-S26-1791039223373",
             "revision": 23,
             "migrationNotice": false
           }
@@ -10793,7 +10793,7 @@
               "S27",
               "S59"
             ],
-            "runId": "ep07-08-S26-1791027428882",
+            "runId": "ep07-08-S26-1791039223373",
             "revision": 37,
             "migrationNotice": false
           }
@@ -10839,7 +10839,7 @@
               "S59",
               "S31"
             ],
-            "runId": "ep07-08-S26-1791027428882",
+            "runId": "ep07-08-S26-1791039223373",
             "revision": 49,
             "migrationNotice": false
           }
@@ -10888,7 +10888,7 @@
               "S31",
               "S62"
             ],
-            "runId": "ep07-08-S26-1791027428882",
+            "runId": "ep07-08-S26-1791039223373",
             "revision": 64,
             "migrationNotice": false
           }
@@ -10939,7 +10939,7 @@
               "S62",
               "S35"
             ],
-            "runId": "ep07-08-S26-1791027428882",
+            "runId": "ep07-08-S26-1791039223373",
             "revision": 74,
             "migrationNotice": false
           }
@@ -10991,7 +10991,7 @@
               "S35",
               "S63"
             ],
-            "runId": "ep07-08-S26-1791027428882",
+            "runId": "ep07-08-S26-1791039223373",
             "revision": 79,
             "migrationNotice": false
           }
@@ -11015,7 +11015,7 @@
       "internalScrollCount": 0
     },
     {
-      "sourceHead": "995e8d543799a5befa4b34296a358a84a7db622f",
+      "sourceHead": "f0261e14b1b56189d0aa2c23239dba2cb34de477",
       "route": "alice",
       "routeStatus": "active",
       "predecessor": "S35-C1=A",
@@ -11149,8 +11149,8 @@
           "controlsWithinViewport": true,
           "screenshot": {
             "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-git\\artifacts\\evidence\\ep07-08-route-runtime\\alice-active-360x640-S35.png",
-            "sha256": "c5712a07b6e68ee9dbb1a48c25afc2d420fde26e8755cf97075ced5caebbf693",
-            "bytes": 50454
+            "sha256": "580326c4f08dfd078e59fbaf3b8de2c6823d544f22f97c35b06a753f9b4b48c3",
+            "bytes": 82777
           }
         },
         {
@@ -11210,7 +11210,7 @@
               "S01",
               "S26"
             ],
-            "runId": "ep07-08-S26-1791027436017",
+            "runId": "ep07-08-S26-1791039229962",
             "revision": 2,
             "migrationNotice": false
           }
@@ -11252,7 +11252,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027436017",
+            "runId": "ep07-08-S26-1791039229962",
             "revision": 13,
             "migrationNotice": false
           }
@@ -11294,7 +11294,7 @@
               "S26",
               "S27"
             ],
-            "runId": "ep07-08-S26-1791027436017",
+            "runId": "ep07-08-S26-1791039229962",
             "revision": 23,
             "migrationNotice": false
           }
@@ -11338,7 +11338,7 @@
               "S27",
               "S59"
             ],
-            "runId": "ep07-08-S26-1791027436017",
+            "runId": "ep07-08-S26-1791039229962",
             "revision": 37,
             "migrationNotice": false
           }
@@ -11384,7 +11384,7 @@
               "S59",
               "S31"
             ],
-            "runId": "ep07-08-S26-1791027436017",
+            "runId": "ep07-08-S26-1791039229962",
             "revision": 49,
             "migrationNotice": false
           }
@@ -11433,7 +11433,7 @@
               "S31",
               "S62"
             ],
-            "runId": "ep07-08-S26-1791027436017",
+            "runId": "ep07-08-S26-1791039229962",
             "revision": 64,
             "migrationNotice": false
           }
@@ -11484,7 +11484,7 @@
               "S62",
               "S35"
             ],
-            "runId": "ep07-08-S26-1791027436017",
+            "runId": "ep07-08-S26-1791039229962",
             "revision": 74,
             "migrationNotice": false
           }
@@ -11536,7 +11536,7 @@
               "S35",
               "S63"
             ],
-            "runId": "ep07-08-S26-1791027436017",
+            "runId": "ep07-08-S26-1791039229962",
             "revision": 79,
             "migrationNotice": false
           }
