@@ -3681,7 +3681,7 @@ export const literaryLocaleBundles = {
           "S27.C000": {
             "title": "",
             "paragraphs": {
-              "S27.C000.P000": "The next morning Eric said the next place they had to sleep was less than three hours away, and Nick immediately suggested filming three locations on the road. Then Eric showed him a message from Inga: the boardwalk by the lake had been washed loose the day before, and local volunteers were going to replace two boards, collect debris blown in by the wind, and take apart the old fastenings. There was work for visitors—not heroic work, simply necessary work. If the group wanted to join, they had to arrive before ten and follow instructions.",
+              "S27.C000.P000": "The next morning Eric said their next overnight stop was less than three hours away, and Nick immediately suggested filming three locations on the road. Then Eric showed him a message from Inga: the boardwalk by the lake had been washed loose the day before, and local volunteers were going to replace two boards, collect debris blown in by the wind, and take apart the old fastenings. There was work for visitors—not heroic work, simply necessary work. If the group wanted to join, they had to arrive before ten and follow instructions.",
               "S27.C000.P001": "“Are you sure we won’t get in the way?” Alice asked.",
               "S27.C000.P002": "“I checked. Inga says there are four pairs of gloves, we shouldn’t film local people’s faces without asking, and no one is putting a saw in our hands.”",
               "S27.C000.P003": "Inga was waiting at the start of the trail in a red hat. She did not tell the visitors how important it was to protect nature. She handed them sacks, showed them where they could not walk, and asked them not to touch the boards stacked for repairs. Nick tried to lift a sack with one hand and discovered it held soaked rope rather than empty bottles. Damir took the other end. Eric went with Inga to fetch the tools. Under a bush, Alice found a child’s lost mitten, shook off the dirt, and put it in a separate bag.",
@@ -4454,7 +4454,7 @@ export const literaryLocaleBundles = {
           "S56.C005": {
             "title": "Common continuation",
             "paragraphs": {
-              "S56.C005.P000": "They paused for only a minute at the hotel door. Damir said he had liked the song, although he would never remember its name. Alice said perhaps he did not have to. She went upstairs listening to the music still carrying in from the street."
+              "S56.C005.P000": "They paused for only a minute at the hotel door. Damir said he had liked the song, although he would never remember its name. Alice said perhaps he did not have to. She went upstairs listening to the music still drifting in from the street."
             }
           },
           "S56.C006": {
@@ -6046,17 +6046,17 @@ export const literaryLocaleBundles = {
       ],
       "S27": [
         {
-          "question": "A few free minutes remain by the shore. What will Alice do?",
+          "question": "Nick is holding the raised camera but has not switched it on. How will Alice use the short pause?",
           "options": [
             {
               "code": "A",
-              "label": "Ask everyone to wait and take a group picture",
-              "text": "Nick put the camera on a stone and reached the others just in time for the shutter. Nobody had to pose for the frame."
+              "label": "Let him begin the conversation himself",
+              "text": "Alice did not tell Nick what to say. After the hard work, everyone needed a few quiet seconds before anyone asked permission to film."
             },
             {
               "code": "B",
-              "label": "Keep the moment without a group picture",
-              "text": "Alice remembered Damir holding the car door while Eric argued with Nick about the route. The camera stayed in the bag."
+              "label": "Notice the work they have done",
+              "text": "She looked at the wet gloves and the stacked boards. It mattered more not to hurry the conversation or turn a short break into a finished scene."
             }
           ]
         }
@@ -6080,272 +6080,272 @@ export const literaryLocaleBundles = {
       ],
       "S28": [
         {
-          "question": "Eric suggests turning off the planned trail. What will Alice do?",
+          "question": "After the breakfast conversation, what does Alice notice about Eric's habit of organising everything?",
           "options": [
             {
               "code": "A",
-              "label": "Agree to an unplanned stop",
-              "text": "They found a bench beside a small pier. Eric put away the map, and Alice realised she was no longer waiting for his next instruction."
+              "label": "Repeat the small promise aloud",
+              "text": "Alice repeated his promise to sit down and eat first. Eric was not used to hearing that care for the schedule should not replace breakfast itself."
             },
             {
               "code": "B",
-              "label": "Ask him to show where the trail leads first",
-              "text": "Eric pointed out the turn and let her choose the next step. When they returned to the car, both considered the walk their shared idea."
+              "label": "Leave the promise untested",
+              "text": "She smiled and did not turn tomorrow's breakfast into a test. If Eric started with the cups again, that would be his own choice."
             }
           ]
         }
       ],
       "S49": [
         {
-          "question": "Music is coming through an open door. What will Alice do?",
+          "question": "Eric has already offered Alice his hand. How will she answer his invitation?",
           "options": [
             {
               "code": "A",
-              "label": "Invite Eric to dance first",
-              "text": "“Can you dance?” he asked. “We’re about to find out,” Alice said, taking his hand."
+              "label": "Take his hand and continue the dance",
+              "text": "Alice placed her hand in his and let him lead the first step. The invitation had already been made; now they could hear the music without rushing."
             },
             {
               "code": "B",
-              "label": "Suggest simply standing together",
-              "text": "They listened to the music by the wall. A minute later Eric took her hand, but did not lead her anywhere against her will."
+              "label": "Answer with a smile and choose her pace",
+              "text": "Alice smiled and left her fingers in his for a second, but chose the pace herself. Eric waited for her answer before continuing the dance."
             }
           ]
         }
       ],
       "S29": [
         {
-          "question": "Nick suggests watching a difficult fragment together. What will Alice ask for?",
+          "question": "They have already watched the fragment twice. What does Alice need to clarify before deciding what happens to the forty seconds?",
           "options": [
             {
               "code": "A",
-              "label": "Keep her uncertainty in the frame",
-              "text": "Nick did not search for a more flattering take. Alice saw herself on the recording for the first time and did not want to look away."
+              "label": "Ask where another copy remains",
+              "text": "Alice asked him to show which versions and source files he counted as copies. She needed to understand the decision's boundaries before choosing the fragment's fate."
             },
             {
               "code": "B",
-              "label": "Show what he felt at the time",
-              "text": "Nick played the recording without sound and told her what he had been afraid of behind the camera. Alice listened without discussing the edit."
+              "label": "Clarify exactly what he would delete",
+              "text": "She asked whether only the edit or the source file would disappear. First she needed exact information, not a decision about the whole film."
             }
           ]
         }
       ],
       "S52": [
         {
-          "question": "Nick has found the lost glove. What will Alice do?",
+          "question": "The glove is still missing, and Nick has awkwardly called the search a date. What will Alice say?",
           "options": [
             {
               "code": "A",
-              "label": "Warm his cold hands with hers",
-              "text": "Nick stopped joking about the discovery. For a second, it seemed to both of them that they did not have to return to the conversation."
+              "label": "Return to the search without deciding for them",
+              "text": "Alice looked at Nick's wet hair and checked the entrances where they had already searched. The joke hung between them, but the glove still needed finding."
             },
             {
               "code": "B",
-              "label": "Suggest looking together for the other glove",
-              "text": "They turned the car upside down until Eric pointed to the back pocket of the seat. Nick admitted Alice had won."
+              "label": "Acknowledge the awkwardness and keep looking",
+              "text": "She gave a small smile at his failed joke and suggested checking the next stop. They could name the walk later; the lost thing could not wait."
             }
           ]
         }
       ],
       "S30": [
         {
-          "question": "Damir asks whether they could build a new habit together. What will Alice suggest?",
+          "question": "Damir has just told Alice about the possible interview. What does she need from his answer?",
           "options": [
             {
               "code": "A",
-              "label": "Speak plainly about what is difficult",
-              "text": "They agreed to stop when a conversation turned into a competition. Damir repeated her words to make sure he had understood."
+              "label": "Ask him to name the uncertainty honestly",
+              "text": "Alice asked him not to soften the answer for her. She needed to hear that Damir did not yet know whether he would take the possible job or what he wanted himself."
             },
             {
               "code": "B",
-              "label": "Start with one small shared task",
-              "text": "Alice asked him to make breakfast with her the next day. Damir said that this time he would ask before buying the ingredients."
+              "label": "Ask for facts, not a decision for both of them",
+              "text": "She asked what was already known about the place and the timing of the conversation. Alice needed information, not a ready-made decision about the two of them."
             }
           ]
         }
       ],
       "S55": [
         {
-          "question": "The horse named Noise will not approach the fence. What will Alice do?",
+          "question": "After the awkward, funny moment with Noise, they have stopped for water. How will Alice hold on to it?",
           "options": [
             {
               "code": "A",
-              "label": "Wait without reaching out",
-              "text": "Alice stood by the fence until the horse turned its head on its own. Damir noticed that she had not once tried to hurry him."
+              "label": "Laugh at how confused they both were",
+              "text": "Alice laughed again at their clumsy attempt to understand the horse. Damir smiled: water and a short pause brought the ordinary conversation back."
             },
             {
               "code": "B",
-              "label": "Ask the handler how to meet him",
-              "text": "The handler explained where it was safer to stand. Damir stepped away, leaving Alice room to decide for herself."
+              "label": "Admit that neither of them had to know at once",
+              "text": "She said that today they had guessed more than they knew. Damir nodded and set his cup down without turning it into another lesson."
             }
           ]
         }
       ],
       "S31": [
         {
-          "question": "Alice finds a story that does not belong in her article. What will she do?",
+          "question": "Marina is waiting for the outline, and Alice has already shown her the picture of the repaired path. Which working principle will she test before choosing the article's form?",
           "options": [
             {
               "code": "A",
-              "label": "Write it down only for herself",
-              "text": "She closed the notebook halfway through the page. Some details mattered even if they would never become material."
+              "label": "Separate observation from someone else's private story",
+              "text": "Alice marked which details she had seen herself and which could be used only with permission. That would let the article include Inga without closing the road to her."
             },
             {
               "code": "B",
-              "label": "Ask permission to return to the story later",
-              "text": "The person she had spoken to offered to write after the trip. Alice kept the contact without promising publication."
+              "label": "Check which words she can stand behind",
+              "text": "She reread her notes and left questions beside consent and accuracy. First she needed the editorial standard; only then could she choose the article's form."
             }
           ]
         }
       ],
       "S62": [
         {
-          "question": "In the bookshop, Alice is choosing what to take home. What will she choose?",
+          "question": "After the pool, Alice notices a morning without a camera or a deadline. What will she take from it?",
           "options": [
             {
               "code": "A",
-              "label": "Buy a book for pleasure",
-              "text": "She did not search for a practical justification for the purchase. The book sat heavily in her bag and somehow made the day lighter."
+              "label": "Notice that she chose the pace herself",
+              "text": "She understood that the morning became hers not because it gained a new plan, but because she chose its pace. The book she had already bought waited in her bag for the recipe, not another decision."
             },
             {
               "code": "B",
-              "label": "Choose a postcard of somewhere she wants to return to",
-              "text": "Alice addressed it to herself with today's date. She set no deadline for returning."
+              "label": "Let the morning remain outside the article",
+              "text": "Alice remembered the quiet by the water and did not turn it into a note. The book from the shop and its recipe page could remain hers even if the day never entered the article."
             }
           ]
         }
       ],
       "S32": [
         {
-          "question": "Eric's plans do not fit Alice's schedule. What will she do?",
+          "question": "Before choosing whether to continue, pause, or close the route, what does Alice need to clarify?",
           "options": [
             {
               "code": "A",
-              "label": "Name her own free time without yielding it",
-              "text": "Eric opened the calendar and offered two days that genuinely suited them both. Neither of them had to pretend that work did not exist."
+              "label": "Keep the right not to answer about winter today",
+              "text": "Alice stopped at the crossroads and reminded herself that liking someone did not require an immediate promise. First they needed real dates, not a winter decision made for two."
             },
             {
               "code": "B",
-              "label": "Ask to talk about expectations first",
-              "text": "They discovered they were not arguing about hours, but about who was always expected to adjust. Planning became easier after that."
+              "label": "Protect the work and the chance to talk later",
+              "text": "She separated today's closeness from the future calendar. She needed to keep her work and an honest conversation without answering the larger question in advance."
             }
           ]
         }
       ],
       "S50": [
         {
-          "question": "Eric puts away the map in an unfamiliar city. What will Alice suggest?",
+          "question": "After their walk through the city, what does Alice want to leave unhurried?",
           "options": [
             {
               "code": "A",
-              "label": "Choose a street at random",
-              "text": "They turned a corner and found a small bakery. Eric admitted he had not known it was there and bought two identical pastries."
+              "label": "Pause at a window for one more minute",
+              "text": "They stopped by a window and silently looked at a wooden bird among the postcards. Alice liked that this small choice needed no explanation."
             },
             {
               "code": "B",
-              "label": "Ask a passer-by for the way to the waterfront",
-              "text": "The answer took longer than the walk. Alice listened to the local accent, while Eric did not try to hurry the conversation for once."
+              "label": "Return to the group without explaining the whole day",
+              "text": "Alice suggested going back for dinner without giving the walk a final meaning. Eric agreed: not every good day had to become a plan at once."
             }
           ]
         }
       ],
       "S33": [
         {
-          "question": "Nick shows a teaser in which Alice recognises herself. What will she do?",
+          "question": "Access to the teaser is already closed and the shared file is deleted. What does Alice need to understand before choosing?",
           "options": [
             {
               "code": "A",
-              "label": "Say which moment she does not want shown publicly",
-              "text": "Nick marked the timeline and removed the shot from the shared version. He did not ask for an explanation."
+              "label": "Clarify what she needs from continuing",
+              "text": "Alice separated the file's repair from the question of trust. Before choosing, she needed to know whether she could continue if her boundaries were respected, not merely whether the file had been deleted."
             },
             {
               "code": "B",
-              "label": "Ask why he chose that moment",
-              "text": "Nick said he had wanted to show her alive, not flawless. Alice understood the intention, although they had not decided whether the shot should remain."
+              "label": "Name what she needs from a pause or an ending",
+              "text": "She set a boundary for herself: the decision had to concern the romantic route, not repeat the autopsy of a file that was already gone. Nick could not choose it for her."
             }
           ]
         }
       ],
       "S53": [
         {
-          "question": "Nick promised a day without the camera. What will Alice suggest?",
+          "question": "After breakfast and the bakery, what shared question remains for Alice on either the active line or the pause?",
           "options": [
             {
               "code": "A",
-              "label": "Invite him on a walk without a plan",
-              "text": "They left the house without checking the time. For the first time on the trip, Nick did not ask where the light would be best."
+              "label": "Separate a calm day from a promise to continue",
+              "text": "Alice noticed that an ordinary morning could be calm without a romantic conclusion. Nick put away his phone, and she did not turn that into a promise."
             },
             {
               "code": "B",
-              "label": "Suggest cooking a simple dinner together",
-              "text": "Nick mixed up the shelves of spices, and Alice did not rescue the dish immediately. The evening turned out tastier than they expected."
+              "label": "Understand which boundary to keep after the conversation",
+              "text": "She remembered the confirmation that the personal fragment had been deleted and the quiet of the morning. The day could stay kind without cancelling the pause or demanding a decision now."
             }
           ]
         }
       ],
       "S34": [
         {
-          "question": "Damir cancels the evening, and Alice needs to answer. What will she say?",
+          "question": "Alice has admitted that she became frightened after cancelling dinner herself. What will she hold on to before choosing?",
           "options": [
             {
               "code": "A",
-              "label": "Say it hurts, but offer to discuss why",
-              "text": "Damir did not make a joke of it. He explained what had happened. Alice did not agree with everything, but she stopped guessing."
+              "label": "Do not put her cancellation on Damir",
+              "text": "She named it precisely to herself: she had cancelled dinner, and the fear came afterwards. Now she had to decide what to do with that truth without making Damir responsible for it."
             },
             {
               "code": "B",
-              "label": "Suggest spending the evening separately",
-              "text": "She went for a walk, while Damir stayed to deal with his own things. In the morning they met without a quarrel that had been allowed to build."
+              "label": "Keep the route decision hers",
+              "text": "Alice did not ask Damir to fix her fear. He could state his boundaries, but the choice to continue, pause, or end remained hers."
             }
           ]
         }
       ],
       "S56": [
         {
-          "question": "What does Alice want to do during the dance with Damir?",
+          "question": "The music evening continues after both the active line and the pause. What can Alice choose now?",
           "options": [
             {
               "code": "A",
-              "label": "Move a little closer and hold his hand herself",
-              "text": "She shortened the distance without trying to recreate their old dance. Damir adjusted to her movement."
+              "label": "Stay with the music without the old script",
+              "text": "Alice listened to the new song and did not return the evening to the way they had danced before. The music was shared, but it did not require their old closeness."
             },
             {
               "code": "B",
-              "label": "Stay close, but let the song end without new promises",
-              "text": "She listened to the music and sometimes met his eyes. For the first time, silence did not mean that they were hiding something."
+              "label": "Leave without turning the evening into a test",
+              "text": "She decided to leave if that was more honest, without calling it punishment or a promise. One music evening did not have to decide their story."
             }
           ]
         }
       ],
       "S35": [
         {
-          "question": "Marina asks for an outline that does not reveal anyone else's private words. What will Alice offer?",
+          "question": "Which editorial standard will Alice apply before choosing the article's structure?",
           "options": [
             {
               "code": "A",
-              "label": "Facts and agreed quotes",
-              "text": "Alice listed the fragments she was already allowed to use. There were enough for an honest piece."
+              "label": "Check consent and accuracy for every supporting detail",
+              "text": "She separated her own observations, verified facts, and words cleared for publication. The structure could change without turning Inga into a preselected answer."
             },
             {
               "code": "B",
-              "label": "Name separately what will not enter the article",
-              "text": "She set the boundary without referring to anyone else's secrets. Marina received an answer about the work, not new gossip."
+              "label": "Ask whether the text can stand on honest observation",
+              "text": "Alice reread her notes and removed the urge to add someone else's confession for effect. She needed an article whose lines she could stand behind."
             }
           ]
         }
       ],
       "S63": [
         {
-          "question": "The concert has already begun. Where would Alice like to listen?",
+          "question": "Alice is already seated near the window. How will she notice that this evening is her own?",
           "options": [
             {
               "code": "A",
-              "label": "Move a little closer to the stage",
-              "text": "She changed seats and, for the first time that evening, stopped looking around for familiar faces."
+              "label": "Stay where she chose and listen more closely",
+              "text": "She felt the cool air by the window and focused on the music again. The seat was her choice, not an extension of someone else's route."
             },
             {
               "code": "B",
-              "label": "Stay by the wall and listen from farther away",
-              "text": "From there she could see the violinist and the windows. Alice kept time with the toe of her shoe."
+              "label": "Notice the evening without looking for familiar faces",
+              "text": "Alice let the music continue without checking who else might have come. It was enough that she had chosen this concert and stayed for it."
             }
           ]
         }
