@@ -33,7 +33,7 @@ The bounded source audit found and repaired these interaction-continuity defects
 
 The S26 route-lock transition was checked before and after `S26-C1`, after `S26-C90`, and after `S26-C91`. The S22 echo of `S17-C90` was checked against the Episode 5 premise and retains the original branch semantics.
 
-No source-level interaction continuity defect was found. No bounded RU+EN repair was required.
+No additional literary-manuscript continuity defects were found beyond the interaction-layer defects listed above. Those interaction-layer defects were repaired in RU canonical interaction data and EN localization; no further RU manuscript repair was required.
 
 ## Cross-episode cold read
 
