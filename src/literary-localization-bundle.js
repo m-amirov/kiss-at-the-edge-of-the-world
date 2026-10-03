@@ -6080,17 +6080,17 @@ export const literaryLocaleBundles = {
       ],
       "S28": [
         {
-          "question": "After the breakfast conversation, what does Alice notice about Eric's habit of organising everything?",
+          "question": "After asking Eric about tomorrow's breakfast, what does Alice want to leave in the conversation?",
           "options": [
             {
               "code": "A",
-              "label": "Clarify that it is an invitation, not an obligation",
-              "text": "Alice explained that tomorrow he could simply sit with everyone if he wanted to. Eric was not used to hearing that care for the schedule should not replace breakfast itself."
+              "label": "Keep the invitation simple",
+              "text": "Alice said that tomorrow he could simply sit with everyone if he wanted to. She did not need to turn one question into an obligation."
             },
             {
               "code": "B",
-              "label": "Do not turn breakfast into a test",
-              "text": "She smiled and did not decide in advance how Eric would behave tomorrow. If he started with the cups again, that would be his own choice."
+              "label": "Do not guess his answer in advance",
+              "text": "She smiled and did not decide for Eric whether he would agree. Tomorrow's breakfast could remain an ordinary invitation."
             }
           ]
         }
@@ -6267,7 +6267,7 @@ export const literaryLocaleBundles = {
       ],
       "S53": [
         {
-          "question": "After a day that gave them time to talk, what shared question remains for Alice on either the active line or the pause?",
+          "question": "After a calm day, what does Alice want to understand for herself?",
           "options": [
             {
               "code": "A",
@@ -6276,8 +6276,8 @@ export const literaryLocaleBundles = {
             },
             {
               "code": "B",
-              "label": "Understand which boundary to keep after the conversation",
-              "text": "She did not let a calm conversation cancel the pause or demand a decision right away. The day could stay kind without a new definition of their relationship."
+              "label": "Leave the question open",
+              "text": "A kind conversation did not require a new definition of their relationship. Alice could take her time and not turn closeness into an obligation."
             }
           ]
         }
@@ -6301,17 +6301,17 @@ export const literaryLocaleBundles = {
       ],
       "S56": [
         {
-          "question": "After an evening that unfolded differently on the active line and the pause, what can Alice keep for herself?",
+          "question": "What can Alice keep for herself after this evening?",
           "options": [
             {
               "code": "A",
               "label": "Remember a new melody without the old script",
-              "text": "Alice held on to the new song and did not return the evening to the way they had danced before. The music could remain shared without requiring their old closeness."
+              "text": "Alice held on to the new song and did not return it to the way they had danced before. The music could remain shared without requiring their old closeness."
             },
             {
               "code": "B",
-              "label": "Let the evening end without a verdict on the relationship",
-              "text": "She did not turn the evening into punishment or a promise. One shared impression did not have to decide their story."
+              "label": "Do not turn the evening into a verdict on the relationship",
+              "text": "She did not turn this impression into punishment or a promise. One good evening did not have to decide their story."
             }
           ]
         }
