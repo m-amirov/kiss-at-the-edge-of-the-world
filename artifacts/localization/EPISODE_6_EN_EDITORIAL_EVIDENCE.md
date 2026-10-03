@@ -29,6 +29,8 @@ Total: **349 paragraph slots**, 7 authored choices, and 12 extra interaction cho
 
 Every scene was checked for both extra beats, including the source paragraphs immediately before insertion and every authored branch that can affect the localized flow. The audit confirms that each premise is already present in the RU manuscript, each EN response answers only that premise, and no response invents a relationship fact, promise, consent event, or character knowledge.
 
+The bounded source audit found and repaired these interaction-continuity defects without changing IDs or option codes: `S23-C90` no longer invents Eric's unavailable calling days; `S24-C91` no longer preselects a ten-minute joint viewing and preserves both authored invitations; `S25-C90` is neutral across `eveningState=eric/nick/damir/alice`; `S25-C91` asks for Alice's needed clarity before `S25-C1` without assuming a confirmed interview date; `S58-C90` is neutral across `S58-C1=A/B/C/D`; and `S26-C91` remains valid for the no-romantic-person route D by asking about the principle carried into the decision. The expanded runtime audit checks every authored branch combination, not only representative branch A.
+
 The S26 route-lock transition was checked before and after `S26-C1`, after `S26-C90`, and after `S26-C91`. The S22 echo of `S17-C90` was checked against the Episode 5 premise and retains the original branch semantics.
 
 No source-level interaction continuity defect was found. No bounded RU+EN repair was required.
@@ -50,3 +52,4 @@ The read covers Episode 4 → Episode 5 → Episode 6 and checks travel chronolo
 - Structural contract: `tests/narrative/localization-contract.test.mjs`
 - Generated bundle: `src/literary-localization-bundle.js`
 - Runtime semantic evidence: `artifacts/evidence/ep05-06-interaction-continuity.json`
+- Repair evidence: all Episode 6 combinations are recorded per extra beat in `artifacts/evidence/ep05-06-interaction-continuity.json`; the current run reports 156 semantic cases, zero contradictions, zero premature premises, zero canonical-line duplicates, zero invented events, and zero branch-invalid premises.

@@ -30,7 +30,7 @@ Total: **360 paragraph slots**, 12 authored choices, and 12 extra interaction ch
 
 The cold read covers the end of Episode 4 into all Episode 5 scenes and the hand-off to Episode 6. It checks the travel-day chronology, Höfn location, Marina/article obligations, notebook and draft consent, Eric's pace/control behavior, Nick's filming/privacy behavior, and Damir's past/current-life boundary. The localized prose preserves who knows each fact and does not turn an extra interaction into a new promise, consent event, or relationship fact.
 
-No source-level interaction continuity defect was found. No RU repair was required.
+The bounded source audit found and repaired these interaction-continuity defects without changing IDs or option codes: `S18-C90` no longer duplicates `S18.C000.P019`; `S18-C91` now assigns the thermos return to Alice and does not repeat the later lid-contact; `S19-C91` is neutral after every `S19-C1=A/B/C` and adds no photograph or consent event; and `S20-C91` is grounded between `S20.C000.P028` and `S20.C000.P029`, before Damir's two-year disclosure. The expanded runtime audit checks every authored branch combination, not only representative branch A.
 
 ## Adaptation decisions
 
@@ -46,3 +46,4 @@ No source-level interaction continuity defect was found. No RU repair was requir
 - Structural contract: `tests/narrative/localization-contract.test.mjs`
 - Generated bundle: `src/literary-localization-bundle.js`
 - Runtime semantic evidence: `artifacts/evidence/ep05-06-interaction-continuity.json`
+- Repair evidence: all Episode 5 combinations are recorded per extra beat in `artifacts/evidence/ep05-06-interaction-continuity.json`; the current run reports 156 semantic cases, zero contradictions, zero premature premises, zero canonical-line duplicates, zero invented events, and zero branch-invalid premises.
