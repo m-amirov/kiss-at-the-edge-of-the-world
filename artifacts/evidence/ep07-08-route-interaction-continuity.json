@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "status": "PASS",
-  "testedSourceHead": "f0261e14b1b56189d0aa2c23239dba2cb34de477",
-  "generatedAt": "2026-10-03T14:54:06.310Z",
+  "testedSourceHead": "1e9551a6f3515d08ca6753958f7201773c4b1033",
+  "generatedAt": "2026-10-03T19:03:56.596Z",
   "episode7": {
     "sceneOrder": [
       "S27",
@@ -95,6 +95,7 @@
     "actionOwnershipMismatchCount": 0,
     "authoredChoicePreselectionCount": 0,
     "temporalRewindCount": 0,
+    "internalStateLeakCount": 0,
     "leakedMarkupCount": 0,
     "cyrillicCount": 0
   },
@@ -105,7 +106,7 @@
   },
   "browser": {
     "status": "PASS",
-    "testedSourceHead": "f0261e14b1b56189d0aa2c23239dba2cb34de477",
+    "testedSourceHead": "1e9551a6f3515d08ca6753958f7201773c4b1033",
     "currentHeadMatch": true,
     "evidencePath": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-git\\artifacts\\evidence\\ep07-08-route-browser.json"
   },
@@ -259,9 +260,9 @@
         "paragraph": 7
       },
       "followingSourceText": "Он удивился сильнее, чем если бы она предложила изменить маршрут. Оказалось, за несколько лет работы он привык приходить первым и проверять, завели ли машину, заказаны ли продукты, есть ли горячая вода. По выходным сестра звала его на завтрак, но он всё равно вставал раньше остальных и мыл за ними посуду, пока они ещё ели.",
-      "renderedQuestion": "After the breakfast conversation, what does Alice notice about Eric's habit of organising everything?",
+      "renderedQuestion": "After asking Eric about tomorrow's breakfast, what does Alice want to leave in the conversation?",
       "selectedOption": "A",
-      "resultingText": "Alice explained that tomorrow he could simply sit with everyone if he wanted to. Eric was not used to hearing that care for the schedule should not replace breakfast itself."
+      "resultingText": "Alice said that tomorrow he could simply sit with everyone if he wanted to. She did not need to turn one question into an obligation."
     },
     {
       "episode": 7,
@@ -285,9 +286,9 @@
         "paragraph": 7
       },
       "followingSourceText": "Он удивился сильнее, чем если бы она предложила изменить маршрут. Оказалось, за несколько лет работы он привык приходить первым и проверять, завели ли машину, заказаны ли продукты, есть ли горячая вода. По выходным сестра звала его на завтрак, но он всё равно вставал раньше остальных и мыл за ними посуду, пока они ещё ели.",
-      "renderedQuestion": "After the breakfast conversation, what does Alice notice about Eric's habit of organising everything?",
+      "renderedQuestion": "After asking Eric about tomorrow's breakfast, what does Alice want to leave in the conversation?",
       "selectedOption": "B",
-      "resultingText": "She smiled and did not decide in advance how Eric would behave tomorrow. If he started with the cups again, that would be his own choice."
+      "resultingText": "She smiled and did not decide for Eric whether he would agree. Tomorrow's breakfast could remain an ordinary invitation."
     },
     {
       "episode": 7,
@@ -784,7 +785,7 @@
         "paragraph": 0
       },
       "followingSourceText": "Они долго выбирали открытку с самым странным изображением города, затем отправили её сестре Ника. На улице Алиса поняла, что не запомнила половину вывесок. Ей это понравилось: не каждый день обязан стать чьим-то материалом.",
-      "renderedQuestion": "After a day that gave them time to talk, what shared question remains for Alice on either the active line or the pause?",
+      "renderedQuestion": "After a calm day, what does Alice want to understand for herself?",
       "selectedOption": "A",
       "resultingText": "Alice noticed that a calm day did not have to become a romantic conclusion. She did not turn that quiet into a promise."
     },
@@ -811,9 +812,9 @@
         "paragraph": 0
       },
       "followingSourceText": "Они долго выбирали открытку с самым странным изображением города, затем отправили её сестре Ника. На улице Алиса поняла, что не запомнила половину вывесок. Ей это понравилось: не каждый день обязан стать чьим-то материалом.",
-      "renderedQuestion": "After a day that gave them time to talk, what shared question remains for Alice on either the active line or the pause?",
+      "renderedQuestion": "After a calm day, what does Alice want to understand for herself?",
       "selectedOption": "B",
-      "resultingText": "She did not let a calm conversation cancel the pause or demand a decision right away. The day could stay kind without a new definition of their relationship."
+      "resultingText": "A kind conversation did not require a new definition of their relationship. Alice could take her time and not turn closeness into an obligation."
     },
     {
       "episode": 8,
@@ -838,7 +839,7 @@
         "paragraph": 0
       },
       "followingSourceText": "— Без расписания съёмок, — добавила Алиса. Ник на секунду перестал улыбаться, а потом предложил конкретную кофейню возле её редакции. Они не бронировали столик; ей понравилось, что он не сделал из приглашения шутку.",
-      "renderedQuestion": "After a day that gave them time to talk, what shared question remains for Alice on either the active line or the pause?",
+      "renderedQuestion": "After a calm day, what does Alice want to understand for herself?",
       "selectedOption": "A",
       "resultingText": "Alice noticed that a calm day did not have to become a romantic conclusion. She did not turn that quiet into a promise."
     },
@@ -865,9 +866,9 @@
         "paragraph": 0
       },
       "followingSourceText": "— Без расписания съёмок, — добавила Алиса. Ник на секунду перестал улыбаться, а потом предложил конкретную кофейню возле её редакции. Они не бронировали столик; ей понравилось, что он не сделал из приглашения шутку.",
-      "renderedQuestion": "After a day that gave them time to talk, what shared question remains for Alice on either the active line or the pause?",
+      "renderedQuestion": "After a calm day, what does Alice want to understand for herself?",
       "selectedOption": "B",
-      "resultingText": "She did not let a calm conversation cancel the pause or demand a decision right away. The day could stay kind without a new definition of their relationship."
+      "resultingText": "A kind conversation did not require a new definition of their relationship. Alice could take her time and not turn closeness into an obligation."
     },
     {
       "episode": 7,
@@ -1152,9 +1153,9 @@
         "paragraph": 0
       },
       "followingSourceText": "Алиса не смотрела на время. Она слушала ударные, иногда ловила взгляд Дамира и думала о том, что можно узнать знакомого человека без необходимости вернуть прежний вечер.",
-      "renderedQuestion": "After an evening that unfolded differently on the active line and the pause, what can Alice keep for herself?",
+      "renderedQuestion": "What can Alice keep for herself after this evening?",
       "selectedOption": "A",
-      "resultingText": "Alice held on to the new song and did not return the evening to the way they had danced before. The music could remain shared without requiring their old closeness."
+      "resultingText": "Alice held on to the new song and did not return it to the way they had danced before. The music could remain shared without requiring their old closeness."
     },
     {
       "episode": 8,
@@ -1179,9 +1180,9 @@
         "paragraph": 0
       },
       "followingSourceText": "Алиса не смотрела на время. Она слушала ударные, иногда ловила взгляд Дамира и думала о том, что можно узнать знакомого человека без необходимости вернуть прежний вечер.",
-      "renderedQuestion": "After an evening that unfolded differently on the active line and the pause, what can Alice keep for herself?",
+      "renderedQuestion": "What can Alice keep for herself after this evening?",
       "selectedOption": "B",
-      "resultingText": "She did not turn the evening into punishment or a promise. One shared impression did not have to decide their story."
+      "resultingText": "She did not turn this impression into punishment or a promise. One good evening did not have to decide their story."
     },
     {
       "episode": 8,
@@ -1206,9 +1207,9 @@
         "paragraph": 0
       },
       "followingSourceText": "Алиса предложила попробовать что-нибудь, чего они оба раньше не ели. Дамир показал вывеску маленького кафе, мимо которого проходил утром. Они договорились зайти туда, если группа не поменяет план.",
-      "renderedQuestion": "After an evening that unfolded differently on the active line and the pause, what can Alice keep for herself?",
+      "renderedQuestion": "What can Alice keep for herself after this evening?",
       "selectedOption": "A",
-      "resultingText": "Alice held on to the new song and did not return the evening to the way they had danced before. The music could remain shared without requiring their old closeness."
+      "resultingText": "Alice held on to the new song and did not return it to the way they had danced before. The music could remain shared without requiring their old closeness."
     },
     {
       "episode": 8,
@@ -1233,9 +1234,9 @@
         "paragraph": 0
       },
       "followingSourceText": "Алиса предложила попробовать что-нибудь, чего они оба раньше не ели. Дамир показал вывеску маленького кафе, мимо которого проходил утром. Они договорились зайти туда, если группа не поменяет план.",
-      "renderedQuestion": "After an evening that unfolded differently on the active line and the pause, what can Alice keep for herself?",
+      "renderedQuestion": "What can Alice keep for herself after this evening?",
       "selectedOption": "B",
-      "resultingText": "She did not turn the evening into punishment or a promise. One shared impression did not have to decide their story."
+      "resultingText": "She did not turn this impression into punishment or a promise. One good evening did not have to decide their story."
     },
     {
       "episode": 7,

@@ -16,7 +16,7 @@ const episode7 = ['S27', 'S59', 'S28', 'S49', 'S29', 'S52', 'S30', 'S55', 'S31',
 const episode8 = ['S32', 'S50', 'S33', 'S53', 'S34', 'S56', 'S35', 'S63'];
 const targetScenes = [...episode7, ...episode8];
 const sceneMap = new Map(literarySeason.scenes.map((scene) => [scene.id, scene]));
-const counterNames = ['contradictionCount', 'prematurePremiseCount', 'duplicatedCanonicalLineCount', 'branchInvalidPremiseCount', 'crossRouteLeakCount', 'inventedRelationshipCount', 'inventedConsentCount', 'inventedCharacterKnowledgeCount', 'routeStateMismatchCount', 'actionOwnershipMismatchCount', 'authoredChoicePreselectionCount', 'temporalRewindCount', 'leakedMarkupCount', 'cyrillicCount'];
+const counterNames = ['contradictionCount', 'prematurePremiseCount', 'duplicatedCanonicalLineCount', 'branchInvalidPremiseCount', 'crossRouteLeakCount', 'inventedRelationshipCount', 'inventedConsentCount', 'inventedCharacterKnowledgeCount', 'routeStateMismatchCount', 'actionOwnershipMismatchCount', 'authoredChoicePreselectionCount', 'temporalRewindCount', 'internalStateLeakCount', 'leakedMarkupCount', 'cyrillicCount'];
 const counters = Object.fromEntries(counterNames.map((name) => [name, 0]));
 const failures = [];
 const cases = [];
@@ -50,6 +50,7 @@ const ownershipForbidden = { S34: /Damir cancelled|Дамир отменил/iu,
 const routeLeakForbidden = { eric: /\bNick\b|\bDamir\b|Ник|Дамир/u, nick: /\bEric\b|\bDamir\b|Эрик|Дамир/u, damir: /\bEric\b|\bNick\b|Эрик|Ник/u, alice: /\bEric\b|\bNick\b|\bDamir\b|Эрик|Ник|Дамир/u };
 const consentForbidden = { S27: /Inga agreed|Инга согласилась/iu, S29: /Alice decided.*film|Алиса решила.*фильм/iu, S33: /Nick removed.*again|Ник.*снова удалил/iu };
 const knowledgeForbidden = { S62: /will buy|выберет.*книг|bookshop.*choos/iu, S52: /has found|вернул.*перчатк/iu };
+const internalStateTerminology = /active line|active route|routeStatus|routeIntent|активная линия|активная ветка/iu;
 const allCanonicalText = (scene) => scene.chunks.flatMap((chunk) => chunk.paragraphs).join('\n');
 const allCanonicalMaterial = (scene) => scene.chunks.flatMap((chunk) => [chunk.title, ...chunk.paragraphs]).join('\n');
 const temporalContracts = {
@@ -86,6 +87,10 @@ for (const sceneId of targetScenes) {
 const interactionReport = validateLiteraryInteractionLocale(interactionBeats, { interactionBeats: Object.fromEntries(targetScenes.map((sceneId) => [sceneId, literaryLocaleBundles.en.interactionBeats[sceneId]])) }, { sceneIds: targetScenes });
 parity.interactionParity = interactionReport.status;
 assertMachine('contradictionCount', interactionReport.status === 'PASS', { scope: 'interaction parity', reason: interactionReport.errors });
+for (const [locale, beats] of Object.entries({ ru: interactionBeats, en: literaryLocaleBundles.en.interactionBeats })) for (const sceneId of targetScenes) {
+  const c90 = beats[sceneId]?.[0]; const visible = [c90?.question, ...(c90?.options ?? []).flatMap((option) => [option.label, option.text])].filter(Boolean).join('\n');
+  assertMachine('internalStateLeakCount', !internalStateTerminology.test(visible), { scene: sceneId, locale, visible });
+}
 
 for (const [routeIntent, contract] of Object.entries(routes)) for (const sceneId of contract.scenes) for (const predecessor of predecessorStates[sceneId] ?? [null]) {
   const scene = sceneMap.get(sceneId); const choices = baseChoices(contract.code, predecessor); const actualStatus = routeStatus(choices); const canonical = allCanonicalText(scene);
