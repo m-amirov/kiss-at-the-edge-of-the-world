@@ -7277,17 +7277,17 @@ export const literaryLocaleBundles = {
       ],
       "S37": [
         {
-          "question": "Eric and Alice compare two free days after the trip. How do they make an arrangement?",
+          "question": "After an honest conversation, what does Alice want to keep for herself?",
           "options": [
             {
               "code": "A",
-              "label": "Name their own days and ask which ones coincide",
-              "text": "Alice took out her calendar. Eric marked the dates that did not require cancelling either his work or her deadline."
+              "label": "Do not undo what was said for an easier version",
+              "text": "She let the conversation remain what it had been, without trying to make it gentler or final at once."
             },
             {
               "code": "B",
-              "label": "Suggest choosing a day after they are home, without rushing",
-              "text": "Eric agreed that they would call when both were home. The possibility of meeting did not become another obligation on the road."
+              "label": "Remember their care with each other",
+              "text": "She kept the fact that they had spoken plainly and had not demanded an answer beyond the one already given."
             }
           ]
         }
@@ -7311,51 +7311,51 @@ export const literaryLocaleBundles = {
       ],
       "S38": [
         {
-          "question": "Nick suggests a day without trying to make it interesting. What should Alice choose?",
+          "question": "What does Alice notice in this ordinary day?",
           "options": [
             {
               "code": "A",
-              "label": "Choose a shared domestic task",
-              "text": "They went through the bags and found a lost cable. Nick called it the best shot of the day, though no camera was nearby."
+              "label": "Not demand a special meaning from it",
+              "text": "She liked that the day did not have to prove anything: it already held enough that had been lived and understood."
             },
             {
               "code": "B",
-              "label": "Suggest going out for groceries",
-              "text": "By the bread shelf they argued about breakfast. Alice suddenly pictured a similar argument at home and was not frightened by the thought."
+              "label": "Keep it without a conclusion about the future",
+              "text": "Alice did not turn a calm day into a promise. It was enough to remember it as it had been."
             }
           ]
         }
       ],
       "S54": [
         {
-          "question": "For the first time, Nick does not joke during a familiar chorus. What should Alice do?",
+          "question": "After Nick's confession on the porch, what does Alice want to hold in this moment?",
           "options": [
             {
               "code": "A",
-              "label": "Ask what he is feeling now",
-              "text": "He answered briefly, but did not hide behind the next joke. Alice took his hand."
+              "label": "Answer his honesty without a ready decision",
+              "text": "She did not hide behind a neat reply. His words already mattered, even before she knew what her answer would be."
             },
             {
               "code": "B",
-              "label": "Stay close without demanding an explanation",
-              "text": "Nick laid his hand over her fingers. A few minutes were enough for them to hear the song through."
+              "label": "Leave room for silence between them",
+              "text": "Alice stayed beside him and let the confession stand without an immediate continuation. Nothing had to become settled in that minute."
             }
           ]
         }
       ],
       "S39": [
         {
-          "question": "They have agreed to try three separate dates. What will Alice clarify?",
+          "question": "What does Alice not want to repeat after this conversation?",
           "options": [
             {
               "code": "A",
-              "label": "Each date must be new, not a replay of the past",
-              "text": "Damir agreed and suggested beginning in the city where Alice lived now, rather than in one of their old places."
+              "label": "Not rebuild the past as a ready-made couple",
+              "text": "She held on to one plain thought: the past could not be put back together merely because it had once been familiar."
             },
             {
               "code": "B",
-              "label": "They will choose the first place together",
-              "text": "“Let’s first see what interests us both today,” Alice said. Damir nodded and took out a map of her city."
+              "label": "Let the present decision be its own",
+              "text": "Alice did not rewrite what she had heard into a more comforting story. The present decision deserved accuracy."
             }
           ]
         }
@@ -7379,34 +7379,34 @@ export const literaryLocaleBundles = {
       ],
       "S40": [
         {
-          "question": "Alice is finishing a text she does not have to clear with anyone. What should she do?",
+          "question": "Where does Alice draw the line between what is published and what is private?",
           "options": [
             {
               "code": "A",
-              "label": "Keep a personal observation in it",
-              "text": "She did not strike out the line about her own uncertainty. The page became more honest, even if the editor would never see it."
+              "label": "Keep the article within its editorial responsibility",
+              "text": "She separated verified material from what belonged only in her notebook. Honesty did not require mixing the two texts."
             },
             {
               "code": "B",
-              "label": "Set the text aside and go for a walk",
-              "text": "Alice closed the laptop mid-sentence. When she came back, the important thought had not gone anywhere."
+              "label": "Keep a private note outside the article",
+              "text": "Alice closed her notebook beside the working edits. A private observation could remain hers without posing as a published fact."
             }
           ]
         }
       ],
       "S64": [
         {
-          "question": "After the short path, Alice returns to the guesthouse. What should she do before leaving?",
+          "question": "On the walk back, what does Alice take with her from this walk?",
           "options": [
             {
               "code": "A",
-              "label": "Open her book over breakfast",
-              "text": "She did not rush to invent another conclusion for the walk. Pages and hot coffee were more than enough to begin the day."
+              "label": "Not turn the found hat into a grand sign",
+              "text": "She smiled at the small help she had given and walked on, letting the road remain simply a road to the guesthouse."
             },
             {
               "code": "B",
-              "label": "Write down one detail she noticed on the road",
-              "text": "A simple line about the lost hat appeared in her notebook. Alice left it without a lesson attached."
+              "label": "Keep the solitary step her own",
+              "text": "Alice listened to the wind and to her own step. She did not have to hurry the return to understand the value of the walk."
             }
           ]
         }
@@ -7481,17 +7481,17 @@ export const literaryLocaleBundles = {
       ],
       "S44": [
         {
-          "question": "Eric has written down a possible date and does not demand an immediate answer. What will Alice clarify?",
+          "question": "What does Alice want to hold onto before goodbye?",
           "options": [
             {
               "code": "A",
-              "label": "First check that it works for both of them",
-              "text": "They named days that might suit and left final confirmation until work schedules were clear."
+              "label": "Thank him for the letter without taking his story for herself",
+              "text": "She thought of the envelope, his sister, and the photograph of the failed dinner. There was already enough trust in this goodbye without new promises."
             },
             {
               "code": "B",
-              "label": "Ask what else needs checking",
-              "text": "They listed practical details without turning them into a promise for a lifetime."
+              "label": "Leave the photograph part of their shared road",
+              "text": "Alice looked at the picture and at Eric. The awkward evening was their memory, but it did not need to become a decision about the future at once."
             }
           ]
         }
@@ -7549,17 +7549,17 @@ export const literaryLocaleBundles = {
       ],
       "S48": [
         {
-          "question": "Before the group photograph, everyone is still gathering around the table. Where will Alice stand?",
+          "question": "What does Alice choose in the imperfect group photograph?",
           "options": [
             {
               "code": "A",
-              "label": "Beside the person she wants to talk to after the picture",
-              "text": "She chose her place without explanation. Nick set the timer and came back to the others."
+              "label": "Let the laughter matter more than a perfect angle",
+              "text": "She looked at the chosen photograph and smiled: no one had tried to make the moment neater or more significant than it was."
             },
             {
               "code": "B",
-              "label": "Suggest everyone mix up for a funny picture",
-              "text": "On the first attempt no one stood straight. Everyone laughed, and Nick asked them to take it again."
+              "label": "Keep the picture without another take",
+              "text": "Alice decided that three attempts were enough. The photograph was honest precisely because it did not correct all their awkwardness."
             }
           ]
         }
