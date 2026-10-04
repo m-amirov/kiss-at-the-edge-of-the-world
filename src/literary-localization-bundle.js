@@ -6873,7 +6873,7 @@ export const literaryLocaleBundles = {
           ]
         },
         {
-          "question": "Before S25-C1, what clarity does Alice want to keep for herself?",
+          "question": "Before the next decision, what clarity does Alice want to keep for herself?",
           "options": [
             {
               "code": "A",
@@ -7571,6 +7571,13 @@ export const literaryLocaleBundles = {
           "S01-C90",
           "On the road, Alice remembered Nick joking about the socks and, for the first time, felt like part of the group rather than a guest observer.",
           "On the road, she remembered asking Nick about the others right away. It was easier to meet people when she chose the first question herself."
+        ]
+      ],
+      "S03": [
+        [
+          "S65-C90",
+          "That morning, Alice remembered that she had not hidden her question about Damir behind a joke. It did not make the conversation easy, but it let her stay honest with herself.",
+          "That morning, Alice remembered letting Damir leave the question about his scar unanswered. The boundary remained clear even after an unexpected question."
         ]
       ],
       "S08": [
