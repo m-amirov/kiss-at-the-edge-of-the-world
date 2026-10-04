@@ -4145,6 +4145,318 @@ export const literaryLocaleBundles = {
           }
         }
       },
+      "S36": {
+        "title": "Day 17. A Place to Stop",
+        "chunks": {
+          "S36.C000": {
+            "title": "",
+            "paragraphs": {
+              "S36.C000.P000": "They loaded the suitcases into the car in silence. Outside the hotel, the rain had finally stopped, but no one called it a reward for yesterday. Nick checked the straps on the equipment bags, Damir brought Alice the water bottle she had left behind, and Eric checked their departure against the official road information. Alice took her usual seat, where the glove from the first day was still under it. She picked it up and put it in the door pocket: over these weeks, things in the car had become shared, though each had once belonged to someone.",
+              "S36.C000.P001": "By midday they were on a long, exposed stretch of road. Nick suggested putting on their terrible song. Eric said they first had to stop and check the pressure in one tyre: the car was pulling slightly, almost imperceptibly when they set off. He pulled into an approved lay-by, inspected the wheels and called the rental company. The employee recommended the nearest service station; carrying on without checking the tyre would have been foolish.",
+              "S36.C000.P002": "While they waited, Alice watched each of them endure the unscheduled pause differently. Damir fetched coffee for everyone. Nick went out to the barrier, took two pictures of the empty road, then put the camera away. Eric spoke with the mechanic and finally sat down on a bench. Nick asked if he was too tired. Eric said he was, and added that this was no reason to make everyone wait for him in the car.",
+              "S36.C000.P003": "At the garage they found a small piece of metal in the tyre. The repair took less than an hour. Nothing disastrous had happened; they had simply missed one of their planned stops. Alice asked whether they could replace it with a walk near their next overnight stop. Everyone agreed, and the final long drive suddenly felt less like ticking off a list written in advance."
+            }
+          },
+          "S36.C001": {
+            "title": "Choice S36-C1 — How does Alice use the unexpected pause?",
+            "paragraphs": {}
+          },
+          "S36.C002": {
+            "title": "A. Suggest a short walk before they return to the car",
+            "paragraphs": {
+              "S36.C002.P000": "They followed the marked path from the garage to a small café. Nick photographed the sign, Damir bought a packet of biscuits for the road, and Eric was the first to admit that the coffee was better than at their previous stop. Alice wrote nothing down for the article. The half-hour walk was enough."
+            }
+          },
+          "S36.C003": {
+            "title": "B. Stay in the café and talk to whoever wants to",
+            "paragraphs": {
+              "S36.C003.P000": "Alice took a table by the window. A minute later Nick sat down beside her, then Damir; Eric arrived with the repair receipt. They listened to local radio, tried to guess the next song, and for the first time in days discussed something that was neither work nor someone else’s feelings."
+            }
+          },
+          "S36.C004": {
+            "title": "Common continuation",
+            "paragraphs": {
+              "S36.C004.P000": "They reached their overnight stop late in the evening. Low mountains on the Snæfellsnes peninsula began to appear beyond the window. Alice knew the trip was ending, but she no longer tried to write its final paragraph in advance. She still had time to live through what she might later want to write about."
+            }
+          }
+        }
+      },
+      "S37": {
+        "title": "Day 18. Eric Without a List",
+        "chunks": {
+          "S37.C000": {
+            "title": "If `routeStatus=paused`",
+            "paragraphs": {
+              "S37.C000.P000": "Eric was waiting outside the guesthouse with two paper cups of coffee. He had bought one for Alice out of habit, but did not offer it at once: first he asked whether she wanted to go out with him today. Alice could have said no, and he was prepared for that. She said she wanted to walk and finish saying what had been left between them after Akureyri. They went along the lit street without a single romantic gesture. Eric spoke about the school’s winter sessions, but for the first time did not offer her a place beside his future schedule. Alice told him about her city series and admitted that she had missed him yesterday, though she herself had asked for a pause. He did not move closer in reply; he asked what she wanted now. It was a question about a walk, not an agreement for the year ahead."
+            }
+          },
+          "S37.C001": {
+            "title": "If `routeStatus=active`",
+            "paragraphs": {
+              "S37.C001.P000": "The next morning, Eric left a map in her room. Not as a test or a demonstration of change. He was simply offering Alice a free day together: coffee, ridiculous postcards, a museum, if they both felt like going in. It was cold outside. Alice chose a shop selling woollen hats and bought one that was bright and far too large. Eric put it on first so she could judge the fit. He looked so solemn that Alice photographed him on her phone before she laughed. The picture remained hers alone.",
+              "S37.C001.P001": "They stopped at a small fishing museum. Eric read a few captions in Icelandic and told Alice not everything, but the story of a woman who had kept a weather journal for her neighbours for years. Alice asked whether he had a notebook like that at home. He said he did, though half its pages were now taken up with lists from his sister. She asked him to show her, one day, a page on which he had written something for himself. Eric said he would think about it, without turning it into a grand vow.",
+              "S37.C001.P002": "At the end of the street they found a café with three empty tables and one enormous window. Alice sat where she could watch the passers-by. Eric sat beside her rather than opposite. He told her how his sister had once persuaded him to perform at a family evening with a song he did not know. Alice pictured him as a child with sheet music and wanted to hear the story again at home, in another city."
+            }
+          },
+          "S37.C002": {
+            "title": "Choice S37-C1 — What does Alice want after the trip?",
+            "paragraphs": {}
+          },
+          "S37.C003": {
+            "title": "A. Suggest a specific meeting after they return home",
+            "paragraphs": {
+              "S37.C003.P000": "“Let’s see when two days off line up,” she said. “I’m not moving tomorrow, and I’m not asking you to cancel work. But I do want to see you again.”",
+              "S37.C003.P001": "Eric took out his phone. Not to buy a ticket at once: together they marked two possible dates and agreed to confirm one after he spoke to the head of training. Alice finished her coffee. The unfinishedness was comfortingly specific: for the first time, their next meeting depended on two people, not on the programme of a trip."
+            }
+          },
+          "S37.C004": {
+            "title": "B. Leave the closeness to the journey and end the romance",
+            "paragraphs": {
+              "S37.C004.P000": "“I was happy with you, but I don’t want to make a promise I can’t keep right now.”",
+              "S37.C004.P001": "Eric looked out of the window for a long time. Then he asked Alice to leave him the photograph of her in the ridiculous hat. She sent it and put her phone away. They walked back to the guesthouse together; after that, each went to their own room. Their romance was over, but the road they had shared remained shared."
+            }
+          },
+          "S37.C005": {
+            "title": "Common continuation",
+            "paragraphs": {
+              "S37.C005.P000": "That evening Nick asked whether they had managed a day without a map. Alice said they had almost not got lost. Eric looked at her over his cup and said he was not sure where his hat was now. Nick proposed drawing up a missing-person notice, and for the first time in days Alice laughed for a reason other than someone trying to cheer her up."
+            }
+          },
+          "S37.C006": {
+            "title": "Choice S37-C2 — How will Alice suggest that Eric spend a free morning?",
+            "paragraphs": {}
+          },
+          "S37.C007": {
+            "title": "A. Ask him to watch the sunrise with her",
+            "paragraphs": {
+              "S37.C007.P000": "“Only if you want to as well,” Alice added. They went out to the lit path before the others woke. Eric brought one thermos for the two of them, and for the first time in a week Alice did not ask how much time they had."
+            }
+          },
+          "S37.C008": {
+            "title": "B. Invite him to make a late breakfast together",
+            "paragraphs": {
+              "S37.C008.P000": "Alice found flour in the kitchen and asked Eric to help with the dough. He read the recipe twice and still mixed up the bowls. Their breakfast was later than planned, but Nick was the first to ask for seconds."
+            }
+          },
+          "S37.C009": {
+            "title": "If `S50-C2=A`",
+            "paragraphs": {
+              "S37.C009.P000": "During their free day Eric remembered the story of the family board game. Alice suggested they invent one ridiculous rule for the two of them, and they laughed without even taking the box out."
+            }
+          },
+          "S37.C010": {
+            "title": "If `S50-C2=B`",
+            "paragraphs": {
+              "S37.C010.P000": "On their free day Eric showed Alice a message from his sister: she had received the wooden bird and promised to send a photograph. Alice recognised the little gift they had chosen together."
+            }
+          }
+        }
+      },
+      "S38": {
+        "title": "Day 18. The Boring Day That Worked",
+        "chunks": {
+          "S38.C000": {
+            "title": "If `routeStatus=paused`",
+            "paragraphs": {
+              "S38.C000.P000": "Nick met Alice at the guesthouse stairs and asked whether she wanted to walk without a camera. She agreed, warning him that she was not ready to discuss continuing the romance. They picked up bread, delivered a parcel to the owner, and came back by another street. Nick said the producer had confirmed that the disputed footage had been removed from every working cut. Alice thanked him for a concrete action, but did not promise it would now be easy to trust him again. They reached the square and sat on a bench because they were tired."
+            }
+          },
+          "S38.C001": {
+            "title": "If `routeStatus=active`",
+            "paragraphs": {
+              "S38.C001.P000": "Nick woke before Alice and brought two tickets to a small local museum to her door instead of a camera. She was surprised: Nick had rarely planned anything that could not be filmed. He said the tickets could be returned if she would rather just walk. Alice chose the museum, then wanted to stop at a shop for coffee. Nick did not pretend that was a boring choice.",
+              "S38.C001.P001": "An old photograph of a family celebration hung by the museum window. No one in it was looking at the lens; the photographer had caught a moment nobody had meant to show anyone else. Nick studied it for a long time. He admitted that when he began to care seriously for someone, he wanted at once to invent an extraordinary adventure for the two of them. As though an ordinary walk and breakfast together were not enough to make someone stay.",
+              "S38.C001.P002": "Alice did not answer with a ready-made reassurance. She remembered their day with the lost glove and said it had been good precisely because they had looked for someone else’s thing and shivered at bus stops. Nick laughed: he was still carrying the returned glove in his jacket, though it was not his. He had promised to post it to Inga, but had never chosen an envelope.",
+              "S38.C001.P003": "They found an envelope in a little shop. Nick wrote the address and date as though he were closing a scene in the edit. Alice asked him to show her the postmark when he sent it. He remarked that she had already invented a continuation for their boring day, and this time he did not try to invent a more interesting one."
+            }
+          },
+          "S38.C002": {
+            "title": "Choice S38-C1 — What does Alice suggest to Nick?",
+            "paragraphs": {}
+          },
+          "S38.C003": {
+            "title": "A. Spend an ordinary weekend together at home after the trip",
+            "paragraphs": {
+              "S38.C003.P000": "“If you want to see me again, come to my city. We can go to the market, make dinner, and perhaps go nowhere else.”",
+              "S38.C003.P001": "Nick asked whether he could bring at least a camera for himself. Alice said he could, but she did not have to be in his shots. “I can leave it in the room altogether,” he replied. They chose a possible day off without buying tickets in advance."
+            }
+          },
+          "S38.C004": {
+            "title": "B. Leave their story as a beautiful trip",
+            "paragraphs": {
+              "S38.C004.P000": "“I liked being with you,” Alice said. “But I don’t want to promise a weekend while I still don’t know what I want from us.”",
+              "S38.C004.P001": "Nick nodded. He did not propose one last perfect shot. Instead, he asked whether she wanted to walk with him to the post office to send the glove. She agreed; it was not a continuation of the romance, simply something they had started together."
+            }
+          },
+          "S38.C005": {
+            "title": "Common continuation",
+            "paragraphs": {
+              "S38.C005.P000": "That evening Nick put the envelope with the postal receipt in front of Alice. He really had sent the glove. For the film it was an unremarkable event. Alice tucked the receipt into the book she was taking home and thought that perhaps one day she would show it to him again."
+            }
+          },
+          "S38.C006": {
+            "title": "Choice S38-C2 — How will Alice suggest that Nick remember this ordinary day?",
+            "paragraphs": {}
+          },
+          "S38.C007": {
+            "title": "A. Invite him on a date without jokes about filming",
+            "paragraphs": {
+              "S38.C007.P000": "“Could you just go for coffee with me?” Alice asked. Nick looked at her, made sure she really awaited an answer, and said yes. At the table he tried to joke about the weather and laughed before she did."
+            }
+          },
+          "S38.C008": {
+            "title": "B. Suggest they choose a book for each other in the shop",
+            "paragraphs": {
+              "S38.C008.P000": "They found two cheap books and exchanged them without reading the blurbs. Alice got an old story collection; Nick, a book about garden birds. He said he was now obliged to find out what, exactly, he liked most about it."
+            }
+          },
+          "S38.C009": {
+            "title": "If `S53-C2=A`",
+            "paragraphs": {
+              "S38.C009.P000": "On their walk Nick reminded Alice of the café they had agreed to visit after they returned. For the first time she imagined their meeting in an ordinary city—and wanted that day to come."
+            }
+          },
+          "S38.C010": {
+            "title": "If `S53-C2=B`",
+            "paragraphs": {
+              "S38.C010.P000": "On their walk Nick quoted a line from Alice’s book and asked her not to reveal the ending. She said she had not finished his collection herself and would not hurry now."
+            }
+          }
+        }
+      },
+      "S39": {
+        "title": "Day 18. Do Not Rebuild the Old Couple",
+        "chunks": {
+          "S39.C000": {
+            "title": "If `routeStatus=paused`",
+            "paragraphs": {
+              "S39.C000.P000": "Alice and Damir met by the guesthouse counter while the others chose a route. She suggested they walk to a café and talk. Damir did not pretend the pause had ended automatically. They ordered drinks separately and sat at a small table. Alice said she did not want to test all her old fears on him again. Damir said he did not want every new day judged by events from two years ago either. They spoke calmly and fell silent now and then; for the first time, silence did not mean one of them was waiting for an apology from the other."
+            }
+          },
+          "S39.C001": {
+            "title": "If `routeStatus=active`",
+            "paragraphs": {
+              "S39.C001.P000": "They left the guesthouse without a plan. Damir suggested walking to the bakery, but Alice chose to look first in a little shop selling musical postcards. Damir admitted he did not even know such things existed. Alice pressed a button on one card and a sharp festive tune burst out. Damir flinched; Alice laughed louder than she intended. The shopkeeper looked up, then smiled when she saw their faces.",
+              "S39.C001.P001": "At the café they ordered two different desserts. Once, Damir had always known which cake Alice would choose. Now he only asked whether she wanted to try his. She took a piece, then gave him some of hers. Their conversation gradually moved to things that had not been part of their past: a new series Damir watched after night shifts; Alice’s friend who had opened a workshop; a book she had bought during the trip and had not yet finished.",
+              "S39.C001.P002": "Damir’s phone rang. A colleague was asking him to cover one of their future shifts. Damir stepped away, briefly explained that he did not yet know his work schedule for next month, and promised to answer later. When he returned, he did not recount the call in detail or ask Alice to approve his decision. She felt an odd relief: his life remained his own, and that did not mean he had already moved away from her."
+            }
+          },
+          "S39.C002": {
+            "title": "Choice S39-C1 — What does Alice suggest after the trip?",
+            "paragraphs": {}
+          },
+          "S39.C003": {
+            "title": "A. Set three new dates in different places",
+            "paragraphs": {
+              "S39.C003.P000": "“If we continue, I don’t want to go straight back to how we lived two years ago,” Alice said. “Let’s meet three times first, and each time one of us chooses the place.”",
+              "S39.C003.P001": "Damir suggested beginning in her city and admitted he had forgotten where a good bakery had opened there. Alice said that was even better: they would have a reason to find a new one."
+            }
+          },
+          "S39.C004": {
+            "title": "B. End the attempt to become a couple again",
+            "paragraphs": {
+              "S39.C004.P000": "“I’m glad we have seen each other as different people,” Alice said. “But I don’t want to continue the romance after we return.”",
+              "S39.C004.P001": "Damir looked at her, then at his empty cup. He said it mattered to him as well to keep this day as a good memory, rather than a reason to argue about the future again. They finished their coffee and walked back to the car together."
+            }
+          },
+          "S39.C005": {
+            "title": "Common continuation",
+            "paragraphs": {
+              "S39.C005.P000": "It began to drizzle again outside. Alice raised her collar; Damir did not rush to adjust her coat. He simply asked whether she wanted to stop for hot bread for the group. She agreed. They still had something shared to do, and it did not require knowing the ending of their story in advance."
+            }
+          },
+          "S39.C006": {
+            "title": "Choice S39-C2 — How will Alice show Damir that she wants to know him anew?",
+            "paragraphs": {}
+          },
+          "S39.C007": {
+            "title": "A. Ask him to tell her about his most ordinary day",
+            "paragraphs": {
+              "S39.C007.P000": "Damir was surprised by the question at first. Then he told her about an old mug in the residents’ room and the neighbour’s dog that met him at the door. Alice answered with a story about her favourite bakery near the editorial office. There was no trace of their old couple in those stories."
+            }
+          },
+          "S39.C008": {
+            "title": "B. Invite him on a walk before breakfast herself",
+            "paragraphs": {
+              "S39.C008.P000": "“Not on the way to your interview,” Alice added. Damir smiled and suggested they meet by the stairs in the morning. She set her alarm ten minutes earlier than usual and was unexpectedly glad of it."
+            }
+          },
+          "S39.C009": {
+            "title": "If `S56-C2=A`",
+            "paragraphs": {
+              "S39.C009.P000": "Near the café Alice saw the dish she and Damir had meant to try after the music evening. She suggested going in, and he agreed without first checking a work schedule out of habit."
+            }
+          },
+          "S39.C010": {
+            "title": "If `S56-C2=B`",
+            "paragraphs": {
+              "S39.C010.P000": "During the walk Damir quietly repeated the unfamiliar chorus Alice had tried to show him. She picked up the second line and, for the first time that day, did not remember their old shared song."
+            }
+          }
+        }
+      },
+      "S40": {
+        "title": "Day 18. A Paragraph That Needs No Approval",
+        "chunks": {
+          "S40.C000": {
+            "title": "",
+            "paragraphs": {
+              "S40.C000.P000": "Alice opened her laptop by the window and read the first paragraph she had written in Keflavík. Then she had written about people changing plans as if she stood aside and watched. Now the text contained specific days when she herself had chosen to stay, leave, help, refrain, or simply buy a book. Marina sent a note about the headline, but not the ending: there was no ending yet.",
+              "S40.C000.P001": "She spread tickets, receipts, postcards and the boardwalk photograph across the table. One receipt bore the date of her meeting with Damir; another, the day she bought herself a book. What mattered was not which receipt came last. What mattered was that she could leave any of it out of the article if she did not want to turn life into material."
+            }
+          },
+          "S40.C001": {
+            "title": "Choice S40-C1 — What does Alice keep private?",
+            "paragraphs": {}
+          },
+          "S40.C002": {
+            "title": "A. Write the final paragraph without details about the people close to her",
+            "paragraphs": {
+              "S40.C002.P000": "She described the road and the work of people who remained after the tourists left. Her friends’ names appeared only in approved passages. The rest stayed in the notebook she did not send to the editors."
+            }
+          },
+          "S40.C003": {
+            "title": "B. Write about her own choice as the central change",
+            "paragraphs": {
+              "S40.C003.P000": "Alice remembered going to a concert alone for the first time and wrote about time she did not have to prove to anyone. Marina replied that it was a strong ending, then asked her to remove two sentences that were too general. Alice removed them without regret."
+            }
+          },
+          "S40.C004": {
+            "title": "Common continuation",
+            "paragraphs": {
+              "S40.C004.P000": "Outside the window Nick was arguing with Damir over who had last used the charger. Eric knocked on the neighbouring room’s door because he had mixed up the keys. Alice smiled and closed the laptop. She was part of this group even when she did not turn every conversation into a scene in her romance."
+            }
+          },
+          "S40.C005": {
+            "title": "Choice S40-C2 — What will Alice choose for her last free evening?",
+            "paragraphs": {}
+          },
+          "S40.C006": {
+            "title": "A. Go alone to a local music evening",
+            "paragraphs": {
+              "S40.C006.P000": "Alice bought a ticket at the entrance and sat by the window. The music was unfamiliar, but she found a few familiar rhythms in it. After the concert she wrote the band’s name in her notes—this time for herself alone."
+            }
+          },
+          "S40.C007": {
+            "title": "B. Write to a friend and arrange to meet at home",
+            "paragraphs": {
+              "S40.C007.P000": "Alice sent her friend a message: “When I’m back, let’s not talk about my work trip. Let’s just walk.” The reply came almost at once: “Agreed. I choose the coffee.” Alice smiled at her phone."
+            }
+          },
+          "S40.C008": {
+            "title": "If `S63-C2=A`",
+            "paragraphs": {
+              "S40.C008.P000": "Returning to her notes, Alice found the concert ticket and reread her own short entry. It held more of her present life than ten working headlines."
+            }
+          },
+          "S40.C009": {
+            "title": "If `S63-C2=B`",
+            "paragraphs": {
+              "S40.C009.P000": "Returning to her notes, Alice checked the schedule of the venue a neighbour from the concert had told her about. For her next trip she already had one plan of her own."
+            }
+          }
+        }
+      },
       "S49": {
         "title": "Day 14. A Dance That Needs No Occasion",
         "chunks": {
@@ -4250,6 +4562,55 @@ export const literaryLocaleBundles = {
             "title": "B. Invite him to choose a small present for his sister together",
             "paragraphs": {
               "S50.C008.P000": "They went into a shop and chose a wooden bird for Eric’s sister. Alice insisted that he sign the card himself. Eric took a long time choosing the words while she stood beside him and looked at the window."
+            }
+          }
+        }
+      },
+      "S51": {
+        "title": "Day 19. An Ordinary Dinner",
+        "chunks": {
+          "S51.C000": {
+            "title": "",
+            "paragraphs": {
+              "S51.C000.P000": "Eric brought groceries to the little kitchen, then discovered he did not know how to make the recipe Alice had chosen from the book bought near Mývatn. They agreed not to look online until they had tried their own way. The first page said to leave the dough for two hours, and dinner was needed much sooner. Alice suggested making something else, but Eric had already tipped flour across the table. They had to wipe it up with his sleeve because the paper towels were gone.",
+              "S51.C000.P001": "While the potatoes boiled, they played cards they found in a drawer. Neither knew the rules. Eric insisted he would remember them by the third round, while Alice quietly tucked the winning cards beneath her elbow because he was distracted by the boiling pot. When the cheating came to light, he demanded a rematch after dinner. Alice agreed, but warned that from now on she would play fairly only with a written contract. Eric proposed drawing one on a paper napkin.",
+              "S51.C000.P002": "Rain tapped against the window. Alice wiped the table; Eric set out two plates. It was the most ordinary room: borrowed crockery, a chair with one uneven leg, an instruction sheet for the cooker in another language. Alice suddenly wanted to know what his kitchen looked like in winter, when no one had to pack to leave in the morning. She said so aloud. Eric replied that there was a pot plant on his windowsill which his sister was always rescuing from his irregular watering. Alice suggested buying him another, hardier one. He said they should save the current one first.",
+              "S51.C000.P003": "They sat down to dinner. The dough never rose, but the potatoes were good. They ate them straight from the pot, without making the failed recipe a metaphor for their relationship. When Eric bent for a fallen napkin, Alice touched his shoulder so he would straighten up. He looked up, saw her face close to his, and smiled."
+            }
+          },
+          "S51.C001": {
+            "title": "Choice S51-C1 — How does the evening end?",
+            "paragraphs": {}
+          },
+          "S51.C002": {
+            "title": "A. Stay together for another hour",
+            "paragraphs": {
+              "S51.C002.P000": "They cleared the dishes, played music softly and finished the game. Alice lost by a single card; Eric agreed not to tell Nick. Before bed he walked her to the door and kissed her when she lingered there of her own accord."
+            }
+          },
+          "S51.C003": {
+            "title": "B. Say good night and finish the day separately",
+            "paragraphs": {
+              "S51.C003.P000": "“I want to remember exactly this kind of dinner,” Alice said. “No grand continuation tonight.”",
+              "S51.C003.P001": "Eric walked her to the door, handed over the scarf she had forgotten, and wished her good night. In her room Alice found the napkin with the drawn contract for fair card games in her pocket."
+            }
+          },
+          "S51.C004": {
+            "title": "Common continuation",
+            "paragraphs": {
+              "S51.C004.P000": "The next morning they would return to Reykjavík. Alice did not know whether one of their possible meetings would happen in a month: Eric still had to check the dates against work. But for the first time she pictured not an ideal date by the ocean, but an ordinary evening in her own kitchen—with someone unafraid of failed dough."
+            }
+          },
+          "S51.C005": {
+            "title": "If `S37-C2=A`",
+            "paragraphs": {
+              "S51.C005.P000": "Over dinner Eric remembered the sunrise walk Alice had suggested herself, and for a minute left his list of tasks in his pocket. She smiled; they were happy even without a next stop assigned."
+            }
+          },
+          "S51.C006": {
+            "title": "If `S37-C2=B`",
+            "paragraphs": {
+              "S51.C006.P000": "Over dinner Eric took out a bowl and reminded her how they had mixed up the dough that morning. Alice said she could now tell his serious look over a recipe from real worry."
             }
           }
         }
@@ -4365,6 +4726,56 @@ export const literaryLocaleBundles = {
           }
         }
       },
+      "S54": {
+        "title": "Day 19. No Jokes During the Chorus",
+        "chunks": {
+          "S54.C000": {
+            "title": "",
+            "paragraphs": {
+              "S54.C000.P000": "The guesthouse owner brought out an old microphone and asked whether the guests wanted karaoke. Nick raised his hand first. Alice, knowing his habit of turning everything into a performance, braced herself for a long joke. Instead, he chose a quiet song she had once hummed in the car. On the second verse Nick lost his place; he did not try to hide it and simply asked her to help.",
+              "S54.C000.P001": "They finished the song together by the window. During the final chorus Nick was not looking into the room. He was looking at Alice, and she felt her cheeks grow warm. It was funny and touching at once: someone who spoke so easily to everyone suddenly did not know what to do with his hands without a camera or microphone.",
+              "S54.C000.P002": "After the song they went out to the porch. Wind pushed dry leaves across the ground. Nick wanted to say something, but first asked if she was cold. Alice said a little, and took his arm herself. He drew a deep breath.",
+              "S54.C000.P003": "“I want to see you after the trip,” he said. “Even if that day we just buy bread and go home.”",
+              "S54.C000.P004": "Alice looked at the dark guesthouse window. Inside, someone was already choosing the next song, and the music was too loud for a perfect confession. She liked that Nick did not try to wait for the perfect moment."
+            }
+          },
+          "S54.C001": {
+            "title": "Choice S54-C1 — Alice’s answer",
+            "paragraphs": {}
+          },
+          "S54.C002": {
+            "title": "A. Answer with words",
+            "paragraphs": {
+              "S54.C002.P000": "“I do too. Just promise you will not film me choosing bread.”",
+              "S54.C002.P001": "“I won’t promise,” Nick said, then immediately corrected himself. “I promise I’ll ask. But I think you’d like it better if this time I forgot the camera altogether.”"
+            }
+          },
+          "S54.C003": {
+            "title": "B. Answer with a short line from the song",
+            "paragraphs": {
+              "S54.C003.P000": "Alice hummed the last line of their song so quietly that only Nick could hear. He smiled and stepped closer. For the first time all evening, she did not want anyone to remember it on video."
+            }
+          },
+          "S54.C004": {
+            "title": "Common continuation",
+            "paragraphs": {
+              "S54.C004.P000": "They went back inside, where Eric was trying to persuade Damir to choose the worst song of the trip. Nick sat beside Alice and took her hand beneath the table. A minute later they both let go so they could applaud the others. Nothing in their world changed abruptly. But Alice was already looking forward to tomorrow."
+            }
+          },
+          "S54.C005": {
+            "title": "If `S38-C2=A`",
+            "paragraphs": {
+              "S54.C005.P000": "Before the music evening, Nick reminded Alice of the coffee she had invited him to without any camera at all. He said he would like to repeat it at home, even if there was no reason for a beautiful shot."
+            }
+          },
+          "S54.C006": {
+            "title": "If `S38-C2=B`",
+            "paragraphs": {
+              "S54.C006.P000": "Before the music evening Nick took out the book about birds Alice had chosen for him and showed her the bookmark. She laughed: he really had read it, rather than kept it as a souvenir."
+            }
+          }
+        }
+      },
       "S55": {
         "title": "Day 14. A Horse Named Noise",
         "chunks": {
@@ -4471,6 +4882,54 @@ export const literaryLocaleBundles = {
             "title": "B. Teach him the chorus of an unfamiliar song",
             "paragraphs": {
               "S56.C008.P000": "Damir mixed up the words twice, and Alice could not find the rhythm at all. They laughed and decided to leave the attempt for their next walk. They had acquired a chorus no one needed to tie to the past."
+            }
+          }
+        }
+      },
+      "S57": {
+        "title": "Day 19. Sunrise Without the Old Words",
+        "chunks": {
+          "S57.C000": {
+            "title": "",
+            "paragraphs": {
+              "S57.C000.P000": "Damir woke Alice with a brief message: the bakery would open in twenty minutes, and he was going for bread. She could have left it unanswered. Instead, she put on her coat and joined him at the stairs. They were both sleepy. Damir held two cups of coffee and admitted he had bought them in advance, though he did not know whether she would come. Alice took one; the coffee was too strong, but warm.",
+              "S57.C000.P001": "The bakery smelled of bread and cinnamon. The seller asked how many rolls they wanted. Damir was about to order two identical ones out of habit, then looked at Alice. She chose a savoury roll he had never seen on her plate before. He took a sweet one. Outside they traded a bite, and both agreed the other choice was good too.",
+              "S57.C000.P002": "Almost no one used the lit path to the harbour. Alice remembered the morning of their first trip together years ago: then, they had thought there was enough time ahead for everything. Now exactly two days remained, and she did not want to spend them comparing the two. Damir spoke of what he had liked at the farm: the horse that refused to move, the instructor who did not hurry, and her unexpectedly loud laugh under the helmet. Alice laughed again, but not at a photograph this time.",
+              "S57.C000.P003": "At a bench Damir stopped. He did not take the first step—perhaps he remembered their old mistakes too well. Alice set her cup on the board, went to him and kissed him. The kiss was new. Not because they had forgotten the past, but because no one was trying to reconstruct it from memory now."
+            }
+          },
+          "S57.C001": {
+            "title": "Choice S57-C1 — After the kiss",
+            "paragraphs": {}
+          },
+          "S57.C002": {
+            "title": "A. Stay close and agree on the next meeting",
+            "paragraphs": {
+              "S57.C002.P000": "Alice put her arms around Damir and said she wanted to see him at home when they both had a free evening. He nodded and offered to send his schedule as soon as it was ready. She said she would send hers as well."
+            }
+          },
+          "S57.C003": {
+            "title": "B. Stop and keep some time for herself",
+            "paragraphs": {
+              "S57.C003.P000": "Alice drew back first. She did not regret the kiss, but said that until the end of the trip she did not want to make new promises. “All right,” Damir said. They finished their rolls and walked back side by side, without trying to guess each other’s next words."
+            }
+          },
+          "S57.C004": {
+            "title": "Common continuation",
+            "paragraphs": {
+              "S57.C004.P000": "When they returned, they found Nick at the stairs: he was looking for his charger and was certain he had left it in the car. Alice suggested checking the socket in the hall. The charger turned up there a minute later. For the rest of the morning they prepared to leave and laughed over how many things they had managed to misplace in three weeks."
+            }
+          },
+          "S57.C005": {
+            "title": "If `S39-C2=A`",
+            "paragraphs": {
+              "S57.C005.P000": "At sunrise Alice remembered Damir’s story about the neighbour’s dog and asked whether it still met him at the door. He told her a recent story, and they laughed without returning in their thoughts to the two years apart."
+            }
+          },
+          "S57.C006": {
+            "title": "If `S39-C2=B`",
+            "paragraphs": {
+              "S57.C006.P000": "At sunrise Damir met Alice at the stairs, as she herself had suggested the day before. She looked at him and realised that this was exactly the simple moment she had been waiting for."
             }
           }
         }
@@ -4617,6 +5076,46 @@ export const literaryLocaleBundles = {
             "title": "Common continuation",
             "paragraphs": {
               "S59.C005.P000": "That evening Inga sent them a picture of the repaired boardwalk. Nick suggested printing it and sticking it to the side of the car. Eric said they had to ask the car’s owner first. Alice saved the picture in the article folder and a separate copy for herself. Sometimes a day stayed with you not because of what happened to you, but because of what you managed to do together."
+            }
+          }
+        }
+      },
+      "S60": {
+        "title": "Day 19. Ridiculous Souvenirs",
+        "chunks": {
+          "S60.C000": {
+            "title": "",
+            "paragraphs": {
+              "S60.C000.P000": "The kitchen light went out at the very moment Nick opened the grocery bag. The guesthouse owner looked in with a torch and said the building had a temporary power cut; she had portable lamps, but they could not use the cooker for now. They settled at the table with bread, cheese and hot tea from thermoses. Nick tried to tell a scary story, but by the second sentence Damir discovered that, in the dark, he had put a slice of lemon on his bread. The story did not survive.",
+              "S60.C000.P001": "Alice took the postcard she had bought from her pocket. Eric brought a funny wooden bird on a stand, Nick a paper napkin with a crooked map of their road, and Damir a small chocolate bar with the filling Alice had come to love. They decided to exchange ridiculous souvenirs: not expensive presents, but things that might make someone remember the road."
+            }
+          },
+          "S60.C001": {
+            "title": "Choice S60-C1 — What will Alice keep?",
+            "paragraphs": {}
+          },
+          "S60.C002": {
+            "title": "A. The wooden bird",
+            "paragraphs": {
+              "S60.C002.P000": "Eric set it in front of Alice, and the bird’s head fell off. Nick suggested calling it contemporary art. Alice found adhesive tape in her bag; by the end of the evening the bird stood straight, though its head tilted a little to one side."
+            }
+          },
+          "S60.C003": {
+            "title": "B. The napkin with the drawn map",
+            "paragraphs": {
+              "S60.C003.P000": "Nick gave her the napkin with a solemn expression, as though it were the expedition’s official route. Alice slipped it into her book. Years later she might not remember a single straight line on that map, but she would certainly remember the day they searched for someone else’s glove."
+            }
+          },
+          "S60.C004": {
+            "title": "C. The chocolate she can eat at once",
+            "paragraphs": {
+              "S60.C004.P000": "Damir offered to share it with everyone. Alice opened the wrapper and broke the bar into four uneven pieces. Only the shining foil remained on the table; everyone agreed that made a suitable souvenir too."
+            }
+          },
+          "S60.C005": {
+            "title": "Common continuation",
+            "paragraphs": {
+              "S60.C005.P000": "The lights came back just as they were about to turn in. Nick wanted to put on music, but Eric asked to leave one more minute of quiet. Alice looked at her friends: over the past weeks they had said many needless things to one another, and many necessary ones. For now, it was enough simply to sit together. Tomorrow they would return to Reykjavík."
             }
           }
         }
@@ -4807,6 +5306,53 @@ export const literaryLocaleBundles = {
             "title": "B. Ask the person beside her about the next concert",
             "paragraphs": {
               "S63.C007.P000": "The woman beside her told Alice where the musicians would play next. Alice wrote down the venue and thanked her. It felt good to plan something of her own in a city where tomorrow she might be entirely alone."
+            }
+          }
+        }
+      },
+      "S64": {
+        "title": "Day 19. A Short Road of Her Own",
+        "chunks": {
+          "S64.C000": {
+            "title": "",
+            "paragraphs": {
+              "S64.C000.P000": "In the morning Alice checked the weather and the notice about the local path. The route was short, and the guesthouse owner drew two landmarks on a sheet of paper so she would not turn onto the closed section. Alice told the group when she would be back and left alone. It was not a performance of independence or an attempt to avoid someone’s questions. She simply wanted to walk a few kilometres without matching anyone else’s pace.",
+              "S64.C000.P001": "The wind came from the ocean. At the first viewpoint Alice sat on a bench and realised she had forgotten a pen. Her phone had plenty of room for notes, but she did not open the work folder. Instead, she recorded a short voice note to herself: what she had liked about the trip, whom she wanted to see at home, which book she had still not read, and why she wanted to return to Iceland one day without an editorial assignment.",
+              "S64.C000.P002": "On the way back she met a woman with a dog. The woman asked whether Alice had seen a lost child’s hat. Alice had not, but helped check the nearest bench; the hat was underneath it. The woman thanked her and walked back. Alice smiled at the coincidence: the whole trip had been full of lost things that did not always require a grand story."
+            }
+          },
+          "S64.C001": {
+            "title": "Choice S64-C1 — What does she decide on the way back?",
+            "paragraphs": {}
+          },
+          "S64.C002": {
+            "title": "A. Apply for an independent journalism project",
+            "paragraphs": {
+              "S64.C002.P000": "Alice opened a draft email to the editors and wrote three sentences about a new series. She did not send it while walking; back at the guesthouse, she read it again and only then pressed Send."
+            }
+          },
+          "S64.C003": {
+            "title": "B. Keep a free month after the trip for herself",
+            "paragraphs": {
+              "S64.C003.P000": "Alice opened her calendar and marked off a week without assignments. She wanted simply to be home, make breakfast and see friends. It was no less specific a plan than a new project."
+            }
+          },
+          "S64.C004": {
+            "title": "Common continuation",
+            "paragraphs": {
+              "S64.C004.P000": "That evening she returned to the group before dinner. Nick gave her a note from the owner—she was asking whether Alice wanted to leave the book on the exchange shelf. Alice decided to take it home. She still wanted to finish the stories she had chosen herself."
+            }
+          },
+          "S64.C005": {
+            "title": "If `S40-C2=A`",
+            "paragraphs": {
+              "S64.C005.P000": "On the path Alice remembered yesterday’s music and noticed that, for the first time on the trip, she wanted to return to a concert for reasons other than the article. She saved the thought in a voice note to herself."
+            }
+          },
+          "S64.C006": {
+            "title": "If `S40-C2=B`",
+            "paragraphs": {
+              "S64.C006.P000": "On the path Alice received a photograph of the café where she and her friend had agreed to meet after her return. Her next month now contained one pleasant date."
             }
           }
         }
@@ -6349,6 +6895,176 @@ export const literaryLocaleBundles = {
             }
           ]
         }
+      ],
+      "S36": [
+        {
+          "question": "While the mechanic checks the car, how will Alice spend the wait?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Offer the others coffee in the waiting area",
+              "text": "Nick took a table, Damir found hot water, and Eric stayed in touch with the mechanic."
+            },
+            {
+              "code": "B",
+              "label": "Stay with her notebook and let the others choose their own occupation",
+              "text": "Alice wrote a couple of lines about the unexpected stop without turning them into a required conversation for the whole group."
+            }
+          ]
+        }
+      ],
+      "S37": [
+        {
+          "question": "Eric and Alice compare two free days after the trip. How do they make an arrangement?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Name their own days and ask which ones coincide",
+              "text": "Alice took out her calendar. Eric marked the dates that did not require cancelling either his work or her deadline."
+            },
+            {
+              "code": "B",
+              "label": "Suggest choosing a day after they are home, without rushing",
+              "text": "Eric agreed that they would call when both were home. The possibility of meeting did not become another obligation on the road."
+            }
+          ]
+        }
+      ],
+      "S51": [
+        {
+          "question": "Dinner turns out much more ordinary than either expected. What should Alice do?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Ask Eric about his day without a polished version",
+              "text": "He remembered a broken tool and a long call with his sister. Alice found that she wanted a place in evenings like those too."
+            },
+            {
+              "code": "B",
+              "label": "Tell him about an awkward mistake at work",
+              "text": "Eric laughed and admitted that he had mixed up dates that morning. An ordinary evening became easier after two imperfect stories."
+            }
+          ]
+        }
+      ],
+      "S38": [
+        {
+          "question": "Nick suggests a day without trying to make it interesting. What should Alice choose?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Choose a shared domestic task",
+              "text": "They went through the bags and found a lost cable. Nick called it the best shot of the day, though no camera was nearby."
+            },
+            {
+              "code": "B",
+              "label": "Suggest going out for groceries",
+              "text": "By the bread shelf they argued about breakfast. Alice suddenly pictured a similar argument at home and was not frightened by the thought."
+            }
+          ]
+        }
+      ],
+      "S54": [
+        {
+          "question": "For the first time, Nick does not joke during a familiar chorus. What should Alice do?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Ask what he is feeling now",
+              "text": "He answered briefly, but did not hide behind the next joke. Alice took his hand."
+            },
+            {
+              "code": "B",
+              "label": "Stay close without demanding an explanation",
+              "text": "Nick laid his hand over her fingers. A few minutes were enough for them to hear the song through."
+            }
+          ]
+        }
+      ],
+      "S39": [
+        {
+          "question": "They have agreed to try three separate dates. What will Alice clarify?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Each date must be new, not a replay of the past",
+              "text": "Damir agreed and suggested beginning in the city where Alice lived now, rather than in one of their old places."
+            },
+            {
+              "code": "B",
+              "label": "They will choose the first place together",
+              "text": "“Let’s first see what interests us both today,” Alice said. Damir nodded and took out a map of her city."
+            }
+          ]
+        }
+      ],
+      "S57": [
+        {
+          "question": "Sunrise comes before they have finished talking. What should Alice do?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Suggest meeting the light in silence",
+              "text": "Damir sat beside her on the cold step. When the sun rose, neither of them repeated an old promise."
+            },
+            {
+              "code": "B",
+              "label": "Say what Alice hopes for from the next day",
+              "text": "She named one small thing: breakfast together, without talking about who they had once been. Damir agreed."
+            }
+          ]
+        }
+      ],
+      "S40": [
+        {
+          "question": "Alice is finishing a text she does not have to clear with anyone. What should she do?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Keep a personal observation in it",
+              "text": "She did not strike out the line about her own uncertainty. The page became more honest, even if the editor would never see it."
+            },
+            {
+              "code": "B",
+              "label": "Set the text aside and go for a walk",
+              "text": "Alice closed the laptop mid-sentence. When she came back, the important thought had not gone anywhere."
+            }
+          ]
+        }
+      ],
+      "S64": [
+        {
+          "question": "After the short path, Alice returns to the guesthouse. What should she do before leaving?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Open her book over breakfast",
+              "text": "She did not rush to invent another conclusion for the walk. Pages and hot coffee were more than enough to begin the day."
+            },
+            {
+              "code": "B",
+              "label": "Write down one detail she noticed on the road",
+              "text": "A simple line about the lost hat appeared in her notebook. Alice left it without a lesson attached."
+            }
+          ]
+        }
+      ],
+      "S60": [
+        {
+          "question": "In the dark, everyone shows the others ridiculous souvenirs. How should Alice react to Eric’s bird?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Ask to put it in the middle of the table",
+              "text": "Eric solemnly set the bird opposite Alice, and Nick declared it the group’s new mascot."
+            },
+            {
+              "code": "B",
+              "label": "Say the strange bird resembles their trip",
+              "text": "“A little crooked, but ours,” Alice said. Eric laughed and moved the stand closer to her."
+            }
+          ]
+        }
       ]
     },
     "interactionEchoes": {
@@ -6378,6 +7094,34 @@ export const literaryLocaleBundles = {
           "S26-C90",
           "After the evening decision, Alice was no longer going to wait for someone else to name her desire for her.",
           "After the evening decision, Alice remembered that politeness did not oblige her to promise closeness."
+        ]
+      ],
+      "S37": [
+        [
+          "S32-C90",
+          "Eric remembered their conversation about free time and immediately asked when it would suit Alice to go out.",
+          "Eric suggested first agreeing on what each of them wanted from the day, and only then chose a route."
+        ]
+      ],
+      "S38": [
+        [
+          "S33-C90",
+          "Nick remembered which shot Alice had asked him not to show. Today he did not even open the edit without asking her first.",
+          "Nick suggested they look at an old recording together rather than decide for Alice what she ought to feel in the frame."
+        ]
+      ],
+      "S39": [
+        [
+          "S34-C90",
+          "Damir remembered that she had asked him to explain a cancelled meeting, and warned her about his plans in advance.",
+          "Damir suggested they spend the day separately if Alice needed it, without turning the offer into a reproach."
+        ]
+      ],
+      "S40": [
+        [
+          "S35-C90",
+          "Alice kept verified facts and agreed quotations in the text, as she had promised Marina.",
+          "Alice checked once more that private details she had decided not to publish had not slipped into the final text."
         ]
       ]
     }

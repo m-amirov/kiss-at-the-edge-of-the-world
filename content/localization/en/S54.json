@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "source": "content/season-1-literary-episode-09.md",
+  "scenes": {
+    "S54": {
+      "title": "Day 19. No Jokes During the Chorus",
+      "chunks": {
+        "S54.C000": {
+          "title": "",
+          "paragraphs": {
+            "S54.C000.P000": "The guesthouse owner brought out an old microphone and asked whether the guests wanted karaoke. Nick raised his hand first. Alice, knowing his habit of turning everything into a performance, braced herself for a long joke. Instead, he chose a quiet song she had once hummed in the car. On the second verse Nick lost his place; he did not try to hide it and simply asked her to help.",
+            "S54.C000.P001": "They finished the song together by the window. During the final chorus Nick was not looking into the room. He was looking at Alice, and she felt her cheeks grow warm. It was funny and touching at once: someone who spoke so easily to everyone suddenly did not know what to do with his hands without a camera or microphone.",
+            "S54.C000.P002": "After the song they went out to the porch. Wind pushed dry leaves across the ground. Nick wanted to say something, but first asked if she was cold. Alice said a little, and took his arm herself. He drew a deep breath.",
+            "S54.C000.P003": "“I want to see you after the trip,” he said. “Even if that day we just buy bread and go home.”",
+            "S54.C000.P004": "Alice looked at the dark guesthouse window. Inside, someone was already choosing the next song, and the music was too loud for a perfect confession. She liked that Nick did not try to wait for the perfect moment."
+          }
+        },
+        "S54.C001": {
+          "title": "Choice S54-C1 — Alice’s answer",
+          "paragraphs": {}
+        },
+        "S54.C002": {
+          "title": "A. Answer with words",
+          "paragraphs": {
+            "S54.C002.P000": "“I do too. Just promise you will not film me choosing bread.”",
+            "S54.C002.P001": "“I won’t promise,” Nick said, then immediately corrected himself. “I promise I’ll ask. But I think you’d like it better if this time I forgot the camera altogether.”"
+          }
+        },
+        "S54.C003": {
+          "title": "B. Answer with a short line from the song",
+          "paragraphs": {
+            "S54.C003.P000": "Alice hummed the last line of their song so quietly that only Nick could hear. He smiled and stepped closer. For the first time all evening, she did not want anyone to remember it on video."
+          }
+        },
+        "S54.C004": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S54.C004.P000": "They went back inside, where Eric was trying to persuade Damir to choose the worst song of the trip. Nick sat beside Alice and took her hand beneath the table. A minute later they both let go so they could applaud the others. Nothing in their world changed abruptly. But Alice was already looking forward to tomorrow."
+          }
+        },
+        "S54.C005": {
+          "title": "If `S38-C2=A`",
+          "paragraphs": {
+            "S54.C005.P000": "Before the music evening, Nick reminded Alice of the coffee she had invited him to without any camera at all. He said he would like to repeat it at home, even if there was no reason for a beautiful shot."
+          }
+        },
+        "S54.C006": {
+          "title": "If `S38-C2=B`",
+          "paragraphs": {
+            "S54.C006.P000": "Before the music evening Nick took out the book about birds Alice had chosen for him and showed her the bookmark. She laughed: he really had read it, rather than kept it as a souvenir."
+          }
+        }
+      }
+    }
+  }
+}

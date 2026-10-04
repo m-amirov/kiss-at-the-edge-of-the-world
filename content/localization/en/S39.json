@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "source": "content/season-1-literary-episode-09.md",
+  "scenes": {
+    "S39": {
+      "title": "Day 18. Do Not Rebuild the Old Couple",
+      "chunks": {
+        "S39.C000": {
+          "title": "If `routeStatus=paused`",
+          "paragraphs": {
+            "S39.C000.P000": "Alice and Damir met by the guesthouse counter while the others chose a route. She suggested they walk to a café and talk. Damir did not pretend the pause had ended automatically. They ordered drinks separately and sat at a small table. Alice said she did not want to test all her old fears on him again. Damir said he did not want every new day judged by events from two years ago either. They spoke calmly and fell silent now and then; for the first time, silence did not mean one of them was waiting for an apology from the other."
+          }
+        },
+        "S39.C001": {
+          "title": "If `routeStatus=active`",
+          "paragraphs": {
+            "S39.C001.P000": "They left the guesthouse without a plan. Damir suggested walking to the bakery, but Alice chose to look first in a little shop selling musical postcards. Damir admitted he did not even know such things existed. Alice pressed a button on one card and a sharp festive tune burst out. Damir flinched; Alice laughed louder than she intended. The shopkeeper looked up, then smiled when she saw their faces.",
+            "S39.C001.P001": "At the café they ordered two different desserts. Once, Damir had always known which cake Alice would choose. Now he only asked whether she wanted to try his. She took a piece, then gave him some of hers. Their conversation gradually moved to things that had not been part of their past: a new series Damir watched after night shifts; Alice’s friend who had opened a workshop; a book she had bought during the trip and had not yet finished.",
+            "S39.C001.P002": "Damir’s phone rang. A colleague was asking him to cover one of their future shifts. Damir stepped away, briefly explained that he did not yet know his work schedule for next month, and promised to answer later. When he returned, he did not recount the call in detail or ask Alice to approve his decision. She felt an odd relief: his life remained his own, and that did not mean he had already moved away from her."
+          }
+        },
+        "S39.C002": {
+          "title": "Choice S39-C1 — What does Alice suggest after the trip?",
+          "paragraphs": {}
+        },
+        "S39.C003": {
+          "title": "A. Set three new dates in different places",
+          "paragraphs": {
+            "S39.C003.P000": "“If we continue, I don’t want to go straight back to how we lived two years ago,” Alice said. “Let’s meet three times first, and each time one of us chooses the place.”",
+            "S39.C003.P001": "Damir suggested beginning in her city and admitted he had forgotten where a good bakery had opened there. Alice said that was even better: they would have a reason to find a new one."
+          }
+        },
+        "S39.C004": {
+          "title": "B. End the attempt to become a couple again",
+          "paragraphs": {
+            "S39.C004.P000": "“I’m glad we have seen each other as different people,” Alice said. “But I don’t want to continue the romance after we return.”",
+            "S39.C004.P001": "Damir looked at her, then at his empty cup. He said it mattered to him as well to keep this day as a good memory, rather than a reason to argue about the future again. They finished their coffee and walked back to the car together."
+          }
+        },
+        "S39.C005": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S39.C005.P000": "It began to drizzle again outside. Alice raised her collar; Damir did not rush to adjust her coat. He simply asked whether she wanted to stop for hot bread for the group. She agreed. They still had something shared to do, and it did not require knowing the ending of their story in advance."
+          }
+        },
+        "S39.C006": {
+          "title": "Choice S39-C2 — How will Alice show Damir that she wants to know him anew?",
+          "paragraphs": {}
+        },
+        "S39.C007": {
+          "title": "A. Ask him to tell her about his most ordinary day",
+          "paragraphs": {
+            "S39.C007.P000": "Damir was surprised by the question at first. Then he told her about an old mug in the residents’ room and the neighbour’s dog that met him at the door. Alice answered with a story about her favourite bakery near the editorial office. There was no trace of their old couple in those stories."
+          }
+        },
+        "S39.C008": {
+          "title": "B. Invite him on a walk before breakfast herself",
+          "paragraphs": {
+            "S39.C008.P000": "“Not on the way to your interview,” Alice added. Damir smiled and suggested they meet by the stairs in the morning. She set her alarm ten minutes earlier than usual and was unexpectedly glad of it."
+          }
+        },
+        "S39.C009": {
+          "title": "If `S56-C2=A`",
+          "paragraphs": {
+            "S39.C009.P000": "Near the café Alice saw the dish she and Damir had meant to try after the music evening. She suggested going in, and he agreed without first checking a work schedule out of habit."
+          }
+        },
+        "S39.C010": {
+          "title": "If `S56-C2=B`",
+          "paragraphs": {
+            "S39.C010.P000": "During the walk Damir quietly repeated the unfamiliar chorus Alice had tried to show him. She picked up the second line and, for the first time that day, did not remember their old shared song."
+          }
+        }
+      }
+    }
+  }
+}

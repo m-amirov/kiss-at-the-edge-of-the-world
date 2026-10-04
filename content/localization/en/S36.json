@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "source": "content/season-1-literary-episode-09.md",
+  "scenes": {
+    "S36": {
+      "title": "Day 17. A Place to Stop",
+      "chunks": {
+        "S36.C000": {
+          "title": "",
+          "paragraphs": {
+            "S36.C000.P000": "They loaded the suitcases into the car in silence. Outside the hotel, the rain had finally stopped, but no one called it a reward for yesterday. Nick checked the straps on the equipment bags, Damir brought Alice the water bottle she had left behind, and Eric checked their departure against the official road information. Alice took her usual seat, where the glove from the first day was still under it. She picked it up and put it in the door pocket: over these weeks, things in the car had become shared, though each had once belonged to someone.",
+            "S36.C000.P001": "By midday they were on a long, exposed stretch of road. Nick suggested putting on their terrible song. Eric said they first had to stop and check the pressure in one tyre: the car was pulling slightly, almost imperceptibly when they set off. He pulled into an approved lay-by, inspected the wheels and called the rental company. The employee recommended the nearest service station; carrying on without checking the tyre would have been foolish.",
+            "S36.C000.P002": "While they waited, Alice watched each of them endure the unscheduled pause differently. Damir fetched coffee for everyone. Nick went out to the barrier, took two pictures of the empty road, then put the camera away. Eric spoke with the mechanic and finally sat down on a bench. Nick asked if he was too tired. Eric said he was, and added that this was no reason to make everyone wait for him in the car.",
+            "S36.C000.P003": "At the garage they found a small piece of metal in the tyre. The repair took less than an hour. Nothing disastrous had happened; they had simply missed one of their planned stops. Alice asked whether they could replace it with a walk near their next overnight stop. Everyone agreed, and the final long drive suddenly felt less like ticking off a list written in advance."
+          }
+        },
+        "S36.C001": {
+          "title": "Choice S36-C1 — How does Alice use the unexpected pause?",
+          "paragraphs": {}
+        },
+        "S36.C002": {
+          "title": "A. Suggest a short walk before they return to the car",
+          "paragraphs": {
+            "S36.C002.P000": "They followed the marked path from the garage to a small café. Nick photographed the sign, Damir bought a packet of biscuits for the road, and Eric was the first to admit that the coffee was better than at their previous stop. Alice wrote nothing down for the article. The half-hour walk was enough."
+          }
+        },
+        "S36.C003": {
+          "title": "B. Stay in the café and talk to whoever wants to",
+          "paragraphs": {
+            "S36.C003.P000": "Alice took a table by the window. A minute later Nick sat down beside her, then Damir; Eric arrived with the repair receipt. They listened to local radio, tried to guess the next song, and for the first time in days discussed something that was neither work nor someone else’s feelings."
+          }
+        },
+        "S36.C004": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S36.C004.P000": "They reached their overnight stop late in the evening. Low mountains on the Snæfellsnes peninsula began to appear beyond the window. Alice knew the trip was ending, but she no longer tried to write its final paragraph in advance. She still had time to live through what she might later want to write about."
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "source": "content/season-1-literary-episode-09.md",
+  "scenes": {
+    "S40": {
+      "title": "Day 18. A Paragraph That Needs No Approval",
+      "chunks": {
+        "S40.C000": {
+          "title": "",
+          "paragraphs": {
+            "S40.C000.P000": "Alice opened her laptop by the window and read the first paragraph she had written in Keflavík. Then she had written about people changing plans as if she stood aside and watched. Now the text contained specific days when she herself had chosen to stay, leave, help, refrain, or simply buy a book. Marina sent a note about the headline, but not the ending: there was no ending yet.",
+            "S40.C000.P001": "She spread tickets, receipts, postcards and the boardwalk photograph across the table. One receipt bore the date of her meeting with Damir; another, the day she bought herself a book. What mattered was not which receipt came last. What mattered was that she could leave any of it out of the article if she did not want to turn life into material."
+          }
+        },
+        "S40.C001": {
+          "title": "Choice S40-C1 — What does Alice keep private?",
+          "paragraphs": {}
+        },
+        "S40.C002": {
+          "title": "A. Write the final paragraph without details about the people close to her",
+          "paragraphs": {
+            "S40.C002.P000": "She described the road and the work of people who remained after the tourists left. Her friends’ names appeared only in approved passages. The rest stayed in the notebook she did not send to the editors."
+          }
+        },
+        "S40.C003": {
+          "title": "B. Write about her own choice as the central change",
+          "paragraphs": {
+            "S40.C003.P000": "Alice remembered going to a concert alone for the first time and wrote about time she did not have to prove to anyone. Marina replied that it was a strong ending, then asked her to remove two sentences that were too general. Alice removed them without regret."
+          }
+        },
+        "S40.C004": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S40.C004.P000": "Outside the window Nick was arguing with Damir over who had last used the charger. Eric knocked on the neighbouring room’s door because he had mixed up the keys. Alice smiled and closed the laptop. She was part of this group even when she did not turn every conversation into a scene in her romance."
+          }
+        },
+        "S40.C005": {
+          "title": "Choice S40-C2 — What will Alice choose for her last free evening?",
+          "paragraphs": {}
+        },
+        "S40.C006": {
+          "title": "A. Go alone to a local music evening",
+          "paragraphs": {
+            "S40.C006.P000": "Alice bought a ticket at the entrance and sat by the window. The music was unfamiliar, but she found a few familiar rhythms in it. After the concert she wrote the band’s name in her notes—this time for herself alone."
+          }
+        },
+        "S40.C007": {
+          "title": "B. Write to a friend and arrange to meet at home",
+          "paragraphs": {
+            "S40.C007.P000": "Alice sent her friend a message: “When I’m back, let’s not talk about my work trip. Let’s just walk.” The reply came almost at once: “Agreed. I choose the coffee.” Alice smiled at her phone."
+          }
+        },
+        "S40.C008": {
+          "title": "If `S63-C2=A`",
+          "paragraphs": {
+            "S40.C008.P000": "Returning to her notes, Alice found the concert ticket and reread her own short entry. It held more of her present life than ten working headlines."
+          }
+        },
+        "S40.C009": {
+          "title": "If `S63-C2=B`",
+          "paragraphs": {
+            "S40.C009.P000": "Returning to her notes, Alice checked the schedule of the venue a neighbour from the concert had told her about. For her next trip she already had one plan of her own."
+          }
+        }
+      }
+    }
+  }
+}

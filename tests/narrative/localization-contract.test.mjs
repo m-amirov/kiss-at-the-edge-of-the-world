@@ -112,3 +112,21 @@ test('production English Episodes 5-6 preserve complete scene, choice, predicate
  assert.deepEqual(routeTitles.map(title=>title.match(/routeIntent=(?:eric|nick|damir|alice)/)?.[0]),['routeIntent=eric','routeIntent=nick','routeIntent=damir','routeIntent=alice']);
  function translatedSceneChunk(sceneId,ref){return JSON.parse(fs.readFileSync(new URL('../../content/localization/en/'+sceneId+'.json',import.meta.url),'utf8')).scenes[sceneId].chunks[ref].title;}
 });
+test('production English Episode 9 is complete, structurally identical, and preserves interaction parity',()=>{
+ const expected={S36:{paragraphs:7,choices:1},S37:{paragraphs:13,choices:2},S51:{paragraphs:10,choices:1},S38:{paragraphs:14,choices:2},S54:{paragraphs:11,choices:1},S39:{paragraphs:13,choices:2},S57:{paragraphs:9,choices:1},S40:{paragraphs:9,choices:2},S64:{paragraphs:8,choices:1},S60:{paragraphs:6,choices:1}};
+ for(const [sceneId,counts] of Object.entries(expected)){
+  const english=JSON.parse(fs.readFileSync(new URL('../../content/localization/en/'+sceneId+'.json',import.meta.url),'utf8'));
+  const source=literarySeason.scenes.find(scene=>scene.id===sceneId);
+  assert.deepEqual(validateLiteraryLocale(literarySeason,english,{sceneIds:[sceneId]}),{status:'PASS',errors:[],sceneCount:1},sceneId);
+  assert.deepEqual(Object.keys(english.scenes[sceneId].chunks),source.chunks.map((_,index)=>sourceRef.chunk(sceneId,index)));
+  assert.equal(Object.values(english.scenes[sceneId].chunks).reduce((count,chunk)=>count+Object.keys(chunk.paragraphs).length,0),counts.paragraphs,sceneId+' paragraph count');
+  assert.equal(source.chunks.filter(chunk=>chunk.title.startsWith('Выбор ')).length,counts.choices,sceneId+' choice count');
+  source.chunks.forEach((chunk,index)=>{for(const token of chunk.title.match(/S\d{2}-C\d+|`[^`]+`/g)??[])assert.ok(english.scenes[sceneId].chunks[sourceRef.chunk(sceneId,index)].title.includes(token),sceneId+' missing stable token '+token);});
+  const visible=[english.scenes[sceneId].title,...Object.values(english.scenes[sceneId].chunks).flatMap(chunk=>[chunk.title,...Object.values(chunk.paragraphs)])].join('\n');
+  assert.doesNotMatch(visible,/[Ѐ-ӿ]/u,sceneId+' accidental Cyrillic');
+ }
+ const localized=JSON.parse(fs.readFileSync(new URL('../../content/localization/en/interaction-beats.json',import.meta.url),'utf8'));
+ const sceneIds=Object.keys(expected);
+ const scoped={interactionBeats:Object.fromEntries(sceneIds.map(id=>[id,localized.interactionBeats[id]])),interactionEchoes:Object.fromEntries(sceneIds.filter(id=>localized.interactionEchoes[id]).map(id=>[id,localized.interactionEchoes[id]]))};
+ assert.deepEqual(validateLiteraryInteractionLocale(interactionBeats,scoped,{sceneIds}),{status:'PASS',errors:[],sceneCount:sceneIds.length});
+});

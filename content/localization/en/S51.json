@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "source": "content/season-1-literary-episode-09.md",
+  "scenes": {
+    "S51": {
+      "title": "Day 19. An Ordinary Dinner",
+      "chunks": {
+        "S51.C000": {
+          "title": "",
+          "paragraphs": {
+            "S51.C000.P000": "Eric brought groceries to the little kitchen, then discovered he did not know how to make the recipe Alice had chosen from the book bought near Mývatn. They agreed not to look online until they had tried their own way. The first page said to leave the dough for two hours, and dinner was needed much sooner. Alice suggested making something else, but Eric had already tipped flour across the table. They had to wipe it up with his sleeve because the paper towels were gone.",
+            "S51.C000.P001": "While the potatoes boiled, they played cards they found in a drawer. Neither knew the rules. Eric insisted he would remember them by the third round, while Alice quietly tucked the winning cards beneath her elbow because he was distracted by the boiling pot. When the cheating came to light, he demanded a rematch after dinner. Alice agreed, but warned that from now on she would play fairly only with a written contract. Eric proposed drawing one on a paper napkin.",
+            "S51.C000.P002": "Rain tapped against the window. Alice wiped the table; Eric set out two plates. It was the most ordinary room: borrowed crockery, a chair with one uneven leg, an instruction sheet for the cooker in another language. Alice suddenly wanted to know what his kitchen looked like in winter, when no one had to pack to leave in the morning. She said so aloud. Eric replied that there was a pot plant on his windowsill which his sister was always rescuing from his irregular watering. Alice suggested buying him another, hardier one. He said they should save the current one first.",
+            "S51.C000.P003": "They sat down to dinner. The dough never rose, but the potatoes were good. They ate them straight from the pot, without making the failed recipe a metaphor for their relationship. When Eric bent for a fallen napkin, Alice touched his shoulder so he would straighten up. He looked up, saw her face close to his, and smiled."
+          }
+        },
+        "S51.C001": {
+          "title": "Choice S51-C1 — How does the evening end?",
+          "paragraphs": {}
+        },
+        "S51.C002": {
+          "title": "A. Stay together for another hour",
+          "paragraphs": {
+            "S51.C002.P000": "They cleared the dishes, played music softly and finished the game. Alice lost by a single card; Eric agreed not to tell Nick. Before bed he walked her to the door and kissed her when she lingered there of her own accord."
+          }
+        },
+        "S51.C003": {
+          "title": "B. Say good night and finish the day separately",
+          "paragraphs": {
+            "S51.C003.P000": "“I want to remember exactly this kind of dinner,” Alice said. “No grand continuation tonight.”",
+            "S51.C003.P001": "Eric walked her to the door, handed over the scarf she had forgotten, and wished her good night. In her room Alice found the napkin with the drawn contract for fair card games in her pocket."
+          }
+        },
+        "S51.C004": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S51.C004.P000": "The next morning they would return to Reykjavík. Alice did not know whether one of their possible meetings would happen in a month: Eric still had to check the dates against work. But for the first time she pictured not an ideal date by the ocean, but an ordinary evening in her own kitchen—with someone unafraid of failed dough."
+          }
+        },
+        "S51.C005": {
+          "title": "If `S37-C2=A`",
+          "paragraphs": {
+            "S51.C005.P000": "Over dinner Eric remembered the sunrise walk Alice had suggested herself, and for a minute left his list of tasks in his pocket. She smiled; they were happy even without a next stop assigned."
+          }
+        },
+        "S51.C006": {
+          "title": "If `S37-C2=B`",
+          "paragraphs": {
+            "S51.C006.P000": "Over dinner Eric took out a bowl and reminded her how they had mixed up the dough that morning. Alice said she could now tell his serious look over a recipe from real worry."
+          }
+        }
+      }
+    }
+  }
+}

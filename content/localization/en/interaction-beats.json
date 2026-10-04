@@ -175,12 +175,46 @@
     ],
     "S63": [
       {"question":"Alice is already seated near the window. How will she notice that this evening is her own?","options":[{"code":"A","label":"Stay where she chose and listen more closely","text":"She felt the cool air by the window and focused on the music again. The seat was her choice, not an extension of someone else's route."},{"code":"B","label":"Notice the evening without looking for familiar faces","text":"Alice let the music continue without checking who else might have come. It was enough that she had chosen this concert and stayed for it."}]}
+    ],
+    "S36": [
+      {"question":"While the mechanic checks the car, how will Alice spend the wait?","options":[{"code":"A","label":"Offer the others coffee in the waiting area","text":"Nick took a table, Damir found hot water, and Eric stayed in touch with the mechanic."},{"code":"B","label":"Stay with her notebook and let the others choose their own occupation","text":"Alice wrote a couple of lines about the unexpected stop without turning them into a required conversation for the whole group."}]}
+    ],
+    "S37": [
+      {"question":"Eric and Alice compare two free days after the trip. How do they make an arrangement?","options":[{"code":"A","label":"Name their own days and ask which ones coincide","text":"Alice took out her calendar. Eric marked the dates that did not require cancelling either his work or her deadline."},{"code":"B","label":"Suggest choosing a day after they are home, without rushing","text":"Eric agreed that they would call when both were home. The possibility of meeting did not become another obligation on the road."}]}
+    ],
+    "S51": [
+      {"question":"Dinner turns out much more ordinary than either expected. What should Alice do?","options":[{"code":"A","label":"Ask Eric about his day without a polished version","text":"He remembered a broken tool and a long call with his sister. Alice found that she wanted a place in evenings like those too."},{"code":"B","label":"Tell him about an awkward mistake at work","text":"Eric laughed and admitted that he had mixed up dates that morning. An ordinary evening became easier after two imperfect stories."}]}
+    ],
+    "S38": [
+      {"question":"Nick suggests a day without trying to make it interesting. What should Alice choose?","options":[{"code":"A","label":"Choose a shared domestic task","text":"They went through the bags and found a lost cable. Nick called it the best shot of the day, though no camera was nearby."},{"code":"B","label":"Suggest going out for groceries","text":"By the bread shelf they argued about breakfast. Alice suddenly pictured a similar argument at home and was not frightened by the thought."}]}
+    ],
+    "S54": [
+      {"question":"For the first time, Nick does not joke during a familiar chorus. What should Alice do?","options":[{"code":"A","label":"Ask what he is feeling now","text":"He answered briefly, but did not hide behind the next joke. Alice took his hand."},{"code":"B","label":"Stay close without demanding an explanation","text":"Nick laid his hand over her fingers. A few minutes were enough for them to hear the song through."}]}
+    ],
+    "S39": [
+      {"question":"They have agreed to try three separate dates. What will Alice clarify?","options":[{"code":"A","label":"Each date must be new, not a replay of the past","text":"Damir agreed and suggested beginning in the city where Alice lived now, rather than in one of their old places."},{"code":"B","label":"They will choose the first place together","text":"“Let’s first see what interests us both today,” Alice said. Damir nodded and took out a map of her city."}]}
+    ],
+    "S57": [
+      {"question":"Sunrise comes before they have finished talking. What should Alice do?","options":[{"code":"A","label":"Suggest meeting the light in silence","text":"Damir sat beside her on the cold step. When the sun rose, neither of them repeated an old promise."},{"code":"B","label":"Say what Alice hopes for from the next day","text":"She named one small thing: breakfast together, without talking about who they had once been. Damir agreed."}]}
+    ],
+    "S40": [
+      {"question":"Alice is finishing a text she does not have to clear with anyone. What should she do?","options":[{"code":"A","label":"Keep a personal observation in it","text":"She did not strike out the line about her own uncertainty. The page became more honest, even if the editor would never see it."},{"code":"B","label":"Set the text aside and go for a walk","text":"Alice closed the laptop mid-sentence. When she came back, the important thought had not gone anywhere."}]}
+    ],
+    "S64": [
+      {"question":"After the short path, Alice returns to the guesthouse. What should she do before leaving?","options":[{"code":"A","label":"Open her book over breakfast","text":"She did not rush to invent another conclusion for the walk. Pages and hot coffee were more than enough to begin the day."},{"code":"B","label":"Write down one detail she noticed on the road","text":"A simple line about the lost hat appeared in her notebook. Alice left it without a lesson attached."}]}
+    ],
+    "S60": [
+      {"question":"In the dark, everyone shows the others ridiculous souvenirs. How should Alice react to Eric’s bird?","options":[{"code":"A","label":"Ask to put it in the middle of the table","text":"Eric solemnly set the bird opposite Alice, and Nick declared it the group’s new mascot."},{"code":"B","label":"Say the strange bird resembles their trip","text":"“A little crooked, but ours,” Alice said. Eric laughed and moved the stand closer to her."}]}
     ]
   },
   "interactionEchoes": {
     "S02": [["S01-C90","On the road, Alice remembered Nick joking about the socks and, for the first time, felt like part of the group rather than a guest observer.","On the road, she remembered asking Nick about the others right away. It was easier to meet people when she chose the first question herself."]],
     "S08": [["S07-C90","Over breakfast, Nick remembered how Alice had not rushed him when he answered about filming. He spoke on his own about shots better left unfilmed.","Over breakfast, Nick returned to her question about boundaries. He told her which shot he would never film, even for a good movie."]],
     "S22": [["S17-C90","Remembering how they had cleared the dishes and map together after the shared dinner, Alice suggested stopping first to discuss the road.","Remembering their short walk to the car after the shared dinner, Alice did not apologise when she asked for a minute to herself."]],
-    "S27": [["S26-C90","After the evening decision, Alice was no longer going to wait for someone else to name her desire for her.","After the evening decision, Alice remembered that politeness did not oblige her to promise closeness."]]
+    "S27": [["S26-C90","After the evening decision, Alice was no longer going to wait for someone else to name her desire for her.","After the evening decision, Alice remembered that politeness did not oblige her to promise closeness."]],
+    "S37": [["S32-C90","Eric remembered their conversation about free time and immediately asked when it would suit Alice to go out.","Eric suggested first agreeing on what each of them wanted from the day, and only then chose a route."]],
+    "S38": [["S33-C90","Nick remembered which shot Alice had asked him not to show. Today he did not even open the edit without asking her first.","Nick suggested they look at an old recording together rather than decide for Alice what she ought to feel in the frame."]],
+    "S39": [["S34-C90","Damir remembered that she had asked him to explain a cancelled meeting, and warned her about his plans in advance.","Damir suggested they spend the day separately if Alice needed it, without turning the offer into a reproach."]],
+    "S40": [["S35-C90","Alice kept verified facts and agreed quotations in the text, as she had promised Marina.","Alice checked once more that private details she had decided not to publish had not slipped into the final text."]]
   }
 }
