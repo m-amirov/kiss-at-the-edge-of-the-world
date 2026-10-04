@@ -1,43 +1,23 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "status": "PASS",
-  "preLocalizationCanonicalRepairAncestor": "57985bf1c75861de47fcbaefc87843353227dee4",
-  "testedSourceHead": "0e543a166b9fa543063d40330410ab7d6eef5712",
-  "generatedAt": "2026-10-04T08:28:08.882Z",
-  "episode9": {
-    "sceneOrder": [
-      "S36",
-      "S37",
-      "S51",
-      "S38",
-      "S54",
-      "S39",
-      "S57",
-      "S40",
-      "S64",
-      "S60"
-    ]
-  },
-  "episode10": {
-    "sceneOrder": [
-      "S41",
-      "S42",
-      "S43",
-      "S44",
-      "S45",
-      "S46",
-      "S47",
-      "S48"
-    ]
-  },
-  "fullEnglishCoverage": {
-    "scenes": "66/66",
-    "missingScenes": [],
-    "extraScenes": [],
-    "missingRefs": [],
-    "extraRefs": [],
-    "sceneParity": "PASS",
-    "interactionParity": "PASS"
+  "testedSourceHead": "78f8ce7def5c2db2f05cc182f7b40278b403034f",
+  "generatedAt": "2026-10-04T13:06:54.556Z",
+  "repairedC90Ids": [
+    "S37-C90",
+    "S38-C90",
+    "S39-C90",
+    "S40-C90",
+    "S54-C90",
+    "S64-C90",
+    "S44-C90",
+    "S48-C90"
+  ],
+  "authoredBranchInteractionMatrix": {
+    "S37": "active/paused x S37-C1=A/B x C90=A/B",
+    "S38": "active/paused x S38-C1=A/B x C90=A/B",
+    "S39": "active/paused x S39-C1=A/B x C90=A/B",
+    "S40": "active/paused x S40-C1=A/B x C90=A/B"
   },
   "endingMatrix": [
     {
@@ -45,28 +25,19 @@
       "routeStatus": "active",
       "finalChoice": "A",
       "path": [
-        "S36",
-        "S37",
-        "S51",
-        "S60",
         "S41",
         "S42",
         "S48",
         "S44"
       ],
       "expectedEnding": "S44",
-      "actualEnding": "S44",
-      "relationshipState": "continuing-by-mutual-choice"
+      "actualEnding": "S44"
     },
     {
       "routeIntent": "eric",
       "routeStatus": "active",
       "finalChoice": "B",
       "path": [
-        "S36",
-        "S37",
-        "S51",
-        "S60",
         "S41",
         "S42",
         "S43",
@@ -74,18 +45,13 @@
         "S47"
       ],
       "expectedEnding": "S47",
-      "actualEnding": "S47",
-      "relationshipState": "uncertain-or-independent"
+      "actualEnding": "S47"
     },
     {
       "routeIntent": "eric",
       "routeStatus": "active",
       "finalChoice": "C",
       "path": [
-        "S36",
-        "S37",
-        "S51",
-        "S60",
         "S41",
         "S42",
         "S43",
@@ -93,36 +59,26 @@
         "S47"
       ],
       "expectedEnding": "S47",
-      "actualEnding": "S47",
-      "relationshipState": "closed"
+      "actualEnding": "S47"
     },
     {
       "routeIntent": "eric",
       "routeStatus": "paused",
       "finalChoice": "A",
       "path": [
-        "S36",
-        "S37",
-        "S51",
-        "S60",
         "S41",
         "S42",
         "S48",
         "S44"
       ],
       "expectedEnding": "S44",
-      "actualEnding": "S44",
-      "relationshipState": "continuing-by-mutual-choice"
+      "actualEnding": "S44"
     },
     {
       "routeIntent": "eric",
       "routeStatus": "paused",
       "finalChoice": "B",
       "path": [
-        "S36",
-        "S37",
-        "S51",
-        "S60",
         "S41",
         "S42",
         "S43",
@@ -130,18 +86,13 @@
         "S47"
       ],
       "expectedEnding": "S47",
-      "actualEnding": "S47",
-      "relationshipState": "uncertain-or-independent"
+      "actualEnding": "S47"
     },
     {
       "routeIntent": "eric",
       "routeStatus": "paused",
       "finalChoice": "C",
       "path": [
-        "S36",
-        "S37",
-        "S51",
-        "S60",
         "S41",
         "S42",
         "S43",
@@ -149,54 +100,39 @@
         "S47"
       ],
       "expectedEnding": "S47",
-      "actualEnding": "S47",
-      "relationshipState": "closed"
+      "actualEnding": "S47"
     },
     {
       "routeIntent": "eric",
       "routeStatus": "closed",
       "finalChoice": null,
       "path": [
-        "S36",
-        "S40",
-        "S64",
-        "S60",
         "S41",
         "S43",
         "S48",
         "S47"
       ],
       "expectedEnding": "S47",
-      "actualEnding": "S47",
-      "relationshipState": "closed"
+      "actualEnding": "S47"
     },
     {
       "routeIntent": "nick",
       "routeStatus": "active",
       "finalChoice": "A",
       "path": [
-        "S36",
-        "S38",
-        "S54",
-        "S60",
         "S41",
         "S42",
         "S48",
         "S45"
       ],
       "expectedEnding": "S45",
-      "actualEnding": "S45",
-      "relationshipState": "continuing-by-mutual-choice"
+      "actualEnding": "S45"
     },
     {
       "routeIntent": "nick",
       "routeStatus": "active",
       "finalChoice": "B",
       "path": [
-        "S36",
-        "S38",
-        "S54",
-        "S60",
         "S41",
         "S42",
         "S43",
@@ -204,18 +140,13 @@
         "S47"
       ],
       "expectedEnding": "S47",
-      "actualEnding": "S47",
-      "relationshipState": "uncertain-or-independent"
+      "actualEnding": "S47"
     },
     {
       "routeIntent": "nick",
       "routeStatus": "active",
       "finalChoice": "C",
       "path": [
-        "S36",
-        "S38",
-        "S54",
-        "S60",
         "S41",
         "S42",
         "S43",
@@ -223,36 +154,26 @@
         "S47"
       ],
       "expectedEnding": "S47",
-      "actualEnding": "S47",
-      "relationshipState": "closed"
+      "actualEnding": "S47"
     },
     {
       "routeIntent": "nick",
       "routeStatus": "paused",
       "finalChoice": "A",
       "path": [
-        "S36",
-        "S38",
-        "S54",
-        "S60",
         "S41",
         "S42",
         "S48",
         "S45"
       ],
       "expectedEnding": "S45",
-      "actualEnding": "S45",
-      "relationshipState": "continuing-by-mutual-choice"
+      "actualEnding": "S45"
     },
     {
       "routeIntent": "nick",
       "routeStatus": "paused",
       "finalChoice": "B",
       "path": [
-        "S36",
-        "S38",
-        "S54",
-        "S60",
         "S41",
         "S42",
         "S43",
@@ -260,18 +181,13 @@
         "S47"
       ],
       "expectedEnding": "S47",
-      "actualEnding": "S47",
-      "relationshipState": "uncertain-or-independent"
+      "actualEnding": "S47"
     },
     {
       "routeIntent": "nick",
       "routeStatus": "paused",
       "finalChoice": "C",
       "path": [
-        "S36",
-        "S38",
-        "S54",
-        "S60",
         "S41",
         "S42",
         "S43",
@@ -279,54 +195,39 @@
         "S47"
       ],
       "expectedEnding": "S47",
-      "actualEnding": "S47",
-      "relationshipState": "closed"
+      "actualEnding": "S47"
     },
     {
       "routeIntent": "nick",
       "routeStatus": "closed",
       "finalChoice": null,
       "path": [
-        "S36",
-        "S40",
-        "S64",
-        "S60",
         "S41",
         "S43",
         "S48",
         "S47"
       ],
       "expectedEnding": "S47",
-      "actualEnding": "S47",
-      "relationshipState": "closed"
+      "actualEnding": "S47"
     },
     {
       "routeIntent": "damir",
       "routeStatus": "active",
       "finalChoice": "A",
       "path": [
-        "S36",
-        "S39",
-        "S57",
-        "S60",
         "S41",
         "S42",
         "S48",
         "S46"
       ],
       "expectedEnding": "S46",
-      "actualEnding": "S46",
-      "relationshipState": "continuing-by-mutual-choice"
+      "actualEnding": "S46"
     },
     {
       "routeIntent": "damir",
       "routeStatus": "active",
       "finalChoice": "B",
       "path": [
-        "S36",
-        "S39",
-        "S57",
-        "S60",
         "S41",
         "S42",
         "S43",
@@ -334,18 +235,13 @@
         "S47"
       ],
       "expectedEnding": "S47",
-      "actualEnding": "S47",
-      "relationshipState": "uncertain-or-independent"
+      "actualEnding": "S47"
     },
     {
       "routeIntent": "damir",
       "routeStatus": "active",
       "finalChoice": "C",
       "path": [
-        "S36",
-        "S39",
-        "S57",
-        "S60",
         "S41",
         "S42",
         "S43",
@@ -353,36 +249,26 @@
         "S47"
       ],
       "expectedEnding": "S47",
-      "actualEnding": "S47",
-      "relationshipState": "closed"
+      "actualEnding": "S47"
     },
     {
       "routeIntent": "damir",
       "routeStatus": "paused",
       "finalChoice": "A",
       "path": [
-        "S36",
-        "S39",
-        "S57",
-        "S60",
         "S41",
         "S42",
         "S48",
         "S46"
       ],
       "expectedEnding": "S46",
-      "actualEnding": "S46",
-      "relationshipState": "continuing-by-mutual-choice"
+      "actualEnding": "S46"
     },
     {
       "routeIntent": "damir",
       "routeStatus": "paused",
       "finalChoice": "B",
       "path": [
-        "S36",
-        "S39",
-        "S57",
-        "S60",
         "S41",
         "S42",
         "S43",
@@ -390,18 +276,13 @@
         "S47"
       ],
       "expectedEnding": "S47",
-      "actualEnding": "S47",
-      "relationshipState": "uncertain-or-independent"
+      "actualEnding": "S47"
     },
     {
       "routeIntent": "damir",
       "routeStatus": "paused",
       "finalChoice": "C",
       "path": [
-        "S36",
-        "S39",
-        "S57",
-        "S60",
         "S41",
         "S42",
         "S43",
@@ -409,3432 +290,1079 @@
         "S47"
       ],
       "expectedEnding": "S47",
-      "actualEnding": "S47",
-      "relationshipState": "closed"
+      "actualEnding": "S47"
     },
     {
       "routeIntent": "damir",
       "routeStatus": "closed",
       "finalChoice": null,
       "path": [
-        "S36",
-        "S40",
-        "S64",
-        "S60",
         "S41",
         "S43",
         "S48",
         "S47"
       ],
       "expectedEnding": "S47",
-      "actualEnding": "S47",
-      "relationshipState": "closed"
+      "actualEnding": "S47"
     },
     {
       "routeIntent": "alice",
       "routeStatus": "active",
       "finalChoice": null,
       "path": [
-        "S36",
-        "S40",
-        "S64",
-        "S60",
         "S41",
         "S43",
         "S48",
         "S47"
       ],
       "expectedEnding": "S47",
-      "actualEnding": "S47",
-      "relationshipState": "complete-independent-route"
+      "actualEnding": "S47"
     }
   ],
-  "semanticCaseCount": 160,
+  "semanticCaseCount": 40,
   "counters": {
-    "contradictionCount": 0,
-    "prematurePremiseCount": 0,
-    "duplicatedCanonicalLineCount": 0,
-    "branchInvalidPremiseCount": 0,
-    "crossRouteLeakCount": 0,
-    "inventedRelationshipCount": 0,
-    "inventedConsentCount": 0,
-    "inventedCharacterKnowledgeCount": 0,
-    "routeStateMismatchCount": 0,
-    "actionOwnershipMismatchCount": 0,
-    "authoredChoicePreselectionCount": 0,
+    "authoredBranchInteractionMismatchCount": 0,
+    "interactionTemporalMismatchCount": 0,
     "temporalRewindCount": 0,
-    "internalStateLeakCount": 0,
-    "leakedMarkupCount": 0,
-    "cyrillicCount": 0,
     "endingMismatchCount": 0,
-    "endingReachabilityMismatchCount": 0
+    "endingReachabilityMismatchCount": 0,
+    "localeParityMismatchCount": 0,
+    "visibleLeakCount": 0
+  },
+  "localeParity": {
+    "scenes": "PASS",
+    "interactions": "PASS"
   },
   "browser": {
     "status": "PASS",
-    "testedSourceHead": "0e543a166b9fa543063d40330410ab7d6eef5712",
+    "testedSourceHead": "78f8ce7def5c2db2f05cc182f7b40278b403034f",
     "currentHeadMatch": true,
     "evidencePath": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-git\\artifacts\\evidence\\ep09-10-route-browser.json"
   },
   "cases": [
     {
-      "sceneId": "S36",
-      "id": "S36-C90",
       "routeIntent": "eric",
-      "routeStatus": "active",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 3
-      },
-      "question": "While the mechanic checks the car, how will Alice spend the wait?",
-      "result": "Nick took a table, Damir found hot water, and Eric stayed in touch with the mechanic."
-    },
-    {
-      "sceneId": "S36",
-      "id": "S36-C90",
-      "routeIntent": "eric",
-      "routeStatus": "active",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 3
-      },
-      "question": "While the mechanic checks the car, how will Alice spend the wait?",
-      "result": "Alice wrote a couple of lines about the unexpected stop without turning them into a required conversation for the whole group."
-    },
-    {
-      "sceneId": "S37",
-      "id": "S37-C90",
-      "routeIntent": "eric",
-      "routeStatus": "active",
-      "option": "A",
-      "insertionSourceRef": {
+      "incomingRouteStatus": "active",
+      "relevantAuthoredChoiceId": "S37-C1",
+      "relevantAuthoredChoiceCode": "A",
+      "c90Id": "S37-C90",
+      "insertionRef": {
         "chunk": 3,
         "paragraph": 0
       },
-      "precedingSourceRef": {
-        "chunk": 1,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 3,
-        "paragraph": 1
-      },
-      "question": "Eric and Alice compare two free days after the trip. How do they make an arrangement?",
-      "result": "Alice took out her calendar. Eric marked the dates that did not require cancelling either his work or her deadline."
-    },
-    {
-      "sceneId": "S37",
-      "id": "S37-C90",
-      "routeIntent": "eric",
-      "routeStatus": "active",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 3,
-        "paragraph": 0
-      },
-      "precedingSourceRef": {
-        "chunk": 1,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 3,
-        "paragraph": 1
-      },
-      "question": "Eric and Alice compare two free days after the trip. How do they make an arrangement?",
-      "result": "Eric agreed that they would call when both were home. The possibility of meeting did not become another obligation on the road."
-    },
-    {
-      "sceneId": "S51",
-      "id": "S51-C90",
-      "routeIntent": "eric",
-      "routeStatus": "active",
+      "precedingCanonicalText": "Алиса представила его в детстве с нотным листом и захотела услышать эту историю ещё раз уже дома, в другом городе.\n\n— Давай посмотрим, когда у нас совпадут два выходных, — сказала она. — Я не перееду завтра и не прошу тебя отменять работу. Но хочу увидеть тебя снова.",
+      "followingCanonicalText": "Эрик достал телефон. Не чтобы немедленно купить билет: они вместе отметили две возможные даты и договорились подтвердить одну после его разговора с руководителем обучения. Алиса допила кофе. Ей было хорошо от конкретной незавершённости: следующая встреча впервые зависела от двух людей, а не от программы поездки.",
+      "question": "After an honest conversation, what does Alice want to keep for herself?",
       "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
+      "result": "She let the conversation remain what it had been, without trying to make it gentler or final at once.",
+      "branchValidityAssertion": {
+        "pass": true
       },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 3
-      },
-      "question": "Dinner turns out much more ordinary than either expected. What should Alice do?",
-      "result": "He remembered a broken tool and a long call with his sister. Alice found that she wanted a place in evenings like those too."
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": null,
+        "previous": "Давай посмотрим|Мне было хорошо|Вечером Ник",
+        "following": "Эрик достал|Эрик долго|Только если"
+      }
     },
     {
-      "sceneId": "S51",
-      "id": "S51-C90",
       "routeIntent": "eric",
-      "routeStatus": "active",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 3
-      },
-      "question": "Dinner turns out much more ordinary than either expected. What should Alice do?",
-      "result": "Eric laughed and admitted that he had mixed up dates that morning. An ordinary evening became easier after two imperfect stories."
-    },
-    {
-      "sceneId": "S60",
-      "id": "S60-C90",
-      "routeIntent": "eric",
-      "routeStatus": "active",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "In the dark, everyone shows the others ridiculous souvenirs. How should Alice react to Eric’s bird?",
-      "result": "Eric solemnly set the bird opposite Alice, and Nick declared it the group’s new mascot."
-    },
-    {
-      "sceneId": "S60",
-      "id": "S60-C90",
-      "routeIntent": "eric",
-      "routeStatus": "active",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "In the dark, everyone shows the others ridiculous souvenirs. How should Alice react to Eric’s bird?",
-      "result": "“A little crooked, but ours,” Alice said. Eric laughed and moved the stand closer to her."
-    },
-    {
-      "sceneId": "S41",
-      "id": "S41-C90",
-      "routeIntent": "eric",
-      "routeStatus": "active",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 5
-      },
-      "question": "How will Alice explain to Marina why she chose that headline?",
-      "result": "She showed her editor a confirmed quotation. That story could not be replaced by the name of a beautiful landmark."
-    },
-    {
-      "sceneId": "S41",
-      "id": "S41-C90",
-      "routeIntent": "eric",
-      "routeStatus": "active",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 5
-      },
-      "question": "How will Alice explain to Marina why she chose that headline?",
-      "result": "Alice named the action that changed her view of the material. Marina asked her to keep it in the first paragraph."
-    },
-    {
-      "sceneId": "S42",
-      "id": "S42-C90",
-      "routeIntent": "eric",
-      "routeStatus": "active",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 4,
-        "paragraph": 0
-      },
-      "question": "The conversation turns to returning home. What will Alice say before deciding the future?",
-      "result": "She said plainly that this time it had mattered to be honest and not wait for someone else to guess her thoughts."
-    },
-    {
-      "sceneId": "S42",
-      "id": "S42-C90",
-      "routeIntent": "eric",
-      "routeStatus": "active",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 4,
-        "paragraph": 0
-      },
-      "question": "The conversation turns to returning home. What will Alice say before deciding the future?",
-      "result": "They did not turn the conversation at the table into a final decision. Alice wanted first to understand her own answer."
-    },
-    {
-      "sceneId": "S48",
-      "id": "S48-C90",
-      "routeIntent": "eric",
-      "routeStatus": "active",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "question": "Before the group photograph, everyone is still gathering around the table. Where will Alice stand?",
-      "result": "She chose her place without explanation. Nick set the timer and came back to the others."
-    },
-    {
-      "sceneId": "S48",
-      "id": "S48-C90",
-      "routeIntent": "eric",
-      "routeStatus": "active",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "question": "Before the group photograph, everyone is still gathering around the table. Where will Alice stand?",
-      "result": "On the first attempt no one stood straight. Everyone laughed, and Nick asked them to take it again."
-    },
-    {
-      "sceneId": "S44",
-      "id": "S44-C90",
-      "routeIntent": "eric",
-      "routeStatus": "active",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 3
-      },
-      "question": "Eric has written down a possible date and does not demand an immediate answer. What will Alice clarify?",
-      "result": "They named days that might suit and left final confirmation until work schedules were clear."
-    },
-    {
-      "sceneId": "S44",
-      "id": "S44-C90",
-      "routeIntent": "eric",
-      "routeStatus": "active",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 3
-      },
-      "question": "Eric has written down a possible date and does not demand an immediate answer. What will Alice clarify?",
-      "result": "They listed practical details without turning them into a promise for a lifetime."
-    },
-    {
-      "sceneId": "S36",
-      "id": "S36-C90",
-      "routeIntent": "eric",
-      "routeStatus": "paused",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 3
-      },
-      "question": "While the mechanic checks the car, how will Alice spend the wait?",
-      "result": "Nick took a table, Damir found hot water, and Eric stayed in touch with the mechanic."
-    },
-    {
-      "sceneId": "S36",
-      "id": "S36-C90",
-      "routeIntent": "eric",
-      "routeStatus": "paused",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 3
-      },
-      "question": "While the mechanic checks the car, how will Alice spend the wait?",
-      "result": "Alice wrote a couple of lines about the unexpected stop without turning them into a required conversation for the whole group."
-    },
-    {
-      "sceneId": "S37",
-      "id": "S37-C90",
-      "routeIntent": "eric",
-      "routeStatus": "paused",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 5,
-        "paragraph": 0
-      },
-      "precedingSourceRef": {
-        "chunk": 5,
-        "paragraph": 0
-      },
-      "followingSourceRef": {
-        "chunk": 7,
-        "paragraph": 0
-      },
-      "question": "Eric and Alice compare two free days after the trip. How do they make an arrangement?",
-      "result": "Alice took out her calendar. Eric marked the dates that did not require cancelling either his work or her deadline."
-    },
-    {
-      "sceneId": "S37",
-      "id": "S37-C90",
-      "routeIntent": "eric",
-      "routeStatus": "paused",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 5,
-        "paragraph": 0
-      },
-      "precedingSourceRef": {
-        "chunk": 5,
-        "paragraph": 0
-      },
-      "followingSourceRef": {
-        "chunk": 7,
-        "paragraph": 0
-      },
-      "question": "Eric and Alice compare two free days after the trip. How do they make an arrangement?",
-      "result": "Eric agreed that they would call when both were home. The possibility of meeting did not become another obligation on the road."
-    },
-    {
-      "sceneId": "S51",
-      "id": "S51-C90",
-      "routeIntent": "eric",
-      "routeStatus": "paused",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 3
-      },
-      "question": "Dinner turns out much more ordinary than either expected. What should Alice do?",
-      "result": "He remembered a broken tool and a long call with his sister. Alice found that she wanted a place in evenings like those too."
-    },
-    {
-      "sceneId": "S51",
-      "id": "S51-C90",
-      "routeIntent": "eric",
-      "routeStatus": "paused",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 3
-      },
-      "question": "Dinner turns out much more ordinary than either expected. What should Alice do?",
-      "result": "Eric laughed and admitted that he had mixed up dates that morning. An ordinary evening became easier after two imperfect stories."
-    },
-    {
-      "sceneId": "S60",
-      "id": "S60-C90",
-      "routeIntent": "eric",
-      "routeStatus": "paused",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "In the dark, everyone shows the others ridiculous souvenirs. How should Alice react to Eric’s bird?",
-      "result": "Eric solemnly set the bird opposite Alice, and Nick declared it the group’s new mascot."
-    },
-    {
-      "sceneId": "S60",
-      "id": "S60-C90",
-      "routeIntent": "eric",
-      "routeStatus": "paused",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "In the dark, everyone shows the others ridiculous souvenirs. How should Alice react to Eric’s bird?",
-      "result": "“A little crooked, but ours,” Alice said. Eric laughed and moved the stand closer to her."
-    },
-    {
-      "sceneId": "S41",
-      "id": "S41-C90",
-      "routeIntent": "eric",
-      "routeStatus": "paused",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 5
-      },
-      "question": "How will Alice explain to Marina why she chose that headline?",
-      "result": "She showed her editor a confirmed quotation. That story could not be replaced by the name of a beautiful landmark."
-    },
-    {
-      "sceneId": "S41",
-      "id": "S41-C90",
-      "routeIntent": "eric",
-      "routeStatus": "paused",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 5
-      },
-      "question": "How will Alice explain to Marina why she chose that headline?",
-      "result": "Alice named the action that changed her view of the material. Marina asked her to keep it in the first paragraph."
-    },
-    {
-      "sceneId": "S42",
-      "id": "S42-C90",
-      "routeIntent": "eric",
-      "routeStatus": "paused",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 4,
-        "paragraph": 0
-      },
-      "question": "The conversation turns to returning home. What will Alice say before deciding the future?",
-      "result": "She said plainly that this time it had mattered to be honest and not wait for someone else to guess her thoughts."
-    },
-    {
-      "sceneId": "S42",
-      "id": "S42-C90",
-      "routeIntent": "eric",
-      "routeStatus": "paused",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 4,
-        "paragraph": 0
-      },
-      "question": "The conversation turns to returning home. What will Alice say before deciding the future?",
-      "result": "They did not turn the conversation at the table into a final decision. Alice wanted first to understand her own answer."
-    },
-    {
-      "sceneId": "S48",
-      "id": "S48-C90",
-      "routeIntent": "eric",
-      "routeStatus": "paused",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "question": "Before the group photograph, everyone is still gathering around the table. Where will Alice stand?",
-      "result": "She chose her place without explanation. Nick set the timer and came back to the others."
-    },
-    {
-      "sceneId": "S48",
-      "id": "S48-C90",
-      "routeIntent": "eric",
-      "routeStatus": "paused",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "question": "Before the group photograph, everyone is still gathering around the table. Where will Alice stand?",
-      "result": "On the first attempt no one stood straight. Everyone laughed, and Nick asked them to take it again."
-    },
-    {
-      "sceneId": "S44",
-      "id": "S44-C90",
-      "routeIntent": "eric",
-      "routeStatus": "paused",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 3
-      },
-      "question": "Eric has written down a possible date and does not demand an immediate answer. What will Alice clarify?",
-      "result": "They named days that might suit and left final confirmation until work schedules were clear."
-    },
-    {
-      "sceneId": "S44",
-      "id": "S44-C90",
-      "routeIntent": "eric",
-      "routeStatus": "paused",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 3
-      },
-      "question": "Eric has written down a possible date and does not demand an immediate answer. What will Alice clarify?",
-      "result": "They listed practical details without turning them into a promise for a lifetime."
-    },
-    {
-      "sceneId": "S36",
-      "id": "S36-C90",
-      "routeIntent": "eric",
-      "routeStatus": "closed",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 3
-      },
-      "question": "While the mechanic checks the car, how will Alice spend the wait?",
-      "result": "Nick took a table, Damir found hot water, and Eric stayed in touch with the mechanic."
-    },
-    {
-      "sceneId": "S36",
-      "id": "S36-C90",
-      "routeIntent": "eric",
-      "routeStatus": "closed",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 3
-      },
-      "question": "While the mechanic checks the car, how will Alice spend the wait?",
-      "result": "Alice wrote a couple of lines about the unexpected stop without turning them into a required conversation for the whole group."
-    },
-    {
-      "sceneId": "S40",
-      "id": "S40-C90",
-      "routeIntent": "eric",
-      "routeStatus": "closed",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "precedingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "followingSourceRef": {
-        "chunk": 4,
-        "paragraph": 0
-      },
-      "question": "Alice is finishing a text she does not have to clear with anyone. What should she do?",
-      "result": "She did not strike out the line about her own uncertainty. The page became more honest, even if the editor would never see it."
-    },
-    {
-      "sceneId": "S40",
-      "id": "S40-C90",
-      "routeIntent": "eric",
-      "routeStatus": "closed",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "precedingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "followingSourceRef": {
-        "chunk": 4,
-        "paragraph": 0
-      },
-      "question": "Alice is finishing a text she does not have to clear with anyone. What should she do?",
-      "result": "Alice closed the laptop mid-sentence. When she came back, the important thought had not gone anywhere."
-    },
-    {
-      "sceneId": "S64",
-      "id": "S64-C90",
-      "routeIntent": "eric",
-      "routeStatus": "closed",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "After the short path, Alice returns to the guesthouse. What should she do before leaving?",
-      "result": "She did not rush to invent another conclusion for the walk. Pages and hot coffee were more than enough to begin the day."
-    },
-    {
-      "sceneId": "S64",
-      "id": "S64-C90",
-      "routeIntent": "eric",
-      "routeStatus": "closed",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "After the short path, Alice returns to the guesthouse. What should she do before leaving?",
-      "result": "A simple line about the lost hat appeared in her notebook. Alice left it without a lesson attached."
-    },
-    {
-      "sceneId": "S60",
-      "id": "S60-C90",
-      "routeIntent": "eric",
-      "routeStatus": "closed",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "In the dark, everyone shows the others ridiculous souvenirs. How should Alice react to Eric’s bird?",
-      "result": "Eric solemnly set the bird opposite Alice, and Nick declared it the group’s new mascot."
-    },
-    {
-      "sceneId": "S60",
-      "id": "S60-C90",
-      "routeIntent": "eric",
-      "routeStatus": "closed",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "In the dark, everyone shows the others ridiculous souvenirs. How should Alice react to Eric’s bird?",
-      "result": "“A little crooked, but ours,” Alice said. Eric laughed and moved the stand closer to her."
-    },
-    {
-      "sceneId": "S41",
-      "id": "S41-C90",
-      "routeIntent": "eric",
-      "routeStatus": "closed",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 5
-      },
-      "question": "How will Alice explain to Marina why she chose that headline?",
-      "result": "She showed her editor a confirmed quotation. That story could not be replaced by the name of a beautiful landmark."
-    },
-    {
-      "sceneId": "S41",
-      "id": "S41-C90",
-      "routeIntent": "eric",
-      "routeStatus": "closed",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 5
-      },
-      "question": "How will Alice explain to Marina why she chose that headline?",
-      "result": "Alice named the action that changed her view of the material. Marina asked her to keep it in the first paragraph."
-    },
-    {
-      "sceneId": "S43",
-      "id": "S43-C90",
-      "routeIntent": "eric",
-      "routeStatus": "closed",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "question": "Alice is spending an evening without a promise of a couple. What should she do?",
-      "result": "She told her about the road, then fell silent before the most personal part. Not everything needed explaining, even to someone close."
-    },
-    {
-      "sceneId": "S43",
-      "id": "S43-C90",
-      "routeIntent": "eric",
-      "routeStatus": "closed",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "question": "Alice is spending an evening without a promise of a couple. What should she do?",
-      "result": "The city was noisy as usual. Alice walked slowly and, for the first time, did not feel late for someone else’s meeting."
-    },
-    {
-      "sceneId": "S48",
-      "id": "S48-C90",
-      "routeIntent": "eric",
-      "routeStatus": "closed",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "question": "Before the group photograph, everyone is still gathering around the table. Where will Alice stand?",
-      "result": "She chose her place without explanation. Nick set the timer and came back to the others."
-    },
-    {
-      "sceneId": "S48",
-      "id": "S48-C90",
-      "routeIntent": "eric",
-      "routeStatus": "closed",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "question": "Before the group photograph, everyone is still gathering around the table. Where will Alice stand?",
-      "result": "On the first attempt no one stood straight. Everyone laughed, and Nick asked them to take it again."
-    },
-    {
-      "sceneId": "S47",
-      "id": "S47-C90",
-      "routeIntent": "eric",
-      "routeStatus": "closed",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "Alice has already rewritten her letter to herself. What should she do with it now?",
-      "result": "She wrote the name of a place she had long wanted to visit and did not turn the idea into a promise for the whole year."
-    },
-    {
-      "sceneId": "S47",
-      "id": "S47-C90",
-      "routeIntent": "eric",
-      "routeStatus": "closed",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "Alice has already rewritten her letter to herself. What should she do with it now?",
-      "result": "Alice closed her notes. The next step mattered more than another good sentence."
-    },
-    {
-      "sceneId": "S36",
-      "id": "S36-C90",
-      "routeIntent": "nick",
-      "routeStatus": "active",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 3
-      },
-      "question": "While the mechanic checks the car, how will Alice spend the wait?",
-      "result": "Nick took a table, Damir found hot water, and Eric stayed in touch with the mechanic."
-    },
-    {
-      "sceneId": "S36",
-      "id": "S36-C90",
-      "routeIntent": "nick",
-      "routeStatus": "active",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 3
-      },
-      "question": "While the mechanic checks the car, how will Alice spend the wait?",
-      "result": "Alice wrote a couple of lines about the unexpected stop without turning them into a required conversation for the whole group."
-    },
-    {
-      "sceneId": "S38",
-      "id": "S38-C90",
-      "routeIntent": "nick",
-      "routeStatus": "active",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 1,
-        "paragraph": 3
-      },
-      "precedingSourceRef": {
-        "chunk": 1,
-        "paragraph": 3
-      },
-      "followingSourceRef": {
+      "incomingRouteStatus": "active",
+      "relevantAuthoredChoiceId": "S37-C1",
+      "relevantAuthoredChoiceCode": "A",
+      "c90Id": "S37-C90",
+      "insertionRef": {
         "chunk": 3,
         "paragraph": 0
       },
-      "question": "Nick suggests a day without trying to make it interesting. What should Alice choose?",
-      "result": "They went through the bags and found a lost cable. Nick called it the best shot of the day, though no camera was nearby."
+      "precedingCanonicalText": "Алиса представила его в детстве с нотным листом и захотела услышать эту историю ещё раз уже дома, в другом городе.\n\n— Давай посмотрим, когда у нас совпадут два выходных, — сказала она. — Я не перееду завтра и не прошу тебя отменять работу. Но хочу увидеть тебя снова.",
+      "followingCanonicalText": "Эрик достал телефон. Не чтобы немедленно купить билет: они вместе отметили две возможные даты и договорились подтвердить одну после его разговора с руководителем обучения. Алиса допила кофе. Ей было хорошо от конкретной незавершённости: следующая встреча впервые зависела от двух людей, а не от программы поездки.",
+      "question": "After an honest conversation, what does Alice want to keep for herself?",
+      "option": "B",
+      "result": "She kept the fact that they had spoken plainly and had not demanded an answer beyond the one already given.",
+      "branchValidityAssertion": {
+        "pass": true
+      },
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": null,
+        "previous": "Давай посмотрим|Мне было хорошо|Вечером Ник",
+        "following": "Эрик достал|Эрик долго|Только если"
+      }
     },
     {
-      "sceneId": "S38",
-      "id": "S38-C90",
-      "routeIntent": "nick",
-      "routeStatus": "active",
+      "routeIntent": "eric",
+      "incomingRouteStatus": "active",
+      "relevantAuthoredChoiceId": "S37-C1",
+      "relevantAuthoredChoiceCode": "B",
+      "c90Id": "S37-C90",
+      "insertionRef": {
+        "chunk": 4,
+        "paragraph": 0
+      },
+      "precedingCanonicalText": "Алиса представила его в детстве с нотным листом и захотела услышать эту историю ещё раз уже дома, в другом городе.\n\n— Мне было хорошо с тобой, но я не хочу строить обещание, которое сейчас не смогу выполнить.",
+      "followingCanonicalText": "Эрик долго смотрел в окно. Потом попросил Алису оставить ему фотографию в смешной шапке. Она отправила снимок и положила телефон. Они дошли до гостевого дома вместе; дальше каждый пошёл в свой номер. Их роман закончился, но общая дорога оставалась общей.",
+      "question": "After an honest conversation, what does Alice want to keep for herself?",
+      "option": "A",
+      "result": "She let the conversation remain what it had been, without trying to make it gentler or final at once.",
+      "branchValidityAssertion": {
+        "pass": true
+      },
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": null,
+        "previous": "Давай посмотрим|Мне было хорошо|Вечером Ник",
+        "following": "Эрик достал|Эрик долго|Только если"
+      }
+    },
+    {
+      "routeIntent": "eric",
+      "incomingRouteStatus": "active",
+      "relevantAuthoredChoiceId": "S37-C1",
+      "relevantAuthoredChoiceCode": "B",
+      "c90Id": "S37-C90",
+      "insertionRef": {
+        "chunk": 4,
+        "paragraph": 0
+      },
+      "precedingCanonicalText": "Алиса представила его в детстве с нотным листом и захотела услышать эту историю ещё раз уже дома, в другом городе.\n\n— Мне было хорошо с тобой, но я не хочу строить обещание, которое сейчас не смогу выполнить.",
+      "followingCanonicalText": "Эрик долго смотрел в окно. Потом попросил Алису оставить ему фотографию в смешной шапке. Она отправила снимок и положила телефон. Они дошли до гостевого дома вместе; дальше каждый пошёл в свой номер. Их роман закончился, но общая дорога оставалась общей.",
+      "question": "After an honest conversation, what does Alice want to keep for herself?",
       "option": "B",
-      "insertionSourceRef": {
+      "result": "She kept the fact that they had spoken plainly and had not demanded an answer beyond the one already given.",
+      "branchValidityAssertion": {
+        "pass": true
+      },
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": null,
+        "previous": "Давай посмотрим|Мне было хорошо|Вечером Ник",
+        "following": "Эрик достал|Эрик долго|Только если"
+      }
+    },
+    {
+      "routeIntent": "eric",
+      "incomingRouteStatus": "paused",
+      "relevantAuthoredChoiceId": "S37-C1",
+      "relevantAuthoredChoiceCode": "A",
+      "c90Id": "S37-C90",
+      "insertionRef": {
+        "chunk": 5,
+        "paragraph": 0
+      },
+      "precedingCanonicalText": "Вечером Ник спросил, удалось ли им провести день без карты. Алиса ответила, что они почти не потерялись. Эрик посмотрел на неё поверх чашки и сказал, что не уверен, где теперь лежит его шапка. Ник предложил нарисовать объявление о пропаже, и Алиса впервые за несколько дней смеялась не потому, что кто-то пытался поднять ей настроение.",
+      "followingCanonicalText": "— Только если ты тоже хочешь, — добавила Алиса. Они вышли к освещённой дорожке ещё до того, как остальные проснулись. Эрик принёс один термос на двоих, и Алиса впервые за неделю не спросила, сколько у них времени.",
+      "question": "After an honest conversation, what does Alice want to keep for herself?",
+      "option": "A",
+      "result": "She let the conversation remain what it had been, without trying to make it gentler or final at once.",
+      "branchValidityAssertion": {
+        "pass": true
+      },
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": null,
+        "previous": "Давай посмотрим|Мне было хорошо|Вечером Ник",
+        "following": "Эрик достал|Эрик долго|Только если"
+      }
+    },
+    {
+      "routeIntent": "eric",
+      "incomingRouteStatus": "paused",
+      "relevantAuthoredChoiceId": "S37-C1",
+      "relevantAuthoredChoiceCode": "A",
+      "c90Id": "S37-C90",
+      "insertionRef": {
+        "chunk": 5,
+        "paragraph": 0
+      },
+      "precedingCanonicalText": "Вечером Ник спросил, удалось ли им провести день без карты. Алиса ответила, что они почти не потерялись. Эрик посмотрел на неё поверх чашки и сказал, что не уверен, где теперь лежит его шапка. Ник предложил нарисовать объявление о пропаже, и Алиса впервые за несколько дней смеялась не потому, что кто-то пытался поднять ей настроение.",
+      "followingCanonicalText": "— Только если ты тоже хочешь, — добавила Алиса. Они вышли к освещённой дорожке ещё до того, как остальные проснулись. Эрик принёс один термос на двоих, и Алиса впервые за неделю не спросила, сколько у них времени.",
+      "question": "After an honest conversation, what does Alice want to keep for herself?",
+      "option": "B",
+      "result": "She kept the fact that they had spoken plainly and had not demanded an answer beyond the one already given.",
+      "branchValidityAssertion": {
+        "pass": true
+      },
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": null,
+        "previous": "Давай посмотрим|Мне было хорошо|Вечером Ник",
+        "following": "Эрик достал|Эрик долго|Только если"
+      }
+    },
+    {
+      "routeIntent": "eric",
+      "incomingRouteStatus": "paused",
+      "relevantAuthoredChoiceId": "S37-C1",
+      "relevantAuthoredChoiceCode": "B",
+      "c90Id": "S37-C90",
+      "insertionRef": {
+        "chunk": 5,
+        "paragraph": 0
+      },
+      "precedingCanonicalText": "Вечером Ник спросил, удалось ли им провести день без карты. Алиса ответила, что они почти не потерялись. Эрик посмотрел на неё поверх чашки и сказал, что не уверен, где теперь лежит его шапка. Ник предложил нарисовать объявление о пропаже, и Алиса впервые за несколько дней смеялась не потому, что кто-то пытался поднять ей настроение.",
+      "followingCanonicalText": "— Только если ты тоже хочешь, — добавила Алиса. Они вышли к освещённой дорожке ещё до того, как остальные проснулись. Эрик принёс один термос на двоих, и Алиса впервые за неделю не спросила, сколько у них времени.",
+      "question": "After an honest conversation, what does Alice want to keep for herself?",
+      "option": "A",
+      "result": "She let the conversation remain what it had been, without trying to make it gentler or final at once.",
+      "branchValidityAssertion": {
+        "pass": true
+      },
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": null,
+        "previous": "Давай посмотрим|Мне было хорошо|Вечером Ник",
+        "following": "Эрик достал|Эрик долго|Только если"
+      }
+    },
+    {
+      "routeIntent": "eric",
+      "incomingRouteStatus": "paused",
+      "relevantAuthoredChoiceId": "S37-C1",
+      "relevantAuthoredChoiceCode": "B",
+      "c90Id": "S37-C90",
+      "insertionRef": {
+        "chunk": 5,
+        "paragraph": 0
+      },
+      "precedingCanonicalText": "Вечером Ник спросил, удалось ли им провести день без карты. Алиса ответила, что они почти не потерялись. Эрик посмотрел на неё поверх чашки и сказал, что не уверен, где теперь лежит его шапка. Ник предложил нарисовать объявление о пропаже, и Алиса впервые за несколько дней смеялась не потому, что кто-то пытался поднять ей настроение.",
+      "followingCanonicalText": "— Только если ты тоже хочешь, — добавила Алиса. Они вышли к освещённой дорожке ещё до того, как остальные проснулись. Эрик принёс один термос на двоих, и Алиса впервые за неделю не спросила, сколько у них времени.",
+      "question": "After an honest conversation, what does Alice want to keep for herself?",
+      "option": "B",
+      "result": "She kept the fact that they had spoken plainly and had not demanded an answer beyond the one already given.",
+      "branchValidityAssertion": {
+        "pass": true
+      },
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": null,
+        "previous": "Давай посмотрим|Мне было хорошо|Вечером Ник",
+        "following": "Эрик достал|Эрик долго|Только если"
+      }
+    },
+    {
+      "routeIntent": "nick",
+      "incomingRouteStatus": "active",
+      "relevantAuthoredChoiceId": "S38-C1",
+      "relevantAuthoredChoiceCode": "A",
+      "c90Id": "S38-C90",
+      "insertionRef": {
         "chunk": 1,
         "paragraph": 3
       },
-      "precedingSourceRef": {
+      "precedingCanonicalText": "Они нашли конверт в маленьком магазине. Ник подписал адрес и поставил дату, как будто закрывал сцену в монтаже. Алиса попросила показать ей штамп почты, когда отправит. Он заметил, что она уже придумала продолжение их скучного дня, и на этот раз не стал придумывать более интересное.",
+      "followingCanonicalText": "— Если хочешь меня увидеть снова, приезжай в мой город. Сходим на рынок, приготовим ужин и, может быть, никуда больше не пойдём.",
+      "question": "What does Alice notice in this ordinary day?",
+      "option": "A",
+      "result": "She liked that the day did not have to prove anything: it already held enough that had been lived and understood.",
+      "branchValidityAssertion": {
+        "pass": true
+      },
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": null,
+        "previous": "Они нашли конверт|Вечером Ник",
+        "following": "Если хочешь|Мне понравилось|Можно просто"
+      }
+    },
+    {
+      "routeIntent": "nick",
+      "incomingRouteStatus": "active",
+      "relevantAuthoredChoiceId": "S38-C1",
+      "relevantAuthoredChoiceCode": "A",
+      "c90Id": "S38-C90",
+      "insertionRef": {
         "chunk": 1,
         "paragraph": 3
       },
-      "followingSourceRef": {
+      "precedingCanonicalText": "Они нашли конверт в маленьком магазине. Ник подписал адрес и поставил дату, как будто закрывал сцену в монтаже. Алиса попросила показать ей штамп почты, когда отправит. Он заметил, что она уже придумала продолжение их скучного дня, и на этот раз не стал придумывать более интересное.",
+      "followingCanonicalText": "— Если хочешь меня увидеть снова, приезжай в мой город. Сходим на рынок, приготовим ужин и, может быть, никуда больше не пойдём.",
+      "question": "What does Alice notice in this ordinary day?",
+      "option": "B",
+      "result": "Alice did not turn a calm day into a promise. It was enough to remember it as it had been.",
+      "branchValidityAssertion": {
+        "pass": true
+      },
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": null,
+        "previous": "Они нашли конверт|Вечером Ник",
+        "following": "Если хочешь|Мне понравилось|Можно просто"
+      }
+    },
+    {
+      "routeIntent": "nick",
+      "incomingRouteStatus": "active",
+      "relevantAuthoredChoiceId": "S38-C1",
+      "relevantAuthoredChoiceCode": "B",
+      "c90Id": "S38-C90",
+      "insertionRef": {
+        "chunk": 1,
+        "paragraph": 3
+      },
+      "precedingCanonicalText": "Они нашли конверт в маленьком магазине. Ник подписал адрес и поставил дату, как будто закрывал сцену в монтаже. Алиса попросила показать ей штамп почты, когда отправит. Он заметил, что она уже придумала продолжение их скучного дня, и на этот раз не стал придумывать более интересное.",
+      "followingCanonicalText": "— Мне понравилось с тобой, — сказала Алиса. — Но я не хочу обещать уикенд, пока сама не знаю, чего хочу от нас.",
+      "question": "What does Alice notice in this ordinary day?",
+      "option": "A",
+      "result": "She liked that the day did not have to prove anything: it already held enough that had been lived and understood.",
+      "branchValidityAssertion": {
+        "pass": true
+      },
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": null,
+        "previous": "Они нашли конверт|Вечером Ник",
+        "following": "Если хочешь|Мне понравилось|Можно просто"
+      }
+    },
+    {
+      "routeIntent": "nick",
+      "incomingRouteStatus": "active",
+      "relevantAuthoredChoiceId": "S38-C1",
+      "relevantAuthoredChoiceCode": "B",
+      "c90Id": "S38-C90",
+      "insertionRef": {
+        "chunk": 1,
+        "paragraph": 3
+      },
+      "precedingCanonicalText": "Они нашли конверт в маленьком магазине. Ник подписал адрес и поставил дату, как будто закрывал сцену в монтаже. Алиса попросила показать ей штамп почты, когда отправит. Он заметил, что она уже придумала продолжение их скучного дня, и на этот раз не стал придумывать более интересное.",
+      "followingCanonicalText": "— Мне понравилось с тобой, — сказала Алиса. — Но я не хочу обещать уикенд, пока сама не знаю, чего хочу от нас.",
+      "question": "What does Alice notice in this ordinary day?",
+      "option": "B",
+      "result": "Alice did not turn a calm day into a promise. It was enough to remember it as it had been.",
+      "branchValidityAssertion": {
+        "pass": true
+      },
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": null,
+        "previous": "Они нашли конверт|Вечером Ник",
+        "following": "Если хочешь|Мне понравилось|Можно просто"
+      }
+    },
+    {
+      "routeIntent": "nick",
+      "incomingRouteStatus": "paused",
+      "relevantAuthoredChoiceId": "S38-C1",
+      "relevantAuthoredChoiceCode": "A",
+      "c90Id": "S38-C90",
+      "insertionRef": {
+        "chunk": 5,
+        "paragraph": 0
+      },
+      "precedingCanonicalText": "Вечером Ник поставил перед Алисой конверт с почтовой квитанцией. Он действительно отправил перчатку. Для фильма это было ничем не примечательное событие. Алиса положила квитанцию в книгу, которую везла домой, и подумала, что однажды, возможно, покажет её ему снова.",
+      "followingCanonicalText": "— Можно просто сходить со мной на кофе? — спросила Алиса. Ник посмотрел на неё, убедился, что она действительно ждёт ответа, и сказал «да». Уже за столиком он попытался пошутить о погоде и сам рассмеялся раньше неё.",
+      "question": "What does Alice notice in this ordinary day?",
+      "option": "A",
+      "result": "She liked that the day did not have to prove anything: it already held enough that had been lived and understood.",
+      "branchValidityAssertion": {
+        "pass": true
+      },
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": null,
+        "previous": "Они нашли конверт|Вечером Ник",
+        "following": "Если хочешь|Мне понравилось|Можно просто"
+      }
+    },
+    {
+      "routeIntent": "nick",
+      "incomingRouteStatus": "paused",
+      "relevantAuthoredChoiceId": "S38-C1",
+      "relevantAuthoredChoiceCode": "A",
+      "c90Id": "S38-C90",
+      "insertionRef": {
+        "chunk": 5,
+        "paragraph": 0
+      },
+      "precedingCanonicalText": "Вечером Ник поставил перед Алисой конверт с почтовой квитанцией. Он действительно отправил перчатку. Для фильма это было ничем не примечательное событие. Алиса положила квитанцию в книгу, которую везла домой, и подумала, что однажды, возможно, покажет её ему снова.",
+      "followingCanonicalText": "— Можно просто сходить со мной на кофе? — спросила Алиса. Ник посмотрел на неё, убедился, что она действительно ждёт ответа, и сказал «да». Уже за столиком он попытался пошутить о погоде и сам рассмеялся раньше неё.",
+      "question": "What does Alice notice in this ordinary day?",
+      "option": "B",
+      "result": "Alice did not turn a calm day into a promise. It was enough to remember it as it had been.",
+      "branchValidityAssertion": {
+        "pass": true
+      },
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": null,
+        "previous": "Они нашли конверт|Вечером Ник",
+        "following": "Если хочешь|Мне понравилось|Можно просто"
+      }
+    },
+    {
+      "routeIntent": "nick",
+      "incomingRouteStatus": "paused",
+      "relevantAuthoredChoiceId": "S38-C1",
+      "relevantAuthoredChoiceCode": "B",
+      "c90Id": "S38-C90",
+      "insertionRef": {
+        "chunk": 5,
+        "paragraph": 0
+      },
+      "precedingCanonicalText": "Вечером Ник поставил перед Алисой конверт с почтовой квитанцией. Он действительно отправил перчатку. Для фильма это было ничем не примечательное событие. Алиса положила квитанцию в книгу, которую везла домой, и подумала, что однажды, возможно, покажет её ему снова.",
+      "followingCanonicalText": "— Можно просто сходить со мной на кофе? — спросила Алиса. Ник посмотрел на неё, убедился, что она действительно ждёт ответа, и сказал «да». Уже за столиком он попытался пошутить о погоде и сам рассмеялся раньше неё.",
+      "question": "What does Alice notice in this ordinary day?",
+      "option": "A",
+      "result": "She liked that the day did not have to prove anything: it already held enough that had been lived and understood.",
+      "branchValidityAssertion": {
+        "pass": true
+      },
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": null,
+        "previous": "Они нашли конверт|Вечером Ник",
+        "following": "Если хочешь|Мне понравилось|Можно просто"
+      }
+    },
+    {
+      "routeIntent": "nick",
+      "incomingRouteStatus": "paused",
+      "relevantAuthoredChoiceId": "S38-C1",
+      "relevantAuthoredChoiceCode": "B",
+      "c90Id": "S38-C90",
+      "insertionRef": {
+        "chunk": 5,
+        "paragraph": 0
+      },
+      "precedingCanonicalText": "Вечером Ник поставил перед Алисой конверт с почтовой квитанцией. Он действительно отправил перчатку. Для фильма это было ничем не примечательное событие. Алиса положила квитанцию в книгу, которую везла домой, и подумала, что однажды, возможно, покажет её ему снова.",
+      "followingCanonicalText": "— Можно просто сходить со мной на кофе? — спросила Алиса. Ник посмотрел на неё, убедился, что она действительно ждёт ответа, и сказал «да». Уже за столиком он попытался пошутить о погоде и сам рассмеялся раньше неё.",
+      "question": "What does Alice notice in this ordinary day?",
+      "option": "B",
+      "result": "Alice did not turn a calm day into a promise. It was enough to remember it as it had been.",
+      "branchValidityAssertion": {
+        "pass": true
+      },
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": null,
+        "previous": "Они нашли конверт|Вечером Ник",
+        "following": "Если хочешь|Мне понравилось|Можно просто"
+      }
+    },
+    {
+      "routeIntent": "damir",
+      "incomingRouteStatus": "active",
+      "relevantAuthoredChoiceId": "S39-C1",
+      "relevantAuthoredChoiceCode": "A",
+      "c90Id": "S39-C90",
+      "insertionRef": {
         "chunk": 3,
         "paragraph": 0
       },
-      "question": "Nick suggests a day without trying to make it interesting. What should Alice choose?",
-      "result": "By the bread shelf they argued about breakfast. Alice suddenly pictured a similar argument at home and was not frightened by the thought."
-    },
-    {
-      "sceneId": "S54",
-      "id": "S54-C90",
-      "routeIntent": "nick",
-      "routeStatus": "active",
+      "precedingCanonicalText": "Она почувствовала странное облегчение: его жизнь оставалась его жизнью, и это не означало, что он уже отдалился от неё.\n\n— Если мы продолжим, я не хочу сразу возвращаться к тому, как мы жили два года назад, — сказала она. — Давай сначала встретимся три раза, и каждый раз кто-то один выберет место.",
+      "followingCanonicalText": "Дамир предложил начать с её города и признался, что уже забыл, где там теперь открылась хорошая пекарня. Алиса ответила, что это даже к лучшему: у них будет повод найти новую.",
+      "question": "What does Alice not want to repeat after this conversation?",
       "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 3
+      "result": "She held on to one plain thought: the past could not be put back together merely because it had once been familiar.",
+      "branchValidityAssertion": {
+        "pass": true
       },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 3
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "question": "For the first time, Nick does not joke during a familiar chorus. What should Alice do?",
-      "result": "He answered briefly, but did not hide behind the next joke. Alice took his hand."
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": null,
+        "previous": "Если мы продолжим|Мне важно не продолжать|Я рада, что мы увидели|На улице снова|Рассвет",
+        "following": "Дамир предложил|Дамир кивнул|Дамир сел|Дамир посмотрел|Дамир сначала"
+      }
     },
     {
-      "sceneId": "S54",
-      "id": "S54-C90",
-      "routeIntent": "nick",
-      "routeStatus": "active",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 3
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 3
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "question": "For the first time, Nick does not joke during a familiar chorus. What should Alice do?",
-      "result": "Nick laid his hand over her fingers. A few minutes were enough for them to hear the song through."
-    },
-    {
-      "sceneId": "S60",
-      "id": "S60-C90",
-      "routeIntent": "nick",
-      "routeStatus": "active",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "In the dark, everyone shows the others ridiculous souvenirs. How should Alice react to Eric’s bird?",
-      "result": "Eric solemnly set the bird opposite Alice, and Nick declared it the group’s new mascot."
-    },
-    {
-      "sceneId": "S60",
-      "id": "S60-C90",
-      "routeIntent": "nick",
-      "routeStatus": "active",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "In the dark, everyone shows the others ridiculous souvenirs. How should Alice react to Eric’s bird?",
-      "result": "“A little crooked, but ours,” Alice said. Eric laughed and moved the stand closer to her."
-    },
-    {
-      "sceneId": "S41",
-      "id": "S41-C90",
-      "routeIntent": "nick",
-      "routeStatus": "active",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 5
-      },
-      "question": "How will Alice explain to Marina why she chose that headline?",
-      "result": "She showed her editor a confirmed quotation. That story could not be replaced by the name of a beautiful landmark."
-    },
-    {
-      "sceneId": "S41",
-      "id": "S41-C90",
-      "routeIntent": "nick",
-      "routeStatus": "active",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 5
-      },
-      "question": "How will Alice explain to Marina why she chose that headline?",
-      "result": "Alice named the action that changed her view of the material. Marina asked her to keep it in the first paragraph."
-    },
-    {
-      "sceneId": "S42",
-      "id": "S42-C90",
-      "routeIntent": "nick",
-      "routeStatus": "active",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 1,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 1,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 4,
-        "paragraph": 0
-      },
-      "question": "The conversation turns to returning home. What will Alice say before deciding the future?",
-      "result": "She said plainly that this time it had mattered to be honest and not wait for someone else to guess her thoughts."
-    },
-    {
-      "sceneId": "S42",
-      "id": "S42-C90",
-      "routeIntent": "nick",
-      "routeStatus": "active",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 1,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 1,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 4,
-        "paragraph": 0
-      },
-      "question": "The conversation turns to returning home. What will Alice say before deciding the future?",
-      "result": "They did not turn the conversation at the table into a final decision. Alice wanted first to understand her own answer."
-    },
-    {
-      "sceneId": "S48",
-      "id": "S48-C90",
-      "routeIntent": "nick",
-      "routeStatus": "active",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "question": "Before the group photograph, everyone is still gathering around the table. Where will Alice stand?",
-      "result": "She chose her place without explanation. Nick set the timer and came back to the others."
-    },
-    {
-      "sceneId": "S48",
-      "id": "S48-C90",
-      "routeIntent": "nick",
-      "routeStatus": "active",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "question": "Before the group photograph, everyone is still gathering around the table. Where will Alice stand?",
-      "result": "On the first attempt no one stood straight. Everyone laughed, and Nick asked them to take it again."
-    },
-    {
-      "sceneId": "S45",
-      "id": "S45-C90",
-      "routeIntent": "nick",
-      "routeStatus": "active",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "Before goodbye, Nick asks what an ordinary evening without a camera might be. How will Alice answer?",
-      "result": "Alice named one film and added that they could decide later whether they wanted to watch it."
-    },
-    {
-      "sceneId": "S45",
-      "id": "S45-C90",
-      "routeIntent": "nick",
-      "routeStatus": "active",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "Before goodbye, Nick asks what an ordinary evening without a camera might be. How will Alice answer?",
-      "result": "Nick nodded. One good conversation did not have to become a plan written in advance."
-    },
-    {
-      "sceneId": "S36",
-      "id": "S36-C90",
-      "routeIntent": "nick",
-      "routeStatus": "paused",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 3
-      },
-      "question": "While the mechanic checks the car, how will Alice spend the wait?",
-      "result": "Nick took a table, Damir found hot water, and Eric stayed in touch with the mechanic."
-    },
-    {
-      "sceneId": "S36",
-      "id": "S36-C90",
-      "routeIntent": "nick",
-      "routeStatus": "paused",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 3
-      },
-      "question": "While the mechanic checks the car, how will Alice spend the wait?",
-      "result": "Alice wrote a couple of lines about the unexpected stop without turning them into a required conversation for the whole group."
-    },
-    {
-      "sceneId": "S38",
-      "id": "S38-C90",
-      "routeIntent": "nick",
-      "routeStatus": "paused",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 5,
-        "paragraph": 0
-      },
-      "precedingSourceRef": {
-        "chunk": 5,
-        "paragraph": 0
-      },
-      "followingSourceRef": {
-        "chunk": 7,
-        "paragraph": 0
-      },
-      "question": "Nick suggests a day without trying to make it interesting. What should Alice choose?",
-      "result": "They went through the bags and found a lost cable. Nick called it the best shot of the day, though no camera was nearby."
-    },
-    {
-      "sceneId": "S38",
-      "id": "S38-C90",
-      "routeIntent": "nick",
-      "routeStatus": "paused",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 5,
-        "paragraph": 0
-      },
-      "precedingSourceRef": {
-        "chunk": 5,
-        "paragraph": 0
-      },
-      "followingSourceRef": {
-        "chunk": 7,
-        "paragraph": 0
-      },
-      "question": "Nick suggests a day without trying to make it interesting. What should Alice choose?",
-      "result": "By the bread shelf they argued about breakfast. Alice suddenly pictured a similar argument at home and was not frightened by the thought."
-    },
-    {
-      "sceneId": "S54",
-      "id": "S54-C90",
-      "routeIntent": "nick",
-      "routeStatus": "paused",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 3
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 3
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "question": "For the first time, Nick does not joke during a familiar chorus. What should Alice do?",
-      "result": "He answered briefly, but did not hide behind the next joke. Alice took his hand."
-    },
-    {
-      "sceneId": "S54",
-      "id": "S54-C90",
-      "routeIntent": "nick",
-      "routeStatus": "paused",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 3
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 3
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "question": "For the first time, Nick does not joke during a familiar chorus. What should Alice do?",
-      "result": "Nick laid his hand over her fingers. A few minutes were enough for them to hear the song through."
-    },
-    {
-      "sceneId": "S60",
-      "id": "S60-C90",
-      "routeIntent": "nick",
-      "routeStatus": "paused",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "In the dark, everyone shows the others ridiculous souvenirs. How should Alice react to Eric’s bird?",
-      "result": "Eric solemnly set the bird opposite Alice, and Nick declared it the group’s new mascot."
-    },
-    {
-      "sceneId": "S60",
-      "id": "S60-C90",
-      "routeIntent": "nick",
-      "routeStatus": "paused",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "In the dark, everyone shows the others ridiculous souvenirs. How should Alice react to Eric’s bird?",
-      "result": "“A little crooked, but ours,” Alice said. Eric laughed and moved the stand closer to her."
-    },
-    {
-      "sceneId": "S41",
-      "id": "S41-C90",
-      "routeIntent": "nick",
-      "routeStatus": "paused",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 5
-      },
-      "question": "How will Alice explain to Marina why she chose that headline?",
-      "result": "She showed her editor a confirmed quotation. That story could not be replaced by the name of a beautiful landmark."
-    },
-    {
-      "sceneId": "S41",
-      "id": "S41-C90",
-      "routeIntent": "nick",
-      "routeStatus": "paused",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 5
-      },
-      "question": "How will Alice explain to Marina why she chose that headline?",
-      "result": "Alice named the action that changed her view of the material. Marina asked her to keep it in the first paragraph."
-    },
-    {
-      "sceneId": "S42",
-      "id": "S42-C90",
-      "routeIntent": "nick",
-      "routeStatus": "paused",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 1,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 1,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 4,
-        "paragraph": 0
-      },
-      "question": "The conversation turns to returning home. What will Alice say before deciding the future?",
-      "result": "She said plainly that this time it had mattered to be honest and not wait for someone else to guess her thoughts."
-    },
-    {
-      "sceneId": "S42",
-      "id": "S42-C90",
-      "routeIntent": "nick",
-      "routeStatus": "paused",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 1,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 1,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 4,
-        "paragraph": 0
-      },
-      "question": "The conversation turns to returning home. What will Alice say before deciding the future?",
-      "result": "They did not turn the conversation at the table into a final decision. Alice wanted first to understand her own answer."
-    },
-    {
-      "sceneId": "S48",
-      "id": "S48-C90",
-      "routeIntent": "nick",
-      "routeStatus": "paused",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "question": "Before the group photograph, everyone is still gathering around the table. Where will Alice stand?",
-      "result": "She chose her place without explanation. Nick set the timer and came back to the others."
-    },
-    {
-      "sceneId": "S48",
-      "id": "S48-C90",
-      "routeIntent": "nick",
-      "routeStatus": "paused",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "question": "Before the group photograph, everyone is still gathering around the table. Where will Alice stand?",
-      "result": "On the first attempt no one stood straight. Everyone laughed, and Nick asked them to take it again."
-    },
-    {
-      "sceneId": "S45",
-      "id": "S45-C90",
-      "routeIntent": "nick",
-      "routeStatus": "paused",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "Before goodbye, Nick asks what an ordinary evening without a camera might be. How will Alice answer?",
-      "result": "Alice named one film and added that they could decide later whether they wanted to watch it."
-    },
-    {
-      "sceneId": "S45",
-      "id": "S45-C90",
-      "routeIntent": "nick",
-      "routeStatus": "paused",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "Before goodbye, Nick asks what an ordinary evening without a camera might be. How will Alice answer?",
-      "result": "Nick nodded. One good conversation did not have to become a plan written in advance."
-    },
-    {
-      "sceneId": "S36",
-      "id": "S36-C90",
-      "routeIntent": "nick",
-      "routeStatus": "closed",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 3
-      },
-      "question": "While the mechanic checks the car, how will Alice spend the wait?",
-      "result": "Nick took a table, Damir found hot water, and Eric stayed in touch with the mechanic."
-    },
-    {
-      "sceneId": "S36",
-      "id": "S36-C90",
-      "routeIntent": "nick",
-      "routeStatus": "closed",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 3
-      },
-      "question": "While the mechanic checks the car, how will Alice spend the wait?",
-      "result": "Alice wrote a couple of lines about the unexpected stop without turning them into a required conversation for the whole group."
-    },
-    {
-      "sceneId": "S40",
-      "id": "S40-C90",
-      "routeIntent": "nick",
-      "routeStatus": "closed",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "precedingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "followingSourceRef": {
-        "chunk": 4,
-        "paragraph": 0
-      },
-      "question": "Alice is finishing a text she does not have to clear with anyone. What should she do?",
-      "result": "She did not strike out the line about her own uncertainty. The page became more honest, even if the editor would never see it."
-    },
-    {
-      "sceneId": "S40",
-      "id": "S40-C90",
-      "routeIntent": "nick",
-      "routeStatus": "closed",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "precedingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "followingSourceRef": {
-        "chunk": 4,
-        "paragraph": 0
-      },
-      "question": "Alice is finishing a text she does not have to clear with anyone. What should she do?",
-      "result": "Alice closed the laptop mid-sentence. When she came back, the important thought had not gone anywhere."
-    },
-    {
-      "sceneId": "S64",
-      "id": "S64-C90",
-      "routeIntent": "nick",
-      "routeStatus": "closed",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "After the short path, Alice returns to the guesthouse. What should she do before leaving?",
-      "result": "She did not rush to invent another conclusion for the walk. Pages and hot coffee were more than enough to begin the day."
-    },
-    {
-      "sceneId": "S64",
-      "id": "S64-C90",
-      "routeIntent": "nick",
-      "routeStatus": "closed",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "After the short path, Alice returns to the guesthouse. What should she do before leaving?",
-      "result": "A simple line about the lost hat appeared in her notebook. Alice left it without a lesson attached."
-    },
-    {
-      "sceneId": "S60",
-      "id": "S60-C90",
-      "routeIntent": "nick",
-      "routeStatus": "closed",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "In the dark, everyone shows the others ridiculous souvenirs. How should Alice react to Eric’s bird?",
-      "result": "Eric solemnly set the bird opposite Alice, and Nick declared it the group’s new mascot."
-    },
-    {
-      "sceneId": "S60",
-      "id": "S60-C90",
-      "routeIntent": "nick",
-      "routeStatus": "closed",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "In the dark, everyone shows the others ridiculous souvenirs. How should Alice react to Eric’s bird?",
-      "result": "“A little crooked, but ours,” Alice said. Eric laughed and moved the stand closer to her."
-    },
-    {
-      "sceneId": "S41",
-      "id": "S41-C90",
-      "routeIntent": "nick",
-      "routeStatus": "closed",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 5
-      },
-      "question": "How will Alice explain to Marina why she chose that headline?",
-      "result": "She showed her editor a confirmed quotation. That story could not be replaced by the name of a beautiful landmark."
-    },
-    {
-      "sceneId": "S41",
-      "id": "S41-C90",
-      "routeIntent": "nick",
-      "routeStatus": "closed",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 5
-      },
-      "question": "How will Alice explain to Marina why she chose that headline?",
-      "result": "Alice named the action that changed her view of the material. Marina asked her to keep it in the first paragraph."
-    },
-    {
-      "sceneId": "S43",
-      "id": "S43-C90",
-      "routeIntent": "nick",
-      "routeStatus": "closed",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "question": "Alice is spending an evening without a promise of a couple. What should she do?",
-      "result": "She told her about the road, then fell silent before the most personal part. Not everything needed explaining, even to someone close."
-    },
-    {
-      "sceneId": "S43",
-      "id": "S43-C90",
-      "routeIntent": "nick",
-      "routeStatus": "closed",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "question": "Alice is spending an evening without a promise of a couple. What should she do?",
-      "result": "The city was noisy as usual. Alice walked slowly and, for the first time, did not feel late for someone else’s meeting."
-    },
-    {
-      "sceneId": "S48",
-      "id": "S48-C90",
-      "routeIntent": "nick",
-      "routeStatus": "closed",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "question": "Before the group photograph, everyone is still gathering around the table. Where will Alice stand?",
-      "result": "She chose her place without explanation. Nick set the timer and came back to the others."
-    },
-    {
-      "sceneId": "S48",
-      "id": "S48-C90",
-      "routeIntent": "nick",
-      "routeStatus": "closed",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "question": "Before the group photograph, everyone is still gathering around the table. Where will Alice stand?",
-      "result": "On the first attempt no one stood straight. Everyone laughed, and Nick asked them to take it again."
-    },
-    {
-      "sceneId": "S47",
-      "id": "S47-C90",
-      "routeIntent": "nick",
-      "routeStatus": "closed",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "Alice has already rewritten her letter to herself. What should she do with it now?",
-      "result": "She wrote the name of a place she had long wanted to visit and did not turn the idea into a promise for the whole year."
-    },
-    {
-      "sceneId": "S47",
-      "id": "S47-C90",
-      "routeIntent": "nick",
-      "routeStatus": "closed",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "Alice has already rewritten her letter to herself. What should she do with it now?",
-      "result": "Alice closed her notes. The next step mattered more than another good sentence."
-    },
-    {
-      "sceneId": "S36",
-      "id": "S36-C90",
       "routeIntent": "damir",
-      "routeStatus": "active",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 3
-      },
-      "question": "While the mechanic checks the car, how will Alice spend the wait?",
-      "result": "Nick took a table, Damir found hot water, and Eric stayed in touch with the mechanic."
-    },
-    {
-      "sceneId": "S36",
-      "id": "S36-C90",
-      "routeIntent": "damir",
-      "routeStatus": "active",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 3
-      },
-      "question": "While the mechanic checks the car, how will Alice spend the wait?",
-      "result": "Alice wrote a couple of lines about the unexpected stop without turning them into a required conversation for the whole group."
-    },
-    {
-      "sceneId": "S39",
-      "id": "S39-C90",
-      "routeIntent": "damir",
-      "routeStatus": "active",
-      "option": "A",
-      "insertionSourceRef": {
+      "incomingRouteStatus": "active",
+      "relevantAuthoredChoiceId": "S39-C1",
+      "relevantAuthoredChoiceCode": "A",
+      "c90Id": "S39-C90",
+      "insertionRef": {
         "chunk": 3,
         "paragraph": 0
       },
-      "precedingSourceRef": {
-        "chunk": 1,
-        "paragraph": 2
+      "precedingCanonicalText": "Она почувствовала странное облегчение: его жизнь оставалась его жизнью, и это не означало, что он уже отдалился от неё.\n\n— Если мы продолжим, я не хочу сразу возвращаться к тому, как мы жили два года назад, — сказала она. — Давай сначала встретимся три раза, и каждый раз кто-то один выберет место.",
+      "followingCanonicalText": "Дамир предложил начать с её города и признался, что уже забыл, где там теперь открылась хорошая пекарня. Алиса ответила, что это даже к лучшему: у них будет повод найти новую.",
+      "question": "What does Alice not want to repeat after this conversation?",
+      "option": "B",
+      "result": "Alice did not rewrite what she had heard into a more comforting story. The present decision deserved accuracy.",
+      "branchValidityAssertion": {
+        "pass": true
       },
-      "followingSourceRef": {
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": null,
+        "previous": "Если мы продолжим|Мне важно не продолжать|Я рада, что мы увидели|На улице снова|Рассвет",
+        "following": "Дамир предложил|Дамир кивнул|Дамир сел|Дамир посмотрел|Дамир сначала"
+      }
+    },
+    {
+      "routeIntent": "damir",
+      "incomingRouteStatus": "active",
+      "relevantAuthoredChoiceId": "S39-C1",
+      "relevantAuthoredChoiceCode": "B",
+      "c90Id": "S39-C90",
+      "insertionRef": {
+        "chunk": 4,
+        "paragraph": 0
+      },
+      "precedingCanonicalText": "Она почувствовала странное облегчение: его жизнь оставалась его жизнью, и это не означало, что он уже отдалился от неё.\n\n— Я рада, что мы увидели друг друга другими, — сказала Алиса. — Но я не хочу продолжать роман после возвращения.",
+      "followingCanonicalText": "Дамир посмотрел на неё, потом на пустую чашку. Сказал, что ему тоже важно сохранить нынешний день как хорошее воспоминание, а не повод снова спорить о будущем. Они допили кофе и вернулись к машине вместе.",
+      "question": "What does Alice not want to repeat after this conversation?",
+      "option": "A",
+      "result": "She held on to one plain thought: the past could not be put back together merely because it had once been familiar.",
+      "branchValidityAssertion": {
+        "pass": true
+      },
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": null,
+        "previous": "Если мы продолжим|Мне важно не продолжать|Я рада, что мы увидели|На улице снова|Рассвет",
+        "following": "Дамир предложил|Дамир кивнул|Дамир сел|Дамир посмотрел|Дамир сначала"
+      }
+    },
+    {
+      "routeIntent": "damir",
+      "incomingRouteStatus": "active",
+      "relevantAuthoredChoiceId": "S39-C1",
+      "relevantAuthoredChoiceCode": "B",
+      "c90Id": "S39-C90",
+      "insertionRef": {
+        "chunk": 4,
+        "paragraph": 0
+      },
+      "precedingCanonicalText": "Она почувствовала странное облегчение: его жизнь оставалась его жизнью, и это не означало, что он уже отдалился от неё.\n\n— Я рада, что мы увидели друг друга другими, — сказала Алиса. — Но я не хочу продолжать роман после возвращения.",
+      "followingCanonicalText": "Дамир посмотрел на неё, потом на пустую чашку. Сказал, что ему тоже важно сохранить нынешний день как хорошее воспоминание, а не повод снова спорить о будущем. Они допили кофе и вернулись к машине вместе.",
+      "question": "What does Alice not want to repeat after this conversation?",
+      "option": "B",
+      "result": "Alice did not rewrite what she had heard into a more comforting story. The present decision deserved accuracy.",
+      "branchValidityAssertion": {
+        "pass": true
+      },
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": null,
+        "previous": "Если мы продолжим|Мне важно не продолжать|Я рада, что мы увидели|На улице снова|Рассвет",
+        "following": "Дамир предложил|Дамир кивнул|Дамир сел|Дамир посмотрел|Дамир сначала"
+      }
+    },
+    {
+      "routeIntent": "damir",
+      "incomingRouteStatus": "paused",
+      "relevantAuthoredChoiceId": "S39-C1",
+      "relevantAuthoredChoiceCode": "A",
+      "c90Id": "S39-C90",
+      "insertionRef": {
+        "chunk": 5,
+        "paragraph": 0
+      },
+      "precedingCanonicalText": "На улице снова моросил дождь. Алиса подняла воротник; Дамир не бросился поправлять ей куртку. Он просто спросил, не хочет ли она зайти за горячим хлебом для группы. Она согласилась. У них оставалось общее дело, и оно не требовало заранее знать конец их истории.",
+      "followingCanonicalText": "Дамир сначала удивился вопросу. Потом рассказал о старой кружке в ординаторской и собаке соседки, которая встречает его у двери. Алиса ответила историей о любимой булочной возле редакции. В этих рассказах не было их прежней пары.",
+      "question": "What does Alice not want to repeat after this conversation?",
+      "option": "A",
+      "result": "She held on to one plain thought: the past could not be put back together merely because it had once been familiar.",
+      "branchValidityAssertion": {
+        "pass": true
+      },
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": null,
+        "previous": "Если мы продолжим|Мне важно не продолжать|Я рада, что мы увидели|На улице снова|Рассвет",
+        "following": "Дамир предложил|Дамир кивнул|Дамир сел|Дамир посмотрел|Дамир сначала"
+      }
+    },
+    {
+      "routeIntent": "damir",
+      "incomingRouteStatus": "paused",
+      "relevantAuthoredChoiceId": "S39-C1",
+      "relevantAuthoredChoiceCode": "A",
+      "c90Id": "S39-C90",
+      "insertionRef": {
+        "chunk": 5,
+        "paragraph": 0
+      },
+      "precedingCanonicalText": "На улице снова моросил дождь. Алиса подняла воротник; Дамир не бросился поправлять ей куртку. Он просто спросил, не хочет ли она зайти за горячим хлебом для группы. Она согласилась. У них оставалось общее дело, и оно не требовало заранее знать конец их истории.",
+      "followingCanonicalText": "Дамир сначала удивился вопросу. Потом рассказал о старой кружке в ординаторской и собаке соседки, которая встречает его у двери. Алиса ответила историей о любимой булочной возле редакции. В этих рассказах не было их прежней пары.",
+      "question": "What does Alice not want to repeat after this conversation?",
+      "option": "B",
+      "result": "Alice did not rewrite what she had heard into a more comforting story. The present decision deserved accuracy.",
+      "branchValidityAssertion": {
+        "pass": true
+      },
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": null,
+        "previous": "Если мы продолжим|Мне важно не продолжать|Я рада, что мы увидели|На улице снова|Рассвет",
+        "following": "Дамир предложил|Дамир кивнул|Дамир сел|Дамир посмотрел|Дамир сначала"
+      }
+    },
+    {
+      "routeIntent": "damir",
+      "incomingRouteStatus": "paused",
+      "relevantAuthoredChoiceId": "S39-C1",
+      "relevantAuthoredChoiceCode": "B",
+      "c90Id": "S39-C90",
+      "insertionRef": {
+        "chunk": 5,
+        "paragraph": 0
+      },
+      "precedingCanonicalText": "На улице снова моросил дождь. Алиса подняла воротник; Дамир не бросился поправлять ей куртку. Он просто спросил, не хочет ли она зайти за горячим хлебом для группы. Она согласилась. У них оставалось общее дело, и оно не требовало заранее знать конец их истории.",
+      "followingCanonicalText": "Дамир сначала удивился вопросу. Потом рассказал о старой кружке в ординаторской и собаке соседки, которая встречает его у двери. Алиса ответила историей о любимой булочной возле редакции. В этих рассказах не было их прежней пары.",
+      "question": "What does Alice not want to repeat after this conversation?",
+      "option": "A",
+      "result": "She held on to one plain thought: the past could not be put back together merely because it had once been familiar.",
+      "branchValidityAssertion": {
+        "pass": true
+      },
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": null,
+        "previous": "Если мы продолжим|Мне важно не продолжать|Я рада, что мы увидели|На улице снова|Рассвет",
+        "following": "Дамир предложил|Дамир кивнул|Дамир сел|Дамир посмотрел|Дамир сначала"
+      }
+    },
+    {
+      "routeIntent": "damir",
+      "incomingRouteStatus": "paused",
+      "relevantAuthoredChoiceId": "S39-C1",
+      "relevantAuthoredChoiceCode": "B",
+      "c90Id": "S39-C90",
+      "insertionRef": {
+        "chunk": 5,
+        "paragraph": 0
+      },
+      "precedingCanonicalText": "На улице снова моросил дождь. Алиса подняла воротник; Дамир не бросился поправлять ей куртку. Он просто спросил, не хочет ли она зайти за горячим хлебом для группы. Она согласилась. У них оставалось общее дело, и оно не требовало заранее знать конец их истории.",
+      "followingCanonicalText": "Дамир сначала удивился вопросу. Потом рассказал о старой кружке в ординаторской и собаке соседки, которая встречает его у двери. Алиса ответила историей о любимой булочной возле редакции. В этих рассказах не было их прежней пары.",
+      "question": "What does Alice not want to repeat after this conversation?",
+      "option": "B",
+      "result": "Alice did not rewrite what she had heard into a more comforting story. The present decision deserved accuracy.",
+      "branchValidityAssertion": {
+        "pass": true
+      },
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": null,
+        "previous": "Если мы продолжим|Мне важно не продолжать|Я рада, что мы увидели|На улице снова|Рассвет",
+        "following": "Дамир предложил|Дамир кивнул|Дамир сел|Дамир посмотрел|Дамир сначала"
+      }
+    },
+    {
+      "routeIntent": "eric",
+      "incomingRouteStatus": "active",
+      "relevantAuthoredChoiceId": "S40-C1",
+      "relevantAuthoredChoiceCode": "A",
+      "c90Id": "S40-C90",
+      "insertionRef": {
+        "chunk": 2,
+        "paragraph": 0
+      },
+      "precedingCanonicalText": "Она описала дорогу и работу людей, которые остаются после туристов. Имена друзей появились только в согласованных фрагментах. Остальное осталось в её блокноте, который она не отправляла редакции.",
+      "followingCanonicalText": "За окном Ник спорил с Дамиром, кто последним пользовался зарядкой. Эрик стучал у двери соседнего номера, потому что перепутал ключи. Алиса улыбнулась и закрыла ноутбук. Она была частью этой группы даже тогда, когда не превращала каждый разговор в сцену своего романа.",
+      "question": "Where does Alice draw the line between what is published and what is private?",
+      "option": "A",
+      "result": "She separated verified material from what belonged only in her notebook. Honesty did not require mixing the two texts.",
+      "branchValidityAssertion": {
+        "pass": true
+      },
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": null,
+        "previous": "согласованных фрагментах|блокноте|Марина ответила",
+        "following": "За окном Ник|Вечером"
+      }
+    },
+    {
+      "routeIntent": "eric",
+      "incomingRouteStatus": "active",
+      "relevantAuthoredChoiceId": "S40-C1",
+      "relevantAuthoredChoiceCode": "A",
+      "c90Id": "S40-C90",
+      "insertionRef": {
+        "chunk": 2,
+        "paragraph": 0
+      },
+      "precedingCanonicalText": "Она описала дорогу и работу людей, которые остаются после туристов. Имена друзей появились только в согласованных фрагментах. Остальное осталось в её блокноте, который она не отправляла редакции.",
+      "followingCanonicalText": "За окном Ник спорил с Дамиром, кто последним пользовался зарядкой. Эрик стучал у двери соседнего номера, потому что перепутал ключи. Алиса улыбнулась и закрыла ноутбук. Она была частью этой группы даже тогда, когда не превращала каждый разговор в сцену своего романа.",
+      "question": "Where does Alice draw the line between what is published and what is private?",
+      "option": "B",
+      "result": "Alice closed her notebook beside the working edits. A private observation could remain hers without posing as a published fact.",
+      "branchValidityAssertion": {
+        "pass": true
+      },
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": null,
+        "previous": "согласованных фрагментах|блокноте|Марина ответила",
+        "following": "За окном Ник|Вечером"
+      }
+    },
+    {
+      "routeIntent": "eric",
+      "incomingRouteStatus": "active",
+      "relevantAuthoredChoiceId": "S40-C1",
+      "relevantAuthoredChoiceCode": "B",
+      "c90Id": "S40-C90",
+      "insertionRef": {
         "chunk": 3,
-        "paragraph": 1
+        "paragraph": 0
       },
-      "question": "They have agreed to try three separate dates. What will Alice clarify?",
-      "result": "Damir agreed and suggested beginning in the city where Alice lived now, rather than in one of their old places."
+      "precedingCanonicalText": "Алиса вспомнила, как впервые одна ушла на концерт, и написала о времени, которое не нужно никому доказывать. Марина ответила, что это сильное окончание; попросила убрать два слишком общих предложения. Алиса убрала их без сожаления.",
+      "followingCanonicalText": "За окном Ник спорил с Дамиром, кто последним пользовался зарядкой. Эрик стучал у двери соседнего номера, потому что перепутал ключи. Алиса улыбнулась и закрыла ноутбук. Она была частью этой группы даже тогда, когда не превращала каждый разговор в сцену своего романа.",
+      "question": "Where does Alice draw the line between what is published and what is private?",
+      "option": "A",
+      "result": "She separated verified material from what belonged only in her notebook. Honesty did not require mixing the two texts.",
+      "branchValidityAssertion": {
+        "pass": true
+      },
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": null,
+        "previous": "согласованных фрагментах|блокноте|Марина ответила",
+        "following": "За окном Ник|Вечером"
+      }
     },
     {
-      "sceneId": "S39",
-      "id": "S39-C90",
-      "routeIntent": "damir",
-      "routeStatus": "active",
-      "option": "B",
-      "insertionSourceRef": {
+      "routeIntent": "eric",
+      "incomingRouteStatus": "active",
+      "relevantAuthoredChoiceId": "S40-C1",
+      "relevantAuthoredChoiceCode": "B",
+      "c90Id": "S40-C90",
+      "insertionRef": {
         "chunk": 3,
         "paragraph": 0
       },
-      "precedingSourceRef": {
-        "chunk": 1,
-        "paragraph": 2
+      "precedingCanonicalText": "Алиса вспомнила, как впервые одна ушла на концерт, и написала о времени, которое не нужно никому доказывать. Марина ответила, что это сильное окончание; попросила убрать два слишком общих предложения. Алиса убрала их без сожаления.",
+      "followingCanonicalText": "За окном Ник спорил с Дамиром, кто последним пользовался зарядкой. Эрик стучал у двери соседнего номера, потому что перепутал ключи. Алиса улыбнулась и закрыла ноутбук. Она была частью этой группы даже тогда, когда не превращала каждый разговор в сцену своего романа.",
+      "question": "Where does Alice draw the line between what is published and what is private?",
+      "option": "B",
+      "result": "Alice closed her notebook beside the working edits. A private observation could remain hers without posing as a published fact.",
+      "branchValidityAssertion": {
+        "pass": true
       },
-      "followingSourceRef": {
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": null,
+        "previous": "согласованных фрагментах|блокноте|Марина ответила",
+        "following": "За окном Ник|Вечером"
+      }
+    },
+    {
+      "routeIntent": "eric",
+      "incomingRouteStatus": "paused",
+      "relevantAuthoredChoiceId": "S40-C1",
+      "relevantAuthoredChoiceCode": "A",
+      "c90Id": "S40-C90",
+      "insertionRef": {
+        "chunk": 2,
+        "paragraph": 0
+      },
+      "precedingCanonicalText": "Она описала дорогу и работу людей, которые остаются после туристов. Имена друзей появились только в согласованных фрагментах. Остальное осталось в её блокноте, который она не отправляла редакции.",
+      "followingCanonicalText": "За окном Ник спорил с Дамиром, кто последним пользовался зарядкой. Эрик стучал у двери соседнего номера, потому что перепутал ключи. Алиса улыбнулась и закрыла ноутбук. Она была частью этой группы даже тогда, когда не превращала каждый разговор в сцену своего романа.",
+      "question": "Where does Alice draw the line between what is published and what is private?",
+      "option": "A",
+      "result": "She separated verified material from what belonged only in her notebook. Honesty did not require mixing the two texts.",
+      "branchValidityAssertion": {
+        "pass": true
+      },
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": null,
+        "previous": "согласованных фрагментах|блокноте|Марина ответила",
+        "following": "За окном Ник|Вечером"
+      }
+    },
+    {
+      "routeIntent": "eric",
+      "incomingRouteStatus": "paused",
+      "relevantAuthoredChoiceId": "S40-C1",
+      "relevantAuthoredChoiceCode": "A",
+      "c90Id": "S40-C90",
+      "insertionRef": {
+        "chunk": 2,
+        "paragraph": 0
+      },
+      "precedingCanonicalText": "Она описала дорогу и работу людей, которые остаются после туристов. Имена друзей появились только в согласованных фрагментах. Остальное осталось в её блокноте, который она не отправляла редакции.",
+      "followingCanonicalText": "За окном Ник спорил с Дамиром, кто последним пользовался зарядкой. Эрик стучал у двери соседнего номера, потому что перепутал ключи. Алиса улыбнулась и закрыла ноутбук. Она была частью этой группы даже тогда, когда не превращала каждый разговор в сцену своего романа.",
+      "question": "Where does Alice draw the line between what is published and what is private?",
+      "option": "B",
+      "result": "Alice closed her notebook beside the working edits. A private observation could remain hers without posing as a published fact.",
+      "branchValidityAssertion": {
+        "pass": true
+      },
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": null,
+        "previous": "согласованных фрагментах|блокноте|Марина ответила",
+        "following": "За окном Ник|Вечером"
+      }
+    },
+    {
+      "routeIntent": "eric",
+      "incomingRouteStatus": "paused",
+      "relevantAuthoredChoiceId": "S40-C1",
+      "relevantAuthoredChoiceCode": "B",
+      "c90Id": "S40-C90",
+      "insertionRef": {
         "chunk": 3,
-        "paragraph": 1
+        "paragraph": 0
       },
-      "question": "They have agreed to try three separate dates. What will Alice clarify?",
-      "result": "“Let’s first see what interests us both today,” Alice said. Damir nodded and took out a map of her city."
+      "precedingCanonicalText": "Алиса вспомнила, как впервые одна ушла на концерт, и написала о времени, которое не нужно никому доказывать. Марина ответила, что это сильное окончание; попросила убрать два слишком общих предложения. Алиса убрала их без сожаления.",
+      "followingCanonicalText": "За окном Ник спорил с Дамиром, кто последним пользовался зарядкой. Эрик стучал у двери соседнего номера, потому что перепутал ключи. Алиса улыбнулась и закрыла ноутбук. Она была частью этой группы даже тогда, когда не превращала каждый разговор в сцену своего романа.",
+      "question": "Where does Alice draw the line between what is published and what is private?",
+      "option": "A",
+      "result": "She separated verified material from what belonged only in her notebook. Honesty did not require mixing the two texts.",
+      "branchValidityAssertion": {
+        "pass": true
+      },
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": null,
+        "previous": "согласованных фрагментах|блокноте|Марина ответила",
+        "following": "За окном Ник|Вечером"
+      }
     },
     {
-      "sceneId": "S57",
-      "id": "S57-C90",
-      "routeIntent": "damir",
-      "routeStatus": "active",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
+      "routeIntent": "eric",
+      "incomingRouteStatus": "paused",
+      "relevantAuthoredChoiceId": "S40-C1",
+      "relevantAuthoredChoiceCode": "B",
+      "c90Id": "S40-C90",
+      "insertionRef": {
+        "chunk": 3,
+        "paragraph": 0
       },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
+      "precedingCanonicalText": "Алиса вспомнила, как впервые одна ушла на концерт, и написала о времени, которое не нужно никому доказывать. Марина ответила, что это сильное окончание; попросила убрать два слишком общих предложения. Алиса убрала их без сожаления.",
+      "followingCanonicalText": "За окном Ник спорил с Дамиром, кто последним пользовался зарядкой. Эрик стучал у двери соседнего номера, потому что перепутал ключи. Алиса улыбнулась и закрыла ноутбук. Она была частью этой группы даже тогда, когда не превращала каждый разговор в сцену своего романа.",
+      "question": "Where does Alice draw the line between what is published and what is private?",
+      "option": "B",
+      "result": "Alice closed her notebook beside the working edits. A private observation could remain hers without posing as a published fact.",
+      "branchValidityAssertion": {
+        "pass": true
       },
-      "followingSourceRef": {
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": null,
+        "previous": "согласованных фрагментах|блокноте|Марина ответила",
+        "following": "За окном Ник|Вечером"
+      }
+    },
+    {
+      "routeIntent": "nick",
+      "incomingRouteStatus": "active",
+      "relevantAuthoredChoiceId": null,
+      "relevantAuthoredChoiceCode": null,
+      "c90Id": "S54-C90",
+      "insertionRef": {
         "chunk": 0,
         "paragraph": 3
       },
-      "question": "Sunrise comes before they have finished talking. What should Alice do?",
-      "result": "Damir sat beside her on the cold step. When the sun rose, neither of them repeated an old promise."
+      "precedingCanonicalText": "— Я хочу увидеть тебя после поездки, — сказал он. — Даже если в тот день мы просто купим хлеб и вернёмся домой.",
+      "followingCanonicalText": "Алиса посмотрела на тёмное окно гостевого дома. Внутри кто-то уже выбирал следующую песню, и музыка была слишком громкой для идеального признания. Ей понравилось, что Ник не пытался дождаться идеального момента.\n\n— Я тоже хочу. Только обещай не снимать, как я выбираю хлеб.",
+      "question": "After Nick's confession on the porch, what does Alice want to hold in this moment?",
+      "option": "A",
+      "result": "She did not hide behind a neat reply. His words already mattered, even before she knew what her answer would be.",
+      "branchValidityAssertion": {
+        "pass": true
+      },
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": {
+          "chunk": 0,
+          "paragraph": 3
+        },
+        "previous": "Я хочу увидеть тебя после поездки",
+        "following": "Алиса посмотрела на тёмное окно"
+      }
     },
     {
-      "sceneId": "S57",
-      "id": "S57-C90",
-      "routeIntent": "damir",
-      "routeStatus": "active",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
+      "routeIntent": "nick",
+      "incomingRouteStatus": "active",
+      "relevantAuthoredChoiceId": null,
+      "relevantAuthoredChoiceCode": null,
+      "c90Id": "S54-C90",
+      "insertionRef": {
         "chunk": 0,
         "paragraph": 3
       },
-      "question": "Sunrise comes before they have finished talking. What should Alice do?",
-      "result": "She named one small thing: breakfast together, without talking about who they had once been. Damir agreed."
-    },
-    {
-      "sceneId": "S60",
-      "id": "S60-C90",
-      "routeIntent": "damir",
-      "routeStatus": "active",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "In the dark, everyone shows the others ridiculous souvenirs. How should Alice react to Eric’s bird?",
-      "result": "Eric solemnly set the bird opposite Alice, and Nick declared it the group’s new mascot."
-    },
-    {
-      "sceneId": "S60",
-      "id": "S60-C90",
-      "routeIntent": "damir",
-      "routeStatus": "active",
+      "precedingCanonicalText": "— Я хочу увидеть тебя после поездки, — сказал он. — Даже если в тот день мы просто купим хлеб и вернёмся домой.",
+      "followingCanonicalText": "Алиса посмотрела на тёмное окно гостевого дома. Внутри кто-то уже выбирал следующую песню, и музыка была слишком громкой для идеального признания. Ей понравилось, что Ник не пытался дождаться идеального момента.\n\n— Я тоже хочу. Только обещай не снимать, как я выбираю хлеб.",
+      "question": "After Nick's confession on the porch, what does Alice want to hold in this moment?",
       "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
+      "result": "Alice stayed beside him and let the confession stand without an immediate continuation. Nothing had to become settled in that minute.",
+      "branchValidityAssertion": {
+        "pass": true
       },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "In the dark, everyone shows the others ridiculous souvenirs. How should Alice react to Eric’s bird?",
-      "result": "“A little crooked, but ours,” Alice said. Eric laughed and moved the stand closer to her."
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": {
+          "chunk": 0,
+          "paragraph": 3
+        },
+        "previous": "Я хочу увидеть тебя после поездки",
+        "following": "Алиса посмотрела на тёмное окно"
+      }
     },
     {
-      "sceneId": "S41",
-      "id": "S41-C90",
-      "routeIntent": "damir",
-      "routeStatus": "active",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 5
-      },
-      "question": "How will Alice explain to Marina why she chose that headline?",
-      "result": "She showed her editor a confirmed quotation. That story could not be replaced by the name of a beautiful landmark."
-    },
-    {
-      "sceneId": "S41",
-      "id": "S41-C90",
-      "routeIntent": "damir",
-      "routeStatus": "active",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 5
-      },
-      "question": "How will Alice explain to Marina why she chose that headline?",
-      "result": "Alice named the action that changed her view of the material. Marina asked her to keep it in the first paragraph."
-    },
-    {
-      "sceneId": "S42",
-      "id": "S42-C90",
-      "routeIntent": "damir",
-      "routeStatus": "active",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 2,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 2
-      },
-      "question": "The conversation turns to returning home. What will Alice say before deciding the future?",
-      "result": "She said plainly that this time it had mattered to be honest and not wait for someone else to guess her thoughts."
-    },
-    {
-      "sceneId": "S42",
-      "id": "S42-C90",
-      "routeIntent": "damir",
-      "routeStatus": "active",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 2,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 2
-      },
-      "question": "The conversation turns to returning home. What will Alice say before deciding the future?",
-      "result": "They did not turn the conversation at the table into a final decision. Alice wanted first to understand her own answer."
-    },
-    {
-      "sceneId": "S48",
-      "id": "S48-C90",
-      "routeIntent": "damir",
-      "routeStatus": "active",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "question": "Before the group photograph, everyone is still gathering around the table. Where will Alice stand?",
-      "result": "She chose her place without explanation. Nick set the timer and came back to the others."
-    },
-    {
-      "sceneId": "S48",
-      "id": "S48-C90",
-      "routeIntent": "damir",
-      "routeStatus": "active",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "question": "Before the group photograph, everyone is still gathering around the table. Where will Alice stand?",
-      "result": "On the first attempt no one stood straight. Everyone laughed, and Nick asked them to take it again."
-    },
-    {
-      "sceneId": "S46",
-      "id": "S46-C90",
-      "routeIntent": "damir",
-      "routeStatus": "active",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "Damir asks how to make their first new meeting unlike the old ones. What will Alice suggest?",
-      "result": "They agreed that old places should not decide everything for them."
-    },
-    {
-      "sceneId": "S46",
-      "id": "S46-C90",
-      "routeIntent": "damir",
-      "routeStatus": "active",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "Damir asks how to make their first new meeting unlike the old ones. What will Alice suggest?",
-      "result": "Alice said a quiet conversation would be enough. They did not write out everything that would happen next."
-    },
-    {
-      "sceneId": "S36",
-      "id": "S36-C90",
-      "routeIntent": "damir",
-      "routeStatus": "paused",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 3
-      },
-      "question": "While the mechanic checks the car, how will Alice spend the wait?",
-      "result": "Nick took a table, Damir found hot water, and Eric stayed in touch with the mechanic."
-    },
-    {
-      "sceneId": "S36",
-      "id": "S36-C90",
-      "routeIntent": "damir",
-      "routeStatus": "paused",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 3
-      },
-      "question": "While the mechanic checks the car, how will Alice spend the wait?",
-      "result": "Alice wrote a couple of lines about the unexpected stop without turning them into a required conversation for the whole group."
-    },
-    {
-      "sceneId": "S39",
-      "id": "S39-C90",
-      "routeIntent": "damir",
-      "routeStatus": "paused",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 5,
-        "paragraph": 0
-      },
-      "precedingSourceRef": {
-        "chunk": 5,
-        "paragraph": 0
-      },
-      "followingSourceRef": {
-        "chunk": 7,
-        "paragraph": 0
-      },
-      "question": "They have agreed to try three separate dates. What will Alice clarify?",
-      "result": "Damir agreed and suggested beginning in the city where Alice lived now, rather than in one of their old places."
-    },
-    {
-      "sceneId": "S39",
-      "id": "S39-C90",
-      "routeIntent": "damir",
-      "routeStatus": "paused",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 5,
-        "paragraph": 0
-      },
-      "precedingSourceRef": {
-        "chunk": 5,
-        "paragraph": 0
-      },
-      "followingSourceRef": {
-        "chunk": 7,
-        "paragraph": 0
-      },
-      "question": "They have agreed to try three separate dates. What will Alice clarify?",
-      "result": "“Let’s first see what interests us both today,” Alice said. Damir nodded and took out a map of her city."
-    },
-    {
-      "sceneId": "S57",
-      "id": "S57-C90",
-      "routeIntent": "damir",
-      "routeStatus": "paused",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 3
-      },
-      "question": "Sunrise comes before they have finished talking. What should Alice do?",
-      "result": "Damir sat beside her on the cold step. When the sun rose, neither of them repeated an old promise."
-    },
-    {
-      "sceneId": "S57",
-      "id": "S57-C90",
-      "routeIntent": "damir",
-      "routeStatus": "paused",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 3
-      },
-      "question": "Sunrise comes before they have finished talking. What should Alice do?",
-      "result": "She named one small thing: breakfast together, without talking about who they had once been. Damir agreed."
-    },
-    {
-      "sceneId": "S60",
-      "id": "S60-C90",
-      "routeIntent": "damir",
-      "routeStatus": "paused",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "In the dark, everyone shows the others ridiculous souvenirs. How should Alice react to Eric’s bird?",
-      "result": "Eric solemnly set the bird opposite Alice, and Nick declared it the group’s new mascot."
-    },
-    {
-      "sceneId": "S60",
-      "id": "S60-C90",
-      "routeIntent": "damir",
-      "routeStatus": "paused",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "In the dark, everyone shows the others ridiculous souvenirs. How should Alice react to Eric’s bird?",
-      "result": "“A little crooked, but ours,” Alice said. Eric laughed and moved the stand closer to her."
-    },
-    {
-      "sceneId": "S41",
-      "id": "S41-C90",
-      "routeIntent": "damir",
-      "routeStatus": "paused",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 5
-      },
-      "question": "How will Alice explain to Marina why she chose that headline?",
-      "result": "She showed her editor a confirmed quotation. That story could not be replaced by the name of a beautiful landmark."
-    },
-    {
-      "sceneId": "S41",
-      "id": "S41-C90",
-      "routeIntent": "damir",
-      "routeStatus": "paused",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 5
-      },
-      "question": "How will Alice explain to Marina why she chose that headline?",
-      "result": "Alice named the action that changed her view of the material. Marina asked her to keep it in the first paragraph."
-    },
-    {
-      "sceneId": "S42",
-      "id": "S42-C90",
-      "routeIntent": "damir",
-      "routeStatus": "paused",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 2,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 2
-      },
-      "question": "The conversation turns to returning home. What will Alice say before deciding the future?",
-      "result": "She said plainly that this time it had mattered to be honest and not wait for someone else to guess her thoughts."
-    },
-    {
-      "sceneId": "S42",
-      "id": "S42-C90",
-      "routeIntent": "damir",
-      "routeStatus": "paused",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 2,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 2
-      },
-      "question": "The conversation turns to returning home. What will Alice say before deciding the future?",
-      "result": "They did not turn the conversation at the table into a final decision. Alice wanted first to understand her own answer."
-    },
-    {
-      "sceneId": "S48",
-      "id": "S48-C90",
-      "routeIntent": "damir",
-      "routeStatus": "paused",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "question": "Before the group photograph, everyone is still gathering around the table. Where will Alice stand?",
-      "result": "She chose her place without explanation. Nick set the timer and came back to the others."
-    },
-    {
-      "sceneId": "S48",
-      "id": "S48-C90",
-      "routeIntent": "damir",
-      "routeStatus": "paused",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "question": "Before the group photograph, everyone is still gathering around the table. Where will Alice stand?",
-      "result": "On the first attempt no one stood straight. Everyone laughed, and Nick asked them to take it again."
-    },
-    {
-      "sceneId": "S46",
-      "id": "S46-C90",
-      "routeIntent": "damir",
-      "routeStatus": "paused",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "Damir asks how to make their first new meeting unlike the old ones. What will Alice suggest?",
-      "result": "They agreed that old places should not decide everything for them."
-    },
-    {
-      "sceneId": "S46",
-      "id": "S46-C90",
-      "routeIntent": "damir",
-      "routeStatus": "paused",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "Damir asks how to make their first new meeting unlike the old ones. What will Alice suggest?",
-      "result": "Alice said a quiet conversation would be enough. They did not write out everything that would happen next."
-    },
-    {
-      "sceneId": "S36",
-      "id": "S36-C90",
-      "routeIntent": "damir",
-      "routeStatus": "closed",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 3
-      },
-      "question": "While the mechanic checks the car, how will Alice spend the wait?",
-      "result": "Nick took a table, Damir found hot water, and Eric stayed in touch with the mechanic."
-    },
-    {
-      "sceneId": "S36",
-      "id": "S36-C90",
-      "routeIntent": "damir",
-      "routeStatus": "closed",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 3
-      },
-      "question": "While the mechanic checks the car, how will Alice spend the wait?",
-      "result": "Alice wrote a couple of lines about the unexpected stop without turning them into a required conversation for the whole group."
-    },
-    {
-      "sceneId": "S40",
-      "id": "S40-C90",
-      "routeIntent": "damir",
-      "routeStatus": "closed",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "precedingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "followingSourceRef": {
-        "chunk": 4,
-        "paragraph": 0
-      },
-      "question": "Alice is finishing a text she does not have to clear with anyone. What should she do?",
-      "result": "She did not strike out the line about her own uncertainty. The page became more honest, even if the editor would never see it."
-    },
-    {
-      "sceneId": "S40",
-      "id": "S40-C90",
-      "routeIntent": "damir",
-      "routeStatus": "closed",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "precedingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "followingSourceRef": {
-        "chunk": 4,
-        "paragraph": 0
-      },
-      "question": "Alice is finishing a text she does not have to clear with anyone. What should she do?",
-      "result": "Alice closed the laptop mid-sentence. When she came back, the important thought had not gone anywhere."
-    },
-    {
-      "sceneId": "S64",
-      "id": "S64-C90",
-      "routeIntent": "damir",
-      "routeStatus": "closed",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "After the short path, Alice returns to the guesthouse. What should she do before leaving?",
-      "result": "She did not rush to invent another conclusion for the walk. Pages and hot coffee were more than enough to begin the day."
-    },
-    {
-      "sceneId": "S64",
-      "id": "S64-C90",
-      "routeIntent": "damir",
-      "routeStatus": "closed",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "After the short path, Alice returns to the guesthouse. What should she do before leaving?",
-      "result": "A simple line about the lost hat appeared in her notebook. Alice left it without a lesson attached."
-    },
-    {
-      "sceneId": "S60",
-      "id": "S60-C90",
-      "routeIntent": "damir",
-      "routeStatus": "closed",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "In the dark, everyone shows the others ridiculous souvenirs. How should Alice react to Eric’s bird?",
-      "result": "Eric solemnly set the bird opposite Alice, and Nick declared it the group’s new mascot."
-    },
-    {
-      "sceneId": "S60",
-      "id": "S60-C90",
-      "routeIntent": "damir",
-      "routeStatus": "closed",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "In the dark, everyone shows the others ridiculous souvenirs. How should Alice react to Eric’s bird?",
-      "result": "“A little crooked, but ours,” Alice said. Eric laughed and moved the stand closer to her."
-    },
-    {
-      "sceneId": "S41",
-      "id": "S41-C90",
-      "routeIntent": "damir",
-      "routeStatus": "closed",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 5
-      },
-      "question": "How will Alice explain to Marina why she chose that headline?",
-      "result": "She showed her editor a confirmed quotation. That story could not be replaced by the name of a beautiful landmark."
-    },
-    {
-      "sceneId": "S41",
-      "id": "S41-C90",
-      "routeIntent": "damir",
-      "routeStatus": "closed",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 5
-      },
-      "question": "How will Alice explain to Marina why she chose that headline?",
-      "result": "Alice named the action that changed her view of the material. Marina asked her to keep it in the first paragraph."
-    },
-    {
-      "sceneId": "S43",
-      "id": "S43-C90",
-      "routeIntent": "damir",
-      "routeStatus": "closed",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "question": "Alice is spending an evening without a promise of a couple. What should she do?",
-      "result": "She told her about the road, then fell silent before the most personal part. Not everything needed explaining, even to someone close."
-    },
-    {
-      "sceneId": "S43",
-      "id": "S43-C90",
-      "routeIntent": "damir",
-      "routeStatus": "closed",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "question": "Alice is spending an evening without a promise of a couple. What should she do?",
-      "result": "The city was noisy as usual. Alice walked slowly and, for the first time, did not feel late for someone else’s meeting."
-    },
-    {
-      "sceneId": "S48",
-      "id": "S48-C90",
-      "routeIntent": "damir",
-      "routeStatus": "closed",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "question": "Before the group photograph, everyone is still gathering around the table. Where will Alice stand?",
-      "result": "She chose her place without explanation. Nick set the timer and came back to the others."
-    },
-    {
-      "sceneId": "S48",
-      "id": "S48-C90",
-      "routeIntent": "damir",
-      "routeStatus": "closed",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "question": "Before the group photograph, everyone is still gathering around the table. Where will Alice stand?",
-      "result": "On the first attempt no one stood straight. Everyone laughed, and Nick asked them to take it again."
-    },
-    {
-      "sceneId": "S47",
-      "id": "S47-C90",
-      "routeIntent": "damir",
-      "routeStatus": "closed",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "Alice has already rewritten her letter to herself. What should she do with it now?",
-      "result": "She wrote the name of a place she had long wanted to visit and did not turn the idea into a promise for the whole year."
-    },
-    {
-      "sceneId": "S47",
-      "id": "S47-C90",
-      "routeIntent": "damir",
-      "routeStatus": "closed",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "Alice has already rewritten her letter to herself. What should she do with it now?",
-      "result": "Alice closed her notes. The next step mattered more than another good sentence."
-    },
-    {
-      "sceneId": "S36",
-      "id": "S36-C90",
       "routeIntent": "alice",
-      "routeStatus": "active",
+      "incomingRouteStatus": "active",
+      "relevantAuthoredChoiceId": null,
+      "relevantAuthoredChoiceCode": null,
+      "c90Id": "S64-C90",
+      "insertionRef": {
+        "chunk": 0,
+        "paragraph": 2
+      },
+      "precedingCanonicalText": "На обратной дороге она встретила женщину с собакой. Та спросила, не видела ли Алиса потерянную детскую шапку. Алиса не видела, но помогла проверить ближайшую скамью; шапка лежала под ней. Женщина поблагодарила и пошла обратно. Алиса улыбнулась совпадению: всё путешествие было полно потерянных вещей, которые не всегда требовали большого сюжета.",
+      "followingCanonicalText": "Алиса открыла черновик письма редакции и написала три предложения о новой серии. Она не отправила письмо на ходу; вернувшись в гостевой дом, перечитала его и только тогда нажала «Отправить».",
+      "question": "On the walk back, what does Alice take with her from this walk?",
       "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
+      "result": "She smiled at the small help she had given and walked on, letting the road remain simply a road to the guesthouse.",
+      "branchValidityAssertion": {
+        "pass": true
       },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 3
-      },
-      "question": "While the mechanic checks the car, how will Alice spend the wait?",
-      "result": "Nick took a table, Damir found hot water, and Eric stayed in touch with the mechanic."
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": {
+          "chunk": 0,
+          "paragraph": 2
+        },
+        "previous": "потерянную детскую шапку",
+        "following": "Алиса открыла черновик|Алиса открыла календарь"
+      }
     },
     {
-      "sceneId": "S36",
-      "id": "S36-C90",
       "routeIntent": "alice",
-      "routeStatus": "active",
+      "incomingRouteStatus": "active",
+      "relevantAuthoredChoiceId": null,
+      "relevantAuthoredChoiceCode": null,
+      "c90Id": "S64-C90",
+      "insertionRef": {
+        "chunk": 0,
+        "paragraph": 2
+      },
+      "precedingCanonicalText": "На обратной дороге она встретила женщину с собакой. Та спросила, не видела ли Алиса потерянную детскую шапку. Алиса не видела, но помогла проверить ближайшую скамью; шапка лежала под ней. Женщина поблагодарила и пошла обратно. Алиса улыбнулась совпадению: всё путешествие было полно потерянных вещей, которые не всегда требовали большого сюжета.",
+      "followingCanonicalText": "Алиса открыла черновик письма редакции и написала три предложения о новой серии. Она не отправила письмо на ходу; вернувшись в гостевой дом, перечитала его и только тогда нажала «Отправить».",
+      "question": "On the walk back, what does Alice take with her from this walk?",
       "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
+      "result": "Alice listened to the wind and to her own step. She did not have to hurry the return to understand the value of the walk.",
+      "branchValidityAssertion": {
+        "pass": true
       },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 3
-      },
-      "question": "While the mechanic checks the car, how will Alice spend the wait?",
-      "result": "Alice wrote a couple of lines about the unexpected stop without turning them into a required conversation for the whole group."
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": {
+          "chunk": 0,
+          "paragraph": 2
+        },
+        "previous": "потерянную детскую шапку",
+        "following": "Алиса открыла черновик|Алиса открыла календарь"
+      }
     },
     {
-      "sceneId": "S40",
-      "id": "S40-C90",
-      "routeIntent": "alice",
-      "routeStatus": "active",
+      "routeIntent": "eric",
+      "incomingRouteStatus": "active",
+      "relevantAuthoredChoiceId": null,
+      "relevantAuthoredChoiceCode": null,
+      "c90Id": "S44-C90",
+      "insertionRef": {
+        "chunk": 0,
+        "paragraph": 2
+      },
+      "precedingCanonicalText": "— Да. Сестра всё равно узнает от меня, как всё было, даже если фотография ей не понравится.",
+      "followingCanonicalText": "Алиса обняла Эрика. Он показал ей записанную дату следующего звонка и уточнил, когда можно будет подтвердить билет. Она достала свой телефон и записала то же самое, чтобы ответственность за встречу не лежала на нём одном. Потом он спросил, можно ли отправить сестре фотографию их неудачного ужина. Алиса сказала, что можно.",
+      "question": "What does Alice want to hold onto before goodbye?",
       "option": "A",
-      "insertionSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
+      "result": "She thought of the envelope, his sister, and the photograph of the failed dinner. There was already enough trust in this goodbye without new promises.",
+      "branchValidityAssertion": {
+        "pass": true
       },
-      "precedingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "followingSourceRef": {
-        "chunk": 4,
-        "paragraph": 0
-      },
-      "question": "Alice is finishing a text she does not have to clear with anyone. What should she do?",
-      "result": "She did not strike out the line about her own uncertainty. The page became more honest, even if the editor would never see it."
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": {
+          "chunk": 0,
+          "paragraph": 2
+        },
+        "previous": "Сестра всё равно узнает",
+        "following": "Алиса обняла Эрика"
+      }
     },
     {
-      "sceneId": "S40",
-      "id": "S40-C90",
-      "routeIntent": "alice",
-      "routeStatus": "active",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "precedingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "followingSourceRef": {
-        "chunk": 4,
-        "paragraph": 0
-      },
-      "question": "Alice is finishing a text she does not have to clear with anyone. What should she do?",
-      "result": "Alice closed the laptop mid-sentence. When she came back, the important thought had not gone anywhere."
-    },
-    {
-      "sceneId": "S64",
-      "id": "S64-C90",
-      "routeIntent": "alice",
-      "routeStatus": "active",
-      "option": "A",
-      "insertionSourceRef": {
+      "routeIntent": "eric",
+      "incomingRouteStatus": "active",
+      "relevantAuthoredChoiceId": null,
+      "relevantAuthoredChoiceCode": null,
+      "c90Id": "S44-C90",
+      "insertionRef": {
         "chunk": 0,
         "paragraph": 2
       },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "After the short path, Alice returns to the guesthouse. What should she do before leaving?",
-      "result": "She did not rush to invent another conclusion for the walk. Pages and hot coffee were more than enough to begin the day."
-    },
-    {
-      "sceneId": "S64",
-      "id": "S64-C90",
-      "routeIntent": "alice",
-      "routeStatus": "active",
+      "precedingCanonicalText": "— Да. Сестра всё равно узнает от меня, как всё было, даже если фотография ей не понравится.",
+      "followingCanonicalText": "Алиса обняла Эрика. Он показал ей записанную дату следующего звонка и уточнил, когда можно будет подтвердить билет. Она достала свой телефон и записала то же самое, чтобы ответственность за встречу не лежала на нём одном. Потом он спросил, можно ли отправить сестре фотографию их неудачного ужина. Алиса сказала, что можно.",
+      "question": "What does Alice want to hold onto before goodbye?",
       "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
+      "result": "Alice looked at the picture and at Eric. The awkward evening was their memory, but it did not need to become a decision about the future at once.",
+      "branchValidityAssertion": {
+        "pass": true
       },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "After the short path, Alice returns to the guesthouse. What should she do before leaving?",
-      "result": "A simple line about the lost hat appeared in her notebook. Alice left it without a lesson attached."
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": {
+          "chunk": 0,
+          "paragraph": 2
+        },
+        "previous": "Сестра всё равно узнает",
+        "following": "Алиса обняла Эрика"
+      }
     },
     {
-      "sceneId": "S60",
-      "id": "S60-C90",
       "routeIntent": "alice",
-      "routeStatus": "active",
+      "incomingRouteStatus": "active",
+      "relevantAuthoredChoiceId": null,
+      "relevantAuthoredChoiceCode": null,
+      "c90Id": "S48-C90",
+      "insertionRef": {
+        "chunk": 0,
+        "paragraph": 1
+      },
+      "precedingCanonicalText": "Они выбрали третий.",
+      "followingCanonicalText": "Алиса предложила всем встретиться когда-нибудь снова — без журнала, фильма и заранее выбранного свидания. Эрик ответил, что знает хорошую короткую прогулку для начала; Ник попросил на этот раз не терять чужие вещи, а Дамир сказал, что привезёт нормальный шоколад.",
+      "question": "What does Alice choose in the imperfect group photograph?",
       "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
+      "result": "She looked at the chosen photograph and smiled: no one had tried to make the moment neater or more significant than it was.",
+      "branchValidityAssertion": {
+        "pass": true
       },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "In the dark, everyone shows the others ridiculous souvenirs. How should Alice react to Eric’s bird?",
-      "result": "Eric solemnly set the bird opposite Alice, and Nick declared it the group’s new mascot."
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": {
+          "chunk": 0,
+          "paragraph": 1
+        },
+        "previous": "На третьем Алиса засмеялась|Они выбрали третий",
+        "following": "Эрик передал|Ник спросил|Дамир спросил|Алиса предложила"
+      }
     },
     {
-      "sceneId": "S60",
-      "id": "S60-C90",
       "routeIntent": "alice",
-      "routeStatus": "active",
+      "incomingRouteStatus": "active",
+      "relevantAuthoredChoiceId": null,
+      "relevantAuthoredChoiceCode": null,
+      "c90Id": "S48-C90",
+      "insertionRef": {
+        "chunk": 0,
+        "paragraph": 1
+      },
+      "precedingCanonicalText": "Они выбрали третий.",
+      "followingCanonicalText": "Алиса предложила всем встретиться когда-нибудь снова — без журнала, фильма и заранее выбранного свидания. Эрик ответил, что знает хорошую короткую прогулку для начала; Ник попросил на этот раз не терять чужие вещи, а Дамир сказал, что привезёт нормальный шоколад.",
+      "question": "What does Alice choose in the imperfect group photograph?",
       "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
+      "result": "Alice decided that three attempts were enough. The photograph was honest precisely because it did not correct all their awkwardness.",
+      "branchValidityAssertion": {
+        "pass": true
       },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "In the dark, everyone shows the others ridiculous souvenirs. How should Alice react to Eric’s bird?",
-      "result": "“A little crooked, but ours,” Alice said. Eric laughed and moved the stand closer to her."
-    },
-    {
-      "sceneId": "S41",
-      "id": "S41-C90",
-      "routeIntent": "alice",
-      "routeStatus": "active",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 5
-      },
-      "question": "How will Alice explain to Marina why she chose that headline?",
-      "result": "She showed her editor a confirmed quotation. That story could not be replaced by the name of a beautiful landmark."
-    },
-    {
-      "sceneId": "S41",
-      "id": "S41-C90",
-      "routeIntent": "alice",
-      "routeStatus": "active",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 4
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 5
-      },
-      "question": "How will Alice explain to Marina why she chose that headline?",
-      "result": "Alice named the action that changed her view of the material. Marina asked her to keep it in the first paragraph."
-    },
-    {
-      "sceneId": "S43",
-      "id": "S43-C90",
-      "routeIntent": "alice",
-      "routeStatus": "active",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "question": "Alice is spending an evening without a promise of a couple. What should she do?",
-      "result": "She told her about the road, then fell silent before the most personal part. Not everything needed explaining, even to someone close."
-    },
-    {
-      "sceneId": "S43",
-      "id": "S43-C90",
-      "routeIntent": "alice",
-      "routeStatus": "active",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 2
-      },
-      "question": "Alice is spending an evening without a promise of a couple. What should she do?",
-      "result": "The city was noisy as usual. Alice walked slowly and, for the first time, did not feel late for someone else’s meeting."
-    },
-    {
-      "sceneId": "S48",
-      "id": "S48-C90",
-      "routeIntent": "alice",
-      "routeStatus": "active",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "question": "Before the group photograph, everyone is still gathering around the table. Where will Alice stand?",
-      "result": "She chose her place without explanation. Nick set the timer and came back to the others."
-    },
-    {
-      "sceneId": "S48",
-      "id": "S48-C90",
-      "routeIntent": "alice",
-      "routeStatus": "active",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 0
-      },
-      "followingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "question": "Before the group photograph, everyone is still gathering around the table. Where will Alice stand?",
-      "result": "On the first attempt no one stood straight. Everyone laughed, and Nick asked them to take it again."
-    },
-    {
-      "sceneId": "S47",
-      "id": "S47-C90",
-      "routeIntent": "alice",
-      "routeStatus": "active",
-      "option": "A",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "Alice has already rewritten her letter to herself. What should she do with it now?",
-      "result": "She wrote the name of a place she had long wanted to visit and did not turn the idea into a promise for the whole year."
-    },
-    {
-      "sceneId": "S47",
-      "id": "S47-C90",
-      "routeIntent": "alice",
-      "routeStatus": "active",
-      "option": "B",
-      "insertionSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "precedingSourceRef": {
-        "chunk": 0,
-        "paragraph": 1
-      },
-      "followingSourceRef": {
-        "chunk": 2,
-        "paragraph": 0
-      },
-      "question": "Alice has already rewritten her letter to herself. What should she do with it now?",
-      "result": "Alice closed her notes. The next step mattered more than another good sentence."
+      "temporalAssertion": {
+        "pass": true,
+        "expectedInsertion": {
+          "chunk": 0,
+          "paragraph": 1
+        },
+        "previous": "На третьем Алиса засмеялась|Они выбрали третий",
+        "following": "Эрик передал|Ник спросил|Дамир спросил|Алиса предложила"
+      }
     }
   ],
   "failures": []
