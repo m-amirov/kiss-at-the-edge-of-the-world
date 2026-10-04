@@ -205,6 +205,30 @@
     ],
     "S60": [
       {"question":"In the dark, everyone shows the others ridiculous souvenirs. How should Alice react to Eric’s bird?","options":[{"code":"A","label":"Ask to put it in the middle of the table","text":"Eric solemnly set the bird opposite Alice, and Nick declared it the group’s new mascot."},{"code":"B","label":"Say the strange bird resembles their trip","text":"“A little crooked, but ours,” Alice said. Eric laughed and moved the stand closer to her."}]}
+    ],
+    "S41": [
+      {"question":"How will Alice explain to Marina why she chose that headline?","options":[{"code":"A","label":"Refer to one particular person’s story","text":"She showed her editor a confirmed quotation. That story could not be replaced by the name of a beautiful landmark."},{"code":"B","label":"Tell her what decision Alice made on the road","text":"Alice named the action that changed her view of the material. Marina asked her to keep it in the first paragraph."}]}
+    ],
+    "S42": [
+      {"question":"The conversation turns to returning home. What will Alice say before deciding the future?","options":[{"code":"A","label":"Name what mattered to her on this trip","text":"She said plainly that this time it had mattered to be honest and not wait for someone else to guess her thoughts."},{"code":"B","label":"Ask not to rush an answer","text":"They did not turn the conversation at the table into a final decision. Alice wanted first to understand her own answer."}]}
+    ],
+    "S43": [
+      {"question":"Alice is spending an evening without a promise of a couple. What should she do?","options":[{"code":"A","label":"Invite an acquaintance for a short conversation","text":"She told her about the road, then fell silent before the most personal part. Not everything needed explaining, even to someone close."},{"code":"B","label":"Turn off her phone and walk alone","text":"The city was noisy as usual. Alice walked slowly and, for the first time, did not feel late for someone else’s meeting."}]}
+    ],
+    "S44": [
+      {"question":"Eric has written down a possible date and does not demand an immediate answer. What will Alice clarify?","options":[{"code":"A","label":"First check that it works for both of them","text":"They named days that might suit and left final confirmation until work schedules were clear."},{"code":"B","label":"Ask what else needs checking","text":"They listed practical details without turning them into a promise for a lifetime."}]}
+    ],
+    "S45": [
+      {"question":"Before goodbye, Nick asks what an ordinary evening without a camera might be. How will Alice answer?","options":[{"code":"A","label":"Name a film she once liked","text":"Alice named one film and added that they could decide later whether they wanted to watch it."},{"code":"B","label":"Leave the evening without a finished script","text":"Nick nodded. One good conversation did not have to become a plan written in advance."}]}
+    ],
+    "S46": [
+      {"question":"Damir asks how to make their first new meeting unlike the old ones. What will Alice suggest?","options":[{"code":"A","label":"Leave one detail for them to choose together","text":"They agreed that old places should not decide everything for them."},{"code":"B","label":"Keep the meeting simple","text":"Alice said a quiet conversation would be enough. They did not write out everything that would happen next."}]}
+    ],
+    "S47": [
+      {"question":"Alice has already rewritten her letter to herself. What should she do with it now?","options":[{"code":"A","label":"Add one concrete idea for the next weekend","text":"She wrote the name of a place she had long wanted to visit and did not turn the idea into a promise for the whole year."},{"code":"B","label":"Leave the letter alone and move to a real plan","text":"Alice closed her notes. The next step mattered more than another good sentence."}]}
+    ],
+    "S48": [
+      {"question":"Before the group photograph, everyone is still gathering around the table. Where will Alice stand?","options":[{"code":"A","label":"Beside the person she wants to talk to after the picture","text":"She chose her place without explanation. Nick set the timer and came back to the others."},{"code":"B","label":"Suggest everyone mix up for a funny picture","text":"On the first attempt no one stood straight. Everyone laughed, and Nick asked them to take it again."}]}
     ]
   },
   "interactionEchoes": {
@@ -215,6 +239,7 @@
     "S37": [["S32-C90","Eric remembered their conversation about free time and immediately asked when it would suit Alice to go out.","Eric suggested first agreeing on what each of them wanted from the day, and only then chose a route."]],
     "S38": [["S33-C90","Nick remembered which shot Alice had asked him not to show. Today he did not even open the edit without asking her first.","Nick suggested they look at an old recording together rather than decide for Alice what she ought to feel in the frame."]],
     "S39": [["S34-C90","Damir remembered that she had asked him to explain a cancelled meeting, and warned her about his plans in advance.","Damir suggested they spend the day separately if Alice needed it, without turning the offer into a reproach."]],
-    "S40": [["S35-C90","Alice kept verified facts and agreed quotations in the text, as she had promised Marina.","Alice checked once more that private details she had decided not to publish had not slipped into the final text."]]
+    "S40": [["S35-C90","Alice kept verified facts and agreed quotations in the text, as she had promised Marina.","Alice checked once more that private details she had decided not to publish had not slipped into the final text."]],
+    "S41": [["S02-C90","Alice remembered asking Damir directly about a possible change of route on the first trip. In the article too, she did not replace other people’s answers with guesses.","She remembered not looking into Damir’s plans through his phone in the car. Now Alice separated what she knew for certain from what she only supposed."]]
   }
 }

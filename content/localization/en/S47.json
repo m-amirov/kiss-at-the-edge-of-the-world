@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "source": "content/season-1-literary-episode-10.md",
+  "scenes": {
+    "S47": {
+      "title": "Day 21. Alice. A Letter to Herself",
+      "chunks": {
+        "S47.C000": {
+          "title": "",
+          "paragraphs": {
+            "S47.C000.P000": "Before leaving, Alice returned to the harbour alone. A scrap of paper lay on the wet planks of the pier, and she picked it up to put in the bin. The wind smelled of fish and coffee from the newly opened café. Alice took a photograph on her phone—for herself, with no editorial assignment. Then she opened the letter she had written on the first day of the trip and never sent. In it she had promised to return home with a ready answer to the question of what kind of person could make her happy.",
+            "S47.C000.P001": "She deleted the letter and wrote a new one: “I want to continue the work I chose and stop treating ordinary days as lost. I want to see friends. I want to learn not to leave at once when home grows quiet.” Then she set a date for the next project—not because she had to begin a new journey immediately, but so she would not forget what she had thought by the shore."
+          }
+        },
+        "S47.C001": {
+          "title": "Choice S47-C1 — Where will she send the letter?",
+          "paragraphs": {}
+        },
+        "S47.C002": {
+          "title": "A. Keep it for herself alone",
+          "paragraphs": {
+            "S47.C002.P000": "Alice set a reminder for a month and closed her notes. Nick sent her the group photograph; she saved it beside the letter, but did not publish either one."
+          }
+        },
+        "S47.C003": {
+          "title": "B. Write to a friend and arrange to meet",
+          "paragraphs": {
+            "S47.C003.P000": "“I’ll be home on Saturday,” Alice wrote. “Let’s make breakfast. I have a book with a recipe we haven’t ruined yet.” Her friend sent a photograph of a kettle and replied: “Come at ten.”"
+          }
+        },
+        "S47.C004": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S47.C004.P000": "A month later Alice stood in her kitchen in home clothes, checking whether the toast had burnt. The article accepted by the editorial office lay on the table, beside a new project plan she had not begun yet. Her phone held messages from Eric, Nick and Damir; each had sent a photograph of the road after returning home. Alice replied to all of them, put down the phone and sat down to breakfast. Nothing in her life had become perfect. But she no longer wanted to wait for the next journey to begin living."
+          }
+        }
+      }
+    }
+  }
+}

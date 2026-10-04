@@ -47,8 +47,13 @@ test('bounded local QA applies the available contiguous English corpus without a
   assert.doesNotMatch(visible, /[\u0400-\u04ff]/u);
 });
 
-test('production English remains fail-closed until the declared corpus is complete', () => {
-  assert.throws(() => applyLiteraryLocale(literarySeason, literaryLocaleBundles.en), /BLOCKED_EN_CORPUS_INCOMPLETE/);
+test('production English corpus is complete for every canonical scene and interaction beat', () => {
+  const runtime = applyLiteraryLocale(literarySeason, literaryLocaleBundles.en);
+  assert.equal(runtime.scenes.length, 66);
+  assert.deepEqual(validateLiteraryLocale(literarySeason, literaryLocaleBundles.en), { status: 'PASS', errors: [], sceneCount: 66 });
+  assert.deepEqual(validateLiteraryInteractionLocale(interactionBeats, literaryLocaleBundles.en), { status: 'PASS', errors: [], sceneCount: 66 });
+  const visible = runtime.scenes.flatMap(scene => [scene.title, ...scene.chunks.flatMap(chunk => [chunk.localizedTitle ?? chunk.title, ...chunk.paragraphs])]).join('\n');
+  assert.doesNotMatch(visible, /[\u0400-\u04ff]/u);
 });
 
 test('locale switching keeps structural save data locale-independent', () => {

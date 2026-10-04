@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "source": "content/season-1-literary-episode-10.md",
+  "scenes": {
+    "S44": {
+      "title": "Day 21. Eric. A Date in the Notebook",
+      "chunks": {
+        "S44.C000": {
+          "title": "",
+          "paragraphs": {
+            "S44.C000.P000": "In the morning Eric drove the group to their shared farewell point, but first asked Alice for ten minutes. They went down to the harbour where they had once begun talking about his sister and an unsent postcard. This time he had an addressed envelope. On the back was his sister’s address; inside lay a photograph of their failed dinner on Snæfellsnes, where neither was looking at the camera but at a fallen napkin.",
+            "S44.C000.P001": "“Will you send it?” Alice asked.",
+            "S44.C000.P002": "“Yes. My sister will hear from me what it was like, even if she doesn’t like the photograph.”",
+            "S44.C000.P003": "Alice hugged Eric. He showed her the date he had written down for their next call and asked when they could confirm a ticket. She took out her phone and entered the same thing, so the responsibility for meeting did not rest on him alone. Then he asked whether he could send his sister the photograph of their failed dinner. Alice said he could."
+          }
+        },
+        "S44.C001": {
+          "title": "Choice S44-C1 — What does Alice leave with him at goodbye?",
+          "paragraphs": {}
+        },
+        "S44.C002": {
+          "title": "A. Kiss Eric and confirm their next meeting",
+          "paragraphs": {
+            "S44.C002.P000": "Eric kissed her back and stayed for a second at her shoulder. Then they walked back to the others: Alice had a flight ahead, Eric work and a meeting with his sister. They did not have to pretend one cancelled out the other."
+          }
+        },
+        "S44.C003": {
+          "title": "B. Hug him and leave the date without a beautiful final gesture",
+          "paragraphs": {
+            "S44.C003.P000": "They stood together until it turned cold. Alice said she wanted to see him in a month, and Eric said he did too. At goodbye he gave her a paper bookmark with a wooden bird—the same one that had been in his book all along."
+          }
+        },
+        "S44.C004": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S44.C004.P000": "A month later Alice met Eric outside the railway station in her city. They had indeed confirmed the date, survived one delayed flight, and even managed to quarrel on the phone over who had forgotten to buy museum tickets. Now Eric carried a small rucksack and looked for Alice, not the next signpost. She waved first. That evening they were going to cook dinner at her place; Alice had chosen a simple recipe, without two-hour dough."
+          }
+        }
+      }
+    }
+  }
+}

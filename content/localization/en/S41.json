@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "source": "content/season-1-literary-episode-10.md",
+  "scenes": {
+    "S41": {
+      "title": "Day 20. The Last Headline",
+      "chunks": {
+        "S41.C000": {
+          "title": "",
+          "paragraphs": {
+            "S41.C000.P000": "They reached Reykjavík after lunch. On the return drive the sea had seemed lower than on the first day, though Alice knew that was only weariness from the car and the long light in the windows. Eric parked beside the guesthouse, Nick helped unload the suitcases, and Damir took a thermos someone had forgotten to reception. Alice set her case against the wall and first found a socket for her laptop.",
+            "S41.C000.P001": "Marina agreed to speak by video from the editorial office. On the café table there was barely room for Alice’s cup, laptop and notebook. She opened the final version of the text. It held the road they had had to detour, the repaired path, the interview that never happened, and the people with whom she had spent three weeks. Most important was deciding which of other people’s words belonged in the article and which belonged to evenings when the subjects spoke only among themselves.",
+            "S41.C000.P002": "Marina listened to the opening and suggested a headline: “One Trip, Three Love Stories.” Alice closed the file for a second so she would not answer too quickly. Marina had not read her private notes, and Alice had not agreed to turn relationships into a promise to the reader. She suggested a working title instead: “The Road Where They Had to Stop.”",
+            "S41.C000.P003": "“Isn’t that too quiet?” Marina asked.",
+            "S41.C000.P004": "“Perhaps. But there are people who live on that road, and decisions we did not make for a beautiful ending.”",
+            "S41.C000.P005": "Marina asked to see the factual clearances from the interviewees. Alice opened her correspondence with Inga and the smokehouse owner, attached the confirmed quotations and a separate list of what had to remain out of publication. Of private conversations with her fellow travellers, she said only that they had not given interviews for this material."
+          }
+        },
+        "S41.C001": {
+          "title": "If `careerThesis=people`",
+          "paragraphs": {
+            "S41.C001.P000": "In the final paragraph Inga’s photograph of the boardwalk remained. Alice wrote about the person who would return to that path tomorrow, after the tourists had left. Marina suggested adding one concrete detail about the repair, and Alice took it from the approved interview, not from someone’s private conversation."
+          }
+        },
+        "S41.C002": {
+          "title": "If `careerThesis=place`",
+          "paragraphs": {
+            "S41.C002.P000": "For the ending Alice chose the sight of the road after rain: the very lay-by where they had stopped because of the wheel. Marina asked her to say who had made the decision. Alice did not turn Eric into a suffering hero: she wrote that they had agreed together to give up an extra stop because safety mattered more than a beautiful shot."
+          }
+        },
+        "S41.C003": {
+          "title": "If `careerThesis=own-choice`",
+          "paragraphs": {
+            "S41.C003.P000": "Alice ended the piece with her own decision: to return home not because the trip had ended on schedule, but because she had already chosen what to do next. Marina suggested removing the words “I understood what mattered most”; Alice removed them. Naming a particular job and a particular day was enough."
+          }
+        },
+        "S41.C004": {
+          "title": "Choice S41-C1 — Which headline will Alice send?",
+          "paragraphs": {}
+        },
+        "S41.C005": {
+          "title": "A. “The Road Where They Had to Stop”",
+          "paragraphs": {
+            "S41.C005.P000": "Marina read it aloud, then said she would add a subheading naming Iceland for the website. Alice agreed: the trip remained in the foreground, and the characters’ private lives outside it."
+          }
+        },
+        "S41.C006": {
+          "title": "B. “Three Weeks That Wouldn’t Fit on a Map”",
+          "paragraphs": {
+            "S41.C006.P000": "Marina smiled and said the headline worked better with a photograph of the road. Alice chose a shot Nick had permitted for the article, without other people’s faces or secret conversations."
+          }
+        },
+        "S41.C007": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S41.C007.P000": "When the call ended, Alice found another cup on the table. Damir had brought it while she was talking; the hot tea had already gone cold. Eric sent the group chat the address of the café where they would have dinner together on their final evening. Nick asked whether he could film them at the shared table. This time he did not turn the camera on until all four had answered. Alice put her laptop in her bag. Before evening, she still had time for a decision of her own."
+          }
+        },
+        "S41.C008": {
+          "title": "Choice S41-C2 — What will Alice do after submitting the last text?",
+          "paragraphs": {}
+        },
+        "S41.C009": {
+          "title": "A. Invite the whole group on a short shared walk",
+          "paragraphs": {
+            "S41.C009.P000": "“No camera and no article,” Alice suggested. Nick raised his empty hands in reply, Eric pointed out the way to the water, and Damir was the first to remind them to take scarves. On the walk they talked about the simplest things: who had forgotten what at the hotel."
+          }
+        },
+        "S41.C010": {
+          "title": "B. Keep an hour alone before the shared farewell",
+          "paragraphs": {
+            "S41.C010.P000": "Alice went to the nearest café and ordered hot chocolate. She opened her phone but did not check the editorial messages. An hour later she returned to the group, ready to listen to everyone else’s plans for the evening."
+          }
+        }
+      }
+    }
+  }
+}

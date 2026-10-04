@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "source": "content/season-1-literary-episode-10.md",
+  "scenes": {
+    "S48": {
+      "title": "Day 21. The Shared Farewell Frame",
+      "chunks": {
+        "S48.C000": {
+          "title": "",
+          "paragraphs": {
+            "S48.C000.P000": "They had their final shared breakfast in the same small kitchen where, on the first day, they had been unable to find the key. Now Nick knew which drawer held the cups, Damir no longer tried to cook for everyone without asking, and Eric sat at the table before checking the car. Alice took the book about old Icelandic kitchens from her bag and set it beside the bread: they had made the recipe after all, just not on the first try.",
+            "S48.C000.P001": "Nick asked permission to take one group photograph. All four agreed. He set the camera on a timer and stood beside the others without trying to place himself in the centre. In the first picture Damir blinked, in the second Eric looked away, and in the third Alice laughed because Nick had barely managed to run back to the table. They chose the third."
+          }
+        },
+        "S48.C001": {
+          "title": "If `routeIntent=eric`",
+          "paragraphs": {
+            "S48.C001.P000": "Eric gave Alice the paper bookmark she had forgotten and said his sister was already waiting for a photograph of their dinner. Nick suggested captioning the shot “Recipe Tested Under Field Conditions,” but Alice refused: she intended to tell that story herself."
+          }
+        },
+        "S48.C002": {
+          "title": "If `routeIntent=nick`",
+          "paragraphs": {
+            "S48.C002.P000": "Nick asked Alice whether she had forgotten the name of the film she had once recommended. Alice named it on the first try. Damir remarked that memory was the most reliable plan of the whole trip."
+          }
+        },
+        "S48.C003": {
+          "title": "If `routeIntent=damir`",
+          "paragraphs": {
+            "S48.C003.P000": "Damir asked whether Alice had his Keflavík scarf. She answered that the scarf was still with him, while she had a photograph of a horse called Shum. Nick demanded to see it, and for the first time on the trip Damir did not object."
+          }
+        },
+        "S48.C004": {
+          "title": "If `routeIntent=alice`",
+          "paragraphs": {
+            "S48.C004.P000": "Alice suggested that all of them meet again one day—without a magazine, a film or a date selected in advance. Eric said he knew a good short walk to start with; Nick asked them not to lose anyone else’s things this time, and Damir said he would bring proper chocolate."
+          }
+        },
+        "S48.C005": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S48.C005.P000": "At the hotel door everyone checked that they had not forgotten a passport. Nick found his charger where he had left it: in the socket by reception. Alice waited while he went back for it, and all of them walked out to the car together. They still had time for personal goodbyes and the road to Keflavík. The photograph in which no one came out perfectly was already on Alice’s phone; the book she meant to finish was in her bag."
+          }
+        },
+        "S48.C006": {
+          "title": "If `S41-C2=A`",
+          "paragraphs": {
+            "S48.C006.P000": "At the final gathering Nick remembered the short walk after the article was submitted and asked who had first suggested going without a camera. Everyone looked at Alice; she laughed."
+          }
+        },
+        "S48.C007": {
+          "title": "If `S41-C2=B`",
+          "paragraphs": {
+            "S48.C007.P000": "At the final gathering Eric asked Alice whether the hour in the café had helped. She answered that she had finally finished her hot chocolate before it cooled."
+          }
+        }
+      }
+    }
+  }
+}

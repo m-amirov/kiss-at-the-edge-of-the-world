@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "source": "content/season-1-literary-episode-10.md",
+  "scenes": {
+    "S42": {
+      "title": "Day 20. The Last Date Is Not the Last Answer",
+      "chunks": {
+        "S42.C000": {
+          "title": "If `routeIntent=eric`",
+          "paragraphs": {
+            "S42.C000.P000": "Eric was waiting for Alice outside a small café by the harbour. He held a notebook, but not a travel one: his sister had drawn a wooden bird on the cover, like the souvenir from Snæfellsnes. Eric showed Alice two possible dates after she returned home. One still had to be cleared with the guides’ school. He wanted to meet not at work or between tours—to come to her, spend an ordinary day off together, and then decide whether they wanted another meeting.",
+            "S42.C000.P001": "Alice told him about the editorial series. She could not promise a free schedule, but she knew which day she would file the first piece. Eric suggested calling the evening after her deadline: not to discuss a route, simply to ask how her day had gone. Alice looked at him and remembered their failed dinner with potatoes. For that kind of meeting, she did not have to invent an ideal version of herself."
+          }
+        },
+        "S42.C001": {
+          "title": "If `routeIntent=nick`",
+          "paragraphs": {
+            "S42.C001.P000": "Nick invited Alice to a small bakery without a jukebox or a beautiful view. He had picked it because it sold rolls like the ones they had eaten after the pool, and because the post office was nearby. He showed her the confirmation: Inga had received her gloves. Alice smiled, then asked him to take his phone off the table. He did so at once. They had to talk not about shots, but about a next day they might spend together.",
+            "S42.C001.P001": "Nick suggested coming to her city for a weekend after he finished editing. He did not promise to abandon work, ask Alice to attend a shoot, or make the future weekend into a film plot. He said he would like to cook dinner with her and watch an old film she had recommended long ago. Alice was surprised that he remembered its title."
+          }
+        },
+        "S42.C002": {
+          "title": "If `routeIntent=damir`",
+          "paragraphs": {
+            "S42.C002.P000": "Damir met Alice at the café by the guesthouse. He showed her a message about a video interview scheduled for the following week. He did not yet know whether he would take the position if it was offered, and he did not ask Alice to decide for him. She told him about her editorial project and the three dates they had imagined on Snæfellsnes. The first could be in her city when they both had a free evening. They would decide about the second later, if the first took place. The third remained a blank line for now.",
+            "S42.C002.P001": "“I like that you’re not trying to fill it in already,” Alice said.",
+            "S42.C002.P002": "“I can suggest a museum, but you’ll say I’ve planned everything again.”",
+            "S42.C002.P003": "“You can suggest it. I can say no.”",
+            "S42.C002.P004": "Damir laughed and ordered tea and the biscuit with the filling she had come to like. Alice did not explain why that moved her."
+          }
+        },
+        "S42.C003": {
+          "title": "Choice S42-C1 — What does Alice decide after the date?",
+          "paragraphs": {}
+        },
+        "S42.C004": {
+          "title": "A. Continue the romance and set a specific next meeting",
+          "paragraphs": {
+            "S42.C004.P000": "“I want to see you after I’m home,” Alice said. “Let’s choose a day when we can simply be together, without the group or a beautiful road.”",
+            "S42.C004.P001": "They checked their nearest free dates and wrote down one possible meeting that still needed confirming around work. Neither pretended it decided the rest of their lives."
+          }
+        },
+        "S42.C005": {
+          "title": "B. Ask for time and do not continue the romance yet",
+          "paragraphs": {
+            "S42.C005.P000": "“This trip mattered to me,” Alice said. “But I don’t want to set our next meeting because I’m afraid I won’t dare later.”",
+            "S42.C005.P001": "Her partner accepted the answer without turning a pause into a hidden promise. They agreed to say goodbye to the group tomorrow as friends, without demanding to define what would happen a month from now."
+          }
+        },
+        "S42.C006": {
+          "title": "C. End the relationship with respect for their shared past",
+          "paragraphs": {
+            "S42.C006.P000": "“I don’t want to continue the romance after we get home,” Alice said. “I was happy with you here. I want to keep it as a good memory, not a promise I cannot keep.”",
+            "S42.C006.P001": "The words came hard. But when they left the café, neither tried to take them back with another kiss or a new plan. The road was ending; human respect was not."
+          }
+        },
+        "S42.C007": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S42.C007.P000": "That evening the group gathered around the shared table. Nick told the story of the lost glove one last time; Damir told him never again to take things with someone else’s initials; Eric asked who would be responsible for taking out the guesthouse rubbish tomorrow. Alice laughed with them. Her private decision did not erase the three weeks of life they had shared."
+          }
+        }
+      }
+    }
+  }
+}
