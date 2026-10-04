@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS_IN_SCOPE",
+  "audit": {
+    "runId": "2026-10-04T13-59-15-117Z-audit-repair-loop-9a5304",
+    "startingHead": "67517054a87835ef26c650959cd78f7f92a992ea",
+    "testedSourceHead": "5833c367d8228addc2c5547b55074806dcc69ab0",
+    "productionRepairHead": "5833c367d8228addc2c5547b55074806dcc69ab0",
+    "baselineAncestry": "PASS",
+    "worktreeAtStart": "dirty; preserved unrelated paths",
+    "webPreflight": "READY",
+    "webReview": "NOT_RUN_NO_CALLABLE_CEOS_WEB_REVIEWER",
+    "nativeDocumentationFallback": true
+  },
+  "preflight": {
+    "branch": "feature/yandex-sdk-localization",
+    "baselineHeadMatch": "PASS",
+    "originHeadMatchAtStart": "PASS",
+    "starterKitSelfTest": "PASS (0.5.9, target clean)",
+    "starterKitManagedDrift": "PASS",
+    "matureUpdaterDryRun": "N/A: target profile is new-project; same-directory update is rejected"
+  },
+  "localization": {
+    "ruSceneCount": 66,
+    "enSceneCount": 66,
+    "missingEnScenes": 0,
+    "extraEnScenes": 0,
+    "missingParagraphRefs": 0,
+    "extraParagraphRefs": 0,
+    "sceneParity": "PASS",
+    "chunkParity": "PASS",
+    "authoredChoiceParity": "PASS",
+    "optionCodeParity": "PASS",
+    "predicateParity": "PASS",
+    "interactionParity": "PASS",
+    "interactionEchoParity": "PASS",
+    "routeIntentParity": "PASS",
+    "routeStatusParity": "PASS",
+    "endingIdParity": "PASS",
+    "enCyrillicLeakage": 0,
+    "leakedMarkupOrInternalText": 0,
+    "sourceAudit": "artifacts/evidence/full-season-source-audit.json"
+  },
+  "interaction": {
+    "semanticCaseCount": 468,
+    "contradictionCount": 0,
+    "prematurePremiseCount": 0,
+    "duplicatedCanonicalEventCount": 0,
+    "authoredChoicePreselectionCount": 0,
+    "branchInvalidPremiseCount": 0,
+    "crossRouteLeakCount": 0,
+    "inventedRelationshipStateCount": 0,
+    "inventedConsentCount": 0,
+    "inventedCharacterKnowledgeCount": 0,
+    "actionOwnershipMismatchCount": 0,
+    "temporalRewindCount": 0,
+    "internalStateLeakCount": 0
+  },
+  "endings": {
+    "runtimeScenarios": 22,
+    "runtimeViewportRuns": 66,
+    "endingMismatchCount": 0,
+    "endingReachabilityMismatchCount": 0,
+    "expectedFinalScenes": { "eric": "S44", "nick": "S45", "damir": "S46", "alice": "S47" },
+    "runtimeEvidence": "artifacts/evidence/full-season-route-browser.json"
+  },
+  "sdk": {
+    "officialDocumentationReviewDate": "2026-10-04",
+    "officialSources": [
+      "https://yandex.ru/dev/games/doc/ru/concepts/requirements",
+      "https://yandex.ru/dev/games/doc/ru/requirements/1/19",
+      "https://yandex.ru/dev/games/doc/ru/requirements/2/14",
+      "https://yandex.ru/dev/games/doc/ru/sdk/sdk-events"
+    ],
+    "contractVerdict": "SDK_INTEGRATION_TECHNICALLY_READY_FOR_EXTERNAL_YANDEX_RETEST",
+    "sdkInitialization": "PASS: production load/init failures throw explicit YANDEX_RUNTIME_SDK_REQUIRED or YANDEX_SDK_INIT_FAILED; local fallback is localhost/file only",
+    "loadingApi": "PASS: one-shot LoadingAPI.ready after rendered interactive menu",
+    "gameplayApi": "PASS: start/stop idempotent across menu, pause/resume and fullscreen-ad lifecycle",
+    "locale": "PASS: ysdk.environment.i18n.lang is authoritative in production; ru* maps ru and unsupported maps en; query override is local-only",
+    "cloud": "PASS: load/write success, delayed queue ordering, load/write failures and local fallback are covered; structural saves contain no locale or prose",
+    "tests": "tests/yandex/sdk-runtime.test.mjs: 6/6 PASS; tests/narrative/save-state.test.mjs: PASS"
+  },
+  "runtime": {
+    "fullSeasonRoutes": "PASS: 8 S01-to-ending runs, 4 routes x desktop/mobile, 10,390 total steps, save/reload, no soft locks or double advance",
+    "saveReload": "PASS in all full-route runs and late-season route checkpoints",
+    "localeSwitch": "PASS: RU-to-EN-to-RU at pre-ending state in all 66 late-season runs; scene, route, status and structural save preserved",
+    "browser": "PASS: 1920x900, 390x844 and 360x640; clipping/overflow/internalScroll/brokenControls/consoleErrors/failedRequests all zero",
+    "accessibilityUiLocalization": "PASS: localized menu/settings/save/error/ARIA strings are structurally covered; no player-visible internal route state"
+  },
+  "productionEnglishCompletenessGate": {
+    "positive": "PASS: complete 66-scene corpus accepted",
+    "negativeFixture": "PASS: existing localization-contract test proves a missing EN scene fails BLOCKED_EN_CORPUS_INCOMPLETE"
+  },
+  "confirmedRepairs": [
+    "SOURCE_LOCALIZATION_SEMANTIC_DEFECT: added missing EN S03 echo for S65-C90",
+    "SOURCE_INTERACTION_CONTINUITY_DEFECT: removed player-visible S25-C1 implementation ID in RU and EN"
+  ],
+  "remainingExternalBlockers": [
+    "ART_ACCEPTANCE_HEAD_MISMATCH",
+    "EXTERNAL_YANDEX_EVIDENCE",
+    "BLOCK_YANDEX_DOCS_CHANGED_REVIEW_REQUIRED"
+  ]
+}

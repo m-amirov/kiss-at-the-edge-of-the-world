@@ -10,13 +10,13 @@ import { literarySaveKey } from '../../src/literary-engine.js';
 const { chromium } = await import(pathToFileURL('C:/Users/user/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs').href);
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const baseUrl = process.env.LITERARY_QA_URL ?? 'http://127.0.0.1:4174/literary.html';
-const output = path.join(root, 'artifacts/evidence/ep09-10-route-runtime');
-const evidencePath = path.join(root, 'artifacts/evidence/ep09-10-route-browser.json');
+const output = path.resolve(root, process.env.LITERARY_QA_OUTPUT ?? 'artifacts/evidence/ep09-10-route-runtime');
+const evidencePath = path.resolve(root, process.env.LITERARY_QA_EVIDENCE ?? 'artifacts/evidence/ep09-10-route-browser.json');
 const viewports = [{ width: 1920, height: 900 }, { width: 390, height: 844 }, { width: 360, height: 640 }];
 const variants = [
-  ['eric', 'active', 'A', 'S44'], ['eric', 'paused', 'A', 'S44'], ['eric', 'active', 'B', 'S47'], ['eric', 'active', 'C', 'S47'], ['eric', 'closed', null, 'S47'],
-  ['nick', 'active', 'A', 'S45'], ['nick', 'paused', 'A', 'S45'], ['nick', 'active', 'B', 'S47'], ['nick', 'active', 'C', 'S47'], ['nick', 'closed', null, 'S47'],
-  ['damir', 'active', 'A', 'S46'], ['damir', 'paused', 'A', 'S46'], ['damir', 'active', 'B', 'S47'], ['damir', 'active', 'C', 'S47'], ['damir', 'closed', null, 'S47'],
+  ['eric', 'active', 'A', 'S44'], ['eric', 'paused', 'A', 'S44'], ['eric', 'active', 'B', 'S47'], ['eric', 'active', 'C', 'S47'], ['eric', 'paused', 'B', 'S47'], ['eric', 'paused', 'C', 'S47'], ['eric', 'closed', null, 'S47'],
+  ['nick', 'active', 'A', 'S45'], ['nick', 'paused', 'A', 'S45'], ['nick', 'active', 'B', 'S47'], ['nick', 'active', 'C', 'S47'], ['nick', 'paused', 'B', 'S47'], ['nick', 'paused', 'C', 'S47'], ['nick', 'closed', null, 'S47'],
+  ['damir', 'active', 'A', 'S46'], ['damir', 'paused', 'A', 'S46'], ['damir', 'active', 'B', 'S47'], ['damir', 'active', 'C', 'S47'], ['damir', 'paused', 'B', 'S47'], ['damir', 'paused', 'C', 'S47'], ['damir', 'closed', null, 'S47'],
   ['alice', 'active', null, 'S47']
 ].map(([route, routeStatus, finalChoice, ending]) => ({ route, routeStatus, finalChoice, ending }));
 const routeCodes = { eric: 'A', nick: 'B', damir: 'C', alice: 'D' };
