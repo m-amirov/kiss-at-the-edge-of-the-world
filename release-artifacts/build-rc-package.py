@@ -31,6 +31,8 @@ def resolve_local(root: Path, source: PurePosixPath, raw_url: str) -> str | None
     if not value or value.startswith(("#", "data:", "http://", "https://", "//", "mailto:", "javascript:")):
         return None
     value = value.split("?", 1)[0].split("#", 1)[0].replace("\\", "/")
+    if value == "/sdk.js":
+        return None  # Official Yandex platform bootstrap, supplied by the host outside the game ZIP.
     candidate = root / value.lstrip("/") if value.startswith("/") else root / Path(source.parent.as_posix()) / value
     resolved = candidate.resolve()
     try:

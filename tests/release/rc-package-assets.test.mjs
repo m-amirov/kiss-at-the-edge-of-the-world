@@ -12,7 +12,7 @@ const builder = path.join(root, 'release-artifacts', 'build-rc-package.py');
 function fixture() {
   const directory = fs.mkdtempSync(path.join(os.tmpdir(), 'rc-packager-'));
   const write = (relative, value) => { const target = path.join(directory, relative); fs.mkdirSync(path.dirname(target), { recursive: true }); fs.writeFileSync(target, value); };
-  write('index.html', '<link rel="stylesheet" href="/src/app.css"><script type="module" src="/src/app.js"></script>');
+  write('index.html', '<link rel="stylesheet" href="/src/app.css"><script src="/sdk.js"></script><script type="module" src="/src/app.js"></script>');
   write('literary.html', '<script type="module" src="./src/app.js"></script>');
   write('src/app.js', "import './dep.js'; const image='/assets/picture.webp';");
   write('src/dep.js', 'export const ready=true;');
@@ -32,6 +32,7 @@ test('valid dependency closure includes runtime dependencies and excludes legacy
   const f = fixture(); const result = run(f); assert.equal(result.status, 0, result.stderr);
   const names = JSON.parse(execFileSync('python', ['-c', 'import json,sys,zipfile; print(json.dumps(zipfile.ZipFile(sys.argv[1]).namelist()))', f.output], { encoding: 'utf8' }));
   for (const required of ['index.html', 'literary.html', 'src/app.js', 'src/dep.js', 'src/app.css', 'assets/picture.webp', 'assets/font.woff2']) assert.ok(names.includes(required), required);
+  assert.equal(names.includes('sdk.js'), false, 'Yandex-hosted SDK must not be copied into the release archive');
   assert.equal(names.includes('src/legacy.js'), false); assert.equal(names.some(name => name.startsWith('tests/')), false);
 });
 
