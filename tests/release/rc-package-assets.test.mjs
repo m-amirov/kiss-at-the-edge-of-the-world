@@ -9,6 +9,18 @@ import { fileURLToPath } from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const builder = path.join(root, 'release-artifacts', 'build-rc-package.py');
 
+function packageEntries(output) {
+  return JSON.parse(execFileSync('python', ['-c', "import json,sys,zipfile; z=zipfile.ZipFile(sys.argv[1]); names=z.namelist(); text={n:z.read(n).decode('utf-8') for n in names if n.endswith('.html') or n.endswith('/yandex-sdk.js')}; print(json.dumps({'names':names,'text':text}))", output], { encoding: 'utf8' }));
+}
+
+function packageProject() {
+  const directory = fs.mkdtempSync(path.join(os.tmpdir(), 'rc-yandex-sdk-'));
+  const output = path.join(directory, 'rc.zip');
+  const result = spawnSync('python', [builder, '--root', root, '--output', output], { encoding: 'utf8' });
+  assert.equal(result.status, 0, result.stderr);
+  return packageEntries(output);
+}
+
 function fixture() {
   const directory = fs.mkdtempSync(path.join(os.tmpdir(), 'rc-packager-'));
   const write = (relative, value) => { const target = path.join(directory, relative); fs.mkdirSync(path.dirname(target), { recursive: true }); fs.writeFileSync(target, value); };
@@ -34,6 +46,21 @@ test('valid dependency closure includes runtime dependencies and excludes legacy
   for (const required of ['index.html', 'literary.html', 'src/app.js', 'src/dep.js', 'src/app.css', 'assets/picture.webp', 'assets/font.woff2']) assert.ok(names.includes(required), required);
   assert.equal(names.includes('sdk.js'), false, 'Yandex-hosted SDK must not be copied into the release archive');
   assert.equal(names.includes('src/legacy.js'), false); assert.equal(names.some(name => name.startsWith('tests/')), false);
+});
+
+test('final packaged HTML entrypoints use the official Yandex-hosted SDK before application modules', () => {
+  const archive = packageProject();
+  const entries = Object.fromEntries(Object.entries(archive.text).filter(([name]) => name.endsWith('.html')));
+  assert.ok(entries['index.html'], 'release archive must have index.html at its root');
+  for (const [name, html] of Object.entries(entries)) {
+    assert.match(html, /<script\s+src=["']\/sdk\.js["']><\/script>/, `${name} must statically reference the official /sdk.js`);
+    const sdk = html.indexOf('/sdk.js');
+    const module = html.indexOf('type="module"');
+    assert.ok(module < 0 || sdk < module, `${name} must load /sdk.js before its application module`);
+  }
+  assert.doesNotMatch(Object.values(archive.text).join('\n'), /sdk\.games\.s3\.yandex\.net|yandex\.net\/sdk\.js/i, 'release archive must not use an obsolete or own-domain SDK URL');
+  assert.match(Object.values(archive.text).join('\n'), /YaGames\.init\s*\(/, 'release archive must initialize the platform SDK');
+  assert.equal(archive.names.includes('sdk.js'), false, 'release archive must not package an SDK or a local SDK mock');
 });
 
 test('invalid UTF-8 text blocks packaging', () => {
