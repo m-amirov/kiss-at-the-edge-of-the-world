@@ -3,7 +3,7 @@
   "recordType": "runtime-transcode-acceptance",
   "status": "PASS",
   "verdict": "PASS_RUNTIME_TRANSCODE_DERIVED_FROM_ACCEPTED_SOURCES",
-  "headAtGeneration": "fedc2a60c919c9f568647a82ab374506c4cd3c02",
+  "headAtGeneration": "0d12eaa7bf6274b44850b0760f676849aad743f7",
   "manifestSha256": "0eaca26999adfd588777d44348732f8511be67045c9a9bcab4d74f0912d956b2",
   "sourceAcceptanceBasis": [
     "asset-manifest status=integrated",
