@@ -1,22 +1,15 @@
 {
   "schemaVersion": 1,
   "status": "PASS",
-  "generatedAt": "2026-10-01T19:51:12.663Z",
-  "head": "c2992992503f60c67776a58489b25be5c0352194",
-  "baseUrl": "http://127.0.0.1:4173/literary.html?qa=full-route-interaction",
-  "interactionModel": [
-    "click",
-    "touch",
-    "keyboard"
-  ],
+  "generatedAt": "2026-10-05T11:32:32.052Z",
+  "head": "fdee8d278dd1095bcd804d9612b4288ccd94d796",
+  "baseUrl": "http://127.0.0.1:4174/literary.html",
   "requirements": [
-    "choice boundary guard",
-    "menu/settings/episodes guard",
-    "save/load",
     "4/4 endings",
-    "no skipped chunks",
-    "no double-advance",
-    "no soft-lock"
+    "desktop and mobile",
+    "console errors 0",
+    "failed requests 0",
+    "soft-lock 0"
   ],
   "results": [
     {
@@ -30,12 +23,24 @@
       "finished": true,
       "visited": 40,
       "choiceCount": 113,
-      "steps": 1308,
-      "choiceBoundaries": 113,
-      "saveLoadChecked": true,
-      "doubleAdvanceFailures": 0,
+      "steps": 1309,
+      "routeChoice": true,
+      "softLocks": 0,
+      "runError": null,
+      "lastState": {
+        "sceneId": "S44",
+        "position": 8,
+        "terminal": true,
+        "finished": true,
+        "visited": 40,
+        "choiceCount": 113
+      },
       "errors": [],
-      "failed": []
+      "failed": [],
+      "checkpoints": [
+        "S17",
+        "S26"
+      ]
     },
     {
       "route": "eric",
@@ -48,30 +53,54 @@
       "finished": true,
       "visited": 40,
       "choiceCount": 113,
+      "steps": 1309,
+      "routeChoice": true,
+      "softLocks": 0,
+      "runError": null,
+      "lastState": {
+        "sceneId": "S44",
+        "position": 8,
+        "terminal": true,
+        "finished": true,
+        "visited": 40,
+        "choiceCount": 113
+      },
+      "errors": [],
+      "failed": [],
+      "checkpoints": [
+        "S17",
+        "S26"
+      ]
+    },
+    {
+      "route": "nick",
+      "viewport": {
+        "width": 1920,
+        "height": 900
+      },
+      "ending": "S45",
+      "expectedEnding": "S45",
+      "finished": true,
+      "visited": 40,
+      "choiceCount": 114,
       "steps": 1308,
-      "choiceBoundaries": 113,
-      "saveLoadChecked": true,
-      "doubleAdvanceFailures": 0,
-      "errors": [],
-      "failed": []
-    },
-    {
-      "route": "nick",
-      "viewport": {
-        "width": 1920,
-        "height": 900
+      "routeChoice": true,
+      "softLocks": 0,
+      "runError": null,
+      "lastState": {
+        "sceneId": "S45",
+        "position": 8,
+        "terminal": true,
+        "finished": true,
+        "visited": 40,
+        "choiceCount": 114
       },
-      "ending": "S45",
-      "expectedEnding": "S45",
-      "finished": true,
-      "visited": 40,
-      "choiceCount": 114,
-      "steps": 1307,
-      "choiceBoundaries": 114,
-      "saveLoadChecked": true,
-      "doubleAdvanceFailures": 0,
       "errors": [],
-      "failed": []
+      "failed": [],
+      "checkpoints": [
+        "S17",
+        "S26"
+      ]
     },
     {
       "route": "nick",
@@ -84,12 +113,24 @@
       "finished": true,
       "visited": 40,
       "choiceCount": 114,
-      "steps": 1307,
-      "choiceBoundaries": 114,
-      "saveLoadChecked": true,
-      "doubleAdvanceFailures": 0,
+      "steps": 1308,
+      "routeChoice": true,
+      "softLocks": 0,
+      "runError": null,
+      "lastState": {
+        "sceneId": "S45",
+        "position": 8,
+        "terminal": true,
+        "finished": true,
+        "visited": 40,
+        "choiceCount": 114
+      },
       "errors": [],
-      "failed": []
+      "failed": [],
+      "checkpoints": [
+        "S17",
+        "S26"
+      ]
     },
     {
       "route": "damir",
@@ -102,12 +143,24 @@
       "finished": true,
       "visited": 40,
       "choiceCount": 113,
-      "steps": 1295,
-      "choiceBoundaries": 113,
-      "saveLoadChecked": true,
-      "doubleAdvanceFailures": 0,
+      "steps": 1296,
+      "routeChoice": true,
+      "softLocks": 0,
+      "runError": null,
+      "lastState": {
+        "sceneId": "S46",
+        "position": 8,
+        "terminal": true,
+        "finished": true,
+        "visited": 40,
+        "choiceCount": 113
+      },
       "errors": [],
-      "failed": []
+      "failed": [],
+      "checkpoints": [
+        "S17",
+        "S26"
+      ]
     },
     {
       "route": "damir",
@@ -120,12 +173,24 @@
       "finished": true,
       "visited": 40,
       "choiceCount": 113,
-      "steps": 1295,
-      "choiceBoundaries": 113,
-      "saveLoadChecked": true,
-      "doubleAdvanceFailures": 0,
+      "steps": 1296,
+      "routeChoice": true,
+      "softLocks": 0,
+      "runError": null,
+      "lastState": {
+        "sceneId": "S46",
+        "position": 8,
+        "terminal": true,
+        "finished": true,
+        "visited": 40,
+        "choiceCount": 113
+      },
       "errors": [],
-      "failed": []
+      "failed": [],
+      "checkpoints": [
+        "S17",
+        "S26"
+      ]
     },
     {
       "route": "alice",
@@ -138,12 +203,24 @@
       "finished": true,
       "visited": 41,
       "choiceCount": 116,
-      "steps": 1287,
-      "choiceBoundaries": 116,
-      "saveLoadChecked": true,
-      "doubleAdvanceFailures": 0,
+      "steps": 1288,
+      "routeChoice": true,
+      "softLocks": 0,
+      "runError": null,
+      "lastState": {
+        "sceneId": "S47",
+        "position": 7,
+        "terminal": true,
+        "finished": true,
+        "visited": 41,
+        "choiceCount": 116
+      },
       "errors": [],
-      "failed": []
+      "failed": [],
+      "checkpoints": [
+        "S17",
+        "S26"
+      ]
     },
     {
       "route": "alice",
@@ -156,12 +233,24 @@
       "finished": true,
       "visited": 41,
       "choiceCount": 116,
-      "steps": 1287,
-      "choiceBoundaries": 116,
-      "saveLoadChecked": true,
-      "doubleAdvanceFailures": 0,
+      "steps": 1288,
+      "routeChoice": true,
+      "softLocks": 0,
+      "runError": null,
+      "lastState": {
+        "sceneId": "S47",
+        "position": 7,
+        "terminal": true,
+        "finished": true,
+        "visited": 41,
+        "choiceCount": 116
+      },
       "errors": [],
-      "failed": []
+      "failed": [],
+      "checkpoints": [
+        "S17",
+        "S26"
+      ]
     }
   ]
 }

@@ -4,11 +4,11 @@
   "status": "PASS",
   "verdict": "PASS_PRODUCTION_ART_COMPLETE",
   "repository": {
-    "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-git",
+    "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-recovery-2026-10-05",
     "remote": "https://github.com/m-amirov/kiss-at-the-edge-of-the-world.git",
-    "head": "c2992992503f60c67776a58489b25be5c0352194"
+    "head": "fdee8d278dd1095bcd804d9612b4288ccd94d796"
   },
-  "currentHead": "c2992992503f60c67776a58489b25be5c0352194",
+  "currentHead": "fdee8d278dd1095bcd804d9612b4288ccd94d796",
   "starterKitVersion": "0.5.9",
   "productionArtRuns": [
     {
@@ -26,7 +26,7 @@
     {
       "runId": "2026-10-01T18-36-42-265Z-production-art-4f6b0d",
       "result": "PASS",
-      "sourceProjectDir": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-git",
+      "sourceProjectDir": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-recovery-2026-10-05",
       "evidence": ".ceos-runs/2026-10-01T18-36-42-265Z-production-art-4f6b0d"
     }
   ],
@@ -43,7 +43,7 @@
     "agent": "ceos_art_director_web",
     "source": "formal final-batch-reaudit.json; byte-identical accepted assets and restored canonical mappings"
   },
-  "manifestSha256": "153b56612015ed2c1dcaf7868cfd54623af67dfcdfb3c0764fc37a448013f0ca",
+  "manifestSha256": "0eaca26999adfd588777d44348732f8511be67045c9a9bcab4d74f0912d956b2",
   "acceptedAssets": [
     {
       "path": "assets/backgrounds/guesthouse-common-kitchen-evening.png",
@@ -324,7 +324,7 @@
       "path": "assets/cg/s03-editor-call-damir.png",
       "sha256": "aea38cdcffafe5233e8e6d3d93ad5618e41ab94addae40c0a143325a9b80561a",
       "scenes": [],
-      "dimensions": "1920x900",
+      "dimensions": "1672x941",
       "format": "PNG",
       "sourceRunId": "2026-10-01T18-36-42-265Z-production-art-4f6b0d"
     },
@@ -397,7 +397,7 @@
     "type": "automated-current-worktree-hash-verifier",
     "source": "tools/release/art-acceptance.mjs + current beat-level visual ledger",
     "algorithm": "sha256",
-    "acceptanceTimestamp": "2026-10-01T19:57:43.398Z"
+    "acceptanceTimestamp": "2026-10-05T11:30:19.438Z"
   },
   "compatibility": {
     "status": "PASS",
@@ -411,7 +411,7 @@
   "runtimeVerification": {
     "status": "PASS",
     "evidencePath": "artifacts/evidence/full-route-runtime-qa-2026-09-30.json",
-    "generatedAt": "2026-10-01T19:57:43.398Z",
+    "generatedAt": "2026-10-05T11:30:19.439Z",
     "viewports": [
       "1920x900",
       "390x844"
