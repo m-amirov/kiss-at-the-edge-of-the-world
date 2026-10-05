@@ -394,102 +394,102 @@
     "skill:asset-provenance-and-rights:SKILL.md": {
       "target": ".codex/skills/asset-provenance-and-rights/SKILL.md",
       "sourceHash": "32933d322311b7bf23eec7e65c07f619e2b467ccb5f8de9169ccf7e0103dee8a",
-      "targetHash": "32933d322311b7bf23eec7e65c07f619e2b467ccb5f8de9169ccf7e0103dee8a"
+      "targetHash": "a66c6924c719c37c86600bba200fcfd40f792969213200cb7f502f576ca562fa"
     },
     "skill:game-accessibility:SKILL.md": {
       "target": ".codex/skills/game-accessibility/SKILL.md",
       "sourceHash": "ccde8da6c1eaeb09b29fb3f1b123f32a3d11cbb113cb92a877037dee4b2efac3",
-      "targetHash": "ccde8da6c1eaeb09b29fb3f1b123f32a3d11cbb113cb92a877037dee4b2efac3"
+      "targetHash": "c063e74a023e1bc19fc5107b2a2aaf8b54c1709c0554d9ae22d93a715db33d4a"
     },
     "skill:game-audio-quality:ORIGIN.md": {
       "target": ".codex/skills/game-audio-quality/ORIGIN.md",
       "sourceHash": "a0b48060cff31a542fbf47333ffcdabc748373dd176f3ac4963e08249d2cda75",
-      "targetHash": "a0b48060cff31a542fbf47333ffcdabc748373dd176f3ac4963e08249d2cda75"
+      "targetHash": "38ff3aa77b8394b6aba010b52e766bf86c246581b051502ee770f7c3f0598961"
     },
     "skill:game-audio-quality:SKILL.md": {
       "target": ".codex/skills/game-audio-quality/SKILL.md",
       "sourceHash": "124929333f72b7e44e079d22704ac90441f59bb2e44a68b1a14011daa91069cc",
-      "targetHash": "124929333f72b7e44e079d22704ac90441f59bb2e44a68b1a14011daa91069cc"
+      "targetHash": "a10d0c6e51c44eb06af7535dc214171dee4e992c28f8884e2e46fdf895797518"
     },
     "skill:game-feel-polish:SKILL.md": {
       "target": ".codex/skills/game-feel-polish/SKILL.md",
       "sourceHash": "855efc0085253e080368c9e6284648a3748e7204bcaf1d96a84575c8581c2b11",
-      "targetHash": "855efc0085253e080368c9e6284648a3748e7204bcaf1d96a84575c8581c2b11"
+      "targetHash": "64dc578ebbfe3276b85a452de02739f623fd78a3f0b699f95b9ebe007f5db7fb"
     },
     "skill:game-performance-budget:SKILL.md": {
       "target": ".codex/skills/game-performance-budget/SKILL.md",
       "sourceHash": "afce5be9092db1d82003f53da44c554633d3383c677c2793d901403137657a31",
-      "targetHash": "afce5be9092db1d82003f53da44c554633d3383c677c2793d901403137657a31"
+      "targetHash": "4283f50ef1221653eca9f3f84d7ea9f03d8e13d773874b85d88c84fdad8db85f"
     },
     "skill:implementation-cycle:SKILL.md": {
       "target": ".codex/skills/implementation-cycle/SKILL.md",
       "sourceHash": "385693df974aa2fedb2ce609f149a2b0f4e1c38924cb4ea6315a8a08f008e856",
-      "targetHash": "385693df974aa2fedb2ce609f149a2b0f4e1c38924cb4ea6315a8a08f008e856"
+      "targetHash": "7799e70de9033ed2ed1d20da907cdacba7f734f673e6e4e43cb485c50814dd49"
     },
     "skill:codex-engineering-system:SKILL.md": {
       "target": ".codex/skills/codex-engineering-system/SKILL.md",
       "sourceHash": "2eb5ce88ce30d1ab65b14d299d4d570351b2429b416d237906a7a9b011853535",
-      "targetHash": "2eb5ce88ce30d1ab65b14d299d4d570351b2429b416d237906a7a9b011853535"
+      "targetHash": "4254e2d181a6df9e5b6b48bcbeee31ae1a7625d07fa33b206c06fcaa6efc762c"
     },
     "skill:project-termination:SKILL.md": {
       "target": ".codex/skills/project-termination/SKILL.md",
       "sourceHash": "994781a48d044138eeeb876a0cb1b70618d6b6f328aafbe2041a0fa382bde658",
-      "targetHash": "994781a48d044138eeeb876a0cb1b70618d6b6f328aafbe2041a0fa382bde658"
+      "targetHash": "945b637f21cc5c83f5dccd7b3ea7d43735fcdff67cb77124464990bf7e9f0ea3"
     },
     "skill:level-design-quality:SKILL.md": {
       "target": ".codex/skills/level-design-quality/SKILL.md",
       "sourceHash": "7958d6d83f94ab87d89105c24d654047beb802fbad89c15fa7f157d9dfb50700",
-      "targetHash": "7958d6d83f94ab87d89105c24d654047beb802fbad89c15fa7f157d9dfb50700"
+      "targetHash": "e19ae51da241e8a0a0e691e6e1877587440b739c51587337a562eadee748e2c5"
     },
     "skill:mobile-game-ux:ORIGIN.md": {
       "target": ".codex/skills/mobile-game-ux/ORIGIN.md",
       "sourceHash": "398f6c0d59ebc3f5bad202bffdcab08a22b24e7717a09957957132e0b86f2276",
-      "targetHash": "398f6c0d59ebc3f5bad202bffdcab08a22b24e7717a09957957132e0b86f2276"
+      "targetHash": "d09f0e72a7bec4447d07e81b927ae626ffe2a980ab1fa17241fcc28c4846a660"
     },
     "skill:mobile-game-ux:SKILL.md": {
       "target": ".codex/skills/mobile-game-ux/SKILL.md",
       "sourceHash": "658fb9165bc4d7d26a1f0e021618c36932a6f3441706c180cb685947cfa82455",
-      "targetHash": "658fb9165bc4d7d26a1f0e021618c36932a6f3441706c180cb685947cfa82455"
+      "targetHash": "b5412758755edd6b3937a1043d64fa213b567eb4a9b77d527da7e40207289f3e"
     },
     "skill:product-quality-review:ORIGIN.md": {
       "target": ".codex/skills/product-quality-review/ORIGIN.md",
       "sourceHash": "32b7291c06f6232b6a9d6c40b5de3cabb4923acb11283e9b0301e72ea00abb22",
-      "targetHash": "32b7291c06f6232b6a9d6c40b5de3cabb4923acb11283e9b0301e72ea00abb22"
+      "targetHash": "06e9a934215f8b840b94aa9d3b67a7c2c9aa561c1dd5cca0379646e4440be76b"
     },
     "skill:product-quality-review:SKILL.md": {
       "target": ".codex/skills/product-quality-review/SKILL.md",
       "sourceHash": "a105fa55f719a2fecab4c11fd04839418c125589ee4ad6d48da8e56d14643bdc",
-      "targetHash": "a105fa55f719a2fecab4c11fd04839418c125589ee4ad6d48da8e56d14643bdc"
+      "targetHash": "614c363c38a6f2b4fb6c23a9bda600c84116bcdfbcf3f21fd2269845d05722d5"
     },
     "skill:release-audit:SKILL.md": {
       "target": ".codex/skills/release-audit/SKILL.md",
       "sourceHash": "c4e844fbc8bb0252947f2237e1ea3b8dd3449721d292faa869c3ccd7f5f3aa4f",
-      "targetHash": "c4e844fbc8bb0252947f2237e1ea3b8dd3449721d292faa869c3ccd7f5f3aa4f"
+      "targetHash": "cb7e5ae597643c9edf6cf8b75cf1780cbd0615008b9155a8af63e39eba5b72da"
     },
     "skill:visual-quality-gate:ORIGIN.md": {
       "target": ".codex/skills/visual-quality-gate/ORIGIN.md",
       "sourceHash": "b0d99f1bbf7b46c6e3dc9992e538adc7f23ecf355ebd1cf775e3f349cc7bca0d",
-      "targetHash": "b0d99f1bbf7b46c6e3dc9992e538adc7f23ecf355ebd1cf775e3f349cc7bca0d"
+      "targetHash": "5977e0cd937f8c1d36cd17f8b4cdd062aba1164b2a5967f33cf8c8d5dcfff05f"
     },
     "skill:visual-quality-gate:SKILL.md": {
       "target": ".codex/skills/visual-quality-gate/SKILL.md",
       "sourceHash": "7842ce786aa85653479e3357849ea4bad7c7104ad6f74b9c0301a8e91a18806d",
-      "targetHash": "7842ce786aa85653479e3357849ea4bad7c7104ad6f74b9c0301a8e91a18806d"
+      "targetHash": "8a1a079fc014e768a20c98314b0588fbd6c2ae928682c20a75a31093873554d7"
     },
     "skill:web-game-playtest:ORIGIN.md": {
       "target": ".codex/skills/web-game-playtest/ORIGIN.md",
       "sourceHash": "979d9e8fabe516b571b3ca0213169120da4730d6d1c11451235adc937cb2a82a",
-      "targetHash": "979d9e8fabe516b571b3ca0213169120da4730d6d1c11451235adc937cb2a82a"
+      "targetHash": "1f3d415acbccf6c30b49d7e71973f5af6c9f83c00d2ada5ff42131c66e5b813e"
     },
     "skill:web-game-playtest:SKILL.md": {
       "target": ".codex/skills/web-game-playtest/SKILL.md",
       "sourceHash": "af5a75584e6656e3c0271310b136a610ee290805ee25b0e149394dcd4ea4d66e",
-      "targetHash": "af5a75584e6656e3c0271310b136a610ee290805ee25b0e149394dcd4ea4d66e"
+      "targetHash": "d5cb76e2bb76bfed3ed549dab1fa49f4fb0522ee1ee0ec5daf65766e4970904b"
     },
     "skill:yandex-release-validation:SKILL.md": {
       "target": ".codex/skills/yandex-release-validation/SKILL.md",
       "sourceHash": "8e1ed83252674f9c957db5a94dc3d236563928472b58d5e44226e31a4056c06d",
-      "targetHash": "8e1ed83252674f9c957db5a94dc3d236563928472b58d5e44226e31a4056c06d"
+      "targetHash": "da05af71d6c1c9184a1d0d21dadf92b72894d2487e537813ec821b0f62bd2268"
     },
     "contract:AGENTS.md": {
       "target": "AGENTS.md",
@@ -529,12 +529,12 @@
     "managed:manifest-entry-config": {
       "target": "config/manifest-entries.json",
       "sourceHash": "871ee8f0a87adceab5335189b0fe9e1f9fa3d507e266f4613895f92bea82b571",
-      "targetHash": "871ee8f0a87adceab5335189b0fe9e1f9fa3d507e266f4613895f92bea82b571"
+      "targetHash": "ecdb5591d23ae984974fc0fd7a1be811bbe7d0197a8fe06f2297d03f6c470b9a"
     },
     "managed:yandex-doc-snapshot": {
       "target": "config/yandex-doc-snapshot.json",
       "sourceHash": "7d2605723ba7439abeb30d12c7fb6b54776f12ac45f1b1e7f4bec4244d02fb68",
-      "targetHash": "e93f1f52d6140d2e861cefbfc8fb8b40ea14d35caa6d9c3b74370c6c6fb94c00"
+      "targetHash": "01339f0876d14be5c0679764b1ab1caf76c8a509c3dcdc5571181ccfa7967dd6"
     }
   },
   "conflicts": [],
