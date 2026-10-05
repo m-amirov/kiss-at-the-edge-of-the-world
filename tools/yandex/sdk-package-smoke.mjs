@@ -39,12 +39,21 @@ try {
     page.on('response', response => { if (new URL(response.url()).pathname === '/sdk.js') sdkResponses.push(response.status()); });
     await page.goto(baseUrl, { waitUntil: 'networkidle' });
     await page.waitForFunction(() => Boolean(window.__LITERARY_QA__ && document.querySelector('.literary-home, [data-qa-failure]')));
-    const state = await page.evaluate(() => ({ mode: window.__LITERARY_QA__?.getPlatformMode?.(), sdkEvents: window.__yandexSdkSmoke ?? [], failure: document.querySelector('[data-qa-failure]')?.dataset.qaFailure ?? null, overflow: document.documentElement.scrollWidth > innerWidth || document.documentElement.scrollHeight > innerHeight }));
+    const bootState = await page.evaluate(() => window.__LITERARY_QA__?.getState?.());
+    if (!await page.locator('[data-qa-failure]').count()) {
+      await page.getByRole('button', { name: /Новая игра/ }).click();
+      await page.waitForSelector('[data-stage-advance]');
+      await page.locator('[data-stage-advance]').click();
+    }
+    const state = await page.evaluate((before) => {
+      const after = window.__LITERARY_QA__?.getState?.();
+      return { mode: window.__LITERARY_QA__?.getPlatformMode?.(), sdkEvents: window.__yandexSdkSmoke ?? [], failure: document.querySelector('[data-qa-failure]')?.dataset.qaFailure ?? null, progression: Boolean(after && before && (after.sceneId !== before.sceneId || after.position > before.position)), overflow: document.documentElement.scrollWidth > innerWidth || document.documentElement.scrollHeight > innerHeight };
+    }, bootState);
     const screenshot = path.join(output, `home-${viewport.width}x${viewport.height}.png`); await page.screenshot({ path: screenshot });
     results.push({ viewport, sdkResponses, state, consoleErrors, failedRequests, screenshot }); await context.close();
   }
 } finally { await browser.close(); await new Promise(resolve => server.close(resolve)); }
-const status = results.length === viewports.length && results.every(result => result.sdkResponses.join(',') === '200' && result.state.mode === 'yandex' && result.state.sdkEvents.includes('init') && result.state.sdkEvents.includes('ready') && !result.state.failure && !result.state.overflow && result.consoleErrors.length === 0 && result.failedRequests.length === 0) ? 'PASS' : 'FAIL';
+const status = results.length === viewports.length && results.every(result => result.sdkResponses.join(',') === '200' && result.state.mode === 'yandex' && result.state.sdkEvents.filter(event => event === 'init').length === 1 && result.state.sdkEvents.filter(event => event === 'ready').length === 1 && result.state.progression && !result.state.failure && !result.state.overflow && result.consoleErrors.length === 0 && result.failedRequests.length === 0) ? 'PASS' : 'FAIL';
 const evidence = { status, baseUrl: 'ephemeral local Yandex-compatible /sdk.js proxy', root, viewports, results };
 await fsp.mkdir(path.dirname(evidenceFile), { recursive: true }); await fsp.writeFile(evidenceFile, `${JSON.stringify(evidence, null, 2)}\n`);
 console.log(JSON.stringify({ status, evidenceFile, results: results.map(({ viewport, sdkResponses, state, consoleErrors, failedRequests }) => ({ viewport, sdkResponses, mode: state.mode, events: state.sdkEvents, consoleErrors: consoleErrors.length, failedRequests: failedRequests.length })) }, null, 2));

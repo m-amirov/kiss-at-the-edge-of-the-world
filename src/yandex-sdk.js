@@ -1,6 +1,4 @@
-const SDK_PATH = '/sdk.js';
 const CLOUD_KEY = 'kiss-at-the-edge-of-the-world:season-1:v2';
-let sdkLoadPromise = null;
 
 export function isLocalDevelopment(location = globalThis.location) {
   if (!location) return true;
@@ -12,33 +10,19 @@ export function requestedQaLocale(location = globalThis.location) {
   const value = new URLSearchParams(location?.search || '').get('lang');
   return value === 'ru' || value === 'en' ? value : null;
 }
-function loadSdkScript({ document = globalThis.document, window = globalThis.window } = {}) {
-  if (window?.YaGames) return Promise.resolve(window.YaGames);
-  if (sdkLoadPromise) return sdkLoadPromise;
-  sdkLoadPromise = new Promise((resolve, reject) => {
-    const existing = document.querySelector?.(`script[src="${SDK_PATH}"]`);
-    const script = existing || document.createElement('script');
-    script.addEventListener?.('load', () => window?.YaGames ? resolve(window.YaGames) : reject(new Error('YANDEX_SDK_GLOBAL_MISSING')), { once: true });
-    script.addEventListener?.('error', () => reject(new Error('YANDEX_SDK_LOAD_FAILED')), { once: true });
-    if (!existing) { script.async = true; script.src = SDK_PATH; script.dataset.yandexSdk = 'official'; document.head.append(script); }
-  });
-  return sdkLoadPromise;
-}
-export function resetYandexSdkForTests() { sdkLoadPromise = null; }
+export function resetYandexSdkForTests() {}
 function localPlatform(locale, diagnostic, qaLocaleOverride = null) {
   diagnostic('sdk', 'local-fallback');
   return { mode:'local-fallback', locale, language:locale, qaLocaleOverride, markInteractiveReady(){}, setGameplayActive(){}, save:async()=>false, showFullscreenAd:async()=>false, dispose(){} };
 }
-export async function initYandexPlatform({ onCloudState, onLanguage, onPause, onResume, onDiagnostic, cloudKey=CLOUD_KEY, location=globalThis.location, document=globalThis.document, window=globalThis.window }={}) {
+export async function initYandexPlatform({ onCloudState, onLanguage, onPause, onResume, onDiagnostic, cloudKey=CLOUD_KEY, location=globalThis.location, window=globalThis.window }={}) {
   const events=[];
   const diagnostic=(area,status,detail=null)=>{const event={area,status,...(detail?{detail}:{})};events.push(event);onDiagnostic?.(event);};
   const qaLocaleOverride=isLocalDevelopment(location)?requestedQaLocale(location):null;
-  if(isLocalDevelopment(location) && !window?.YaGames)return localPlatform(qaLocaleOverride||'ru',diagnostic,qaLocaleOverride);
-  let YaGames;
-  try { YaGames=await loadSdkScript({document,window}); }
-  catch(error){ if(isLocalDevelopment(location))return localPlatform(qaLocaleOverride||'ru',diagnostic,qaLocaleOverride); diagnostic('sdk','failed',error.message); throw new Error(`YANDEX_RUNTIME_SDK_REQUIRED: ${error.message}`,{cause:error}); }
+  const sdkInit=window?.__YANDEX_GAMES_INIT__;
+  if(isLocalDevelopment(location) && !sdkInit)return localPlatform(qaLocaleOverride||'ru',diagnostic,qaLocaleOverride);
   let ysdk;
-  try { ysdk=await YaGames.init(); diagnostic('sdk','initialized'); }
+  try { ysdk=await sdkInit; diagnostic('sdk','initialized'); }
   catch(error){ diagnostic('sdk','init-failed',error?.message||String(error)); throw new Error(`YANDEX_SDK_INIT_FAILED: ${error?.message||error}`,{cause:error}); }
   const locale=normalizeYandexLocale(ysdk.environment?.i18n?.lang);onLanguage?.(locale);diagnostic('language','resolved',locale);
   let player=null;

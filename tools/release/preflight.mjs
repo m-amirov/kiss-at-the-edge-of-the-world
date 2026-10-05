@@ -36,7 +36,7 @@ export function releasePreflight(){
  const blockers=[];const block=(code,reason)=>blockers.push({code,reason});
  const rootIndex=fs.readFileSync(path.join(root,'index.html'),'utf8');
  const entry=exists('src/entry.js')?fs.readFileSync(path.join(root,'src/entry.js'),'utf8'):'';
- if(!rootIndex.includes('/src/entry.js')||!entry.includes("import('./literary-player.js')"))block('NEW_SEASON_NOT_DEFAULT','Default index.html does not launch the ten-episode literary game.');
+ if(!rootIndex.includes('./src/entry.js')||!entry.includes("import('./literary-player.js')"))block('NEW_SEASON_NOT_DEFAULT','Default index.html does not launch the ten-episode literary game.');
  if(literarySeason.episodes!==10||literarySeason.scenes.length!==66)block('LITERARY_RUNTIME_INCOMPLETE',`Found ${literarySeason.episodes} episodes / ${literarySeason.scenes.length} scenes; expected 10 / 66.`);
  const missing=[7,8,9,10].map(n=>`content/season-1-literary-episode-${String(n).padStart(2,'0')}.md`).filter(p=>!exists(p));
  if(missing.length)block('UNWRITTEN_EPISODES',`Missing late-season manuscripts: ${missing.join(', ')}`);

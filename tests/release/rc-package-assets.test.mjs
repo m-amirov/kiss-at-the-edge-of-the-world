@@ -10,7 +10,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..')
 const builder = path.join(root, 'release-artifacts', 'build-rc-package.py');
 
 function packageEntries(output) {
-  return JSON.parse(execFileSync('python', ['-c', "import json,sys,zipfile; z=zipfile.ZipFile(sys.argv[1]); names=z.namelist(); text={n:z.read(n).decode('utf-8') for n in names if n.endswith('.html') or n.endswith('/yandex-sdk.js')}; print(json.dumps({'names':names,'text':text}))", output], { encoding: 'utf8' }));
+  return JSON.parse(execFileSync('python', ['-c', "import json,sys,zipfile; z=zipfile.ZipFile(sys.argv[1]); names=z.namelist(); text={n:z.read(n).decode('utf-8') for n in names if n.endswith(('.html','.js'))}; print(json.dumps({'names':names,'text':text}))", output], { encoding: 'utf8', maxBuffer: 32 * 1024 * 1024 }));
 }
 
 function packageProject() {
@@ -43,23 +43,29 @@ const run = ({ directory, output }) => spawnSync('python', [builder, '--root', d
 test('valid dependency closure includes runtime dependencies and excludes legacy/QA/dev source', () => {
   const f = fixture(); const result = run(f); assert.equal(result.status, 0, result.stderr);
   const names = JSON.parse(execFileSync('python', ['-c', 'import json,sys,zipfile; print(json.dumps(zipfile.ZipFile(sys.argv[1]).namelist()))', f.output], { encoding: 'utf8' }));
-  for (const required of ['index.html', 'literary.html', 'src/app.js', 'src/dep.js', 'src/app.css', 'assets/picture.webp', 'assets/font.woff2']) assert.ok(names.includes(required), required);
+  for (const required of ['index.html', 'src/app.js', 'src/dep.js', 'src/app.css', 'assets/picture.webp', 'assets/font.woff2']) assert.ok(names.includes(required), required);
+  assert.equal(names.includes('literary.html'), false);
   assert.equal(names.includes('sdk.js'), false, 'Yandex-hosted SDK must not be copied into the release archive');
   assert.equal(names.includes('src/legacy.js'), false); assert.equal(names.some(name => name.startsWith('tests/')), false);
 });
 
-test('final packaged HTML entrypoints use the official Yandex-hosted SDK before application modules', () => {
+test('final package has one executable Yandex SDK bootstrap before its game module', () => {
   const archive = packageProject();
   const entries = Object.fromEntries(Object.entries(archive.text).filter(([name]) => name.endsWith('.html')));
   assert.ok(entries['index.html'], 'release archive must have index.html at its root');
-  for (const [name, html] of Object.entries(entries)) {
-    assert.match(html, /<script\s+src=["']\/sdk\.js["']><\/script>/, `${name} must statically reference the official /sdk.js`);
-    const sdk = html.indexOf('/sdk.js');
-    const module = html.indexOf('type="module"');
-    assert.ok(module < 0 || sdk < module, `${name} must load /sdk.js before its application module`);
-  }
+  assert.deepEqual(Object.keys(entries).sort(), ['index.html'], 'production archive must expose exactly one HTML entrypoint');
+  const html = entries['index.html'];
+  const sdk = html.indexOf('<script src="/sdk.js"></script>');
+  const init = html.indexOf('window.__YANDEX_GAMES_INIT__ = YaGames.init();');
+  const module = html.indexOf('<script type="module" src="./src/entry.js"></script>');
+  assert.ok(sdk >= 0, 'production HTML must statically reference the official /sdk.js');
+  assert.ok(init > sdk, 'executable SDK initialization must follow /sdk.js');
+  assert.ok(module > init, 'game module must start only after the SDK bootstrap');
+  assert.equal((html.match(/YaGames\.init\s*\(/g) ?? []).length, 1, 'HTML bootstrap must initialize the SDK exactly once');
+  assert.equal(html.replace(/<!--[\s\S]*?-->/g, '').includes('YaGames.init()'), true, 'SDK init must be executable HTML, not a comment');
   assert.doesNotMatch(Object.values(archive.text).join('\n'), /sdk\.games\.s3\.yandex\.net|yandex\.net\/sdk\.js/i, 'release archive must not use an obsolete or own-domain SDK URL');
-  assert.match(Object.values(archive.text).join('\n'), /YaGames\.init\s*\(/, 'release archive must initialize the platform SDK');
+  const productionJs = Object.entries(archive.text).filter(([name]) => name.endsWith('.js')).map(([, text]) => text).join('\n');
+  assert.equal((productionJs.match(/YaGames\.init\s*\(/g) ?? []).length, 0, 'production module graph must reuse the HTML SDK init promise');
   assert.equal(archive.names.includes('sdk.js'), false, 'release archive must not package an SDK or a local SDK mock');
 });
 

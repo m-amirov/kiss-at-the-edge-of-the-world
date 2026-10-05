@@ -7,7 +7,7 @@ import re
 import zipfile
 
 TEXT_EXTENSIONS = {".css", ".html", ".js", ".json", ".mjs"}
-ENTRYPOINTS = ("index.html", "literary.html")
+ENTRYPOINTS = ("index.html",)
 REQUIRED_STATIC_FILES = ("assets/branding/kiss-at-the-edge-cover.png", "assets/branding/kiss-at-the-edge-icon.png")
 PROHIBITED_PARTS = {".git", ".loop", "artifacts", "content", "docs", "node_modules", "output", "release-artifacts", "tests", "tools"}
 HTML_URL_RE = re.compile(r"\b(?:src|href)\s*=\s*['\"]([^'\"]+)['\"]", re.IGNORECASE)
