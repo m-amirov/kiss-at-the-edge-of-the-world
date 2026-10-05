@@ -27,7 +27,7 @@ game:
   loseCondition: No hard fail; unresolved choices lead to the independent ending.
 
 content:
-  episodes: 12
+  episodes: 10
   travelDays: 21
   romanticRoutes: [eric, nick, damir]
   seasonEndings: 4
@@ -63,7 +63,7 @@ accessibility:
   minimumTouchTargetCssPx: 44
 
 localization:
-  languages: [ru]
+  languages: [ru, en]
   autoDetectYandexLanguage: true
   fallback: ru
 

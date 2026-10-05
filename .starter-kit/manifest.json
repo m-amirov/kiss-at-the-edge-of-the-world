@@ -437,7 +437,7 @@
         "new"
       ],
       "conflictPolicy": "create-only",
-      "sha256": "8c36c36aa4c61b2db5b01ece003ff8807d7aaa1623618a89b0e09f737abc9def"
+      "sha256": "b5362079843800562ab5f25ac546e8d7cd6759282efee0b3be5f907a910dc07f"
     },
     {
       "source": "tests/e2e/yandex-moderation.spec.ts",
@@ -632,7 +632,7 @@
     {
       "source": "config/yandex-doc-snapshot.json",
       "logicalId": "managed:yandex-doc-snapshot",
-      "ownership": "managed",
+      "ownership": "semantic-merge",
       "target": "config/yandex-doc-snapshot.json",
       "modes": [
         "init",
@@ -642,7 +642,7 @@
         "new",
         "mature"
       ],
-      "conflictPolicy": "replace-if-baseline",
+      "conflictPolicy": "semantic-merge",
       "sha256": "7d2605723ba7439abeb30d12c7fb6b54776f12ac45f1b1e7f4bec4244d02fb68"
     },
     {
@@ -1060,7 +1060,7 @@
         "mature"
       ],
       "conflictPolicy": "semantic-merge",
-      "sha256": "3ff42a20c08d0ad57a369817f43bad79f9daa5634169cf37c2b3c0eb18839339"
+      "sha256": "871ee8f0a87adceab5335189b0fe9e1f9fa3d507e266f4613895f92bea82b571"
     },
     {
       "source": "config/starter-kit-manifest.schema.json",
