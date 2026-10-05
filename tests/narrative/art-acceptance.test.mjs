@@ -6,6 +6,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 import { spawnSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
 import { verifyArtAcceptance } from '../../tools/release/art-acceptance.mjs';
 
 const hash = file => crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
@@ -23,7 +24,7 @@ function fixture() {
   const head = execFileSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' }).trim();
   const record = {
     schemaVersion: 1, recordType: 'production-art-acceptance', status: 'PASS', verdict: 'PASS_PRODUCTION_ART_COMPLETE',
-    repository: { path: root, head }, currentHead: head, starterKitVersion: '0.5.9',
+    repository: { path: root, head }, currentHead: head, releaseSourceHead: head, starterKitVersion: '0.5.9',
     acceptedSceneCoverage: { expected: 66, covered: 66, remaining: 0 }, placeholders: 0, brokenPaths: 0,
     webHigh: { result: 'PASS' }, manifestSha256: hash(path.join(root, 'assets/asset-manifest.json')),
     acceptedAssets: [{ path: 'assets/a.png', sha256: hash(path.join(root, 'assets/a.png')) }],
@@ -50,7 +51,7 @@ test('refresh rebinds repository path and HEAD to the current worktree', () => {
   record.repository.head = 'previous-head';
   record.currentHead = 'previous-head';
   fs.writeFileSync(path.join(root, 'artifacts/evidence/production-art-acceptance.json'), JSON.stringify(record));
-  const script = path.resolve('tools/release/refresh-production-art-acceptance.mjs');
+  const script = fileURLToPath(new URL('../../tools/release/refresh-production-art-acceptance.mjs', import.meta.url));
   const result = spawnSync(process.execPath, [script], { cwd: root, encoding: 'utf8' });
   assert.equal(result.status, 0, result.stderr);
   const refreshed = JSON.parse(fs.readFileSync(path.join(root, 'artifacts/evidence/production-art-acceptance.json'), 'utf8'));
@@ -58,6 +59,24 @@ test('refresh rebinds repository path and HEAD to the current worktree', () => {
   assert.equal(refreshed.repository.path, root);
   assert.equal(refreshed.repository.head, head);
   assert.equal(refreshed.currentHead, head);
+  assert.equal(refreshed.releaseSourceHead, head);
+});
+test('evidence-only commit does not invalidate its source-bound acceptance', () => {
+  const { root, record } = fixture();
+  fs.writeFileSync(path.join(root, 'artifacts/evidence/production-art-acceptance.json'), JSON.stringify(record));
+  execFileSync('git', ['add', 'artifacts/evidence/production-art-acceptance.json'], { cwd: root });
+  execFileSync('git', ['commit', '-qm', 'evidence only'], { cwd: root });
+  assert.equal(verify(root).status, 'PASS');
+});
+test('product change after source-bound acceptance blocks', () => {
+  const { root, record } = fixture();
+  fs.writeFileSync(path.join(root, 'artifacts/evidence/production-art-acceptance.json'), JSON.stringify(record));
+  execFileSync('git', ['add', 'artifacts/evidence/production-art-acceptance.json'], { cwd: root });
+  execFileSync('git', ['commit', '-qm', 'evidence only'], { cwd: root });
+  fs.writeFileSync(path.join(root, 'runtime-change.js'), 'changed');
+  execFileSync('git', ['add', 'runtime-change.js'], { cwd: root });
+  execFileSync('git', ['commit', '-qm', 'runtime change'], { cwd: root });
+  assert.equal(verify(root).code, 'ART_ACCEPTANCE_HEAD_MISMATCH');
 });
 for (const [name, mutate, expected] of [
   ['wrong repository', record => { record.repository.path = 'C:/other'; }, 'ART_ACCEPTANCE_REPOSITORY_MISMATCH'],

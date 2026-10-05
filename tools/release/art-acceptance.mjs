@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { execFileSync } from 'node:child_process';
+import { verifyEvidenceSourceIdentity } from './evidence-source-identity.mjs';
 
 const DEFAULT_RECORD = 'artifacts/evidence/production-art-acceptance.json';
 const sha256 = file => crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
@@ -29,12 +30,16 @@ export function verifyArtAcceptance({ root, recordPath = DEFAULT_RECORD, recordO
     return block('ART_ACCEPTANCE_PROVENANCE_INVALID', 'Acceptance record lacks automated verifier provenance.');
   }
 
-  const currentHead = execFileSync('git', ['rev-parse', 'HEAD'], { cwd: projectRoot, encoding: 'utf8' }).trim();
+  const sourceHead = record.releaseSourceHead;
   if (absolute(projectRoot, record.repository?.path ?? '') !== projectRoot) {
     return block('ART_ACCEPTANCE_REPOSITORY_MISMATCH', 'Acceptance record belongs to another repository path.');
   }
-  if (record.currentHead !== currentHead || record.repository?.head !== currentHead) {
-    return block('ART_ACCEPTANCE_HEAD_MISMATCH', `Acceptance record HEAD does not match current HEAD ${currentHead}.`);
+  if (record.currentHead !== sourceHead || record.repository?.head !== sourceHead) {
+    return block('ART_ACCEPTANCE_HEAD_MISMATCH', 'Acceptance record HEAD fields do not match its releaseSourceHead.');
+  }
+  const sourceIdentity = verifyEvidenceSourceIdentity({ root: projectRoot, sourceHead });
+  if (sourceIdentity.status !== 'PASS') {
+    return block('ART_ACCEPTANCE_HEAD_MISMATCH', `${sourceIdentity.code}: ${sourceIdentity.reason}`);
   }
   if (record.acceptedSceneCoverage?.expected !== 66 || record.acceptedSceneCoverage?.covered !== 66 || record.acceptedSceneCoverage?.remaining !== 0) {
     return block('ART_ACCEPTANCE_COVERAGE_INVALID', 'Acceptance record does not prove 66/66 scene coverage.');

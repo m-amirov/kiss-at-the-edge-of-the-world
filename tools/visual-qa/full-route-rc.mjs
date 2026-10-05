@@ -83,7 +83,8 @@ try {
   }
 } finally { await browser.close(); }
 const status = results.length === 8 && results.every((item) => item.ending === item.expectedEnding && item.finished && item.softLocks === 0 && item.errors.length === 0 && item.failed.length === 0) ? 'PASS' : 'BLOCK';
-const evidence = { schemaVersion: 1, status, generatedAt: new Date().toISOString(), head: execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim(), baseUrl, requirements: ['4/4 endings', 'desktop and mobile', 'console errors 0', 'failed requests 0', 'soft-lock 0'], results };
+const releaseSourceHead = execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim();
+const evidence = { schemaVersion: 1, status, generatedAt: new Date().toISOString(), releaseSourceHead, head: releaseSourceHead, baseUrl, requirements: ['4/4 endings', 'desktop and mobile', 'console errors 0', 'failed requests 0', 'soft-lock 0'], results };
 await fs.mkdir(path.dirname(evidencePath), { recursive: true });
 await fs.writeFile(`${output}/evidence.json`, JSON.stringify(evidence, null, 2));
 await fs.writeFile(evidencePath, JSON.stringify(evidence, null, 2));

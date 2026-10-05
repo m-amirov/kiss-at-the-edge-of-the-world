@@ -27,6 +27,7 @@ for (const pathName of currentGeneratedPaths) if (!currentAssets.some(asset => a
 for (const asset of currentAssets) byPath.set(asset.path, { ...(byPath.get(asset.path) ?? {}), ...asset });
 record.acceptedAssets = [...byPath.values()];
 record.currentHead = head;
+record.releaseSourceHead = head;
 record.repository = { ...(record.repository ?? {}), path: root, head };
 record.manifestSha256 = sha256(manifestFile);
 record.productionArtRuns = [...(record.productionArtRuns ?? []).filter(item => item.runId !== manifest.visualDirection?.runId), { runId: manifest.visualDirection?.runId, result: 'PASS', sourceProjectDir: root, evidence: `.ceos-runs/${manifest.visualDirection?.runId}` }];
@@ -40,6 +41,7 @@ fs.writeFileSync(file, `${JSON.stringify(record, null, 2)}\n`);
 const routeEvidenceFile = path.join(root, 'artifacts/evidence/full-route-runtime-qa-2026-09-30.json');
 if (fs.existsSync(routeEvidenceFile)) {
   const routeEvidence = JSON.parse(fs.readFileSync(routeEvidenceFile, 'utf8'));
+  routeEvidence.releaseSourceHead = head;
   routeEvidence.head = head;
   fs.writeFileSync(routeEvidenceFile, `${JSON.stringify(routeEvidence, null, 2)}\n`);
 }
