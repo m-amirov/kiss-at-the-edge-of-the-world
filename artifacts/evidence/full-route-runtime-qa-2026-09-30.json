@@ -1,9 +1,10 @@
 {
   "schemaVersion": 1,
   "status": "PASS",
-  "generatedAt": "2026-10-05T16:54:46.415Z",
-  "head": "fedc2a60c919c9f568647a82ab374506c4cd3c02",
-  "baseUrl": "http://127.0.0.1:4176/literary.html",
+  "generatedAt": "2026-10-05T17:09:46.037Z",
+  "releaseSourceHead": "c3a8ebcd6379fa3def39cd08d668443f3344c1aa",
+  "head": "c3a8ebcd6379fa3def39cd08d668443f3344c1aa",
+  "baseUrl": "http://127.0.0.1:4173/literary.html",
   "requirements": [
     "4/4 endings",
     "desktop and mobile",
