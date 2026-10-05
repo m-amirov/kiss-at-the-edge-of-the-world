@@ -454,9 +454,13 @@ button:hover,button:focus-visible{background:#765744;border-color:#f3d2a8;transf
 
 @media(max-width:680px){
   .literary-home { align-items: flex-end; padding: 24px 20px max(24px,env(safe-area-inset-bottom)); }
-  .literary-home::before { background-image: linear-gradient(180deg,rgba(5,13,20,.08),rgba(5,13,20,.42) 44%,rgba(5,13,20,.96) 100%),var(--cover); background-position: 62% center; }
+  /* The cover changes with the crop, so the whole editorial column gets a
+     controlled luminance floor instead of relying on any one photo region. */
+  .literary-home::before { background-image: linear-gradient(180deg,rgba(5,13,20,.34),rgba(5,13,20,.72) 48%,rgba(5,13,20,.96) 100%),var(--cover); background-position: 62% center; }
+  .literary-home::after { background:linear-gradient(180deg,rgba(4,11,18,.18),rgba(4,11,18,.42) 50%,rgba(4,11,18,.68) 100%); }
   .literary-home-card { width: 100%; padding-bottom: 0; }
   .literary-home-card::before { margin-bottom: 16px; }
+  .kicker,.home-title,.home-summary { text-shadow:0 2px 16px rgba(0,0,0,.72); }
   .home-title { font-size: clamp(46px,14vw,68px); margin-bottom: 16px; }
   .home-summary { font-size: 16px; line-height: 1.5; }
   .home-actions { grid-template-columns: 1fr; max-width: none; margin-top: 22px; }

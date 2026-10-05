@@ -8,6 +8,7 @@ import { compileInteractivePlayback } from './literary-pacing.js';
 import { applyLiteraryLocale, createTranslator, validateLiteraryInteractionLocale } from './localization.js';
 import { literaryLocaleBundles } from './literary-localization-bundle.js';
 import { interactionBeats } from './literary-interactive-beats.js';
+import { createInputLifecycle } from './literary-input-lifecycle.js';
 
 const canonicalById = new Map(literarySeason.scenes.map(scene => [scene.id, scene]));
 let runtimeSeason = literarySeason;
@@ -173,8 +174,9 @@ function button(label,handler,className=''){
 }
 const interactiveSelector='button,a,input,select,textarea,summary,[role="button"],[role="link"],[contenteditable="true"],[data-interactive]';
 const tapThreshold=10;
-let lastPointerActivationAt=0;
-let lastStageInput='none';
+const inputDebugEnabled=new URLSearchParams(window.location.search).has('inputDebug')||window.__LITERARY_INPUT_DEBUG__===true;
+const inputLifecycle=createInputLifecycle({debug:inputDebugEnabled,logger:entry=>console.debug('[literary-input]',entry)});
+let renderContext=null;
 function isInteractiveTarget(target){return target instanceof Element && Boolean(target.closest(interactiveSelector));}
 function advanceNarrative(){
   if(menuOpen)return false;
@@ -193,20 +195,13 @@ function advanceNarrative(){
   }
   persist();renderReader();return true;
 }
-function activateStage(event){
+function activateStage(event,owner){
   if(isInteractiveTarget(event.target))return false;
-  const now=performance.now();
-  // Debounce only rapid pointer taps and the synthetic click that follows a
-  // pointerup. Keyboard and a later independent click remain responsive.
-  if(event.type==='pointerup'){
-    if(lastStageInput==='pointer' && now-lastPointerActivationAt<180)return false;
-  }else if(event.type==='click' && lastStageInput==='pointer' && now-lastPointerActivationAt<180)return false;
-  else if(event.type==='keydown')lastStageInput='keyboard';
+  const claim=event.type==='pointerup'
+    ?inputLifecycle.pointerUp(event,owner,'advance')
+    :inputLifecycle.click(event,owner,'advance');
+  if(!claim.accepted)return false;
   const advanced=advanceNarrative();
-  if(event.type==='pointerup' && advanced){
-    lastPointerActivationAt=now;
-    lastStageInput='pointer';
-  }
   return advanced;
 }
 function bindStageNavigation(picture){
@@ -215,51 +210,60 @@ function bindStageNavigation(picture){
   picture.setAttribute('role','group');
   picture.setAttribute('aria-label',t('stageAdvanceAria'));
   let pointer=null;
-  let suppressClickUntil=0;
+  const owner=renderContext;
   picture.addEventListener('pointerdown',event=>{
     if(event.button!==0 || isInteractiveTarget(event.target))return;
-    pointer={id:event.pointerId,x:event.clientX,y:event.clientY};
+    pointer={id:event.pointerId,x:event.clientX,y:event.clientY};inputLifecycle.pointerDown(event,owner);
   });
   picture.addEventListener('pointerup',event=>{
     if(!pointer || pointer.id!==event.pointerId || isInteractiveTarget(event.target)){pointer=null;return;}
     const moved=Math.hypot(event.clientX-pointer.x,event.clientY-pointer.y)>tapThreshold;
     pointer=null;
-    if(moved){suppressClickUntil=performance.now()+300;return;}
-    activateStage(event);
+    if(moved){inputLifecycle.cancelPointer(event);return;}
+    activateStage(event,owner);
   });
-  picture.addEventListener('pointercancel',()=>{pointer=null});
+  picture.addEventListener('pointercancel',event=>{pointer=null;inputLifecycle.cancelPointer(event)});
   picture.addEventListener('click',event=>{
-    // Pointer activation above already handles ordinary taps/clicks. This
-    // fallback keeps keyboard-generated clicks and assistive-tech activation
-    // safe without allowing a pointerup + click pair to advance twice.
-    if(performance.now()<suppressClickUntil)return;
-    activateStage(event);
+    activateStage(event,owner);
   });
   picture.addEventListener('keydown',event=>{
     if(!['Enter',' ','Spacebar','ArrowRight'].includes(event.key))return;
     event.stopPropagation();
     event.preventDefault();
-    activateStage(event);
+    if(inputLifecycle.click({...event,type:'keydown',detail:0},owner,'advance').accepted)advanceNarrative();
   });
 }
 function bindStageTapTarget(node){
   let pointer=null;
-  let suppressClickUntil=0;
+  const owner=renderContext;
   node.addEventListener('pointerdown',event=>{
     if(event.button!==0 || isInteractiveTarget(event.target))return;
-    pointer={id:event.pointerId,x:event.clientX,y:event.clientY};
+    pointer={id:event.pointerId,x:event.clientX,y:event.clientY};inputLifecycle.pointerDown(event,owner);
   });
   node.addEventListener('pointerup',event=>{
     if(!pointer || pointer.id!==event.pointerId || isInteractiveTarget(event.target)){pointer=null;return;}
     const moved=Math.hypot(event.clientX-pointer.x,event.clientY-pointer.y)>tapThreshold;
     pointer=null;
-    if(moved){suppressClickUntil=performance.now()+300;return;}
-    activateStage(event);
+    if(moved){inputLifecycle.cancelPointer(event);return;}
+    activateStage(event,owner);
   });
-  node.addEventListener('pointercancel',()=>{pointer=null});
+  node.addEventListener('pointercancel',event=>{pointer=null;inputLifecycle.cancelPointer(event)});
   node.addEventListener('click',event=>{
-    if(performance.now()<suppressClickUntil)return;
-    activateStage(event);
+    activateStage(event,owner);
+  });
+}
+function bindChoiceSelection(node,owner,select){
+  node.addEventListener('pointerdown',event=>inputLifecycle.pointerDown(event,owner));
+  node.addEventListener('pointerup',event=>{
+    const claim=inputLifecycle.pointerUp(event,owner,'selectChoice');
+    if(!claim.accepted){event.preventDefault();event.stopPropagation();return;}
+    event.preventDefault();event.stopPropagation();select();
+  });
+  node.addEventListener('pointercancel',event=>inputLifecycle.cancelPointer(event));
+  node.addEventListener('click',event=>{
+    const claim=inputLifecycle.click(event,owner,'selectChoice');
+    if(!claim.accepted){event.preventDefault();event.stopPropagation();return;}
+    select();
   });
 }
 function goHome(){menuOpen=true;modal=null;renderMenu()}
@@ -351,6 +355,7 @@ function renderReader(){
   const mode=artMode(scene,flow[reader.position],reader.choices,isEnding);
   app.className='literary-reader';app.dataset.presentation=mode;app.replaceChildren();
   const current=flow[reader.position];
+  renderContext=inputLifecycle.beginRender({sceneId:reader.sceneId,choiceId:current?.type==='choice'?current.id:null});
   const visualEntry=visualEntryForPosition(flow,reader.position);
   const direction=visualAt(scene.id,visualEntry,reader.choices,stageForScene(scene.id,reader.choices).cast);
   const art=direction.art;
@@ -380,12 +385,12 @@ function renderReader(){
     content.append(el(t('yourChoice'),'choice-label'));
     if(current.question)content.append(el(current.question,'decision-question','p'));
     const options=el('','reader-options');
-    for(const opt of current.options)options.append(button(cleanLiteraryText(opt.label),()=>{lastStageInput='none';lastPointerActivationAt=0;reader.choices[current.id]=opt.code;persist();renderReader()},'choice-button'));
+    for(const opt of current.options){const choice=button(cleanLiteraryText(opt.label),()=>{},'choice-button');choice.dataset.choiceId=current.id;bindChoiceSelection(choice,renderContext,()=>{reader.choices[current.id]=opt.code;persist();renderReader()});options.append(choice);}
     content.append(options);
     sheet.append(content);
   }else{
     const next=nextLiteraryScene(reader.sceneId,reader.choices);
-    if(next && byId.has(next))sheet.append(button(t('nextScene',{scene:next}),()=>{lastStageInput='none';lastPointerActivationAt=0;reader.sceneId=next;reader.position=0;if(!reader.visited.includes(next))reader.visited.push(next);persist();renderReader()},'primary'));
+    if(next && byId.has(next))sheet.append(button(t('nextScene',{scene:next}),()=>{reader.sceneId=next;reader.position=0;if(!reader.visited.includes(next))reader.visited.push(next);persist();renderReader()},'primary'));
     else if(isEnding){
       if(!reader.finished){reader.finished=true;persist()}
       sheet.classList.add('terminal-sheet');
@@ -451,6 +456,7 @@ window.__LITERARY_QA__={
   getPlatformMode:()=>platform?.mode??'booting',
   getPersistenceKeys:()=>({local:literarySaveKey,cloud:literaryCloudKey}),
   getScreen:()=>({menuOpen,sceneId:reader.sceneId,position:reader.position}),
+  getInputTrace:()=>inputLifecycle.snapshot(),
   // QA methods are strictly read-only; preview and the old game have separate state keys.
 };
 boot();
