@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "source": "content/season-1-literary-episode-07.md",
+  "scenes": {
+    "S29": {
+      "title": "Day 14. Delete, Keep, Reshoot",
+      "chunks": {
+        "S29.C000": {
+          "title": "",
+          "paragraphs": {
+            "S29.C000.P000": "Nick showed Alice a short fragment from the first day of the trip. On the screen she stood beside someone else’s suitcase and looked towards Damir, not yet believing it was him. Back then Nick had promised not to use the shot without her decision. Now he opened the editing folder and placed the phone between them like an object that belonged to both of them.",
+            "S29.C000.P001": "“There’s a good pause before you see him,” he said. “But it isn’t mine. I don’t want you to discover it later in a trailer.”",
+            "S29.C000.P002": "Alice watched the fragment twice. The second time she noticed that the camera had also caught Nick’s face in the reflection of the bus window: he looked lost too. On the first day she had thought he could turn any event into a joke. Now he was not trying to make her laugh.",
+            "S29.C000.P003": "“Will you keep a copy for yourself?” she asked.",
+            "S29.C000.P004": "“If you tell me to delete it, no. I don’t need an explanation.”",
+            "S29.C000.P005": "He held out the phone. Alice did not have to decide for the whole film; only for forty seconds in which her life had accidentally become part of someone else’s work."
+          }
+        },
+        "S29.C001": {
+          "title": "Choice S29-C1 — What should happen to the shot?",
+          "paragraphs": {}
+        },
+        "S29.C002": {
+          "title": "A. Delete it from the film and the source files",
+          "paragraphs": {
+            "S29.C002.P000": "Nick opened the source folder and deleted the fragment in front of her. Then he showed her the empty place on the timeline. The awkwardness did not disappear at once: Alice still remembered how she had looked on the screen. Nick suggested filming the group’s hands after yesterday’s work instead—a shot they would not have to explain to each other."
+          }
+        },
+        "S29.C003": {
+          "title": "B. Keep the fragment only in Alice’s personal archive",
+          "paragraphs": {
+            "S29.C003.P000": "Nick gave her the source file and removed the shot from his edit. Alice did not know whether she would keep it for long. What mattered was that the decision did not belong to the person with the camera simply because he had pressed the button first."
+          }
+        },
+        "S29.C004": {
+          "title": "C. Reshoot the beginning of the trip now, with Alice taking part",
+          "paragraphs": {
+            "S29.C004.P000": "They set the camera on a bench, and Alice tried to say the first sentence of her article aloud. She lost the thread after three words. Nick did not offer a ready line; instead, he asked what she would say to a friend if she were telling them about yesterday. On the fourth attempt Alice spoke normally, no longer looking into the lens."
+          }
+        },
+        "S29.C005": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S29.C005.P000": "When they returned to the car, Nick handed her the card reader and asked her to show him on the way back which shots she wanted to keep herself. Alice put it in her pocket. Twice before the end of the day they forgot about filming: first in a little shop with hot bread, then in the guesthouse lobby, where someone was playing an out-of-tune piano. She liked that their best conversation never made it into a file."
+          }
+        },
+        "S29.C006": {
+          "title": "Choice S29-C2 — How will Alice suggest spending the remaining free hour with Nick?",
+          "paragraphs": {}
+        },
+        "S29.C007": {
+          "title": "A. Go for a walk without the camera",
+          "paragraphs": {
+            "S29.C007.P000": "Nick put the camera case in the boot and walked with Alice towards a postcard stall. She bought the most ridiculous card, while he searched for a stamp that matched the picture. Half an hour passed without either of them asking who was filming whom."
+          }
+        },
+        "S29.C008": {
+          "title": "B. Ask him to teach her to shoot a short silent film",
+          "paragraphs": {
+            "S29.C008.P000": "Nick gave Alice the camera with the settings prepared in advance. She filmed five seconds of wind in the grass and five seconds of his intent face. He asked her to reshoot the second shot because he did not recognise himself at all. Alice said that was exactly how she had seen him."
+          }
+        }
+      }
+    }
+  }
+}

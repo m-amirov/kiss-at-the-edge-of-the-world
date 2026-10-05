@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "source": "content/season-1-literary-episode-07.md",
+  "scenes": {
+    "S49": {
+      "title": "Day 14. A Dance That Needs No Occasion",
+      "chunks": {
+        "S49.C000": {
+          "title": "",
+          "paragraphs": {
+            "S49.C000.P000": "The hall smelled of woollen jackets and strong coffee. Someone put on an old record, and two older guests came out to dance between the tables. Alice was walking to get a glass of water when Eric held out his hand. This time it was not after a personal confession, as it had been by the harbour in Höfn, but simply because he had heard the music and wanted to dance.",
+            "S49.C000.P001": "“You said you were bad at dancing,” she reminded him.",
+            "S49.C000.P002": "“Today I have a new partner. Perhaps the problem was the old one.”",
+            "S49.C000.P003": "“You had a partner before me?”",
+            "S49.C000.P004": "“My sister, when we were children. She is still convinced I stepped on her foot on purpose.”",
+            "S49.C000.P005": "They did not go to the middle of the room. They danced by the window so they would not get in anyone’s way. Eric remembered the steps better than he had shown in Höfn, but nearly hit a chair on the turn. Alice caught the back of it and laughed. He looked at her hand, then at her face, and laughed too.",
+            "S49.C000.P006": "When the music stopped, he did not let go at once. Alice felt the warmth of his hand in the cool air of the hall. It was not a promise. They simply did not want to part just then."
+          }
+        },
+        "S49.C001": {
+          "title": "Choice S49-C1 — What does Alice do?",
+          "paragraphs": {}
+        },
+        "S49.C002": {
+          "title": "A. Invite Eric to a second dance",
+          "paragraphs": {
+            "S49.C002.P000": "“One dance does not count. I want to check whether you really can.”",
+            "S49.C002.P001": "Eric asked the owner to put on another record. Nick noticed them from the doorway and immediately turned towards the counter for coffee, as if he had seen something private. Eric did not pretend not to notice him. He only stepped closer to Alice when the music started."
+          }
+        },
+        "S49.C003": {
+          "title": "B. Suggest they walk down to the lake together",
+          "paragraphs": {
+            "S49.C003.P000": "Outside it was too cold for a long conversation. They walked to the dark shore, looked at the reflection of a single lamp, and returned five minutes later. Eric suggested another dance tomorrow if Alice still wanted one. She said she might want one without a date being set."
+          }
+        },
+        "S49.C004": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S49.C004.P000": "Later, by the stairs, he handed Alice the scarf she had left in the hall. It smelled of coffee and stove smoke. Eric said nothing unusual: he wished her a good night and went to his room. Alice stayed on the landing because her smile did not disappear as quickly as she wanted it to."
+          }
+        },
+        "S49.C005": {
+          "title": "If `S28-C2=A`",
+          "paragraphs": {
+            "S49.C005.P000": "That evening Alice recognised the familiar melody first and held out her hand to Eric. He was not surprised: she had already invited him to dance after the trail, and it was easier for both of them to begin again."
+          }
+        },
+        "S49.C006": {
+          "title": "If `S28-C2=B`",
+          "paragraphs": {
+            "S49.C006.P000": "That evening Eric invited Alice to sit by the window before the music began. The quiet hour after the trail stayed in her memory no less clearly than their first dance."
+          }
+        }
+      }
+    }
+  }
+}

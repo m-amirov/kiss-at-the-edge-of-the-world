@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "source": "content/season-1-literary-episode-08.md",
+  "scenes": {
+    "S63": {
+      "title": "Day 16. A Concert for One Person",
+      "chunks": {
+        "S63.C000": {
+          "title": "",
+          "paragraphs": {
+            "S63.C000.P000": "That evening Alice bought one ticket. At the box office, a woman asked whether she was expecting anyone else. “No,” Alice answered, and felt there was nothing more to explain. Folding chairs stood in the small hall; the musicians tuned their instruments without a curtain, while a man by the door searched for a lost scarf. Alice helped him lift the scarf from the back of the last row and sat closer to the window.",
+            "S63.C000.P001": "During the third piece, someone beside her began quietly keeping time with the toe of a shoe. Alice moved her foot too before she noticed. The music did not promise that the journey would change her fate. It was simply a good evening she had come to because she wanted to."
+          }
+        },
+        "S63.C001": {
+          "title": "Choice S63-C1 — After the concert",
+          "paragraphs": {}
+        },
+        "S63.C002": {
+          "title": "A. Stay for a short meeting with the musicians",
+          "paragraphs": {
+            "S63.C002.P000": "Alice asked where the melody in the middle of the concert had come from. The violinist said she had learned it from her grandmother and wrote the name on the back of Alice’s ticket. Alice kept the ticket in the pocket beside the bookshop receipt."
+          }
+        },
+        "S63.C003": {
+          "title": "B. Walk back to the hotel without lingering",
+          "paragraphs": {
+            "S63.C003.P000": "On the way, she bought hot tea and reached the hotel through a lit square. At reception, Nick asked how the concert had been. Alice answered: “Good. And not a second of it was filmed.” He smiled and did not ask for details."
+          }
+        },
+        "S63.C004": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S63.C004.P000": "That night Eric posted the departure time for the next day in the group chat. Alice set an alarm. She was leaving with the group, and it remained her journey regardless of whom she planned to spend the evening with."
+          }
+        },
+        "S63.C005": {
+          "title": "Choice S63-C2 — How will Alice continue her independent evening after the concert?",
+          "paragraphs": {}
+        },
+        "S63.C006": {
+          "title": "A. Keep the ticket and write a few lines for herself",
+          "paragraphs": {
+            "S63.C006.P000": "Alice put the ticket inside the book and wrote the date and the song she wanted to hear again on the back. She did not intend to include the evening in the article: it did not need an audience."
+          }
+        },
+        "S63.C007": {
+          "title": "B. Ask the person beside her about the next concert",
+          "paragraphs": {
+            "S63.C007.P000": "The woman beside her told Alice where the musicians would play next. Alice wrote down the venue and thanked her. It felt good to plan something of her own in a city where tomorrow she might be entirely alone."
+          }
+        }
+      }
+    }
+  }
+}

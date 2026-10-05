@@ -162,14 +162,14 @@ export function compileScenePlayback(scene, choices={}) {
             const next=input[j];
             if(next.level<=level || (next.level===optionLevel&&isCommon(next.title) && !/исхода/.test(next.title)))break;
             const opt=next.title.match(indexedChoices);
-            if(opt&&next.level===optionLevel)options.push({at:j,code:opt[1],label:opt[2].replace(/\s*\([^)]*\)/g,'').trim()});
+            if(opt&&next.level===optionLevel)options.push({at:j,code:opt[1],label:opt[2].replace(/\s*\([^)]*\)/g,'').trim(),localizedLabel:(next.localizedTitle??next.title).match(indexedChoices)?.[2]?.replace(/\s*\([^)]*\)/g,'').trim()??opt[2].replace(/\s*\([^)]*\)/g,'').trim()});
             j++;
           }
         }
         if(options.length<2)throw new Error(`Incomplete options for ${id}: ${options.length}`);
         let selected=codeChoice(choices,id);
         if(!selected){
-          output.push({type:'choice',id,options:options.map(o=>({code:o.code,label:o.label})),sourceRef:{chunk:i,paragraph:0}});
+          output.push({type:'choice',id,options:options.map(o=>({code:o.code,label:o.localizedLabel??o.label})),sourceRef:{chunk:i,paragraph:0}});
           halted=true;return false;
         }
         const optionIndex=options.findIndex(x=>x.code===selected);

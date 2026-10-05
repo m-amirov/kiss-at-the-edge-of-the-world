@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "source": "content/season-1-literary-episode-08.md",
+  "scenes": {
+    "S34": {
+      "title": "Day 16. The Cancelled Evening",
+      "chunks": {
+        "S34.C000": {
+          "title": "",
+          "paragraphs": {
+            "S34.C000.P000": "The day before, they had agreed to have dinner together. Damir chose a small café near the hotel and sent Alice the menu so she could decide whether the place suited her. Alice had said yes; she had even imagined them sitting by the window. In the morning, she read Marina’s message about a new city series and suddenly felt as if she were standing in their flat from two years ago among the boxes: Damir was moving to another city, she was deciding whether to follow, and both of them were pretending there was enough time.",
+            "S34.C000.P001": "Damir did not ask her to change her plans that day. On the contrary, he said the clinic interview had been set for the week after they returned and that he would decide about the job separately. It was good news. That was exactly why Alice was frightened: the possibility of blaming her anxiety on one of his familiar mistakes had disappeared.",
+            "S34.C000.P002": "She wrote to say that dinner was cancelled. No reason. He replied: “Understood. I’ll see you with the group tonight.” Alice read the message again and grew angry with herself for having expected his usual attempts to persuade her. At noon she went outside, bought a coffee, and walked two blocks in the rain. Her phone stayed in her pocket. Damir did not call.",
+            "S34.C000.P003": "At the hotel entrance, she saw him with a pharmacy bag. He was picking up plasters for Eric, who had rubbed his heel raw on the walk. They greeted each other almost like casual acquaintances. Alice could have walked past, but stopped on her own.",
+            "S34.C000.P004": "“I got scared,” she said. “Not of you today. Of how quickly it felt good to be beside you again.”",
+            "S34.C000.P005": "Damir pressed the bag against his side.",
+            "S34.C000.P006": "“I don’t know what to do with that for you.”",
+            "S34.C000.P007": "“Neither do I. And I don’t want you to become the person it is convenient to be angry with again.”",
+            "S34.C000.P008": "He did not try to come closer. He said the café was not going anywhere, but they both had to decide whether they wanted to go there together at all."
+          }
+        },
+        "S34.C001": {
+          "title": "Choice S34-C1 — What will Alice do about the arrangement?",
+          "paragraphs": {}
+        },
+        "S34.C002": {
+          "title": "A. Suggest meeting later without having to decide the future",
+          "paragraphs": {
+            "S34.C002.P000": "“Let’s have dinner tomorrow if we both want to. I’ll tell you what frightened me, and you can say if the conversation is too much.”",
+            "S34.C002.P001": "Damir agreed, and for the first time Alice did not feel relieved that everything was “decided” again. They agreed only on a time."
+          }
+        },
+        "S34.C003": {
+          "title": "B. Take a pause until the end of the next day",
+          "paragraphs": {
+            "S34.C003.P000": "“I need a day without our dates. Tomorrow I’ll tell you whether I want to continue.”",
+            "S34.C003.P001": "“All right,” Damir said. “And if you don’t, I’ll understand.”",
+            "S34.C003.P002": "He went towards the stairs. Alice understood that she had asked for the pause herself and now had to use it not to invent his future answers, but to make her own decision."
+          }
+        },
+        "S34.C004": {
+          "title": "C. End the romantic story",
+          "paragraphs": {
+            "S34.C004.P000": "“I’m not ready to start again. I was happy beside you, but I don’t want to make you a promise out of missing the past.”",
+            "S34.C004.P001": "Damir let out a breath and said he did not want that kind of promise either. That evening they sat opposite each other at the shared table and discussed tomorrow’s move. It was awkward. But awkwardness did not require another date to disappear immediately."
+          }
+        },
+        "S34.C005": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S34.C005.P000": "Alice returned to her room and sat on the floor beside her suitcase. Rain dripped from her coat onto the mat by the door. For the first time that day, she was not waiting for a message from Damir to learn how to live the next hour. She opened the article and rewrote a paragraph about the road: it no longer said that every change happened to a person against their will."
+          }
+        }
+      }
+    }
+  }
+}

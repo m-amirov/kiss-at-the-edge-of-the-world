@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "source": "content/season-1-literary-episode-08.md",
+  "scenes": {
+    "S33": {
+      "title": "Day 15. The Teaser",
+      "chunks": {
+        "S33.C000": {
+          "title": "",
+          "paragraphs": {
+            "S33.C000.P000": "Nick had shown Alice a new edit the night before. She had approved her words for one episode of the film and rejected the airport shot. In the morning, the producer asked for a teaser for a client meeting, and Nick sent a working version that no longer contained the airport, but still included a short recording of their conversation after the pool. Nick had not noticed it in the shared editing track—or rather, he had noticed it but convinced himself that they were talking about the trip, not about her.",
+            "S33.C000.P001": "Alice saw the teaser in the Akureyri hotel when Marina sent her a link with the question: “Is that you?” On the screen Nick was laughing while Alice’s voice said something she had told him when they were alone. Alice could not answer her editor at once. She opened the neighbouring room’s door and knocked.",
+            "S33.C000.P002": "Nick appeared with headphones around his neck. When he saw her phone screen, he understood immediately. He did not say it was “only a working version”. He asked whom else the producer had sent the link to. The client and three colleagues. Nick called in front of Alice, asked them to close access to the file, and deleted it from the shared folder. The producer was irritated; a new version was needed by evening.",
+            "S33.C000.P003": "“I thought I had cut everything personal,” Nick said after putting down the phone.",
+            "S33.C000.P004": "“You thought. I asked you to show me the material before you sent it. Not the whole film—the part that concerns me.”",
+            "S33.C000.P005": "He wanted to explain why he had hurried. A printout of a new job offer lay on the table: the producer saw him as the director of the next project. Nick turned the sheet face down.",
+            "S33.C000.P006": "“I looked in the wrong place,” he said after a pause. “I watched the deadline and missed your voice.”",
+            "S33.C000.P007": "Alice sat on the edge of the chair. She liked Nick, and that was exactly why the link from a stranger hurt more than a random publication by an unknown videographer. She did not want to lecture him, and she did not want to forgive him immediately for the sake of a beautiful next scene."
+          }
+        },
+        "S33.C001": {
+          "title": "Choice S33-C1 — What does Alice do after the file is deleted?",
+          "paragraphs": {}
+        },
+        "S33.C002": {
+          "title": "A. Ask to see the corrected teaser before it is sent again",
+          "paragraphs": {
+            "S33.C002.P000": "“If you want us to continue, send me the version without my voice before you show it to anyone else.”",
+            "S33.C002.P001": "Nick agreed. He closed the laptop for ten minutes so he would not answer with an edit at once. Then he asked Alice to go outside while he remade the file: she did not have to sit beside him and monitor every movement of the mouse."
+          }
+        },
+        "S33.C003": {
+          "title": "B. Take a pause and refuse to discuss the film today",
+          "paragraphs": {
+            "S33.C003.P000": "“I don’t want to watch another edit right now,” Alice said. “Do what you have to do without me. I need to be alone.”",
+            "S33.C003.P001": "Nick nodded. He told the producer about the forbidden fragment and sent Alice confirmation that access had been closed, without adding a request to talk. Alice read the message when she wanted to."
+          }
+        },
+        "S33.C004": {
+          "title": "C. End the romantic story",
+          "paragraphs": {
+            "S33.C004.P000": "“I don’t want to test whether this will happen again,” Alice said. “The film is yours. My life is not part of its delivery terms.”",
+            "S33.C004.P001": "Nick did not offer to fix everything with one edit. He asked whether she wanted him to delete all the personal recordings, and did so after she answered. Later they travelled in the same car in silence. Her friendship with the others did not require Alice to pretend nothing had happened."
+          }
+        },
+        "S33.C005": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S33.C005.P000": "By evening there was a new version of the teaser. Nick first showed it to the producer with a note that Alice’s personal phrases could not be used, then sent Alice only confirmation that the disputed material was gone. Rain moved past the hotel windows. The group had agreed to meet for dinner, but Alice decided to arrive a little later, when she could talk about more than what had happened."
+          }
+        }
+      }
+    }
+  }
+}

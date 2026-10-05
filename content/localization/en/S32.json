@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "source": "content/season-1-literary-episode-08.md",
+  "scenes": {
+    "S32": {
+      "title": "Day 15. When Schedules Do Not Meet",
+      "chunks": {
+        "S32.C000": {
+          "title": "",
+          "paragraphs": {
+            "S32.C000.P000": "Eric really did sit down for breakfast with everyone in the morning. For the first five minutes he kept checking with his eyes whether the driver’s door was locked and where the first-aid kit lay. Alice moved a plate of hot toast towards him. He took a bite, and only then stopped looking around. She did not call it a victory: she liked that he was simply sitting beside them.",
+            "S32.C000.P001": "Two messages reached Eric’s phone almost at once. His sister was asking him to help with a move to a small settlement in winter, while the head of the local guides’ programme was inviting him to run seasonal training during the quiet months. He read both messages aloud because his sister needed a date, and Alice already knew about the school.",
+            "S32.C000.P002": "“Do you want to accept?” she asked.",
+            "S32.C000.P003": "“The training—yes. I want to help my sister too. If I take on both, I’ll barely be in Reykjavík this winter.”",
+            "S32.C000.P004": "That same morning Alice had a message from Marina: the editorial office was discussing her joining a long city series after she got home. Several months of interviews, editing, and meetings in one place. For the first time on the trip, Alice saw the coming winter as a whole and found no shared day with Eric in it.",
+            "S32.C000.P005": "“They’ve offered me a place on a new series at the office,” she said. “It’s preliminary. I want to try.”",
+            "S32.C000.P006": "Eric put away his phone. He was happy for her, and it showed before he said “congratulations”. Then he asked how long the work would last, and Alice gave him an approximate timeline. They did not argue. The conversation ended because Nick called them to the car, and neither wanted to continue it in front of the others.",
+            "S32.C000.P007": "After the drive to Akureyri, they went out for coffee. Eric carried a paper bag with two buns the entire time—he had bought one for Alice and forgotten to give it to her. When he remembered, the bun was cold. Alice took it. It was so like him that her irritation became faintly funny.",
+            "S32.C000.P008": "“I don’t need an answer about winter today,” she said. “But I don’t want to promise I’ll drop my work because we liked each other on a trip.”",
+            "S32.C000.P009": "“I’m not asking that. And I don’t want to promise I’ll cancel everything I have either. I just thought time would appear on its own.”",
+            "S32.C000.P010": "They reached a crossroads where they could turn towards the hotel or continue through the old streets. Eric stopped and waited for her decision. Alice understood that the difficulty was not that he did not know how to take her into account. He did. But agreement alone was not enough when two calendars left no room for a person."
+          }
+        },
+        "S32.C001": {
+          "title": "Choice S32-C1 — What does Alice suggest?",
+          "paragraphs": {}
+        },
+        "S32.C002": {
+          "title": "A. Continue the relationship without deciding winter immediately",
+          "paragraphs": {
+            "S32.C002.P000": "“I want to spend the remaining days with you. At home we’ll look at real dates instead of arguing with an imaginary schedule.”",
+            "S32.C002.P001": "Eric nodded. He did not call it a ready-made plan. But for the first time that morning he opened his phone not for a work message, but to note the day when they would call each other after Alice got home."
+          }
+        },
+        "S32.C003": {
+          "title": "B. Ask for a pause without promising dates",
+          "paragraphs": {
+            "S32.C003.P000": "“I need to be on my own for a while,” Alice said. “I don’t know whether I want to continue while everything looks like this.”",
+            "S32.C003.P001": "Eric handed her the bun in its paper bag and said he would meet her by the car for the group’s departure. He did not turn the pause into a punishment. Alice walked to the hotel alone and, for the first time that morning, could read Marina’s message calmly."
+          }
+        },
+        "S32.C004": {
+          "title": "C. End the romantic story now",
+          "paragraphs": {
+            "S32.C004.P000": "“I’m glad we were close,” Alice said. “But I don’t want to build the next few months on the hope that one of us will change the way we live.”",
+            "S32.C004.P001": "Eric did not argue. He asked whether she wanted him to tell the others that the evening plan had changed, or whether she would say it herself. Alice said she would. They returned to the group by different streets; that evening Eric still left the scarf he had forgotten in the car outside her door."
+          }
+        },
+        "S32.C005": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S32.C005.P000": "After the conversation, Alice noted the time and place for the article: Akureyri, a wet street, a bun with cold butter. She did not write down anyone else’s words. Eric had not asked her to hide anything, but this was a conversation she had lived as Alice, not as a journalist. The city continued around them. At the bus stop, two teenagers laughed while trying to shelter one backpack from the rain, and in the hotel Nick was looking for an adapter for his laptop."
+          }
+        }
+      }
+    }
+  }
+}

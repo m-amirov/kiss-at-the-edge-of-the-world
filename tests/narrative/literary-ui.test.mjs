@@ -7,6 +7,7 @@ const root = fileURLToPath(new URL('../../', import.meta.url));
 const cssPath = fileURLToPath(new URL('../../src/literary.css', import.meta.url));
 const css = fs.readFileSync(cssPath, 'utf8');
 const player = fs.readFileSync(fileURLToPath(new URL('../../src/literary-player.js', import.meta.url)), 'utf8');
+const localization = fs.readFileSync(fileURLToPath(new URL('../../src/localization.js', import.meta.url)), 'utf8');
 const assetManifest = JSON.parse(fs.readFileSync(`${root}/assets/asset-manifest.json`, 'utf8'));
 
 test('production literary UI bundles the approved Cinematic Romance fonts locally', () => {
@@ -34,7 +35,7 @@ test('production literary UI preserves mobile reading and control invariants', (
 });
 
 test('main menu keeps only the supported actions and has no retired panels or footer', () => {
-  assert.match(player, /\['Эпизоды',t\('episodes'\)\]/);
+  assert.match(player, /\['episodes',t\('episodes'\)\]/);
   assert.match(player, /t\('continueEpisode'/);
   assert.match(player, /button\(t\('newGame'\),startNew/);
   assert.doesNotMatch(player, /Галерея|Об игре|История доступна от начала до одного из четырёх финалов/);
@@ -49,7 +50,7 @@ test('narrative navigation is stage-first and retired text controls are absent',
   assert.match(player, /bindStageNavigation\(picture\)/);
   assert.match(player, /bindStageTapTarget\(sheet\)/);
   assert.match(player, /picture\.dataset\.stageAdvance='true'/);
-  assert.match(player, /picture\.setAttribute\('aria-label','Нажмите на сцену или Enter, чтобы продолжить чтение'\)/);
+  assert.match(player, /picture\.setAttribute\('aria-label',t\('stageAdvanceAria'\)\)/);
   assert.match(player, /pointerdown/);
   assert.match(player, /pointerup/);
   assert.match(player, /picture\.addEventListener\('click'/);
@@ -79,11 +80,12 @@ test('Cinematic A mobile polish keeps artwork visible without a nested menu scro
 });
 
 test('ending screens use authored emotional headings instead of engine copy', () => {
-  for (const heading of ['Дорога, которую выбирают вдвоём', 'Без чужого голоса', 'Начать заново — вместе', 'Свой следующий маршрут']) {
-    assert.match(player, new RegExp(heading.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
+  for (const key of ['endingEric', 'endingNick', 'endingDamir', 'endingAlice']) {
+    assert.match(player, new RegExp(`endingHeadings[\\s\\S]*${key}`));
+    assert.match(localization, new RegExp(`${key}:`));
   }
   assert.doesNotMatch(player, /Конец первого сезона|Это завершение выбранной истории|начать другое прохождение можно из меню/);
-  assert.match(player, /sheet\.prepend\(el\(endingHeadings\[scene\.id\]/);
+  assert.match(player, /sheet\.prepend\(el\(t\(endingHeadings\[scene\.id\]\)/);
 });
 
 test('all production reader states use explicit fullscreen presentation modes', () => {

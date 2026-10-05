@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "source": "content/season-1-literary-episode-10.md",
+  "scenes": {
+    "S45": {
+      "title": "Day 21. Nick. A Film Without Someone Else’s Voice",
+      "chunks": {
+        "S45.C000": {
+          "title": "",
+          "paragraphs": {
+            "S45.C000.P000": "Nick invited Alice to watch the final working cut of the film before sending it to the client. On screen were the road, the repaired boardwalk, faces of people who had agreed to be filmed, and the shared table on the last evening. Her private sentence after the pool was not there. Nick did not explain the path of repair he had taken; he simply showed what he meant to publish and waited for her notes.",
+            "S45.C000.P001": "Alice saw a shot she had taken herself in the car park near Mývatn. Nick had left her name beside the camera in the credits. She asked him to remove the credit from the public version: it was their private experience, and she had used another shot for the article. Nick agreed and saved the file again. They did not turn it into a grand scene—departure, work and a possible ordinary weekend were ahead."
+          }
+        },
+        "S45.C001": {
+          "title": "Choice S45-C1 — What will they do before goodbye?",
+          "paragraphs": {}
+        },
+        "S45.C002": {
+          "title": "A. Kiss Nick without a camera",
+          "paragraphs": {
+            "S45.C002.P000": "Nick put his phone in his pocket, though the camera was not on. Alice laughed, reached for him and kissed him first. He put an arm around her waist and rested his forehead against hers for a second, as though still surprised that they did not have to seek the best angle."
+          }
+        },
+        "S45.C003": {
+          "title": "B. Agree to watch a film together at home",
+          "paragraphs": {
+            "S45.C003.P000": "“Send me the final version when you can,” Alice said. “But let’s have dinner first.”",
+            "S45.C003.P001": "Nick suggested making pasta from their failed recipe in the second episode. She agreed only if he did not tell the story of that dinner to everyone."
+          }
+        },
+        "S45.C004": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S45.C004.P000": "A month later Nick really came for the weekend. They bought bread, found a broken hallway lamp in Alice’s flat, and spent half an hour looking for a screwdriver. Nick proposed making a little film about the repair, then saw her face and laughed first. The film never appeared. That evening they finished the old comedy they had never got round to in Iceland. Alice fell asleep on his shoulder before the credits."
+          }
+        }
+      }
+    }
+  }
+}

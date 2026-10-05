@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "source": "content/season-1-literary-episode-09.md",
+  "scenes": {
+    "S38": {
+      "title": "Day 18. The Boring Day That Worked",
+      "chunks": {
+        "S38.C000": {
+          "title": "If `routeStatus=paused`",
+          "paragraphs": {
+            "S38.C000.P000": "Nick met Alice at the guesthouse stairs and asked whether she wanted to walk without a camera. She agreed, warning him that she was not ready to discuss continuing the romance. They picked up bread, delivered a parcel to the owner, and came back by another street. Nick said the producer had confirmed that the disputed footage had been removed from every working cut. Alice thanked him for a concrete action, but did not promise it would now be easy to trust him again. They reached the square and sat on a bench because they were tired."
+          }
+        },
+        "S38.C001": {
+          "title": "If `routeStatus=active`",
+          "paragraphs": {
+            "S38.C001.P000": "Nick woke before Alice and brought two tickets to a small local museum to her door instead of a camera. She was surprised: Nick had rarely planned anything that could not be filmed. He said the tickets could be returned if she would rather just walk. Alice chose the museum, then wanted to stop at a shop for coffee. Nick did not pretend that was a boring choice.",
+            "S38.C001.P001": "An old photograph of a family celebration hung by the museum window. No one in it was looking at the lens; the photographer had caught a moment nobody had meant to show anyone else. Nick studied it for a long time. He admitted that when he began to care seriously for someone, he wanted at once to invent an extraordinary adventure for the two of them. As though an ordinary walk and breakfast together were not enough to make someone stay.",
+            "S38.C001.P002": "Alice did not answer with a ready-made reassurance. She remembered their day with the lost glove and said it had been good precisely because they had looked for someone else’s thing and shivered at bus stops. Nick laughed: he was still carrying the returned glove in his jacket, though it was not his. He had promised to post it to Inga, but had never chosen an envelope.",
+            "S38.C001.P003": "They found an envelope in a little shop. Nick wrote the address and date as though he were closing a scene in the edit. Alice asked him to show her the postmark when he sent it. He remarked that she had already invented a continuation for their boring day, and this time he did not try to invent a more interesting one."
+          }
+        },
+        "S38.C002": {
+          "title": "Choice S38-C1 — What does Alice suggest to Nick?",
+          "paragraphs": {}
+        },
+        "S38.C003": {
+          "title": "A. Spend an ordinary weekend together at home after the trip",
+          "paragraphs": {
+            "S38.C003.P000": "“If you want to see me again, come to my city. We can go to the market, make dinner, and perhaps go nowhere else.”",
+            "S38.C003.P001": "Nick asked whether he could bring at least a camera for himself. Alice said he could, but she did not have to be in his shots. “I can leave it in the room altogether,” he replied. They chose a possible day off without buying tickets in advance."
+          }
+        },
+        "S38.C004": {
+          "title": "B. Leave their story as a beautiful trip",
+          "paragraphs": {
+            "S38.C004.P000": "“I liked being with you,” Alice said. “But I don’t want to promise a weekend while I still don’t know what I want from us.”",
+            "S38.C004.P001": "Nick nodded. He did not propose one last perfect shot. Instead, he asked whether she wanted to walk with him to the post office to send the glove. She agreed; it was not a continuation of the romance, simply something they had started together."
+          }
+        },
+        "S38.C005": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S38.C005.P000": "That evening Nick put the envelope with the postal receipt in front of Alice. He really had sent the glove. For the film it was an unremarkable event. Alice tucked the receipt into the book she was taking home and thought that perhaps one day she would show it to him again."
+          }
+        },
+        "S38.C006": {
+          "title": "Choice S38-C2 — How will Alice suggest that Nick remember this ordinary day?",
+          "paragraphs": {}
+        },
+        "S38.C007": {
+          "title": "A. Invite him on a date without jokes about filming",
+          "paragraphs": {
+            "S38.C007.P000": "“Could you just go for coffee with me?” Alice asked. Nick looked at her, made sure she really awaited an answer, and said yes. At the table he tried to joke about the weather and laughed before she did."
+          }
+        },
+        "S38.C008": {
+          "title": "B. Suggest they choose a book for each other in the shop",
+          "paragraphs": {
+            "S38.C008.P000": "They found two cheap books and exchanged them without reading the blurbs. Alice got an old story collection; Nick, a book about garden birds. He said he was now obliged to find out what, exactly, he liked most about it."
+          }
+        },
+        "S38.C009": {
+          "title": "If `S53-C2=A`",
+          "paragraphs": {
+            "S38.C009.P000": "On their walk Nick reminded Alice of the café they had agreed to visit after they returned. For the first time she imagined their meeting in an ordinary city—and wanted that day to come."
+          }
+        },
+        "S38.C010": {
+          "title": "If `S53-C2=B`",
+          "paragraphs": {
+            "S38.C010.P000": "On their walk Nick quoted a line from Alice’s book and asked her not to reveal the ending. She said she had not finished his collection herself and would not hurry now."
+          }
+        }
+      }
+    }
+  }
+}

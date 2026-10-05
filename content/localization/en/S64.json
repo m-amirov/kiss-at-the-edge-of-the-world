@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "source": "content/season-1-literary-episode-09.md",
+  "scenes": {
+    "S64": {
+      "title": "Day 19. A Short Road of Her Own",
+      "chunks": {
+        "S64.C000": {
+          "title": "",
+          "paragraphs": {
+            "S64.C000.P000": "In the morning Alice checked the weather and the notice about the local path. The route was short, and the guesthouse owner drew two landmarks on a sheet of paper so she would not turn onto the closed section. Alice told the group when she would be back and left alone. It was not a performance of independence or an attempt to avoid someone’s questions. She simply wanted to walk a few kilometres without matching anyone else’s pace.",
+            "S64.C000.P001": "The wind came from the ocean. At the first viewpoint Alice sat on a bench and realised she had forgotten a pen. Her phone had plenty of room for notes, but she did not open the work folder. Instead, she recorded a short voice note to herself: what she had liked about the trip, whom she wanted to see at home, which book she had still not read, and why she wanted to return to Iceland one day without an editorial assignment.",
+            "S64.C000.P002": "On the way back she met a woman with a dog. The woman asked whether Alice had seen a lost child’s hat. Alice had not, but helped check the nearest bench; the hat was underneath it. The woman thanked her and walked back. Alice smiled at the coincidence: the whole trip had been full of lost things that did not always require a grand story."
+          }
+        },
+        "S64.C001": {
+          "title": "Choice S64-C1 — What does she decide on the way back?",
+          "paragraphs": {}
+        },
+        "S64.C002": {
+          "title": "A. Apply for an independent journalism project",
+          "paragraphs": {
+            "S64.C002.P000": "Alice opened a draft email to the editors and wrote three sentences about a new series. She did not send it while walking; back at the guesthouse, she read it again and only then pressed Send."
+          }
+        },
+        "S64.C003": {
+          "title": "B. Keep a free month after the trip for herself",
+          "paragraphs": {
+            "S64.C003.P000": "Alice opened her calendar and marked off a week without assignments. She wanted simply to be home, make breakfast and see friends. It was no less specific a plan than a new project."
+          }
+        },
+        "S64.C004": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S64.C004.P000": "That evening she returned to the group before dinner. Nick gave her a note from the owner—she was asking whether Alice wanted to leave the book on the exchange shelf. Alice decided to take it home. She still wanted to finish the stories she had chosen herself."
+          }
+        },
+        "S64.C005": {
+          "title": "If `S40-C2=A`",
+          "paragraphs": {
+            "S64.C005.P000": "On the path Alice remembered yesterday’s music and noticed that, for the first time on the trip, she wanted to return to a concert for reasons other than the article. She saved the thought in a voice note to herself."
+          }
+        },
+        "S64.C006": {
+          "title": "If `S40-C2=B`",
+          "paragraphs": {
+            "S64.C006.P000": "On the path Alice received a photograph of the café where she and her friend had agreed to meet after her return. Her next month now contained one pleasant date."
+          }
+        }
+      }
+    }
+  }
+}

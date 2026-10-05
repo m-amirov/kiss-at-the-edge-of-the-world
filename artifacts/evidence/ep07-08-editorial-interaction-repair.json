@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "testedSourceHead": "995e8d543799a5befa4b34296a358a84a7db622f",
+  "scope": "Bounded RU canonical C90 continuity repair with EN parity; no Episode 9 work.",
+  "discoveredCanonicalDefects": [
+    { "id": "S27-C90", "defect": "Camera was already raised, not in a bag; the following paragraph still owns the filming-permission request.", "repair": "Short-break response before the request, without a consent event." },
+    { "id": "S28-C90", "defect": "Invented a trail detour instead of the breakfast conversation.", "repair": "Breakfast promise and Eric's logistics habit." },
+    { "id": "S49-C90", "defect": "Asked Alice to initiate a dance Eric had already invited her to join.", "repair": "Alice answers Eric's existing invitation." },
+    { "id": "S29-C90", "defect": "Treated the fragment as unseen and newly suggested.", "repair": "Clarification before deciding what happens to the forty seconds." },
+    { "id": "S52-C90", "defect": "Prematurely found the missing glove.", "repair": "Awkward search moment after Nick calls it a date, without deciding the date." },
+    { "id": "S30-C90", "defect": "Invented a new shared habit before Damir answers about the possible job.", "repair": "Need for honest uncertainty and information, not a joint decision." },
+    { "id": "S55-C90", "defect": "Repeated an earlier horse-refusal premise after the water break.", "repair": "Finished awkward/laughing horse moment." },
+    { "id": "S31-C90", "defect": "Excluded Inga from an article immediately before Alice proposes her subject to permission.", "repair": "Process rule for observations, accuracy and permission." },
+    { "id": "S62-C90", "defect": "Asked what Alice would buy after the bookshop and pool had already happened.", "repair": "Self-directed morning after the pool, retaining the purchased book and recipe page." },
+    { "id": "S32-C90", "defect": "Preselected winter dates before the authored route-status choice.", "repair": "Internal clarification protecting agency before active/pause/close." },
+    { "id": "S50-C90", "defect": "Map-based premise was stale and did not hold for both route-status branches.", "repair": "Branch-neutral self-directed morning premise." },
+    { "id": "S33-C90", "defect": "Repeated removal of a teaser shot already removed from the shared file.", "repair": "Need before continuing, pausing or ending the romantic route." },
+    { "id": "S53-C90", "defect": "Camera-promise premise was invalid on the paused route.", "repair": "Shared premise valid after both active and paused source chunks." },
+    { "id": "S34-C90", "defect": "Assigned Alice's cancelled dinner to Damir.", "repair": "Alice's admitted fear after her own cancellation." },
+    { "id": "S56-C90", "defect": "Dance-specific premise was invalid on the paused route.", "repair": "Music-evening beat valid for active and paused states." },
+    { "id": "S35-C90", "defect": "Duplicated and preselected the following article-structure choice.", "repair": "Editorial standard before authored structure selection." },
+    { "id": "S63-C90", "defect": "Placed Alice by a wall instead of at the window.", "repair": "Window-seat observation without inventing prior seating." }
+  ],
+  "enPolish": [
+    "S27.C000.P000: their next overnight stop.",
+    "S56.C005.P000: music still drifting in from the street."
+  ],
+  "acceptance": "All repaired C90 IDs, authored option codes and route semantics are retained; deterministic semantic evidence is the controlling acceptance record."
+}

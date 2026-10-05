@@ -1,0 +1,1611 @@
+{
+  "schemaVersion": 2,
+  "status": "PASS",
+  "testedSourceHead": "1e9551a6f3515d08ca6753958f7201773c4b1033",
+  "generatedAt": "2026-10-03T19:03:56.596Z",
+  "episode7": {
+    "sceneOrder": [
+      "S27",
+      "S59",
+      "S28",
+      "S49",
+      "S29",
+      "S52",
+      "S30",
+      "S55",
+      "S31",
+      "S62"
+    ]
+  },
+  "episode8": {
+    "sceneOrder": [
+      "S32",
+      "S50",
+      "S33",
+      "S53",
+      "S34",
+      "S56",
+      "S35",
+      "S63"
+    ]
+  },
+  "routeCoverage": 4,
+  "activePausedSemanticMatrix": {
+    "eric": [
+      {
+        "scene": "S50",
+        "predecessorChoice": "S32-C1=A",
+        "routeStatus": "active"
+      },
+      {
+        "scene": "S50",
+        "predecessorChoice": "S32-C1=B",
+        "routeStatus": "paused"
+      }
+    ],
+    "nick": [
+      {
+        "scene": "S53",
+        "predecessorChoice": "S33-C1=A",
+        "routeStatus": "active"
+      },
+      {
+        "scene": "S53",
+        "predecessorChoice": "S33-C1=B",
+        "routeStatus": "paused"
+      }
+    ],
+    "damir": [
+      {
+        "scene": "S56",
+        "predecessorChoice": "S34-C1=A",
+        "routeStatus": "active"
+      },
+      {
+        "scene": "S56",
+        "predecessorChoice": "S34-C1=B",
+        "routeStatus": "paused"
+      }
+    ],
+    "alice": [
+      {
+        "scene": "S63",
+        "predecessorChoice": "S35-C1=A",
+        "routeStatus": "active"
+      },
+      {
+        "scene": "S63",
+        "predecessorChoice": "S35-C1=B",
+        "routeStatus": "paused"
+      }
+    ]
+  },
+  "semanticCaseCount": 56,
+  "interactionCaseCount": 56,
+  "counters": {
+    "contradictionCount": 0,
+    "prematurePremiseCount": 0,
+    "duplicatedCanonicalLineCount": 0,
+    "branchInvalidPremiseCount": 0,
+    "crossRouteLeakCount": 0,
+    "inventedRelationshipCount": 0,
+    "inventedConsentCount": 0,
+    "inventedCharacterKnowledgeCount": 0,
+    "routeStateMismatchCount": 0,
+    "actionOwnershipMismatchCount": 0,
+    "authoredChoicePreselectionCount": 0,
+    "temporalRewindCount": 0,
+    "internalStateLeakCount": 0,
+    "leakedMarkupCount": 0,
+    "cyrillicCount": 0
+  },
+  "parity": {
+    "interactionParity": "PASS",
+    "localeParity": "PASS",
+    "enCyrillicLeakage": 0
+  },
+  "browser": {
+    "status": "PASS",
+    "testedSourceHead": "1e9551a6f3515d08ca6753958f7201773c4b1033",
+    "currentHeadMatch": true,
+    "evidencePath": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-git\\artifacts\\evidence\\ep07-08-route-browser.json"
+  },
+  "sourceDefectsFound": [
+    "Stale canonical premises and action ownership in S27, S28, S49, S29, S52, S30, S55, S31, S62, S32, S50, S33, S34, S35, S63; routeStatus-invalid premises in S50, S53 and S56."
+  ],
+  "boundedRepairs": [
+    "S27-C90",
+    "S59-C90",
+    "S28-C90",
+    "S49-C90",
+    "S29-C90",
+    "S52-C90",
+    "S30-C90",
+    "S55-C90",
+    "S31-C90",
+    "S62-C90",
+    "S32-C90",
+    "S50-C90",
+    "S33-C90",
+    "S53-C90",
+    "S34-C90",
+    "S56-C90",
+    "S35-C90",
+    "S63-C90"
+  ],
+  "cases": [
+    {
+      "episode": 7,
+      "scene": "S27",
+      "extraChoiceId": "S27-C90",
+      "routeIntent": "eric",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "A"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 5
+      },
+      "precedingSourceText": [
+        "В середине работы они разошлись вдоль кромки тропы. Алиса на секунду осталась одна. Озеро почти не было видно: между ней и водой стояли мокрые невысокие деревья. Зато она слышала смех Ника, когда верёвка снова зацепилась за корень, и короткое «сюда» Дамира. Она приехала написать о красивой стране; полдня ей пришлось смотреть себе под ноги.",
+        "Инга остановилась рядом, оценила два собранных мешка и предложила сделать перерыв. Ник поднял камеру, но не включил её."
+      ],
+      "followingSourceRef": {
+        "chunk": 0,
+        "paragraph": 6
+      },
+      "followingSourceText": "— Я могу снять доски и наши руки? — спросил он. — Без лиц местных, если они не хотят.\n\n— Попроси сначала Ингу, — ответила Алиса. — И покажи ей потом, что получилось.",
+      "renderedQuestion": "Nick is holding the raised camera but has not switched it on. How will Alice use the short pause?",
+      "selectedOption": "A",
+      "resultingText": "Alice did not tell Nick what to say. After the hard work, everyone needed a few quiet seconds before anyone asked permission to film."
+    },
+    {
+      "episode": 7,
+      "scene": "S27",
+      "extraChoiceId": "S27-C90",
+      "routeIntent": "eric",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "A"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 5
+      },
+      "precedingSourceText": [
+        "В середине работы они разошлись вдоль кромки тропы. Алиса на секунду осталась одна. Озеро почти не было видно: между ней и водой стояли мокрые невысокие деревья. Зато она слышала смех Ника, когда верёвка снова зацепилась за корень, и короткое «сюда» Дамира. Она приехала написать о красивой стране; полдня ей пришлось смотреть себе под ноги.",
+        "Инга остановилась рядом, оценила два собранных мешка и предложила сделать перерыв. Ник поднял камеру, но не включил её."
+      ],
+      "followingSourceRef": {
+        "chunk": 0,
+        "paragraph": 6
+      },
+      "followingSourceText": "— Я могу снять доски и наши руки? — спросил он. — Без лиц местных, если они не хотят.\n\n— Попроси сначала Ингу, — ответила Алиса. — И покажи ей потом, что получилось.",
+      "renderedQuestion": "Nick is holding the raised camera but has not switched it on. How will Alice use the short pause?",
+      "selectedOption": "B",
+      "resultingText": "She looked at the wet gloves and the stacked boards. It mattered more not to hurry the conversation or turn a short break into a finished scene."
+    },
+    {
+      "episode": 7,
+      "scene": "S59",
+      "extraChoiceId": "S59-C90",
+      "routeIntent": "eric",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "A"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 3
+      },
+      "precedingSourceText": [
+        "— Выбираем песню для дороги, — объявил Ник, когда они доели. — Не самую любимую. Ту, от которой у водителя начнёт дёргаться глаз.\n\n— Тогда водитель лишит нас музыкальных прав, — сказал Эрик.",
+        "— У нас есть демократия."
+      ],
+      "followingSourceRef": {
+        "chunk": 0,
+        "paragraph": 4
+      },
+      "followingSourceText": "— И водитель с ключами.\n\nДамир предложил старую мелодию, которую все, кроме Эрика, знали с детства. Алиса поймала себя на том, что готова подсказать ему слова. В другой поездке это было бы так естественно, что она даже не заметила бы. Здесь она не стала угадывать, какой вечер им теперь положен после её решения.",
+      "renderedQuestion": "They are choosing the next song in the car. What will Alice suggest?",
+      "selectedOption": "A",
+      "resultingText": "Nick started the chorus. Damir unexpectedly knew the second verse, and the song collapsed into shared laughter."
+    },
+    {
+      "episode": 7,
+      "scene": "S59",
+      "extraChoiceId": "S59-C90",
+      "routeIntent": "eric",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "A"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 3
+      },
+      "precedingSourceText": [
+        "— Выбираем песню для дороги, — объявил Ник, когда они доели. — Не самую любимую. Ту, от которой у водителя начнёт дёргаться глаз.\n\n— Тогда водитель лишит нас музыкальных прав, — сказал Эрик.",
+        "— У нас есть демократия."
+      ],
+      "followingSourceRef": {
+        "chunk": 0,
+        "paragraph": 4
+      },
+      "followingSourceText": "— И водитель с ключами.\n\nДамир предложил старую мелодию, которую все, кроме Эрика, знали с детства. Алиса поймала себя на том, что готова подсказать ему слова. В другой поездке это было бы так естественно, что она даже не заметила бы. Здесь она не стала угадывать, какой вечер им теперь положен после её решения.",
+      "renderedQuestion": "They are choosing the next song in the car. What will Alice suggest?",
+      "selectedOption": "B",
+      "resultingText": "Alice played an unfamiliar melody. At first no one spoke; by the end Eric asked her to send him the title."
+    },
+    {
+      "episode": 7,
+      "scene": "S28",
+      "extraChoiceId": "S28-C90",
+      "routeIntent": "eric",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "A"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 6
+      },
+      "precedingSourceText": [
+        "Они оба были после вчерашней работы голодны, у Алисы промок носок, а Эрик безуспешно пытался вспомнить, где оставил запасные батарейки.\n\n— Я хотела спросить тебя о завтраке, — сказала Алиса.",
+        "— Опасная тема после прогулки.\n\n— Ты каждый раз ешь стоя, пока остальные собираются. Можно завтра просто сесть с нами?"
+      ],
+      "followingSourceRef": {
+        "chunk": 0,
+        "paragraph": 7
+      },
+      "followingSourceText": "Он удивился сильнее, чем если бы она предложила изменить маршрут. Оказалось, за несколько лет работы он привык приходить первым и проверять, завели ли машину, заказаны ли продукты, есть ли горячая вода. По выходным сестра звала его на завтрак, но он всё равно вставал раньше остальных и мыл за ними посуду, пока они ещё ели.",
+      "renderedQuestion": "After asking Eric about tomorrow's breakfast, what does Alice want to leave in the conversation?",
+      "selectedOption": "A",
+      "resultingText": "Alice said that tomorrow he could simply sit with everyone if he wanted to. She did not need to turn one question into an obligation."
+    },
+    {
+      "episode": 7,
+      "scene": "S28",
+      "extraChoiceId": "S28-C90",
+      "routeIntent": "eric",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "A"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 6
+      },
+      "precedingSourceText": [
+        "Они оба были после вчерашней работы голодны, у Алисы промок носок, а Эрик безуспешно пытался вспомнить, где оставил запасные батарейки.\n\n— Я хотела спросить тебя о завтраке, — сказала Алиса.",
+        "— Опасная тема после прогулки.\n\n— Ты каждый раз ешь стоя, пока остальные собираются. Можно завтра просто сесть с нами?"
+      ],
+      "followingSourceRef": {
+        "chunk": 0,
+        "paragraph": 7
+      },
+      "followingSourceText": "Он удивился сильнее, чем если бы она предложила изменить маршрут. Оказалось, за несколько лет работы он привык приходить первым и проверять, завели ли машину, заказаны ли продукты, есть ли горячая вода. По выходным сестра звала его на завтрак, но он всё равно вставал раньше остальных и мыл за ними посуду, пока они ещё ели.",
+      "renderedQuestion": "After asking Eric about tomorrow's breakfast, what does Alice want to leave in the conversation?",
+      "selectedOption": "B",
+      "resultingText": "She smiled and did not decide for Eric whether he would agree. Tomorrow's breakfast could remain an ordinary invitation."
+    },
+    {
+      "episode": 7,
+      "scene": "S49",
+      "extraChoiceId": "S49-C90",
+      "routeIntent": "eric",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "A"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 4
+      },
+      "precedingSourceText": [
+        "— У тебя была партнёрша до меня?",
+        "— Сестра в детстве. Она до сих пор уверена, что я наступил ей на ногу нарочно."
+      ],
+      "followingSourceRef": {
+        "chunk": 0,
+        "paragraph": 5
+      },
+      "followingSourceText": "Они не вышли на середину зала. Танцевали рядом с окном, чтобы никому не мешать. Эрик помнил шаг лучше, чем показывал в Höfn, но на повороте едва не задел стул. Алиса успела придержать спинку и рассмеялась. Он взглянул на её руку, затем на лицо — и рассмеялся тоже.",
+      "renderedQuestion": "Eric has already offered Alice his hand. How will she answer his invitation?",
+      "selectedOption": "A",
+      "resultingText": "Alice placed her hand in his and let him lead the first step. The invitation had already been made; now they could hear the music without rushing."
+    },
+    {
+      "episode": 7,
+      "scene": "S49",
+      "extraChoiceId": "S49-C90",
+      "routeIntent": "eric",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "A"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 4
+      },
+      "precedingSourceText": [
+        "— У тебя была партнёрша до меня?",
+        "— Сестра в детстве. Она до сих пор уверена, что я наступил ей на ногу нарочно."
+      ],
+      "followingSourceRef": {
+        "chunk": 0,
+        "paragraph": 5
+      },
+      "followingSourceText": "Они не вышли на середину зала. Танцевали рядом с окном, чтобы никому не мешать. Эрик помнил шаг лучше, чем показывал в Höfn, но на повороте едва не задел стул. Алиса успела придержать спинку и рассмеялась. Он взглянул на её руку, затем на лицо — и рассмеялся тоже.",
+      "renderedQuestion": "Eric has already offered Alice his hand. How will she answer his invitation?",
+      "selectedOption": "B",
+      "resultingText": "Alice smiled and left her fingers in his for a second, but chose the pace herself. Eric waited for her answer before continuing the dance."
+    },
+    {
+      "episode": 8,
+      "scene": "S32",
+      "extraChoiceId": "S32-C90",
+      "routeIntent": "eric",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "A"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 6
+      },
+      "precedingSourceText": [
+        "— Мне предложили остаться в редакции над новой серией, — сказала она. — Пока предварительно. Я хочу попробовать.",
+        "Эрик убрал телефон. Он был рад за неё, и это было видно прежде, чем он произнёс «поздравляю». Затем спросил, как долго будет длиться работа, и Алиса назвала приблизительные сроки. Они не спорили. Разговор закончился потому, что Ник позвал их к машине, а продолжать его на глазах у остальных не хотелось."
+      ],
+      "followingSourceRef": {
+        "chunk": 0,
+        "paragraph": 7
+      },
+      "followingSourceText": "После переезда в Akureyri они вышли за кофе. Эрик всё время нёс с собой бумажный пакет с двумя булочками — одну купил Алисе, но забыл отдать. Когда вспомнил, булочка остыла. Алиса взяла её. Это было так похоже на него, что от обиды ей стало немного смешно.",
+      "renderedQuestion": "Before choosing whether to continue, pause, or close the route, what does Alice need to clarify?",
+      "selectedOption": "A",
+      "resultingText": "Alice stopped at the crossroads and reminded herself that liking someone did not require an immediate promise. First they needed real dates, not a winter decision made for two."
+    },
+    {
+      "episode": 8,
+      "scene": "S32",
+      "extraChoiceId": "S32-C90",
+      "routeIntent": "eric",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "A"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 6
+      },
+      "precedingSourceText": [
+        "— Мне предложили остаться в редакции над новой серией, — сказала она. — Пока предварительно. Я хочу попробовать.",
+        "Эрик убрал телефон. Он был рад за неё, и это было видно прежде, чем он произнёс «поздравляю». Затем спросил, как долго будет длиться работа, и Алиса назвала приблизительные сроки. Они не спорили. Разговор закончился потому, что Ник позвал их к машине, а продолжать его на глазах у остальных не хотелось."
+      ],
+      "followingSourceRef": {
+        "chunk": 0,
+        "paragraph": 7
+      },
+      "followingSourceText": "После переезда в Akureyri они вышли за кофе. Эрик всё время нёс с собой бумажный пакет с двумя булочками — одну купил Алисе, но забыл отдать. Когда вспомнил, булочка остыла. Алиса взяла её. Это было так похоже на него, что от обиды ей стало немного смешно.",
+      "renderedQuestion": "Before choosing whether to continue, pause, or close the route, what does Alice need to clarify?",
+      "selectedOption": "B",
+      "resultingText": "She separated today's closeness from the future calendar. She needed to keep her work and an honest conversation without answering the larger question in advance."
+    },
+    {
+      "episode": 8,
+      "scene": "S50",
+      "extraChoiceId": "S50-C90",
+      "routeIntent": "eric",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "A",
+        "S32-C1": "A"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 2
+      },
+      "precedingSourceText": [
+        "На обратной дороге Эрик всё-таки заговорил о зиме — не о том, кто чем пожертвует, а о том, когда Алиса обычно чувствует себя дома. Она рассказала про воскресное утро, когда можно читать газету и не отвечать на телефон.",
+        "Эрик сказал, что для него это вечер после долгой дороги: снять ботинки и услышать, как на кухне кто-то ставит чайник. Они не обещали друг другу общего адреса. Но на перекрёстке Алиса взяла его за руку."
+      ],
+      "followingSourceRef": {
+        "chunk": 3,
+        "paragraph": 0
+      },
+      "followingSourceText": "Она выбрала карточку с зимним окном, хотя сейчас в городе шёл дождь. На обратной стороне написала: «Здесь мы не знали, что будет дальше». Положила открытку в книгу, которую собиралась дочитать дома.",
+      "renderedQuestion": "While their walk through the city is still going, what does Alice want to leave unhurried?",
+      "selectedOption": "A",
+      "resultingText": "They stopped by a window and silently looked at a wooden bird among the postcards. Alice liked that this small choice needed no explanation."
+    },
+    {
+      "episode": 8,
+      "scene": "S50",
+      "extraChoiceId": "S50-C90",
+      "routeIntent": "eric",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "A",
+        "S32-C1": "A"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 2
+      },
+      "precedingSourceText": [
+        "На обратной дороге Эрик всё-таки заговорил о зиме — не о том, кто чем пожертвует, а о том, когда Алиса обычно чувствует себя дома. Она рассказала про воскресное утро, когда можно читать газету и не отвечать на телефон.",
+        "Эрик сказал, что для него это вечер после долгой дороги: снять ботинки и услышать, как на кухне кто-то ставит чайник. Они не обещали друг другу общего адреса. Но на перекрёстке Алиса взяла его за руку."
+      ],
+      "followingSourceRef": {
+        "chunk": 3,
+        "paragraph": 0
+      },
+      "followingSourceText": "Она выбрала карточку с зимним окном, хотя сейчас в городе шёл дождь. На обратной стороне написала: «Здесь мы не знали, что будет дальше». Положила открытку в книгу, которую собиралась дочитать дома.",
+      "renderedQuestion": "While their walk through the city is still going, what does Alice want to leave unhurried?",
+      "selectedOption": "B",
+      "resultingText": "Alice suggested turning into the next street without giving the walk a final meaning. Eric agreed: not every good day had to become a plan at once."
+    },
+    {
+      "episode": 8,
+      "scene": "S50",
+      "extraChoiceId": "S50-C90",
+      "routeIntent": "eric",
+      "routeStatus": "paused",
+      "priorRelevantChoices": {
+        "S26-C1": "A",
+        "S32-C1": "B"
+      },
+      "insertionSourceRef": {
+        "chunk": 5,
+        "paragraph": 0
+      },
+      "precedingSourceText": [
+        "Это было непривычно — не холодно, просто иначе. У неё было время понять, хочет ли она снова идти рядом с ним по собственному желанию.\n\nОна выбрала карточку с зимним окном, хотя сейчас в городе шёл дождь. На обратной стороне написала: «Здесь мы не знали, что будет дальше». Положила открытку в книгу, которую собиралась дочитать дома.",
+        "До ужина оставалось время. Ник написал в общую переписку, не заблудились ли они. Алиса ответила, что в центре Akureyri очень трудно заблудиться, если каждые пять минут заглядывать в витрины. Эрик не стал спорить с таким описанием дня, и они пошли дальше по улице."
+      ],
+      "followingSourceRef": {
+        "chunk": 7,
+        "paragraph": 0
+      },
+      "followingSourceText": "Эрик вспомнил, как сестра в детстве заставляла всех играть в настольную игру, правила которой меняла по ходу партии. Алиса рассмеялась и предложила однажды попробовать сыграть так же. Это было приглашение, а не требование обещать дату.",
+      "renderedQuestion": "While their walk through the city is still going, what does Alice want to leave unhurried?",
+      "selectedOption": "A",
+      "resultingText": "They stopped by a window and silently looked at a wooden bird among the postcards. Alice liked that this small choice needed no explanation."
+    },
+    {
+      "episode": 8,
+      "scene": "S50",
+      "extraChoiceId": "S50-C90",
+      "routeIntent": "eric",
+      "routeStatus": "paused",
+      "priorRelevantChoices": {
+        "S26-C1": "A",
+        "S32-C1": "B"
+      },
+      "insertionSourceRef": {
+        "chunk": 5,
+        "paragraph": 0
+      },
+      "precedingSourceText": [
+        "Это было непривычно — не холодно, просто иначе. У неё было время понять, хочет ли она снова идти рядом с ним по собственному желанию.\n\nОна выбрала карточку с зимним окном, хотя сейчас в городе шёл дождь. На обратной стороне написала: «Здесь мы не знали, что будет дальше». Положила открытку в книгу, которую собиралась дочитать дома.",
+        "До ужина оставалось время. Ник написал в общую переписку, не заблудились ли они. Алиса ответила, что в центре Akureyri очень трудно заблудиться, если каждые пять минут заглядывать в витрины. Эрик не стал спорить с таким описанием дня, и они пошли дальше по улице."
+      ],
+      "followingSourceRef": {
+        "chunk": 7,
+        "paragraph": 0
+      },
+      "followingSourceText": "Эрик вспомнил, как сестра в детстве заставляла всех играть в настольную игру, правила которой меняла по ходу партии. Алиса рассмеялась и предложила однажды попробовать сыграть так же. Это было приглашение, а не требование обещать дату.",
+      "renderedQuestion": "While their walk through the city is still going, what does Alice want to leave unhurried?",
+      "selectedOption": "B",
+      "resultingText": "Alice suggested turning into the next street without giving the walk a final meaning. Eric agreed: not every good day had to become a plan at once."
+    },
+    {
+      "episode": 7,
+      "scene": "S27",
+      "extraChoiceId": "S27-C90",
+      "routeIntent": "nick",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "B"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 5
+      },
+      "precedingSourceText": [
+        "В середине работы они разошлись вдоль кромки тропы. Алиса на секунду осталась одна. Озеро почти не было видно: между ней и водой стояли мокрые невысокие деревья. Зато она слышала смех Ника, когда верёвка снова зацепилась за корень, и короткое «сюда» Дамира. Она приехала написать о красивой стране; полдня ей пришлось смотреть себе под ноги.",
+        "Инга остановилась рядом, оценила два собранных мешка и предложила сделать перерыв. Ник поднял камеру, но не включил её."
+      ],
+      "followingSourceRef": {
+        "chunk": 0,
+        "paragraph": 6
+      },
+      "followingSourceText": "— Я могу снять доски и наши руки? — спросил он. — Без лиц местных, если они не хотят.\n\n— Попроси сначала Ингу, — ответила Алиса. — И покажи ей потом, что получилось.",
+      "renderedQuestion": "Nick is holding the raised camera but has not switched it on. How will Alice use the short pause?",
+      "selectedOption": "A",
+      "resultingText": "Alice did not tell Nick what to say. After the hard work, everyone needed a few quiet seconds before anyone asked permission to film."
+    },
+    {
+      "episode": 7,
+      "scene": "S27",
+      "extraChoiceId": "S27-C90",
+      "routeIntent": "nick",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "B"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 5
+      },
+      "precedingSourceText": [
+        "В середине работы они разошлись вдоль кромки тропы. Алиса на секунду осталась одна. Озеро почти не было видно: между ней и водой стояли мокрые невысокие деревья. Зато она слышала смех Ника, когда верёвка снова зацепилась за корень, и короткое «сюда» Дамира. Она приехала написать о красивой стране; полдня ей пришлось смотреть себе под ноги.",
+        "Инга остановилась рядом, оценила два собранных мешка и предложила сделать перерыв. Ник поднял камеру, но не включил её."
+      ],
+      "followingSourceRef": {
+        "chunk": 0,
+        "paragraph": 6
+      },
+      "followingSourceText": "— Я могу снять доски и наши руки? — спросил он. — Без лиц местных, если они не хотят.\n\n— Попроси сначала Ингу, — ответила Алиса. — И покажи ей потом, что получилось.",
+      "renderedQuestion": "Nick is holding the raised camera but has not switched it on. How will Alice use the short pause?",
+      "selectedOption": "B",
+      "resultingText": "She looked at the wet gloves and the stacked boards. It mattered more not to hurry the conversation or turn a short break into a finished scene."
+    },
+    {
+      "episode": 7,
+      "scene": "S59",
+      "extraChoiceId": "S59-C90",
+      "routeIntent": "nick",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "B"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 3
+      },
+      "precedingSourceText": [
+        "— Выбираем песню для дороги, — объявил Ник, когда они доели. — Не самую любимую. Ту, от которой у водителя начнёт дёргаться глаз.\n\n— Тогда водитель лишит нас музыкальных прав, — сказал Эрик.",
+        "— У нас есть демократия."
+      ],
+      "followingSourceRef": {
+        "chunk": 0,
+        "paragraph": 4
+      },
+      "followingSourceText": "— И водитель с ключами.\n\nДамир предложил старую мелодию, которую все, кроме Эрика, знали с детства. Алиса поймала себя на том, что готова подсказать ему слова. В другой поездке это было бы так естественно, что она даже не заметила бы. Здесь она не стала угадывать, какой вечер им теперь положен после её решения.",
+      "renderedQuestion": "They are choosing the next song in the car. What will Alice suggest?",
+      "selectedOption": "A",
+      "resultingText": "Nick started the chorus. Damir unexpectedly knew the second verse, and the song collapsed into shared laughter."
+    },
+    {
+      "episode": 7,
+      "scene": "S59",
+      "extraChoiceId": "S59-C90",
+      "routeIntent": "nick",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "B"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 3
+      },
+      "precedingSourceText": [
+        "— Выбираем песню для дороги, — объявил Ник, когда они доели. — Не самую любимую. Ту, от которой у водителя начнёт дёргаться глаз.\n\n— Тогда водитель лишит нас музыкальных прав, — сказал Эрик.",
+        "— У нас есть демократия."
+      ],
+      "followingSourceRef": {
+        "chunk": 0,
+        "paragraph": 4
+      },
+      "followingSourceText": "— И водитель с ключами.\n\nДамир предложил старую мелодию, которую все, кроме Эрика, знали с детства. Алиса поймала себя на том, что готова подсказать ему слова. В другой поездке это было бы так естественно, что она даже не заметила бы. Здесь она не стала угадывать, какой вечер им теперь положен после её решения.",
+      "renderedQuestion": "They are choosing the next song in the car. What will Alice suggest?",
+      "selectedOption": "B",
+      "resultingText": "Alice played an unfamiliar melody. At first no one spoke; by the end Eric asked her to send him the title."
+    },
+    {
+      "episode": 7,
+      "scene": "S29",
+      "extraChoiceId": "S29-C90",
+      "routeIntent": "nick",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "B"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 3
+      },
+      "precedingSourceText": [
+        "— Здесь есть хорошая пауза перед тем, как ты его увидела, — сказал он. — Но она не моя. Я не хочу, чтобы ты потом узнала о ней из тизера.",
+        "Алиса просмотрела фрагмент дважды. На втором просмотре она заметила, что камера сняла ещё и его собственное лицо в отражении окна автобуса: Ник тоже выглядел растерянным. В первый день она думала, что он способен превратить в шутку любое событие. Сейчас он не пытался развеселить её.\n\n— А ты сохранишь копию себе? — спросила она."
+      ],
+      "followingSourceRef": {
+        "chunk": 0,
+        "paragraph": 4
+      },
+      "followingSourceText": "— Если скажешь удалить — нет. Мне не нужно объяснение.\n\nОн протянул телефон. Алиса могла не принимать решение за весь фильм; только за конкретные сорок секунд, в которых её жизнь случайно оказалась частью чужой работы.",
+      "renderedQuestion": "They have already watched the fragment twice. What does Alice need to clarify before deciding what happens to the forty seconds?",
+      "selectedOption": "A",
+      "resultingText": "Alice asked him to show which versions and source files he counted as copies. She needed to understand the decision's boundaries before choosing the fragment's fate."
+    },
+    {
+      "episode": 7,
+      "scene": "S29",
+      "extraChoiceId": "S29-C90",
+      "routeIntent": "nick",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "B"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 3
+      },
+      "precedingSourceText": [
+        "— Здесь есть хорошая пауза перед тем, как ты его увидела, — сказал он. — Но она не моя. Я не хочу, чтобы ты потом узнала о ней из тизера.",
+        "Алиса просмотрела фрагмент дважды. На втором просмотре она заметила, что камера сняла ещё и его собственное лицо в отражении окна автобуса: Ник тоже выглядел растерянным. В первый день она думала, что он способен превратить в шутку любое событие. Сейчас он не пытался развеселить её.\n\n— А ты сохранишь копию себе? — спросила она."
+      ],
+      "followingSourceRef": {
+        "chunk": 0,
+        "paragraph": 4
+      },
+      "followingSourceText": "— Если скажешь удалить — нет. Мне не нужно объяснение.\n\nОн протянул телефон. Алиса могла не принимать решение за весь фильм; только за конкретные сорок секунд, в которых её жизнь случайно оказалась частью чужой работы.",
+      "renderedQuestion": "They have already watched the fragment twice. What does Alice need to clarify before deciding what happens to the forty seconds?",
+      "selectedOption": "B",
+      "resultingText": "She asked whether only the edit or the source file would disappear. First she needed exact information, not a decision about the whole film."
+    },
+    {
+      "episode": 7,
+      "scene": "S52",
+      "extraChoiceId": "S52-C90",
+      "routeIntent": "nick",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "B"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 5
+      },
+      "precedingSourceText": [
+        "У почты Ник признался, что иногда легко придумывает квесты из чужих неудобств, потому что так проще переждать собственное раздражение. Алиса посмотрела на его мокрые волосы — он не надел капюшон и теперь мёрз не меньше её.\n\n— Ты можешь просто злиться, — сказала она. — Перчатка от этого не исчезнет окончательно.",
+        "— Могу. Но тогда у тебя будет очень скучное свидание.\n\n— Это свидание?"
+      ],
+      "followingSourceRef": {
+        "chunk": 0,
+        "paragraph": 6
+      },
+      "followingSourceText": "Ник остановился. Он явно не собирался говорить это вслух, и впервые за день у него не нашлось готовой шутки.\n\nОни обнаружили перчатку у двери мастерской, где Ник вчера помогал заносить тяжёлую коробку. Она лежала на подоконнике; кто-то аккуратно расправил пальцы, чтобы ткань высохла.",
+      "renderedQuestion": "The glove is still missing, and Nick has awkwardly called the search a date. What will Alice say?",
+      "selectedOption": "A",
+      "resultingText": "Alice looked at Nick's wet hair and checked the entrances where they had already searched. The joke hung between them, but the glove still needed finding."
+    },
+    {
+      "episode": 7,
+      "scene": "S52",
+      "extraChoiceId": "S52-C90",
+      "routeIntent": "nick",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "B"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 5
+      },
+      "precedingSourceText": [
+        "У почты Ник признался, что иногда легко придумывает квесты из чужих неудобств, потому что так проще переждать собственное раздражение. Алиса посмотрела на его мокрые волосы — он не надел капюшон и теперь мёрз не меньше её.\n\n— Ты можешь просто злиться, — сказала она. — Перчатка от этого не исчезнет окончательно.",
+        "— Могу. Но тогда у тебя будет очень скучное свидание.\n\n— Это свидание?"
+      ],
+      "followingSourceRef": {
+        "chunk": 0,
+        "paragraph": 6
+      },
+      "followingSourceText": "Ник остановился. Он явно не собирался говорить это вслух, и впервые за день у него не нашлось готовой шутки.\n\nОни обнаружили перчатку у двери мастерской, где Ник вчера помогал заносить тяжёлую коробку. Она лежала на подоконнике; кто-то аккуратно расправил пальцы, чтобы ткань высохла.",
+      "renderedQuestion": "The glove is still missing, and Nick has awkwardly called the search a date. What will Alice say?",
+      "selectedOption": "B",
+      "resultingText": "She gave a small smile at his failed joke and suggested checking the next stop. They could name the walk later; the lost thing could not wait."
+    },
+    {
+      "episode": 8,
+      "scene": "S33",
+      "extraChoiceId": "S33-C90",
+      "routeIntent": "nick",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "B"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 4
+      },
+      "precedingSourceText": [
+        "Продюсер был раздражён; новая версия понадобилась к вечеру.\n\n— Я думал, что вырезал всё личное, — сказал Ник, когда положил трубку.",
+        "— Ты думал. А я просила показать мне материал до отправки. Не весь фильм, а то, что касается меня."
+      ],
+      "followingSourceRef": {
+        "chunk": 0,
+        "paragraph": 5
+      },
+      "followingSourceText": "Он хотел объяснить, почему спешил. На столе лежала распечатка нового предложения о работе: продюсер видел в нём режиссёра следующего проекта. Ник перевернул лист текстом вниз.\n\n— Я отправил не туда взгляд, — сказал он после паузы. — Я смотрел на срок и пропустил твой голос.",
+      "renderedQuestion": "Access to the teaser is already closed and the shared file is deleted. What does Alice need to understand before choosing?",
+      "selectedOption": "A",
+      "resultingText": "Alice separated the file's repair from the question of trust. Before choosing, she needed to know whether she could continue if her boundaries were respected, not merely whether the file had been deleted."
+    },
+    {
+      "episode": 8,
+      "scene": "S33",
+      "extraChoiceId": "S33-C90",
+      "routeIntent": "nick",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "B"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 4
+      },
+      "precedingSourceText": [
+        "Продюсер был раздражён; новая версия понадобилась к вечеру.\n\n— Я думал, что вырезал всё личное, — сказал Ник, когда положил трубку.",
+        "— Ты думал. А я просила показать мне материал до отправки. Не весь фильм, а то, что касается меня."
+      ],
+      "followingSourceRef": {
+        "chunk": 0,
+        "paragraph": 5
+      },
+      "followingSourceText": "Он хотел объяснить, почему спешил. На столе лежала распечатка нового предложения о работе: продюсер видел в нём режиссёра следующего проекта. Ник перевернул лист текстом вниз.\n\n— Я отправил не туда взгляд, — сказал он после паузы. — Я смотрел на срок и пропустил твой голос.",
+      "renderedQuestion": "Access to the teaser is already closed and the shared file is deleted. What does Alice need to understand before choosing?",
+      "selectedOption": "B",
+      "resultingText": "She set a boundary for herself: the decision had to concern the romantic route, not repeat the autopsy of a file that was already gone. Nick could not choose it for her."
+    },
+    {
+      "episode": 8,
+      "scene": "S53",
+      "extraChoiceId": "S53-C90",
+      "routeIntent": "nick",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "B",
+        "S33-C1": "A"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 2
+      },
+      "precedingSourceText": [
+        "После бассейна они вышли в пекарню. Ник долго выбирал между двумя одинаково большими булочками и взял ту, где было больше корицы. Он признался, что ему нравится обычное утро, но он часто не умеет оставаться в нём: начинает искать следующее событие, словно без него исчезнет сам.",
+        "Алиса предложила съесть булочку, пока она тёплая, и поговорить об этом потом. Он согласился и действительно не достал телефон."
+      ],
+      "followingSourceRef": {
+        "chunk": 3,
+        "paragraph": 0
+      },
+      "followingSourceText": "Они долго выбирали открытку с самым странным изображением города, затем отправили её сестре Ника. На улице Алиса поняла, что не запомнила половину вывесок. Ей это понравилось: не каждый день обязан стать чьим-то материалом.",
+      "renderedQuestion": "After a calm day, what does Alice want to understand for herself?",
+      "selectedOption": "A",
+      "resultingText": "Alice noticed that a calm day did not have to become a romantic conclusion. She did not turn that quiet into a promise."
+    },
+    {
+      "episode": 8,
+      "scene": "S53",
+      "extraChoiceId": "S53-C90",
+      "routeIntent": "nick",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "B",
+        "S33-C1": "A"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 2
+      },
+      "precedingSourceText": [
+        "После бассейна они вышли в пекарню. Ник долго выбирал между двумя одинаково большими булочками и взял ту, где было больше корицы. Он признался, что ему нравится обычное утро, но он часто не умеет оставаться в нём: начинает искать следующее событие, словно без него исчезнет сам.",
+        "Алиса предложила съесть булочку, пока она тёплая, и поговорить об этом потом. Он согласился и действительно не достал телефон."
+      ],
+      "followingSourceRef": {
+        "chunk": 3,
+        "paragraph": 0
+      },
+      "followingSourceText": "Они долго выбирали открытку с самым странным изображением города, затем отправили её сестре Ника. На улице Алиса поняла, что не запомнила половину вывесок. Ей это понравилось: не каждый день обязан стать чьим-то материалом.",
+      "renderedQuestion": "After a calm day, what does Alice want to understand for herself?",
+      "selectedOption": "B",
+      "resultingText": "A kind conversation did not require a new definition of their relationship. Alice could take her time and not turn closeness into an obligation."
+    },
+    {
+      "episode": 8,
+      "scene": "S53",
+      "extraChoiceId": "S53-C90",
+      "routeIntent": "nick",
+      "routeStatus": "paused",
+      "priorRelevantChoices": {
+        "S26-C1": "B",
+        "S33-C1": "B"
+      },
+      "insertionSourceRef": {
+        "chunk": 5,
+        "paragraph": 0
+      },
+      "precedingSourceText": [
+        "Оказалось, паузу нельзя сыграть как романтическую сцену, и Алиса не стала пытаться.\n\nОни долго выбирали открытку с самым странным изображением города, затем отправили её сестре Ника. На улице Алиса поняла, что не запомнила половину вывесок. Ей это понравилось: не каждый день обязан стать чьим-то материалом.",
+        "Ночью Ник прислал ей фотографию пустой карты памяти с короткой подписью: «Сегодня ничего не снял». Алиса ответила снимком обёртки от коричной булочки. Он поставил под ответом сердечко и больше ничего не написал."
+      ],
+      "followingSourceRef": {
+        "chunk": 7,
+        "paragraph": 0
+      },
+      "followingSourceText": "— Без расписания съёмок, — добавила Алиса. Ник на секунду перестал улыбаться, а потом предложил конкретную кофейню возле её редакции. Они не бронировали столик; ей понравилось, что он не сделал из приглашения шутку.",
+      "renderedQuestion": "After a calm day, what does Alice want to understand for herself?",
+      "selectedOption": "A",
+      "resultingText": "Alice noticed that a calm day did not have to become a romantic conclusion. She did not turn that quiet into a promise."
+    },
+    {
+      "episode": 8,
+      "scene": "S53",
+      "extraChoiceId": "S53-C90",
+      "routeIntent": "nick",
+      "routeStatus": "paused",
+      "priorRelevantChoices": {
+        "S26-C1": "B",
+        "S33-C1": "B"
+      },
+      "insertionSourceRef": {
+        "chunk": 5,
+        "paragraph": 0
+      },
+      "precedingSourceText": [
+        "Оказалось, паузу нельзя сыграть как романтическую сцену, и Алиса не стала пытаться.\n\nОни долго выбирали открытку с самым странным изображением города, затем отправили её сестре Ника. На улице Алиса поняла, что не запомнила половину вывесок. Ей это понравилось: не каждый день обязан стать чьим-то материалом.",
+        "Ночью Ник прислал ей фотографию пустой карты памяти с короткой подписью: «Сегодня ничего не снял». Алиса ответила снимком обёртки от коричной булочки. Он поставил под ответом сердечко и больше ничего не написал."
+      ],
+      "followingSourceRef": {
+        "chunk": 7,
+        "paragraph": 0
+      },
+      "followingSourceText": "— Без расписания съёмок, — добавила Алиса. Ник на секунду перестал улыбаться, а потом предложил конкретную кофейню возле её редакции. Они не бронировали столик; ей понравилось, что он не сделал из приглашения шутку.",
+      "renderedQuestion": "After a calm day, what does Alice want to understand for herself?",
+      "selectedOption": "B",
+      "resultingText": "A kind conversation did not require a new definition of their relationship. Alice could take her time and not turn closeness into an obligation."
+    },
+    {
+      "episode": 7,
+      "scene": "S27",
+      "extraChoiceId": "S27-C90",
+      "routeIntent": "damir",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "C"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 5
+      },
+      "precedingSourceText": [
+        "В середине работы они разошлись вдоль кромки тропы. Алиса на секунду осталась одна. Озеро почти не было видно: между ней и водой стояли мокрые невысокие деревья. Зато она слышала смех Ника, когда верёвка снова зацепилась за корень, и короткое «сюда» Дамира. Она приехала написать о красивой стране; полдня ей пришлось смотреть себе под ноги.",
+        "Инга остановилась рядом, оценила два собранных мешка и предложила сделать перерыв. Ник поднял камеру, но не включил её."
+      ],
+      "followingSourceRef": {
+        "chunk": 0,
+        "paragraph": 6
+      },
+      "followingSourceText": "— Я могу снять доски и наши руки? — спросил он. — Без лиц местных, если они не хотят.\n\n— Попроси сначала Ингу, — ответила Алиса. — И покажи ей потом, что получилось.",
+      "renderedQuestion": "Nick is holding the raised camera but has not switched it on. How will Alice use the short pause?",
+      "selectedOption": "A",
+      "resultingText": "Alice did not tell Nick what to say. After the hard work, everyone needed a few quiet seconds before anyone asked permission to film."
+    },
+    {
+      "episode": 7,
+      "scene": "S27",
+      "extraChoiceId": "S27-C90",
+      "routeIntent": "damir",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "C"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 5
+      },
+      "precedingSourceText": [
+        "В середине работы они разошлись вдоль кромки тропы. Алиса на секунду осталась одна. Озеро почти не было видно: между ней и водой стояли мокрые невысокие деревья. Зато она слышала смех Ника, когда верёвка снова зацепилась за корень, и короткое «сюда» Дамира. Она приехала написать о красивой стране; полдня ей пришлось смотреть себе под ноги.",
+        "Инга остановилась рядом, оценила два собранных мешка и предложила сделать перерыв. Ник поднял камеру, но не включил её."
+      ],
+      "followingSourceRef": {
+        "chunk": 0,
+        "paragraph": 6
+      },
+      "followingSourceText": "— Я могу снять доски и наши руки? — спросил он. — Без лиц местных, если они не хотят.\n\n— Попроси сначала Ингу, — ответила Алиса. — И покажи ей потом, что получилось.",
+      "renderedQuestion": "Nick is holding the raised camera but has not switched it on. How will Alice use the short pause?",
+      "selectedOption": "B",
+      "resultingText": "She looked at the wet gloves and the stacked boards. It mattered more not to hurry the conversation or turn a short break into a finished scene."
+    },
+    {
+      "episode": 7,
+      "scene": "S59",
+      "extraChoiceId": "S59-C90",
+      "routeIntent": "damir",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "C"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 3
+      },
+      "precedingSourceText": [
+        "— Выбираем песню для дороги, — объявил Ник, когда они доели. — Не самую любимую. Ту, от которой у водителя начнёт дёргаться глаз.\n\n— Тогда водитель лишит нас музыкальных прав, — сказал Эрик.",
+        "— У нас есть демократия."
+      ],
+      "followingSourceRef": {
+        "chunk": 0,
+        "paragraph": 4
+      },
+      "followingSourceText": "— И водитель с ключами.\n\nДамир предложил старую мелодию, которую все, кроме Эрика, знали с детства. Алиса поймала себя на том, что готова подсказать ему слова. В другой поездке это было бы так естественно, что она даже не заметила бы. Здесь она не стала угадывать, какой вечер им теперь положен после её решения.",
+      "renderedQuestion": "They are choosing the next song in the car. What will Alice suggest?",
+      "selectedOption": "A",
+      "resultingText": "Nick started the chorus. Damir unexpectedly knew the second verse, and the song collapsed into shared laughter."
+    },
+    {
+      "episode": 7,
+      "scene": "S59",
+      "extraChoiceId": "S59-C90",
+      "routeIntent": "damir",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "C"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 3
+      },
+      "precedingSourceText": [
+        "— Выбираем песню для дороги, — объявил Ник, когда они доели. — Не самую любимую. Ту, от которой у водителя начнёт дёргаться глаз.\n\n— Тогда водитель лишит нас музыкальных прав, — сказал Эрик.",
+        "— У нас есть демократия."
+      ],
+      "followingSourceRef": {
+        "chunk": 0,
+        "paragraph": 4
+      },
+      "followingSourceText": "— И водитель с ключами.\n\nДамир предложил старую мелодию, которую все, кроме Эрика, знали с детства. Алиса поймала себя на том, что готова подсказать ему слова. В другой поездке это было бы так естественно, что она даже не заметила бы. Здесь она не стала угадывать, какой вечер им теперь положен после её решения.",
+      "renderedQuestion": "They are choosing the next song in the car. What will Alice suggest?",
+      "selectedOption": "B",
+      "resultingText": "Alice played an unfamiliar melody. At first no one spoke; by the end Eric asked her to send him the title."
+    },
+    {
+      "episode": 7,
+      "scene": "S30",
+      "extraChoiceId": "S30-C90",
+      "routeIntent": "damir",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "C"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 5
+      },
+      "precedingSourceText": [
+        "Алиса взяла ложку, хотя суп был ещё слишком горячим. Она помнила их последний совместный вечер два года назад, когда Дамир сообщил о готовом контракте и спросил, сможет ли она приехать через месяц. Тогда ей понадобились две секунды, чтобы понять: вопрос задан после решения, а не до него.",
+        "Сейчас перед ним стоял не контракт, а открытое письмо.\n\n— Если тебе предложат работу, ты захочешь поехать? — спросила она."
+      ],
+      "followingSourceRef": {
+        "chunk": 0,
+        "paragraph": 6
+      },
+      "followingSourceText": "— Может быть. Но я не хочу, чтобы ты отвечала сегодня. Мы можем поговорить об этом, когда у меня будет что-то кроме письма.",
+      "renderedQuestion": "Damir has just told Alice about the possible interview. What does she need from his answer?",
+      "selectedOption": "A",
+      "resultingText": "Alice asked him not to soften the answer for her. She needed to hear that Damir did not yet know whether he would take the possible job or what he wanted himself."
+    },
+    {
+      "episode": 7,
+      "scene": "S30",
+      "extraChoiceId": "S30-C90",
+      "routeIntent": "damir",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "C"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 5
+      },
+      "precedingSourceText": [
+        "Алиса взяла ложку, хотя суп был ещё слишком горячим. Она помнила их последний совместный вечер два года назад, когда Дамир сообщил о готовом контракте и спросил, сможет ли она приехать через месяц. Тогда ей понадобились две секунды, чтобы понять: вопрос задан после решения, а не до него.",
+        "Сейчас перед ним стоял не контракт, а открытое письмо.\n\n— Если тебе предложат работу, ты захочешь поехать? — спросила она."
+      ],
+      "followingSourceRef": {
+        "chunk": 0,
+        "paragraph": 6
+      },
+      "followingSourceText": "— Может быть. Но я не хочу, чтобы ты отвечала сегодня. Мы можем поговорить об этом, когда у меня будет что-то кроме письма.",
+      "renderedQuestion": "Damir has just told Alice about the possible interview. What does she need from his answer?",
+      "selectedOption": "B",
+      "resultingText": "She asked what was already known about the place and the timing of the conversation. Alice needed information, not a ready-made decision about the two of them."
+    },
+    {
+      "episode": 7,
+      "scene": "S55",
+      "extraChoiceId": "S55-C90",
+      "routeIntent": "damir",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "C"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 4
+      },
+      "precedingSourceText": [
+        "Алиса давно не видела Дамира растерянным в ситуации, которую нельзя решить знаниями и скоростью. Он серьёзно слушал инструктора, попробовал движение, получил в ответ полный покой и тихо выругался. Алиса рассмеялась. Он обернулся к ней и сам засмеялся, а потом конь наконец сделал шаг.",
+        "На остановке инструктор разрешила им снять шлемы и выпить воды. Алиса обнаружила, что по-прежнему улыбается. Дамир вытер со лба пот рукавом и сказал, что на работе ему не приходится просить пациентов объяснить, куда они хотят идти, но здесь Шум явно считал иначе."
+      ],
+      "followingSourceRef": {
+        "chunk": 0,
+        "paragraph": 5
+      },
+      "followingSourceText": "— У него есть преимущество, — ответила Алиса. — Он может притвориться, что не понял твой вопрос.\n\n— Иногда я тоже так делал.",
+      "renderedQuestion": "After the awkward, funny moment with Noise, they have stopped for water. How will Alice hold on to it?",
+      "selectedOption": "A",
+      "resultingText": "Alice laughed again at their clumsy attempt to understand the horse. Damir smiled: water and a short pause brought the ordinary conversation back."
+    },
+    {
+      "episode": 7,
+      "scene": "S55",
+      "extraChoiceId": "S55-C90",
+      "routeIntent": "damir",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "C"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 4
+      },
+      "precedingSourceText": [
+        "Алиса давно не видела Дамира растерянным в ситуации, которую нельзя решить знаниями и скоростью. Он серьёзно слушал инструктора, попробовал движение, получил в ответ полный покой и тихо выругался. Алиса рассмеялась. Он обернулся к ней и сам засмеялся, а потом конь наконец сделал шаг.",
+        "На остановке инструктор разрешила им снять шлемы и выпить воды. Алиса обнаружила, что по-прежнему улыбается. Дамир вытер со лба пот рукавом и сказал, что на работе ему не приходится просить пациентов объяснить, куда они хотят идти, но здесь Шум явно считал иначе."
+      ],
+      "followingSourceRef": {
+        "chunk": 0,
+        "paragraph": 5
+      },
+      "followingSourceText": "— У него есть преимущество, — ответила Алиса. — Он может притвориться, что не понял твой вопрос.\n\n— Иногда я тоже так делал.",
+      "renderedQuestion": "After the awkward, funny moment with Noise, they have stopped for water. How will Alice hold on to it?",
+      "selectedOption": "B",
+      "resultingText": "She said that today they had guessed more than they knew. Damir nodded and set his cup down without turning it into another lesson."
+    },
+    {
+      "episode": 8,
+      "scene": "S34",
+      "extraChoiceId": "S34-C90",
+      "routeIntent": "damir",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "C"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 5
+      },
+      "precedingSourceText": [
+        "У входа в гостиницу она увидела его с пакетом из аптеки. Он забирал пластырь для Эрика, натёршего пятку на прогулке. Они поздоровались почти как случайные знакомые. Алиса могла пройти мимо, но остановилась сама.\n\n— Я испугалась, — сказала она. — Не тебя сегодня. Того, как быстро мне снова стало хорошо рядом с тобой.",
+        "Дамир прижал пакет к боку."
+      ],
+      "followingSourceRef": {
+        "chunk": 0,
+        "paragraph": 6
+      },
+      "followingSourceText": "— Я не знаю, что с этим делать за тебя.\n\n— Я тоже. И не хочу, чтобы ты опять стал человеком, на которого удобно злиться.",
+      "renderedQuestion": "Alice has admitted that she became frightened after cancelling dinner herself. What will she hold on to before choosing?",
+      "selectedOption": "A",
+      "resultingText": "She named it precisely to herself: she had cancelled dinner, and the fear came afterwards. Now she had to decide what to do with that truth without making Damir responsible for it."
+    },
+    {
+      "episode": 8,
+      "scene": "S34",
+      "extraChoiceId": "S34-C90",
+      "routeIntent": "damir",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "C"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 5
+      },
+      "precedingSourceText": [
+        "У входа в гостиницу она увидела его с пакетом из аптеки. Он забирал пластырь для Эрика, натёршего пятку на прогулке. Они поздоровались почти как случайные знакомые. Алиса могла пройти мимо, но остановилась сама.\n\n— Я испугалась, — сказала она. — Не тебя сегодня. Того, как быстро мне снова стало хорошо рядом с тобой.",
+        "Дамир прижал пакет к боку."
+      ],
+      "followingSourceRef": {
+        "chunk": 0,
+        "paragraph": 6
+      },
+      "followingSourceText": "— Я не знаю, что с этим делать за тебя.\n\n— Я тоже. И не хочу, чтобы ты опять стал человеком, на которого удобно злиться.",
+      "renderedQuestion": "Alice has admitted that she became frightened after cancelling dinner herself. What will she hold on to before choosing?",
+      "selectedOption": "B",
+      "resultingText": "Alice did not ask Damir to fix her fear. He could state his boundaries, but the choice to continue, pause, or end remained hers."
+    },
+    {
+      "episode": 8,
+      "scene": "S56",
+      "extraChoiceId": "S56-C90",
+      "routeIntent": "damir",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "C",
+        "S34-C1": "A"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 2
+      },
+      "precedingSourceText": [
+        "Он ответил, что не знает, но хочет остаться до конца.",
+        "Когда началась медленная композиция, Дамир протянул ей руку. Они вышли на свободное место у стены. Алиса сама положила ладонь ему на плечо. Его движения были неуверенными; за два года они разучились угадывать шаг друг друга, и это неожиданно облегчило танец. Не нужно было воспроизводить то, как они двигались раньше."
+      ],
+      "followingSourceRef": {
+        "chunk": 3,
+        "paragraph": 0
+      },
+      "followingSourceText": "Алиса не смотрела на время. Она слушала ударные, иногда ловила взгляд Дамира и думала о том, что можно узнать знакомого человека без необходимости вернуть прежний вечер.",
+      "renderedQuestion": "What can Alice keep for herself after this evening?",
+      "selectedOption": "A",
+      "resultingText": "Alice held on to the new song and did not return it to the way they had danced before. The music could remain shared without requiring their old closeness."
+    },
+    {
+      "episode": 8,
+      "scene": "S56",
+      "extraChoiceId": "S56-C90",
+      "routeIntent": "damir",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "C",
+        "S34-C1": "A"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 2
+      },
+      "precedingSourceText": [
+        "Он ответил, что не знает, но хочет остаться до конца.",
+        "Когда началась медленная композиция, Дамир протянул ей руку. Они вышли на свободное место у стены. Алиса сама положила ладонь ему на плечо. Его движения были неуверенными; за два года они разучились угадывать шаг друг друга, и это неожиданно облегчило танец. Не нужно было воспроизводить то, как они двигались раньше."
+      ],
+      "followingSourceRef": {
+        "chunk": 3,
+        "paragraph": 0
+      },
+      "followingSourceText": "Алиса не смотрела на время. Она слушала ударные, иногда ловила взгляд Дамира и думала о том, что можно узнать знакомого человека без необходимости вернуть прежний вечер.",
+      "renderedQuestion": "What can Alice keep for herself after this evening?",
+      "selectedOption": "B",
+      "resultingText": "She did not turn this impression into punishment or a promise. One good evening did not have to decide their story."
+    },
+    {
+      "episode": 8,
+      "scene": "S56",
+      "extraChoiceId": "S56-C90",
+      "routeIntent": "damir",
+      "routeStatus": "paused",
+      "priorRelevantChoices": {
+        "S26-C1": "C",
+        "S34-C1": "B"
+      },
+      "insertionSourceRef": {
+        "chunk": 5,
+        "paragraph": 0
+      },
+      "precedingSourceText": [
+        "Алиса была благодарна, что он не устроил из общей поездки испытание её решения.\n\nАлиса не смотрела на время. Она слушала ударные, иногда ловила взгляд Дамира и думала о том, что можно узнать знакомого человека без необходимости вернуть прежний вечер.",
+        "У дверей гостиницы они задержались всего на минуту. Дамир сказал, что ему понравилась песня, хотя он не сможет вспомнить её названия. Алиса ответила, что, может быть, и не нужно. Она поднялась к себе, прислушиваясь к музыке, которая ещё долетала с улицы."
+      ],
+      "followingSourceRef": {
+        "chunk": 7,
+        "paragraph": 0
+      },
+      "followingSourceText": "Алиса предложила попробовать что-нибудь, чего они оба раньше не ели. Дамир показал вывеску маленького кафе, мимо которого проходил утром. Они договорились зайти туда, если группа не поменяет план.",
+      "renderedQuestion": "What can Alice keep for herself after this evening?",
+      "selectedOption": "A",
+      "resultingText": "Alice held on to the new song and did not return it to the way they had danced before. The music could remain shared without requiring their old closeness."
+    },
+    {
+      "episode": 8,
+      "scene": "S56",
+      "extraChoiceId": "S56-C90",
+      "routeIntent": "damir",
+      "routeStatus": "paused",
+      "priorRelevantChoices": {
+        "S26-C1": "C",
+        "S34-C1": "B"
+      },
+      "insertionSourceRef": {
+        "chunk": 5,
+        "paragraph": 0
+      },
+      "precedingSourceText": [
+        "Алиса была благодарна, что он не устроил из общей поездки испытание её решения.\n\nАлиса не смотрела на время. Она слушала ударные, иногда ловила взгляд Дамира и думала о том, что можно узнать знакомого человека без необходимости вернуть прежний вечер.",
+        "У дверей гостиницы они задержались всего на минуту. Дамир сказал, что ему понравилась песня, хотя он не сможет вспомнить её названия. Алиса ответила, что, может быть, и не нужно. Она поднялась к себе, прислушиваясь к музыке, которая ещё долетала с улицы."
+      ],
+      "followingSourceRef": {
+        "chunk": 7,
+        "paragraph": 0
+      },
+      "followingSourceText": "Алиса предложила попробовать что-нибудь, чего они оба раньше не ели. Дамир показал вывеску маленького кафе, мимо которого проходил утром. Они договорились зайти туда, если группа не поменяет план.",
+      "renderedQuestion": "What can Alice keep for herself after this evening?",
+      "selectedOption": "B",
+      "resultingText": "She did not turn this impression into punishment or a promise. One good evening did not have to decide their story."
+    },
+    {
+      "episode": 7,
+      "scene": "S27",
+      "extraChoiceId": "S27-C90",
+      "routeIntent": "alice",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "D"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 5
+      },
+      "precedingSourceText": [
+        "В середине работы они разошлись вдоль кромки тропы. Алиса на секунду осталась одна. Озеро почти не было видно: между ней и водой стояли мокрые невысокие деревья. Зато она слышала смех Ника, когда верёвка снова зацепилась за корень, и короткое «сюда» Дамира. Она приехала написать о красивой стране; полдня ей пришлось смотреть себе под ноги.",
+        "Инга остановилась рядом, оценила два собранных мешка и предложила сделать перерыв. Ник поднял камеру, но не включил её."
+      ],
+      "followingSourceRef": {
+        "chunk": 0,
+        "paragraph": 6
+      },
+      "followingSourceText": "— Я могу снять доски и наши руки? — спросил он. — Без лиц местных, если они не хотят.\n\n— Попроси сначала Ингу, — ответила Алиса. — И покажи ей потом, что получилось.",
+      "renderedQuestion": "Nick is holding the raised camera but has not switched it on. How will Alice use the short pause?",
+      "selectedOption": "A",
+      "resultingText": "Alice did not tell Nick what to say. After the hard work, everyone needed a few quiet seconds before anyone asked permission to film."
+    },
+    {
+      "episode": 7,
+      "scene": "S27",
+      "extraChoiceId": "S27-C90",
+      "routeIntent": "alice",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "D"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 5
+      },
+      "precedingSourceText": [
+        "В середине работы они разошлись вдоль кромки тропы. Алиса на секунду осталась одна. Озеро почти не было видно: между ней и водой стояли мокрые невысокие деревья. Зато она слышала смех Ника, когда верёвка снова зацепилась за корень, и короткое «сюда» Дамира. Она приехала написать о красивой стране; полдня ей пришлось смотреть себе под ноги.",
+        "Инга остановилась рядом, оценила два собранных мешка и предложила сделать перерыв. Ник поднял камеру, но не включил её."
+      ],
+      "followingSourceRef": {
+        "chunk": 0,
+        "paragraph": 6
+      },
+      "followingSourceText": "— Я могу снять доски и наши руки? — спросил он. — Без лиц местных, если они не хотят.\n\n— Попроси сначала Ингу, — ответила Алиса. — И покажи ей потом, что получилось.",
+      "renderedQuestion": "Nick is holding the raised camera but has not switched it on. How will Alice use the short pause?",
+      "selectedOption": "B",
+      "resultingText": "She looked at the wet gloves and the stacked boards. It mattered more not to hurry the conversation or turn a short break into a finished scene."
+    },
+    {
+      "episode": 7,
+      "scene": "S59",
+      "extraChoiceId": "S59-C90",
+      "routeIntent": "alice",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "D"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 3
+      },
+      "precedingSourceText": [
+        "— Выбираем песню для дороги, — объявил Ник, когда они доели. — Не самую любимую. Ту, от которой у водителя начнёт дёргаться глаз.\n\n— Тогда водитель лишит нас музыкальных прав, — сказал Эрик.",
+        "— У нас есть демократия."
+      ],
+      "followingSourceRef": {
+        "chunk": 0,
+        "paragraph": 4
+      },
+      "followingSourceText": "— И водитель с ключами.\n\nДамир предложил старую мелодию, которую все, кроме Эрика, знали с детства. Алиса поймала себя на том, что готова подсказать ему слова. В другой поездке это было бы так естественно, что она даже не заметила бы. Здесь она не стала угадывать, какой вечер им теперь положен после её решения.",
+      "renderedQuestion": "They are choosing the next song in the car. What will Alice suggest?",
+      "selectedOption": "A",
+      "resultingText": "Nick started the chorus. Damir unexpectedly knew the second verse, and the song collapsed into shared laughter."
+    },
+    {
+      "episode": 7,
+      "scene": "S59",
+      "extraChoiceId": "S59-C90",
+      "routeIntent": "alice",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "D"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 3
+      },
+      "precedingSourceText": [
+        "— Выбираем песню для дороги, — объявил Ник, когда они доели. — Не самую любимую. Ту, от которой у водителя начнёт дёргаться глаз.\n\n— Тогда водитель лишит нас музыкальных прав, — сказал Эрик.",
+        "— У нас есть демократия."
+      ],
+      "followingSourceRef": {
+        "chunk": 0,
+        "paragraph": 4
+      },
+      "followingSourceText": "— И водитель с ключами.\n\nДамир предложил старую мелодию, которую все, кроме Эрика, знали с детства. Алиса поймала себя на том, что готова подсказать ему слова. В другой поездке это было бы так естественно, что она даже не заметила бы. Здесь она не стала угадывать, какой вечер им теперь положен после её решения.",
+      "renderedQuestion": "They are choosing the next song in the car. What will Alice suggest?",
+      "selectedOption": "B",
+      "resultingText": "Alice played an unfamiliar melody. At first no one spoke; by the end Eric asked her to send him the title."
+    },
+    {
+      "episode": 7,
+      "scene": "S31",
+      "extraChoiceId": "S31-C90",
+      "routeIntent": "alice",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "D"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 4
+      },
+      "precedingSourceText": [
+        "— У тебя есть человек, за которым интересно следить? — спросила Марина. — Не виды, не отели. Человек.\n\n— Есть несколько. Но я не уверена, что хочу писать о них так, будто они приехали сюда ради моей истории.",
+        "— Ты журналистка. Люди обычно не приезжают ради твоей статьи.\n\nАлиса усмехнулась: Марина не была злодейкой, она просто хотела материал с началом и концом. На столе рядом лежала фотография настила, которую прислала Инга. Алиса повернула телефон так, чтобы Марина увидела снимок."
+      ],
+      "followingSourceRef": {
+        "chunk": 0,
+        "paragraph": 5
+      },
+      "followingSourceText": "— Я хочу написать о том, кто остаётся, когда туристы уезжают. Мы помогли час, а Инга придёт туда ещё завтра. Это ведь тоже человек, за которым можно следить. Только её надо спросить, согласна ли она.",
+      "renderedQuestion": "Marina is waiting for the outline, and Alice has already shown her the picture of the repaired path. Which working principle will she test before choosing the article's form?",
+      "selectedOption": "A",
+      "resultingText": "Alice marked which details she had seen herself and which could be used only with permission. That would let the article include Inga without closing the road to her."
+    },
+    {
+      "episode": 7,
+      "scene": "S31",
+      "extraChoiceId": "S31-C90",
+      "routeIntent": "alice",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "D"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 4
+      },
+      "precedingSourceText": [
+        "— У тебя есть человек, за которым интересно следить? — спросила Марина. — Не виды, не отели. Человек.\n\n— Есть несколько. Но я не уверена, что хочу писать о них так, будто они приехали сюда ради моей истории.",
+        "— Ты журналистка. Люди обычно не приезжают ради твоей статьи.\n\nАлиса усмехнулась: Марина не была злодейкой, она просто хотела материал с началом и концом. На столе рядом лежала фотография настила, которую прислала Инга. Алиса повернула телефон так, чтобы Марина увидела снимок."
+      ],
+      "followingSourceRef": {
+        "chunk": 0,
+        "paragraph": 5
+      },
+      "followingSourceText": "— Я хочу написать о том, кто остаётся, когда туристы уезжают. Мы помогли час, а Инга придёт туда ещё завтра. Это ведь тоже человек, за которым можно следить. Только её надо спросить, согласна ли она.",
+      "renderedQuestion": "Marina is waiting for the outline, and Alice has already shown her the picture of the repaired path. Which working principle will she test before choosing the article's form?",
+      "selectedOption": "B",
+      "resultingText": "She reread her notes and left questions beside consent and accuracy. First she needed the editorial standard; only then could she choose the article's form."
+    },
+    {
+      "episode": 7,
+      "scene": "S62",
+      "extraChoiceId": "S62-C90",
+      "routeIntent": "alice",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "D"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 2
+      },
+      "precedingSourceText": [
+        "Продавщица объяснила, что книги приносит местная библиотека после обменов: если захочется, Алиса сможет оставить здесь свою, когда будет проезжать обратно.",
+        "В бассейне было тихо. Алиса проплыла несколько дорожек, потом села у бортика и наблюдала, как пожилая женщина учит внука держаться на воде. В её руках не было камеры, в кармане халата не лежал блокнот. За час ни один человек не попросил её решить, с кем проводить вечер."
+      ],
+      "followingSourceRef": {
+        "chunk": 2,
+        "paragraph": 0
+      },
+      "followingSourceText": "«Я купила книгу и вспомнила, что хочу просто прийти к тебе в гости, когда вернусь». Ответ пришёл не сразу, зато подруга прислала фотографию своего нового чайника и спросила, не против ли Алиса субботы.",
+      "renderedQuestion": "After the pool, Alice notices a morning without a camera or a deadline. What will she take from it?",
+      "selectedOption": "A",
+      "resultingText": "She understood that the morning became hers not because it gained a new plan, but because she chose its pace. The book she had already bought waited in her bag for the recipe, not another decision."
+    },
+    {
+      "episode": 7,
+      "scene": "S62",
+      "extraChoiceId": "S62-C90",
+      "routeIntent": "alice",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "D"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 2
+      },
+      "precedingSourceText": [
+        "Продавщица объяснила, что книги приносит местная библиотека после обменов: если захочется, Алиса сможет оставить здесь свою, когда будет проезжать обратно.",
+        "В бассейне было тихо. Алиса проплыла несколько дорожек, потом села у бортика и наблюдала, как пожилая женщина учит внука держаться на воде. В её руках не было камеры, в кармане халата не лежал блокнот. За час ни один человек не попросил её решить, с кем проводить вечер."
+      ],
+      "followingSourceRef": {
+        "chunk": 2,
+        "paragraph": 0
+      },
+      "followingSourceText": "«Я купила книгу и вспомнила, что хочу просто прийти к тебе в гости, когда вернусь». Ответ пришёл не сразу, зато подруга прислала фотографию своего нового чайника и спросила, не против ли Алиса субботы.",
+      "renderedQuestion": "After the pool, Alice notices a morning without a camera or a deadline. What will she take from it?",
+      "selectedOption": "B",
+      "resultingText": "Alice remembered the quiet by the water and did not turn it into a note. The book from the shop and its recipe page could remain hers even if the day never entered the article."
+    },
+    {
+      "episode": 8,
+      "scene": "S35",
+      "extraChoiceId": "S35-C90",
+      "routeIntent": "alice",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "D"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 1
+      },
+      "precedingSourceText": [
+        "Алиса позвонила Марине из кафе, где пахло мокрой одеждой и корицей. Она объяснила, что не может подтвердить слова за человека, который не согласился говорить для статьи. Марина раздражённо ответила, что читателю нужен конкретный герой. Алиса не стала спорить о том, что нравится читателям вообще.",
+        "Она показала Ингину фотографию настила и предложила героем сделать работу, которую туристы обычно не замечают."
+      ],
+      "followingSourceRef": {
+        "chunk": 0,
+        "paragraph": 2
+      },
+      "followingSourceText": "Марина замолчала, затем попросила прислать готовую структуру до вечера. Разговор не стал победой Алисы над редакцией. Ей ещё нужно было доказать, что материал будет интересен без чужой исповеди.",
+      "renderedQuestion": "Which editorial standard will Alice apply before choosing the article's structure?",
+      "selectedOption": "A",
+      "resultingText": "She separated her own observations, verified facts, and words cleared for publication. The structure could change without turning Inga into a preselected answer."
+    },
+    {
+      "episode": 8,
+      "scene": "S35",
+      "extraChoiceId": "S35-C90",
+      "routeIntent": "alice",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "D"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 1
+      },
+      "precedingSourceText": [
+        "Алиса позвонила Марине из кафе, где пахло мокрой одеждой и корицей. Она объяснила, что не может подтвердить слова за человека, который не согласился говорить для статьи. Марина раздражённо ответила, что читателю нужен конкретный герой. Алиса не стала спорить о том, что нравится читателям вообще.",
+        "Она показала Ингину фотографию настила и предложила героем сделать работу, которую туристы обычно не замечают."
+      ],
+      "followingSourceRef": {
+        "chunk": 0,
+        "paragraph": 2
+      },
+      "followingSourceText": "Марина замолчала, затем попросила прислать готовую структуру до вечера. Разговор не стал победой Алисы над редакцией. Ей ещё нужно было доказать, что материал будет интересен без чужой исповеди.",
+      "renderedQuestion": "Which editorial standard will Alice apply before choosing the article's structure?",
+      "selectedOption": "B",
+      "resultingText": "Alice reread her notes and removed the urge to add someone else's confession for effect. She needed an article whose lines she could stand behind."
+    },
+    {
+      "episode": 8,
+      "scene": "S63",
+      "extraChoiceId": "S63-C90",
+      "routeIntent": "alice",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "D",
+        "S35-C1": "A"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 1
+      },
+      "precedingSourceText": [
+        "Алиса помогла ему поднять шарф со спинки последнего ряда и села ближе к окну.",
+        "На третьей композиции рядом кто-то стал тихо отбивать такт носком ботинка. Алиса тоже двигала ногой, пока не заметила этого. Музыка не обещала, что путешествие изменит её судьбу. Это был просто удачный вечер, на который она пришла потому, что захотела."
+      ],
+      "followingSourceRef": {
+        "chunk": 2,
+        "paragraph": 0
+      },
+      "followingSourceText": "Алиса спросила, откуда взялась мелодия, звучавшая посередине концерта. Скрипачка рассказала, что научилась ей у бабушки, и написала название на обратной стороне билета. Алиса сохранила билет в кармане рядом с чеком из книжного.",
+      "renderedQuestion": "Alice is already seated near the window. How will she notice that this evening is her own?",
+      "selectedOption": "A",
+      "resultingText": "She felt the cool air by the window and focused on the music again. The seat was her choice, not an extension of someone else's route."
+    },
+    {
+      "episode": 8,
+      "scene": "S63",
+      "extraChoiceId": "S63-C90",
+      "routeIntent": "alice",
+      "routeStatus": "active",
+      "priorRelevantChoices": {
+        "S26-C1": "D",
+        "S35-C1": "A"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 1
+      },
+      "precedingSourceText": [
+        "Алиса помогла ему поднять шарф со спинки последнего ряда и села ближе к окну.",
+        "На третьей композиции рядом кто-то стал тихо отбивать такт носком ботинка. Алиса тоже двигала ногой, пока не заметила этого. Музыка не обещала, что путешествие изменит её судьбу. Это был просто удачный вечер, на который она пришла потому, что захотела."
+      ],
+      "followingSourceRef": {
+        "chunk": 2,
+        "paragraph": 0
+      },
+      "followingSourceText": "Алиса спросила, откуда взялась мелодия, звучавшая посередине концерта. Скрипачка рассказала, что научилась ей у бабушки, и написала название на обратной стороне билета. Алиса сохранила билет в кармане рядом с чеком из книжного.",
+      "renderedQuestion": "Alice is already seated near the window. How will she notice that this evening is her own?",
+      "selectedOption": "B",
+      "resultingText": "Alice let the music continue without checking who else might have come. It was enough that she had chosen this concert and stayed for it."
+    },
+    {
+      "episode": 8,
+      "scene": "S63",
+      "extraChoiceId": "S63-C90",
+      "routeIntent": "alice",
+      "routeStatus": "paused",
+      "priorRelevantChoices": {
+        "S26-C1": "D",
+        "S35-C1": "B"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 1
+      },
+      "precedingSourceText": [
+        "Алиса помогла ему поднять шарф со спинки последнего ряда и села ближе к окну.",
+        "На третьей композиции рядом кто-то стал тихо отбивать такт носком ботинка. Алиса тоже двигала ногой, пока не заметила этого. Музыка не обещала, что путешествие изменит её судьбу. Это был просто удачный вечер, на который она пришла потому, что захотела."
+      ],
+      "followingSourceRef": {
+        "chunk": 2,
+        "paragraph": 0
+      },
+      "followingSourceText": "Алиса спросила, откуда взялась мелодия, звучавшая посередине концерта. Скрипачка рассказала, что научилась ей у бабушки, и написала название на обратной стороне билета. Алиса сохранила билет в кармане рядом с чеком из книжного.",
+      "renderedQuestion": "Alice is already seated near the window. How will she notice that this evening is her own?",
+      "selectedOption": "A",
+      "resultingText": "She felt the cool air by the window and focused on the music again. The seat was her choice, not an extension of someone else's route."
+    },
+    {
+      "episode": 8,
+      "scene": "S63",
+      "extraChoiceId": "S63-C90",
+      "routeIntent": "alice",
+      "routeStatus": "paused",
+      "priorRelevantChoices": {
+        "S26-C1": "D",
+        "S35-C1": "B"
+      },
+      "insertionSourceRef": {
+        "chunk": 0,
+        "paragraph": 1
+      },
+      "precedingSourceText": [
+        "Алиса помогла ему поднять шарф со спинки последнего ряда и села ближе к окну.",
+        "На третьей композиции рядом кто-то стал тихо отбивать такт носком ботинка. Алиса тоже двигала ногой, пока не заметила этого. Музыка не обещала, что путешествие изменит её судьбу. Это был просто удачный вечер, на который она пришла потому, что захотела."
+      ],
+      "followingSourceRef": {
+        "chunk": 2,
+        "paragraph": 0
+      },
+      "followingSourceText": "Алиса спросила, откуда взялась мелодия, звучавшая посередине концерта. Скрипачка рассказала, что научилась ей у бабушки, и написала название на обратной стороне билета. Алиса сохранила билет в кармане рядом с чеком из книжного.",
+      "renderedQuestion": "Alice is already seated near the window. How will she notice that this evening is her own?",
+      "selectedOption": "B",
+      "resultingText": "Alice let the music continue without checking who else might have come. It was enough that she had chosen this concert and stayed for it."
+    }
+  ],
+  "failures": []
+}

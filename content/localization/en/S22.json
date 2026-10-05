@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "sourceLocale": "ru",
+  "source": "content/season-1-literary-episode-06.md",
+  "scenes": {
+    "S22": {
+      "title": "Day 11. The Road You Cannot Promise",
+      "chunks": {
+        "S22.C000": {"title": "", "paragraphs": {
+          "S22.C000.P000": "In the morning, the sea was on the right, then on the left, then disappeared altogether. The road curved around a slope, and Alice saw a narrow strip of shore below: a house, a pier, and three boats pulled onto the grass. On the map, the route looked straight. Beyond the glass, it kept changing its mind.",
+          "S22.C000.P001": "Nick was asleep, hugging the backpack with the camera. Damir was scrolling through an email on his phone and, catching Alice's eye, turned the screen down. Eric drove more carefully than usual. At a fork, he slowed: an information board warned of a closed section farther along the coast.",
+          "S22.C000.P002": "“A landslide after the rain,” Eric said. “The road to the next village is closed until the road service inspects the slope.”",
+          "S22.C000.P003": "“Is that on the way to our accommodation?” Alice asked.",
+          "S22.C000.P004": "“The direct coastal route goes through that section. The detour leads to Egilsstaðir; from there, the road to our place goes over the pass to Seyðisfjörður. I'll check whether the pass is open first.”",
+          "S22.C000.P005": "Nick woke at the word “detour.”",
+          "S22.C000.P006": "“Sounds like the beginning of a film where everyone walks in circles and becomes a better person.”",
+          "S22.C000.P007": "“First it will become later,” Damir said.",
+          "S22.C000.P008": "At a roadside stop, Eric called the road service. Alice heard him clarify twice whether the ban applied to their car, then ask about another road and the time of the next update. Nick had already opened the route on his phone. The blue line passed calmly through the closed section.",
+          "S22.C000.P009": "“The phone doesn't know yet,” Eric said. “We won't listen to it.”",
+          "S22.C000.P010": "They could cut across only on paper. In reality, the detour meant several hours in the car, a cancelled meeting with the owner of a small fish smokehouse, and a possible late arrival at the guesthouse in Seyðisfjörður. Marina was waiting for Alice's promised interview for the article; the owner had set aside an hour between work shifts. Nick planned to film the harbour unloading before dark. Behind all those small promises were other people's days.",
+          "S22.C000.P011": "Eric unfolded the paper map on the bonnet. The wind lifted one corner. Alice held it down with her palm and suddenly remembered the day near Hveragerði, when the wind first changed their plans. Then the cancellation had felt like a personal defeat. Now there were names in front of her—people who would have to be told that their time had been wasted."
+        }},
+        "S22.C001": {"title": "Response to S05-C1 — select exactly one fragment by `weatherChoice`", "paragraphs": {}},
+        "S22.C002": {"title": "A. If Alice helped Nick (`weatherChoice=nick`)", "paragraphs": {
+          "S22.C002.P000": "Nick pressed the camera case against the map.",
+          "S22.C002.P001": "“You said then that we should film not the lost view but how we changed the plan. Today my hands are busy with calls, but I can write to the owner and offer another time. First I'll ask whether she wants filming at all.”",
+          "S22.C002.P002": "Alice heard her earlier thought in his words, along with its correction. In Hveragerði they could lose a shot. Here they could lose someone else's consent and a working hour.",
+          "S22.C002.P003": "“Write that the interview for the article is separate from the camera,” she said. “Let her decide about each one herself.”",
+          "S22.C002.P004": "Nick showed her the message before sending it. She removed the unnecessary “we were really counting on this”: it sounded like asking the owner to help them at her own expense."
+        }},
+        "S22.C003": {"title": "B. If Alice asked Eric to explain the change (`weatherChoice=erik`)", "paragraphs": {
+          "S22.C003.P000": "“Like Hveragerði,” Alice said. “Name two versions of the day, but honestly: what can no longer be saved?”",
+          "S22.C003.P001": "Eric ran a finger over the map.",
+          "S22.C003.P002": "“The meeting by noon cannot be saved. The road section isn't our decision either. If the pass is open, we'll reach Seyðisfjörður in the evening. If not, we'll stay closer to Egilsstaðir and call the guesthouse. I should have warned you earlier that this stretch is vulnerable after rain.”",
+          "S22.C003.P003": "He said the last part without his usual professional defence. Alice remembered hearing him say “I'm not sure” then, and trusting him precisely because of it.",
+          "S22.C003.P004": "“You warned us now,” she answered. “Give me the smokehouse owner's number. I'll take responsibility for my conversation.”"
+        }},
+        "S22.C004": {"title": "C. If Alice sat with Damir (`weatherChoice=damir`)", "paragraphs": {
+          "S22.C004.P000": "Damir silently offered her the thermos. She did not take it; she held the map while Eric talked on the phone. Damir put the thermos away without taking offence.",
+          "S22.C004.P001": "“Do you remember how we just sat in the car while everyone else argued with the wind?” Alice asked.",
+          "S22.C004.P002": "“I remember,” he said. “You needed a pause then. Now it looks like you need a pen.”",
+          "S22.C004.P003": "He took a pen and a clean sheet from a prescription pad. Alice wrote three calls on it: the guesthouse, the smokehouse, Marina. Damir did not distribute them for her. He only put the pad under the map so the pages would not blow away."
+        }},
+        "S22.C005": {"title": "Common continuation", "paragraphs": {
+          "S22.C005.P000": "Alice called the smokehouse owner first. A woman answered in a breathless voice; crates knocked in the background.",
+          "S22.C005.P001": "“We won't make it by noon,” Alice said. “The road is closed. I'm sorry I only warned you now. Tomorrow morning I could come alone, without a camera. Would twenty minutes suit you? I will understand if you say no; I'm not asking you to rearrange your day for us.”",
+          "S22.C005.P002": "The woman asked whether they knew she had a short shift tomorrow. Alice did not. They agreed to call in the evening: then the owner would decide whether she could spare twenty minutes and would not wait for the group at the door today.",
+          "S22.C005.P003": "“You didn't promise her material?” Nick asked.",
+          "S22.C005.P004": "“No. She doesn't have to compensate us for a closed road with her story.”",
+          "S22.C005.P005": "Nick glanced at his camera for a second and put it in the boot.",
+          "S22.C005.P006": "The guesthouse answered at once. The room would be held if they arrived by nine; later, the owner would leave the key in the agreed place. Eric checked the official road notice and the forecast for the pass. It was open, but fog was expected in the evening. He said aloud the time after which they would stop for filming and drive straight to the accommodation.",
+          "S22.C005.P007": "“What if the time runs out before the beautiful turn?” Nick asked.",
+          "S22.C005.P008": "“Then someone else will see the beautiful turn.”",
+          "S22.C005.P009": "Alice called Marina. The editor began with a question about the interview; Alice said there was not one yet.",
+          "S22.C005.P010": "“Give me at least the beginning by evening,” Marina asked. “I need a person who changes plans, not a report on the state of the road.”",
+          "S22.C005.P011": "Alice looked at the others. Their faces reflected in the shelter's glass, layered over the sea.",
+          "S22.C005.P012": "“I'll write about a choice I can show,” she said. “And I'll agree with people on anything that concerns them personally.”",
+          "S22.C005.P013": "“Just don't dissolve yourself into the group.”",
+          "S22.C005.P014": "“I won't.”",
+          "S22.C005.P015": "When she hung up, it became clear that the problem was more than the detour. Looking for a backup route, Nick had already told a local driver he knew that the group might be ready to come by for filming that evening. The driver replied that he could go out on the water at dawn if they really came. Nick had not confirmed the meeting, but had left the impression that the decision was made.",
+          "S22.C005.P016": "“I wanted to save your material,” he said. “And mine, honestly.”",
+          "S22.C005.P017": "“You offered someone else's morning,” Alice said. “And my agreement to speak with him.”",
+          "S22.C005.P018": "Nick stopped searching for a joke.",
+          "S22.C005.P019": "“Yes. I'll write that the decision hasn't been made and apologise.”",
+          "S22.C005.P020": "Eric folded the map. He had to name his own part too: he had promised the guesthouse an arrival time before receiving confirmation about the pass. Damir suggested checking whether everyone had water and something to eat for the long stretch—not because they were in danger, but because the nearest café might close before they arrived."
+        }},
+        "S22.C006": {"title": "Choice S22-C1 — How will Alice take part in repairing the situation", "paragraphs": {}},
+        "S22.C007": {"title": "A. Take the conversations and promise nothing for anyone else", "paragraphs": {
+          "S22.C007.P000": "“I'll answer Marina about the article and the smokehouse owner about the postponement,” Alice said. “Nick, write to the driver yourself. Eric, you drive and decide according to the official road. I don't need anyone speaking for me for the sake of a convenient plan.”",
+          "S22.C007.P001": "Nick typed the message in front of her, but did not hand over the phone like an exam paper. Eric asked whether Alice would be comfortable stopping at the harbour if they made it before the agreed time. She said yes: she knew how to speak with people who were not expecting an interview, without making promises.",
+          "S22.C007.P002": "For the first time that morning, each person had a piece of work of their own. The delay did not disappear, but it stopped being anyone's personal fault. Alice opened her notes and wrote to Marina: “I'll send the first paragraph this evening. The interview has been postponed; I won't insert someone else's words without agreement.”"
+        }},
+        "S22.C008": {"title": "B. Say aloud who Alice is angry with, then divide the work", "paragraphs": {
+          "S22.C008.P000": "“I'm not angry about the road being closed,” Alice said. “I'm angry that we managed to promise someone else's time again without asking. Me too: I told Marina I'd have a scene by evening before I knew whether I had the right to write it.”",
+          "S22.C008.P001": "Nick nodded without objecting. Eric ran a fingernail along the fold in the map.",
+          "S22.C008.P002": "“Then we cancel what we cannot promise,” he said.",
+          "S22.C008.P003": "They made a short list of messages. Alice wrote to Marina: “I'll send the first paragraph tomorrow morning; today I'll check what I can tell without someone else's consent.” Nick corrected his invitation to the driver. Eric confirmed their arrival at the guesthouse. The anger was useful only until it became a verdict on a person."
+        }},
+        "S22.C009": {"title": "Common continuation", "paragraphs": {
+          "S22.C009.P000": "The driver replied to Nick: “Thank you for letting me know. I won't be able to do the morning. If you are at the harbour today, come by just to say hello.” Nick read the message aloud and put away his phone. No one owed them new material.",
+          "S22.C009.P001": "They took the detour. Damir handed out apples found in a bag under the seat. An hour later, a clearing appeared on the rise, and below it lay a fjord like a long crease in paper. Alice wrote not “we overcame a difficulty,” but the time of the three calls and three different answers. She wanted to remember that a long journey changes because of small agreements.",
+          "S22.C009.P002": "By evening they crossed the pass from Egilsstaðir and descended into Seyðisfjörður. At the guesthouse, Nick asked whether he could film them unloading after the long drive. Everyone could see the camera; no one objected to filming for his working archive. Alice laughed when the bag strap caught on the suitcase handle. Nick filmed a few seconds and put the camera away. He did not ask permission to send the fragment to his producer.",
+          "S22.C009.P003": "A fishing harbour opened behind the houses. Eric asked whether Alice wanted to walk to the end of the pier while Nick and Damir carried the things inside. She did. After the walk they returned by the same street and checked in before nine."
+        }},
+        "S22.C010": {"title": "Choice S22-C2 — How will Alice suggest spending a short stop by the fjord?", "paragraphs": {}},
+        "S22.C011": {"title": "A. Go to the water with the group", "paragraphs": {"S22.C011.P000": "Alice suggested that everyone take the permitted path to the viewpoint. Nick brought the camera, but ended up filming only the sky. Eric approached her with two paper cups of coffee, while Damir lingered nearby, studying the map."}},
+        "S22.C012": {"title": "B. Stay with her notes for a few minutes", "paragraphs": {"S22.C012.P000": "Alice asked the others to wait by the car and walked to a bench with her notebook. She wrote a few words about the road that she did not intend to send to the editor. When she returned, she suggested that everyone choose the next playlist."}}
+      }
+    }
+  }
+}

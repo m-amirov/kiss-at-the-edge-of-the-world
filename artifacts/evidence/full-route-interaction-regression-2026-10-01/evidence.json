@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "status": "PASS",
-  "generatedAt": "2026-10-01T19:35:42.086Z",
-  "head": "unbound-before-freeze",
+  "generatedAt": "2026-10-05T04:12:30.161Z",
+  "head": "d3e64731b91c43d9ffffd8d7f0bc752d77deff07",
   "baseUrl": "http://127.0.0.1:4173/literary.html?qa=full-route-interaction",
   "interactionModel": [
     "click",

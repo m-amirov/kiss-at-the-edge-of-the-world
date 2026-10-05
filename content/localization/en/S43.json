@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "source": "content/season-1-literary-episode-10.md",
+  "scenes": {
+    "S43": {
+      "title": "Day 20. An Evening Without a Promise of a Couple",
+      "chunks": {
+        "S43.C000": {
+          "title": "",
+          "paragraphs": {
+            "S43.C000.P000": "Alice left the café with her laptop in her bag and realised there were still three hours before dinner with the group. She could go to the guesthouse or to the waterfront. She chose the bookshop she had noticed on the first day and never visited. On the shelf of stories she found a book she had once read with her father. Alice leafed through it, found a familiar line, but bought another—a small book about the contemporary life of the city she would soon return to.",
+            "S43.C000.P001": "In the neighbouring café she opened her notebook. One page held interview dates; another, a list of things to do after the trip: take a suitcase in for repair, call a friend, finish the article, buy groceries for a proper breakfast. They were simple things, and for the first time she wanted not to hide them behind a new grand plan.",
+            "S43.C000.P002": "Marina sent a message: the material had been accepted for editorial work, but two quotations needed checking and one photograph replacing. Alice was not upset. She knew whom to write to for factual confirmation, and kept the free evening for herself."
+          }
+        },
+        "S43.C001": {
+          "title": "Choice S43-C1 — What will Alice offer herself for the next month?",
+          "paragraphs": {}
+        },
+        "S43.C002": {
+          "title": "A. Prepare a new independent journalism project",
+          "paragraphs": {
+            "S43.C002.P000": "Alice drafted a short message to Marina proposing a series about people who remain in a place after tourist season ends. She sent it only after rereading it at home and removing other people’s private stories."
+          }
+        },
+        "S43.C003": {
+          "title": "B. Take a pause between trips and return to ordinary life",
+          "paragraphs": {
+            "S43.C003.P000": "Alice marked two days off in her calendar when she had promised no one anything. She wrote to her friend: “I’ll be home next Saturday. I want to see you.” The reply came almost at once—with a photograph of a new kettle and a question about what to make for breakfast."
+          }
+        },
+        "S43.C004": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S43.C004.P000": "At the shared dinner Alice sat beside her friends, but did not search every look for a hidden proposal. Nick showed them an empty harbour frame, Eric announced tomorrow’s departure time, and Damir asked who else needed tea. Alice was happy near them, and happy at the thought that tomorrow she would go home."
+          }
+        }
+      }
+    }
+  }
+}

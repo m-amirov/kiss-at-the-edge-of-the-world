@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "sourceLocale": "ru",
+  "source": "content/season-1-literary-episode-06.md",
+  "scenes": {
+    "S23": {
+      "title": "Day 11. The Harbour and Someone Else's Plan",
+      "chunks": {
+        "S23.C000": {"title": "", "paragraphs": {
+          "S23.C000.P000": "The boats sat low in the water. Nets dried on the concrete slabs; gulls argued over an empty crate as fiercely as if fish were still inside. Eric led Alice past the warehouse and stopped at the edge, out of the way of the work. He did not tell her the name of every boat. After the morning with the road, silence beside him felt like a new luxury.",
+          "S23.C000.P001": "“Did you call anyone else?” she asked.",
+          "S23.C000.P002": "“Someone I know. He rents a space for short classes for beginners. I wanted to look at it after the season. Now he wants an answer by Friday.”",
+          "S23.C000.P003": "Alice turned toward him. Eric had always talked about the route school as if it already lay on a map and all he needed was to find the turn. Today he held a budget folded into quarters, damp at the corners.",
+          "S23.C000.P004": "“Is the school not ready?” she asked.",
+          "S23.C000.P005": "“I'm not ready to explain why it matters to someone who will not become a guide. I rewrote the programme three times the day before yesterday. In every version, I do the most interesting thing for the student: decide when they are afraid and where they should stop.”",
+          "S23.C000.P006": "“And today you explained to us where to stop.”",
+          "S23.C000.P007": "“Today I was responsible for the car. There is a boundary there,” Eric said. “In class, I want people to learn to make small decisions themselves. I know how to promise safety. It is harder not to promise someone they will never make a mistake.”",
+          "S23.C000.P008": "After two days in Höfn, Alice already knew how carefully Eric folded a map when he was unsure of a decision. Now he held the budget with two fingers, as if the sheet might slide into the water. She wanted to touch his hand, but asked first:",
+          "S23.C000.P009": "“Did you invite me because of the paper? Or did you simply want to be alone together?”",
+          "S23.C000.P010": "“Both,” Eric said. “I was afraid to say the second part plainly.”"
+        }},
+        "S23.C001": {"title": "Response to the evening of episode 5 — select exactly one fragment by `eveningState`", "paragraphs": {}},
+        "S23.C002": {"title": "A. After an evening with Eric (`eveningState=eric`)", "paragraphs": {
+          "S23.C002.P000": "“You talked about it more lightly at the lighthouse,” Alice observed.",
+          "S23.C002.P001": "“At the lighthouse, you did not have to pay rent according to my calculations,” he replied. “I'm glad I told you then. And yet today's question is mine, not our promise after the walk.”",
+          "S23.C002.P002": "She appreciated the correction. Their walk to the lighthouse remained a shared memory, not an argument in a conversation about his future. Eric waited to see which conversation she would choose now."
+        }},
+        "S23.C003": {"title": "B. After an evening with Nick (`eveningState=nick`)", "paragraphs": {
+          "S23.C003.P000": "“I saw you with Nick the day before yesterday after the pool,” Eric said. “I'm not asking what happened. I just don't want to pretend I don't understand that you have a life outside my diagrams.”",
+          "S23.C003.P001": "“I do. But I'm here, and I'm listening to you.”",
+          "S23.C003.P002": "“Then that's enough for a conversation. I need an honest view, not a place in someone's schedule.”",
+          "S23.C003.P003": "She could have been beside Nick in Höfn and walked the pier with Eric today. Eric did not try to turn that freedom into a test."
+        }},
+        "S23.C004": {"title": "C. After an evening with Damir (`eveningState=damir`)", "paragraphs": {
+          "S23.C004.P000": "“After your conversation with Damir in Höfn, I wasn't sure whether it was appropriate to ask you out alone,” Eric said. “I don't know what you decided, and it isn't my business.”",
+          "S23.C004.P001": "“We don't have to decide everything in one evening. Did you want to show me your plan?”",
+          "S23.C004.P002": "“I wanted to ask about it. If you are not up for it now, I'll understand.”",
+          "S23.C004.P003": "Alice stayed. She noticed that his caution was not retreat: he had offered her the chance to say no and would have borne it without offence."
+        }},
+        "S23.C005": {"title": "D. After an evening alone (`eveningState=alice`)", "paragraphs": {
+          "S23.C005.P000": "“In Höfn, you went off to write alone,” Eric said. “I thought it might have been the most sensible choice of all our conversations.”",
+          "S23.C005.P001": "“You don't need to praise me for being alone. I just wanted to finish a thought.”",
+          "S23.C005.P002": "“Fair. Then I'll try to finish mine without turning you into the default editor.”",
+          "S23.C005.P003": "He hid the budget until Alice held out her hand herself. Her independence in Höfn did not mean she had to stand aside today."
+        }},
+        "S23.C006": {"title": "S23-I-K — after the kiss at the Höfn harbour", "paragraphs": {
+          "S23.C006.P000": "Eric noticed Alice looking at his wet sleeve—he had gone out without a dry jacket again. She touched the fabric with her fingertips.",
+          "S23.C006.P001": "“You remember that evening?” she asked.",
+          "S23.C006.P002": "“I remember. I didn't invite you today to get a continuation of the kiss.”",
+          "S23.C006.P003": "“I know. I still wanted to come closer.”",
+          "S23.C006.P004": "He smiled, but did not pull her toward him in the middle of the working harbour."
+        }},
+        "S23.C007": {"title": "S23-I-S — after the evening beside each other without a kiss", "paragraphs": {
+          "S23.C007.P000": "“Did you find that song?” Alice asked.",
+          "S23.C007.P001": "Eric nodded. His sister had sent him the title and written that he had mixed up the words again. He suggested playing it later, when they were in the car. Alice agreed: they already had a small shared memory that required no explanation."
+        }},
+        "S23.C008": {"title": "S23-I-L — after the early return", "paragraphs": {
+          "S23.C008.P000": "“Thank you for walking me home without questions then,” Alice said.",
+          "S23.C008.P001": "“I was glad of the walk. And today I'm glad you came, although you owe me nothing.”",
+          "S23.C008.P002": "She stayed by the crate while he spread out the sheet, because her interest in him had not disappeared along with that refusal."
+        }},
+        "S23.C009": {"title": "Common continuation", "paragraphs": {
+          "S23.C009.P000": "Eric spread the sheet on the dry lid of a crate. It listed two-hour classes, rent, insurance, and the names of two teachers. Alice was surprised that the first class was called “How to Tell a Group I Want to Turn Back.”",
+          "S23.C009.P001": "“Keep that,” she said.",
+          "S23.C009.P002": "“I was going to remove it. It sounds like a route failure.”",
+          "S23.C009.P003": "“It sounds like a participant's right. And who decides if one person wants to turn back and the others don't?”",
+          "S23.C009.P004": "Eric did not answer at once. Two workers came out of the warehouse carrying a long crate; they had to step aside to clear the passage. Eric moved the paper, waited for them to pass, and only then said:",
+          "S23.C009.P005": "“I'll write different scenarios. Not a promise that everyone will be comfortable. A way to name who is responsible for what.”",
+          "S23.C009.P006": "The wind lifted the edge of the sheet. Alice pressed it down with her palm beside Eric's hand; he looked at her and went still. She removed her hand herself, feeling how pleasant it would have been not to. She wanted to know not only about the school, but why he had been afraid to ask her out without a reason.",
+          "S23.C009.P007": "“You could have managed without the budget,” she said.",
+          "S23.C009.P008": "“I'll try next time,” he answered. “I'll just ask you to go for a walk.”",
+          "S23.C009.P009": "“Will you show me the new version?” she asked.",
+          "S23.C009.P010": "“Only if you want to. I can ask another reader.”"
+        }},
+        "S23.C010": {"title": "Choice S23-C1 — How will Alice respond to Eric's invitation", "paragraphs": {}},
+        "S23.C011": {"title": "A. Suggest one verifiable action", "paragraphs": {
+          "S23.C011.P000": "“I'll read the first page over breakfast tomorrow,” Alice said. “And mark the places where you speak for the student. Let the people who will study check the rest.”",
+          "S23.C011.P001": "Eric folded the sheet in half.",
+          "S23.C011.P002": "“That's better than ‘everything will be fine’. Especially if the margins contain your terrible journalistic ‘why’.”",
+          "S23.C011.P003": "“I can write it twice.”",
+          "S23.C011.P004": "Alice asked to keep the page until morning. She wrote two questions in her own hand in the margins and put the sheet in her notebook to return it to its owner over breakfast."
+        }},
+        "S23.C012": {"title": "B. Do not become his adviser, but name what she heard", "paragraphs": {
+          "S23.C012.P000": "“I don't want to take on your programme today,” Alice said. “I hear that you are afraid of reproducing in the class the very thing you argue with yourself. That is worth discussing with future students.”",
+          "S23.C012.P001": "Eric looked at the paper for a while.",
+          "S23.C012.P002": "“Then I'll invite two people to a trial discussion,” he said. “No charge, and no staged hike.”",
+          "S23.C012.P003": "He did not ask her to change her mind. On the way from the crate, Alice took his arm. Eric matched her pace and asked whether she was cold. “A little,” she answered. They stood together for another minute without a new assignment for her."
+        }},
+        "S23.C013": {"title": "Common continuation", "paragraphs": {
+          "S23.C013.P000": "When they returned to the car, Nick held a bag of bread and Damir held four paper cups. Nick asked Eric whether he had won the argument with the gulls. Eric said the gulls had demanded insurance. Alice laughed before anyone else.",
+          "S23.C013.P001": "She remembered his awkward “I wanted to be alone together” more strongly than the budget. Saying it to her had been harder than naming the distance to the pass.",
+          "S23.C013.P002": "The owner opened the kitchen and showed them where to leave wet shoes. At the counter, Alice kept her promise and called the smokehouse owner. The woman gave her twenty minutes the next morning and asked her to come alone, without a camera; Alice repeated the condition and wrote down the address. That night she wrote the beginning of the article: “We did not reach the place we had promised. First we had to find out whom, exactly, we had promised it to.”"
+        }},
+        "S23.C014": {"title": "Continuation of S22-C1 — select exactly one fragment", "paragraphs": {}},
+        "S23.C015": {"title": "A. After the conversation about dividing promises", "paragraphs": {"S23.C015.P000": "Alice sent Marina the first paragraph that evening, as promised. The reply said: “I see it. We'll discuss it tomorrow, but don't add anyone else's words yet.” Alice closed the laptop: the first agreement of the day had been kept without inventing an interview."}},
+        "S23.C016": {"title": "B. After the conversation about anger", "paragraphs": {"S23.C016.P000": "Alice kept the paragraph in the draft. Marina replied to the revised deadline: “I'll expect it tomorrow morning. Check the twenty-minute conversation with the owner against your recording first.” Alice set a reminder and left the text until morning."}},
+        "S23.C017": {"title": "If `S22-C2=A`", "paragraphs": {"S23.C017.P000": "At the pier, Eric asked Alice whether she had liked yesterday's shared stop by the water. He noticed that for the first time that day, no one had hurried anyone else back to the car."}},
+        "S23.C018": {"title": "If `S22-C2=B`", "paragraphs": {"S23.C018.P000": "At the pier, Eric nodded toward her notebook and asked whether she had managed to write what she had stayed alone for. Alice answered that she would keep those lines to herself for now."}},
+        "S23.C019": {"title": "If `S18-C2=A`", "paragraphs": {"S23.C019.P000": "At the harbour, Eric showed Alice another of his grandfather's postcards. She recognised the handwriting and asked about the town on the stamp: their conversation continued without needing to return to yesterday's choice."}},
+        "S23.C020": {"title": "If `S18-C2=B`", "paragraphs": {"S23.C020.P000": "At the harbour, Eric reminded Alice about the song he had promised for the drive. They listened to the first bars on his phone while the others were still gathering their things."}}
+      }
+    }
+  }
+}

@@ -5,18 +5,22 @@ import { createCloudSaveQueue } from './save-state.js';
 import { stageForScene } from './literary-stage.js';
 import { visualAt, visualEntryForPosition } from './literary-visual-directions.js';
 import { compileInteractivePlayback } from './literary-pacing.js';
-import { createTranslator } from './localization.js';
+import { applyLiteraryLocale, createTranslator, validateLiteraryInteractionLocale } from './localization.js';
+import { literaryLocaleBundles } from './literary-localization-bundle.js';
+import { interactionBeats } from './literary-interactive-beats.js';
 
-const byId = new Map(literarySeason.scenes.map(scene => [scene.id, scene]));
+const canonicalById = new Map(literarySeason.scenes.map(scene => [scene.id, scene]));
+let runtimeSeason = literarySeason;
+let byId = canonicalById;
 const app = document.getElementById('literary-app');
 const textSettingsKey = 'kiss-at-the-edge-of-the-world:literary-settings:v1';
 const literaryCloudKey = 'kiss-at-the-edge-of-the-world:literary-season:v1';
-const routeName = { A: 'Эрик', B: 'Ник', C: 'Дамир', D: 'Алиса' };
+const routeName = { A: 'routeEric', B: 'routeNick', C: 'routeDamir', D: 'routeAlice' };
 const endingHeadings = {
-  S44: 'Дорога, которую выбирают вдвоём',
-  S45: 'Без чужого голоса',
-  S46: 'Начать заново — вместе',
-  S47: 'Свой следующий маршрут'
+  S44: 'endingEric',
+  S45: 'endingNick',
+  S46: 'endingDamir',
+  S47: 'endingAlice'
 };
 // Presentation-only focal points. Values are percentages of the source image;
 // the authored visual event remains the source of truth for which asset shows.
@@ -111,11 +115,11 @@ const blank = () => ({ schemaVersion:3,sceneId:'S01',position:0,choices:{},finis
 function parseSaved(raw) {
   try {
     const s=typeof raw==='string'?JSON.parse(raw):raw;
-    if(![1,2,3].includes(s?.schemaVersion) || !byId.has(s.sceneId) || !Number.isInteger(s.position) || s.position<0 ||
+    if(![1,2,3].includes(s?.schemaVersion) || !canonicalById.has(s.sceneId) || !Number.isInteger(s.position) || s.position<0 ||
        !s.choices || typeof s.choices!=='object' || Array.isArray(s.choices))return null;
     if(Object.entries(s.choices).some(([id,code])=> !/^S\d{2}-C\d+$/.test(id)|| !/^[A-D]$/.test(code)))return null;
     return { ...s, schemaVersion:3, position:s.schemaVersion<3?0:s.position,
-      migrationNotice:s.schemaVersion<3, visited:Array.isArray(s.visited)?s.visited.filter(id=>byId.has(id)):[s.sceneId],revision:s.revision??0 };
+      migrationNotice:s.schemaVersion<3, visited:Array.isArray(s.visited)?s.visited.filter(id=>canonicalById.has(id)):[s.sceneId],revision:s.revision??0 };
   } catch { return null; }
 }
 function loadLocal(){try{const saved=localStorage.getItem(literarySaveKey);const parsed=parseSaved(saved);
@@ -132,6 +136,24 @@ let locale='ru';
 let t=createTranslator(locale);
 let cloudQueue=null;
 let settings=(()=>{try{return{scale:1,contrast:false,motion:false,...JSON.parse(localStorage.getItem(textSettingsKey)||'{}')}}catch{return{scale:1,contrast:false,motion:false}}})();
+function loadRuntimeSeason(selectedLocale,qaLocaleOverride){
+  if(selectedLocale==='ru')return literarySeason;
+  const localeData=literaryLocaleBundles[selectedLocale];
+  if(!localeData)throw Error(`BLOCKED_EN_CORPUS_INCOMPLETE: missing locale bundle ${selectedLocale}`);
+  const firstMissingSceneIndex=literarySeason.scenes.findIndex(scene=>!localeData.scenes?.[scene.id]);
+  const sceneIds=qaLocaleOverride==='en'
+    ?literarySeason.scenes.slice(0,firstMissingSceneIndex<0?literarySeason.scenes.length:firstMissingSceneIndex).map(scene=>scene.id)
+    :literarySeason.scenes.map(scene=>scene.id);
+  if(qaLocaleOverride==='en' && !sceneIds.length)throw Error('BLOCKED_EN_CORPUS_INCOMPLETE: no contiguous localized scenes');
+  const scopedScenes=Object.fromEntries(sceneIds.map(id=>[id,localeData.scenes?.[id]]).filter(([,scene])=>scene));
+  const scopedBeats=Object.fromEntries(sceneIds.map(id=>[id,localeData.interactionBeats?.[id]]).filter(([,beats])=>beats));
+  const scopedEchoes=Object.fromEntries(Object.entries(localeData.interactionEchoes??{}).filter(([id])=>sceneIds.includes(id)));
+  const boundedData=qaLocaleOverride==='en'?{...localeData,scenes:scopedScenes,interactionBeats:scopedBeats,interactionEchoes:scopedEchoes}:localeData;
+  const interactionSceneIds=sceneIds.filter(id=>Object.prototype.hasOwnProperty.call(interactionBeats,id));
+  const interactionReport=validateLiteraryInteractionLocale(interactionBeats,boundedData,{sceneIds:interactionSceneIds});
+  if(interactionReport.status!=='PASS')throw Error('BLOCKED_EN_CORPUS_INCOMPLETE: '+interactionReport.errors.join('; '));
+  return applyLiteraryLocale(literarySeason,boundedData,{sceneIds});
+}
 function persist() {
   reader.revision=(reader.revision??0)+1;
   try {localStorage.setItem(literarySaveKey,JSON.stringify(reader));hasSave=true;}catch{}
@@ -157,7 +179,7 @@ function isInteractiveTarget(target){return target instanceof Element && Boolean
 function advanceNarrative(){
   if(menuOpen)return false;
   const scene=byId.get(reader.sceneId);if(!scene)return false;
-  const flow=compileInteractivePlayback(scene,reader.choices);
+  const flow=compileInteractivePlayback(scene,reader.choices,locale);
   const current=flow[reader.position];
   if(current?.type==='page'){
     reader.position=Math.min(reader.position+1,flow.length);
@@ -191,7 +213,7 @@ function bindStageNavigation(picture){
   picture.tabIndex=0;
   picture.dataset.stageAdvance='true';
   picture.setAttribute('role','group');
-  picture.setAttribute('aria-label','Нажмите на сцену или Enter, чтобы продолжить чтение');
+  picture.setAttribute('aria-label',t('stageAdvanceAria'));
   let pointer=null;
   let suppressClickUntil=0;
   picture.addEventListener('pointerdown',event=>{
@@ -246,20 +268,21 @@ function startNew(){
   cloudLocked=true; reader=blank();persist();menuOpen=false;modal=null;renderReader();
 }
 function continueGame(){menuOpen=false;modal=null;renderReader()}
-function panel(heading,children){
-  modal=heading;const section=el('','home-panel');section.append(el(heading,'section-title','h2'));
+function panel(headingKey,children){
+  modal=headingKey;const section=el('','home-panel');section.append(el(t(headingKey),'section-title','h2'));
   children(section);section.append(button(t('backMenu'),()=>{modal=null;renderMenu()},'small-button'));
   return section;
 }
 function episodeSelection(section){
-  section.append(el('Открываются по мере прохождения. При возвращении к прочитанной сцене ваши поздние решения будут сброшены, чтобы не смешивать разные варианты истории.','small-note'));
+  section.append(el(t('episodesDescription'),'small-note'));
   const known=new Set(reader.visited||[]);
-  for(let ep=1;ep<=literarySeason.episodes;ep++){
-    const first=literarySeason.scenes.find(s=>s.episode===ep);
-    const unlocked=literarySeason.scenes.some(s=>s.episode===ep&&known.has(s.id));
-    const item=button(`Эпизод ${ep}${unlocked?' · открыт':' · пока не пройден'}`,()=>{
+  const episodes=[...new Set(runtimeSeason.scenes.map(scene=>scene.episode))].sort((a,b)=>a-b);
+  for(const ep of episodes){
+    const first=runtimeSeason.scenes.find(s=>s.episode===ep);
+    const unlocked=runtimeSeason.scenes.some(s=>s.episode===ep&&known.has(s.id));
+    const item=button(t(unlocked?'episodeUnlocked':'episodeLocked',{episode:ep}),()=>{
       if(!unlocked)return;
-      if(!window.confirm(`Вернуться к началу эпизода ${ep}? Выборы, сделанные позже, будут сброшены.`))return;
+      if(!window.confirm(t('episodeReplayConfirm',{episode:ep})))return;
       // A chapter replay from its first scene requires rebuilding later state;
       // using only the original choices from before this episode is safe.
       const epChoiceIds=literarySeason.scenes.filter(s=>s.episode>=ep).map(s=>s.id);
@@ -275,24 +298,24 @@ function settingsPanel(section){
   const size=button('',()=>{const scales=[.9,1,1.12,1.25];settings.scale=scales[(scales.indexOf(settings.scale)+1)%scales.length];applySettings();draw()},'setting-button');
   const contrast=button('',()=>{settings.contrast=!settings.contrast;applySettings();draw()},'setting-button');
   const motion=button('',()=>{settings.motion=!settings.motion;applySettings();draw()},'setting-button');
-  function draw(){size.textContent=`Размер текста · ${Math.round(settings.scale*100)}%`;contrast.textContent=`Повышенная контрастность · ${settings.contrast?'да':'нет'}`;motion.textContent=`Анимация · ${settings.motion?'отключена':'системная'}`}
+  function draw(){size.textContent=t('textSize',{percent:Math.round(settings.scale*100)});contrast.textContent=t('contrast',{state:t(settings.contrast?'contrastOn':'contrastOff')});motion.textContent=t('motion',{state:t(settings.motion?'motionOff':'motionSystem')})}
   draw();section.append(size,contrast,motion);
 }
 function renderMenu(){
   platform?.setGameplayActive(false);
   menuOpen=true;app.className='literary-home';app.dataset.presentation=modal?`menu-${modal.toLowerCase()}`:'menu-home';app.style.setProperty('--cover',`url('${cover}')`);app.replaceChildren();
   const section=el('','literary-home-card');app.append(section);
-  section.append(el('РОМАНТИЧЕСКАЯ ИСТОРИЯ · ИСЛАНДИЯ','kicker'),el('Поцелуй на краю света','home-title','h1'));
-  if(modal){const draw={Эпизоды:episodeSelection,Настройки:settingsPanel}[modal];section.append(panel(modal,draw??(x=>x.append(el('Четыре самостоятельных исхода: Эрик, Ник, Дамир и Алиса. Прогресс этой редакции сохраняется отдельно от прежней короткой версии.','home-summary')))));return;}
-  section.append(el('Три недели дороги. Три возможные истории любви. И возможность выбрать себя.','home-summary'));
+  section.append(el(t('menuKicker'),'kicker'),el(t('gameTitle'),'home-title','h1'));
+  if(modal){const draw={episodes:episodeSelection,settings:settingsPanel}[modal];section.append(panel(modal,draw??(x=>x.append(el(t('standaloneSummary',{eric:t(routeName.A),nick:t(routeName.B),damir:t(routeName.C),alice:t(routeName.D)}),'home-summary')))));return;}
+  section.append(el(t('menuSummary'),'home-summary'));
   const actions=el('','home-actions');
   if(hasSave)actions.append(button(t('continueEpisode',{episode:byId.get(reader.sceneId).episode}),continueGame,'primary'));
   actions.append(button(t('newGame'),startNew,hasSave?'':'primary'));
   const secondary=el('','home-actions-secondary');
-  for(const [name,label] of [['Эпизоды',t('episodes')],['Настройки',t('settings')]])secondary.append(button(label,()=>{modal=name;renderMenu()}));
+  for(const [name,label] of [['episodes',t('episodes')],['settings',t('settings')]])secondary.append(button(label,()=>{modal=name;renderMenu()}));
   actions.append(secondary);
   section.append(actions);
-  if(cloudCandidate)section.append(button('Восстановить облачный прогресс',()=>{if(!window.confirm('Заменить текущее локальное сохранение облачным?'))return;cloudLocked=true;reader=cloudCandidate;cloudCandidate=null;persist();continueGame()}));
+  if(cloudCandidate)section.append(button(t('restoreCloud'),()=>{if(!window.confirm(t('restoreCloudConfirm')))return;cloudLocked=true;reader=cloudCandidate;cloudCandidate=null;persist();continueGame()}));
 }
 function renderStage(direction) {
   const stage=el('','scene-stage');
@@ -323,7 +346,7 @@ function renderReader(){
   if(menuOpen)return renderMenu();
   platform?.setGameplayActive(true);
   const scene=byId.get(reader.sceneId);if(!scene){goHome();return}
-  const flow=compileInteractivePlayback(scene,reader.choices);reader.position=Math.min(reader.position,flow.at(-1)?.type==='choice'?Math.max(0,flow.length-1):flow.length);
+  const flow=compileInteractivePlayback(scene,reader.choices,locale);reader.position=Math.min(reader.position,flow.at(-1)?.type==='choice'?Math.max(0,flow.length-1):flow.length);
   const isEnding=['S44','S45','S46','S47'].includes(scene.id);
   const mode=artMode(scene,flow[reader.position],reader.choices,isEnding);
   app.className='literary-reader';app.dataset.presentation=mode;app.replaceChildren();
@@ -338,12 +361,12 @@ function renderReader(){
   if(art?.presentation!=='cinematic') picture.append(renderStage({...direction,mode:direction.cast.length>2?'group':direction.cast.length===2?'pair':'solo',mood:stageForScene(scene.id,reader.choices).mood}));
   picture.append(el('','literary-vignette'));app.append(picture);bindStageNavigation(picture);
   const header=el('','reader-header');
-  header.append(button('☰ '+t('menu'),goHome,'small-button'),el(t('episode')+` ${scene.episode} / 10`,'chapter-index'),el('ПОЦЕЛУЙ НА КРАЮ СВЕТА','draft-indicator'));
-  header.setAttribute('aria-label',`${scene.title}. Эпизод ${scene.episode}`);
+  header.append(button('☰ '+t('menu'),goHome,'small-button'),el(t('episode')+` ${scene.episode} / 10`,'chapter-index'),el(t('readerHeaderTitle'),'draft-indicator'));
+  header.setAttribute('aria-label',t('sceneAria',{title:scene.title,episode:scene.episode}));
   app.append(header);
   const sheet=el('','reader-sheet');
   if(!isEnding)sheet.setAttribute('aria-label',cleanLiteraryText(scene.title));
-  if(reader.migrationNotice){sheet.append(el('После обновления визуальных переходов продолжение начинается с начала текущей сцены. Прежний прогресс и выборы сохранены.','migration-note'));reader.migrationNotice=false;persist();}
+  if(reader.migrationNotice){sheet.append(el(t('migrationNotice'),'migration-note'));reader.migrationNotice=false;persist();}
   if(current?.type==='page'){
     const content=el('','reader-content');
     for(const paragraph of current.paragraphs)content.append(el(cleanLiteraryText(paragraph),'reader-paragraph','p'));
@@ -367,7 +390,7 @@ function renderReader(){
       if(!reader.finished){reader.finished=true;persist()}
       sheet.classList.add('terminal-sheet');
       sheet.append(button(t('returnMenu'),goHome,'primary'));
-      sheet.prepend(el(endingHeadings[scene.id],'reader-scene','h2'));
+      sheet.prepend(el(t(endingHeadings[scene.id]),'reader-scene','h2'));
     }else{sheet.append(el(t('structuralError'),'reader-paragraph'));sheet.append(button(t('returnMenu'),goHome,'primary'))}
   }
   bindStageTapTarget(sheet);
@@ -377,22 +400,36 @@ window.addEventListener('keydown',event=>{
   if(menuOpen || !['Enter',' ','Spacebar','ArrowRight'].includes(event.key) || event.altKey || event.ctrlKey || event.metaKey || isInteractiveTarget(event.target) || isInteractiveTarget(document.activeElement) || document.activeElement?.closest?.('[data-stage-advance]'))return;
   if(advanceNarrative())event.preventDefault();
 });
-applySettings();renderMenu();
+function renderBootFailure(error){
+  platform?.setGameplayActive(false);
+  app.className='literary-home';
+  app.dataset.qaFailure=String(error?.message||'').startsWith('BLOCKED_EN_CORPUS_INCOMPLETE')?'en-corpus':'yandex-sdk';
+  const message=app.dataset.qaFailure==='en-corpus'?String(error.message):t('sdkError');
+  app.replaceChildren(el(message,'structural-error','p'));
+}
+applySettings();
 // Versioned cloud key: never interpret old 12-episode progression as new literary scenes.
 // A late cloud response cannot overwrite deliberate new-game actions or a local save.
 const bootHadLocal=hasSave;
-initYandexPlatform({cloudKey:literaryCloudKey,onCloudState:raw=>{
-  const candidate=parseSaved(raw);
-  if(!candidate || cloudLocked)return;
-  if(bootHadLocal || hasSave){cloudCandidate=candidate; if(menuOpen)renderMenu();return}
-  reader=candidate;hasSave=true;
-  try{localStorage.setItem(literarySaveKey,JSON.stringify(reader))}catch{}
-  if(menuOpen)renderMenu();
-}}).then(result=>{
+async function boot(){
+ try{
+  const result=await initYandexPlatform({cloudKey:literaryCloudKey,onCloudState:raw=>{
+   const candidate=parseSaved(raw);
+   if(!candidate || cloudLocked)return;
+   if(bootHadLocal || hasSave){cloudCandidate=candidate; if(menuOpen)renderMenu();return}
+   reader=candidate;hasSave=true;
+   try{localStorage.setItem(literarySaveKey,JSON.stringify(reader))}catch{}
+   if(menuOpen)renderMenu();
+  }});
   platform=result;
   locale=platform.locale;
   t=createTranslator(locale);
   document.documentElement.lang=locale;
+  document.title=t('gameTitle');
+  app.setAttribute('aria-label',t('gameTitle'));
+  runtimeSeason=loadRuntimeSeason(locale,platform.qaLocaleOverride);
+  byId=new Map(runtimeSeason.scenes.map(scene=>[scene.id,scene]));
+  if(!byId.has(reader.sceneId))throw Error(`BLOCKED_EN_CORPUS_INCOMPLETE: missing scene ${reader.sceneId}`);
   renderMenu();
   platform.setGameplayActive(!menuOpen);
   platform.markInteractiveReady();
@@ -401,16 +438,19 @@ initYandexPlatform({cloudKey:literaryCloudKey,onCloudState:raw=>{
     // Explicit new-game reset may have happened while SDK was initializing.
     if(cloudLocked)cloudQueue.enqueue(reader).catch(()=>{});
   }
-}).catch(error=>{
-  console.error(error);
-  app.className='literary-home';
-  app.dataset.qaFailure='yandex-sdk';
-  app.replaceChildren(el(t('sdkError'),'structural-error','p'));
-});
+ }catch(error){
+   console.error(error);
+   renderBootFailure(error);
+ }
+}
 window.__LITERARY_QA__={
   getState:()=>structuredClone(reader),
-  getFlow:()=>compileInteractivePlayback(byId.get(reader.sceneId),reader.choices),
-  getScenes:()=>literarySeason.scenes.map(s=>s.id),
+  getFlow:()=>compileInteractivePlayback(byId.get(reader.sceneId),reader.choices,locale),
+  getScenes:()=>runtimeSeason.scenes.map(s=>s.id),
+  getLocale:()=>locale,
+  getPlatformMode:()=>platform?.mode??'booting',
+  getPersistenceKeys:()=>({local:literarySaveKey,cloud:literaryCloudKey}),
   getScreen:()=>({menuOpen,sceneId:reader.sceneId,position:reader.position}),
   // QA methods are strictly read-only; preview and the old game have separate state keys.
 };
+boot();

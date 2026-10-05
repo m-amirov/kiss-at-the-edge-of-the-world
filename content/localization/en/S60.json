@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "source": "content/season-1-literary-episode-09.md",
+  "scenes": {
+    "S60": {
+      "title": "Day 19. Ridiculous Souvenirs",
+      "chunks": {
+        "S60.C000": {
+          "title": "",
+          "paragraphs": {
+            "S60.C000.P000": "The kitchen light went out at the very moment Nick opened the grocery bag. The guesthouse owner looked in with a torch and said the building had a temporary power cut; she had portable lamps, but they could not use the cooker for now. They settled at the table with bread, cheese and hot tea from thermoses. Nick tried to tell a scary story, but by the second sentence Damir discovered that, in the dark, he had put a slice of lemon on his bread. The story did not survive.",
+            "S60.C000.P001": "Alice took the postcard she had bought from her pocket. Eric brought a funny wooden bird on a stand, Nick a paper napkin with a crooked map of their road, and Damir a small chocolate bar with the filling Alice had come to love. They decided to exchange ridiculous souvenirs: not expensive presents, but things that might make someone remember the road."
+          }
+        },
+        "S60.C001": {
+          "title": "Choice S60-C1 — What will Alice keep?",
+          "paragraphs": {}
+        },
+        "S60.C002": {
+          "title": "A. The wooden bird",
+          "paragraphs": {
+            "S60.C002.P000": "Eric set it in front of Alice, and the bird’s head fell off. Nick suggested calling it contemporary art. Alice found adhesive tape in her bag; by the end of the evening the bird stood straight, though its head tilted a little to one side."
+          }
+        },
+        "S60.C003": {
+          "title": "B. The napkin with the drawn map",
+          "paragraphs": {
+            "S60.C003.P000": "Nick gave her the napkin with a solemn expression, as though it were the expedition’s official route. Alice slipped it into her book. Years later she might not remember a single straight line on that map, but she would certainly remember the day they searched for someone else’s glove."
+          }
+        },
+        "S60.C004": {
+          "title": "C. The chocolate she can eat at once",
+          "paragraphs": {
+            "S60.C004.P000": "Damir offered to share it with everyone. Alice opened the wrapper and broke the bar into four uneven pieces. Only the shining foil remained on the table; everyone agreed that made a suitable souvenir too."
+          }
+        },
+        "S60.C005": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S60.C005.P000": "The lights came back just as they were about to turn in. Nick wanted to put on music, but Eric asked to leave one more minute of quiet. Alice looked at her friends: over the past weeks they had said many needless things to one another, and many necessary ones. For now, it was enough simply to sit together. Tomorrow they would return to Reykjavík."
+          }
+        }
+      }
+    }
+  }
+}
