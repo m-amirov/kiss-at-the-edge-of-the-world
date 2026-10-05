@@ -6,9 +6,9 @@
   "repository": {
     "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-recovery-2026-10-05",
     "remote": "https://github.com/m-amirov/kiss-at-the-edge-of-the-world.git",
-    "head": "fdee8d278dd1095bcd804d9612b4288ccd94d796"
+    "head": "fedc2a60c919c9f568647a82ab374506c4cd3c02"
   },
-  "currentHead": "fdee8d278dd1095bcd804d9612b4288ccd94d796",
+  "currentHead": "fedc2a60c919c9f568647a82ab374506c4cd3c02",
   "starterKitVersion": "0.5.9",
   "productionArtRuns": [
     {
@@ -397,7 +397,7 @@
     "type": "automated-current-worktree-hash-verifier",
     "source": "tools/release/art-acceptance.mjs + current beat-level visual ledger",
     "algorithm": "sha256",
-    "acceptanceTimestamp": "2026-10-05T11:30:19.438Z"
+    "acceptanceTimestamp": "2026-10-05T16:53:47.833Z"
   },
   "compatibility": {
     "status": "PASS",
@@ -411,7 +411,7 @@
   "runtimeVerification": {
     "status": "PASS",
     "evidencePath": "artifacts/evidence/full-route-runtime-qa-2026-09-30.json",
-    "generatedAt": "2026-10-05T11:30:19.439Z",
+    "generatedAt": "2026-10-05T16:53:47.834Z",
     "viewports": [
       "1920x900",
       "390x844"
