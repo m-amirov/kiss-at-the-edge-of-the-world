@@ -5,13 +5,14 @@ import os from 'node:os';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { execFileSync } from 'node:child_process';
+import { spawnSync } from 'node:child_process';
 import { verifyArtAcceptance } from '../../tools/release/art-acceptance.mjs';
 
 const hash = file => crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
 function fixture() {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'art-acceptance-'));
   fs.mkdirSync(path.join(root, 'assets'), { recursive: true });
-  fs.writeFileSync(path.join(root, 'assets/asset-manifest.json'), '{"schemaVersion":1}');
+  fs.writeFileSync(path.join(root, 'assets/asset-manifest.json'), '{"schemaVersion":1,"assets":[]}');
   fs.writeFileSync(path.join(root, 'assets/a.png'), 'fixture-png');
   fs.mkdirSync(path.join(root, 'artifacts/evidence'), { recursive: true });
   execFileSync('git', ['init', '-q'], { cwd: root });
@@ -42,6 +43,21 @@ test('valid persisted acceptance record passes', () => {
 test('missing record blocks', () => {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'art-acceptance-'));
   assert.equal(verifyArtAcceptance({ root }).code, 'ART_ACCEPTANCE_RECORD_MISSING');
+});
+test('refresh rebinds repository path and HEAD to the current worktree', () => {
+  const { root, record } = fixture();
+  record.repository.path = 'E:/previous-worktree';
+  record.repository.head = 'previous-head';
+  record.currentHead = 'previous-head';
+  fs.writeFileSync(path.join(root, 'artifacts/evidence/production-art-acceptance.json'), JSON.stringify(record));
+  const script = path.resolve('tools/release/refresh-production-art-acceptance.mjs');
+  const result = spawnSync(process.execPath, [script], { cwd: root, encoding: 'utf8' });
+  assert.equal(result.status, 0, result.stderr);
+  const refreshed = JSON.parse(fs.readFileSync(path.join(root, 'artifacts/evidence/production-art-acceptance.json'), 'utf8'));
+  const head = execFileSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' }).trim();
+  assert.equal(refreshed.repository.path, root);
+  assert.equal(refreshed.repository.head, head);
+  assert.equal(refreshed.currentHead, head);
 });
 for (const [name, mutate, expected] of [
   ['wrong repository', record => { record.repository.path = 'C:/other'; }, 'ART_ACCEPTANCE_REPOSITORY_MISMATCH'],

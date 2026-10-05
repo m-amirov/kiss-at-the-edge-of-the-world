@@ -27,7 +27,7 @@ for (const pathName of currentGeneratedPaths) if (!currentAssets.some(asset => a
 for (const asset of currentAssets) byPath.set(asset.path, { ...(byPath.get(asset.path) ?? {}), ...asset });
 record.acceptedAssets = [...byPath.values()];
 record.currentHead = head;
-record.repository.head = head;
+record.repository = { ...(record.repository ?? {}), path: root, head };
 record.manifestSha256 = sha256(manifestFile);
 record.productionArtRuns = [...(record.productionArtRuns ?? []).filter(item => item.runId !== manifest.visualDirection?.runId), { runId: manifest.visualDirection?.runId, result: 'PASS', sourceProjectDir: root, evidence: `.ceos-runs/${manifest.visualDirection?.runId}` }];
 record.acceptedSceneCoverage = { expected: 66, covered: 66, remaining: 0, source: 'current beat-level visual ledger and runtime mapping reconciliation' };
