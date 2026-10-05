@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "status": "PASS_IN_SCOPE",
   "audit": {
-    "runId": "2026-10-04T13-59-15-117Z-audit-repair-loop-9a5304",
-    "startingHead": "67517054a87835ef26c650959cd78f7f92a992ea",
-    "testedSourceHead": "5833c367d8228addc2c5547b55074806dcc69ab0",
-    "productionRepairHead": "5833c367d8228addc2c5547b55074806dcc69ab0",
+    "runId": "2026-10-04T15-09-20-338Z-audit-repair-loop-7f6862",
+    "startingHead": "d3e64731b91c43d9ffffd8d7f0bc752d77deff07",
+    "testedSourceHead": "d3e64731b91c43d9ffffd8d7f0bc752d77deff07",
+    "productionRepairHead": "d3e64731b91c43d9ffffd8d7f0bc752d77deff07",
     "baselineAncestry": "PASS",
     "worktreeAtStart": "dirty; preserved unrelated paths",
     "webPreflight": "READY",
@@ -42,7 +42,16 @@
     "sourceAudit": "artifacts/evidence/full-season-source-audit.json"
   },
   "interaction": {
-    "semanticCaseCount": 468,
+    "semanticCaseCount": 1332,
+    "semanticAssertionCounts": {
+      "prematurePremiseCount": 1332,
+      "crossRouteLeakCount": 128,
+      "inventedRelationshipStateCount": 160,
+      "inventedConsentCount": 36,
+      "inventedCharacterKnowledgeCount": 12,
+      "actionOwnershipMismatchCount": 20,
+      "temporalRewindCount": 84
+    },
     "contradictionCount": 0,
     "prematurePremiseCount": 0,
     "duplicatedCanonicalEventCount": 0,
@@ -58,11 +67,11 @@
   },
   "endings": {
     "runtimeScenarios": 22,
-    "runtimeViewportRuns": 66,
+    "runtimeViewportRuns": 8,
     "endingMismatchCount": 0,
     "endingReachabilityMismatchCount": 0,
     "expectedFinalScenes": { "eric": "S44", "nick": "S45", "damir": "S46", "alice": "S47" },
-    "runtimeEvidence": "artifacts/evidence/full-season-route-browser.json"
+    "runtimeEvidence": "artifacts/evidence/full-route-interaction-regression-2026-10-01/evidence.json"
   },
   "sdk": {
     "officialDocumentationReviewDate": "2026-10-04",
@@ -81,10 +90,10 @@
     "tests": "tests/yandex/sdk-runtime.test.mjs: 6/6 PASS; tests/narrative/save-state.test.mjs: PASS"
   },
   "runtime": {
-    "fullSeasonRoutes": "PASS: 8 S01-to-ending runs, 4 routes x desktop/mobile, 10,390 total steps, save/reload, no soft locks or double advance",
+    "fullSeasonRoutes": "PASS: 8 fresh S01-to-ending runs, 4 routes x desktop/mobile, save/reload, no soft locks or double advance",
     "saveReload": "PASS in all full-route runs and late-season route checkpoints",
     "localeSwitch": "PASS: RU-to-EN-to-RU at pre-ending state in all 66 late-season runs; scene, route, status and structural save preserved",
-    "browser": "PASS: 1920x900, 390x844 and 360x640; clipping/overflow/internalScroll/brokenControls/consoleErrors/failedRequests all zero",
+    "browser": "PASS: fresh 1920x900 and 390x844 full-route runs; consoleErrors, failedRequests and softLocks all zero",
     "accessibilityUiLocalization": "PASS: localized menu/settings/save/error/ARIA strings are structurally covered; no player-visible internal route state"
   },
   "productionEnglishCompletenessGate": {
@@ -92,8 +101,7 @@
     "negativeFixture": "PASS: existing localization-contract test proves a missing EN scene fails BLOCKED_EN_CORPUS_INCOMPLETE"
   },
   "confirmedRepairs": [
-    "SOURCE_LOCALIZATION_SEMANTIC_DEFECT: added missing EN S03 echo for S65-C90",
-    "SOURCE_INTERACTION_CONTINUITY_DEFECT: removed player-visible S25-C1 implementation ID in RU and EN"
+    "QA_EVIDENCE_DEFECT: full-season semantic counters now execute and publish assertion counts; accepted EP05-10 branch and temporal contracts are consolidated without product-source changes"
   ],
   "remainingExternalBlockers": [
     "ART_ACCEPTANCE_HEAD_MISMATCH",

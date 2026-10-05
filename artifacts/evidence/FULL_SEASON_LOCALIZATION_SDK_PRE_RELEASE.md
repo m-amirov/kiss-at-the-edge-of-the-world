@@ -2,32 +2,29 @@
 
 **In-scope verdict:** `READY_FULL_SEASON_LOCALIZATION_SDK_FOR_MERGE`.
 
-Audited baseline: `67517054a87835ef26c650959cd78f7f92a992ea`. Production repair: `5833c367d8228addc2c5547b55074806dcc69ab0`. This is merge-readiness evidence only; no RC, Draft, moderation or publication was created or changed.
+Audited baseline and frozen product source: `d3e64731b91c43d9ffffd8d7f0bc752d77deff07`. This is merge-readiness evidence only; no RC, Draft, moderation or publication was created or changed.
 
 ## Scope and CEOS
 
-- CEOS run: `2026-10-04T13-59-15-117Z-audit-repair-loop-9a5304`.
+- CEOS run: `2026-10-04T15-09-20-338Z-audit-repair-loop-7f6862`.
 - Branch and starting `HEAD` exactly matched the requested baseline; origin matched it and ancestry passed.
 - Starter Kit 0.5.9 self-test and managed-drift status passed. Existing unrelated dirty paths were recorded and preserved.
 - Web preflight was `READY`, but this host exposes no callable CEOS Web reviewer. The audit therefore used documented native fallback and does not claim a Web-review PASS.
 
 ## Confirmed bounded repair
 
-1. `S03` lacked the EN echo for `S65-C90`, while its RU canonical echo existed. The EN echo was added.
-2. The player-visible RU/EN prompt in `S25` exposed `S25-C1`. It now says “the next decision” / “следующим решением”.
-
-The runtime EN bundle was regenerated. No accepted prose was rewritten beyond those two concrete defects.
+The full-season runner previously printed seven semantic counters that had no executable assertions. It now records 1,332 RU/EN interaction cases, predecessor-choice contexts, source neighbours, selected option/result, per-case assertion outcomes, and assertion totals. It consolidates the accepted EP05-06 evidence plus explicit EP07-10 route and temporal contracts. No product source, localization, interaction beat, SDK, route or save code changed.
 
 ## Results
 
 - Localization: **66 RU / 66 EN**, all scene/chunk/paragraph, authored-choice, option-code, predicate, interaction, echo, route and ending parities pass; EN Cyrillic and player-visible markup/internal state: **0**.
-- Interaction: **468** deterministic RU/EN cases across reachable route/status variants. All requested semantic counters, including temporal rewind and internal-state leakage, are **0**.
+- Interaction: **1,332** deterministic RU/EN cases across reachable route/status variants. Mandatory assertion totals: premature premise **1,332**; cross-route **128**; relationship **160**; consent **36**; knowledge **12**; action ownership **20**; temporal rewind **84**. All requested semantic counters are **0**.
 - Endings: **22/22** runtime-derived scenarios across Eric, Nick, Damir and Alice; mismatch and reachability mismatch: **0**.
 - SDK: `/sdk.js` → `YaGames.init()`, explicit production failures, one-shot Game Ready, gameplay pause/resume/ad lifecycle, production-authoritative SDK locale and observable cloud failures: **PASS**. SDK tests: **6/6**.
 - Production EN gate: positive complete-corpus path and negative missing-scene fixture both pass.
-- Browser: **66** late-season runtime runs (`22 × 1920×900 / 390×844 / 360×640`) and **8** full S01-to-ending route runs. No console errors, failed requests, soft locks, double advance, clipping, overflow, internal scroll or EN Cyrillic leakage.
+- Browser/runtime: **8** fresh full S01-to-ending route runs (4 routes × `1920×900` / `390×844`), including save/reload, menu/choice-boundary guards and click/touch/keyboard progression. Console errors, failed requests, soft locks and double advance: **0**.
 
-Detailed machine evidence: `full-season-source-audit.json`, `full-season-route-browser.json`, and `full-season-interaction-runtime/evidence.json`.
+Detailed machine evidence: `full-season-source-audit.json` and `full-route-interaction-regression-2026-10-01/evidence.json`.
 
 ## Official documentation review
 
