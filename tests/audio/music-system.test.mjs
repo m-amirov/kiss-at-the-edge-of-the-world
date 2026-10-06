@@ -48,3 +48,19 @@ test('audio settings persist and apply mute/volume', async () => {
   assert.deepEqual(director.getState(), { cueId:null, unlocked:false, volume:.4, muted:true, activeInstances:0 });
   assert.ok(store.size === 1);
 });
+
+test('browser AudioDirector does not assign readonly HTMLAudioElement.dataset', async () => {
+  const { createAudioDirector } = await import('../../src/audio-director.js');
+  class BrowserLikeAudio {
+    constructor() { this.volume = 0; this._dataset = {}; }
+    get dataset() { return this._dataset; }
+    set dataset(_value) { throw new TypeError('dataset is readonly'); }
+    setAttribute() {}
+    play() { return Promise.resolve(); }
+    pause() {}
+  }
+  const director = createAudioDirector({ AudioClass: BrowserLikeAudio, storage: { getItem: () => null, setItem: () => {} }, requestFrame: null });
+  director.setCue({ cueId: 'browser-like', file: 'browser-like.ogg', loopable: true });
+  await assert.doesNotReject(() => director.unlock());
+  assert.equal(director.getState().activeInstances, 1);
+});

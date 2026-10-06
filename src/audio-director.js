@@ -22,8 +22,7 @@ export function createAudioDirector({ AudioClass = globalThis.Audio, storage = g
     audio.preload = 'auto';
     audio.loop = Boolean(cue.loopable);
     audio.setAttribute?.('aria-hidden', 'true');
-    audio.dataset = audio.dataset || {};
-    audio.dataset.musicCue = cue.cueId;
+    if (audio.dataset) audio.dataset.musicCue = cue.cueId;
     setAudioVolume(audio, effectiveVolume());
     return audio;
   };
