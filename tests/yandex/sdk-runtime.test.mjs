@@ -1,6 +1,23 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { initYandexPlatform, isLocalDevelopment, normalizeYandexLocale, requestedQaLocale, resetYandexSdkForTests } from '../../src/yandex-sdk.js';
+
+const root=fileURLToPath(new URL('../..', import.meta.url));
+const htmlContract=(file)=>fs.readFileSync(path.join(root,file),'utf8');
+
+test('production entry HTML uses the official SDK loader before its module entry',()=>{
+  for(const file of ['index.html','literary.html']){
+    const html=htmlContract(file);
+    const sdk=html.indexOf('<script src="/sdk.js"></script>');
+    const module=html.indexOf('<script type="module"');
+    assert.ok(sdk>=0,`${file} must explicitly load /sdk.js`);
+    assert.ok(module>sdk,`${file} must load /sdk.js before its module entry`);
+  }
+  assert.equal(fs.existsSync(path.join(root,'sdk.js')),false,'official SDK must not be vendored');
+});
 
 function harness({lang='en-US',loadFails=false,cloud=null,cloudReadFails=false,cloudWriteFails=false}={}) {
   const calls={ready:0,start:0,stop:0,getPlayer:0,getData:0,setData:0,append:0,ad:0},listeners={}; let adCallbacks=null;
@@ -20,6 +37,12 @@ test('SDK success: init once, Game Ready once, lifecycle tracks pause and menu',
   resetYandexSdkForTests();const h=harness({lang:'ru-RU'});const p=await initYandexPlatform({...h,location:{protocol:'https:',hostname:'example.com',search:''}});
   assert.equal(p.locale,'ru');assert.equal(h.calls.getPlayer,1);assert.equal(p.markInteractiveReady(),true);assert.equal(p.markInteractiveReady(),false);assert.equal(h.calls.ready,1);
   p.setGameplayActive(true);p.setGameplayActive(true);assert.equal(h.calls.start,1);h.listeners.game_api_pause();assert.equal(h.calls.stop,1);h.listeners.game_api_resume();assert.equal(h.calls.start,2);p.setGameplayActive(false);assert.equal(h.calls.stop,2);
+});
+test('preloaded official SDK is reused without dynamic injection and initializes once',async()=>{
+  resetYandexSdkForTests();const h=harness({lang:'en-US'});let initCalls=0;
+  const ysdk=h.window.YaGames={init:async()=>{initCalls++;return {environment:{i18n:{lang:'en-US'}},features:{LoadingAPI:{ready(){}},GameplayAPI:{start(){},stop(){}}},async getPlayer(){return {};},on(){},off(){}}}};
+  const p=await initYandexPlatform({...h,location:{protocol:'https:',hostname:'games.yandex.ru',search:''}});
+  assert.equal(p.mode,'yandex');assert.equal(initCalls,1);assert.equal(h.calls.append,0);
 });
 test('cloud read/write and diagnostics are observable',async()=>{
   resetYandexSdkForTests();const events=[],h=harness({cloud:{key:'value'}});const p=await initYandexPlatform({...h,cloudKey:'key',onDiagnostic:e=>events.push(e),location:{protocol:'https:',hostname:'example.com',search:''}});
