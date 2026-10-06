@@ -26,6 +26,9 @@
     "release:local-freeze": "node tools/release/local-freeze.mjs",
     "dev": "node tools/dev-server.mjs",
     "yandex:release:evidence": "node tools/yandex/release-evidence-gate.mjs"
+    ,"audio:check": "node tools/audio-generation/check-generator.mjs"
+    ,"audio:build-cues": "node tools/audio-generation/build-music-cues.mjs"
+    ,"test:audio": "node --test tests/audio/music-system.test.mjs"
   },
   "type": "module"
 }

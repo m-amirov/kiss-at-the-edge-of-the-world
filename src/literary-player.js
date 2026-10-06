@@ -9,6 +9,8 @@ import { applyLiteraryLocale, createTranslator, validateLiteraryInteractionLocal
 import { literaryLocaleBundles } from './literary-localization-bundle.js';
 import { interactionBeats } from './literary-interactive-beats.js';
 import { createDialogueHistory } from './literary-history.js';
+import { createAudioDirector } from './audio-director.js';
+import { musicCues, musicCueForScene } from './music-cues.js';
 
 const canonicalById = new Map(literarySeason.scenes.map(scene => [scene.id, scene]));
 let runtimeSeason = literarySeason;
@@ -137,6 +139,8 @@ let platform=null;
 let locale='ru';
 let t=createTranslator(locale);
 let cloudQueue=null;
+const audioDirector=createAudioDirector();
+const audioCueById=new Map(musicCues.map(cue=>[cue.cueId,{...cue,file:`${cue.cueId}.ogg`} ]));
 let settings=(()=>{try{return{scale:1,contrast:false,motion:false,...JSON.parse(localStorage.getItem(textSettingsKey)||'{}')}}catch{return{scale:1,contrast:false,motion:false}}})();
 function loadRuntimeSeason(selectedLocale,qaLocaleOverride){
   if(selectedLocale==='ru')return literarySeason;
@@ -310,11 +314,14 @@ function settingsPanel(section){
   const size=button('',()=>{const scales=[.9,1,1.12,1.25];settings.scale=scales[(scales.indexOf(settings.scale)+1)%scales.length];applySettings();draw()},'setting-button');
   const contrast=button('',()=>{settings.contrast=!settings.contrast;applySettings();draw()},'setting-button');
   const motion=button('',()=>{settings.motion=!settings.motion;applySettings();draw()},'setting-button');
-  function draw(){size.textContent=t('textSize',{percent:Math.round(settings.scale*100)});contrast.textContent=t('contrast',{state:t(settings.contrast?'contrastOn':'contrastOff')});motion.textContent=t('motion',{state:t(settings.motion?'motionOff':'motionSystem')})}
-  draw();section.append(size,contrast,motion);
+  const audioMute=button('',()=>{audioDirector.setMuted(!audioDirector.getState().muted);draw()},'setting-button');
+  const audioVolume=document.createElement('input');audioVolume.type='range';audioVolume.min='0';audioVolume.max='1';audioVolume.step='0.05';audioVolume.className='setting-volume';audioVolume.addEventListener('input',()=>audioDirector.setVolume(audioVolume.value));
+  function draw(){const audio=audioDirector.getState();size.textContent=t('textSize',{percent:Math.round(settings.scale*100)});contrast.textContent=t('contrast',{state:t(settings.contrast?'contrastOn':'contrastOff')});motion.textContent=t('motion',{state:t(settings.motion?'motionOff':'motionSystem')});audioMute.textContent=`${locale==='ru'?'Музыка':'Music'}: ${audio.muted?(locale==='ru'?'выкл.':'off'):(locale==='ru'?'вкл.':'on')}`;audioVolume.value=String(audio.volume)}
+  draw();section.append(size,contrast,motion,audioMute,audioVolume);
 }
 function renderMenu(){
   platform?.setGameplayActive(false);
+  audioDirector.pause();
   menuOpen=true;app.className='literary-home';app.dataset.presentation=modal?`menu-${modal.toLowerCase()}`:'menu-home';app.style.setProperty('--cover',`url('${cover}')`);app.replaceChildren();
   const section=el('','literary-home-card');app.append(section);
   section.append(el(t('menuKicker'),'kicker'),el(t('gameTitle'),'home-title','h1'));
@@ -358,6 +365,8 @@ function renderReader(){
   if(menuOpen)return renderMenu();
   platform?.setGameplayActive(true);
   const scene=byId.get(reader.sceneId);if(!scene){goHome();return}
+  audioDirector.setCue(audioCueById.get(musicCueForScene(scene.id)));
+  audioDirector.resume().catch(()=>{});
   const flow=compileInteractivePlayback(scene,reader.choices,locale);reader.position=Math.min(reader.position,flow.at(-1)?.type==='choice'?Math.max(0,flow.length-1):flow.length);
   const isEnding=['S44','S45','S46','S47'].includes(scene.id);
   const mode=artMode(scene,flow[reader.position],reader.choices,isEnding);
@@ -413,6 +422,11 @@ window.addEventListener('keydown',event=>{
   if(menuOpen || !['Enter',' ','Spacebar','ArrowRight'].includes(event.key) || event.altKey || event.ctrlKey || event.metaKey || isInteractiveTarget(event.target) || isInteractiveTarget(document.activeElement) || document.activeElement?.closest?.('[data-stage-advance]'))return;
   if(advanceNarrative())event.preventDefault();
 });
+window.addEventListener('pointerdown',()=>{audioDirector.unlock().catch(()=>{})},{passive:true});
+window.addEventListener('keydown',()=>{audioDirector.unlock().catch(()=>{})},{passive:true});
+document.addEventListener('visibilitychange',()=>{if(document.hidden)audioDirector.pause();else audioDirector.resume().catch(()=>{})});
+window.addEventListener('blur',()=>audioDirector.pause());
+window.addEventListener('focus',()=>audioDirector.resume().catch(()=>{}));
 function renderBootFailure(error){
   platform?.setGameplayActive(false);
   app.className='literary-home';

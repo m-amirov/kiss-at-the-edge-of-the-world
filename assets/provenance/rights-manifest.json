@@ -1040,6 +1040,70 @@
       "method": "Codex imagegen current production-art run; title-free menu key visual with canonical Alice",
       "source": "Generated in Codex imagegen, 2026-10-01",
       "license": "generated for this project"
+    },
+    {
+      "path": "assets/audio/music/main-theme.ogg",
+      "method": "ACE-Step 1.5 local generation from machine-readable music cue spec; normalized and encoded to OGG Vorbis q4",
+      "source": "ACE-Step/Ace-Step1.5, ACE-Step 1.5 v0.1.8, local CPU generation",
+      "license": "ACE-Step code and model MIT; generated output permitted for commercial use per official model card",
+      "cueId": "main-theme",
+      "loopable": true
+    },
+    {
+      "path": "assets/audio/music/road.ogg",
+      "method": "ACE-Step 1.5 local generation from machine-readable music cue spec; normalized and encoded to OGG Vorbis q4",
+      "source": "ACE-Step/Ace-Step1.5, ACE-Step 1.5 v0.1.8, local CPU generation",
+      "license": "ACE-Step code and model MIT; generated output permitted for commercial use per official model card",
+      "cueId": "road",
+      "loopable": true
+    },
+    {
+      "path": "assets/audio/music/cafe.ogg",
+      "method": "ACE-Step 1.5 local generation from machine-readable music cue spec; normalized and encoded to OGG Vorbis q4",
+      "source": "ACE-Step/Ace-Step1.5, ACE-Step 1.5 v0.1.8, local CPU generation",
+      "license": "ACE-Step code and model MIT; generated output permitted for commercial use per official model card",
+      "cueId": "cafe",
+      "loopable": true
+    },
+    {
+      "path": "assets/audio/music/iceland-calm.ogg",
+      "method": "ACE-Step 1.5 local generation from machine-readable music cue spec; normalized and encoded to OGG Vorbis q4",
+      "source": "ACE-Step/Ace-Step1.5, ACE-Step 1.5 v0.1.8, local CPU generation",
+      "license": "ACE-Step code and model MIT; generated output permitted for commercial use per official model card",
+      "cueId": "iceland-calm",
+      "loopable": true
+    },
+    {
+      "path": "assets/audio/music/romantic.ogg",
+      "method": "ACE-Step 1.5 local generation from machine-readable music cue spec; normalized and encoded to OGG Vorbis q4",
+      "source": "ACE-Step/Ace-Step1.5, ACE-Step 1.5 v0.1.8, local CPU generation",
+      "license": "ACE-Step code and model MIT; generated output permitted for commercial use per official model card",
+      "cueId": "romantic",
+      "loopable": true
+    },
+    {
+      "path": "assets/audio/music/tension.ogg",
+      "method": "ACE-Step 1.5 local generation from machine-readable music cue spec; normalized and encoded to OGG Vorbis q4",
+      "source": "ACE-Step/Ace-Step1.5, ACE-Step 1.5 v0.1.8, local CPU generation",
+      "license": "ACE-Step code and model MIT; generated output permitted for commercial use per official model card",
+      "cueId": "tension",
+      "loopable": true
+    },
+    {
+      "path": "assets/audio/music/sad.ogg",
+      "method": "ACE-Step 1.5 local generation from machine-readable music cue spec; normalized and encoded to OGG Vorbis q4",
+      "source": "ACE-Step/Ace-Step1.5, ACE-Step 1.5 v0.1.8, local CPU generation",
+      "license": "ACE-Step code and model MIT; generated output permitted for commercial use per official model card",
+      "cueId": "sad",
+      "loopable": true
+    },
+    {
+      "path": "assets/audio/music/ending.ogg",
+      "method": "ACE-Step 1.5 local generation from machine-readable music cue spec; normalized and encoded to OGG Vorbis q4",
+      "source": "ACE-Step/Ace-Step1.5, ACE-Step 1.5 v0.1.8, local CPU generation",
+      "license": "ACE-Step code and model MIT; generated output permitted for commercial use per official model card",
+      "cueId": "ending",
+      "loopable": false
     }
   ]
 }
