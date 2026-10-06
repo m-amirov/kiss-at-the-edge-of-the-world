@@ -20,304 +20,292 @@
       "PROJECT_RULES.md": "new-project-seed",
       "game-spec.yaml": "new-project-seed",
       "src/**": "new-project-seed",
-      "public/**": "new-project-seed"
+      "public/**": "new-project-seed",
+      "config/yandex-doc-snapshot.json": "semantic-merge",
+      "config/final-gameplay-videos.schema.json": "semantic-merge",
+      "tools/yandex/media-validation.mjs": "semantic-merge"
     }
   },
   "baseline": {
     "managed:agents-core": {
       "target": ".starter-kit/core/AGENTS_CORE.md",
       "sourceHash": "06bea0032f45767b6732c025f2f3ca052b9a5afad18bd7544e053ecb61e63dd0",
-      "targetHash": "06bea0032f45767b6732c025f2f3ca052b9a5afad18bd7544e053ecb61e63dd0"
+      "targetHash": "ca8270415a83ac0e28167a03a40fa4517618f39c6a272a1b34c567c09029d710"
     },
     "managed:codex-engineering-system-core": {
       "target": ".starter-kit/core/CODEX_ENGINEERING_SYSTEM.md",
       "sourceHash": "082f8cb09df7fae79ad736f9fa3d995a3cc20a0bf6e607d65cc84262a21b99c8",
-      "targetHash": "082f8cb09df7fae79ad736f9fa3d995a3cc20a0bf6e607d65cc84262a21b99c8"
+      "targetHash": "3739cda188b175e45d2af9194361f8473c3cb92a216552f016a830238b26ce02"
     },
     "managed:concept-proof-gate": {
       "target": ".starter-kit/core/CONCEPT_PROOF_GATE.md",
       "sourceHash": "2781b973e0a030871531f95b56d54da55b4cec70a55485d04898a154cd59a7bc",
-      "targetHash": "2781b973e0a030871531f95b56d54da55b4cec70a55485d04898a154cd59a7bc"
+      "targetHash": "d476471f656c942ff93ade07123bf3d67bae58d47b2faf6ef7ebe077b0480c66"
     },
     "managed:test-harness-adjudication": {
       "target": ".starter-kit/core/TEST_HARNESS_ADJUDICATION.md",
       "sourceHash": "6ad653af0f7e606fa09c4873886cfafc46b3fa4b30e6b348d9073dc2e4b315be",
-      "targetHash": "6ad653af0f7e606fa09c4873886cfafc46b3fa4b30e6b348d9073dc2e4b315be"
+      "targetHash": "86808d168b6ff08295f897a3361fdd6be7a30e81349ed209b1feb2410538c1a3"
     },
     "managed:version": {
       "target": ".starter-kit/VERSION",
       "sourceHash": "dcdecbc7866cc9413935ee7a76b92beba1e4494f63aa0df5d8b5afe979d16260",
-      "targetHash": "dcdecbc7866cc9413935ee7a76b92beba1e4494f63aa0df5d8b5afe979d16260"
+      "targetHash": "44be1f6a8409e914a9603da862a784e2dba68c3e6e9dadc9b4e4e5a22a1cfc6c"
     },
     "managed:changelog": {
       "target": ".starter-kit/docs/CHANGELOG.md",
       "sourceHash": "eec9d6ec477975bd6d082a9c400e8aaef4c59e440cea59dc9fea817973901b64",
-      "targetHash": "eec9d6ec477975bd6d082a9c400e8aaef4c59e440cea59dc9fea817973901b64"
+      "targetHash": "301a2de272921ad415156797ae1200d1d1363abf2e9ca931902396fefe94a5cd"
     },
     "managed:starter-readme": {
       "target": ".starter-kit/docs/README.md",
       "sourceHash": "9f6ea2ace8064a5295bd4607415c28c8e7f7c5d25823d72e820f884a24565132",
-      "targetHash": "9f6ea2ace8064a5295bd4607415c28c8e7f7c5d25823d72e820f884a24565132"
+      "targetHash": "3846b9a17ac070e61620c965a90ea79885db5b61a55d701e8bd8aae56a9f9e26"
     },
     "managed:master-prompt": {
       "target": ".starter-kit/docs/MASTER_PROMPT.md",
       "sourceHash": "3f5683e9d36a1d1ce8ba9287b303e604bb493629b7bb50c49cd3315346e8faf0",
-      "targetHash": "3f5683e9d36a1d1ce8ba9287b303e604bb493629b7bb50c49cd3315346e8faf0"
+      "targetHash": "07274fa0fc5536202086f507f434a1bd840f101d3a9944fedbaea306fbe57340"
     },
     "managed:yandex-doc-sources": {
       "target": "config/yandex-doc-sources.yaml",
       "sourceHash": "fe56a2ad4f958a157e6c585619dcc848c44fbed422afef0943dd0755daf4eab1",
-      "targetHash": "fe56a2ad4f958a157e6c585619dcc848c44fbed422afef0943dd0755daf4eab1"
-    },
-    "managed:yandex-doc-snapshot": {
-      "target": "config/yandex-doc-snapshot.json",
-      "sourceHash": "7d2605723ba7439abeb30d12c7fb6b54776f12ac45f1b1e7f4bec4244d02fb68",
-      "targetHash": "7d2605723ba7439abeb30d12c7fb6b54776f12ac45f1b1e7f4bec4244d02fb68"
+      "targetHash": "996c6a06335fb3c451392f560f8fed33cbfb9581636395a51010200e11bcc8b9"
     },
     "managed:game-spec-schema": {
       "target": "config/game-spec.schema.json",
       "sourceHash": "b9f8ba724be76b4a727eba348e6f008046b0541b87ef406cd8f968db3c1da577",
-      "targetHash": "b9f8ba724be76b4a727eba348e6f008046b0541b87ef406cd8f968db3c1da577"
-    },
-    "managed:final-gameplay-videos-schema": {
-      "target": "config/final-gameplay-videos.schema.json",
-      "sourceHash": "8154a6c7564cfe291257739419529ff4f40920ea18838dd3bd785d482a680beb",
-      "targetHash": "8154a6c7564cfe291257739419529ff4f40920ea18838dd3bd785d482a680beb"
+      "targetHash": "ca27f1e51cb0b9797edb021e1afef12642bdf270e08b088751afa94534f6588e"
     },
     "managed:yandex-requirements-diff-2026-08-18": {
       "target": "docs/YANDEX_REQUIREMENTS_DIFF_2026-07-01_TO_2026-08-18.md",
       "sourceHash": "26448e0f3786286c7c49c9765a7e474bd8ed0330f4d919a866823acb77cd4fd3",
-      "targetHash": "26448e0f3786286c7c49c9765a7e474bd8ed0330f4d919a866823acb77cd4fd3"
+      "targetHash": "9c625f04b1a922dc9c0a6721e274359dbe0a43236ae5227d6599d2ba32cd6a40"
     },
     "managed:external-skill-sources": {
       "target": "docs/EXTERNAL_SKILL_SOURCES.md",
       "sourceHash": "33c8614c651fd6a00a7afcbe9e2d6fd497301460940bcf20eb904a6e336b2df7",
-      "targetHash": "33c8614c651fd6a00a7afcbe9e2d6fd497301460940bcf20eb904a6e336b2df7"
+      "targetHash": "1fbd99bb64c16d302e961f629aa9f276f29878cf3f0ecf0ea767c54fe3b8e082"
     },
     "managed:quality-constitution": {
       "target": "docs/QUALITY_CONSTITUTION.md",
       "sourceHash": "3125543bf43b5ff3eec31d1a432d80a04e13875eba4931576f39ba4aca1bafc1",
-      "targetHash": "3125543bf43b5ff3eec31d1a432d80a04e13875eba4931576f39ba4aca1bafc1"
+      "targetHash": "6ab4b2b71e1c47ca9160ea4ca956e93a3638cbe663b87b38f2853344f451fd1c"
     },
     "managed:update-doc": {
       "target": "docs/STARTER_KIT_UPDATES.md",
       "sourceHash": "2b99aaab19f7904d231851952c257907cdc7b9db62a339f64951e87df19f1621",
-      "targetHash": "2b99aaab19f7904d231851952c257907cdc7b9db62a339f64951e87df19f1621"
+      "targetHash": "d35e0cce3113dc1c3488910a7df5434e7a220747d7398e8786160cf45ec5bb77"
     },
     "managed:known-failures": {
       "target": "lessons/known-failures.yaml",
       "sourceHash": "362daadd9fcd8639f01d90e0737fa536843fc55aade12794ec53cf5b3b1e851f",
-      "targetHash": "362daadd9fcd8639f01d90e0737fa536843fc55aade12794ec53cf5b3b1e851f"
+      "targetHash": "1813e3767f9d7c5f6a7b3acc6678d963b57109527ef0986035912be3407cb32d"
     },
     "migration:0.3.0-yandex-requirements": {
       "target": "migrations/0.3.0-yandex-requirements.md",
       "sourceHash": "aabb094d03c9af80f93849fcc4fded03c94ea1179e3470443091fec71711301a",
-      "targetHash": "aabb094d03c9af80f93849fcc4fded03c94ea1179e3470443091fec71711301a"
+      "targetHash": "686f3601ad8461dcda1f95d45882523b17fb4e32fc95221314bd777478d3650e"
     },
     "migration:0.4.0-production-skills": {
       "target": "migrations/0.4.0-production-skills.md",
       "sourceHash": "c90203a49eaee01c2532aab3dbe5f245735f77a051e2a7b5ee65915b0a006095",
-      "targetHash": "c90203a49eaee01c2532aab3dbe5f245735f77a051e2a7b5ee65915b0a006095"
+      "targetHash": "53773237800ccea9889f93d8ed5ae26455e2904c61379d8e41c151207c74b4a8"
     },
     "migration:0.4.1-target-aware-updater": {
       "target": "migrations/0.4.1-target-aware-updater.md",
       "sourceHash": "b115299b6f3be66c425f19cdaf87439ba8d7af1a70de6e612babcca81165f197",
-      "targetHash": "b115299b6f3be66c425f19cdaf87439ba8d7af1a70de6e612babcca81165f197"
+      "targetHash": "fc01802ecb6580ba8b7fe2b94f8ad197867ab16295a105bd7df3471cc978277c"
     },
     "migration:0.4.2-codex-engineering-system": {
       "target": "migrations/0.4.2-codex-engineering-system.md",
       "sourceHash": "1642c5231c4e19fe4b8232ab71dd7ab0361f623f75da295f67b8de3ab632fd57",
-      "targetHash": "1642c5231c4e19fe4b8232ab71dd7ab0361f623f75da295f67b8de3ab632fd57"
+      "targetHash": "917808cbca29971a8af06330d954af215e215982422c53489b0b8b39e7c774bf"
     },
     "migration:0.5.0-concept-proof-lifecycle": {
       "target": "migrations/0.5.0-concept-proof-lifecycle.md",
       "sourceHash": "2b1cd48a391775d30bc6ab3ee1c921435ac5f78c323e46b1a61674d1098c2a82",
-      "targetHash": "2b1cd48a391775d30bc6ab3ee1c921435ac5f78c323e46b1a61674d1098c2a82"
+      "targetHash": "27ef1f63a506957e03fb5d334b2d0dbec27abe5574f6551d2b6df999851e20b5"
     },
     "migration:0.5.1-screenshot-visual-gate": {
       "target": "migrations/0.5.1-screenshot-visual-gate.md",
       "sourceHash": "e7c7e8f390336e0f8678f660d656b3ac2f246baaab25e512d6b006cf7d391fef",
-      "targetHash": "e7c7e8f390336e0f8678f660d656b3ac2f246baaab25e512d6b006cf7d391fef"
+      "targetHash": "df4c094d3ad05a1593a2a5888c9270f41c9c56788f52f52187308248ee6c487d"
     },
     "migration:0.5.3-profile-aware-quality-constitution": {
       "target": "migrations/0.5.3-profile-aware-quality-constitution.md",
       "sourceHash": "bcf5bcd4a9a6e9da4eef8f9c0304a7c5008b59888a25d7f42be71464760348de",
-      "targetHash": "bcf5bcd4a9a6e9da4eef8f9c0304a7c5008b59888a25d7f42be71464760348de"
+      "targetHash": "67894ef77620fda49d29ca67a98e9cd808099476f6c5b94950174e7f5c15ba9c"
     },
     "migration:0.5.4-to-0.5.5": {
       "target": "migrations/0.5.4-to-0.5.5.md",
       "sourceHash": "2a86a23426593f6cc7d6d80442e4567d8f97abc32f181c7af54196b80b9338e9",
-      "targetHash": "2a86a23426593f6cc7d6d80442e4567d8f97abc32f181c7af54196b80b9338e9"
+      "targetHash": "c4b7d6e8e6700d49098a18acbeb147e16a2856a83cb18b2e8792cade67005ceb"
     },
     "migration:0.5.5-to-0.5.6": {
       "target": "migrations/0.5.5-to-0.5.6.md",
       "sourceHash": "f709f08b6c70ae6598fcd1bab305c85b85e024ea2d4f9128e88acf62374c9315",
-      "targetHash": "f709f08b6c70ae6598fcd1bab305c85b85e024ea2d4f9128e88acf62374c9315"
+      "targetHash": "7310ff468d27dfa09eef0c369a54ea4711968b65ab77d62d23c385d54f4e4218"
     },
     "managed:blind-playtest-template": {
       "target": "templates/product-validation/BLIND_PLAYTEST.md",
       "sourceHash": "76642b48aa132e8ffc20511d9509f1e971865846992d1fec90e2a2fec93d9e14",
-      "targetHash": "76642b48aa132e8ffc20511d9509f1e971865846992d1fec90e2a2fec93d9e14"
+      "targetHash": "8521162a931a8fb94e44910785b218a4a85decf212bca1d3c7621f9c052e60db"
     },
     "managed:screenshot-visual-gate-template": {
       "target": "templates/visual-review/SCREENSHOT_VISUAL_GATE.md",
       "sourceHash": "9342e811694fb166589916bd3e2605ce1a890a2f09acb24a738be6fa2ad2a2a0",
-      "targetHash": "9342e811694fb166589916bd3e2605ce1a890a2f09acb24a738be6fa2ad2a2a0"
+      "targetHash": "fd7dbb2d5df1b72e02385b11672f83c855de21f7478ac9e902d0ccb88c6ae627"
     },
     "managed:horizontal-gameplay-video-task": {
       "target": "templates/media/HORIZONTAL_GAMEPLAY_VIDEO.md",
       "sourceHash": "d07325264c05429e2b6b3105b8c6f2e91e60b22210f0790c0d922fd9f3eb8075",
-      "targetHash": "d07325264c05429e2b6b3105b8c6f2e91e60b22210f0790c0d922fd9f3eb8075"
+      "targetHash": "967358f76630575cb492f19fced34cc3a1255af9ac507e7b34b1005025c975e0"
     },
     "managed:blind-playtest-observations": {
       "target": "templates/product-validation/OBSERVATIONS.md",
       "sourceHash": "41605cb4b985284257fbf463a376f8258e20c145af7c25eb2bda0c854d6494d5",
-      "targetHash": "41605cb4b985284257fbf463a376f8258e20c145af7c25eb2bda0c854d6494d5"
+      "targetHash": "4ceeaffda1a6824c6025450db3bf991edd220d487c4cbb7c747df06908194a4f"
     },
     "managed:concept-proof-decision": {
       "target": "templates/product-validation/DECISION.md",
       "sourceHash": "99e69d1581eb012ad81f0bcd3f6afaf14496b700cc7d28ba2b793680f13e4141",
-      "targetHash": "99e69d1581eb012ad81f0bcd3f6afaf14496b700cc7d28ba2b793680f13e4141"
+      "targetHash": "71a891ac150a34677edd422fc1816fbb4b8c46a3fb80b93126bcb1f411a01aae"
     },
     "managed:manifest-schema-doc": {
       "target": "docs/MANIFEST_SCHEMA.md",
       "sourceHash": "a41c440010cecdb8774f3a30c457b8b5beae25b89eb8a32b18018218249673f8",
-      "targetHash": "a41c440010cecdb8774f3a30c457b8b5beae25b89eb8a32b18018218249673f8"
+      "targetHash": "da871d29b887966177e47399f7dc0582e586682028d79671022dcec19065c520"
     },
     "managed:manifest-json-schema": {
       "target": "config/starter-kit-manifest.schema.json",
       "sourceHash": "7215d383079193ff537dcaafe2f235354b329c62a1bec672d1e159046cb78ae3",
-      "targetHash": "7215d383079193ff537dcaafe2f235354b329c62a1bec672d1e159046cb78ae3"
+      "targetHash": "9b8f249e6c9e6275c00a7f239fc090eb46c87f1129cc16bf2420284d7e1cd446"
     },
     "managed:target-profile-schema": {
       "target": "config/target-profile.schema.json",
       "sourceHash": "d08551d8ac958cdabddc2e5028eb88651d97417c20326eb47657355453eda1e4",
-      "targetHash": "d08551d8ac958cdabddc2e5028eb88651d97417c20326eb47657355453eda1e4"
+      "targetHash": "8e01890083bd2c76178f3e021c8fdf4e3a7e47005139af528bce0be10448c519"
     },
     "managed:profile-new-project": {
       "target": "config/targets/new-project.json",
       "sourceHash": "bc81538bd85f7a6b1df27036e7ab9f0c2a77498549c95b847a4977cac7f76a62",
-      "targetHash": "bc81538bd85f7a6b1df27036e7ab9f0c2a77498549c95b847a4977cac7f76a62"
+      "targetHash": "77e18dda005d25b5ed59bdaf54f25724a5dd10a4700be58ad40090ff87556e4c"
     },
     "managed:profile-mature-yandex-phaser": {
       "target": "config/targets/mature-yandex-phaser.json",
       "sourceHash": "4319aa3491729b4c3ba229496e9406737f50b4cb6065cae6681f1ba5988bd4fe",
-      "targetHash": "4319aa3491729b4c3ba229496e9406737f50b4cb6065cae6681f1ba5988bd4fe"
+      "targetHash": "752bf14d1a5386cc35976d3a2bc4692949b5c05b9b47ea507f78a8d64e5ab4db"
     },
     "managed:tool-apply-update": {
       "target": "tools/starter-kit/apply-update.mjs",
       "sourceHash": "f56be4773894333d9eb188ced08c8fc0d69bf4746858dba741e1b1664ef029b2",
-      "targetHash": "f56be4773894333d9eb188ced08c8fc0d69bf4746858dba741e1b1664ef029b2"
+      "targetHash": "0f8089a90a913141bf8871ad15a9dad52ffd6776cbcd4dedf0d08e3d75bde627"
     },
     "managed:tool-build-manifest": {
       "target": "tools/starter-kit/build-manifest.mjs",
       "sourceHash": "d31c97bae69cef2b24c9f82645c64f22519d4cdd6604192fec71b1372db33f5e",
-      "targetHash": "d31c97bae69cef2b24c9f82645c64f22519d4cdd6604192fec71b1372db33f5e"
+      "targetHash": "8db8006ef7697693cb5556c2fca9b2767eb5371d39cdaff7587a0420f74135ed"
     },
     "managed:tool-init-project": {
       "target": "tools/starter-kit/init-project.mjs",
       "sourceHash": "6e76caddf6fbf09c238fb27170d1d763d621abfb3380c1b5e175626e2058a39b",
-      "targetHash": "6e76caddf6fbf09c238fb27170d1d763d621abfb3380c1b5e175626e2058a39b"
+      "targetHash": "a23f142476bad54c9879b96d3ef758db9a3c0b79d7edc28904a0e40241934fe4"
     },
     "managed:tool-lib": {
       "target": "tools/starter-kit/lib.mjs",
       "sourceHash": "553bde6e478144e082b90c6bb713f6fbf2ea3be7c1656d8544014f2fbd42bad0",
-      "targetHash": "553bde6e478144e082b90c6bb713f6fbf2ea3be7c1656d8544014f2fbd42bad0"
+      "targetHash": "7e26e70c2bbb8decff02d021e979f6ca262a1765307e5e788cc2f21f4e6edbcf"
     },
     "managed:tool-manifest": {
       "target": "tools/starter-kit/manifest.mjs",
       "sourceHash": "bce09a57eaf9554997b9ee739767c39c633f85bfc003f12c34789b6213856d63",
-      "targetHash": "bce09a57eaf9554997b9ee739767c39c633f85bfc003f12c34789b6213856d63"
+      "targetHash": "abd5efd197e29ac0912e2146e97e05d358bd7bac2e549494e3285148d2fb65df"
     },
     "managed:tool-package-kit": {
       "target": "tools/starter-kit/package-kit.mjs",
       "sourceHash": "9427055dab49189233b54d958fe975ee9071eb46995ed14426398445b37847ad",
-      "targetHash": "9427055dab49189233b54d958fe975ee9071eb46995ed14426398445b37847ad"
+      "targetHash": "43b87d648ad0d94bbf63cacfb314b9617ea543053ce5b31c809b2b6fd9cdf7a0"
     },
     "managed:tool-package-merge": {
       "target": "tools/starter-kit/package-merge.mjs",
       "sourceHash": "d82ed9413cec2378791141d9a87b3922b3d61042e0b65a63c887bfab18e14407",
-      "targetHash": "d82ed9413cec2378791141d9a87b3922b3d61042e0b65a63c887bfab18e14407"
+      "targetHash": "475a776896dd24952c97b1ce8d6e70c4479c4379f8f823d988622de8aa0c65e1"
     },
     "managed:tool-profile": {
       "target": "tools/starter-kit/profile.mjs",
       "sourceHash": "9f0012b917ae2f9e8e9a5a1ac75e1a95d66fa66bce039db426d93908b0ef26be",
-      "targetHash": "9f0012b917ae2f9e8e9a5a1ac75e1a95d66fa66bce039db426d93908b0ef26be"
+      "targetHash": "10f96bf6b5b54cc7891cb1611bc5307125481ccf4ef9d643cc7c2079e701f44d"
     },
     "managed:tool-self-test": {
       "target": "tools/starter-kit/self-test.mjs",
       "sourceHash": "867d1ced24cf328c222458b61895a63d7dc289340add1ff313bdb9280e7be34e",
-      "targetHash": "867d1ced24cf328c222458b61895a63d7dc289340add1ff313bdb9280e7be34e"
+      "targetHash": "8d956560aff0424ba9be9f3f11a1ffd828f9d88e1c9994a699692a2a3128c841"
     },
     "managed:tool-status": {
       "target": "tools/starter-kit/status.mjs",
       "sourceHash": "7bd1e792a0a7bf9aab819c714d0f214914cb3aefa3b44c0088903c366b48289b",
-      "targetHash": "7bd1e792a0a7bf9aab819c714d0f214914cb3aefa3b44c0088903c366b48289b"
+      "targetHash": "0a813a36b7a8d37293ce746bf9233fcc752d22ec8abd74d40395d9a5805377b7"
     },
     "managed:tool-status-core": {
       "target": "tools/starter-kit/status-core.mjs",
       "sourceHash": "8e0868a05fdb4bc6be926fb53bb31643af563bfcfe45adde032e06a148fc322b",
-      "targetHash": "8e0868a05fdb4bc6be926fb53bb31643af563bfcfe45adde032e06a148fc322b"
+      "targetHash": "c93830dc8558619c3e7b4fa77231768818b1354913aa1fdb91afff685da2cba7"
     },
     "managed:tool-update-engine": {
       "target": "tools/starter-kit/update-engine.mjs",
       "sourceHash": "490af1fe467111c859d55d319f4c931254d28723ef8aaeda1ae0313ae0e785bb",
-      "targetHash": "490af1fe467111c859d55d319f4c931254d28723ef8aaeda1ae0313ae0e785bb"
+      "targetHash": "d39b3586af05941758ac71306a447e33a1dd6b36a931fe3ab90994341a3fe9be"
     },
     "managed:tool-update-self-test": {
       "target": "tools/starter-kit/update-self-test.mjs",
       "sourceHash": "29821b4cc675a44bd220914d2d64fa272fe817a8828c2346b7b73a361f9ea977",
-      "targetHash": "29821b4cc675a44bd220914d2d64fa272fe817a8828c2346b7b73a361f9ea977"
+      "targetHash": "68ad5ebda04702f79f4a4affda0c20750f5ebd741f7b997a30ef8b9e193a6b22"
     },
     "managed:tool-yandex-requirements-audit": {
       "target": "tools/yandex/requirements-audit.mjs",
       "sourceHash": "6fc65ef1014b6d363e9607db4454e3ae7ad9a37da54abb5b426f57f23f76adb3",
-      "targetHash": "6fc65ef1014b6d363e9607db4454e3ae7ad9a37da54abb5b426f57f23f76adb3"
+      "targetHash": "bfd1e42ed95f05762e590672fc628b07da8d0f40b5ae4fe2c93486fded888366"
     },
     "managed:tool-yandex-docs-watch": {
       "target": "tools/yandex/docs-watch.mjs",
       "sourceHash": "d0cad57c734e2c8ba4363d6fe1faf330a9ddc61f977d3c2100d6ccfb50dc9a7e",
-      "targetHash": "d0cad57c734e2c8ba4363d6fe1faf330a9ddc61f977d3c2100d6ccfb50dc9a7e"
-    },
-    "managed:tool-yandex-media-validation": {
-      "target": "tools/yandex/media-validation.mjs",
-      "sourceHash": "fc21961b459dfa5a7a66f7bcb2df216b55659d7d923f1fa526dd75360ba970e8",
-      "targetHash": "fc21961b459dfa5a7a66f7bcb2df216b55659d7d923f1fa526dd75360ba970e8"
+      "targetHash": "034b07492af5a9c8d55cb63a165f69a3c2c2c59881b14014a113361bed3c8516"
     },
     "managed:yandex-external-evidence-providers": {
       "target": "config/yandex-external-evidence-providers.yaml",
       "sourceHash": "c041be92f71ddd1e733620ce9e0161fea529445a006045e38dff7405a3045e1a",
-      "targetHash": "c041be92f71ddd1e733620ce9e0161fea529445a006045e38dff7405a3045e1a"
+      "targetHash": "a817a9e7b276c2ef701a5ef9c3171ae175a352fa6f591adc38e3cc024cdd2d2e"
     },
     "managed:yandex-external-evidence-schema": {
       "target": "config/yandex-external-evidence.schema.json",
       "sourceHash": "6f900215b2fa5c033d29ac1ee86e8c474c43c6c7f4338f5af2dfd37d939c880e",
-      "targetHash": "6f900215b2fa5c033d29ac1ee86e8c474c43c6c7f4338f5af2dfd37d939c880e"
+      "targetHash": "b27feb2ab5bc53a9f7767b9be4254785bde05b19b5f5c23f0a33770fc3fa9b54"
     },
     "managed:yandex-external-runtime-evidence-doc": {
       "target": "docs/YANDEX_EXTERNAL_RUNTIME_EVIDENCE.md",
       "sourceHash": "ce160b276e99a183aa532811061816be378dd76176ebce2ba67808258d53716c",
-      "targetHash": "ce160b276e99a183aa532811061816be378dd76176ebce2ba67808258d53716c"
+      "targetHash": "d349087966a9faa786323ae7b90e191aed76301d44f6c62b70344bc85338a32a"
     },
     "migration:0.5.6-to-0.5.7": {
       "target": "migrations/0.5.6-to-0.5.7.md",
       "sourceHash": "0f9726e4844ef2b5a093b30b6e226f39a0d89e39994194f7fbafa4859a7fe34f",
-      "targetHash": "0f9726e4844ef2b5a093b30b6e226f39a0d89e39994194f7fbafa4859a7fe34f"
+      "targetHash": "5ea2835a54ef1f0316d4c7e3b3b7b9f6091ec9d68843939d573c9ac91226cbe1"
     },
     "managed:tool-yandex-external-evidence": {
       "target": "tools/yandex/external-evidence.mjs",
       "sourceHash": "09d50bc117730725dd8b80f97343479a4fc96cfdc7fef8223519a50b558d3798",
-      "targetHash": "09d50bc117730725dd8b80f97343479a4fc96cfdc7fef8223519a50b558d3798"
+      "targetHash": "1fd800d879c778324d53ea6bb860090b921617a45d455aeebbe9810e475ce36f"
     },
     "managed:yandex-external-runtime-provider-gitignore": {
       "target": "tools/yandex/external-runtime-provider/.gitignore",
       "sourceHash": "d90547da2f1de9a14269542d4360cc616f451260c9ac7215cef238aab269b241",
-      "targetHash": "d90547da2f1de9a14269542d4360cc616f451260c9ac7215cef238aab269b241"
+      "targetHash": "c12c6065239a6ad3bdd7558a6fc58543b1a1048294eb12369569b0a2c80448bd"
     },
     "managed:yandex-external-runtime-provider-gitattributes": {
       "target": "tools/yandex/external-runtime-provider/.gitattributes",
       "sourceHash": "5d24d183fbb8f9bb9e16f601c938fb6bedecc382fccc275760b31ec5aac780fa",
-      "targetHash": "5d24d183fbb8f9bb9e16f601c938fb6bedecc382fccc275760b31ec5aac780fa"
+      "targetHash": "47a5d8149e13cc05803c645b39e09643e29a5c09d94ed7a30b5a331f6ffa959f"
     },
     "managed:yandex-external-runtime-provider-manifest": {
       "target": "tools/yandex/external-runtime-provider/integrity-manifest.json",
@@ -332,7 +320,7 @@
     "managed:yandex-external-runtime-provider-validation-record": {
       "target": "tools/yandex/external-runtime-provider/validation-record.json",
       "sourceHash": "97c71ef06252b9375420bb28a99533bf13234278aeaf9e92bb507afbf4bb0ae4",
-      "targetHash": "97c71ef06252b9375420bb28a99533bf13234278aeaf9e92bb507afbf4bb0ae4"
+      "targetHash": "d42898452237864a09f7668a9febc0068b5e0fdb3437adc7af7937a391eb0d78"
     },
     "managed:yandex-external-runtime-provider-observer": {
       "target": "tools/yandex/external-runtime-provider/hardened-live-observer.js",
@@ -367,17 +355,17 @@
     "managed:yandex-release-evidence-schema": {
       "target": "config/yandex-release-evidence.schema.json",
       "sourceHash": "5f84ad1c0f40184c7e1f01f17c2ab77cc646289be1b40cb401c9955ef53eacf8",
-      "targetHash": "5f84ad1c0f40184c7e1f01f17c2ab77cc646289be1b40cb401c9955ef53eacf8"
+      "targetHash": "8858177460a0cd4231d7852c4acf2e85531aab12d66b078ab1ff875391e67ffb"
     },
     "managed:yandex-release-evidence-gate": {
       "target": "tools/yandex/release-evidence-gate.mjs",
       "sourceHash": "fb64996a5df243f7f434b9016d25100311c0103f57004926346264d49ba256e0",
-      "targetHash": "fb64996a5df243f7f434b9016d25100311c0103f57004926346264d49ba256e0"
+      "targetHash": "57ab698e2379f175292283dec0233f6e7ce7dd45fb20198ae90552c7eb1c7438"
     },
     "managed:production-incident-hardening": {
       "target": "docs/PRODUCTION_INCIDENT_HARDENING.md",
       "sourceHash": "a93431216676e6bd68034b673f35d620815d5de57f37a9cf6cecbc40a8a74ec7",
-      "targetHash": "a93431216676e6bd68034b673f35d620815d5de57f37a9cf6cecbc40a8a74ec7"
+      "targetHash": "aa914cec4d104f2cfc924881700d6a6be8ae1eb6279dfb6ac1323ab341c5941f"
     }
   },
   "projectOwned": {
@@ -414,142 +402,157 @@
     "skill:asset-provenance-and-rights:SKILL.md": {
       "target": ".codex/skills/asset-provenance-and-rights/SKILL.md",
       "sourceHash": "32933d322311b7bf23eec7e65c07f619e2b467ccb5f8de9169ccf7e0103dee8a",
-      "targetHash": "32933d322311b7bf23eec7e65c07f619e2b467ccb5f8de9169ccf7e0103dee8a"
+      "targetHash": "a66c6924c719c37c86600bba200fcfd40f792969213200cb7f502f576ca562fa"
     },
     "skill:game-accessibility:SKILL.md": {
       "target": ".codex/skills/game-accessibility/SKILL.md",
       "sourceHash": "ccde8da6c1eaeb09b29fb3f1b123f32a3d11cbb113cb92a877037dee4b2efac3",
-      "targetHash": "ccde8da6c1eaeb09b29fb3f1b123f32a3d11cbb113cb92a877037dee4b2efac3"
+      "targetHash": "c063e74a023e1bc19fc5107b2a2aaf8b54c1709c0554d9ae22d93a715db33d4a"
     },
     "skill:game-audio-quality:ORIGIN.md": {
       "target": ".codex/skills/game-audio-quality/ORIGIN.md",
       "sourceHash": "a0b48060cff31a542fbf47333ffcdabc748373dd176f3ac4963e08249d2cda75",
-      "targetHash": "a0b48060cff31a542fbf47333ffcdabc748373dd176f3ac4963e08249d2cda75"
+      "targetHash": "38ff3aa77b8394b6aba010b52e766bf86c246581b051502ee770f7c3f0598961"
     },
     "skill:game-audio-quality:SKILL.md": {
       "target": ".codex/skills/game-audio-quality/SKILL.md",
       "sourceHash": "124929333f72b7e44e079d22704ac90441f59bb2e44a68b1a14011daa91069cc",
-      "targetHash": "124929333f72b7e44e079d22704ac90441f59bb2e44a68b1a14011daa91069cc"
+      "targetHash": "a10d0c6e51c44eb06af7535dc214171dee4e992c28f8884e2e46fdf895797518"
     },
     "skill:game-feel-polish:SKILL.md": {
       "target": ".codex/skills/game-feel-polish/SKILL.md",
       "sourceHash": "855efc0085253e080368c9e6284648a3748e7204bcaf1d96a84575c8581c2b11",
-      "targetHash": "855efc0085253e080368c9e6284648a3748e7204bcaf1d96a84575c8581c2b11"
+      "targetHash": "64dc578ebbfe3276b85a452de02739f623fd78a3f0b699f95b9ebe007f5db7fb"
     },
     "skill:game-performance-budget:SKILL.md": {
       "target": ".codex/skills/game-performance-budget/SKILL.md",
       "sourceHash": "afce5be9092db1d82003f53da44c554633d3383c677c2793d901403137657a31",
-      "targetHash": "afce5be9092db1d82003f53da44c554633d3383c677c2793d901403137657a31"
+      "targetHash": "4283f50ef1221653eca9f3f84d7ea9f03d8e13d773874b85d88c84fdad8db85f"
     },
     "skill:implementation-cycle:SKILL.md": {
       "target": ".codex/skills/implementation-cycle/SKILL.md",
       "sourceHash": "385693df974aa2fedb2ce609f149a2b0f4e1c38924cb4ea6315a8a08f008e856",
-      "targetHash": "385693df974aa2fedb2ce609f149a2b0f4e1c38924cb4ea6315a8a08f008e856"
+      "targetHash": "7799e70de9033ed2ed1d20da907cdacba7f734f673e6e4e43cb485c50814dd49"
     },
     "skill:codex-engineering-system:SKILL.md": {
       "target": ".codex/skills/codex-engineering-system/SKILL.md",
       "sourceHash": "2eb5ce88ce30d1ab65b14d299d4d570351b2429b416d237906a7a9b011853535",
-      "targetHash": "2eb5ce88ce30d1ab65b14d299d4d570351b2429b416d237906a7a9b011853535"
+      "targetHash": "4254e2d181a6df9e5b6b48bcbeee31ae1a7625d07fa33b206c06fcaa6efc762c"
     },
     "skill:project-termination:SKILL.md": {
       "target": ".codex/skills/project-termination/SKILL.md",
       "sourceHash": "994781a48d044138eeeb876a0cb1b70618d6b6f328aafbe2041a0fa382bde658",
-      "targetHash": "994781a48d044138eeeb876a0cb1b70618d6b6f328aafbe2041a0fa382bde658"
+      "targetHash": "945b637f21cc5c83f5dccd7b3ea7d43735fcdff67cb77124464990bf7e9f0ea3"
     },
     "skill:level-design-quality:SKILL.md": {
       "target": ".codex/skills/level-design-quality/SKILL.md",
       "sourceHash": "7958d6d83f94ab87d89105c24d654047beb802fbad89c15fa7f157d9dfb50700",
-      "targetHash": "7958d6d83f94ab87d89105c24d654047beb802fbad89c15fa7f157d9dfb50700"
+      "targetHash": "e19ae51da241e8a0a0e691e6e1877587440b739c51587337a562eadee748e2c5"
     },
     "skill:mobile-game-ux:ORIGIN.md": {
       "target": ".codex/skills/mobile-game-ux/ORIGIN.md",
       "sourceHash": "398f6c0d59ebc3f5bad202bffdcab08a22b24e7717a09957957132e0b86f2276",
-      "targetHash": "398f6c0d59ebc3f5bad202bffdcab08a22b24e7717a09957957132e0b86f2276"
+      "targetHash": "d09f0e72a7bec4447d07e81b927ae626ffe2a980ab1fa17241fcc28c4846a660"
     },
     "skill:mobile-game-ux:SKILL.md": {
       "target": ".codex/skills/mobile-game-ux/SKILL.md",
       "sourceHash": "658fb9165bc4d7d26a1f0e021618c36932a6f3441706c180cb685947cfa82455",
-      "targetHash": "658fb9165bc4d7d26a1f0e021618c36932a6f3441706c180cb685947cfa82455"
+      "targetHash": "b5412758755edd6b3937a1043d64fa213b567eb4a9b77d527da7e40207289f3e"
     },
     "skill:product-quality-review:ORIGIN.md": {
       "target": ".codex/skills/product-quality-review/ORIGIN.md",
       "sourceHash": "32b7291c06f6232b6a9d6c40b5de3cabb4923acb11283e9b0301e72ea00abb22",
-      "targetHash": "32b7291c06f6232b6a9d6c40b5de3cabb4923acb11283e9b0301e72ea00abb22"
+      "targetHash": "06e9a934215f8b840b94aa9d3b67a7c2c9aa561c1dd5cca0379646e4440be76b"
     },
     "skill:product-quality-review:SKILL.md": {
       "target": ".codex/skills/product-quality-review/SKILL.md",
       "sourceHash": "a105fa55f719a2fecab4c11fd04839418c125589ee4ad6d48da8e56d14643bdc",
-      "targetHash": "a105fa55f719a2fecab4c11fd04839418c125589ee4ad6d48da8e56d14643bdc"
+      "targetHash": "614c363c38a6f2b4fb6c23a9bda600c84116bcdfbcf3f21fd2269845d05722d5"
     },
     "skill:release-audit:SKILL.md": {
       "target": ".codex/skills/release-audit/SKILL.md",
       "sourceHash": "c4e844fbc8bb0252947f2237e1ea3b8dd3449721d292faa869c3ccd7f5f3aa4f",
-      "targetHash": "c4e844fbc8bb0252947f2237e1ea3b8dd3449721d292faa869c3ccd7f5f3aa4f"
+      "targetHash": "cb7e5ae597643c9edf6cf8b75cf1780cbd0615008b9155a8af63e39eba5b72da"
     },
     "skill:visual-quality-gate:ORIGIN.md": {
       "target": ".codex/skills/visual-quality-gate/ORIGIN.md",
       "sourceHash": "b0d99f1bbf7b46c6e3dc9992e538adc7f23ecf355ebd1cf775e3f349cc7bca0d",
-      "targetHash": "b0d99f1bbf7b46c6e3dc9992e538adc7f23ecf355ebd1cf775e3f349cc7bca0d"
+      "targetHash": "5977e0cd937f8c1d36cd17f8b4cdd062aba1164b2a5967f33cf8c8d5dcfff05f"
     },
     "skill:visual-quality-gate:SKILL.md": {
       "target": ".codex/skills/visual-quality-gate/SKILL.md",
       "sourceHash": "7842ce786aa85653479e3357849ea4bad7c7104ad6f74b9c0301a8e91a18806d",
-      "targetHash": "7842ce786aa85653479e3357849ea4bad7c7104ad6f74b9c0301a8e91a18806d"
+      "targetHash": "8a1a079fc014e768a20c98314b0588fbd6c2ae928682c20a75a31093873554d7"
     },
     "skill:web-game-playtest:ORIGIN.md": {
       "target": ".codex/skills/web-game-playtest/ORIGIN.md",
       "sourceHash": "979d9e8fabe516b571b3ca0213169120da4730d6d1c11451235adc937cb2a82a",
-      "targetHash": "979d9e8fabe516b571b3ca0213169120da4730d6d1c11451235adc937cb2a82a"
+      "targetHash": "1f3d415acbccf6c30b49d7e71973f5af6c9f83c00d2ada5ff42131c66e5b813e"
     },
     "skill:web-game-playtest:SKILL.md": {
       "target": ".codex/skills/web-game-playtest/SKILL.md",
       "sourceHash": "af5a75584e6656e3c0271310b136a610ee290805ee25b0e149394dcd4ea4d66e",
-      "targetHash": "8d1bb30e1802a9c1a7736dc1d7b46abb50f17ebf72e7e87adc393bf91b331703"
+      "targetHash": "0a0c51fb28d5851f638c510c7ec603ae7cd550f63251885e5ab34b6743e06772"
     },
     "skill:yandex-release-validation:SKILL.md": {
       "target": ".codex/skills/yandex-release-validation/SKILL.md",
       "sourceHash": "6c6d528fd9d6733d72e79ab0091f56f48bd2608705fd05252a1d90dc4fc4f69f",
-      "targetHash": "6c6d528fd9d6733d72e79ab0091f56f48bd2608705fd05252a1d90dc4fc4f69f"
+      "targetHash": "21dd48a43e76fd050978838d7867a92aed7b546f327d96953f1f3bd18bcd38ef"
     },
     "contract:AGENTS.md": {
       "target": "AGENTS.md",
       "sourceHash": "59d5709508760e569d9ed871e07a66768714c6cecc0629bb01d591ab68d198f9",
-      "targetHash": "59d5709508760e569d9ed871e07a66768714c6cecc0629bb01d591ab68d198f9"
+      "targetHash": "9c87b470ba12c8be609353766440ab952bbec4f12e43dabcc4f2baf21b91de41"
     },
     "contract:package-json": {
       "target": "package.json",
       "sourceHash": "87b4876baffb1e117150b44006bc3cfce522ea7738c3f9770297b28343c75612",
-      "targetHash": "4a9d47aac6776918dd58325ecdf77138a08fafc466bc0465b8865727e6b7431b"
+      "targetHash": "b48b7bfb02a18bc873b678a5a5a9ffd7494f907c9ef9215d35b47ce63901f480"
     },
     "contract:yandex-requirements": {
       "target": "config/yandex-requirements.yaml",
       "sourceHash": "97bd79057de121a53fcf2f41dfa4c75c4a2d81d25f01b1f53e380e5e5b5d47fd",
-      "targetHash": "97bd79057de121a53fcf2f41dfa4c75c4a2d81d25f01b1f53e380e5e5b5d47fd"
+      "targetHash": "ce06ff4097dcab890632ea4d896ecf50d64a3c2327450be857eb6c890d1a8df6"
     },
     "contract:yandex-console-requirements": {
       "target": "config/yandex-console-requirements.yaml",
       "sourceHash": "8e54325ae0f1f969e28063b75e82af87c2bbd51fb50b4f030a1846db2bd879ce",
-      "targetHash": "8e54325ae0f1f969e28063b75e82af87c2bbd51fb50b4f030a1846db2bd879ce"
+      "targetHash": "3cec7f9a89e2045e386998914a654c27b240df5c0f4fb6d4485982abfd3510c2"
     },
     "contract:skill-precedence": {
       "target": "docs/SKILL_PRECEDENCE.md",
       "sourceHash": "aeee79bcd0b7111abf5725e6397d116de233ca3cb040330830adf32b222067da",
-      "targetHash": "aeee79bcd0b7111abf5725e6397d116de233ca3cb040330830adf32b222067da"
+      "targetHash": "2cda983edcd2e05c623e2bd83ff8d26aff1aecb4e934f1ed3c0450f2e6317a92"
     },
     "contract:yandex-checklist": {
       "target": "docs/YANDEX_REQUIREMENTS_CHECKLIST.md",
       "sourceHash": "2bdc3939564b59018de2c3720001f052a3cf24cba24028b16eaf53320428bb85",
-      "targetHash": "b08db199f7e61c31766aecf348fba6f691df175fe3a254c31d83939ff5595ff1"
+      "targetHash": "f4b1962742a0fd42e35a7de2abaad9b67d828ab346fa9869a3f83bd7d7dfa5cb"
     },
     "managed:skill-policy": {
       "target": "config/skill-policy.json",
       "sourceHash": "fb6f70df330f1471bd7c62e9f29d3cb245f360cb3d27cdb339baedeed71c5fd2",
-      "targetHash": "2c7f5c0785b07ac601e197fd84a876eb4cb350106669c8fb0712e81c97439187"
+      "targetHash": "d375285a62cd9cc59af64b228cb73b5e308727db01010fd31c26b079afd83a7a"
     },
     "managed:manifest-entry-config": {
       "target": "config/manifest-entries.json",
       "sourceHash": "a165f3baacabc64255fbd3bd94045977e9b8fe18754880d53f083797bc9be544",
-      "targetHash": "05f1cb1ad1c206f73dd2bd51221411d37502f3f9fc965d3c400c4aa7209e2784"
+      "targetHash": "c6c0a38044ee85384928945fc0766a9f6864ba897b09310a302e84fec7a3d131"
+    },
+    "managed:final-gameplay-videos-schema": {
+      "target": "config/final-gameplay-videos.schema.json",
+      "sourceHash": "8154a6c7564cfe291257739419529ff4f40920ea18838dd3bd785d482a680beb",
+      "targetHash": "d484d81121eccef6d0368961e319b213ccb7903bb1540f523d16244292ae4bd0"
+    },
+    "managed:tool-yandex-media-validation": {
+      "target": "tools/yandex/media-validation.mjs",
+      "sourceHash": "fc21961b459dfa5a7a66f7bcb2df216b55659d7d923f1fa526dd75360ba970e8",
+      "targetHash": "d1091eabd2fef1e4dd03787bf33712e3fbbf7af58daa3208e0f3eaf3e5313881"
+    },
+    "managed:yandex-doc-snapshot": {
+      "target": "config/yandex-doc-snapshot.json",
+      "sourceHash": "7d2605723ba7439abeb30d12c7fb6b54776f12ac45f1b1e7f4bec4244d02fb68",
+      "targetHash": "4f489c263f9c842c5531842928ec599ac2262121c9ee0c95c4a3501c34bec32c"
     }
   },
   "conflicts": [],

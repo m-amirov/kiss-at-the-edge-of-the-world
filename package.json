@@ -10,6 +10,8 @@
     "yandex:docs:check": "node tools/yandex/docs-watch.mjs",
     "yandex:docs:accept-snapshot": "node tools/yandex/docs-watch.mjs --accept-snapshot",
     "yandex:media:validate": "node tools/yandex/media-validation.mjs",
+    "release:evidence:art": "node tools/release/refresh-production-art-acceptance.mjs",
+    "release:evidence:transcode": "node tools/release/refresh-runtime-transcode-acceptance.mjs",
     "yandex:external:verify": "node tools/yandex/external-evidence.mjs verify",
     "yandex:external:run": "node tools/yandex/external-evidence.mjs run",
     "yandex:external:normalize": "node tools/yandex/external-evidence.mjs normalize",

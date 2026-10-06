@@ -14,6 +14,9 @@
     "PROJECT_RULES.md": "new-project-seed",
     "game-spec.yaml": "new-project-seed",
     "src/**": "new-project-seed",
-    "public/**": "new-project-seed"
+    "public/**": "new-project-seed",
+    "config/yandex-doc-snapshot.json": "semantic-merge",
+    "config/final-gameplay-videos.schema.json": "semantic-merge",
+    "tools/yandex/media-validation.mjs": "semantic-merge"
   }
 }

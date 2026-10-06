@@ -34,6 +34,7 @@ Thumbs.db
 
 # Run-specific evidence; keep editorial / art-direction source
 artifacts/evidence/
+artifacts/marketing/*.mp4
 artifacts/upstream/
 
 # Reproducible local test state and Python bytecode caches
