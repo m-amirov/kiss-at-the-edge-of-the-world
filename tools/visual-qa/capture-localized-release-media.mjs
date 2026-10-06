@@ -46,8 +46,9 @@ try {
       await page.waitForFunction(() => Boolean(window.__LITERARY_QA__ && document.querySelector('.literary-home')));
       const home = await page.evaluate(() => ({ locale: window.__LITERARY_QA__.getLocale(), ui: document.body.innerText }));
       if (home.locale !== locale) throw new Error(`Runtime locale mismatch: expected ${locale}, got ${home.locale}`);
-      if (locale === 'ru' ? !home.ui.includes('Продолжить') : !home.ui.includes('Continue')) throw new Error(`Localized home UI is missing for ${locale}`);
-      await page.getByRole('button', { name: locale === 'ru' ? /Продолжить/ : /Continue/ }).first().click();
+      const startLabel = locale === 'ru' ? 'Новая игра' : 'New Game';
+      if (!home.ui.includes(startLabel)) throw new Error(`Localized home UI is missing for ${locale}`);
+      await page.getByRole('button', { name: startLabel }).click();
       await page.locator('.reader-sheet').waitFor();
       const initial = await page.evaluate(() => ({ sceneId: window.__LITERARY_QA__.getScreen().sceneId, locale: window.__LITERARY_QA__.getLocale(), text: document.querySelector('.reader-content')?.innerText ?? '' }));
       if (initial.sceneId !== 'S01' || initial.locale !== locale) throw new Error(`Unexpected initial runtime state for ${locale}`);
