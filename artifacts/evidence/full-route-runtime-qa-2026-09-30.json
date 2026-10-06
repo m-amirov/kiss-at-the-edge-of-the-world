@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "status": "PASS",
   "generatedAt": "2026-10-05T17:51:20.343Z",
-  "releaseSourceHead": "58a7eb8b2871cba53e89b81d4baff34fb96a8860",
-  "head": "58a7eb8b2871cba53e89b81d4baff34fb96a8860",
+  "releaseSourceHead": "acf94f4b2567ee07ea37d9c58966c833f80f5c4b",
+  "head": "acf94f4b2567ee07ea37d9c58966c833f80f5c4b",
   "baseUrl": "http://127.0.0.1:4174/index.html",
   "requirements": [
     "4/4 endings",
