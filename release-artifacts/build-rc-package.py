@@ -28,6 +28,8 @@ def strict_text(path: Path) -> str:
 
 def resolve_local(root: Path, source: PurePosixPath, raw_url: str) -> str | None:
     value = raw_url.strip()
+    if value == "/sdk.js":
+        return None
     if not value or value.startswith(("#", "data:", "http://", "https://", "//", "mailto:", "javascript:")):
         return None
     value = value.split("?", 1)[0].split("#", 1)[0].replace("\\", "/")
