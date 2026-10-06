@@ -11,6 +11,9 @@ test('ten-episode game and four endings exist, but publishing remains fail-close
  assert.deepEqual(Object.values(result.routeSamples).map(x=>x.lastScene),['S44','S45','S46','S47']);
  assert.ok(Object.values(result.routeSamples).every(sample=>sample.estimatedReadingMinutesAt230wpm>10));
  assert.equal(result.blockers.some(x=>x.code==='DURATION_NOT_MET'),false);
+ assert.deepEqual(result.localeContract.declaredLocales,['ru','en']);
+ assert.deepEqual(result.localeContract.runtimeLocales,['ru','en']);
+ assert.equal(result.blockers.some(x=>x.code==='LOCALE_REGISTRY_MISMATCH'),false);
  assert.equal(result.blockers.some(x=>x.code==='LOCALIZATION_NOT_VERIFIED'),false);
  assert.equal(result.artAcceptance.status,'PASS');
  assert.equal(result.blockers.some(x=>x.code==='ART_COVERAGE_NOT_ACCEPTED'),false);

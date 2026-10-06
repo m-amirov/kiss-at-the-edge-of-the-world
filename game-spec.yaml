@@ -63,7 +63,7 @@ accessibility:
   minimumTouchTargetCssPx: 44
 
 localization:
-  languages: [ru]
+  languages: [ru, en]
   autoDetectYandexLanguage: true
   fallback: ru
 

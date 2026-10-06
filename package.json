@@ -18,6 +18,7 @@
     "literary:compile": "node tools/literary/compile.mjs && node tools/literary/build-locale-bundle.mjs",
     "literary:localization-bundle": "node tools/literary/build-locale-bundle.mjs",
     "qa:english-runtime-localization": "node tools/visual-qa/english-runtime-localization.mjs",
+    "qa:release-localized-media": "node tools/visual-qa/capture-localized-release-media.mjs",
     "literary:translation-batches": "node tools/literary/build-translation-batches.mjs",
     "release:preflight": "node tools/release/preflight.mjs",
     "release:local-freeze": "node tools/release/local-freeze.mjs",

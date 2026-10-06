@@ -6,12 +6,15 @@ import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { literarySeason } from '../../src/literary-season-data.js';
 import { compileScenePlayback,nextLiteraryScene } from '../../src/literary-engine.js';
+import { supportedLocales } from '../../src/localization.js';
 import { inspectTargetStatus } from '../starter-kit/status-core.mjs';
 import { verifyArtAcceptance } from './art-acceptance.mjs';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
 const exists=relative=>fs.existsSync(path.join(root,relative));
 const words=text=>text.match(/[\p{L}\p{N}]+/gu)?.length??0;
 const byId=new Map(literarySeason.scenes.map(scene=>[scene.id,scene]));
+const sameLocaleSet=(left,right)=>left.length===right.length&&left.every(locale=>right.includes(locale));
+function declaredLocalesFrom(gameSpec){return (gameSpec.match(/^\s*languages:\s*\[([^\]]+)\]/m)?.[1]??'').split(',').map(x=>x.trim().replace(/^['"]|['"]$/g,'')).filter(Boolean);}
 function samplePath(route){
  const c={},visited=[];let scene='S01',total=0;
  while(scene){
@@ -49,10 +52,12 @@ export function releasePreflight(){
  const artAcceptance=verifyArtAcceptance({root});
  if(artAcceptance.status!=='PASS')block('ART_COVERAGE_NOT_ACCEPTED',`${artAcceptance.code}: ${artAcceptance.reason}`);
  const gameSpec=fs.readFileSync(path.join(root,'game-spec.yaml'),'utf8');
- const declaredLocales=(gameSpec.match(/^\s*languages:\s*\[([^\]]+)\]/m)?.[1]??'').split(',').map(x=>x.trim().replace(/^['"]|['"]$/g,'')).filter(Boolean);
+ const declaredLocales=declaredLocalesFrom(gameSpec);
+ const runtimeLocales=[...supportedLocales];
  const videoEvidence=exists('artifacts/evidence/final-gameplay-videos.json')?JSON.parse(fs.readFileSync(path.join(root,'artifacts/evidence/final-gameplay-videos.json'),'utf8')):null;
  const localVideoLocales=new Set(videoEvidence?.videos?.map(video=>video.locale)??[]);
- if(declaredLocales.some(locale=>!localVideoLocales.has(locale)))block('LOCALIZATION_NOT_VERIFIED','Local release media evidence does not cover every declared runtime locale.');
+ if(!sameLocaleSet(declaredLocales,runtimeLocales))block('LOCALE_REGISTRY_MISMATCH',`Release locales [${declaredLocales.join(',')}] do not match runtime locales [${runtimeLocales.join(',')}].`);
+ if(runtimeLocales.some(locale=>!localVideoLocales.has(locale)))block('LOCALIZATION_NOT_VERIFIED','Local release media evidence does not cover every supported runtime locale.');
  block('EXTERNAL_YANDEX_EVIDENCE','Live Yandex SDK/cloud/ad/release media and moderation evidence for the new edition are unavailable offline.');
  const starterKitStatus=inspectTargetStatus({sourceRoot:root,targetRoot:root});
  if(starterKitStatus.status!=='clean')block('STARTER_KIT_DRIFT',`Starter Kit target status is ${starterKitStatus.status}; resolve managed drift without bypassing the guard.`);
@@ -60,7 +65,7 @@ export function releasePreflight(){
  const currentHead=execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).trim();
  const routeQaPass=routeQa?.status==='PASS'&&routeQa.head===currentHead&&routeQa.results?.length===8&&routeQa.results.every(item=>item.ending===item.expectedEnding&&item.finished&&item.softLocks===0&&item.errors?.length===0&&item.failed?.length===0);
  if(!routeQaPass)block('FINAL_QA_MISSING','Fresh full-route browser evidence for all four routes and both required viewports is missing or does not match the audited HEAD.');
- return {status:blockers.length?'BLOCKED':'PASS',releaseCandidateReady:!blockers.length,newSeasonEpisodesPlanned:10,literaryEpisodesPlayable:literarySeason.episodes,literarySceneCount:literarySeason.scenes.length,defaultEdition:'new-ten-episode',legacyAvailableOnExplicitQuery:false,routeSamples:routes,artAcceptance,blockers};
+ return {status:blockers.length?'BLOCKED':'PASS',releaseCandidateReady:!blockers.length,newSeasonEpisodesPlanned:10,literaryEpisodesPlayable:literarySeason.episodes,literarySceneCount:literarySeason.scenes.length,defaultEdition:'new-ten-episode',legacyAvailableOnExplicitQuery:false,routeSamples:routes,artAcceptance,localeContract:{declaredLocales,runtimeLocales,releaseMediaLocales:[...localVideoLocales]},blockers};
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
  const result=releasePreflight();console.log(JSON.stringify(result,null,2));if(result.status!=='PASS')process.exitCode=1;

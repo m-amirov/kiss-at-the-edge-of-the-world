@@ -12,7 +12,7 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["locale", "path", "dimensions", "durationSeconds", "sizeBytes", "gameplayRatio", "sha256", "manualReview"],
+        "required": ["locale", "path", "dimensions", "durationSeconds", "sizeBytes", "gameplayRatio", "sha256", "sourceHead", "runtimeIdentity", "capturedAt", "viewport", "capturedRuntimeState", "manualReview"],
         "properties": {
           "locale": { "type": "string", "minLength": 2 },
           "coversLocales": { "type": "array", "items": { "type": "string", "minLength": 2 }, "uniqueItems": true },
@@ -30,6 +30,36 @@
           "sizeBytes": { "type": "integer", "minimum": 1, "maximum": 100000000 },
           "gameplayRatio": { "type": "number", "minimum": 0.7, "maximum": 1 },
           "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+          "sourceHead": { "type": "string", "pattern": "^[a-f0-9]{40}$" },
+          "runtimeIdentity": {
+            "type": "object",
+            "required": ["entrypoint", "sha256"],
+            "properties": {
+              "entrypoint": { "type": "string", "minLength": 1 },
+              "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+            },
+            "additionalProperties": false
+          },
+          "capturedAt": { "type": "string", "format": "date-time" },
+          "viewport": {
+            "type": "object",
+            "required": ["width", "height", "orientation"],
+            "properties": {
+              "width": { "type": "integer", "minimum": 1 },
+              "height": { "type": "integer", "minimum": 1 },
+              "orientation": { "enum": ["landscape", "portrait"] }
+            },
+            "additionalProperties": false
+          },
+          "capturedRuntimeState": {
+            "type": "object",
+            "required": ["sceneId", "uiLocale"],
+            "properties": {
+              "sceneId": { "type": "string", "minLength": 1 },
+              "uiLocale": { "type": "string", "minLength": 2 }
+            },
+            "additionalProperties": false
+          },
           "manualReview": {
             "type": "object",
             "required": ["realGameplay", "systemUiAbsent", "yandexUiAbsent", "artificialBlackBarsAbsent", "localeMatchesDraft"],

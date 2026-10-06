@@ -33,6 +33,11 @@ function video(locale = 'ru', overrides = {}) {
     sizeBytes: 8_000_000,
     gameplayRatio: 1,
     sha256: 'a'.repeat(64),
+    sourceHead: 'b'.repeat(40),
+    runtimeIdentity: { entrypoint: 'literary.html', sha256: 'c'.repeat(64) },
+    capturedAt: '2026-10-06T00:00:00.000Z',
+    viewport: { width: 1920, height: 1080, orientation: 'landscape' },
+    capturedRuntimeState: { sceneId: 'S01', uiLocale: locale },
     manualReview: validReview,
     ...overrides
   };
@@ -58,6 +63,8 @@ function validate(videos, options = {}) {
     languageDependentText: true,
     videos,
     inspectMedia: async (entry) => options.factsByLocale?.[entry.locale] ?? facts(),
+    sourceHead: 'b'.repeat(40),
+    inspectRuntimeIdentity: () => ({ exists: true, sha256: 'c'.repeat(64) }),
     ...options
   });
 }
@@ -155,6 +162,12 @@ test('missing locale-specific video is blocked when gameplay has localized text'
   const result = await validate([video('ru')]);
   assert.equal(result.status, 'BLOCK');
   assert.match(result.blockers.join('\n'), /en/);
+});
+
+test('media evidence from a different source HEAD is blocked', async () => {
+  const result = await validate([video('ru', { sourceHead: 'd'.repeat(40) }), video('en')]);
+  assert.equal(result.status, 'BLOCK');
+  assert.match(result.blockers.join('\n'), /source HEAD/);
 });
 
 test('real gameplay share remains a manual evidence gate', async () => {
