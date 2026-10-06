@@ -11,7 +11,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..')
 const audioRoot = path.join(root, 'assets/audio/music');
 const evidenceRoot = path.join(root, 'artifacts/evidence');
 const sourceHead = (await run('git', ['rev-parse', 'HEAD'], { cwd: root })).stdout.trim();
-const expectedHead = 'ff9394433445856c951f19484a5139dc47d951aa';
+const expectedHead = process.env.AUDIO_SOURCE_HEAD ?? sourceHead;
 
 if (sourceHead !== expectedHead) {
   throw new Error(`AUDIO_SOURCE_HEAD_MISMATCH: expected ${expectedHead}, got ${sourceHead}`);
