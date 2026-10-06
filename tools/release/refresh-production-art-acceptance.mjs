@@ -41,10 +41,4 @@ record.verifier = { type: 'automated-current-worktree-hash-verifier', source: 't
 record.compatibility = { ...(record.compatibility ?? {}), status: 'PASS', result: 'CURRENT_WORKTREE_HASHES_MATCH', sourceAssets: record.acceptedAssets.length, targetAssets: record.acceptedAssets.length, manifestMappings: 'PASS', pngRegeneratedAfterAcceptance: false, coverageMethod: '66 authored scenes reconciled at beat level; backgrounds limited to establishing/transition beats and dedicated CGs used for dialogue/action beats' };
 record.runtimeVerification = { status: 'PASS', evidencePath: 'artifacts/evidence/full-route-runtime-qa-2026-09-30.json', generatedAt: new Date().toISOString(), viewports: ['1920x900', '390x844'], routes: 8, consoleErrors: 0, failedRequests: 0, endings: ['S44', 'S44', 'S45', 'S45', 'S46', 'S46', 'S47', 'S47'], placeholders: 0, brokenPaths: 0 };
 fs.writeFileSync(file, `${JSON.stringify(record, null, 2)}\n`);
-const routeEvidenceFile = path.join(root, 'artifacts/evidence/full-route-runtime-qa-2026-09-30.json');
-if (fs.existsSync(routeEvidenceFile)) {
-  const routeEvidence = JSON.parse(fs.readFileSync(routeEvidenceFile, 'utf8'));
-  routeEvidence.head = head;
-  fs.writeFileSync(routeEvidenceFile, `${JSON.stringify(routeEvidence, null, 2)}\n`);
-}
 console.log(JSON.stringify({ head, acceptedAssets: record.acceptedAssets.length, manifestSha256: record.manifestSha256 }, null, 2));
