@@ -680,7 +680,7 @@
     {
       "source": "config/skill-policy.json",
       "logicalId": "managed:skill-policy",
-      "ownership": "managed",
+      "ownership": "semantic-merge",
       "target": "config/skill-policy.json",
       "modes": [
         "init",
@@ -690,7 +690,7 @@
         "new",
         "mature"
       ],
-      "conflictPolicy": "replace-if-baseline"
+      "conflictPolicy": "semantic-merge"
     },
     {
       "source": "docs/EXTERNAL_SKILL_SOURCES.md",
@@ -981,7 +981,7 @@
     {
       "source": "config/manifest-entries.json",
       "logicalId": "managed:manifest-entry-config",
-      "ownership": "managed",
+      "ownership": "semantic-merge",
       "target": "config/manifest-entries.json",
       "modes": [
         "init",
@@ -991,7 +991,7 @@
         "new",
         "mature"
       ],
-      "conflictPolicy": "replace-if-baseline"
+      "conflictPolicy": "semantic-merge"
     },
     {
       "source": "config/starter-kit-manifest.schema.json",
@@ -1445,6 +1445,33 @@
       "modes": ["init", "update"],
       "projectTypes": ["new", "mature"],
       "conflictPolicy": "semantic-merge"
+    },
+    {
+      "source": "config/yandex-release-evidence.schema.json",
+      "logicalId": "managed:yandex-release-evidence-schema",
+      "ownership": "managed",
+      "target": "config/yandex-release-evidence.schema.json",
+      "modes": ["init", "update"],
+      "projectTypes": ["new", "mature"],
+      "conflictPolicy": "replace-if-baseline"
+    },
+    {
+      "source": "tools/yandex/release-evidence-gate.mjs",
+      "logicalId": "managed:yandex-release-evidence-gate",
+      "ownership": "managed",
+      "target": "tools/yandex/release-evidence-gate.mjs",
+      "modes": ["init", "update"],
+      "projectTypes": ["new", "mature"],
+      "conflictPolicy": "replace-if-baseline"
+    },
+    {
+      "source": "docs/PRODUCTION_INCIDENT_HARDENING.md",
+      "logicalId": "managed:production-incident-hardening",
+      "ownership": "managed",
+      "target": "docs/PRODUCTION_INCIDENT_HARDENING.md",
+      "modes": ["init", "update"],
+      "projectTypes": ["new", "mature"],
+      "conflictPolicy": "replace-if-baseline"
     },
     {
       "source": ".codex/skills/visual-novel-narrative-qa/SKILL.md",

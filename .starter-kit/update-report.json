@@ -4,27 +4,14 @@
   "updaterVersion": "0.5.9",
   "mode": "update",
   "dryRun": false,
-  "fromVersion": "0.5.8",
+  "fromVersion": "0.5.9",
   "toVersion": "0.5.9",
-  "sourceManifestHash": "ffd068f0175101512ddfebfd68d09d6ff844d03eebe7d9206ce9dd6b1904e9e3",
+  "sourceManifestHash": "153f4fbc9a30db452f94a02b09260893dee1e7b0fbfc7b2b868ed228f046df9c",
   "targetProfile": "new-project",
   "projectType": "new",
   "skillRoot": ".codex/skills",
   "created": [],
-  "updated": [
-    {
-      "logicalId": "managed:version",
-      "target": ".starter-kit/VERSION"
-    },
-    {
-      "logicalId": "managed:changelog",
-      "target": ".starter-kit/docs/CHANGELOG.md"
-    },
-    {
-      "logicalId": "managed:tool-self-test",
-      "target": "tools/starter-kit/self-test.mjs"
-    }
-  ],
+  "updated": [],
   "preserved": [
     {
       "logicalId": "skill:asset-provenance-and-rights:SKILL.md",
@@ -132,6 +119,14 @@
       "target": ".starter-kit/core/TEST_HARNESS_ADJUDICATION.md"
     },
     {
+      "logicalId": "managed:version",
+      "target": ".starter-kit/VERSION"
+    },
+    {
+      "logicalId": "managed:changelog",
+      "target": ".starter-kit/docs/CHANGELOG.md"
+    },
+    {
       "logicalId": "managed:starter-readme",
       "target": ".starter-kit/docs/README.md"
     },
@@ -150,6 +145,10 @@
     {
       "logicalId": "managed:yandex-doc-sources",
       "target": "config/yandex-doc-sources.yaml"
+    },
+    {
+      "logicalId": "managed:yandex-doc-snapshot",
+      "target": "config/yandex-doc-snapshot.json"
     },
     {
       "logicalId": "managed:game-spec-schema",
@@ -254,11 +253,6 @@
       "target": "docs/MANIFEST_SCHEMA.md"
     },
     {
-      "logicalId": "managed:manifest-entry-config",
-      "target": "config/manifest-entries.json",
-      "ownership": "semantic-merge"
-    },
-    {
       "logicalId": "managed:manifest-json-schema",
       "target": "config/starter-kit-manifest.schema.json"
     },
@@ -305,6 +299,10 @@
     {
       "logicalId": "managed:tool-profile",
       "target": "tools/starter-kit/profile.mjs"
+    },
+    {
+      "logicalId": "managed:tool-self-test",
+      "target": "tools/starter-kit/self-test.mjs"
     },
     {
       "logicalId": "managed:tool-status",
@@ -397,14 +395,26 @@
     {
       "logicalId": "managed:yandex-external-runtime-provider-reporting",
       "target": "tools/yandex/external-runtime-provider/lib/reporting.mjs"
+    },
+    {
+      "logicalId": "managed:yandex-release-evidence-schema",
+      "target": "config/yandex-release-evidence.schema.json"
+    },
+    {
+      "logicalId": "managed:yandex-release-evidence-gate",
+      "target": "tools/yandex/release-evidence-gate.mjs"
+    },
+    {
+      "logicalId": "managed:production-incident-hardening",
+      "target": "docs/PRODUCTION_INCIDENT_HARDENING.md"
     }
   ],
   "merged": [],
   "resolved": [
     {
-      "logicalId": "managed:yandex-doc-snapshot",
-      "target": "config/yandex-doc-snapshot.json",
-      "resolution": "replace-managed-drift"
+      "logicalId": "managed:manifest-entry-config",
+      "target": "config/manifest-entries.json",
+      "resolution": "accept-current"
     }
   ],
   "projectOwned": [],
@@ -432,13 +442,11 @@
     "migrations/0.5.6-to-0.5.7.md"
   ],
   "upstreamFreshness": {
-    "status": "PASS",
+    "status": "SNAPSHOT_ONLY",
     "snapshotReviewedAt": "2026-09-30",
     "snapshotFetchedAt": "2026-09-30T15:48:17.820Z",
     "lastLiveCheckAt": null,
-    "lastLiveVerdicts": [
-      "UNCHANGED"
-    ],
+    "lastLiveVerdicts": [],
     "unresolvedSemanticChanges": false,
     "blockCode": null
   }

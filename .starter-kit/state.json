@@ -3,7 +3,7 @@
   "updaterSchemaVersion": 2,
   "installedVersion": "0.5.9",
   "attemptedVersion": "0.5.9",
-  "sourceManifestHash": "ffd068f0175101512ddfebfd68d09d6ff844d03eebe7d9206ce9dd6b1904e9e3",
+  "sourceManifestHash": "153f4fbc9a30db452f94a02b09260893dee1e7b0fbfc7b2b868ed228f046df9c",
   "targetProfile": {
     "schemaVersion": 1,
     "profileName": "new-project",
@@ -106,8 +106,8 @@
     },
     "managed:known-failures": {
       "target": "lessons/known-failures.yaml",
-      "sourceHash": "a9b01daae6e0e338cb4624b75450234ca503d617719455351b83b85531dc8afa",
-      "targetHash": "a9b01daae6e0e338cb4624b75450234ca503d617719455351b83b85531dc8afa"
+      "sourceHash": "362daadd9fcd8639f01d90e0737fa536843fc55aade12794ec53cf5b3b1e851f",
+      "targetHash": "362daadd9fcd8639f01d90e0737fa536843fc55aade12794ec53cf5b3b1e851f"
     },
     "migration:0.3.0-yandex-requirements": {
       "target": "migrations/0.3.0-yandex-requirements.md",
@@ -246,8 +246,8 @@
     },
     "managed:tool-self-test": {
       "target": "tools/starter-kit/self-test.mjs",
-      "sourceHash": "046a89b932b7050eb9d83b92d6a2f14b43c5b84cfe7624171de23d3de6115345",
-      "targetHash": "046a89b932b7050eb9d83b92d6a2f14b43c5b84cfe7624171de23d3de6115345"
+      "sourceHash": "867d1ced24cf328c222458b61895a63d7dc289340add1ff313bdb9280e7be34e",
+      "targetHash": "867d1ced24cf328c222458b61895a63d7dc289340add1ff313bdb9280e7be34e"
     },
     "managed:tool-status": {
       "target": "tools/starter-kit/status.mjs",
@@ -363,6 +363,21 @@
       "target": "tools/yandex/external-runtime-provider/lib/reporting.mjs",
       "sourceHash": "afef22563d2c42f37c577f3e12d27113d979280f36d20dd70e08ca4dd172657e",
       "targetHash": "afef22563d2c42f37c577f3e12d27113d979280f36d20dd70e08ca4dd172657e"
+    },
+    "managed:yandex-release-evidence-schema": {
+      "target": "config/yandex-release-evidence.schema.json",
+      "sourceHash": "5f84ad1c0f40184c7e1f01f17c2ab77cc646289be1b40cb401c9955ef53eacf8",
+      "targetHash": "5f84ad1c0f40184c7e1f01f17c2ab77cc646289be1b40cb401c9955ef53eacf8"
+    },
+    "managed:yandex-release-evidence-gate": {
+      "target": "tools/yandex/release-evidence-gate.mjs",
+      "sourceHash": "fb64996a5df243f7f434b9016d25100311c0103f57004926346264d49ba256e0",
+      "targetHash": "fb64996a5df243f7f434b9016d25100311c0103f57004926346264d49ba256e0"
+    },
+    "managed:production-incident-hardening": {
+      "target": "docs/PRODUCTION_INCIDENT_HARDENING.md",
+      "sourceHash": "a93431216676e6bd68034b673f35d620815d5de57f37a9cf6cecbc40a8a74ec7",
+      "targetHash": "a93431216676e6bd68034b673f35d620815d5de57f37a9cf6cecbc40a8a74ec7"
     }
   },
   "projectOwned": {
@@ -493,8 +508,8 @@
     },
     "skill:yandex-release-validation:SKILL.md": {
       "target": ".codex/skills/yandex-release-validation/SKILL.md",
-      "sourceHash": "8e1ed83252674f9c957db5a94dc3d236563928472b58d5e44226e31a4056c06d",
-      "targetHash": "8e1ed83252674f9c957db5a94dc3d236563928472b58d5e44226e31a4056c06d"
+      "sourceHash": "6c6d528fd9d6733d72e79ab0091f56f48bd2608705fd05252a1d90dc4fc4f69f",
+      "targetHash": "6c6d528fd9d6733d72e79ab0091f56f48bd2608705fd05252a1d90dc4fc4f69f"
     },
     "contract:AGENTS.md": {
       "target": "AGENTS.md",
@@ -503,8 +518,8 @@
     },
     "contract:package-json": {
       "target": "package.json",
-      "sourceHash": "479ea5808ed959183e6c884dfa8f3471adf60aaff117831de33d547e77c8b4f6",
-      "targetHash": "c8c8de31ac8b08034624466197d278f9b24df26d5a0f58e475a199b173ce5ee2"
+      "sourceHash": "87b4876baffb1e117150b44006bc3cfce522ea7738c3f9770297b28343c75612",
+      "targetHash": "4a9d47aac6776918dd58325ecdf77138a08fafc466bc0465b8865727e6b7431b"
     },
     "contract:yandex-requirements": {
       "target": "config/yandex-requirements.yaml",
@@ -533,8 +548,8 @@
     },
     "managed:manifest-entry-config": {
       "target": "config/manifest-entries.json",
-      "sourceHash": "3ff42a20c08d0ad57a369817f43bad79f9daa5634169cf37c2b3c0eb18839339",
-      "targetHash": "b106f873b08291464934b92152516fa998ff0138e1870c40ac9178d22ef91f1d"
+      "sourceHash": "a165f3baacabc64255fbd3bd94045977e9b8fe18754880d53f083797bc9be544",
+      "targetHash": "05f1cb1ad1c206f73dd2bd51221411d37502f3f9fc965d3c400c4aa7209e2784"
     }
   },
   "conflicts": [],
