@@ -6,6 +6,19 @@ import { execFileSync } from 'node:child_process';
 const DEFAULT_RECORD = 'artifacts/evidence/production-art-acceptance.json';
 const sha256 = file => crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
 const absolute = (root, value) => path.resolve(root, value);
+const git = (root, args) => execFileSync('git', args, { cwd: root, encoding: 'utf8' }).trim();
+const normalize = value => path.normalize(value).replaceAll('\\', '/').toLowerCase();
+const digest = value => crypto.createHash('sha256').update(value).digest('hex');
+
+export function repositoryIdentity(root) {
+  const worktreePath = fs.realpathSync(path.resolve(root));
+  const commonRaw = git(worktreePath, ['rev-parse', '--git-common-dir']);
+  const commonDir = fs.realpathSync(path.resolve(worktreePath, commonRaw));
+  let remote = '';
+  try { remote = git(worktreePath, ['config', '--get', 'remote.origin.url']).replace(/\.git$/i, '').toLowerCase(); } catch {}
+  const localGitIdentity = digest(normalize(commonDir));
+  return { algorithm: 'sha256(git-common-dir,origin)', id: digest(JSON.stringify({ localGitIdentity, remote })), localGitIdentity, remote, worktreePath, commonDir };
+}
 
 function block(code, reason) {
   return { status: 'BLOCKED', code, reason };
@@ -19,7 +32,8 @@ export function verifyArtAcceptance({ root, recordPath = DEFAULT_RECORD, recordO
   let record;
   try { record = recordOverride ?? JSON.parse(fs.readFileSync(recordFile, 'utf8')); }
   catch (error) { return block('ART_ACCEPTANCE_RECORD_INVALID', `Acceptance record is not valid JSON: ${error.message}`); }
-  if (record.schemaVersion !== 1 || record.recordType !== 'production-art-acceptance') {
+  if (record.schemaVersion === 1) return block('ART_ACCEPTANCE_LEGACY_REATTESTATION_REQUIRED', 'Path-based schema v1 record requires current re-attestation.');
+  if (record.schemaVersion !== 2 || record.recordType !== 'production-art-acceptance') {
     return block('ART_ACCEPTANCE_RECORD_INVALID', 'Unsupported acceptance record schema or record type.');
   }
   if (record.status !== 'PASS' || record.verdict !== 'PASS_PRODUCTION_ART_COMPLETE') {
@@ -29,10 +43,9 @@ export function verifyArtAcceptance({ root, recordPath = DEFAULT_RECORD, recordO
     return block('ART_ACCEPTANCE_PROVENANCE_INVALID', 'Acceptance record lacks automated verifier provenance.');
   }
 
-  const currentHead = execFileSync('git', ['rev-parse', 'HEAD'], { cwd: projectRoot, encoding: 'utf8' }).trim();
-  if (absolute(projectRoot, record.repository?.path ?? '') !== projectRoot) {
-    return block('ART_ACCEPTANCE_REPOSITORY_MISMATCH', 'Acceptance record belongs to another repository path.');
-  }
+  const currentHead = git(projectRoot, ['rev-parse', 'HEAD']);
+  const identity = repositoryIdentity(projectRoot);
+  if (record.repository?.id !== identity.id || record.repository?.algorithm !== identity.algorithm) return block('ART_ACCEPTANCE_REPOSITORY_MISMATCH', 'Acceptance record repository identity does not match the current Git repository.');
   if (record.currentHead !== currentHead || record.repository?.head !== currentHead) {
     return block('ART_ACCEPTANCE_HEAD_MISMATCH', `Acceptance record HEAD does not match current HEAD ${currentHead}.`);
   }
