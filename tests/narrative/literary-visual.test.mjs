@@ -62,6 +62,19 @@ test('S02 keeps the current production road background until the authored cafe c
  assert.ok(flow.every((e,i)=>shot('S02',flow,i,choices).art?.type!=='cg'));
 });
 
+test('Episode 1 S02 never interleaves the roadside cafe and car across choice variants',()=>{
+ for(const extraA of ['A','B'])for(const extraB of ['A','B'])for(const authored of ['A','B','C']){
+  const choices={'S01-C1':'A','S02-C90':extraA,'S02-C91':extraB,'S02-C1':authored};
+  const flow=compileInteractivePlayback(scenes.get('S02'),choices);
+  const locations=flow.map(entry=>shot('S02',[entry],0,choices).location);
+  const transitions=locations.filter((location,index)=>index===0||location!==locations[index-1]);
+  assert.deepEqual(transitions,['Автомобиль по дороге в Рейкьявик','Придорожное кафе'],`${extraA}/${extraB}/${authored}`);
+  const cafe=indexOfSource(flow,0,31);
+  assert.ok(flow.slice(cafe).every(entry=>shot('S02',[entry],0,choices).location==='Придорожное кафе'));
+  assert.ok(flow.slice(cafe).every(entry=>shot('S02',[entry],0,choices).art?.file==='s02-roadside-cafe.webp'));
+ }
+});
+
 test('S66 greenhouse uses the authored environment and its independent portrait mapping',()=>{
  const {flow,choices}=complete('S66');
  const opening=shot('S66',flow,0,choices);

@@ -8,6 +8,7 @@ import { compileInteractivePlayback } from './literary-pacing.js';
 import { applyLiteraryLocale, createTranslator, validateLiteraryInteractionLocale } from './localization.js';
 import { literaryLocaleBundles } from './literary-localization-bundle.js';
 import { interactionBeats } from './literary-interactive-beats.js';
+import { createDialogueHistory } from './literary-history.js';
 
 const canonicalById = new Map(literarySeason.scenes.map(scene => [scene.id, scene]));
 let runtimeSeason = literarySeason;
@@ -126,6 +127,7 @@ function loadLocal(){try{const saved=localStorage.getItem(literarySaveKey);const
   if(parsed?.migrationNotice){localStorage.setItem(`${literarySaveKey}:pre-visual-directions-backup`,saved);localStorage.setItem(literarySaveKey,JSON.stringify(parsed));}
   return parsed;}catch{return null}}
 let reader=loadLocal()??blank();
+const dialogueHistory=createDialogueHistory();
 let hasSave=Boolean(loadLocal());
 let cloudLocked=false;
 let cloudCandidate=null;
@@ -159,6 +161,15 @@ function persist() {
   try {localStorage.setItem(literarySaveKey,JSON.stringify(reader));hasSave=true;}catch{}
   if(cloudQueue && platform?.mode==='yandex')cloudQueue.enqueue(reader).catch(()=>{});
 }
+function recordDialogueState(){dialogueHistory.record(reader)}
+function rollbackNarrative(){
+  const previous=dialogueHistory.rollback();
+  if(!previous)return false;
+  reader={...previous,revision:reader.revision,runId:reader.runId};
+  cloudQueue?.invalidate();
+  renderReader();
+  return true;
+}
 function applySettings(){
   document.documentElement.style.setProperty('--literary-scale',String([.9,1,1.12,1.25].includes(settings.scale)?settings.scale:1));
   document.body.classList.toggle('literary-contrast',Boolean(settings.contrast));
@@ -181,13 +192,14 @@ function advanceNarrative(){
   const scene=byId.get(reader.sceneId);if(!scene)return false;
   const flow=compileInteractivePlayback(scene,reader.choices,locale);
   const current=flow[reader.position];
+  if(current?.type==='choice')return false;
   if(current?.type==='page'){
+    recordDialogueState();
     reader.position=Math.min(reader.position+1,flow.length);
-  }else if(current?.type==='choice'){
-    return false;
   }else{
     const next=nextLiteraryScene(reader.sceneId,reader.choices);
     if(!next || !byId.has(next))return false;
+    recordDialogueState();
     reader.sceneId=next;reader.position=0;
     if(!reader.visited.includes(next))reader.visited.push(next);
   }
@@ -265,7 +277,7 @@ function bindStageTapTarget(node){
 function goHome(){menuOpen=true;modal=null;renderMenu()}
 function startNew(){
   if(hasSave && !window.confirm(t('confirmNew')))return;
-  cloudLocked=true; reader=blank();persist();menuOpen=false;modal=null;renderReader();
+  cloudLocked=true;dialogueHistory.clear();reader=blank();persist();menuOpen=false;modal=null;renderReader();
 }
 function continueGame(){menuOpen=false;modal=null;renderReader()}
 function panel(headingKey,children){
@@ -289,7 +301,7 @@ function episodeSelection(section){
       for(const id of Object.keys(reader.choices)){
         if(epChoiceIds.some(prefix=>id.startsWith(prefix+'-')))delete reader.choices[id];
       }
-      reader.sceneId=first.id;reader.position=0;reader.finished=false;reader.migrationNotice=false;reader.visited=reader.visited.filter(id=>byId.get(id).episode<ep);reader.visited.push(first.id);
+      dialogueHistory.clear();reader.sceneId=first.id;reader.position=0;reader.finished=false;reader.migrationNotice=false;reader.visited=reader.visited.filter(id=>byId.get(id).episode<ep);reader.visited.push(first.id);
       cloudLocked=true;persist();continueGame();
     },'episode-select');item.disabled=!unlocked;section.append(item);
   }
@@ -315,7 +327,7 @@ function renderMenu(){
   for(const [name,label] of [['episodes',t('episodes')],['settings',t('settings')]])secondary.append(button(label,()=>{modal=name;renderMenu()}));
   actions.append(secondary);
   section.append(actions);
-  if(cloudCandidate)section.append(button(t('restoreCloud'),()=>{if(!window.confirm(t('restoreCloudConfirm')))return;cloudLocked=true;reader=cloudCandidate;cloudCandidate=null;persist();continueGame()}));
+  if(cloudCandidate)section.append(button(t('restoreCloud'),()=>{if(!window.confirm(t('restoreCloudConfirm')))return;cloudLocked=true;dialogueHistory.clear();reader=cloudCandidate;cloudCandidate=null;persist();continueGame()}));
 }
 function renderStage(direction) {
   const stage=el('','scene-stage');
@@ -361,7 +373,8 @@ function renderReader(){
   if(art?.presentation!=='cinematic') picture.append(renderStage({...direction,mode:direction.cast.length>2?'group':direction.cast.length===2?'pair':'solo',mood:stageForScene(scene.id,reader.choices).mood}));
   picture.append(el('','literary-vignette'));app.append(picture);bindStageNavigation(picture);
   const header=el('','reader-header');
-  header.append(button('☰ '+t('menu'),goHome,'small-button'),el(t('episode')+` ${scene.episode} / 10`,'chapter-index'),el(t('readerHeaderTitle'),'draft-indicator'));
+  const back=button(locale==='ru'?'Назад':'Back',rollbackNarrative,'small-button dialogue-back');back.disabled=!dialogueHistory.canRollback();
+  header.append(button('☰ '+t('menu'),goHome,'small-button'),back,el(t('episode')+` ${scene.episode} / 10`,'chapter-index'),el(t('readerHeaderTitle'),'draft-indicator'));
   header.setAttribute('aria-label',t('sceneAria',{title:scene.title,episode:scene.episode}));
   app.append(header);
   const sheet=el('','reader-sheet');
@@ -380,12 +393,12 @@ function renderReader(){
     content.append(el(t('yourChoice'),'choice-label'));
     if(current.question)content.append(el(current.question,'decision-question','p'));
     const options=el('','reader-options');
-    for(const opt of current.options)options.append(button(cleanLiteraryText(opt.label),()=>{lastStageInput='none';lastPointerActivationAt=0;reader.choices[current.id]=opt.code;persist();renderReader()},'choice-button'));
+    for(const opt of current.options)options.append(button(cleanLiteraryText(opt.label),()=>{lastStageInput='none';lastPointerActivationAt=0;recordDialogueState();reader.choices[current.id]=opt.code;persist();renderReader()},'choice-button'));
     content.append(options);
     sheet.append(content);
   }else{
     const next=nextLiteraryScene(reader.sceneId,reader.choices);
-    if(next && byId.has(next))sheet.append(button(t('nextScene',{scene:next}),()=>{lastStageInput='none';lastPointerActivationAt=0;reader.sceneId=next;reader.position=0;if(!reader.visited.includes(next))reader.visited.push(next);persist();renderReader()},'primary'));
+    if(next && byId.has(next))sheet.append(button(t('nextScene',{scene:next}),()=>{lastStageInput='none';lastPointerActivationAt=0;advanceNarrative()},'primary'));
     else if(isEnding){
       if(!reader.finished){reader.finished=true;persist()}
       sheet.classList.add('terminal-sheet');
@@ -451,6 +464,14 @@ window.__LITERARY_QA__={
   getPlatformMode:()=>platform?.mode??'booting',
   getPersistenceKeys:()=>({local:literarySaveKey,cloud:literaryCloudKey}),
   getScreen:()=>({menuOpen,sceneId:reader.sceneId,position:reader.position}),
+  getRuntimeTrace:()=>{
+    const scene=byId.get(reader.sceneId),flow=compileInteractivePlayback(scene,reader.choices,locale),entry=flow[reader.position]??flow.at(-1)??null;
+    const visualEntry=visualEntryForPosition(flow,reader.position);
+    const direction=visualAt(scene.id,visualEntry,reader.choices,stageForScene(scene.id,reader.choices).cast);
+    const text=entry?.text??entry?.question??'';
+    let hash=2166136261;for(const char of text)hash=Math.imul(hash^char.charCodeAt(0),16777619);
+    return {displayedPosition:`${reader.position+1}/${flow.length}`,sceneId:scene.id,entryId:entry?.id??null,entryType:entry?.type??null,sourceStartRef:entry?.sourceStartRef??null,sourceEndRef:entry?.sourceEndRef??null,dialogueHash:(hash>>>0).toString(16),speaker:null,platformMode:platform?.mode??'booting',revision:reader.revision,choiceState:structuredClone(reader.choices),location:direction.location,visualBeat:direction.beatId,background:direction.art?.file??null,cast:direction.cast,stage:stageForScene(scene.id,reader.choices)};
+  },
   // QA methods are strictly read-only; preview and the old game have separate state keys.
 };
 boot();
