@@ -1,0 +1,84 @@
+{
+  "schemaVersion":1,"locale":"en","sourceLocale":"ru","source":"content/season-1-literary-episode-04.md","scenes":{"S14":{"title":"Day 7. Trail Above the Glacier Plain. Pace","chunks":{
+    "S14.C000":{"title":"","paragraphs":{
+      "S14.C000.P000":"Eric stood by a wooden post, trying to get his hand into a wet glove. It stubbornly turned inside out. He noticed Alice and didn’t hide the struggle.",
+      "S14.C000.P001":"“You promised to watch the time,” she said.",
+      "S14.C000.P002":"“The time can wait. The glove can’t.”",
+      "S14.C000.P003":"“I think you’re the first Icelander to lose a fight with clothing.”",
+      "S14.C000.P004":"“I never said we had national immunity to gloves.”",
+      "S14.C000.P005":"She held the edge of the sleeve while he straightened the lining. When the glove finally settled, neither of them moved their hands away at once.",
+      "S14.C000.P006":"Beyond the lookout, the trail rose gently, then followed a rocky edge toward a viewpoint. Eric showed her a shorter way back on the map. By the bench, he agreed with Nick and Damir that they would wait there until the set time; if Alice and Eric returned early, they would walk to the car together. Nick repeated the time aloud and set a reminder on his phone. Damir gave a thumbs-up without taking his attention from his water bottle. Only then did the two of them go on."
+    }},
+    "S14.C001":{"title":"If `ericTone=playful`","paragraphs":{
+      "S14.C001.P000":"Eric whistled the last two notes of the song from the car. Alice immediately tapped the rhythm against her backpack strap.",
+      "S14.C001.P001":"“I was hoping you’d forgotten the chorus.”",
+      "S14.C001.P002":"“I did. Those two notes got stuck separately.”",
+      "S14.C001.P003":"He tried to whistle a third and lost the tune. Alice laughed first."
+    }},
+    "S14.C002":{"title":"If `ericTone=quiet`","paragraphs":{
+      "S14.C002.P000":"They were silent for a few steps. Eric noticed Alice slow down but didn’t check his watch immediately.",
+      "S14.C002.P001":"“Last time I let the song finish before you got out of the car,” he said. “We can stop when you want this time too.”",
+      "S14.C002.P002":"She looked at the light between the low clouds.",
+      "S14.C002.P003":"“Let’s keep going for now. I’ll tell you.”"
+    }},
+    "S14.C003":{"title":"Shared continuation","paragraphs":{
+      "S14.C003.P000":"“Does this stretch work for you?” Eric asked. “If your legs are tired, we turn around here. There’s no penalty for an unseen view.”",
+      "S14.C003.P001":"“What if I want to go farther?”",
+      "S14.C003.P002":"“Then we go farther. On the marked trail and until the turn-around time.”",
+      "S14.C003.P003":"She smiled.",
+      "S14.C003.P004":"“You issue even freedom with instructions.”",
+      "S14.C003.P005":"“I’m working on it. Can I just say: choose your pace?”",
+      "S14.C003.P006":"“You can.”",
+      "S14.C003.P007":"They walked on. The wind tugged at her jacket zip, low bushes darkened the slope, and beyond them the distant edge of the ice was white. Eric didn’t list facts about every stone. Sometimes he warned her where it was slippery, then fell silent again. With him, silence didn’t require Alice to fill it with a question. But on the third climb she realized she had sped up so she wouldn’t look like the person everyone had to wait for. The thought in her head was unpleasantly familiar: Am I in the way? Will I ruin the plan?",
+      "S14.C003.P008":"Someone’s forgotten knitted hat lay on a flat stone. Eric picked it up and hung it from a trail post where it would be visible on the way back. Alice asked if he was going to create a separate schedule for lost things. “I can,” he said, listing imaginary columns: time found, wind direction, owner’s level of despair. On the last word, his voice dropped lower and closer; Alice looked at him instead of the hat. He noticed and stopped joking. A family came around the bend; they moved to the edge of the wide lookout and let them pass. When the footsteps faded, Eric didn’t continue the list. There was room between them for something new, still without a name.",
+      "S14.C003.P009":"Eric stopped at a widening and took out the thermos.",
+      "S14.C003.P010":"“I usually drink tea here,” he said. “Even when I’m alone.”",
+      "S14.C003.P011":"“You’re capable of delaying your own route by yourself?”",
+      "S14.C003.P012":"“That’s why I walk alone.”",
+      "S14.C003.P013":"He poured tea into the lid and handed it to her. He didn’t mention that she was out of breath. Alice took the lid; her hands warmed before her face did.",
+      "S14.C003.P014":"“Why do you watch the time so closely?” she asked. “Apart from the obvious answer about safety.”",
+      "S14.C003.P015":"Eric looked toward where the trail curved behind a boulder.",
+      "S14.C003.P016":"“When you lead people, it’s easy to get used to being useful. Then they don’t ask whether you’re tired. I taught them that myself. I kept showing that I could keep up with everyone.”",
+      "S14.C003.P017":"“And now?”",
+      "S14.C003.P018":"“Now I’m trying to build a guide school. The other guides should be able to say: someone else will cover me today. It sounds simple. I’ve made three versions of the schedule and haven’t allowed myself a day off in any of them.”",
+      "S14.C003.P019":"Alice laughed. He did too, a little embarrassed, and put the thermos back in his pack.",
+      "S14.C003.P020":"“I used to think you just liked giving orders.”",
+      "S14.C003.P021":"“Sometimes I do. That’s part of the problem.”",
+      "S14.C003.P022":"“Today you asked.”",
+      "S14.C003.P023":"“Today I have someone to practise with.”",
+      "S14.C003.P024":"The last sentence stayed between them. Alice imagined him without a map or a schedule and suddenly wanted to be there when he managed to step out of the guide’s role.",
+      "S14.C003.P025":"She took out her phone to photograph the view for her notes. Eric neither moved away nor came closer. The frame held ice, low sky, and the edge of his sleeve. She put the phone away without taking the picture. After Vík, it was clearer how quickly “accidentally in the frame” became “why didn’t you ask?”"
+    }},
+    "S14.C004":{"title":"Choice S14-C1 — how to cover the remaining stretch","paragraphs":{"S14.C004.P000":"Both options return Alice and Eric to the group by the agreed time."}},
+    "S14.C005":{"title":"A. Ask to walk more slowly and name the reason","paragraphs":{
+      "S14.C005.P000":"“I want to reach the viewpoint,” Alice said, “but I’m walking faster than is comfortable. It isn’t my leg. I don’t want to be the person everyone has to wait for.”",
+      "S14.C005.P001":"Eric looked at his watch, then turned the face toward her.",
+      "S14.C005.P002":"“We have time for a slow pace and the walk back. I didn’t guess what would be comfortable for you. Thank you for telling me.”",
+      "S14.C005.P003":"She went first along the trail. He stayed beside her without pushing her with a word or a hand. The viewpoint had less dramatic ice than she expected, but there was a clear gap between the clouds, and they saw the light move across the valley.",
+      "S14.C005.P004":"“For the notes?” Eric asked.",
+      "S14.C005.P005":"“Maybe. For me first.”",
+      "S14.C005.P006":"He nodded and didn’t ask her to explain the difference."
+    }},
+    "S14.C006":{"title":"B. Suggest a short return and make the decision herself","paragraphs":{
+      "S14.C006.P000":"“Let’s turn around here,” Alice said. “I saw what I came for. I don’t want to go farther just because we can.”",
+      "S14.C006.P001":"Eric didn’t hide his surprise.",
+      "S14.C006.P002":"“Usually I have to convince people that the end of a trail doesn’t have to be the goal.”",
+      "S14.C006.P003":"“Today that’s my boring professional victory.”",
+      "S14.C006.P004":"“Do journalists get professional victories without publishing them?”",
+      "S14.C006.P005":"“I’ve just had one.”",
+      "S14.C006.P006":"On the way back, they walked slowly and stopped by a stream where water disappeared under dark stones. Eric asked whether she wanted to record the sound. Alice declined. They listened together until another couple approached, then gave up the place. Later, when they met the others, Eric said exactly what was true: “We chose the short route.” He didn’t call her tired or turn his own caution into her decision."
+    }},
+    "S14.C007":{"title":"Shared continuation","paragraphs":{
+      "S14.C007.P000":"At the car, Nick showed not a shot but his sheet of sound notes: “footsteps,” “backpack strap,” “canteen click.” He had recorded the last sound at the bench while waiting with Damir; Alice recognized the click of Damir’s bottle lid. Nick didn’t ask what they had been doing on the climb.",
+      "S14.C007.P001":"“You record small things too?” she asked.",
+      "S14.C007.P002":"“The big things get noticed without us.”",
+      "S14.C007.P003":"Eric asked each person whether they had enough water for the next stop. When it was Alice’s turn, he left a small pause for her answer.",
+      "S14.C007.P004":"“Enough,” she said.",
+      "S14.C007.P005":"The group planned to spend the night closer to the glacier lagoon. The road carried them from green slopes onto a wide plain. Damir took Nick’s place in the front because Nick wanted to sort the sound in his headphones, and Eric asked a second person to watch the signs. Nick put the camera in its case. Alice opened her notebook and wrote not someone else’s quote but her own sentence: “When I was offered a choice of pace, I didn’t believe at first that pace could be chosen.”"
+    }},
+    "S14.C008":{"title":"Choice S14-C2 — how Alice shows Eric she enjoyed the trail","paragraphs":{}},
+    "S14.C009":{"title":"A. Suggest a walk together after dinner","paragraphs":{"S14.C009.P000":"“Without a list of stops,” Alice added. Eric looked briefly thrown, then agreed: after dinner they would walk to the nearest lamp and back. She was the one who made the plan, and it made her a little warmer under her jacket."}},
+    "S14.C010":{"title":"B. Share a funny find from the trail","paragraphs":{"S14.C010.P000":"Alice showed Eric a phone photo of small bird tracks in wet ground. He studied it for a long time and admitted he hadn’t noticed them himself. She kept the picture out of the article."
+    }}
+  }}}
+}

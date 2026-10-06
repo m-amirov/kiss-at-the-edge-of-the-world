@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "sourceLocale": "ru",
+  "source": "content/season-1-literary-episode-06.md",
+  "scenes": {
+    "S58": {
+      "title": "Day 12. A Kitchen for Four",
+      "chunks": {
+        "S58.C000": {"title": "", "paragraphs": {
+          "S58.C000.P000": "After lunch, the rain brought them back to Seyðisfjörður's main street. Someone suggested finding dinner in a café, but the first was closed for a private event and the second opened too late. The guesthouse owner let them use the shared kitchen and pointed out a shop that was still open.",
+          "S58.C000.P001": "“Then it's a grocery expedition,” Nick said. “That rare genre where my talent for choosing sweets counts as a survival skill.”",
+          "S58.C000.P002": "“Bread is not the responsibility of someone who calls chocolate a grain,” Damir said.",
+          "S58.C000.P003": "Eric looked at the time.",
+          "S58.C000.P004": "“The shop closes in forty minutes. If we go now, we can make it without running.”",
+          "S58.C000.P005": "They walked down the street past painted façades. After the rain, the stream ran faster than in the morning; somewhere above the water, an unsecured door slammed. Alice caught herself thinking that their day could be described as a list of obstacles—the road, the postponed interview, the producer's email, the vacancy, the closed café. But in her memory, what stayed more insistently were the people's answers to those obstacles.",
+          "S58.C000.P006": "The shop had potatoes, onions, carrots, a tin of beans, bread, and a small carton of cream. Nick held two packets of biscuits like someone entrusted with international negotiations. Eric checked whether the pot would hold enough for four. Damir asked the shop assistant which bread was best with thick soup. Alice chose between parsley and dill, unable to decide which was more like their trip."
+        }},
+        "S58.C001": {"title": "Choice S58-C1 — Who will Alice go with for the last missing ingredient", "paragraphs": {}},
+        "S58.C002": {"title": "A. Go with Eric for bread", "paragraphs": {
+          "S58.C002.P000": "There was one loaf left on the next shelf. Eric reached for it, then stopped.",
+          "S58.C002.P001": "“Are we sure we want this? I've already said ‘sure’ too early three times today.”",
+          "S58.C002.P002": "“I want this one,” Alice said. “It looks as if it can survive your soup.”",
+          "S58.C002.P003": "He took the bread and put it in the basket without turning her sentence into permission for other decisions. On the way to the till, he told her that as a child his mother had made him buy bread himself: “You can't teach people the road if you're afraid to ask the shopkeeper the price.”",
+          "S58.C002.P004": "“Were you afraid?”",
+          "S58.C002.P005": "“Terrified. Sometimes I still am.”",
+          "S58.C002.P006": "For the first time, Alice imagined a small Eric rehearsing one simple sentence by the shelf. She felt warmer than the shop's heating could make her."
+        }},
+        "S58.C003": {"title": "B. Go with Nick for greens", "paragraphs": {
+          "S58.C003.P000": "Nick suggested dill “out of respect for the soup” and parsley “out of respect for freedom of choice.”",
+          "S58.C003.P001": "“One bunch,” Alice said. “The pot is already crowded.”",
+          "S58.C003.P002": "He chose parsley and held it under his chin like a beard, but, noticing her phone in her hand, did not ask for a picture.",
+          "S58.C003.P003": "“Strange,” Nick admitted. “Before, I would already be explaining why this was funny in the edit. Now it is enough that you are laughing.”",
+          "S58.C003.P004": "“Even if I'm laughing at you?”",
+          "S58.C003.P005": "“Especially then. That nuance always gets lost in films for some reason.”",
+          "S58.C003.P006": "He put the greens in the basket and did not try to hold the moment on a screen."
+        }},
+        "S58.C004": {"title": "C. Go with Damir for potatoes", "paragraphs": {
+          "S58.C004.P000": "Damir searched for potatoes of roughly the same size and put them in a bag with professional seriousness.",
+          "S58.C004.P001": "“You know they are all going into the same pot?” Alice asked.",
+          "S58.C004.P002": "“I know. I'm trying to earn five minutes before Nick renames the dish ‘fjord under a blanket.’”",
+          "S58.C004.P003": "She picked up the most uneven potato and placed it on top.",
+          "S58.C004.P004": "“We keep this one. It has character.”",
+          "S58.C004.P005": "“Then you can peel it.”",
+          "S58.C004.P006": "“Agreed.”",
+          "S58.C004.P007": "They laughed without looking back at old kitchens. Damir did not call it a return. He simply remembered which potato was hers."
+        }},
+        "S58.C005": {"title": "D. Leave everyone by the shelves and choose the food herself", "paragraphs": {
+          "S58.C005.P000": "Alice asked the others to go to the till while she went back for salt: no one had checked whether the shared kitchen had any. The shop assistant pointed out a small packet that could be left for the guesthouse owner. On the way back, Alice saw a notice for a local amateur choir and a brief message about collecting supplies for neighbours after the road closure.",
+          "S58.C005.P001": "She copied down the number not for the article: before they left in the morning, she could ask the owner whether they were collecting something needed and whether it would be appropriate for them to join. At the till, she showed the note to the others. Damir said he had a spare warm pair of socks; Nick pointed out that they should first ask whether those were needed. Alice put the number in her pocket and did not turn someone else's hardship into group entertainment. Returning to the others without a companion was not loneliness but her own way of being inside the trip."
+        }},
+        "S58.C006": {"title": "Common continuation", "paragraphs": {
+          "S58.C006.P000": "In the kitchen, it turned out that the pot was smaller than Eric had imagined. Damir suggested cooking in two batches; Nick suggested calling the first batch “the director's cut.” Alice tipped the beans into a colander and suggested cooking the vegetables together and serving the bread warm on the side. No one was offended.",
+          "S58.C006.P001": "Nick cut the carrots into slices that were too thick. Eric showed him one, handed the knife back, and asked whether he needed help. Damir peeled half the potatoes and pushed the bowl with the remaining ones toward Alice."
+        }},
+        "S58.C007": {"title": "S58-P-C — if Alice chose potatoes with Damir", "paragraphs": {"S58.C007.P000": "The uneven potato lay on top. “Does the agreement still stand?” Damir asked. Alice took the knife and cut it in half. He did not tell her the easiest way to peel either half."}},
+        "S58.C008": {"title": "S58-P-OTHER — if Alice chose Eric, Nick, or shopping alone", "paragraphs": {"S58.C008.P000": "Alice took two small potatoes, and Damir took the largest. Nick suggested trading so no one got all the difficult work, and they actually traded. While they peeled, no one directed the others from across the table."}},
+        "S58.C009": {"title": "Common continuation S58", "paragraphs": {
+          "S58.C009.P000": "Reflections of four people trembled on the wet window, close or distant depending on who approached the stove.",
+          "S58.C009.P001": "When the soup began to simmer quietly, the owner came in to ask whether they needed another chair. Hearing about the closed café, she brought a small jar of mustard and said dinner would then feel less like punishment by weather. They offered to let her try it later. She said she had to finish cleaning the rooms first, and left them four extra spoons “in case you invite half the town again.”",
+          "S58.C009.P002": "At the table, Nick spilled cream on the corner of the map. This time Eric laughed so loudly that he surprised himself. Nick froze with a napkin in his hand.",
+          "S58.C009.P003": "“I was ready for a lecture on route preservation.”",
+          "S58.C009.P004": "“The route was already closed,” Eric said. “At least the sauce is open now.”",
+          "S58.C009.P005": "Damir turned the map to its dry side. Alice said the cream was not worth such a good joke, and they all laughed again. The soup was thicker than planned, but there was enough for a second bowl each.",
+          "S58.C009.P006": "Conversation jumped around. Nick admitted that from forty hours of an earlier film he had kept seven minutes and had long treated them as proof of failure. Damir told them about a patient who once taught him to explain a procedure without his usual medical words. Eric remembered his first independent class, where the person at the end asked whether it would have been possible simply not to climb the hill. Alice described the smokehouse owner whose “we can talk about that” mattered more than ten striking quotations.",
+          "S58.C009.P007": "“What will you call it in the article?” Nick asked.",
+          "S58.C009.P008": "“I don't know yet. But I want it to include people who have the right to correct me.”",
+          "S58.C009.P009": "Nick raised his spoon as if offering a toast. Damir said it was a terrible object for a toast. Eric still tapped his spoon against Alice's. The sound was almost inaudible.",
+          "S58.C009.P010": "Then they changed places: Nick moved beside the outlet to check whether his reply had reached the producer; Damir gave the owner his chair when she eventually came in to taste the soup; Eric went to the window to check the weather. Alice stayed at the table and saw each of them separately, but not as three possible answers to one question. Each had his own work tomorrow, even if she was not beside him.",
+          "S58.C009.P011": "Before bed, she went outside. The space between the houses smelled of rain and dinner. Eric said that tomorrow, for the first time in a long while, he wanted to walk without a map; Nick returned to the conversation about an evening without a camera, but did not ask for an immediate answer; Damir was waiting for the interview date. None of them demanded a decision that minute. And yet Alice already knew: if she pretended she was choosing nothing, that would affect the others too."
+        }}
+      }
+    }
+  }
+}

@@ -1,0 +1,257 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "generatedAt": "2026-10-05T17:51:20.343Z",
+  "releaseSourceHead": "acf94f4b2567ee07ea37d9c58966c833f80f5c4b",
+  "head": "acf94f4b2567ee07ea37d9c58966c833f80f5c4b",
+  "baseUrl": "http://127.0.0.1:4174/index.html",
+  "requirements": [
+    "4/4 endings",
+    "desktop and mobile",
+    "console errors 0",
+    "failed requests 0",
+    "soft-lock 0"
+  ],
+  "results": [
+    {
+      "route": "eric",
+      "viewport": {
+        "width": 1920,
+        "height": 900
+      },
+      "ending": "S44",
+      "expectedEnding": "S44",
+      "finished": true,
+      "visited": 40,
+      "choiceCount": 113,
+      "steps": 1309,
+      "routeChoice": true,
+      "softLocks": 0,
+      "runError": null,
+      "lastState": {
+        "sceneId": "S44",
+        "position": 8,
+        "terminal": true,
+        "finished": true,
+        "visited": 40,
+        "choiceCount": 113
+      },
+      "errors": [],
+      "failed": [],
+      "checkpoints": [
+        "S17",
+        "S26"
+      ]
+    },
+    {
+      "route": "eric",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "ending": "S44",
+      "expectedEnding": "S44",
+      "finished": true,
+      "visited": 40,
+      "choiceCount": 113,
+      "steps": 1309,
+      "routeChoice": true,
+      "softLocks": 0,
+      "runError": null,
+      "lastState": {
+        "sceneId": "S44",
+        "position": 8,
+        "terminal": true,
+        "finished": true,
+        "visited": 40,
+        "choiceCount": 113
+      },
+      "errors": [],
+      "failed": [],
+      "checkpoints": [
+        "S17",
+        "S26"
+      ]
+    },
+    {
+      "route": "nick",
+      "viewport": {
+        "width": 1920,
+        "height": 900
+      },
+      "ending": "S45",
+      "expectedEnding": "S45",
+      "finished": true,
+      "visited": 40,
+      "choiceCount": 114,
+      "steps": 1308,
+      "routeChoice": true,
+      "softLocks": 0,
+      "runError": null,
+      "lastState": {
+        "sceneId": "S45",
+        "position": 8,
+        "terminal": true,
+        "finished": true,
+        "visited": 40,
+        "choiceCount": 114
+      },
+      "errors": [],
+      "failed": [],
+      "checkpoints": [
+        "S17",
+        "S26"
+      ]
+    },
+    {
+      "route": "nick",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "ending": "S45",
+      "expectedEnding": "S45",
+      "finished": true,
+      "visited": 40,
+      "choiceCount": 114,
+      "steps": 1308,
+      "routeChoice": true,
+      "softLocks": 0,
+      "runError": null,
+      "lastState": {
+        "sceneId": "S45",
+        "position": 8,
+        "terminal": true,
+        "finished": true,
+        "visited": 40,
+        "choiceCount": 114
+      },
+      "errors": [],
+      "failed": [],
+      "checkpoints": [
+        "S17",
+        "S26"
+      ]
+    },
+    {
+      "route": "damir",
+      "viewport": {
+        "width": 1920,
+        "height": 900
+      },
+      "ending": "S46",
+      "expectedEnding": "S46",
+      "finished": true,
+      "visited": 40,
+      "choiceCount": 113,
+      "steps": 1296,
+      "routeChoice": true,
+      "softLocks": 0,
+      "runError": null,
+      "lastState": {
+        "sceneId": "S46",
+        "position": 8,
+        "terminal": true,
+        "finished": true,
+        "visited": 40,
+        "choiceCount": 113
+      },
+      "errors": [],
+      "failed": [],
+      "checkpoints": [
+        "S17",
+        "S26"
+      ]
+    },
+    {
+      "route": "damir",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "ending": "S46",
+      "expectedEnding": "S46",
+      "finished": true,
+      "visited": 40,
+      "choiceCount": 113,
+      "steps": 1296,
+      "routeChoice": true,
+      "softLocks": 0,
+      "runError": null,
+      "lastState": {
+        "sceneId": "S46",
+        "position": 8,
+        "terminal": true,
+        "finished": true,
+        "visited": 40,
+        "choiceCount": 113
+      },
+      "errors": [],
+      "failed": [],
+      "checkpoints": [
+        "S17",
+        "S26"
+      ]
+    },
+    {
+      "route": "alice",
+      "viewport": {
+        "width": 1920,
+        "height": 900
+      },
+      "ending": "S47",
+      "expectedEnding": "S47",
+      "finished": true,
+      "visited": 41,
+      "choiceCount": 116,
+      "steps": 1288,
+      "routeChoice": true,
+      "softLocks": 0,
+      "runError": null,
+      "lastState": {
+        "sceneId": "S47",
+        "position": 7,
+        "terminal": true,
+        "finished": true,
+        "visited": 41,
+        "choiceCount": 116
+      },
+      "errors": [],
+      "failed": [],
+      "checkpoints": [
+        "S17",
+        "S26"
+      ]
+    },
+    {
+      "route": "alice",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "ending": "S47",
+      "expectedEnding": "S47",
+      "finished": true,
+      "visited": 41,
+      "choiceCount": 116,
+      "steps": 1288,
+      "routeChoice": true,
+      "softLocks": 0,
+      "runError": null,
+      "lastState": {
+        "sceneId": "S47",
+        "position": 7,
+        "terminal": true,
+        "finished": true,
+        "visited": 41,
+        "choiceCount": 116
+      },
+      "errors": [],
+      "failed": [],
+      "checkpoints": [
+        "S17",
+        "S26"
+      ]
+    }
+  ]
+}

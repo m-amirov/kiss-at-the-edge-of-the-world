@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "source": "content/season-1-literary-episode-09.md",
+  "scenes": {
+    "S57": {
+      "title": "Day 19. Sunrise Without the Old Words",
+      "chunks": {
+        "S57.C000": {
+          "title": "",
+          "paragraphs": {
+            "S57.C000.P000": "Damir woke Alice with a brief message: the bakery would open in twenty minutes, and he was going for bread. She could have left it unanswered. Instead, she put on her coat and joined him at the stairs. They were both sleepy. Damir held two cups of coffee and admitted he had bought them in advance, though he did not know whether she would come. Alice took one; the coffee was too strong, but warm.",
+            "S57.C000.P001": "The bakery smelled of bread and cinnamon. The seller asked how many rolls they wanted. Damir was about to order two identical ones out of habit, then looked at Alice. She chose a savoury roll he had never seen on her plate before. He took a sweet one. Outside they traded a bite, and both agreed the other choice was good too.",
+            "S57.C000.P002": "Almost no one used the lit path to the harbour. Alice remembered the morning of their first trip together years ago: then, they had thought there was enough time ahead for everything. Now exactly two days remained, and she did not want to spend them comparing the two. Damir spoke of what he had liked at the farm: the horse that refused to move, the instructor who did not hurry, and her unexpectedly loud laugh under the helmet. Alice laughed again, but not at a photograph this time.",
+            "S57.C000.P003": "At a bench Damir stopped. He did not take the first step—perhaps he remembered their old mistakes too well. Alice set her cup on the board, went to him and kissed him. The kiss was new. Not because they had forgotten the past, but because no one was trying to reconstruct it from memory now."
+          }
+        },
+        "S57.C001": {
+          "title": "Choice S57-C1 — After the kiss",
+          "paragraphs": {}
+        },
+        "S57.C002": {
+          "title": "A. Stay close and agree on the next meeting",
+          "paragraphs": {
+            "S57.C002.P000": "Alice put her arms around Damir and said she wanted to see him at home when they both had a free evening. He nodded and offered to send his schedule as soon as it was ready. She said she would send hers as well."
+          }
+        },
+        "S57.C003": {
+          "title": "B. Stop and keep some time for herself",
+          "paragraphs": {
+            "S57.C003.P000": "Alice drew back first. She did not regret the kiss, but said that until the end of the trip she did not want to make new promises. “All right,” Damir said. They finished their rolls and walked back side by side, without trying to guess each other’s next words."
+          }
+        },
+        "S57.C004": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S57.C004.P000": "When they returned, they found Nick at the stairs: he was looking for his charger and was certain he had left it in the car. Alice suggested checking the socket in the hall. The charger turned up there a minute later. For the rest of the morning they prepared to leave and laughed over how many things they had managed to misplace in three weeks."
+          }
+        },
+        "S57.C005": {
+          "title": "If `S39-C2=A`",
+          "paragraphs": {
+            "S57.C005.P000": "At sunrise Alice remembered Damir’s story about the neighbour’s dog and asked whether it still met him at the door. He told her a recent story, and they laughed without returning in their thoughts to the two years apart."
+          }
+        },
+        "S57.C006": {
+          "title": "If `S39-C2=B`",
+          "paragraphs": {
+            "S57.C006.P000": "At sunrise Damir met Alice at the stairs, as she herself had suggested the day before. She looked at him and realised that this was exactly the simple moment she had been waiting for."
+          }
+        }
+      }
+    }
+  }
+}

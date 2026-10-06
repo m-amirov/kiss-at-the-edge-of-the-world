@@ -1,0 +1,3053 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "evidenceType": "ENGLISH_RUNTIME_LOCALIZATION",
+  "head": "cebb969c5843591a8feb04fca60422403666cf8c",
+  "baseUrl": "http://127.0.0.1:4173/literary.html",
+  "locales": {
+    "productionSource": "Yandex SDK locale",
+    "qaOverride": "local ?lang=ru|en only"
+  },
+  "targets": [
+    "S09",
+    "S11",
+    "S12",
+    "S13",
+    "S15",
+    "S16"
+  ],
+  "viewports": [
+    {
+      "width": 1920,
+      "height": 900
+    },
+    {
+      "width": 390,
+      "height": 844
+    },
+    {
+      "width": 360,
+      "height": 640
+    }
+  ],
+  "captures": [
+    {
+      "sceneId": "S09",
+      "viewport": {
+        "width": 1920,
+        "height": 900
+      },
+      "boot": {
+        "locale": "en",
+        "mode": "local-fallback",
+        "failure": null
+      },
+      "surfaces": {
+        "home": {
+          "sceneId": "S09",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nThree weeks on the road. Three possible love stories. And the chance to choose yourself.\nContinue · Episode 3\nNew Game\nEpisodes\nSettings",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 1920,
+            "height": 900
+          }
+        },
+        "episodes": {
+          "sceneId": "S09",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nEpisodes\nEpisodes open as you progress. Returning to a scene resets later decisions so different story variations do not mix.\nEpisode 1 · not reached\nEpisode 2 · not reached\nEpisode 3 · unlocked\nEpisode 4 · not reached\n← Menu",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 1920,
+            "height": 900
+          }
+        },
+        "settings": {
+          "sceneId": "S09",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nSettings\nText size · 100%\nHigh contrast · off\nAnimation · system\n← Menu",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 1920,
+            "height": 900
+          }
+        }
+      },
+      "surfaceScreenshots": {
+        "home": {
+          "path": "output\\playwright\\english-runtime-localization\\S09-home-1920x900.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 1850144,
+          "sha256": "5a785566e05c06e4b90c7bf4bb4e7e4dd57ff3dbba5ed501ae21c4e3f962776e"
+        },
+        "episodes": {
+          "path": "output\\playwright\\english-runtime-localization\\S09-episodes-1920x900.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 1850675,
+          "sha256": "8e6edbc4d5ca4c7df5e3c6799ff4928d034c780879c9767b81310f9c414a8a44"
+        },
+        "settings": {
+          "path": "output\\playwright\\english-runtime-localization\\S09-settings-1920x900.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 1834429,
+          "sha256": "0f642e7918f47eb4d6ed42470f022c5eb1d9229e6d56fb6d0e73996a9b637e10"
+        }
+      },
+      "initial": {
+        "sceneId": "S09",
+        "locale": "en",
+        "narrativeText": "Nick carried three bags out of the guesthouse, along with the yellow hat he had stopped pretending was a joke. Eric checked the tire pressure; Damir went back for the thermos he had left behind.",
+        "renderedUiText": "☰ Menu\nEPISODE 3 / 10\nKISS AT THE EDGE OF THE WORLD\n\nNick carried three bags out of the guesthouse, along with the yellow hat he had stopped pretending was a joke. Eric checked the tire pressure; Damir went back for the thermos he had left behind.\n\n1 / 11",
+        "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World\nSkógafoss, Day 5, Morning. Not a Postcard. Episode 3\nSkógafoss, Day 5, Morning. Not a Postcard",
+        "hasEnglishProse": true,
+        "russianNarrativeLeak": false,
+        "russianUiLeak": false,
+        "choiceLabels": [],
+        "choiceLabelsEnglish": false,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 1920,
+          "height": 900
+        }
+      },
+      "choice": {
+        "sceneId": "S09",
+        "locale": "en",
+        "narrativeText": "At the waterfall, the noise drowns out the conversation. What should Alice do?\nMove away and talk with Eric\nStay by the water and show that she understands",
+        "renderedUiText": "☰ Menu\nEPISODE 3 / 10\nKISS AT THE EDGE OF THE WORLD\nYOUR CHOICE\n\nAt the waterfall, the noise drowns out the conversation. What should Alice do?\n\nMove away and talk with Eric\nStay by the water and show that she understands",
+        "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World\nSkógafoss, Day 5, Morning. Not a Postcard. Episode 3\nSkógafoss, Day 5, Morning. Not a Postcard",
+        "hasEnglishProse": false,
+        "russianNarrativeLeak": false,
+        "russianUiLeak": false,
+        "choiceLabels": [
+          "Move away and talk with Eric",
+          "Stay by the water and show that she understands"
+        ],
+        "choiceLabelsEnglish": true,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 1920,
+          "height": 900
+        }
+      },
+      "screenshots": [
+        {
+          "path": "output\\playwright\\english-runtime-localization\\S09-prose-1920x900.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 1770513,
+          "sha256": "4f8ac93b14913616b8e277eb6aaca9acf826f13e636acc213eb38dac8e01b4dc"
+        },
+        {
+          "path": "output\\playwright\\english-runtime-localization\\S09-choice-1920x900.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 2009484,
+          "sha256": "1419bf7ccdcf3a42c2613f3f879b39cc631a85b216101cf576466fd1292757c6"
+        }
+      ],
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "sceneId": "S09",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "boot": {
+        "locale": "en",
+        "mode": "local-fallback",
+        "failure": null
+      },
+      "surfaces": {
+        "home": {
+          "sceneId": "S09",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nThree weeks on the road. Three possible love stories. And the chance to choose yourself.\nContinue · Episode 3\nNew Game\nEpisodes\nSettings",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 390,
+            "height": 844
+          }
+        },
+        "episodes": {
+          "sceneId": "S09",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nEpisodes\nEpisodes open as you progress. Returning to a scene resets later decisions so different story variations do not mix.\nEpisode 1 · not reached\nEpisode 2 · not reached\nEpisode 3 · unlocked\nEpisode 4 · not reached\n← Menu",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 390,
+            "height": 844
+          }
+        },
+        "settings": {
+          "sceneId": "S09",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nSettings\nText size · 100%\nHigh contrast · off\nAnimation · system\n← Menu",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 390,
+            "height": 844
+          }
+        }
+      },
+      "surfaceScreenshots": {
+        "home": {
+          "path": "output\\playwright\\english-runtime-localization\\S09-home-390x844.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 327697,
+          "sha256": "09bc30050e0921efa36ef599252404524bc304ae06de601f068649e576dbdbe3"
+        },
+        "episodes": {
+          "path": "output\\playwright\\english-runtime-localization\\S09-episodes-390x844.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 352019,
+          "sha256": "f86d2abc46026a6d7dab05551c9ba957e6e3055576dd20ce6f0593f070175ce3"
+        },
+        "settings": {
+          "path": "output\\playwright\\english-runtime-localization\\S09-settings-390x844.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 335933,
+          "sha256": "3966a54ce12628f4fa67f48894c6ecb267be15361391512f3e1330ec8dc127c0"
+        }
+      },
+      "initial": {
+        "sceneId": "S09",
+        "locale": "en",
+        "narrativeText": "Nick carried three bags out of the guesthouse, along with the yellow hat he had stopped pretending was a joke. Eric checked the tire pressure; Damir went back for the thermos he had left behind.",
+        "renderedUiText": "☰ Menu\nEPISODE 3 / 10\nKISS AT THE EDGE OF THE WORLD\n\nNick carried three bags out of the guesthouse, along with the yellow hat he had stopped pretending was a joke. Eric checked the tire pressure; Damir went back for the thermos he had left behind.\n\n1 / 11",
+        "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World\nSkógafoss, Day 5, Morning. Not a Postcard. Episode 3\nSkógafoss, Day 5, Morning. Not a Postcard",
+        "hasEnglishProse": true,
+        "russianNarrativeLeak": false,
+        "russianUiLeak": false,
+        "choiceLabels": [],
+        "choiceLabelsEnglish": false,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      "choice": {
+        "sceneId": "S09",
+        "locale": "en",
+        "narrativeText": "At the waterfall, the noise drowns out the conversation. What should Alice do?\nMove away and talk with Eric\nStay by the water and show that she understands",
+        "renderedUiText": "☰ Menu\nEPISODE 3 / 10\nKISS AT THE EDGE OF THE WORLD\nYOUR CHOICE\n\nAt the waterfall, the noise drowns out the conversation. What should Alice do?\n\nMove away and talk with Eric\nStay by the water and show that she understands",
+        "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World\nSkógafoss, Day 5, Morning. Not a Postcard. Episode 3\nSkógafoss, Day 5, Morning. Not a Postcard",
+        "hasEnglishProse": false,
+        "russianNarrativeLeak": false,
+        "russianUiLeak": false,
+        "choiceLabels": [
+          "Move away and talk with Eric",
+          "Stay by the water and show that she understands"
+        ],
+        "choiceLabelsEnglish": true,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      "screenshots": [
+        {
+          "path": "output\\playwright\\english-runtime-localization\\S09-prose-390x844.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 358515,
+          "sha256": "d06809aac51d70449acdc68f2c11c406099a97e5ca97c8e823b60fc3333e73a4"
+        },
+        {
+          "path": "output\\playwright\\english-runtime-localization\\S09-choice-390x844.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 389970,
+          "sha256": "9599578fa4f44bade58c0ea2d9d7fa6b68eeb5621ebb722cb4ce95c9d91e9b35"
+        }
+      ],
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "sceneId": "S09",
+      "viewport": {
+        "width": 360,
+        "height": 640
+      },
+      "boot": {
+        "locale": "en",
+        "mode": "local-fallback",
+        "failure": null
+      },
+      "surfaces": {
+        "home": {
+          "sceneId": "S09",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nThree weeks on the road. Three possible love stories. And the chance to choose yourself.\nContinue · Episode 3\nNew Game\nEpisodes\nSettings",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 360,
+            "height": 640
+          }
+        },
+        "episodes": {
+          "sceneId": "S09",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nEpisodes\nEpisodes open as you progress. Returning to a scene resets later decisions so different story variations do not mix.\nEpisode 1 · not reached\nEpisode 2 · not reached\nEpisode 3 · unlocked\nEpisode 4 · not reached\n← Menu",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 360,
+            "height": 640
+          }
+        },
+        "settings": {
+          "sceneId": "S09",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nSettings\nText size · 100%\nHigh contrast · off\nAnimation · system\n← Menu",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 360,
+            "height": 640
+          }
+        }
+      },
+      "surfaceScreenshots": {
+        "home": {
+          "path": "output\\playwright\\english-runtime-localization\\S09-home-360x640.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 249502,
+          "sha256": "a0d9cda62034d30f5d4cae68f1b76ff3ce9d694bfac98922780b504c00d259a8"
+        },
+        "episodes": {
+          "path": "output\\playwright\\english-runtime-localization\\S09-episodes-360x640.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 271448,
+          "sha256": "6c45171484499ab25021dd841eb3e1975e659b2b90e5bb62b14aea6dfec12ab2"
+        },
+        "settings": {
+          "path": "output\\playwright\\english-runtime-localization\\S09-settings-360x640.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 255762,
+          "sha256": "efaaea2fae072ba3784ddfe08109f82adacc8cce69483c6c110e0f4d6e747a7f"
+        }
+      },
+      "initial": {
+        "sceneId": "S09",
+        "locale": "en",
+        "narrativeText": "Nick carried three bags out of the guesthouse, along with the yellow hat he had stopped pretending was a joke. Eric checked the tire pressure; Damir went back for the thermos he had left behind.",
+        "renderedUiText": "☰ Menu\nEPISODE 3 / 10\nKISS AT THE EDGE OF THE WORLD\n\nNick carried three bags out of the guesthouse, along with the yellow hat he had stopped pretending was a joke. Eric checked the tire pressure; Damir went back for the thermos he had left behind.\n\n1 / 11",
+        "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World\nSkógafoss, Day 5, Morning. Not a Postcard. Episode 3\nSkógafoss, Day 5, Morning. Not a Postcard",
+        "hasEnglishProse": true,
+        "russianNarrativeLeak": false,
+        "russianUiLeak": false,
+        "choiceLabels": [],
+        "choiceLabelsEnglish": false,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 360,
+          "height": 640
+        }
+      },
+      "choice": {
+        "sceneId": "S09",
+        "locale": "en",
+        "narrativeText": "At the waterfall, the noise drowns out the conversation. What should Alice do?\nMove away and talk with Eric\nStay by the water and show that she understands",
+        "renderedUiText": "☰ Menu\nEPISODE 3 / 10\nKISS AT THE EDGE OF THE WORLD\nYOUR CHOICE\n\nAt the waterfall, the noise drowns out the conversation. What should Alice do?\n\nMove away and talk with Eric\nStay by the water and show that she understands",
+        "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World\nSkógafoss, Day 5, Morning. Not a Postcard. Episode 3\nSkógafoss, Day 5, Morning. Not a Postcard",
+        "hasEnglishProse": false,
+        "russianNarrativeLeak": false,
+        "russianUiLeak": false,
+        "choiceLabels": [
+          "Move away and talk with Eric",
+          "Stay by the water and show that she understands"
+        ],
+        "choiceLabelsEnglish": true,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 360,
+          "height": 640
+        }
+      },
+      "screenshots": [
+        {
+          "path": "output\\playwright\\english-runtime-localization\\S09-prose-360x640.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 50774,
+          "sha256": "0025ddb88ef64511d37cb012f60e1dfbd948a99017497722e8a27553481d3138"
+        },
+        {
+          "path": "output\\playwright\\english-runtime-localization\\S09-choice-360x640.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 285909,
+          "sha256": "0ba1f8c99a3ef80694286f97ec70b41bf069d1b3424270aa1494792acf56629d"
+        }
+      ],
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "sceneId": "S11",
+      "viewport": {
+        "width": 1920,
+        "height": 900
+      },
+      "boot": {
+        "locale": "en",
+        "mode": "local-fallback",
+        "failure": null
+      },
+      "surfaces": {
+        "home": {
+          "sceneId": "S11",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nThree weeks on the road. Three possible love stories. And the chance to choose yourself.\nContinue · Episode 3\nNew Game\nEpisodes\nSettings",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 1920,
+            "height": 900
+          }
+        },
+        "episodes": {
+          "sceneId": "S11",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nEpisodes\nEpisodes open as you progress. Returning to a scene resets later decisions so different story variations do not mix.\nEpisode 1 · not reached\nEpisode 2 · not reached\nEpisode 3 · unlocked\nEpisode 4 · not reached\n← Menu",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 1920,
+            "height": 900
+          }
+        },
+        "settings": {
+          "sceneId": "S11",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nSettings\nText size · 100%\nHigh contrast · off\nAnimation · system\n← Menu",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 1920,
+            "height": 900
+          }
+        }
+      },
+      "surfaceScreenshots": {
+        "home": {
+          "path": "output\\playwright\\english-runtime-localization\\S11-home-1920x900.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 1850144,
+          "sha256": "5a785566e05c06e4b90c7bf4bb4e7e4dd57ff3dbba5ed501ae21c4e3f962776e"
+        },
+        "episodes": {
+          "path": "output\\playwright\\english-runtime-localization\\S11-episodes-1920x900.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 1850675,
+          "sha256": "8e6edbc4d5ca4c7df5e3c6799ff4928d034c780879c9767b81310f9c414a8a44"
+        },
+        "settings": {
+          "path": "output\\playwright\\english-runtime-localization\\S11-settings-1920x900.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 1834429,
+          "sha256": "0f642e7918f47eb4d6ed42470f022c5eb1d9229e6d56fb6d0e73996a9b637e10"
+        }
+      },
+      "initial": {
+        "sceneId": "S11",
+        "locale": "en",
+        "narrativeText": "At the entrance to Reynisfjara, Eric stopped the group by the information board. He didn’t give a lecture: he showed them the marked safe part of the beach and said no one went near the water for a photograph, even when the sea looked calm. Alice looked around.",
+        "renderedUiText": "☰ Menu\nEPISODE 3 / 10\nKISS AT THE EDGE OF THE WORLD\n\nAt the entrance to Reynisfjara, Eric stopped the group by the information board. He didn’t give a lecture: he showed them the marked safe part of the beach and said no one went near the water for a photograph, even when the sea looked calm. Alice looked around.\n\n1 / 16",
+        "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World\nReynisfjara, Day 6, Late Morning. The Shot That Will Not Happen. Episode 3\nReynisfjara, Day 6, Late Morning. The Shot That Will Not Happen",
+        "hasEnglishProse": true,
+        "russianNarrativeLeak": false,
+        "russianUiLeak": false,
+        "choiceLabels": [],
+        "choiceLabelsEnglish": false,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 1920,
+          "height": 900
+        }
+      },
+      "choice": {
+        "sceneId": "S11",
+        "locale": "en",
+        "narrativeText": "Nick moves toward dangerous water for a reflection. How should Alice respond?\nAsk him to move away immediately\nCall Eric, who knows the safe boundary",
+        "renderedUiText": "☰ Menu\nEPISODE 3 / 10\nKISS AT THE EDGE OF THE WORLD\nYOUR CHOICE\n\nNick moves toward dangerous water for a reflection. How should Alice respond?\n\nAsk him to move away immediately\nCall Eric, who knows the safe boundary",
+        "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World\nReynisfjara, Day 6, Late Morning. The Shot That Will Not Happen. Episode 3\nReynisfjara, Day 6, Late Morning. The Shot That Will Not Happen",
+        "hasEnglishProse": false,
+        "russianNarrativeLeak": false,
+        "russianUiLeak": false,
+        "choiceLabels": [
+          "Ask him to move away immediately",
+          "Call Eric, who knows the safe boundary"
+        ],
+        "choiceLabelsEnglish": true,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 1920,
+          "height": 900
+        }
+      },
+      "screenshots": [
+        {
+          "path": "output\\playwright\\english-runtime-localization\\S11-prose-1920x900.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 1848933,
+          "sha256": "a2291ac51bc04d72cb848a5418f0fd224874c479905541dc10a8603e92bf74c6"
+        },
+        {
+          "path": "output\\playwright\\english-runtime-localization\\S11-choice-1920x900.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 1846749,
+          "sha256": "2b07ffeaf141aa0e23d294280a7617ac19beacdda5059ecfa283da9b18ed46a8"
+        }
+      ],
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "sceneId": "S11",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "boot": {
+        "locale": "en",
+        "mode": "local-fallback",
+        "failure": null
+      },
+      "surfaces": {
+        "home": {
+          "sceneId": "S11",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nThree weeks on the road. Three possible love stories. And the chance to choose yourself.\nContinue · Episode 3\nNew Game\nEpisodes\nSettings",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 390,
+            "height": 844
+          }
+        },
+        "episodes": {
+          "sceneId": "S11",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nEpisodes\nEpisodes open as you progress. Returning to a scene resets later decisions so different story variations do not mix.\nEpisode 1 · not reached\nEpisode 2 · not reached\nEpisode 3 · unlocked\nEpisode 4 · not reached\n← Menu",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 390,
+            "height": 844
+          }
+        },
+        "settings": {
+          "sceneId": "S11",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nSettings\nText size · 100%\nHigh contrast · off\nAnimation · system\n← Menu",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 390,
+            "height": 844
+          }
+        }
+      },
+      "surfaceScreenshots": {
+        "home": {
+          "path": "output\\playwright\\english-runtime-localization\\S11-home-390x844.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 327697,
+          "sha256": "09bc30050e0921efa36ef599252404524bc304ae06de601f068649e576dbdbe3"
+        },
+        "episodes": {
+          "path": "output\\playwright\\english-runtime-localization\\S11-episodes-390x844.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 352019,
+          "sha256": "f86d2abc46026a6d7dab05551c9ba957e6e3055576dd20ce6f0593f070175ce3"
+        },
+        "settings": {
+          "path": "output\\playwright\\english-runtime-localization\\S11-settings-390x844.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 335933,
+          "sha256": "3966a54ce12628f4fa67f48894c6ecb267be15361391512f3e1330ec8dc127c0"
+        }
+      },
+      "initial": {
+        "sceneId": "S11",
+        "locale": "en",
+        "narrativeText": "At the entrance to Reynisfjara, Eric stopped the group by the information board. He didn’t give a lecture: he showed them the marked safe part of the beach and said no one went near the water for a photograph, even when the sea looked calm. Alice looked around.",
+        "renderedUiText": "☰ Menu\nEPISODE 3 / 10\nKISS AT THE EDGE OF THE WORLD\n\nAt the entrance to Reynisfjara, Eric stopped the group by the information board. He didn’t give a lecture: he showed them the marked safe part of the beach and said no one went near the water for a photograph, even when the sea looked calm. Alice looked around.\n\n1 / 16",
+        "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World\nReynisfjara, Day 6, Late Morning. The Shot That Will Not Happen. Episode 3\nReynisfjara, Day 6, Late Morning. The Shot That Will Not Happen",
+        "hasEnglishProse": true,
+        "russianNarrativeLeak": false,
+        "russianUiLeak": false,
+        "choiceLabels": [],
+        "choiceLabelsEnglish": false,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      "choice": {
+        "sceneId": "S11",
+        "locale": "en",
+        "narrativeText": "Nick moves toward dangerous water for a reflection. How should Alice respond?\nAsk him to move away immediately\nCall Eric, who knows the safe boundary",
+        "renderedUiText": "☰ Menu\nEPISODE 3 / 10\nKISS AT THE EDGE OF THE WORLD\nYOUR CHOICE\n\nNick moves toward dangerous water for a reflection. How should Alice respond?\n\nAsk him to move away immediately\nCall Eric, who knows the safe boundary",
+        "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World\nReynisfjara, Day 6, Late Morning. The Shot That Will Not Happen. Episode 3\nReynisfjara, Day 6, Late Morning. The Shot That Will Not Happen",
+        "hasEnglishProse": false,
+        "russianNarrativeLeak": false,
+        "russianUiLeak": false,
+        "choiceLabels": [
+          "Ask him to move away immediately",
+          "Call Eric, who knows the safe boundary"
+        ],
+        "choiceLabelsEnglish": true,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      "screenshots": [
+        {
+          "path": "output\\playwright\\english-runtime-localization\\S11-prose-390x844.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 63563,
+          "sha256": "65f6d5a22baf43d41f7c1ca1e2ff4f93e8247581173f084ad39198106eaccd1f"
+        },
+        {
+          "path": "output\\playwright\\english-runtime-localization\\S11-choice-390x844.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 345810,
+          "sha256": "e0c34c2e94102e46c0847b076a1135454e064f931ac055ac2fc611294ecca47c"
+        }
+      ],
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "sceneId": "S11",
+      "viewport": {
+        "width": 360,
+        "height": 640
+      },
+      "boot": {
+        "locale": "en",
+        "mode": "local-fallback",
+        "failure": null
+      },
+      "surfaces": {
+        "home": {
+          "sceneId": "S11",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nThree weeks on the road. Three possible love stories. And the chance to choose yourself.\nContinue · Episode 3\nNew Game\nEpisodes\nSettings",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 360,
+            "height": 640
+          }
+        },
+        "episodes": {
+          "sceneId": "S11",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nEpisodes\nEpisodes open as you progress. Returning to a scene resets later decisions so different story variations do not mix.\nEpisode 1 · not reached\nEpisode 2 · not reached\nEpisode 3 · unlocked\nEpisode 4 · not reached\n← Menu",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 360,
+            "height": 640
+          }
+        },
+        "settings": {
+          "sceneId": "S11",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nSettings\nText size · 100%\nHigh contrast · off\nAnimation · system\n← Menu",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 360,
+            "height": 640
+          }
+        }
+      },
+      "surfaceScreenshots": {
+        "home": {
+          "path": "output\\playwright\\english-runtime-localization\\S11-home-360x640.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 249502,
+          "sha256": "a0d9cda62034d30f5d4cae68f1b76ff3ce9d694bfac98922780b504c00d259a8"
+        },
+        "episodes": {
+          "path": "output\\playwright\\english-runtime-localization\\S11-episodes-360x640.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 271448,
+          "sha256": "6c45171484499ab25021dd841eb3e1975e659b2b90e5bb62b14aea6dfec12ab2"
+        },
+        "settings": {
+          "path": "output\\playwright\\english-runtime-localization\\S11-settings-360x640.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 255762,
+          "sha256": "efaaea2fae072ba3784ddfe08109f82adacc8cce69483c6c110e0f4d6e747a7f"
+        }
+      },
+      "initial": {
+        "sceneId": "S11",
+        "locale": "en",
+        "narrativeText": "At the entrance to Reynisfjara, Eric stopped the group by the information board. He didn’t give a lecture: he showed them the marked safe part of the beach and said no one went near the water for a photograph, even when the sea looked calm. Alice looked around.",
+        "renderedUiText": "☰ Menu\nEPISODE 3 / 10\nKISS AT THE EDGE OF THE WORLD\n\nAt the entrance to Reynisfjara, Eric stopped the group by the information board. He didn’t give a lecture: he showed them the marked safe part of the beach and said no one went near the water for a photograph, even when the sea looked calm. Alice looked around.\n\n1 / 16",
+        "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World\nReynisfjara, Day 6, Late Morning. The Shot That Will Not Happen. Episode 3\nReynisfjara, Day 6, Late Morning. The Shot That Will Not Happen",
+        "hasEnglishProse": true,
+        "russianNarrativeLeak": false,
+        "russianUiLeak": false,
+        "choiceLabels": [],
+        "choiceLabelsEnglish": false,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 360,
+          "height": 640
+        }
+      },
+      "choice": {
+        "sceneId": "S11",
+        "locale": "en",
+        "narrativeText": "Nick moves toward dangerous water for a reflection. How should Alice respond?\nAsk him to move away immediately\nCall Eric, who knows the safe boundary",
+        "renderedUiText": "☰ Menu\nEPISODE 3 / 10\nKISS AT THE EDGE OF THE WORLD\nYOUR CHOICE\n\nNick moves toward dangerous water for a reflection. How should Alice respond?\n\nAsk him to move away immediately\nCall Eric, who knows the safe boundary",
+        "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World\nReynisfjara, Day 6, Late Morning. The Shot That Will Not Happen. Episode 3\nReynisfjara, Day 6, Late Morning. The Shot That Will Not Happen",
+        "hasEnglishProse": false,
+        "russianNarrativeLeak": false,
+        "russianUiLeak": false,
+        "choiceLabels": [
+          "Ask him to move away immediately",
+          "Call Eric, who knows the safe boundary"
+        ],
+        "choiceLabelsEnglish": true,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 360,
+          "height": 640
+        }
+      },
+      "screenshots": [
+        {
+          "path": "output\\playwright\\english-runtime-localization\\S11-prose-360x640.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 260775,
+          "sha256": "b70fecbb7ab5e04a2918a76f13a2b4a22ad81ae67f0bd34f22bc90861c8cdc50"
+        },
+        {
+          "path": "output\\playwright\\english-runtime-localization\\S11-choice-360x640.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 252679,
+          "sha256": "a5b9265e6a0832f3130f2d68ec24dccaef12981ea525426a77362dec7612440f"
+        }
+      ],
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "sceneId": "S12",
+      "viewport": {
+        "width": 1920,
+        "height": 900
+      },
+      "boot": {
+        "locale": "en",
+        "mode": "local-fallback",
+        "failure": null
+      },
+      "surfaces": {
+        "home": {
+          "sceneId": "S12",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nThree weeks on the road. Three possible love stories. And the chance to choose yourself.\nContinue · Episode 3\nNew Game\nEpisodes\nSettings",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 1920,
+            "height": 900
+          }
+        },
+        "episodes": {
+          "sceneId": "S12",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nEpisodes\nEpisodes open as you progress. Returning to a scene resets later decisions so different story variations do not mix.\nEpisode 1 · not reached\nEpisode 2 · not reached\nEpisode 3 · unlocked\nEpisode 4 · not reached\n← Menu",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 1920,
+            "height": 900
+          }
+        },
+        "settings": {
+          "sceneId": "S12",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nSettings\nText size · 100%\nHigh contrast · off\nAnimation · system\n← Menu",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 1920,
+            "height": 900
+          }
+        }
+      },
+      "surfaceScreenshots": {
+        "home": {
+          "path": "output\\playwright\\english-runtime-localization\\S12-home-1920x900.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 1850144,
+          "sha256": "5a785566e05c06e4b90c7bf4bb4e7e4dd57ff3dbba5ed501ae21c4e3f962776e"
+        },
+        "episodes": {
+          "path": "output\\playwright\\english-runtime-localization\\S12-episodes-1920x900.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 1850675,
+          "sha256": "8e6edbc4d5ca4c7df5e3c6799ff4928d034c780879c9767b81310f9c414a8a44"
+        },
+        "settings": {
+          "path": "output\\playwright\\english-runtime-localization\\S12-settings-1920x900.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 1834429,
+          "sha256": "0f642e7918f47eb4d6ed42470f022c5eb1d9229e6d56fb6d0e73996a9b637e10"
+        }
+      },
+      "initial": {
+        "sceneId": "S12",
+        "locale": "en",
+        "narrativeText": "At the Vík café, Alice ordered hot soup and didn’t take out her notebook until she had finished it. Damir stood by the window with two paper cups. He didn’t come over until she raised a hand.\n“Sit down, if you’re not in a hurry.”",
+        "renderedUiText": "☰ Menu\nEPISODE 3 / 10\nKISS AT THE EDGE OF THE WORLD\n\nAt the Vík café, Alice ordered hot soup and didn’t take out her notebook until she had finished it. Damir stood by the window with two paper cups. He didn’t come over until she raised a hand.\n\n“Sit down, if you’re not in a hurry.”\n\n1 / 11",
+        "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World\nVík, Day 6, Afternoon. Two Different Towns. Episode 3\nVík, Day 6, Afternoon. Two Different Towns",
+        "hasEnglishProse": true,
+        "russianNarrativeLeak": false,
+        "russianUiLeak": false,
+        "choiceLabels": [],
+        "choiceLabelsEnglish": false,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 1920,
+          "height": 900
+        }
+      },
+      "choice": {
+        "sceneId": "S12",
+        "locale": "en",
+        "narrativeText": "Ask about the people who are around him now\nAsk to leave the conversation for today",
+        "renderedUiText": "☰ Menu\nEPISODE 3 / 10\nKISS AT THE EDGE OF THE WORLD\nYOUR CHOICE\nAsk about the people who are around him now\nAsk to leave the conversation for today",
+        "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World\nVík, Day 6, Afternoon. Two Different Towns. Episode 3\nVík, Day 6, Afternoon. Two Different Towns",
+        "hasEnglishProse": false,
+        "russianNarrativeLeak": false,
+        "russianUiLeak": false,
+        "choiceLabels": [
+          "Ask about the people who are around him now",
+          "Ask to leave the conversation for today"
+        ],
+        "choiceLabelsEnglish": true,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 1920,
+          "height": 900
+        }
+      },
+      "screenshots": [
+        {
+          "path": "output\\playwright\\english-runtime-localization\\S12-prose-1920x900.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 82852,
+          "sha256": "d703689468e88657bc2919f0b5c9034eab10cbbadf09526208fd0291dfafdb30"
+        },
+        {
+          "path": "output\\playwright\\english-runtime-localization\\S12-choice-1920x900.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 1993513,
+          "sha256": "1886c814aae6130ac940b6f504f2f3637dd64cb45082a7bb9d099fab2b5a9ec5"
+        }
+      ],
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "sceneId": "S12",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "boot": {
+        "locale": "en",
+        "mode": "local-fallback",
+        "failure": null
+      },
+      "surfaces": {
+        "home": {
+          "sceneId": "S12",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nThree weeks on the road. Three possible love stories. And the chance to choose yourself.\nContinue · Episode 3\nNew Game\nEpisodes\nSettings",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 390,
+            "height": 844
+          }
+        },
+        "episodes": {
+          "sceneId": "S12",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nEpisodes\nEpisodes open as you progress. Returning to a scene resets later decisions so different story variations do not mix.\nEpisode 1 · not reached\nEpisode 2 · not reached\nEpisode 3 · unlocked\nEpisode 4 · not reached\n← Menu",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 390,
+            "height": 844
+          }
+        },
+        "settings": {
+          "sceneId": "S12",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nSettings\nText size · 100%\nHigh contrast · off\nAnimation · system\n← Menu",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 390,
+            "height": 844
+          }
+        }
+      },
+      "surfaceScreenshots": {
+        "home": {
+          "path": "output\\playwright\\english-runtime-localization\\S12-home-390x844.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 327697,
+          "sha256": "09bc30050e0921efa36ef599252404524bc304ae06de601f068649e576dbdbe3"
+        },
+        "episodes": {
+          "path": "output\\playwright\\english-runtime-localization\\S12-episodes-390x844.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 352019,
+          "sha256": "f86d2abc46026a6d7dab05551c9ba957e6e3055576dd20ce6f0593f070175ce3"
+        },
+        "settings": {
+          "path": "output\\playwright\\english-runtime-localization\\S12-settings-390x844.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 335933,
+          "sha256": "3966a54ce12628f4fa67f48894c6ecb267be15361391512f3e1330ec8dc127c0"
+        }
+      },
+      "initial": {
+        "sceneId": "S12",
+        "locale": "en",
+        "narrativeText": "At the Vík café, Alice ordered hot soup and didn’t take out her notebook until she had finished it. Damir stood by the window with two paper cups. He didn’t come over until she raised a hand.\n“Sit down, if you’re not in a hurry.”",
+        "renderedUiText": "☰ Menu\nEPISODE 3 / 10\nKISS AT THE EDGE OF THE WORLD\n\nAt the Vík café, Alice ordered hot soup and didn’t take out her notebook until she had finished it. Damir stood by the window with two paper cups. He didn’t come over until she raised a hand.\n\n“Sit down, if you’re not in a hurry.”\n\n1 / 11",
+        "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World\nVík, Day 6, Afternoon. Two Different Towns. Episode 3\nVík, Day 6, Afternoon. Two Different Towns",
+        "hasEnglishProse": true,
+        "russianNarrativeLeak": false,
+        "russianUiLeak": false,
+        "choiceLabels": [],
+        "choiceLabelsEnglish": false,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      "choice": {
+        "sceneId": "S12",
+        "locale": "en",
+        "narrativeText": "Ask about the people who are around him now\nAsk to leave the conversation for today",
+        "renderedUiText": "☰ Menu\nEPISODE 3 / 10\nKISS AT THE EDGE OF THE WORLD\nYOUR CHOICE\nAsk about the people who are around him now\nAsk to leave the conversation for today",
+        "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World\nVík, Day 6, Afternoon. Two Different Towns. Episode 3\nVík, Day 6, Afternoon. Two Different Towns",
+        "hasEnglishProse": false,
+        "russianNarrativeLeak": false,
+        "russianUiLeak": false,
+        "choiceLabels": [
+          "Ask about the people who are around him now",
+          "Ask to leave the conversation for today"
+        ],
+        "choiceLabelsEnglish": true,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      "screenshots": [
+        {
+          "path": "output\\playwright\\english-runtime-localization\\S12-prose-390x844.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 51127,
+          "sha256": "c1e560e83e91169dd1d966d6e72ed889b9eeed2bd77ea4f95fe48831c93423f9"
+        },
+        {
+          "path": "output\\playwright\\english-runtime-localization\\S12-choice-390x844.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 427814,
+          "sha256": "e97bc4725f61896bb055ae14abc1896bcb2f1e6534fd0d8f07ca04bf3699292a"
+        }
+      ],
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "sceneId": "S12",
+      "viewport": {
+        "width": 360,
+        "height": 640
+      },
+      "boot": {
+        "locale": "en",
+        "mode": "local-fallback",
+        "failure": null
+      },
+      "surfaces": {
+        "home": {
+          "sceneId": "S12",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nThree weeks on the road. Three possible love stories. And the chance to choose yourself.\nContinue · Episode 3\nNew Game\nEpisodes\nSettings",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 360,
+            "height": 640
+          }
+        },
+        "episodes": {
+          "sceneId": "S12",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nEpisodes\nEpisodes open as you progress. Returning to a scene resets later decisions so different story variations do not mix.\nEpisode 1 · not reached\nEpisode 2 · not reached\nEpisode 3 · unlocked\nEpisode 4 · not reached\n← Menu",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 360,
+            "height": 640
+          }
+        },
+        "settings": {
+          "sceneId": "S12",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nSettings\nText size · 100%\nHigh contrast · off\nAnimation · system\n← Menu",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 360,
+            "height": 640
+          }
+        }
+      },
+      "surfaceScreenshots": {
+        "home": {
+          "path": "output\\playwright\\english-runtime-localization\\S12-home-360x640.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 249502,
+          "sha256": "a0d9cda62034d30f5d4cae68f1b76ff3ce9d694bfac98922780b504c00d259a8"
+        },
+        "episodes": {
+          "path": "output\\playwright\\english-runtime-localization\\S12-episodes-360x640.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 271448,
+          "sha256": "6c45171484499ab25021dd841eb3e1975e659b2b90e5bb62b14aea6dfec12ab2"
+        },
+        "settings": {
+          "path": "output\\playwright\\english-runtime-localization\\S12-settings-360x640.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 255762,
+          "sha256": "efaaea2fae072ba3784ddfe08109f82adacc8cce69483c6c110e0f4d6e747a7f"
+        }
+      },
+      "initial": {
+        "sceneId": "S12",
+        "locale": "en",
+        "narrativeText": "At the Vík café, Alice ordered hot soup and didn’t take out her notebook until she had finished it. Damir stood by the window with two paper cups. He didn’t come over until she raised a hand.\n“Sit down, if you’re not in a hurry.”",
+        "renderedUiText": "☰ Menu\nEPISODE 3 / 10\nKISS AT THE EDGE OF THE WORLD\n\nAt the Vík café, Alice ordered hot soup and didn’t take out her notebook until she had finished it. Damir stood by the window with two paper cups. He didn’t come over until she raised a hand.\n\n“Sit down, if you’re not in a hurry.”\n\n1 / 11",
+        "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World\nVík, Day 6, Afternoon. Two Different Towns. Episode 3\nVík, Day 6, Afternoon. Two Different Towns",
+        "hasEnglishProse": true,
+        "russianNarrativeLeak": false,
+        "russianUiLeak": false,
+        "choiceLabels": [],
+        "choiceLabelsEnglish": false,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 360,
+          "height": 640
+        }
+      },
+      "choice": {
+        "sceneId": "S12",
+        "locale": "en",
+        "narrativeText": "Ask about the people who are around him now\nAsk to leave the conversation for today",
+        "renderedUiText": "☰ Menu\nEPISODE 3 / 10\nKISS AT THE EDGE OF THE WORLD\nYOUR CHOICE\nAsk about the people who are around him now\nAsk to leave the conversation for today",
+        "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World\nVík, Day 6, Afternoon. Two Different Towns. Episode 3\nVík, Day 6, Afternoon. Two Different Towns",
+        "hasEnglishProse": false,
+        "russianNarrativeLeak": false,
+        "russianUiLeak": false,
+        "choiceLabels": [
+          "Ask about the people who are around him now",
+          "Ask to leave the conversation for today"
+        ],
+        "choiceLabelsEnglish": true,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 360,
+          "height": 640
+        }
+      },
+      "screenshots": [
+        {
+          "path": "output\\playwright\\english-runtime-localization\\S12-prose-360x640.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 48232,
+          "sha256": "02899875a8b2dbe76db672469ae72d44ed023d55c198dbbff8d5657f8ba0c5c8"
+        },
+        {
+          "path": "output\\playwright\\english-runtime-localization\\S12-choice-360x640.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 302977,
+          "sha256": "fb0bb040644ef93ce01803d5ab56ae8c05f9a47a4b9cf5d4d24d3ec953e0c27c"
+        }
+      ],
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "sceneId": "S13",
+      "viewport": {
+        "width": 1920,
+        "height": 900
+      },
+      "boot": {
+        "locale": "en",
+        "mode": "local-fallback",
+        "failure": null
+      },
+      "surfaces": {
+        "home": {
+          "sceneId": "S13",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nThree weeks on the road. Three possible love stories. And the chance to choose yourself.\nContinue · Episode 4\nNew Game\nEpisodes\nSettings",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 1920,
+            "height": 900
+          }
+        },
+        "episodes": {
+          "sceneId": "S13",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nEpisodes\nEpisodes open as you progress. Returning to a scene resets later decisions so different story variations do not mix.\nEpisode 1 · not reached\nEpisode 2 · not reached\nEpisode 3 · not reached\nEpisode 4 · unlocked\n← Menu",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 1920,
+            "height": 900
+          }
+        },
+        "settings": {
+          "sceneId": "S13",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nSettings\nText size · 100%\nHigh contrast · off\nAnimation · system\n← Menu",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 1920,
+            "height": 900
+          }
+        }
+      },
+      "surfaceScreenshots": {
+        "home": {
+          "path": "output\\playwright\\english-runtime-localization\\S13-home-1920x900.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 1850118,
+          "sha256": "9680570633b8089999a92a9509f9d30fcd7adbc23fa6b4d2df4cf763e5e74543"
+        },
+        "episodes": {
+          "path": "output\\playwright\\english-runtime-localization\\S13-episodes-1920x900.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 1852721,
+          "sha256": "7b3de6fd55fed288d3b19b3e1a7ab9c67c22fe104aa0d2a528e92a69bbd623ed"
+        },
+        "settings": {
+          "path": "output\\playwright\\english-runtime-localization\\S13-settings-1920x900.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 1834429,
+          "sha256": "0f642e7918f47eb4d6ed42470f022c5eb1d9229e6d56fb6d0e73996a9b637e10"
+        }
+      },
+      "initial": {
+        "sceneId": "S13",
+        "locale": "en",
+        "narrativeText": "In Vík that morning, Damir knocked on Alice’s door only to tell her that the kettle in the shared kitchen finally worked. The day before, they had talked about his current life for exactly as long as Alice wanted to hear. Over breakfast, he discussed road sandwiches with Nick.",
+        "renderedUiText": "☰ Menu\nEPISODE 4 / 10\nKISS AT THE EDGE OF THE WORLD\n\nIn Vík that morning, Damir knocked on Alice’s door only to tell her that the kettle in the shared kitchen finally worked. The day before, they had talked about his current life for exactly as long as Alice wanted to hear. Over breakfast, he discussed road sandwiches with Nick.\n\n1 / 15",
+        "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World\nDay 7. Skaftafell. Four People and One Notebook. Episode 4\nDay 7. Skaftafell. Four People and One Notebook",
+        "hasEnglishProse": true,
+        "russianNarrativeLeak": false,
+        "russianUiLeak": false,
+        "choiceLabels": [],
+        "choiceLabelsEnglish": false,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 1920,
+          "height": 900
+        }
+      },
+      "choice": {
+        "sceneId": "S13",
+        "locale": "en",
+        "narrativeText": "Nick asks what to do if a good piece of material needs someone’s face. What should Alice say?\nAsk the person instead of relying on silence\nKeep sound or hands if the person does not want to be filmed",
+        "renderedUiText": "☰ Menu\nEPISODE 4 / 10\nKISS AT THE EDGE OF THE WORLD\nYOUR CHOICE\n\nNick asks what to do if a good piece of material needs someone’s face. What should Alice say?\n\nAsk the person instead of relying on silence\nKeep sound or hands if the person does not want to be filmed",
+        "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World\nDay 7. Skaftafell. Four People and One Notebook. Episode 4\nDay 7. Skaftafell. Four People and One Notebook",
+        "hasEnglishProse": false,
+        "russianNarrativeLeak": false,
+        "russianUiLeak": false,
+        "choiceLabels": [
+          "Ask the person instead of relying on silence",
+          "Keep sound or hands if the person does not want to be filmed"
+        ],
+        "choiceLabelsEnglish": true,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 1920,
+          "height": 900
+        }
+      },
+      "screenshots": [
+        {
+          "path": "output\\playwright\\english-runtime-localization\\S13-prose-1920x900.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 1744328,
+          "sha256": "2ee7010384cec6ef404644bf7d812e3a44f5bf91320cda39365c0f33834aec9d"
+        },
+        {
+          "path": "output\\playwright\\english-runtime-localization\\S13-choice-1920x900.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 1993286,
+          "sha256": "4f358cc4c2af26033dcfe27c5c93ca2a8230c9221cda9cd248bf5b33b244a0b0"
+        }
+      ],
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "sceneId": "S13",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "boot": {
+        "locale": "en",
+        "mode": "local-fallback",
+        "failure": null
+      },
+      "surfaces": {
+        "home": {
+          "sceneId": "S13",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nThree weeks on the road. Three possible love stories. And the chance to choose yourself.\nContinue · Episode 4\nNew Game\nEpisodes\nSettings",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 390,
+            "height": 844
+          }
+        },
+        "episodes": {
+          "sceneId": "S13",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nEpisodes\nEpisodes open as you progress. Returning to a scene resets later decisions so different story variations do not mix.\nEpisode 1 · not reached\nEpisode 2 · not reached\nEpisode 3 · not reached\nEpisode 4 · unlocked\n← Menu",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 390,
+            "height": 844
+          }
+        },
+        "settings": {
+          "sceneId": "S13",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nSettings\nText size · 100%\nHigh contrast · off\nAnimation · system\n← Menu",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 390,
+            "height": 844
+          }
+        }
+      },
+      "surfaceScreenshots": {
+        "home": {
+          "path": "output\\playwright\\english-runtime-localization\\S13-home-390x844.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 327784,
+          "sha256": "18e7af9c22e6dfe1fcb98e1dd8c1548e7fcea2828b62cd87ba1fb81a00c0500c"
+        },
+        "episodes": {
+          "path": "output\\playwright\\english-runtime-localization\\S13-episodes-390x844.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 352001,
+          "sha256": "97b8c33a326a7fb52192b64dcbc24d1a509af79a880fcd6350f67ea139ffa0f0"
+        },
+        "settings": {
+          "path": "output\\playwright\\english-runtime-localization\\S13-settings-390x844.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 335933,
+          "sha256": "3966a54ce12628f4fa67f48894c6ecb267be15361391512f3e1330ec8dc127c0"
+        }
+      },
+      "initial": {
+        "sceneId": "S13",
+        "locale": "en",
+        "narrativeText": "In Vík that morning, Damir knocked on Alice’s door only to tell her that the kettle in the shared kitchen finally worked. The day before, they had talked about his current life for exactly as long as Alice wanted to hear. Over breakfast, he discussed road sandwiches with Nick.",
+        "renderedUiText": "☰ Menu\nEPISODE 4 / 10\nKISS AT THE EDGE OF THE WORLD\n\nIn Vík that morning, Damir knocked on Alice’s door only to tell her that the kettle in the shared kitchen finally worked. The day before, they had talked about his current life for exactly as long as Alice wanted to hear. Over breakfast, he discussed road sandwiches with Nick.\n\n1 / 15",
+        "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World\nDay 7. Skaftafell. Four People and One Notebook. Episode 4\nDay 7. Skaftafell. Four People and One Notebook",
+        "hasEnglishProse": true,
+        "russianNarrativeLeak": false,
+        "russianUiLeak": false,
+        "choiceLabels": [],
+        "choiceLabelsEnglish": false,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      "choice": {
+        "sceneId": "S13",
+        "locale": "en",
+        "narrativeText": "Nick asks what to do if a good piece of material needs someone’s face. What should Alice say?\nAsk the person instead of relying on silence\nKeep sound or hands if the person does not want to be filmed",
+        "renderedUiText": "☰ Menu\nEPISODE 4 / 10\nKISS AT THE EDGE OF THE WORLD\nYOUR CHOICE\n\nNick asks what to do if a good piece of material needs someone’s face. What should Alice say?\n\nAsk the person instead of relying on silence\nKeep sound or hands if the person does not want to be filmed",
+        "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World\nDay 7. Skaftafell. Four People and One Notebook. Episode 4\nDay 7. Skaftafell. Four People and One Notebook",
+        "hasEnglishProse": false,
+        "russianNarrativeLeak": false,
+        "russianUiLeak": false,
+        "choiceLabels": [
+          "Ask the person instead of relying on silence",
+          "Keep sound or hands if the person does not want to be filmed"
+        ],
+        "choiceLabelsEnglish": true,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      "screenshots": [
+        {
+          "path": "output\\playwright\\english-runtime-localization\\S13-prose-390x844.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 350495,
+          "sha256": "0575d3b28003f418dab7d9d770693a161667bcbd9ec9a6a13b29bdb9b04d668c"
+        },
+        {
+          "path": "output\\playwright\\english-runtime-localization\\S13-choice-390x844.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 499106,
+          "sha256": "4ff86a2b08599348cee72eceea4aeb1a89f30c812df28f3124c2d98e50ceb2e5"
+        }
+      ],
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "sceneId": "S13",
+      "viewport": {
+        "width": 360,
+        "height": 640
+      },
+      "boot": {
+        "locale": "en",
+        "mode": "local-fallback",
+        "failure": null
+      },
+      "surfaces": {
+        "home": {
+          "sceneId": "S13",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nThree weeks on the road. Three possible love stories. And the chance to choose yourself.\nContinue · Episode 4\nNew Game\nEpisodes\nSettings",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 360,
+            "height": 640
+          }
+        },
+        "episodes": {
+          "sceneId": "S13",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nEpisodes\nEpisodes open as you progress. Returning to a scene resets later decisions so different story variations do not mix.\nEpisode 1 · not reached\nEpisode 2 · not reached\nEpisode 3 · not reached\nEpisode 4 · unlocked\n← Menu",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 360,
+            "height": 640
+          }
+        },
+        "settings": {
+          "sceneId": "S13",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nSettings\nText size · 100%\nHigh contrast · off\nAnimation · system\n← Menu",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 360,
+            "height": 640
+          }
+        }
+      },
+      "surfaceScreenshots": {
+        "home": {
+          "path": "output\\playwright\\english-runtime-localization\\S13-home-360x640.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 249504,
+          "sha256": "b841218cebc2adc9af866c9f526e16590c9cb05c8deaef60f2247b20dd951a88"
+        },
+        "episodes": {
+          "path": "output\\playwright\\english-runtime-localization\\S13-episodes-360x640.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 271150,
+          "sha256": "89cc920da3b18ccfd16c7e1f24abb2efd9c35aceed533c587a615455836eaa40"
+        },
+        "settings": {
+          "path": "output\\playwright\\english-runtime-localization\\S13-settings-360x640.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 255762,
+          "sha256": "efaaea2fae072ba3784ddfe08109f82adacc8cce69483c6c110e0f4d6e747a7f"
+        }
+      },
+      "initial": {
+        "sceneId": "S13",
+        "locale": "en",
+        "narrativeText": "In Vík that morning, Damir knocked on Alice’s door only to tell her that the kettle in the shared kitchen finally worked. The day before, they had talked about his current life for exactly as long as Alice wanted to hear. Over breakfast, he discussed road sandwiches with Nick.",
+        "renderedUiText": "☰ Menu\nEPISODE 4 / 10\nKISS AT THE EDGE OF THE WORLD\n\nIn Vík that morning, Damir knocked on Alice’s door only to tell her that the kettle in the shared kitchen finally worked. The day before, they had talked about his current life for exactly as long as Alice wanted to hear. Over breakfast, he discussed road sandwiches with Nick.\n\n1 / 15",
+        "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World\nDay 7. Skaftafell. Four People and One Notebook. Episode 4\nDay 7. Skaftafell. Four People and One Notebook",
+        "hasEnglishProse": true,
+        "russianNarrativeLeak": false,
+        "russianUiLeak": false,
+        "choiceLabels": [],
+        "choiceLabelsEnglish": false,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 360,
+          "height": 640
+        }
+      },
+      "choice": {
+        "sceneId": "S13",
+        "locale": "en",
+        "narrativeText": "Nick asks what to do if a good piece of material needs someone’s face. What should Alice say?\nAsk the person instead of relying on silence\nKeep sound or hands if the person does not want to be filmed",
+        "renderedUiText": "☰ Menu\nEPISODE 4 / 10\nKISS AT THE EDGE OF THE WORLD\nYOUR CHOICE\n\nNick asks what to do if a good piece of material needs someone’s face. What should Alice say?\n\nAsk the person instead of relying on silence\nKeep sound or hands if the person does not want to be filmed",
+        "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World\nDay 7. Skaftafell. Four People and One Notebook. Episode 4\nDay 7. Skaftafell. Four People and One Notebook",
+        "hasEnglishProse": false,
+        "russianNarrativeLeak": false,
+        "russianUiLeak": false,
+        "choiceLabels": [
+          "Ask the person instead of relying on silence",
+          "Keep sound or hands if the person does not want to be filmed"
+        ],
+        "choiceLabelsEnglish": true,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 360,
+          "height": 640
+        }
+      },
+      "screenshots": [
+        {
+          "path": "output\\playwright\\english-runtime-localization\\S13-prose-360x640.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 263109,
+          "sha256": "cf2440ca85c57a7a9848050f998f275c3b228badc46dd9d7ff5e42b142265071"
+        },
+        {
+          "path": "output\\playwright\\english-runtime-localization\\S13-choice-360x640.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 342387,
+          "sha256": "94847f1a785876f3fe26a32f354e7b992e945af5a3ea68ad7b1878f35ce7d8ec"
+        }
+      ],
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "sceneId": "S15",
+      "viewport": {
+        "width": 1920,
+        "height": 900
+      },
+      "boot": {
+        "locale": "en",
+        "mode": "local-fallback",
+        "failure": null
+      },
+      "surfaces": {
+        "home": {
+          "sceneId": "S15",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nThree weeks on the road. Three possible love stories. And the chance to choose yourself.\nContinue · Episode 4\nNew Game\nEpisodes\nSettings",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 1920,
+            "height": 900
+          }
+        },
+        "episodes": {
+          "sceneId": "S15",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nEpisodes\nEpisodes open as you progress. Returning to a scene resets later decisions so different story variations do not mix.\nEpisode 1 · not reached\nEpisode 2 · not reached\nEpisode 3 · not reached\nEpisode 4 · unlocked\n← Menu",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 1920,
+            "height": 900
+          }
+        },
+        "settings": {
+          "sceneId": "S15",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nSettings\nText size · 100%\nHigh contrast · off\nAnimation · system\n← Menu",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 1920,
+            "height": 900
+          }
+        }
+      },
+      "surfaceScreenshots": {
+        "home": {
+          "path": "output\\playwright\\english-runtime-localization\\S15-home-1920x900.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 1850118,
+          "sha256": "9680570633b8089999a92a9509f9d30fcd7adbc23fa6b4d2df4cf763e5e74543"
+        },
+        "episodes": {
+          "path": "output\\playwright\\english-runtime-localization\\S15-episodes-1920x900.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 1852721,
+          "sha256": "7b3de6fd55fed288d3b19b3e1a7ab9c67c22fe104aa0d2a528e92a69bbd623ed"
+        },
+        "settings": {
+          "path": "output\\playwright\\english-runtime-localization\\S15-settings-1920x900.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 1834429,
+          "sha256": "0f642e7918f47eb4d6ed42470f022c5eb1d9229e6d56fb6d0e73996a9b637e10"
+        }
+      },
+      "initial": {
+        "sceneId": "S15",
+        "locale": "en",
+        "narrativeText": "That morning, the ice appeared before the lagoon: a pale strip on the horizon, like a light patch in an erased photograph. In the parking area, Eric asked everyone to zip their jackets and showed them the accessible walking zone. He didn’t promise they would approach the water’s edge.",
+        "renderedUiText": "☰ Menu\nEPISODE 4 / 10\nKISS AT THE EDGE OF THE WORLD\n\nThat morning, the ice appeared before the lagoon: a pale strip on the horizon, like a light patch in an erased photograph. In the parking area, Eric asked everyone to zip their jackets and showed them the accessible walking zone. He didn’t promise they would approach the water’s edge.\n\n1 / 18",
+        "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World\nDay 8. Jökulsárlón. Not Filming Means Seeing. Episode 4\nDay 8. Jökulsárlón. Not Filming Means Seeing",
+        "hasEnglishProse": true,
+        "russianNarrativeLeak": false,
+        "russianUiLeak": false,
+        "choiceLabels": [],
+        "choiceLabelsEnglish": false,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 1920,
+          "height": 900
+        }
+      },
+      "choice": {
+        "sceneId": "S15",
+        "locale": "en",
+        "narrativeText": "Nick pauses by the glacier lagoon. What should Alice do?\nAsk why he is not reaching for the camera\nWait until he decides to tell her",
+        "renderedUiText": "☰ Menu\nEPISODE 4 / 10\nKISS AT THE EDGE OF THE WORLD\nYOUR CHOICE\n\nNick pauses by the glacier lagoon. What should Alice do?\n\nAsk why he is not reaching for the camera\nWait until he decides to tell her",
+        "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World\nDay 8. Jökulsárlón. Not Filming Means Seeing. Episode 4\nDay 8. Jökulsárlón. Not Filming Means Seeing",
+        "hasEnglishProse": false,
+        "russianNarrativeLeak": false,
+        "russianUiLeak": false,
+        "choiceLabels": [
+          "Ask why he is not reaching for the camera",
+          "Wait until he decides to tell her"
+        ],
+        "choiceLabelsEnglish": true,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 1920,
+          "height": 900
+        }
+      },
+      "screenshots": [
+        {
+          "path": "output\\playwright\\english-runtime-localization\\S15-prose-1920x900.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 1504958,
+          "sha256": "91f0cf89ceddb04efda43d6538dfc24f5667ad12972ac52a94e963b9c60dbb06"
+        },
+        {
+          "path": "output\\playwright\\english-runtime-localization\\S15-choice-1920x900.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 1744801,
+          "sha256": "aabafea3d3f3e89603871821cf80da69c0e691187841b3baa687fe888551cbed"
+        }
+      ],
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "sceneId": "S15",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "boot": {
+        "locale": "en",
+        "mode": "local-fallback",
+        "failure": null
+      },
+      "surfaces": {
+        "home": {
+          "sceneId": "S15",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nThree weeks on the road. Three possible love stories. And the chance to choose yourself.\nContinue · Episode 4\nNew Game\nEpisodes\nSettings",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 390,
+            "height": 844
+          }
+        },
+        "episodes": {
+          "sceneId": "S15",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nEpisodes\nEpisodes open as you progress. Returning to a scene resets later decisions so different story variations do not mix.\nEpisode 1 · not reached\nEpisode 2 · not reached\nEpisode 3 · not reached\nEpisode 4 · unlocked\n← Menu",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 390,
+            "height": 844
+          }
+        },
+        "settings": {
+          "sceneId": "S15",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nSettings\nText size · 100%\nHigh contrast · off\nAnimation · system\n← Menu",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 390,
+            "height": 844
+          }
+        }
+      },
+      "surfaceScreenshots": {
+        "home": {
+          "path": "output\\playwright\\english-runtime-localization\\S15-home-390x844.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 327784,
+          "sha256": "18e7af9c22e6dfe1fcb98e1dd8c1548e7fcea2828b62cd87ba1fb81a00c0500c"
+        },
+        "episodes": {
+          "path": "output\\playwright\\english-runtime-localization\\S15-episodes-390x844.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 352001,
+          "sha256": "97b8c33a326a7fb52192b64dcbc24d1a509af79a880fcd6350f67ea139ffa0f0"
+        },
+        "settings": {
+          "path": "output\\playwright\\english-runtime-localization\\S15-settings-390x844.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 335933,
+          "sha256": "3966a54ce12628f4fa67f48894c6ecb267be15361391512f3e1330ec8dc127c0"
+        }
+      },
+      "initial": {
+        "sceneId": "S15",
+        "locale": "en",
+        "narrativeText": "That morning, the ice appeared before the lagoon: a pale strip on the horizon, like a light patch in an erased photograph. In the parking area, Eric asked everyone to zip their jackets and showed them the accessible walking zone. He didn’t promise they would approach the water’s edge.",
+        "renderedUiText": "☰ Menu\nEPISODE 4 / 10\nKISS AT THE EDGE OF THE WORLD\n\nThat morning, the ice appeared before the lagoon: a pale strip on the horizon, like a light patch in an erased photograph. In the parking area, Eric asked everyone to zip their jackets and showed them the accessible walking zone. He didn’t promise they would approach the water’s edge.\n\n1 / 18",
+        "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World\nDay 8. Jökulsárlón. Not Filming Means Seeing. Episode 4\nDay 8. Jökulsárlón. Not Filming Means Seeing",
+        "hasEnglishProse": true,
+        "russianNarrativeLeak": false,
+        "russianUiLeak": false,
+        "choiceLabels": [],
+        "choiceLabelsEnglish": false,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      "choice": {
+        "sceneId": "S15",
+        "locale": "en",
+        "narrativeText": "Nick pauses by the glacier lagoon. What should Alice do?\nAsk why he is not reaching for the camera\nWait until he decides to tell her",
+        "renderedUiText": "☰ Menu\nEPISODE 4 / 10\nKISS AT THE EDGE OF THE WORLD\nYOUR CHOICE\n\nNick pauses by the glacier lagoon. What should Alice do?\n\nAsk why he is not reaching for the camera\nWait until he decides to tell her",
+        "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World\nDay 8. Jökulsárlón. Not Filming Means Seeing. Episode 4\nDay 8. Jökulsárlón. Not Filming Means Seeing",
+        "hasEnglishProse": false,
+        "russianNarrativeLeak": false,
+        "russianUiLeak": false,
+        "choiceLabels": [
+          "Ask why he is not reaching for the camera",
+          "Wait until he decides to tell her"
+        ],
+        "choiceLabelsEnglish": true,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      "screenshots": [
+        {
+          "path": "output\\playwright\\english-runtime-localization\\S15-prose-390x844.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 313825,
+          "sha256": "b5cc72864b682b5d44895bd14c9c2e2f0c796fc9ff6114e3a719f93469d7a203"
+        },
+        {
+          "path": "output\\playwright\\english-runtime-localization\\S15-choice-390x844.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 351427,
+          "sha256": "92b0007fdc3410bc41862faf1221baa674594aa17566b8e4bce487c5aa15c65c"
+        }
+      ],
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "sceneId": "S15",
+      "viewport": {
+        "width": 360,
+        "height": 640
+      },
+      "boot": {
+        "locale": "en",
+        "mode": "local-fallback",
+        "failure": null
+      },
+      "surfaces": {
+        "home": {
+          "sceneId": "S15",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nThree weeks on the road. Three possible love stories. And the chance to choose yourself.\nContinue · Episode 4\nNew Game\nEpisodes\nSettings",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 360,
+            "height": 640
+          }
+        },
+        "episodes": {
+          "sceneId": "S15",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nEpisodes\nEpisodes open as you progress. Returning to a scene resets later decisions so different story variations do not mix.\nEpisode 1 · not reached\nEpisode 2 · not reached\nEpisode 3 · not reached\nEpisode 4 · unlocked\n← Menu",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 360,
+            "height": 640
+          }
+        },
+        "settings": {
+          "sceneId": "S15",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nSettings\nText size · 100%\nHigh contrast · off\nAnimation · system\n← Menu",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 360,
+            "height": 640
+          }
+        }
+      },
+      "surfaceScreenshots": {
+        "home": {
+          "path": "output\\playwright\\english-runtime-localization\\S15-home-360x640.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 249504,
+          "sha256": "b841218cebc2adc9af866c9f526e16590c9cb05c8deaef60f2247b20dd951a88"
+        },
+        "episodes": {
+          "path": "output\\playwright\\english-runtime-localization\\S15-episodes-360x640.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 271150,
+          "sha256": "89cc920da3b18ccfd16c7e1f24abb2efd9c35aceed533c587a615455836eaa40"
+        },
+        "settings": {
+          "path": "output\\playwright\\english-runtime-localization\\S15-settings-360x640.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 255762,
+          "sha256": "efaaea2fae072ba3784ddfe08109f82adacc8cce69483c6c110e0f4d6e747a7f"
+        }
+      },
+      "initial": {
+        "sceneId": "S15",
+        "locale": "en",
+        "narrativeText": "That morning, the ice appeared before the lagoon: a pale strip on the horizon, like a light patch in an erased photograph. In the parking area, Eric asked everyone to zip their jackets and showed them the accessible walking zone. He didn’t promise they would approach the water’s edge.",
+        "renderedUiText": "☰ Menu\nEPISODE 4 / 10\nKISS AT THE EDGE OF THE WORLD\n\nThat morning, the ice appeared before the lagoon: a pale strip on the horizon, like a light patch in an erased photograph. In the parking area, Eric asked everyone to zip their jackets and showed them the accessible walking zone. He didn’t promise they would approach the water’s edge.\n\n1 / 18",
+        "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World\nDay 8. Jökulsárlón. Not Filming Means Seeing. Episode 4\nDay 8. Jökulsárlón. Not Filming Means Seeing",
+        "hasEnglishProse": true,
+        "russianNarrativeLeak": false,
+        "russianUiLeak": false,
+        "choiceLabels": [],
+        "choiceLabelsEnglish": false,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 360,
+          "height": 640
+        }
+      },
+      "choice": {
+        "sceneId": "S15",
+        "locale": "en",
+        "narrativeText": "Nick pauses by the glacier lagoon. What should Alice do?\nAsk why he is not reaching for the camera\nWait until he decides to tell her",
+        "renderedUiText": "☰ Menu\nEPISODE 4 / 10\nKISS AT THE EDGE OF THE WORLD\nYOUR CHOICE\n\nNick pauses by the glacier lagoon. What should Alice do?\n\nAsk why he is not reaching for the camera\nWait until he decides to tell her",
+        "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World\nDay 8. Jökulsárlón. Not Filming Means Seeing. Episode 4\nDay 8. Jökulsárlón. Not Filming Means Seeing",
+        "hasEnglishProse": false,
+        "russianNarrativeLeak": false,
+        "russianUiLeak": false,
+        "choiceLabels": [
+          "Ask why he is not reaching for the camera",
+          "Wait until he decides to tell her"
+        ],
+        "choiceLabelsEnglish": true,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 360,
+          "height": 640
+        }
+      },
+      "screenshots": [
+        {
+          "path": "output\\playwright\\english-runtime-localization\\S15-prose-360x640.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 242805,
+          "sha256": "d25ab833897f5471bd8dad4247c283a17825fa818e7c6db4360291d34d2f9a8f"
+        },
+        {
+          "path": "output\\playwright\\english-runtime-localization\\S15-choice-360x640.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 263401,
+          "sha256": "bf93d589aedc2ba09781c6e439869ac1ed516a391fad32eb6981127371f77d82"
+        }
+      ],
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "sceneId": "S16",
+      "viewport": {
+        "width": 1920,
+        "height": 900
+      },
+      "boot": {
+        "locale": "en",
+        "mode": "local-fallback",
+        "failure": null
+      },
+      "surfaces": {
+        "home": {
+          "sceneId": "S16",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nThree weeks on the road. Three possible love stories. And the chance to choose yourself.\nContinue · Episode 4\nNew Game\nEpisodes\nSettings",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 1920,
+            "height": 900
+          }
+        },
+        "episodes": {
+          "sceneId": "S16",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nEpisodes\nEpisodes open as you progress. Returning to a scene resets later decisions so different story variations do not mix.\nEpisode 1 · not reached\nEpisode 2 · not reached\nEpisode 3 · not reached\nEpisode 4 · unlocked\n← Menu",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 1920,
+            "height": 900
+          }
+        },
+        "settings": {
+          "sceneId": "S16",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nSettings\nText size · 100%\nHigh contrast · off\nAnimation · system\n← Menu",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 1920,
+            "height": 900
+          }
+        }
+      },
+      "surfaceScreenshots": {
+        "home": {
+          "path": "output\\playwright\\english-runtime-localization\\S16-home-1920x900.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 1850118,
+          "sha256": "9680570633b8089999a92a9509f9d30fcd7adbc23fa6b4d2df4cf763e5e74543"
+        },
+        "episodes": {
+          "path": "output\\playwright\\english-runtime-localization\\S16-episodes-1920x900.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 1852721,
+          "sha256": "7b3de6fd55fed288d3b19b3e1a7ab9c67c22fe104aa0d2a528e92a69bbd623ed"
+        },
+        "settings": {
+          "path": "output\\playwright\\english-runtime-localization\\S16-settings-1920x900.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 1834429,
+          "sha256": "0f642e7918f47eb4d6ed42470f022c5eb1d9229e6d56fb6d0e73996a9b637e10"
+        }
+      },
+      "initial": {
+        "sceneId": "S16",
+        "locale": "en",
+        "narrativeText": "They reached the guesthouse in daylight. Two cars stood outside; one family was unloading bags, while another was unsuccessfully searching for its key among the gloves. The owner was showing Alice where the shared kitchen would be when a short cry came from the corridor.",
+        "renderedUiText": "☰ Menu\nEPISODE 4 / 10\nKISS AT THE EDGE OF THE WORLD\n\nThey reached the guesthouse in daylight. Two cars stood outside; one family was unloading bags, while another was unsuccessfully searching for its key among the gloves. The owner was showing Alice where the shared kitchen would be when a short cry came from the corridor.\n\n1 / 12",
+        "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World\nDay 8. Roadside Guesthouse. Someone Else’s Pain. Episode 4\nDay 8. Roadside Guesthouse. Someone Else’s Pain",
+        "hasEnglishProse": true,
+        "russianNarrativeLeak": false,
+        "russianUiLeak": false,
+        "choiceLabels": [],
+        "choiceLabelsEnglish": false,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 1920,
+          "height": 900
+        }
+      },
+      "choice": {
+        "sceneId": "S16",
+        "locale": "en",
+        "narrativeText": "Damir falls silent before finishing a thought about the past. What should Alice do?\nAsk whether he wants to finish\nSay that she has heard enough for today",
+        "renderedUiText": "☰ Menu\nEPISODE 4 / 10\nKISS AT THE EDGE OF THE WORLD\nYOUR CHOICE\n\nDamir falls silent before finishing a thought about the past. What should Alice do?\n\nAsk whether he wants to finish\nSay that she has heard enough for today",
+        "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World\nDay 8. Roadside Guesthouse. Someone Else’s Pain. Episode 4\nDay 8. Roadside Guesthouse. Someone Else’s Pain",
+        "hasEnglishProse": false,
+        "russianNarrativeLeak": false,
+        "russianUiLeak": false,
+        "choiceLabels": [
+          "Ask whether he wants to finish",
+          "Say that she has heard enough for today"
+        ],
+        "choiceLabelsEnglish": true,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 1920,
+          "height": 900
+        }
+      },
+      "screenshots": [
+        {
+          "path": "output\\playwright\\english-runtime-localization\\S16-prose-1920x900.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 96702,
+          "sha256": "412bb7d752e78682231d8dbfab8ecc7b22e00d7c9d9bbdb3656489aebe4cae5c"
+        },
+        {
+          "path": "output\\playwright\\english-runtime-localization\\S16-choice-1920x900.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 1786135,
+          "sha256": "da9b41dbd19308b26766bc3786f4297eebf699892c0dc360316c94c71cccd0e3"
+        }
+      ],
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "sceneId": "S16",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "boot": {
+        "locale": "en",
+        "mode": "local-fallback",
+        "failure": null
+      },
+      "surfaces": {
+        "home": {
+          "sceneId": "S16",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nThree weeks on the road. Three possible love stories. And the chance to choose yourself.\nContinue · Episode 4\nNew Game\nEpisodes\nSettings",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 390,
+            "height": 844
+          }
+        },
+        "episodes": {
+          "sceneId": "S16",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nEpisodes\nEpisodes open as you progress. Returning to a scene resets later decisions so different story variations do not mix.\nEpisode 1 · not reached\nEpisode 2 · not reached\nEpisode 3 · not reached\nEpisode 4 · unlocked\n← Menu",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 390,
+            "height": 844
+          }
+        },
+        "settings": {
+          "sceneId": "S16",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nSettings\nText size · 100%\nHigh contrast · off\nAnimation · system\n← Menu",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 390,
+            "height": 844
+          }
+        }
+      },
+      "surfaceScreenshots": {
+        "home": {
+          "path": "output\\playwright\\english-runtime-localization\\S16-home-390x844.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 327784,
+          "sha256": "18e7af9c22e6dfe1fcb98e1dd8c1548e7fcea2828b62cd87ba1fb81a00c0500c"
+        },
+        "episodes": {
+          "path": "output\\playwright\\english-runtime-localization\\S16-episodes-390x844.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 352001,
+          "sha256": "97b8c33a326a7fb52192b64dcbc24d1a509af79a880fcd6350f67ea139ffa0f0"
+        },
+        "settings": {
+          "path": "output\\playwright\\english-runtime-localization\\S16-settings-390x844.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 335933,
+          "sha256": "3966a54ce12628f4fa67f48894c6ecb267be15361391512f3e1330ec8dc127c0"
+        }
+      },
+      "initial": {
+        "sceneId": "S16",
+        "locale": "en",
+        "narrativeText": "They reached the guesthouse in daylight. Two cars stood outside; one family was unloading bags, while another was unsuccessfully searching for its key among the gloves. The owner was showing Alice where the shared kitchen would be when a short cry came from the corridor.",
+        "renderedUiText": "☰ Menu\nEPISODE 4 / 10\nKISS AT THE EDGE OF THE WORLD\n\nThey reached the guesthouse in daylight. Two cars stood outside; one family was unloading bags, while another was unsuccessfully searching for its key among the gloves. The owner was showing Alice where the shared kitchen would be when a short cry came from the corridor.\n\n1 / 12",
+        "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World\nDay 8. Roadside Guesthouse. Someone Else’s Pain. Episode 4\nDay 8. Roadside Guesthouse. Someone Else’s Pain",
+        "hasEnglishProse": true,
+        "russianNarrativeLeak": false,
+        "russianUiLeak": false,
+        "choiceLabels": [],
+        "choiceLabelsEnglish": false,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      "choice": {
+        "sceneId": "S16",
+        "locale": "en",
+        "narrativeText": "Damir falls silent before finishing a thought about the past. What should Alice do?\nAsk whether he wants to finish\nSay that she has heard enough for today",
+        "renderedUiText": "☰ Menu\nEPISODE 4 / 10\nKISS AT THE EDGE OF THE WORLD\nYOUR CHOICE\n\nDamir falls silent before finishing a thought about the past. What should Alice do?\n\nAsk whether he wants to finish\nSay that she has heard enough for today",
+        "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World\nDay 8. Roadside Guesthouse. Someone Else’s Pain. Episode 4\nDay 8. Roadside Guesthouse. Someone Else’s Pain",
+        "hasEnglishProse": false,
+        "russianNarrativeLeak": false,
+        "russianUiLeak": false,
+        "choiceLabels": [
+          "Ask whether he wants to finish",
+          "Say that she has heard enough for today"
+        ],
+        "choiceLabelsEnglish": true,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      "screenshots": [
+        {
+          "path": "output\\playwright\\english-runtime-localization\\S16-prose-390x844.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 66388,
+          "sha256": "b2915fbbf1d9263881aff974ca77b9fed87ab2859020f88621dce454a818869a"
+        },
+        {
+          "path": "output\\playwright\\english-runtime-localization\\S16-choice-390x844.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 383765,
+          "sha256": "7503851dfbc7d68dffde631daae0b886ed99284db461ae29801196a825555c1e"
+        }
+      ],
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "sceneId": "S16",
+      "viewport": {
+        "width": 360,
+        "height": 640
+      },
+      "boot": {
+        "locale": "en",
+        "mode": "local-fallback",
+        "failure": null
+      },
+      "surfaces": {
+        "home": {
+          "sceneId": "S16",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nThree weeks on the road. Three possible love stories. And the chance to choose yourself.\nContinue · Episode 4\nNew Game\nEpisodes\nSettings",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 360,
+            "height": 640
+          }
+        },
+        "episodes": {
+          "sceneId": "S16",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nEpisodes\nEpisodes open as you progress. Returning to a scene resets later decisions so different story variations do not mix.\nEpisode 1 · not reached\nEpisode 2 · not reached\nEpisode 3 · not reached\nEpisode 4 · unlocked\n← Menu",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 360,
+            "height": 640
+          }
+        },
+        "settings": {
+          "sceneId": "S16",
+          "locale": "en",
+          "narrativeText": "",
+          "renderedUiText": "ROMANTIC STORY · ICELAND\nKiss at the Edge of the World\nSettings\nText size · 100%\nHigh contrast · off\nAnimation · system\n← Menu",
+          "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World",
+          "hasEnglishProse": false,
+          "russianNarrativeLeak": false,
+          "russianUiLeak": false,
+          "choiceLabels": [],
+          "choiceLabelsEnglish": false,
+          "overflow": false,
+          "internalScroll": false,
+          "clipped": 0,
+          "viewport": {
+            "width": 360,
+            "height": 640
+          }
+        }
+      },
+      "surfaceScreenshots": {
+        "home": {
+          "path": "output\\playwright\\english-runtime-localization\\S16-home-360x640.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 249504,
+          "sha256": "b841218cebc2adc9af866c9f526e16590c9cb05c8deaef60f2247b20dd951a88"
+        },
+        "episodes": {
+          "path": "output\\playwright\\english-runtime-localization\\S16-episodes-360x640.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 271150,
+          "sha256": "89cc920da3b18ccfd16c7e1f24abb2efd9c35aceed533c587a615455836eaa40"
+        },
+        "settings": {
+          "path": "output\\playwright\\english-runtime-localization\\S16-settings-360x640.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 255762,
+          "sha256": "efaaea2fae072ba3784ddfe08109f82adacc8cce69483c6c110e0f4d6e747a7f"
+        }
+      },
+      "initial": {
+        "sceneId": "S16",
+        "locale": "en",
+        "narrativeText": "They reached the guesthouse in daylight. Two cars stood outside; one family was unloading bags, while another was unsuccessfully searching for its key among the gloves. The owner was showing Alice where the shared kitchen would be when a short cry came from the corridor.",
+        "renderedUiText": "☰ Menu\nEPISODE 4 / 10\nKISS AT THE EDGE OF THE WORLD\n\nThey reached the guesthouse in daylight. Two cars stood outside; one family was unloading bags, while another was unsuccessfully searching for its key among the gloves. The owner was showing Alice where the shared kitchen would be when a short cry came from the corridor.\n\n1 / 12",
+        "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World\nDay 8. Roadside Guesthouse. Someone Else’s Pain. Episode 4\nDay 8. Roadside Guesthouse. Someone Else’s Pain",
+        "hasEnglishProse": true,
+        "russianNarrativeLeak": false,
+        "russianUiLeak": false,
+        "choiceLabels": [],
+        "choiceLabelsEnglish": false,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 360,
+          "height": 640
+        }
+      },
+      "choice": {
+        "sceneId": "S16",
+        "locale": "en",
+        "narrativeText": "Damir falls silent before finishing a thought about the past. What should Alice do?\nAsk whether he wants to finish\nSay that she has heard enough for today",
+        "renderedUiText": "☰ Menu\nEPISODE 4 / 10\nKISS AT THE EDGE OF THE WORLD\nYOUR CHOICE\n\nDamir falls silent before finishing a thought about the past. What should Alice do?\n\nAsk whether he wants to finish\nSay that she has heard enough for today",
+        "accessibilityText": "Kiss at the Edge of the World\nKiss at the Edge of the World\nDay 8. Roadside Guesthouse. Someone Else’s Pain. Episode 4\nDay 8. Roadside Guesthouse. Someone Else’s Pain",
+        "hasEnglishProse": false,
+        "russianNarrativeLeak": false,
+        "russianUiLeak": false,
+        "choiceLabels": [
+          "Ask whether he wants to finish",
+          "Say that she has heard enough for today"
+        ],
+        "choiceLabelsEnglish": true,
+        "overflow": false,
+        "internalScroll": false,
+        "clipped": 0,
+        "viewport": {
+          "width": 360,
+          "height": 640
+        }
+      },
+      "screenshots": [
+        {
+          "path": "output\\playwright\\english-runtime-localization\\S16-prose-360x640.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 279777,
+          "sha256": "4d46fba77eb47100ba88d24d709a1cacb29d1d6b30007349fc5b351024b65b32"
+        },
+        {
+          "path": "output\\playwright\\english-runtime-localization\\S16-choice-360x640.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 281533,
+          "sha256": "818f3238452d85193129fddd9a97fd831d770ffe82323d2e0d07d165e0adbc82"
+        }
+      ],
+      "consoleErrors": [],
+      "failedRequests": []
+    }
+  ],
+  "saveLoadAndLocaleSwitch": {
+    "cases": {
+      "S09": {
+        "saveLoadPreserved": true,
+        "ruRuntimePreserved": true,
+        "localeSwitchPreserved": true,
+        "reverseLocaleSwitchPreserved": true,
+        "localeAfterSwitch": "en",
+        "localeAfterReverseSwitch": "ru",
+        "persistenceKeysStable": true,
+        "states": {
+          "beforeReload": {
+            "schemaVersion": 3,
+            "sceneId": "S09",
+            "position": 9,
+            "choices": {
+              "S09-C90": "A"
+            },
+            "finished": false,
+            "visited": [
+              "S09"
+            ],
+            "runId": "english-runtime-S09",
+            "revision": 10,
+            "migrationNotice": false
+          },
+          "afterReload": {
+            "schemaVersion": 3,
+            "sceneId": "S09",
+            "position": 9,
+            "choices": {
+              "S09-C90": "A"
+            },
+            "finished": false,
+            "visited": [
+              "S09"
+            ],
+            "runId": "english-runtime-S09",
+            "revision": 10,
+            "migrationNotice": false
+          },
+          "beforeLocaleSwitch": {
+            "schemaVersion": 3,
+            "sceneId": "S09",
+            "position": 9,
+            "choices": {
+              "S09-C90": "A"
+            },
+            "finished": false,
+            "visited": [
+              "S09"
+            ],
+            "runId": "english-runtime-S09",
+            "revision": 10,
+            "migrationNotice": false
+          },
+          "afterLocaleSwitch": {
+            "schemaVersion": 3,
+            "sceneId": "S09",
+            "position": 9,
+            "choices": {
+              "S09-C90": "A"
+            },
+            "finished": false,
+            "visited": [
+              "S09"
+            ],
+            "runId": "english-runtime-S09",
+            "revision": 10,
+            "migrationNotice": false
+          },
+          "beforeReverseLocaleSwitch": {
+            "schemaVersion": 3,
+            "sceneId": "S09",
+            "position": 9,
+            "choices": {
+              "S09-C90": "A"
+            },
+            "finished": false,
+            "visited": [
+              "S09"
+            ],
+            "runId": "english-runtime-S09",
+            "revision": 10,
+            "migrationNotice": false
+          },
+          "afterReverseLocaleSwitch": {
+            "schemaVersion": 3,
+            "sceneId": "S09",
+            "position": 9,
+            "choices": {
+              "S09-C90": "A"
+            },
+            "finished": false,
+            "visited": [
+              "S09"
+            ],
+            "runId": "english-runtime-S09",
+            "revision": 10,
+            "migrationNotice": false
+          }
+        },
+        "keys": {
+          "before": {
+            "local": "kiss-at-the-edge-of-the-world:literary-draft:v1",
+            "cloud": "kiss-at-the-edge-of-the-world:literary-season:v1"
+          },
+          "after": {
+            "local": "kiss-at-the-edge-of-the-world:literary-draft:v1",
+            "cloud": "kiss-at-the-edge-of-the-world:literary-season:v1"
+          }
+        },
+        "sceneId": "S09",
+        "consoleErrors": [],
+        "failedRequests": []
+      },
+      "S13": {
+        "saveLoadPreserved": true,
+        "ruRuntimePreserved": true,
+        "localeSwitchPreserved": true,
+        "reverseLocaleSwitchPreserved": true,
+        "localeAfterSwitch": "en",
+        "localeAfterReverseSwitch": "ru",
+        "persistenceKeysStable": true,
+        "states": {
+          "beforeReload": {
+            "schemaVersion": 3,
+            "sceneId": "S13",
+            "position": 13,
+            "choices": {
+              "S13-C90": "A"
+            },
+            "finished": false,
+            "visited": [
+              "S13"
+            ],
+            "runId": "english-runtime-S13",
+            "revision": 14,
+            "migrationNotice": false
+          },
+          "afterReload": {
+            "schemaVersion": 3,
+            "sceneId": "S13",
+            "position": 13,
+            "choices": {
+              "S13-C90": "A"
+            },
+            "finished": false,
+            "visited": [
+              "S13"
+            ],
+            "runId": "english-runtime-S13",
+            "revision": 14,
+            "migrationNotice": false
+          },
+          "beforeLocaleSwitch": {
+            "schemaVersion": 3,
+            "sceneId": "S13",
+            "position": 13,
+            "choices": {
+              "S13-C90": "A"
+            },
+            "finished": false,
+            "visited": [
+              "S13"
+            ],
+            "runId": "english-runtime-S13",
+            "revision": 14,
+            "migrationNotice": false
+          },
+          "afterLocaleSwitch": {
+            "schemaVersion": 3,
+            "sceneId": "S13",
+            "position": 13,
+            "choices": {
+              "S13-C90": "A"
+            },
+            "finished": false,
+            "visited": [
+              "S13"
+            ],
+            "runId": "english-runtime-S13",
+            "revision": 14,
+            "migrationNotice": false
+          },
+          "beforeReverseLocaleSwitch": {
+            "schemaVersion": 3,
+            "sceneId": "S13",
+            "position": 13,
+            "choices": {
+              "S13-C90": "A"
+            },
+            "finished": false,
+            "visited": [
+              "S13"
+            ],
+            "runId": "english-runtime-S13",
+            "revision": 14,
+            "migrationNotice": false
+          },
+          "afterReverseLocaleSwitch": {
+            "schemaVersion": 3,
+            "sceneId": "S13",
+            "position": 13,
+            "choices": {
+              "S13-C90": "A"
+            },
+            "finished": false,
+            "visited": [
+              "S13"
+            ],
+            "runId": "english-runtime-S13",
+            "revision": 14,
+            "migrationNotice": false
+          }
+        },
+        "keys": {
+          "before": {
+            "local": "kiss-at-the-edge-of-the-world:literary-draft:v1",
+            "cloud": "kiss-at-the-edge-of-the-world:literary-season:v1"
+          },
+          "after": {
+            "local": "kiss-at-the-edge-of-the-world:literary-draft:v1",
+            "cloud": "kiss-at-the-edge-of-the-world:literary-season:v1"
+          }
+        },
+        "sceneId": "S13",
+        "consoleErrors": [],
+        "failedRequests": []
+      }
+    },
+    "pass": true,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "coverage": {
+    "homeMenu": true,
+    "episodesPanel": true,
+    "settingsPanel": true,
+    "normalNarrative": true,
+    "authoredChoice": true,
+    "interactivePacingChoice": true,
+    "cloudRestore": {
+      "status": "NOT_TESTABLE",
+      "reason": "Requires an authenticated Yandex SDK cloud candidate."
+    },
+    "endingScreen": {
+      "status": "NOT_TESTABLE",
+      "reason": "The bounded EN QA corpus currently ends at Episode 4; production EN correctly fails closed before the remaining declared scenes."
+    }
+  },
+  "assertions": [
+    "rendered EN UI and accessibility text contain no Cyrillic",
+    "actual English prose",
+    "English authored and interactive choice labels",
+    "no Russian narrative leakage",
+    "no viewport overflow/clipping",
+    "local save/load",
+    "RU runtime remains Cyrillic and usable",
+    "RU→EN and EN→RU locale switches leave scene, position, choices and structural save unchanged",
+    "stable local/cloud persistence keys",
+    "zero console errors",
+    "zero failed asset requests"
+  ]
+}

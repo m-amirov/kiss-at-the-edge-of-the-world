@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "source": "content/season-1-literary-episode-08.md",
+  "scenes": {
+    "S56": {
+      "title": "Day 16. A Song They Had Never Known Before",
+      "chunks": {
+        "S56.C000": {
+          "title": "If `routeStatus=active`",
+          "paragraphs": {
+            "S56.C000.P000": "Damir arrived without his usual habit of finding out in advance where he should sit. He saw an empty table and asked whether Alice wanted to stay closer to the musicians or by the window. She chose the window: from there she could see two people under one umbrella arguing about which way to go.",
+            "S56.C000.P001": "The musicians played songs Alice had never heard. Damir did not try to find a familiar melody from their shared past. He drank a non-alcoholic drink and listened, tilting his head slightly as he had once done in his first year at university. Alice could have said that she remembered the gesture. Instead she asked whether he liked the music. He said he did not know, but wanted to stay until the end.",
+            "S56.C000.P002": "When a slow piece began, Damir held out his hand. They moved to an empty space by the wall. Alice put her hand on his shoulder herself. Their movements were uncertain; in two years they had forgotten how to anticipate each other’s steps, and that unexpectedly made the dance easier. They did not have to recreate the way they had moved before."
+          }
+        },
+        "S56.C001": {
+          "title": "If `routeStatus=paused`",
+          "paragraphs": {
+            "S56.C001.P000": "They came to the music evening with the group and sat on opposite sides of the table. Nick drew Eric into an argument about the worst road song imaginable. Damir asked Alice whether the music made it difficult for her to work. She said she was not writing today. They did not discuss the pause all evening. Alice was grateful that he did not turn the shared trip into a test of her decision."
+          }
+        },
+        "S56.C002": {
+          "title": "Choice S56-C1 — When the new composition begins",
+          "paragraphs": {}
+        },
+        "S56.C003": {
+          "title": "A. Stay for one more song",
+          "paragraphs": {
+            "S56.C003.P000": "Alice did not look at the time. She listened to the drums, occasionally caught Damir’s eye, and thought about how it was possible to learn a familiar person without having to restore the old evening."
+          }
+        },
+        "S56.C004": {
+          "title": "B. Go outside and walk back to the hotel",
+          "paragraphs": {
+            "S56.C004.P000": "They walked beside each other in the rain. Damir gave her the covered side of the pavement, but Alice got wet anyway. She laughed when water ran from his sleeve onto her shoe. He tried to apologise, then laughed too."
+          }
+        },
+        "S56.C005": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S56.C005.P000": "They paused for only a minute at the hotel door. Damir said he had liked the song, although he would never remember its name. Alice said perhaps he did not have to. She went upstairs listening to the music still drifting in from the street."
+          }
+        },
+        "S56.C006": {
+          "title": "Choice S56-C2 — What will Alice suggest Damir do after the music evening?",
+          "paragraphs": {}
+        },
+        "S56.C007": {
+          "title": "A. Find a new dish to try together tomorrow",
+          "paragraphs": {
+            "S56.C007.P000": "Alice suggested trying something neither of them had eaten before. Damir pointed out a small café he had passed that morning. They agreed to go if the group did not change its plan."
+          }
+        },
+        "S56.C008": {
+          "title": "B. Teach him the chorus of an unfamiliar song",
+          "paragraphs": {
+            "S56.C008.P000": "Damir mixed up the words twice, and Alice could not find the rhythm at all. They laughed and decided to leave the attempt for their next walk. They had acquired a chorus no one needed to tie to the past."
+          }
+        }
+      }
+    }
+  }
+}

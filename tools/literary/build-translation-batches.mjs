@@ -1,0 +1,6 @@
+#!/usr/bin/env node
+import fs from 'node:fs';import path from 'node:path';import {fileURLToPath} from 'node:url';
+import {literarySeason} from '../../src/literary-season-data.js';import {sourceRef} from '../../src/localization.js';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..'),out=path.join(root,'artifacts','localization','translation-input');fs.mkdirSync(out,{recursive:true});
+for(let episode=1;episode<=10;episode++){const scenes=literarySeason.scenes.filter(x=>x.episode===episode).map(scene=>({sceneId:scene.id,title:{ref:scene.id+'.TITLE',ru:scene.title},chunks:scene.chunks.map((chunk,ci)=>({ref:sourceRef.chunk(scene.id,ci),level:chunk.level,headingRu:chunk.title,predicateOrChoiceId:[...chunk.title.matchAll(/(?:S\d{2}-C\d+|\x60[^\x60]+\x60)/g)].map(x=>x[0]),paragraphs:chunk.paragraphs.map((ru,pi)=>({ref:sourceRef.paragraph(scene.id,ci,pi),ru}))}))}));fs.writeFileSync(path.join(out,'episode-'+String(episode).padStart(2,'0')+'.json'),JSON.stringify({schemaVersion:1,localeFrom:'ru',localeTo:'en',episode,identifierPolicy:'Do not translate scene IDs, choice IDs, route/state codes, backtick predicates, or stable refs.',scenes},null,2)+'\n');}
+console.log('TRANSLATION_BATCHES_OK',10);

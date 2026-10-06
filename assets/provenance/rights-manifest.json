@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23",
+  "generatedAt": "2026-10-01",
   "assets": [
     {
       "path": "assets/cg/s44-eric-epilogue-month-later-portrait.png",
@@ -735,6 +735,310 @@
       "dimensions": "941x1672",
       "method": "Independent portrait composition from canonical Alice and Eric masters; authored S37 cafe conversation and mobile-safe upper framing",
       "source": "Generated in Codex imagegen, 2026-09-25",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/backgrounds/s03-reykjavik-guesthouse-morning.png",
+      "sha256": "2CA12077112219FFBC9DFD916F504574EE624C2504A3A3C3FAD90E741D3ED4BD",
+      "dimensions": "1920x900",
+      "method": "Codex imagegen current production-art run; environment-only establishing/transition asset",
+      "source": "Generated in Codex imagegen, 2026-10-01",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/backgrounds/s06-hveragerdi-geothermal-day.png",
+      "sha256": "0610DBAE504CA1A3DE51F9C74936F402B02D9AF016F2C1020EB07FFB4DD6D1A7",
+      "dimensions": "1920x900",
+      "method": "Codex imagegen current production-art run; environment-only establishing/transition asset",
+      "source": "Generated in Codex imagegen, 2026-10-01",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/backgrounds/s09-guesthouse-to-skogafoss-morning.png",
+      "sha256": "F47A9A30B9668D4C50E466D914E2612DC45C61BFC4BA46B85A29EA686DF91A49",
+      "dimensions": "1920x900",
+      "method": "Codex imagegen current production-art run; environment-only establishing/transition asset",
+      "source": "Generated in Codex imagegen, 2026-10-01",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/backgrounds/s10-vik-guesthouse-arrival.png",
+      "sha256": "94356B1E97AA3ED8559B6864D4D948DE03E96DF4A07872B3F82DEDBF98DDB894",
+      "dimensions": "1920x900",
+      "method": "Codex imagegen current production-art run; environment-only establishing/transition asset",
+      "source": "Generated in Codex imagegen, 2026-10-01",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/backgrounds/s12-vik-street-day.png",
+      "sha256": "31CBBEBD5A782F5F0CFBB77495EF39CEE2FBB14939FEED6F44DEEA25C7B4B770",
+      "dimensions": "1920x900",
+      "method": "Codex imagegen current production-art run; environment-only establishing/transition asset",
+      "source": "Generated in Codex imagegen, 2026-10-01",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/backgrounds/s13-skaftafell-visitor-parking.png",
+      "sha256": "2B7425C0B1A6DA2E03A78CD88AD07A5974C509530EA9CDACFFA8C89674A782E7",
+      "dimensions": "1920x900",
+      "method": "Codex imagegen current production-art run; environment-only establishing/transition asset",
+      "source": "Generated in Codex imagegen, 2026-10-01",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/backgrounds/s14-lagoon-road.png",
+      "sha256": "17C88D319DFF19D82022A8369F51C0614B369391A1282F1422F07392108EB2A9",
+      "dimensions": "1920x900",
+      "method": "Codex imagegen current production-art run; environment-only establishing/transition asset",
+      "source": "Generated in Codex imagegen, 2026-10-01",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/backgrounds/s15-jokulsarlon-parking-day.png",
+      "sha256": "4EE1645D83E732806438C1C19156F06840C44B39B626B9332DCE488C551447D8",
+      "dimensions": "1920x900",
+      "method": "Codex imagegen current production-art run; environment-only establishing/transition asset",
+      "source": "Generated in Codex imagegen, 2026-10-01",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/backgrounds/s18-hofn-room-morning.png",
+      "sha256": "FC75AA2D8FBD96AE2AC78A0D47906B8F211680BEBDFF8BF1F2443894CE33F2ED",
+      "dimensions": "1920x900",
+      "method": "Codex imagegen current production-art run; environment-only establishing/transition asset",
+      "source": "Generated in Codex imagegen, 2026-10-01",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/backgrounds/s18-hofn-breakfast-morning.png",
+      "sha256": "C9CE23E9E1E82FDD2BC521A0B3501D5F76715B64E300DFC3E4BE98FA8DDC2C8D",
+      "dimensions": "1920x900",
+      "method": "Codex imagegen current production-art run; environment-only establishing/transition asset",
+      "source": "Generated in Codex imagegen, 2026-10-01",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/backgrounds/s26-eastfjords-guesthouse-courtyard.png",
+      "sha256": "F165BD26A68F0C9C1AB1D4EC73D6FC6D28780FE9004FD5F965E781BC71ED9431",
+      "dimensions": "1920x900",
+      "method": "Codex imagegen current production-art run; environment-only establishing/transition asset",
+      "source": "Generated in Codex imagegen, 2026-10-01",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/backgrounds/s37-snaefellsnes-guesthouse-day.png",
+      "sha256": "EAEF888CC0F4D38058C4F8C58EBA13818903DC1E26A264AE65FABD28050F60DF",
+      "dimensions": "1920x900",
+      "method": "Codex imagegen current production-art run; environment-only establishing/transition asset",
+      "source": "Generated in Codex imagegen, 2026-10-01",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/backgrounds/s39-alice-damir-cafe-walk.png",
+      "sha256": "229F4D2898D66F135E027D6D871517363174C4E40C9FC580DBCF1FE0163F282E",
+      "dimensions": "1920x900",
+      "method": "Codex imagegen current production-art run; environment-only establishing/transition asset",
+      "source": "Generated in Codex imagegen, 2026-10-01",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/backgrounds/s40-alice-room-laptop-window.png",
+      "sha256": "7687839E21F6C71266779E7B2DA273BEEC93B45985BE7357FB3CC14399529A48",
+      "dimensions": "1920x900",
+      "method": "Codex imagegen current production-art run; environment-only establishing/transition asset",
+      "source": "Generated in Codex imagegen, 2026-10-01",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/backgrounds/s46-airport-bus-day.png",
+      "sha256": "BDD60DB4665FFBEFB7D18A2B63F16E19042073920254A7AA8EAC6A0A59A39C13",
+      "dimensions": "1920x900",
+      "method": "Codex imagegen current production-art run; environment-only establishing/transition asset",
+      "source": "Generated in Codex imagegen, 2026-10-01",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/backgrounds/s48-guesthouse-exit-morning.png",
+      "sha256": "9548FC8A82AC62142694D65D182F7A6F6B799EFFFC0E564F8EBF8175C1FF2D37",
+      "dimensions": "1920x900",
+      "method": "Codex imagegen current production-art run; environment-only establishing/transition asset",
+      "source": "Generated in Codex imagegen, 2026-10-01",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/backgrounds/s52-hofn-streets-post-workshop.png",
+      "sha256": "05AF3A95007CF4ABBC07DC3F866C11D6974D36A29229D1302E1CD7304AFF1332",
+      "dimensions": "1920x900",
+      "method": "Codex imagegen current production-art run; environment-only establishing/transition asset",
+      "source": "Generated in Codex imagegen, 2026-10-01",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s03-editor-call-damir.png",
+      "sha256": "AEA38CDCFFAFE5233E8E6D3D93AD5618E41AB94ADDAE40C0A143325A9B80561A",
+      "dimensions": "1920x900",
+      "method": "Codex imagegen current production-art run using canonical character references; exact authored cast/action; desktop CG",
+      "source": "Generated in Codex imagegen, 2026-10-01",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s03-editor-call-damir-portrait.png",
+      "sha256": "C6933C24C457D53804CF284880DB8BF6668B38ABDDD3DA0ED7322487C9B764C1",
+      "dimensions": "941x1672",
+      "method": "Portrait derivative cropped from the accepted desktop CG for mobile runtime",
+      "source": "Derived from assets/cg/s03-editor-call-damir.png, 2026-10-01",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s18-hofn-breakfast-group.png",
+      "sha256": "163E828C7EEFAF887FD7276DA86E906941EBF9FEE0ACAFCB90456FF2794CF2B4",
+      "dimensions": "1920x900",
+      "method": "Codex imagegen current production-art run using canonical character references; exact authored cast/action; desktop CG",
+      "source": "Generated in Codex imagegen, 2026-10-01",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s18-hofn-breakfast-group-portrait.png",
+      "sha256": "5E2C19257F5DF74E1D342F2CA785AE29564D8B27267BC7F5A148C843A56C01EA",
+      "dimensions": "941x1672",
+      "method": "Portrait derivative cropped from the accepted desktop CG for mobile runtime",
+      "source": "Derived from assets/cg/s18-hofn-breakfast-group.png, 2026-10-01",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s38-alice-nick-ordinary-day.png",
+      "sha256": "C67F933507FE2E560FE805B15105EACDDE757E419B0BDBDED50EB4B553E6B935",
+      "dimensions": "1920x900",
+      "method": "Codex imagegen current production-art run using canonical character references; exact authored cast/action; desktop CG",
+      "source": "Generated in Codex imagegen, 2026-10-01",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s38-alice-nick-ordinary-day-portrait.png",
+      "sha256": "DE68C959CC20D3777B31D2245ABFBB00ED1E894D3FC5877B23D3063DBB5B2A76",
+      "dimensions": "941x1672",
+      "method": "Portrait derivative cropped from the accepted desktop CG for mobile runtime",
+      "source": "Derived from assets/cg/s38-alice-nick-ordinary-day.png, 2026-10-01",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s54-alice-nick-karaoke.png",
+      "sha256": "C9327F345D06886001E2E60EDD2E32E0DBED7526F3A7A033530412EF4D4FC26E",
+      "dimensions": "1920x900",
+      "method": "Codex imagegen current production-art run using canonical character references; exact authored cast/action; desktop CG",
+      "source": "Generated in Codex imagegen, 2026-10-01",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s54-alice-nick-karaoke-portrait.png",
+      "sha256": "714B085399DFA81EED3CE7A6D3962648C932F42821DD318C989B8F52152975BA",
+      "dimensions": "941x1672",
+      "method": "Portrait derivative cropped from the accepted desktop CG for mobile runtime",
+      "source": "Derived from assets/cg/s54-alice-nick-karaoke.png, 2026-10-01",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s39-alice-damir-cafe.png",
+      "sha256": "AC78F268A1D82832A34DF2F930E98416C29A26E3454B750D6B15742E05899397",
+      "dimensions": "1920x900",
+      "method": "Codex imagegen current production-art run using canonical character references; exact authored cast/action; desktop CG",
+      "source": "Generated in Codex imagegen, 2026-10-01",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s39-alice-damir-cafe-portrait.png",
+      "sha256": "B106909269F53D1F27EB7ED8F26B27BB30F5F5956DC31953BAB0C8766B24F4E8",
+      "dimensions": "941x1672",
+      "method": "Portrait derivative cropped from the accepted desktop CG for mobile runtime",
+      "source": "Derived from assets/cg/s39-alice-damir-cafe.png, 2026-10-01",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s40-alice-laptop-window.png",
+      "sha256": "8192692FE1B4BAF4D0EC1228349A9732AA462B0079F0E11B01271983D656969C",
+      "dimensions": "1920x900",
+      "method": "Codex imagegen current production-art run using canonical character references; exact authored cast/action; desktop CG",
+      "source": "Generated in Codex imagegen, 2026-10-01",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s40-alice-laptop-window-portrait.png",
+      "sha256": "5A2A51086FC6A8B46A3C787C199D413E3449047C869D589DB8AA3A967D8B5533",
+      "dimensions": "941x1672",
+      "method": "Portrait derivative cropped from the accepted desktop CG for mobile runtime",
+      "source": "Derived from assets/cg/s40-alice-laptop-window.png, 2026-10-01",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s64-alice-snaefellsnes-trail.png",
+      "sha256": "697C61CFC89EAE4FB8494DD15DD223258C920E7C6BFA940C55BD626819E0AAB1",
+      "dimensions": "1920x900",
+      "method": "Codex imagegen current production-art run using canonical character references; exact authored cast/action; desktop CG",
+      "source": "Generated in Codex imagegen, 2026-10-01",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s64-alice-snaefellsnes-trail-portrait.png",
+      "sha256": "9A58B3B881D57BA3B0B043BE1604839F1398F541C9A23C8ABAF5369F362119B3",
+      "dimensions": "941x1672",
+      "method": "Portrait derivative cropped from the accepted desktop CG for mobile runtime",
+      "source": "Derived from assets/cg/s64-alice-snaefellsnes-trail.png, 2026-10-01",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s26-eastfjords-courtyard-group.png",
+      "sha256": "DFF3A7F5738EF5EA7C6369FDEFED6A81285DECE3A3892A92146047144C0C05B9",
+      "dimensions": "1920x900",
+      "method": "Codex imagegen current production-art run using canonical character references; exact authored cast/action; desktop CG",
+      "source": "Generated in Codex imagegen, 2026-10-01",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s26-eastfjords-courtyard-group-portrait.png",
+      "sha256": "CCC90CB87F985BDF8019EE2ACD37B569F6747FFF113F759F28BB8EB4A9F8995A",
+      "dimensions": "941x1672",
+      "method": "Portrait derivative cropped from the accepted desktop CG for mobile runtime",
+      "source": "Derived from assets/cg/s26-eastfjords-courtyard-group.png, 2026-10-01",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s48-guesthouse-exit-group.png",
+      "sha256": "7A695BA7A055539DC80DD04F5C69563B264F6F74F634CB71B21AF451AA29BC85",
+      "dimensions": "1920x900",
+      "method": "Codex imagegen current production-art run using canonical character references; exact authored cast/action; desktop CG",
+      "source": "Generated in Codex imagegen, 2026-10-01",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s48-guesthouse-exit-group-portrait.png",
+      "sha256": "C41E6549A0587D676CA3F3EF1136BA4B07C1AF9D3EDE90E923EC8F98D30FF03C",
+      "dimensions": "941x1672",
+      "method": "Portrait derivative cropped from the accepted desktop CG for mobile runtime",
+      "source": "Derived from assets/cg/s48-guesthouse-exit-group.png, 2026-10-01",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/branding/kiss-at-the-edge-cover.png",
+      "sha256": "8F38B9516533FA0CDC760CD44E7DFD21F05D87E7A3589F5229B90A9D5B9FA6A5",
+      "dimensions": "1920x900",
+      "method": "Codex imagegen current production-art run; store cover key visual",
+      "source": "Generated in Codex imagegen, 2026-10-01",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/branding/kiss-at-the-edge-icon.png",
+      "sha256": "4079ECAC6B6CF45523DEF3026288540858F897677CF3686712E56A61ECED6C2B",
+      "dimensions": "512x512",
+      "method": "Codex imagegen current production-art run; small canonical Alice icon",
+      "source": "Generated in Codex imagegen, 2026-10-01",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/branding/menu-hero.webp",
+      "sha256": "5667BEC6163EF908F42EA4F0FBD291307F4C9CF91EAE04019C6BA82D7C97F07B",
+      "dimensions": "1920x900",
+      "method": "Codex imagegen current production-art run; title-free menu key visual with canonical Alice",
+      "source": "Generated in Codex imagegen, 2026-10-01",
       "license": "generated for this project"
     }
   ]

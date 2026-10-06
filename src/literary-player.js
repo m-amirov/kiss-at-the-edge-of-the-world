@@ -5,107 +5,122 @@ import { createCloudSaveQueue } from './save-state.js';
 import { stageForScene } from './literary-stage.js';
 import { visualAt, visualEntryForPosition } from './literary-visual-directions.js';
 import { compileInteractivePlayback } from './literary-pacing.js';
+import { applyLiteraryLocale, createTranslator, validateLiteraryInteractionLocale } from './localization.js';
+import { literaryLocaleBundles } from './literary-localization-bundle.js';
+import { interactionBeats } from './literary-interactive-beats.js';
+import { createInputLifecycle } from './literary-input-lifecycle.js';
 
-const byId = new Map(literarySeason.scenes.map(scene => [scene.id, scene]));
+const canonicalById = new Map(literarySeason.scenes.map(scene => [scene.id, scene]));
+let runtimeSeason = literarySeason;
+let byId = canonicalById;
 const app = document.getElementById('literary-app');
 const textSettingsKey = 'kiss-at-the-edge-of-the-world:literary-settings:v1';
 const literaryCloudKey = 'kiss-at-the-edge-of-the-world:literary-season:v1';
-const routeName = { A: 'Эрик', B: 'Ник', C: 'Дамир', D: 'Алиса' };
+const routeName = { A: 'routeEric', B: 'routeNick', C: 'routeDamir', D: 'routeAlice' };
 const endingHeadings = {
-  S44: 'Дорога, которую выбирают вдвоём',
-  S45: 'Без чужого голоса',
-  S46: 'Начать заново — вместе',
-  S47: 'Свой следующий маршрут'
+  S44: 'endingEric',
+  S45: 'endingNick',
+  S46: 'endingDamir',
+  S47: 'endingAlice'
 };
 // Presentation-only focal points. Values are percentages of the source image;
 // the authored visual event remains the source of truth for which asset shows.
 const focalPointByAsset = {
-  's02-roadside-cafe.png': '50% 48%',
-  's13-skaftafell-travelers.png': '50% 42%',
-  's18-hofn-dance-lights.png': '50% 44%',
-  's26-eric-choice.png': '50% 40%',
-  's23-eric-harbor-plan.png': '50% 42%',
-  's24-nick-pier-consent.png': '50% 42%',
-  's25-damir-clarity-talk.png': '50% 42%',
-  's26-nick-choice.png': '50% 42%',
-  's26-damir-choice.png': '50% 42%',
-  's26-alice-choice.png': '50% 42%',
-  's27-egilsstadir-boardwalk-portrait.png': '50% 72%',
-  's49-reykjahlid-window-dance-portrait.png': '50% 35%',
-  's29-nick-playback.png': '50% 42%',
-  's52-glove-found.png': '50% 38%',
-  's44-eric-epilogue-month-later.png': '50% 48%',
-  's45-nick-home-epilogue-month-later.png': '50% 45%',
-  's46-damir-epilogue-month-later.png': '50% 44%',
-  's47-alice-home-epilogue-month-later.png': '67% 44%'
+  's02-roadside-cafe.webp': '50% 48%',
+  's13-skaftafell-travelers.webp': '50% 42%',
+  's18-hofn-dance-lights.webp': '50% 44%',
+  's26-eric-choice.webp': '50% 40%',
+  's23-eric-harbor-plan.webp': '50% 42%',
+  's24-nick-pier-consent.webp': '50% 42%',
+  's25-damir-clarity-talk.webp': '50% 42%',
+  's26-nick-choice.webp': '50% 42%',
+  's26-damir-choice.webp': '50% 42%',
+  's26-alice-choice.webp': '50% 42%',
+  's27-egilsstadir-boardwalk-portrait.webp': '50% 72%',
+  's49-reykjahlid-window-dance-portrait.webp': '50% 35%',
+  's29-nick-playback.webp': '50% 42%',
+  's52-glove-found.webp': '50% 38%',
+  's44-eric-epilogue-month-later.webp': '50% 48%',
+  's45-nick-home-epilogue-month-later.webp': '50% 45%',
+  's46-damir-epilogue-month-later.webp': '50% 44%',
+  's47-alice-home-epilogue-month-later.webp': '67% 44%'
 };
 const portraitAssetByDesktopAsset = {
-  's06-hveragerdi-eric-alice.png':'s06-hveragerdi-eric-alice-portrait.png',
-  's07-kitchen-pasta.png':'s07-kitchen-pasta-portrait.png',
-  's07-kitchen-cards.png':'s07-kitchen-cards-portrait.png',
-  's08-guesthouse-strap.png':'s08-guesthouse-strap-portrait.png',
-  's05-hveragerdi-road.png':'s05-hveragerdi-road-portrait.png',
-  's66-hveragerdi-greenhouse.png':'s66-hveragerdi-greenhouse-portrait.png',
-  's13-skaftafell-travelers.png':'s13-skaftafell-travelers-portrait.png',
-  's18-hofn-dance-lights.png':'s18-hofn-dance-lights-portrait.png',
-  's26-eric-choice.png':'s26-eric-choice-portrait.png',
-  's23-eric-harbor-plan.png':'s23-eric-harbor-plan-portrait.png',
-  's24-nick-pier-consent.png':'s24-nick-pier-consent-portrait.png',
-  's25-damir-clarity-talk.png':'s25-damir-clarity-talk-portrait.png',
-  's26-nick-choice.png':'s26-nick-choice-portrait.png',
-  's26-damir-choice.png':'s26-damir-choice-portrait.png',
-  's26-alice-choice.png':'s26-alice-choice-portrait.png',
-  's45-reykjavik-warm-montage.png':'s45-reykjavik-warm-montage-portrait.png',
-  's46-airport-goodbye.png':'s46-airport-goodbye-portrait.png',
-  's47-reykjavik-harbour-alice.png':'s47-reykjavik-harbour-alice-portrait.png',
-  's44-eric-epilogue-month-later.png':'s44-eric-epilogue-month-later-portrait.png',
-  's45-nick-home-epilogue-month-later.png':'s45-nick-home-epilogue-month-later-portrait.png',
-  's46-damir-epilogue-month-later.png':'s46-damir-epilogue-month-later-portrait.png',
-  's47-alice-home-epilogue-month-later.png':'s47-alice-home-epilogue-month-later-portrait.png',
-  's10-vik-road-song.png':'s10-vik-road-song-portrait.png',
-  's12-vik-cafe-damir.png':'s12-vik-cafe-damir-portrait.png',
-  's14-skaftafell-pace.png':'s14-skaftafell-pace-portrait.png',
-  's16-guesthouse-help.png':'s16-guesthouse-help-portrait.png',
-  's16-kitchen-soup.png':'s16-kitchen-soup-portrait.png'
-  ,'s17-hofn-guesthouse.png':'s17-hofn-guesthouse-portrait.png'
-  ,'s19-hofn-pool.png':'s19-hofn-pool-portrait.png'
-  ,'s20-hofn-damir-kitchen.png':'s20-hofn-damir-kitchen-portrait.png'
-  ,'s21-alice-hofn-room.png':'s21-alice-hofn-room-portrait.png'
-  ,'s61-hofn-streets.png':'s61-hofn-streets-portrait.png'
-  ,'s27-egilsstadir-boardwalk.png':'s27-egilsstadir-boardwalk-portrait.png'
-  ,'s28-hverfjall-hood.png':'s28-hverfjall-hood-portrait.png'
-  ,'s49-reykjahlid-window-dance.png':'s49-reykjahlid-window-dance-portrait.png'
-  ,'s29-nick-playback.png':'s29-nick-playback-portrait.png'
-  ,'s52-glove-found.png':'s52-glove-found-portrait.png'
-  ,'s30-damir-sleeve-promise.png':'s30-damir-sleeve-promise-portrait.png'
-  ,'s55-shum-first-step.png':'s55-shum-first-step-portrait.png'
-  ,'s31-alice-independent-evening.png':'s31-alice-independent-evening-portrait.png'
-  ,'s62-alice-bookstore-choice.png':'s62-alice-bookstore-choice-portrait.png'
-  ,'s32-eric-calendar-crossroads.png':'s32-eric-calendar-crossroads-portrait.png'
-  ,'s33-nick-teaser-reveal.png':'s33-nick-teaser-reveal-portrait.png'
-  ,'s53-nick-no-camera-pool.png':'s53-nick-no-camera-pool-portrait.png'
-  ,'s34-cancelled-evening.png':'s34-cancelled-evening-portrait.png'
-  ,'s56-cafe-musicians.png':'s56-cafe-musicians-portrait.png'
-  ,'s63-alice-solo-concert.png':'s63-alice-solo-concert-portrait.png'
-  ,'s37-eric-alice-cafe.png':'s37-eric-alice-cafe-portrait.png'
+  's06-hveragerdi-eric-alice.webp':'s06-hveragerdi-eric-alice-portrait.webp',
+  's07-kitchen-pasta.webp':'s07-kitchen-pasta-portrait.webp',
+  's07-kitchen-cards.webp':'s07-kitchen-cards-portrait.webp',
+  's08-guesthouse-strap.webp':'s08-guesthouse-strap-portrait.webp',
+  's05-hveragerdi-road.webp':'s05-hveragerdi-road-portrait.webp',
+  's66-hveragerdi-greenhouse.webp':'s66-hveragerdi-greenhouse-portrait.webp',
+  's13-skaftafell-travelers.webp':'s13-skaftafell-travelers-portrait.webp',
+  's18-hofn-dance-lights.webp':'s18-hofn-dance-lights-portrait.webp',
+  's26-eric-choice.webp':'s26-eric-choice-portrait.webp',
+  's23-eric-harbor-plan.webp':'s23-eric-harbor-plan-portrait.webp',
+  's24-nick-pier-consent.webp':'s24-nick-pier-consent-portrait.webp',
+  's25-damir-clarity-talk.webp':'s25-damir-clarity-talk-portrait.webp',
+  's26-nick-choice.webp':'s26-nick-choice-portrait.webp',
+  's26-damir-choice.webp':'s26-damir-choice-portrait.webp',
+  's26-alice-choice.webp':'s26-alice-choice-portrait.webp',
+  's45-reykjavik-warm-montage.webp':'s45-reykjavik-warm-montage-portrait.webp',
+  's46-airport-goodbye.webp':'s46-airport-goodbye-portrait.webp',
+  's47-reykjavik-harbour-alice.webp':'s47-reykjavik-harbour-alice-portrait.webp',
+  's44-eric-epilogue-month-later.webp':'s44-eric-epilogue-month-later-portrait.webp',
+  's45-nick-home-epilogue-month-later.webp':'s45-nick-home-epilogue-month-later-portrait.webp',
+  's46-damir-epilogue-month-later.webp':'s46-damir-epilogue-month-later-portrait.webp',
+  's47-alice-home-epilogue-month-later.webp':'s47-alice-home-epilogue-month-later-portrait.webp',
+  's10-vik-road-song.webp':'s10-vik-road-song-portrait.webp',
+  's12-vik-cafe-damir.webp':'s12-vik-cafe-damir-portrait.webp',
+  's14-skaftafell-pace.webp':'s14-skaftafell-pace-portrait.webp',
+  's16-guesthouse-help.webp':'s16-guesthouse-help-portrait.webp',
+  's16-kitchen-soup.webp':'s16-kitchen-soup-portrait.webp'
+  ,'s17-hofn-guesthouse.webp':'s17-hofn-guesthouse-portrait.webp'
+  ,'s19-hofn-pool.webp':'s19-hofn-pool-portrait.webp'
+  ,'s20-hofn-damir-kitchen.webp':'s20-hofn-damir-kitchen-portrait.webp'
+  ,'s21-alice-hofn-room.webp':'s21-alice-hofn-room-portrait.webp'
+  ,'s61-hofn-streets.webp':'s61-hofn-streets-portrait.webp'
+  ,'s27-egilsstadir-boardwalk.webp':'s27-egilsstadir-boardwalk-portrait.webp'
+  ,'s28-hverfjall-hood.webp':'s28-hverfjall-hood-portrait.webp'
+  ,'s49-reykjahlid-window-dance.webp':'s49-reykjahlid-window-dance-portrait.webp'
+  ,'s29-nick-playback.webp':'s29-nick-playback-portrait.webp'
+  ,'s52-glove-found.webp':'s52-glove-found-portrait.webp'
+  ,'s30-damir-sleeve-promise.webp':'s30-damir-sleeve-promise-portrait.webp'
+  ,'s55-shum-first-step.webp':'s55-shum-first-step-portrait.webp'
+  ,'s31-alice-independent-evening.webp':'s31-alice-independent-evening-portrait.webp'
+  ,'s62-alice-bookstore-choice.webp':'s62-alice-bookstore-choice-portrait.webp'
+  ,'s32-eric-calendar-crossroads.webp':'s32-eric-calendar-crossroads-portrait.webp'
+  ,'s33-nick-teaser-reveal.webp':'s33-nick-teaser-reveal-portrait.webp'
+  ,'s53-nick-no-camera-pool.webp':'s53-nick-no-camera-pool-portrait.webp'
+  ,'s34-cancelled-evening.webp':'s34-cancelled-evening-portrait.webp'
+  ,'s56-cafe-musicians.webp':'s56-cafe-musicians-portrait.webp'
+  ,'s63-alice-solo-concert.webp':'s63-alice-solo-concert-portrait.webp'
+  ,'s37-eric-alice-cafe.webp':'s37-eric-alice-cafe-portrait.webp'
+  ,'s03-editor-call-damir.webp':'s03-editor-call-damir-portrait.webp'
+  ,'s18-hofn-breakfast-group.webp':'s18-hofn-breakfast-group-portrait.webp'
+  ,'s38-alice-nick-ordinary-day.webp':'s38-alice-nick-ordinary-day-portrait.webp'
+  ,'s54-alice-nick-karaoke.webp':'s54-alice-nick-karaoke-portrait.webp'
+  ,'s39-alice-damir-cafe.webp':'s39-alice-damir-cafe-portrait.webp'
+  ,'s40-alice-laptop-window.webp':'s40-alice-laptop-window-portrait.webp'
+  ,'s64-alice-snaefellsnes-trail.webp':'s64-alice-snaefellsnes-trail-portrait.webp'
+  ,'s26-eastfjords-courtyard-group.webp':'s26-eastfjords-courtyard-group-portrait.webp'
+  ,'s48-guesthouse-exit-group.webp':'s48-guesthouse-exit-group-portrait.webp'
 };
 function assetFileForViewport(art){
   const portrait=window.matchMedia?.('(max-width: 680px) and (orientation: portrait)').matches;
   return portrait ? (portraitAssetByDesktopAsset[art.file]??art.file) : art.file;
 }
-const stageAsset = { alice:'alice-stage.png', eric:'eric-stage.png', nick:'nick-stage.png', damir:'damir-stage.png' };
+const stageAsset = { alice:'alice-stage.webp', eric:'eric-stage.webp', nick:'nick-stage.webp', damir:'damir-stage.webp' };
 // This value is consumed by a url() inside src/literary.css; resolve from the
 // stylesheet directory so the cover never becomes /src/assets/... at runtime.
-const cover = '../assets/backgrounds/snaefellsnes-master.png';
+const cover = '../assets/branding/menu-hero.webp';
 const blank = () => ({ schemaVersion:3,sceneId:'S01',position:0,choices:{},finished:false, visited:['S01'],runId:`literary-${Date.now()}-${crypto.randomUUID?.() ?? Math.random().toString(36).slice(2)}`, revision:0 });
 function parseSaved(raw) {
   try {
     const s=typeof raw==='string'?JSON.parse(raw):raw;
-    if(![1,2,3].includes(s?.schemaVersion) || !byId.has(s.sceneId) || !Number.isInteger(s.position) || s.position<0 ||
+    if(![1,2,3].includes(s?.schemaVersion) || !canonicalById.has(s.sceneId) || !Number.isInteger(s.position) || s.position<0 ||
        !s.choices || typeof s.choices!=='object' || Array.isArray(s.choices))return null;
     if(Object.entries(s.choices).some(([id,code])=> !/^S\d{2}-C\d+$/.test(id)|| !/^[A-D]$/.test(code)))return null;
     return { ...s, schemaVersion:3, position:s.schemaVersion<3?0:s.position,
-      migrationNotice:s.schemaVersion<3, visited:Array.isArray(s.visited)?s.visited.filter(id=>byId.has(id)):[s.sceneId],revision:s.revision??0 };
+      migrationNotice:s.schemaVersion<3, visited:Array.isArray(s.visited)?s.visited.filter(id=>canonicalById.has(id)):[s.sceneId],revision:s.revision??0 };
   } catch { return null; }
 }
 function loadLocal(){try{const saved=localStorage.getItem(literarySaveKey);const parsed=parseSaved(saved);
@@ -118,8 +133,28 @@ let cloudCandidate=null;
 let menuOpen=true;
 let modal=null;
 let platform=null;
+let locale='ru';
+let t=createTranslator(locale);
 let cloudQueue=null;
 let settings=(()=>{try{return{scale:1,contrast:false,motion:false,...JSON.parse(localStorage.getItem(textSettingsKey)||'{}')}}catch{return{scale:1,contrast:false,motion:false}}})();
+function loadRuntimeSeason(selectedLocale,qaLocaleOverride){
+  if(selectedLocale==='ru')return literarySeason;
+  const localeData=literaryLocaleBundles[selectedLocale];
+  if(!localeData)throw Error(`BLOCKED_EN_CORPUS_INCOMPLETE: missing locale bundle ${selectedLocale}`);
+  const firstMissingSceneIndex=literarySeason.scenes.findIndex(scene=>!localeData.scenes?.[scene.id]);
+  const sceneIds=qaLocaleOverride==='en'
+    ?literarySeason.scenes.slice(0,firstMissingSceneIndex<0?literarySeason.scenes.length:firstMissingSceneIndex).map(scene=>scene.id)
+    :literarySeason.scenes.map(scene=>scene.id);
+  if(qaLocaleOverride==='en' && !sceneIds.length)throw Error('BLOCKED_EN_CORPUS_INCOMPLETE: no contiguous localized scenes');
+  const scopedScenes=Object.fromEntries(sceneIds.map(id=>[id,localeData.scenes?.[id]]).filter(([,scene])=>scene));
+  const scopedBeats=Object.fromEntries(sceneIds.map(id=>[id,localeData.interactionBeats?.[id]]).filter(([,beats])=>beats));
+  const scopedEchoes=Object.fromEntries(Object.entries(localeData.interactionEchoes??{}).filter(([id])=>sceneIds.includes(id)));
+  const boundedData=qaLocaleOverride==='en'?{...localeData,scenes:scopedScenes,interactionBeats:scopedBeats,interactionEchoes:scopedEchoes}:localeData;
+  const interactionSceneIds=sceneIds.filter(id=>Object.prototype.hasOwnProperty.call(interactionBeats,id));
+  const interactionReport=validateLiteraryInteractionLocale(interactionBeats,boundedData,{sceneIds:interactionSceneIds});
+  if(interactionReport.status!=='PASS')throw Error('BLOCKED_EN_CORPUS_INCOMPLETE: '+interactionReport.errors.join('; '));
+  return applyLiteraryLocale(literarySeason,boundedData,{sceneIds});
+}
 function persist() {
   reader.revision=(reader.revision??0)+1;
   try {localStorage.setItem(literarySaveKey,JSON.stringify(reader));hasSave=true;}catch{}
@@ -137,26 +172,121 @@ function el(value='',className='',tag='div'){
 function button(label,handler,className=''){
   const b=el(label,className,'button');b.type='button';b.addEventListener('click',handler);return b;
 }
+const interactiveSelector='button,a,input,select,textarea,summary,[role="button"],[role="link"],[contenteditable="true"],[data-interactive]';
+const tapThreshold=10;
+const inputDebugEnabled=new URLSearchParams(window.location.search).has('inputDebug')||window.__LITERARY_INPUT_DEBUG__===true;
+const inputLifecycle=createInputLifecycle({debug:inputDebugEnabled,logger:entry=>console.debug('[literary-input]',entry)});
+let renderContext=null;
+function isInteractiveTarget(target){return target instanceof Element && Boolean(target.closest(interactiveSelector));}
+function advanceNarrative(){
+  if(menuOpen)return false;
+  const scene=byId.get(reader.sceneId);if(!scene)return false;
+  const flow=compileInteractivePlayback(scene,reader.choices,locale);
+  const current=flow[reader.position];
+  if(current?.type==='page'){
+    reader.position=Math.min(reader.position+1,flow.length);
+  }else if(current?.type==='choice'){
+    return false;
+  }else{
+    const next=nextLiteraryScene(reader.sceneId,reader.choices);
+    if(!next || !byId.has(next))return false;
+    reader.sceneId=next;reader.position=0;
+    if(!reader.visited.includes(next))reader.visited.push(next);
+  }
+  persist();renderReader();return true;
+}
+function activateStage(event,owner){
+  if(isInteractiveTarget(event.target))return false;
+  const claim=event.type==='pointerup'
+    ?inputLifecycle.pointerUp(event,owner,'advance')
+    :inputLifecycle.click(event,owner,'advance');
+  if(!claim.accepted)return false;
+  const advanced=advanceNarrative();
+  return advanced;
+}
+function bindStageNavigation(picture){
+  picture.tabIndex=0;
+  picture.dataset.stageAdvance='true';
+  picture.setAttribute('role','group');
+  picture.setAttribute('aria-label',t('stageAdvanceAria'));
+  let pointer=null;
+  const owner=renderContext;
+  picture.addEventListener('pointerdown',event=>{
+    if(event.button!==0 || isInteractiveTarget(event.target))return;
+    pointer={id:event.pointerId,x:event.clientX,y:event.clientY};inputLifecycle.pointerDown(event,owner);
+  });
+  picture.addEventListener('pointerup',event=>{
+    if(!pointer || pointer.id!==event.pointerId || isInteractiveTarget(event.target)){pointer=null;return;}
+    const moved=Math.hypot(event.clientX-pointer.x,event.clientY-pointer.y)>tapThreshold;
+    pointer=null;
+    if(moved){inputLifecycle.cancelPointer(event);return;}
+    activateStage(event,owner);
+  });
+  picture.addEventListener('pointercancel',event=>{pointer=null;inputLifecycle.cancelPointer(event)});
+  picture.addEventListener('click',event=>{
+    activateStage(event,owner);
+  });
+  picture.addEventListener('keydown',event=>{
+    if(!['Enter',' ','Spacebar','ArrowRight'].includes(event.key))return;
+    event.stopPropagation();
+    event.preventDefault();
+    if(inputLifecycle.click({...event,type:'keydown',detail:0},owner,'advance').accepted)advanceNarrative();
+  });
+}
+function bindStageTapTarget(node){
+  let pointer=null;
+  const owner=renderContext;
+  node.addEventListener('pointerdown',event=>{
+    if(event.button!==0 || isInteractiveTarget(event.target))return;
+    pointer={id:event.pointerId,x:event.clientX,y:event.clientY};inputLifecycle.pointerDown(event,owner);
+  });
+  node.addEventListener('pointerup',event=>{
+    if(!pointer || pointer.id!==event.pointerId || isInteractiveTarget(event.target)){pointer=null;return;}
+    const moved=Math.hypot(event.clientX-pointer.x,event.clientY-pointer.y)>tapThreshold;
+    pointer=null;
+    if(moved){inputLifecycle.cancelPointer(event);return;}
+    activateStage(event,owner);
+  });
+  node.addEventListener('pointercancel',event=>{pointer=null;inputLifecycle.cancelPointer(event)});
+  node.addEventListener('click',event=>{
+    activateStage(event,owner);
+  });
+}
+function bindChoiceSelection(node,owner,select){
+  node.addEventListener('pointerdown',event=>inputLifecycle.pointerDown(event,owner));
+  node.addEventListener('pointerup',event=>{
+    const claim=inputLifecycle.pointerUp(event,owner,'selectChoice');
+    if(!claim.accepted){event.preventDefault();event.stopPropagation();return;}
+    event.preventDefault();event.stopPropagation();select();
+  });
+  node.addEventListener('pointercancel',event=>inputLifecycle.cancelPointer(event));
+  node.addEventListener('click',event=>{
+    const claim=inputLifecycle.click(event,owner,'selectChoice');
+    if(!claim.accepted){event.preventDefault();event.stopPropagation();return;}
+    select();
+  });
+}
 function goHome(){menuOpen=true;modal=null;renderMenu()}
 function startNew(){
-  if(hasSave && !window.confirm('Начать новое прохождение? Текущий прогресс этой литературной редакции будет заменён.'))return;
+  if(hasSave && !window.confirm(t('confirmNew')))return;
   cloudLocked=true; reader=blank();persist();menuOpen=false;modal=null;renderReader();
 }
 function continueGame(){menuOpen=false;modal=null;renderReader()}
-function panel(heading,children){
-  modal=heading;const section=el('','home-panel');section.append(el(heading,'section-title','h2'));
-  children(section);section.append(button('← К меню',()=>{modal=null;renderMenu()},'small-button'));
+function panel(headingKey,children){
+  modal=headingKey;const section=el('','home-panel');section.append(el(t(headingKey),'section-title','h2'));
+  children(section);section.append(button(t('backMenu'),()=>{modal=null;renderMenu()},'small-button'));
   return section;
 }
 function episodeSelection(section){
-  section.append(el('Открываются по мере прохождения. При возвращении к прочитанной сцене ваши поздние решения будут сброшены, чтобы не смешивать разные варианты истории.','small-note'));
+  section.append(el(t('episodesDescription'),'small-note'));
   const known=new Set(reader.visited||[]);
-  for(let ep=1;ep<=literarySeason.episodes;ep++){
-    const first=literarySeason.scenes.find(s=>s.episode===ep);
-    const unlocked=literarySeason.scenes.some(s=>s.episode===ep&&known.has(s.id));
-    const item=button(`Эпизод ${ep}${unlocked?' · открыт':' · пока не пройден'}`,()=>{
+  const episodes=[...new Set(runtimeSeason.scenes.map(scene=>scene.episode))].sort((a,b)=>a-b);
+  for(const ep of episodes){
+    const first=runtimeSeason.scenes.find(s=>s.episode===ep);
+    const unlocked=runtimeSeason.scenes.some(s=>s.episode===ep&&known.has(s.id));
+    const item=button(t(unlocked?'episodeUnlocked':'episodeLocked',{episode:ep}),()=>{
       if(!unlocked)return;
-      if(!window.confirm(`Вернуться к началу эпизода ${ep}? Выборы, сделанные позже, будут сброшены.`))return;
+      if(!window.confirm(t('episodeReplayConfirm',{episode:ep})))return;
       // A chapter replay from its first scene requires rebuilding later state;
       // using only the original choices from before this episode is safe.
       const epChoiceIds=literarySeason.scenes.filter(s=>s.episode>=ep).map(s=>s.id);
@@ -172,47 +302,24 @@ function settingsPanel(section){
   const size=button('',()=>{const scales=[.9,1,1.12,1.25];settings.scale=scales[(scales.indexOf(settings.scale)+1)%scales.length];applySettings();draw()},'setting-button');
   const contrast=button('',()=>{settings.contrast=!settings.contrast;applySettings();draw()},'setting-button');
   const motion=button('',()=>{settings.motion=!settings.motion;applySettings();draw()},'setting-button');
-  function draw(){size.textContent=`Размер текста · ${Math.round(settings.scale*100)}%`;contrast.textContent=`Повышенная контрастность · ${settings.contrast?'да':'нет'}`;motion.textContent=`Анимация · ${settings.motion?'отключена':'системная'}`}
+  function draw(){size.textContent=t('textSize',{percent:Math.round(settings.scale*100)});contrast.textContent=t('contrast',{state:t(settings.contrast?'contrastOn':'contrastOff')});motion.textContent=t('motion',{state:t(settings.motion?'motionOff':'motionSystem')})}
   draw();section.append(size,contrast,motion);
 }
-function galleryPanel(section){
-  const images=[
-    ['Кефлавик', 'backgrounds', 'keflavik-airport-arrivals-v1.png'],
-    ['Рейкьявик', 'backgrounds', 'reykjavik-harbour-master.png'],
-    ['Skógafoss', 'backgrounds', 'skogafoss-master.png'],
-    ['Snæfellsnes', 'backgrounds', 'snaefellsnes-master.png'],
-    ['Планирование маршрута', 'cg', 's02-expedition-planning-iceland.png'],
-    ['Скафтафетль', 'cg', 's13-skaftafell-travelers.png'],
-    ['Танец в Höfn', 'cg', 's18-hofn-dance-lights.png'],
-    ['Монтаж Ника', 'cg', 's45-reykjavik-warm-montage.png'],
-    ['Прощание Дамира', 'cg', 's46-airport-goodbye.png'],
-    ['Финал Алисы', 'cg', 's47-reykjavik-harbour-alice.png']
-  ];
-  const gallery=el('','literary-gallery');
-  for(const [name,folder,file] of images){
-    const fig=el('','','figure');
-    const img=el('','','img');
-    img.src=`./assets/${folder}/${file}`;
-    img.alt=name;
-    img.loading='lazy';
-    fig.append(img,el(name,'','figcaption'));
-    gallery.append(fig);
-  }
-  section.append(gallery);
-}
 function renderMenu(){
+  platform?.setGameplayActive(false);
   menuOpen=true;app.className='literary-home';app.dataset.presentation=modal?`menu-${modal.toLowerCase()}`:'menu-home';app.style.setProperty('--cover',`url('${cover}')`);app.replaceChildren();
   const section=el('','literary-home-card');app.append(section);
-  section.append(el('РОМАНТИЧЕСКАЯ ИСТОРИЯ · ИСЛАНДИЯ','kicker'),el('Поцелуй на краю света','home-title','h1'));
-  if(modal){const draw={Эпизоды:episodeSelection,Настройки:settingsPanel,Галерея:galleryPanel}[modal];section.append(panel(modal,draw??(x=>x.append(el('Четыре самостоятельных исхода: Эрик, Ник, Дамир и Алиса. Прогресс этой редакции сохраняется отдельно от прежней короткой версии.','home-summary')))));return;}
-  section.append(el('Три недели дороги. Три возможные истории любви. И возможность выбрать себя.','home-summary'));
+  section.append(el(t('menuKicker'),'kicker'),el(t('gameTitle'),'home-title','h1'));
+  if(modal){const draw={episodes:episodeSelection,settings:settingsPanel}[modal];section.append(panel(modal,draw??(x=>x.append(el(t('standaloneSummary',{eric:t(routeName.A),nick:t(routeName.B),damir:t(routeName.C),alice:t(routeName.D)}),'home-summary')))));return;}
+  section.append(el(t('menuSummary'),'home-summary'));
   const actions=el('','home-actions');
-  if(hasSave)actions.append(button(`Продолжить · эпизод ${byId.get(reader.sceneId).episode}`,continueGame,'primary'));
-  actions.append(button('Новая игра',startNew,'primary'));
-  for(const name of ['Эпизоды','Настройки','Галерея','Об игре'])actions.append(button(name,()=>{modal=name;renderMenu()}));
+  if(hasSave)actions.append(button(t('continueEpisode',{episode:byId.get(reader.sceneId).episode}),continueGame,'primary'));
+  actions.append(button(t('newGame'),startNew,hasSave?'':'primary'));
+  const secondary=el('','home-actions-secondary');
+  for(const [name,label] of [['episodes',t('episodes')],['settings',t('settings')]])secondary.append(button(label,()=>{modal=name;renderMenu()}));
+  actions.append(secondary);
   section.append(actions);
-  section.append(el('История доступна от начала до одного из четырёх финалов. Финальная редакторская и платформенная приёмка ещё не пройдена.','small-note'));
-  if(cloudCandidate)section.append(button('Восстановить облачный прогресс',()=>{if(!window.confirm('Заменить текущее локальное сохранение облачным?'))return;cloudLocked=true;reader=cloudCandidate;cloudCandidate=null;persist();continueGame()}));
+  if(cloudCandidate)section.append(button(t('restoreCloud'),()=>{if(!window.confirm(t('restoreCloudConfirm')))return;cloudLocked=true;reader=cloudCandidate;cloudCandidate=null;persist();continueGame()}));
 }
 function renderStage(direction) {
   const stage=el('','scene-stage');
@@ -241,12 +348,14 @@ function artMode(scene, entry, choices, isEnding) {
 }
 function renderReader(){
   if(menuOpen)return renderMenu();
+  platform?.setGameplayActive(true);
   const scene=byId.get(reader.sceneId);if(!scene){goHome();return}
-  const flow=compileInteractivePlayback(scene,reader.choices);reader.position=Math.min(reader.position,flow.at(-1)?.type==='choice'?Math.max(0,flow.length-1):flow.length);
+  const flow=compileInteractivePlayback(scene,reader.choices,locale);reader.position=Math.min(reader.position,flow.at(-1)?.type==='choice'?Math.max(0,flow.length-1):flow.length);
   const isEnding=['S44','S45','S46','S47'].includes(scene.id);
   const mode=artMode(scene,flow[reader.position],reader.choices,isEnding);
   app.className='literary-reader';app.dataset.presentation=mode;app.replaceChildren();
   const current=flow[reader.position];
+  renderContext=inputLifecycle.beginRender({sceneId:reader.sceneId,choiceId:current?.type==='choice'?current.id:null});
   const visualEntry=visualEntryForPosition(flow,reader.position);
   const direction=visualAt(scene.id,visualEntry,reader.choices,stageForScene(scene.id,reader.choices).cast);
   const art=direction.art;
@@ -255,72 +364,99 @@ function renderReader(){
   if(art){const file=assetFileForViewport(art);const img=el('','','img');img.src=`./assets/${art.type==='cg'?'cg':'backgrounds'}/${file}`;img.alt='';img.decoding='async';img.dataset.desktopAsset=art.file;img.dataset.asset=file;picture.append(img);picture.style.setProperty('--focus',focalPointByAsset[file]??focalPointByAsset[art.file]??'50% 50%');if(art.type==='cg'){picture.classList.add('is-cg');picture.style.setProperty('--cg-url',`url("${img.src}")`)}}
   else picture.classList.add('no-art');
   if(art?.presentation!=='cinematic') picture.append(renderStage({...direction,mode:direction.cast.length>2?'group':direction.cast.length===2?'pair':'solo',mood:stageForScene(scene.id,reader.choices).mood}));
-  picture.append(el('','literary-vignette'));app.append(picture);
+  picture.append(el('','literary-vignette'));app.append(picture);bindStageNavigation(picture);
   const header=el('','reader-header');
-  header.append(button('☰ Меню',goHome,'small-button'),el(`ЭПИЗОД ${scene.episode} / 10 · ${scene.id}`,'chapter-index'),el('ПОЦЕЛУЙ НА КРАЮ СВЕТА','draft-indicator'));
-  header.setAttribute('aria-label',`${scene.title}. Эпизод ${scene.episode}, сцена ${scene.id}`);
+  header.append(button('☰ '+t('menu'),goHome,'small-button'),el(t('episode')+` ${scene.episode} / 10`,'chapter-index'),el(t('readerHeaderTitle'),'draft-indicator'));
+  header.setAttribute('aria-label',t('sceneAria',{title:scene.title,episode:scene.episode}));
   app.append(header);
   const sheet=el('','reader-sheet');
   if(!isEnding)sheet.setAttribute('aria-label',cleanLiteraryText(scene.title));
-  if(reader.migrationNotice){sheet.append(el('После обновления визуальных переходов продолжение начинается с начала текущей сцены. Прежний прогресс и выборы сохранены.','migration-note'));reader.migrationNotice=false;persist();}
+  if(reader.migrationNotice){sheet.append(el(t('migrationNotice'),'migration-note'));reader.migrationNotice=false;persist();}
   if(current?.type==='page'){
     const content=el('','reader-content');
     for(const paragraph of current.paragraphs)content.append(el(cleanLiteraryText(paragraph),'reader-paragraph','p'));
     sheet.append(content);
     const footer=el('','reader-footer');
     footer.append(el(`${reader.position+1} / ${flow.length}`,'page-counter'));
-    const nextDecision=flow.findIndex((entry,index)=>index>reader.position+1 && entry.type==='choice');
-    if(nextDecision>=0)footer.append(button('К выбору ⇢',()=>{reader.position=nextDecision;persist();renderReader()},'skip-to-choice'));
-    footer.append(button('Далее →',()=>{reader.position++;persist();renderReader()},'primary'));
+    footer.append(el('','advance-cue','span'));
     sheet.append(footer);
   } else if(current?.type==='choice'){
     const content=el('','reader-content');
-    content.append(el('ТВОЙ ВЫБОР','choice-label'));
+    content.append(el(t('yourChoice'),'choice-label'));
     if(current.question)content.append(el(current.question,'decision-question','p'));
     const options=el('','reader-options');
-    for(const opt of current.options)options.append(button(cleanLiteraryText(opt.label),()=>{reader.choices[current.id]=opt.code;persist();renderReader()},'choice-button'));
+    for(const opt of current.options){const choice=button(cleanLiteraryText(opt.label),()=>{},'choice-button');choice.dataset.choiceId=current.id;bindChoiceSelection(choice,renderContext,()=>{reader.choices[current.id]=opt.code;persist();renderReader()});options.append(choice);}
     content.append(options);
     sheet.append(content);
   }else{
     const next=nextLiteraryScene(reader.sceneId,reader.choices);
-    if(next && byId.has(next))sheet.append(button(`Следующая сцена → ${next}`,()=>{reader.sceneId=next;reader.position=0;if(!reader.visited.includes(next))reader.visited.push(next);persist();renderReader()},'primary'));
+    if(next && byId.has(next))sheet.append(button(t('nextScene',{scene:next}),()=>{reader.sceneId=next;reader.position=0;if(!reader.visited.includes(next))reader.visited.push(next);persist();renderReader()},'primary'));
     else if(isEnding){
       if(!reader.finished){reader.finished=true;persist()}
       sheet.classList.add('terminal-sheet');
-      sheet.append(button('Вернуться в меню',goHome,'primary'));
-      sheet.prepend(el(endingHeadings[scene.id],'reader-scene','h2'));
-    }else{sheet.append(el('Следующая сцена недоступна: ошибка структуры сценария.','reader-paragraph'));sheet.append(button('В меню',goHome,'primary'))}
+      sheet.append(button(t('returnMenu'),goHome,'primary'));
+      sheet.prepend(el(t(endingHeadings[scene.id]),'reader-scene','h2'));
+    }else{sheet.append(el(t('structuralError'),'reader-paragraph'));sheet.append(button(t('returnMenu'),goHome,'primary'))}
   }
+  bindStageTapTarget(sheet);
   app.append(sheet);
 }
 window.addEventListener('keydown',event=>{
-  if(menuOpen || !['Enter',' ','ArrowRight'].includes(event.key) || event.altKey || event.ctrlKey || event.metaKey || ['BUTTON','INPUT','TEXTAREA'].includes(document.activeElement?.tagName))return;
-  const actions=app.querySelectorAll('.reader-footer button, .reader-sheet > button.primary');
-  if(actions.length===1){event.preventDefault();actions[0].click()}
+  if(menuOpen || !['Enter',' ','Spacebar','ArrowRight'].includes(event.key) || event.altKey || event.ctrlKey || event.metaKey || isInteractiveTarget(event.target) || isInteractiveTarget(document.activeElement) || document.activeElement?.closest?.('[data-stage-advance]'))return;
+  if(advanceNarrative())event.preventDefault();
 });
-applySettings();renderMenu();
+function renderBootFailure(error){
+  platform?.setGameplayActive(false);
+  app.className='literary-home';
+  app.dataset.qaFailure=String(error?.message||'').startsWith('BLOCKED_EN_CORPUS_INCOMPLETE')?'en-corpus':'yandex-sdk';
+  const message=app.dataset.qaFailure==='en-corpus'?String(error.message):t('sdkError');
+  app.replaceChildren(el(message,'structural-error','p'));
+}
+applySettings();
 // Versioned cloud key: never interpret old 12-episode progression as new literary scenes.
 // A late cloud response cannot overwrite deliberate new-game actions or a local save.
 const bootHadLocal=hasSave;
-initYandexPlatform({cloudKey:literaryCloudKey,onCloudState:raw=>{
-  const candidate=parseSaved(raw);
-  if(!candidate || cloudLocked)return;
-  if(bootHadLocal || hasSave){cloudCandidate=candidate; if(menuOpen)renderMenu();return}
-  reader=candidate;hasSave=true;
-  try{localStorage.setItem(literarySaveKey,JSON.stringify(reader))}catch{}
-  if(menuOpen)renderMenu();
-}}).then(result=>{
+async function boot(){
+ try{
+  const result=await initYandexPlatform({cloudKey:literaryCloudKey,onCloudState:raw=>{
+   const candidate=parseSaved(raw);
+   if(!candidate || cloudLocked)return;
+   if(bootHadLocal || hasSave){cloudCandidate=candidate; if(menuOpen)renderMenu();return}
+   reader=candidate;hasSave=true;
+   try{localStorage.setItem(literarySaveKey,JSON.stringify(reader))}catch{}
+   if(menuOpen)renderMenu();
+  }});
   platform=result;
+  locale=platform.locale;
+  t=createTranslator(locale);
+  document.documentElement.lang=locale;
+  document.title=t('gameTitle');
+  app.setAttribute('aria-label',t('gameTitle'));
+  runtimeSeason=loadRuntimeSeason(locale,platform.qaLocaleOverride);
+  byId=new Map(runtimeSeason.scenes.map(scene=>[scene.id,scene]));
+  if(!byId.has(reader.sceneId))throw Error(`BLOCKED_EN_CORPUS_INCOMPLETE: missing scene ${reader.sceneId}`);
+  renderMenu();
+  platform.setGameplayActive(!menuOpen);
+  platform.markInteractiveReady();
   if(platform.mode==='yandex'){
     cloudQueue=createCloudSaveQueue(snapshot=>platform.save(snapshot));
     // Explicit new-game reset may have happened while SDK was initializing.
     if(cloudLocked)cloudQueue.enqueue(reader).catch(()=>{});
   }
-});
+ }catch(error){
+   console.error(error);
+   renderBootFailure(error);
+ }
+}
 window.__LITERARY_QA__={
   getState:()=>structuredClone(reader),
-  getFlow:()=>compileInteractivePlayback(byId.get(reader.sceneId),reader.choices),
-  getScenes:()=>literarySeason.scenes.map(s=>s.id),
+  getFlow:()=>compileInteractivePlayback(byId.get(reader.sceneId),reader.choices,locale),
+  getScenes:()=>runtimeSeason.scenes.map(s=>s.id),
+  getLocale:()=>locale,
+  getPlatformMode:()=>platform?.mode??'booting',
+  getPersistenceKeys:()=>({local:literarySaveKey,cloud:literaryCloudKey}),
   getScreen:()=>({menuOpen,sceneId:reader.sceneId,position:reader.position}),
+  getInputTrace:()=>inputLifecycle.snapshot(),
   // QA methods are strictly read-only; preview and the old game have separate state keys.
 };
+boot();

@@ -1,6 +1,8 @@
 {
   "scripts": {
-    "test:narrative": "node tests/narrative/season-state.test.mjs && node tests/narrative/save-state.test.mjs && node tests/narrative/s18-preview.test.mjs && node tests/narrative/literary-reader.test.mjs && node tests/narrative/literary-ui.test.mjs && node tests/narrative/literary-stage.test.mjs && node tests/narrative/literary-interactivity.test.mjs && node tests/narrative/release-preflight.test.mjs && node tests/narrative/literary-pacing.test.mjs && node tests/narrative/literary-visual.test.mjs && node tests/narrative/literary-qa-isolation.test.mjs",
+    "test:narrative": "node tests/narrative/season-state.test.mjs && node tests/narrative/save-state.test.mjs && node tests/narrative/s18-preview.test.mjs && node tests/narrative/literary-reader.test.mjs && node tests/narrative/literary-ui.test.mjs && node tests/narrative/literary-stage.test.mjs && node tests/narrative/literary-interactivity.test.mjs && node tests/narrative/literary-input-lifecycle.test.mjs && node tests/narrative/release-preflight.test.mjs && node tests/narrative/literary-pacing.test.mjs && node tests/narrative/literary-visual.test.mjs && node tests/narrative/literary-qa-isolation.test.mjs",
+    "test:yandex-sdk": "node --test tests/yandex/sdk-runtime.test.mjs",
+    "test:localization": "node --test tests/narrative/localization-contract.test.mjs tests/narrative/localization-runtime.test.mjs",
     "starter-kit:self-test": "node tools/starter-kit/self-test.mjs",
     "starter-kit:status": "node tools/starter-kit/status.mjs",
     "yandex:requirements:audit": "node tools/yandex/requirements-audit.mjs",
@@ -13,8 +15,12 @@
     "yandex:external:normalize": "node tools/yandex/external-evidence.mjs normalize",
     "yandex:external:audit": "node tools/yandex/external-evidence.mjs audit",
     "skills:validate": "node tools/starter-kit/self-test.mjs",
-    "literary:compile": "node tools/literary/compile.mjs",
+    "literary:compile": "node tools/literary/compile.mjs && node tools/literary/build-locale-bundle.mjs",
+    "literary:localization-bundle": "node tools/literary/build-locale-bundle.mjs",
+    "qa:english-runtime-localization": "node tools/visual-qa/english-runtime-localization.mjs",
+    "literary:translation-batches": "node tools/literary/build-translation-batches.mjs",
     "release:preflight": "node tools/release/preflight.mjs",
+    "release:local-freeze": "node tools/release/local-freeze.mjs",
     "dev": "node tools/dev-server.mjs"
   },
   "type": "module"

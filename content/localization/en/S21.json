@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "sourceLocale": "ru",
+  "source": "content/season-1-literary-episode-05.md",
+  "scenes": {
+    "S21": {
+      "title": "Day 9, Evening. The Letter No One Asked Her to Write",
+      "chunks": {
+        "S21.C000": {"title": "", "paragraphs": {
+          "S21.C000.P000": "After making her choice, Alice returned to her room before the others. Cars moved slowly beyond the window; the wind worried at the guesthouse sign. She felt hungry even though she had just eaten: it was a familiar feeling before a difficult letter.",
+          "S21.C000.P001": "Marina wanted a piece about change. In her first drafts, Alice had carefully looked for people whose change would sound beautiful: leaving, taking a risk, starting again. Now she remembered the woman who had shortened her trip, and no one had called it defeat. She remembered the gloves by the drying rack and the conversation about who would get a shelf. A road was made not only by decisions to turn. Sometimes it was made possible by asking to stay where you were.",
+          "S21.C000.P002": "Alice opened an email to her editor. She wrote: “I suggest changing the series.” She deleted “suggest” because it sounded like asking permission to have a thought. Then she put it back: the editor had the right to discuss the format, and honesty did not require sharpness.",
+          "S21.C000.P003": "She typed: “Right now I am more interested in how people negotiate a route than in the reasons they set out on it.” Then she stopped. It was easy to turn her companions into convincing examples. But none of them had agreed to become illustrations of her thesis. First she needed a form she could defend without someone else's private scenes.",
+          "S21.C000.P004": "She went to the shared kitchen for water. Ragna, the guesthouse owner, was there labelling new towels. In the morning she opened a small café across the street; she baked the guests' bread there too. Alice asked whether she could leave the other guests a note about the empty space on the drying rack; Ragna pointed to the board by the door. While Alice wrote, they talked about how difficult it was to explain to visitors that tomorrow might be an entirely different day here. Ragna said nothing like a ready-made quote. Alice did not record their conversation.",
+          "S21.C000.P005": "Back in her room, Alice tried to write the first paragraph. The version about the group was too convenient: all four of them seemed to have agreed about the drying rack at once. She added wet socks on the floor and Ragna's request to clear the passage. The version about the place also needed correcting: beyond the window was not “the severe north” but a person carrying a bag of groceries home and shielding a paper receipt from the wind. Her own version began with an admission that she had wanted to take the work of negotiation off herself by calling private conversations finished material. No angle turned her companions into scenery.",
+          "S21.C000.P006": "In her room, she opened the letter again. The beginning stayed the same, but specific boundaries appeared after it: places and shared decisions could be described; private conversations required separate permission; no one had to give a story a convincing ending. She did not know whether Marina would like this version. The decision to send it still belonged to Alice."
+        }},
+        "S21.C001": {"title": "Choice S21-C1 — What will open the letter", "paragraphs": {"S21.C001.P000": "Each option is sent instead of remaining an endless draft."}},
+        "S21.C002": {"title": "A. Begin with the people", "paragraphs": {
+          "S21.C002.P000": "“Marina, on this trip I keep noticing not the people who speak loudly about change, but the people who make room for someone else at the table. I suggest a series about small agreements on the road. Personal episodes will appear only where a person agrees to them separately.”",
+          "S21.C002.P001": "Alice reread the letter and added one example without names: the group moved the drying rack so the passage stayed clear. She pressed send."
+        }},
+        "S21.C003": {"title": "B. Begin with the place", "paragraphs": {
+          "S21.C003.P000": "“Marina, I will remember Höfn not for a postcard of the harbour, but for how weather changes the scale of any plan. I suggest writing about a place through the decisions people make inside it: where to stop, what to postpone, what to keep. I will not turn private conversations into text without consent.”",
+          "S21.C003.P001": "She attached her short paragraph about evening light on the kitchen window. She pressed send before she began editing it into impersonality."
+        }},
+        "S21.C004": {"title": "C. Begin with her own decision", "paragraphs": {
+          "S21.C004.P000": "“Marina, I realised I keep looking for ready-made heroes for the series, even though I change the angle of the text every day. I suggest including my choice honestly: how a journalist decides what does not belong to her. My companions' stories will stay outside the publication until I ask each of them.”",
+          "S21.C004.P001": "She saw that she had written “my choice” without an apology. The letter went. The screen did not answer immediately, and that was all right."
+        }},
+        "S21.C005": {"title": "Common continuation S21", "paragraphs": {
+          "S21.C005.P000": "Alice put her phone on charge, put on her jacket, and went to the waterfront along the lit town street. She did not go far and returned before late night. The sea was almost invisible; she could hear rigging knocking against the boats. In her pocket she found the receipt for the soup. On the back she wrote: “The day I stopped waiting for someone to choose me.” Then she crossed out the second half. Today she had not been part of that competition.",
+          "S21.C005.P001": "At the guesthouse she met Nick with a towel, Eric with a thermos, and Damir with a bag of groceries—each busy with his own task. Nick asked whether she had managed to walk. She said yes. He did not ask why she had not gone with him. The group remained a group.",
+          "S21.C005.P002": "On the morning of day ten, Marina's reply arrived."
+        }},
+        "S21.C006": {"title": "S21-M-A — after the letter about the people", "paragraphs": {"S21.C006.P000": "“The drying rack works as a scene, but give me more than agreement—give me friction: who wanted the whole shelf? Show the paragraph to the people who can recognise themselves.” Alice replied that she would send a version with the wet socks and the lowered camera after checking the recognisable lines. Her notebook now held a task for the day, not a stamp of approval."}},
+        "S21.C007": {"title": "S21-M-B — after the letter about the place", "paragraphs": {"S21.C007.P000": "“I can see Höfn through the window, but so far it could be any harbour. Find an observation that belongs to this exact day, and don't invent the town's character.” Alice decided to walk the streets in daylight and ask Ragna where she bought bread for the café—not for a ready-made quote, but to check her own description."}},
+        "S21.C008": {"title": "S21-M-C — after the letter about her own decision", "paragraphs": {"S21.C008.P000": "“Your role works as an entrance, but the reader needs to see the cost of the decision. What exactly did you remove from the draft, and what replaced it? Send me the page with the edits.” Alice opened the version history, marked the empty space after Nick's confession and the shared line instead of the tourist's story. She did not forward the private notes, only her own changes."}},
+        "S21.C009": {"title": "Transition S21", "paragraphs": {"S21.C009.P000": "Alice could answer Marina after her walk. The day was only beginning. Next — S61."}},
+        "S21.C010": {"title": "Choice S21-C2 — What will Alice do with the time she kept for herself?", "paragraphs": {}},
+        "S21.C011": {"title": "A. Write to a friend about the unexpectedly pleasant evening", "paragraphs": {"S21.C011.P000": "Alice sent her friend a short message: “It turns out I like walking alone in a foreign town. I'll tell you after I get back.” She did not attach a picture—she wanted to keep the evening as she remembered it."}},
+        "S21.C012": {"title": "B. Find a bookshop for herself for tomorrow", "paragraphs": {"S21.C012.P000": "On the map, Alice marked a small bookshop a few streets from the guesthouse. The task list contained neither an article nor an interview. She closed her phone and, for the first time that day, thought not about the trip's deadlines but about which book she might like to take home."}}
+      }
+    }
+  }
+}

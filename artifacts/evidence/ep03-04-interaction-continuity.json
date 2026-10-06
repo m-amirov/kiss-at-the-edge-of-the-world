@@ -1,0 +1,3008 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "run": "CEOS audit-repair-loop 2026-10-02T17-07-38-449Z-audit-repair-loop-e694eb",
+  "head": "7b8e9969a1c4ee11769fb27e13ac340509c5c7d5",
+  "baseUrl": "http://127.0.0.1:4173/literary.html",
+  "locales": [
+    "ru",
+    "en"
+  ],
+  "viewports": [
+    {
+      "width": 1920,
+      "height": 900
+    },
+    {
+      "width": 390,
+      "height": 844
+    },
+    {
+      "width": 360,
+      "height": 640
+    }
+  ],
+  "scenes": {
+    "S11": {
+      "authoredChoiceId": "S11-C1",
+      "extraChoiceIds": [
+        "S11-C90",
+        "S11-C91"
+      ],
+      "authoredCodes": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    "S15": {
+      "authoredChoiceId": "S15-C1",
+      "extraChoiceIds": [
+        "S15-C90",
+        "S15-C91"
+      ],
+      "authoredCodes": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    "S16": {
+      "authoredChoiceId": "S16-C1",
+      "extraChoiceIds": [
+        "S16-C90",
+        "S16-C91"
+      ],
+      "authoredCodes": [
+        "A",
+        "B"
+      ]
+    }
+  },
+  "cases": [
+    {
+      "sceneId": "S11",
+      "locale": "ru",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "authoredCode": "A",
+      "interactions": [
+        {
+          "id": "S11-C90",
+          "selectedOption": "A",
+          "sourceRef": {
+            "chunk": 4,
+            "paragraph": 9
+          },
+          "question": "Ник приблизился к опасной воде ради отражения. Как Алиса поступит?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Попросить его немедленно отойти"
+            },
+            {
+              "code": "B",
+              "label": "Позвать Эрика, который знает границы безопасной зоны"
+            }
+          ],
+          "resultingText": "— Ник, не здесь, — сказала Алиса. Он поднял голову, а Эрик уже шёл к нему."
+        },
+        {
+          "id": "S11-C91",
+          "selectedOption": "B",
+          "sourceRef": {
+            "chunk": 6,
+            "paragraph": 8
+          },
+          "question": "После того как группа отошла от воды, что Алиса сделает рядом с Ником?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Пройти с ним по сухой дорожке"
+            },
+            {
+              "code": "B",
+              "label": "Послушать запись шагов вместе"
+            }
+          ],
+          "resultingText": "Она взяла один наушник. Они услышали одинаковые шаги на сухой дорожке, не решая заранее, что войдёт в фильм."
+        }
+      ],
+      "authored": {
+        "id": "S11-C1",
+        "code": "A",
+        "sourceRef": {
+          "chunk": 5,
+          "paragraph": 0
+        },
+        "resultingText": "Он развернул экран. На нём облако лежало в чёрном песке почти как второй остров.\n\n— Отражение. Оно будет только отсюда.",
+        "question": null,
+        "options": [
+          {
+            "code": "A",
+            "label": "Предложить безопасную точку для того же замысла"
+          },
+          {
+            "code": "B",
+            "label": "Попросить всех уйти от воды, не обсуждая кадр сейчас"
+          },
+          {
+            "code": "C",
+            "label": "Предложить сначала разобраться с правилами, затем решить вопрос о съёмке"
+          }
+        ]
+      },
+      "metrics": {
+        "samples": 4,
+        "maxClipped": 0,
+        "overflowCount": 0,
+        "internalScrollCount": 0,
+        "cyrillicNarrativeCount": 4,
+        "leakedMarkupCount": 0
+      },
+      "contradictionCount": 0,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "screenshots": []
+    },
+    {
+      "sceneId": "S11",
+      "locale": "ru",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "authoredCode": "B",
+      "interactions": [
+        {
+          "id": "S11-C90",
+          "selectedOption": "A",
+          "sourceRef": {
+            "chunk": 4,
+            "paragraph": 9
+          },
+          "question": "Ник приблизился к опасной воде ради отражения. Как Алиса поступит?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Попросить его немедленно отойти"
+            },
+            {
+              "code": "B",
+              "label": "Позвать Эрика, который знает границы безопасной зоны"
+            }
+          ],
+          "resultingText": "— Ник, не здесь, — сказала Алиса. Он поднял голову, а Эрик уже шёл к нему."
+        },
+        {
+          "id": "S11-C91",
+          "selectedOption": "B",
+          "sourceRef": {
+            "chunk": 9,
+            "paragraph": 2
+          },
+          "question": "После того как группа отошла от воды, что Алиса сделает рядом с Ником?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Пройти с ним по сухой дорожке"
+            },
+            {
+              "code": "B",
+              "label": "Послушать запись шагов вместе"
+            }
+          ],
+          "resultingText": "Она взяла один наушник. Они услышали одинаковые шаги на сухой дорожке, не решая заранее, что войдёт в фильм."
+        }
+      ],
+      "authored": {
+        "id": "S11-C1",
+        "code": "B",
+        "sourceRef": {
+          "chunk": 5,
+          "paragraph": 0
+        },
+        "resultingText": "Ник убрал камеру резче, чем нужно, но пошёл вместе с ними. На дорожке он задержался у урны и выкинул разорванную обёртку, принесённую ветром. Когда Эрик отошёл к машине, Ник сказал Алисе:\n\n— Я разозлился не на тебя. Я почти закончил съёмку и не хотел потерять её.",
+        "question": null,
+        "options": [
+          {
+            "code": "A",
+            "label": "Предложить безопасную точку для того же замысла"
+          },
+          {
+            "code": "B",
+            "label": "Попросить всех уйти от воды, не обсуждая кадр сейчас"
+          },
+          {
+            "code": "C",
+            "label": "Предложить сначала разобраться с правилами, затем решить вопрос о съёмке"
+          }
+        ]
+      },
+      "metrics": {
+        "samples": 4,
+        "maxClipped": 0,
+        "overflowCount": 0,
+        "internalScrollCount": 0,
+        "cyrillicNarrativeCount": 4,
+        "leakedMarkupCount": 0
+      },
+      "contradictionCount": 0,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "screenshots": []
+    },
+    {
+      "sceneId": "S11",
+      "locale": "ru",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "authoredCode": "C",
+      "interactions": [
+        {
+          "id": "S11-C90",
+          "selectedOption": "A",
+          "sourceRef": {
+            "chunk": 4,
+            "paragraph": 9
+          },
+          "question": "Ник приблизился к опасной воде ради отражения. Как Алиса поступит?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Попросить его немедленно отойти"
+            },
+            {
+              "code": "B",
+              "label": "Позвать Эрика, который знает границы безопасной зоны"
+            }
+          ],
+          "resultingText": "— Ник, не здесь, — сказала Алиса. Он поднял голову, а Эрик уже шёл к нему."
+        },
+        {
+          "id": "S11-C91",
+          "selectedOption": "B",
+          "sourceRef": {
+            "chunk": 9,
+            "paragraph": 0
+          },
+          "question": "После того как группа отошла от воды, что Алиса сделает рядом с Ником?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Пройти с ним по сухой дорожке"
+            },
+            {
+              "code": "B",
+              "label": "Послушать запись шагов вместе"
+            }
+          ],
+          "resultingText": "Она взяла один наушник. Они услышали одинаковые шаги на сухой дорожке, не решая заранее, что войдёт в фильм."
+        }
+      ],
+      "authored": {
+        "id": "S11-C1",
+        "code": "C",
+        "sourceRef": {
+          "chunk": 5,
+          "paragraph": 0
+        },
+        "resultingText": "— Я тоже не заметила, куда дошла вода, — сказала Алиса. — Давайте вернёмся к щиту. Ник, покажешь нам потом идею? Я хочу понять её, но не отсюда.\n\nОн медленно выпрямился.",
+        "question": null,
+        "options": [
+          {
+            "code": "A",
+            "label": "Предложить безопасную точку для того же замысла"
+          },
+          {
+            "code": "B",
+            "label": "Попросить всех уйти от воды, не обсуждая кадр сейчас"
+          },
+          {
+            "code": "C",
+            "label": "Предложить сначала разобраться с правилами, затем решить вопрос о съёмке"
+          }
+        ]
+      },
+      "metrics": {
+        "samples": 4,
+        "maxClipped": 0,
+        "overflowCount": 0,
+        "internalScrollCount": 0,
+        "cyrillicNarrativeCount": 4,
+        "leakedMarkupCount": 0
+      },
+      "contradictionCount": 0,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "screenshots": []
+    },
+    {
+      "sceneId": "S11",
+      "locale": "ru",
+      "viewport": {
+        "width": 1920,
+        "height": 900
+      },
+      "authoredCode": "A",
+      "interactions": [
+        {
+          "id": "S11-C90",
+          "selectedOption": "A",
+          "sourceRef": {
+            "chunk": 4,
+            "paragraph": 9
+          },
+          "question": "Ник приблизился к опасной воде ради отражения. Как Алиса поступит?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Попросить его немедленно отойти"
+            },
+            {
+              "code": "B",
+              "label": "Позвать Эрика, который знает границы безопасной зоны"
+            }
+          ],
+          "resultingText": "— Ник, не здесь, — сказала Алиса. Он поднял голову, а Эрик уже шёл к нему."
+        },
+        {
+          "id": "S11-C91",
+          "selectedOption": "B",
+          "sourceRef": {
+            "chunk": 6,
+            "paragraph": 8
+          },
+          "question": "После того как группа отошла от воды, что Алиса сделает рядом с Ником?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Пройти с ним по сухой дорожке"
+            },
+            {
+              "code": "B",
+              "label": "Послушать запись шагов вместе"
+            }
+          ],
+          "resultingText": "Она взяла один наушник. Они услышали одинаковые шаги на сухой дорожке, не решая заранее, что войдёт в фильм."
+        }
+      ],
+      "authored": {
+        "id": "S11-C1",
+        "code": "A",
+        "sourceRef": {
+          "chunk": 5,
+          "paragraph": 0
+        },
+        "resultingText": "Он развернул экран. На нём облако лежало в чёрном песке почти как второй остров.\n\n— Отражение. Оно будет только отсюда.",
+        "question": null,
+        "options": [
+          {
+            "code": "A",
+            "label": "Предложить безопасную точку для того же замысла"
+          },
+          {
+            "code": "B",
+            "label": "Попросить всех уйти от воды, не обсуждая кадр сейчас"
+          },
+          {
+            "code": "C",
+            "label": "Предложить сначала разобраться с правилами, затем решить вопрос о съёмке"
+          }
+        ]
+      },
+      "metrics": {
+        "samples": 24,
+        "maxClipped": 0,
+        "overflowCount": 0,
+        "internalScrollCount": 0,
+        "cyrillicNarrativeCount": 24,
+        "leakedMarkupCount": 0
+      },
+      "contradictionCount": 0,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep03-04-interaction-continuity\\S11-ru-1920x900-interaction-choice.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 1840462,
+          "sha256": "6ee6058ce22b2f54320ece68203fb1501e63f9cb6de5742eb2c068309e20bdd3"
+        },
+        {
+          "path": "output\\playwright\\ep03-04-interaction-continuity\\S11-ru-1920x900-authored-choice.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 1849047,
+          "sha256": "b7ceca72b5b7055383f12446fd237f01963a4ae5395c7f8a8ae1d78abc1d32a3"
+        }
+      ]
+    },
+    {
+      "sceneId": "S11",
+      "locale": "ru",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "authoredCode": "A",
+      "interactions": [
+        {
+          "id": "S11-C90",
+          "selectedOption": "A",
+          "sourceRef": {
+            "chunk": 4,
+            "paragraph": 9
+          },
+          "question": "Ник приблизился к опасной воде ради отражения. Как Алиса поступит?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Попросить его немедленно отойти"
+            },
+            {
+              "code": "B",
+              "label": "Позвать Эрика, который знает границы безопасной зоны"
+            }
+          ],
+          "resultingText": "— Ник, не здесь, — сказала Алиса. Он поднял голову, а Эрик уже шёл к нему."
+        },
+        {
+          "id": "S11-C91",
+          "selectedOption": "B",
+          "sourceRef": {
+            "chunk": 6,
+            "paragraph": 8
+          },
+          "question": "После того как группа отошла от воды, что Алиса сделает рядом с Ником?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Пройти с ним по сухой дорожке"
+            },
+            {
+              "code": "B",
+              "label": "Послушать запись шагов вместе"
+            }
+          ],
+          "resultingText": "Она взяла один наушник. Они услышали одинаковые шаги на сухой дорожке, не решая заранее, что войдёт в фильм."
+        }
+      ],
+      "authored": {
+        "id": "S11-C1",
+        "code": "A",
+        "sourceRef": {
+          "chunk": 5,
+          "paragraph": 0
+        },
+        "resultingText": "Он развернул экран. На нём облако лежало в чёрном песке почти как второй остров.\n\n— Отражение. Оно будет только отсюда.",
+        "question": null,
+        "options": [
+          {
+            "code": "A",
+            "label": "Предложить безопасную точку для того же замысла"
+          },
+          {
+            "code": "B",
+            "label": "Попросить всех уйти от воды, не обсуждая кадр сейчас"
+          },
+          {
+            "code": "C",
+            "label": "Предложить сначала разобраться с правилами, затем решить вопрос о съёмке"
+          }
+        ]
+      },
+      "metrics": {
+        "samples": 24,
+        "maxClipped": 0,
+        "overflowCount": 0,
+        "internalScrollCount": 0,
+        "cyrillicNarrativeCount": 24,
+        "leakedMarkupCount": 0
+      },
+      "contradictionCount": 0,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep03-04-interaction-continuity\\S11-ru-390x844-interaction-choice.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 332392,
+          "sha256": "645de9af4f50ac3e2331a116195807ccbf6e7c5dc0058a5aa97bef12ac5d7a3d"
+        },
+        {
+          "path": "output\\playwright\\ep03-04-interaction-continuity\\S11-ru-390x844-authored-choice.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 325694,
+          "sha256": "88f94494ca49dcdd615cac980ca2392b34bc2c77d2f6d1f1ee6d2d1d8ecf1e93"
+        }
+      ]
+    },
+    {
+      "sceneId": "S11",
+      "locale": "ru",
+      "viewport": {
+        "width": 360,
+        "height": 640
+      },
+      "authoredCode": "A",
+      "interactions": [
+        {
+          "id": "S11-C90",
+          "selectedOption": "A",
+          "sourceRef": {
+            "chunk": 4,
+            "paragraph": 9
+          },
+          "question": "Ник приблизился к опасной воде ради отражения. Как Алиса поступит?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Попросить его немедленно отойти"
+            },
+            {
+              "code": "B",
+              "label": "Позвать Эрика, который знает границы безопасной зоны"
+            }
+          ],
+          "resultingText": "— Ник, не здесь, — сказала Алиса. Он поднял голову, а Эрик уже шёл к нему."
+        },
+        {
+          "id": "S11-C91",
+          "selectedOption": "B",
+          "sourceRef": {
+            "chunk": 6,
+            "paragraph": 8
+          },
+          "question": "После того как группа отошла от воды, что Алиса сделает рядом с Ником?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Пройти с ним по сухой дорожке"
+            },
+            {
+              "code": "B",
+              "label": "Послушать запись шагов вместе"
+            }
+          ],
+          "resultingText": "Она взяла один наушник. Они услышали одинаковые шаги на сухой дорожке, не решая заранее, что войдёт в фильм."
+        }
+      ],
+      "authored": {
+        "id": "S11-C1",
+        "code": "A",
+        "sourceRef": {
+          "chunk": 5,
+          "paragraph": 0
+        },
+        "resultingText": "Он развернул экран. На нём облако лежало в чёрном песке почти как второй остров.\n\n— Отражение. Оно будет только отсюда.",
+        "question": null,
+        "options": [
+          {
+            "code": "A",
+            "label": "Предложить безопасную точку для того же замысла"
+          },
+          {
+            "code": "B",
+            "label": "Попросить всех уйти от воды, не обсуждая кадр сейчас"
+          },
+          {
+            "code": "C",
+            "label": "Предложить сначала разобраться с правилами, затем решить вопрос о съёмке"
+          }
+        ]
+      },
+      "metrics": {
+        "samples": 24,
+        "maxClipped": 0,
+        "overflowCount": 0,
+        "internalScrollCount": 0,
+        "cyrillicNarrativeCount": 24,
+        "leakedMarkupCount": 0
+      },
+      "contradictionCount": 0,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep03-04-interaction-continuity\\S11-ru-360x640-interaction-choice.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 246789,
+          "sha256": "0f8b588034c769999c97c795db6e686cf0b24c91f079f900fe09e582918fa863"
+        },
+        {
+          "path": "output\\playwright\\ep03-04-interaction-continuity\\S11-ru-360x640-authored-choice.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 233959,
+          "sha256": "8261d47dafbb90164de241eff180295a6ded549799e29ded46fcec2e37b3df30"
+        }
+      ]
+    },
+    {
+      "sceneId": "S15",
+      "locale": "ru",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "authoredCode": "A",
+      "interactions": [
+        {
+          "id": "S15-C90",
+          "selectedOption": "A",
+          "sourceRef": {
+            "chunk": 3,
+            "paragraph": 6
+          },
+          "question": "Ник задумался у ледяной лагуны. Что сделает Алиса?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Спросить, почему он не берётся за камеру"
+            },
+            {
+              "code": "B",
+              "label": "Подождать, пока он сам решит рассказать"
+            }
+          ],
+          "resultingText": "Ник посмотрел на воду и заговорил о фильме, который однажды боялся показать зрителям."
+        },
+        {
+          "id": "S15-C91",
+          "selectedOption": "B",
+          "sourceRef": {
+            "chunk": 3,
+            "paragraph": 26
+          },
+          "question": "После разговора о незавершённом фильме что Алиса оставит в черновике до завтра?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Оставить только увиденную границу Ника"
+            },
+            {
+              "code": "B",
+              "label": "Оставить материал для совместной проверки"
+            }
+          ],
+          "resultingText": "Алиса закрыла файл с пустым местом для Ника. До их разговора она не собиралась превращать его личное признание в готовый абзац."
+        }
+      ],
+      "authored": {
+        "id": "S15-C1",
+        "code": "A",
+        "sourceRef": null,
+        "resultingText": null
+      },
+      "metrics": {
+        "samples": 3,
+        "maxClipped": 0,
+        "overflowCount": 0,
+        "internalScrollCount": 0,
+        "cyrillicNarrativeCount": 3,
+        "leakedMarkupCount": 0
+      },
+      "contradictionCount": 0,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "screenshots": []
+    },
+    {
+      "sceneId": "S15",
+      "locale": "ru",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "authoredCode": "B",
+      "interactions": [
+        {
+          "id": "S15-C90",
+          "selectedOption": "A",
+          "sourceRef": {
+            "chunk": 3,
+            "paragraph": 6
+          },
+          "question": "Ник задумался у ледяной лагуны. Что сделает Алиса?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Спросить, почему он не берётся за камеру"
+            },
+            {
+              "code": "B",
+              "label": "Подождать, пока он сам решит рассказать"
+            }
+          ],
+          "resultingText": "Ник посмотрел на воду и заговорил о фильме, который однажды боялся показать зрителям."
+        },
+        {
+          "id": "S15-C91",
+          "selectedOption": "B",
+          "sourceRef": {
+            "chunk": 3,
+            "paragraph": 26
+          },
+          "question": "После разговора о незавершённом фильме что Алиса оставит в черновике до завтра?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Оставить только увиденную границу Ника"
+            },
+            {
+              "code": "B",
+              "label": "Оставить материал для совместной проверки"
+            }
+          ],
+          "resultingText": "Алиса закрыла файл с пустым местом для Ника. До их разговора она не собиралась превращать его личное признание в готовый абзац."
+        }
+      ],
+      "authored": {
+        "id": "S15-C1",
+        "code": "B",
+        "sourceRef": null,
+        "resultingText": null
+      },
+      "metrics": {
+        "samples": 3,
+        "maxClipped": 0,
+        "overflowCount": 0,
+        "internalScrollCount": 0,
+        "cyrillicNarrativeCount": 3,
+        "leakedMarkupCount": 0
+      },
+      "contradictionCount": 0,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "screenshots": []
+    },
+    {
+      "sceneId": "S15",
+      "locale": "ru",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "authoredCode": "C",
+      "interactions": [
+        {
+          "id": "S15-C90",
+          "selectedOption": "A",
+          "sourceRef": {
+            "chunk": 3,
+            "paragraph": 6
+          },
+          "question": "Ник задумался у ледяной лагуны. Что сделает Алиса?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Спросить, почему он не берётся за камеру"
+            },
+            {
+              "code": "B",
+              "label": "Подождать, пока он сам решит рассказать"
+            }
+          ],
+          "resultingText": "Ник посмотрел на воду и заговорил о фильме, который однажды боялся показать зрителям."
+        },
+        {
+          "id": "S15-C91",
+          "selectedOption": "B",
+          "sourceRef": {
+            "chunk": 3,
+            "paragraph": 26
+          },
+          "question": "После разговора о незавершённом фильме что Алиса оставит в черновике до завтра?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Оставить только увиденную границу Ника"
+            },
+            {
+              "code": "B",
+              "label": "Оставить материал для совместной проверки"
+            }
+          ],
+          "resultingText": "Алиса закрыла файл с пустым местом для Ника. До их разговора она не собиралась превращать его личное признание в готовый абзац."
+        }
+      ],
+      "authored": {
+        "id": "S15-C1",
+        "code": "C",
+        "sourceRef": null,
+        "resultingText": null
+      },
+      "metrics": {
+        "samples": 3,
+        "maxClipped": 0,
+        "overflowCount": 0,
+        "internalScrollCount": 0,
+        "cyrillicNarrativeCount": 3,
+        "leakedMarkupCount": 0
+      },
+      "contradictionCount": 0,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "screenshots": []
+    },
+    {
+      "sceneId": "S15",
+      "locale": "ru",
+      "viewport": {
+        "width": 1920,
+        "height": 900
+      },
+      "authoredCode": "A",
+      "interactions": [
+        {
+          "id": "S15-C90",
+          "selectedOption": "A",
+          "sourceRef": {
+            "chunk": 3,
+            "paragraph": 6
+          },
+          "question": "Ник задумался у ледяной лагуны. Что сделает Алиса?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Спросить, почему он не берётся за камеру"
+            },
+            {
+              "code": "B",
+              "label": "Подождать, пока он сам решит рассказать"
+            }
+          ],
+          "resultingText": "Ник посмотрел на воду и заговорил о фильме, который однажды боялся показать зрителям."
+        },
+        {
+          "id": "S15-C91",
+          "selectedOption": "B",
+          "sourceRef": {
+            "chunk": 3,
+            "paragraph": 26
+          },
+          "question": "После разговора о незавершённом фильме что Алиса оставит в черновике до завтра?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Оставить только увиденную границу Ника"
+            },
+            {
+              "code": "B",
+              "label": "Оставить материал для совместной проверки"
+            }
+          ],
+          "resultingText": "Алиса закрыла файл с пустым местом для Ника. До их разговора она не собиралась превращать его личное признание в готовый абзац."
+        }
+      ],
+      "authored": {
+        "id": "S15-C1",
+        "code": "A",
+        "sourceRef": null,
+        "resultingText": null
+      },
+      "metrics": {
+        "samples": 29,
+        "maxClipped": 0,
+        "overflowCount": 0,
+        "internalScrollCount": 0,
+        "cyrillicNarrativeCount": 29,
+        "leakedMarkupCount": 0
+      },
+      "contradictionCount": 0,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep03-04-interaction-continuity\\S15-ru-1920x900-interaction-choice.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 1741570,
+          "sha256": "9ecdfe00d6a2d972005992300967f4422bdfffe5ccc14aec2e0bb49d439abf23"
+        }
+      ]
+    },
+    {
+      "sceneId": "S15",
+      "locale": "ru",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "authoredCode": "A",
+      "interactions": [
+        {
+          "id": "S15-C90",
+          "selectedOption": "A",
+          "sourceRef": {
+            "chunk": 3,
+            "paragraph": 6
+          },
+          "question": "Ник задумался у ледяной лагуны. Что сделает Алиса?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Спросить, почему он не берётся за камеру"
+            },
+            {
+              "code": "B",
+              "label": "Подождать, пока он сам решит рассказать"
+            }
+          ],
+          "resultingText": "Ник посмотрел на воду и заговорил о фильме, который однажды боялся показать зрителям."
+        },
+        {
+          "id": "S15-C91",
+          "selectedOption": "B",
+          "sourceRef": {
+            "chunk": 3,
+            "paragraph": 26
+          },
+          "question": "После разговора о незавершённом фильме что Алиса оставит в черновике до завтра?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Оставить только увиденную границу Ника"
+            },
+            {
+              "code": "B",
+              "label": "Оставить материал для совместной проверки"
+            }
+          ],
+          "resultingText": "Алиса закрыла файл с пустым местом для Ника. До их разговора она не собиралась превращать его личное признание в готовый абзац."
+        }
+      ],
+      "authored": {
+        "id": "S15-C1",
+        "code": "A",
+        "sourceRef": null,
+        "resultingText": null
+      },
+      "metrics": {
+        "samples": 29,
+        "maxClipped": 0,
+        "overflowCount": 0,
+        "internalScrollCount": 0,
+        "cyrillicNarrativeCount": 29,
+        "leakedMarkupCount": 0
+      },
+      "contradictionCount": 0,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep03-04-interaction-continuity\\S15-ru-390x844-interaction-choice.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 347853,
+          "sha256": "67ffff41bfe791f6ef6db13da6d99163f9039eead8a1a180751b026c3201e8be"
+        }
+      ]
+    },
+    {
+      "sceneId": "S15",
+      "locale": "ru",
+      "viewport": {
+        "width": 360,
+        "height": 640
+      },
+      "authoredCode": "A",
+      "interactions": [
+        {
+          "id": "S15-C90",
+          "selectedOption": "A",
+          "sourceRef": {
+            "chunk": 3,
+            "paragraph": 6
+          },
+          "question": "Ник задумался у ледяной лагуны. Что сделает Алиса?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Спросить, почему он не берётся за камеру"
+            },
+            {
+              "code": "B",
+              "label": "Подождать, пока он сам решит рассказать"
+            }
+          ],
+          "resultingText": "Ник посмотрел на воду и заговорил о фильме, который однажды боялся показать зрителям."
+        },
+        {
+          "id": "S15-C91",
+          "selectedOption": "B",
+          "sourceRef": {
+            "chunk": 3,
+            "paragraph": 26
+          },
+          "question": "После разговора о незавершённом фильме что Алиса оставит в черновике до завтра?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Оставить только увиденную границу Ника"
+            },
+            {
+              "code": "B",
+              "label": "Оставить материал для совместной проверки"
+            }
+          ],
+          "resultingText": "Алиса закрыла файл с пустым местом для Ника. До их разговора она не собиралась превращать его личное признание в готовый абзац."
+        }
+      ],
+      "authored": {
+        "id": "S15-C1",
+        "code": "A",
+        "sourceRef": null,
+        "resultingText": null
+      },
+      "metrics": {
+        "samples": 29,
+        "maxClipped": 0,
+        "overflowCount": 0,
+        "internalScrollCount": 0,
+        "cyrillicNarrativeCount": 29,
+        "leakedMarkupCount": 0
+      },
+      "contradictionCount": 0,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep03-04-interaction-continuity\\S15-ru-360x640-interaction-choice.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 258211,
+          "sha256": "d90194d694d64aaebdf65b502f6e537c2bd103a7d836497482681047e912a0b5"
+        }
+      ]
+    },
+    {
+      "sceneId": "S16",
+      "locale": "ru",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "authoredCode": "A",
+      "interactions": [
+        {
+          "id": "S16-C90",
+          "selectedOption": "A",
+          "sourceRef": {
+            "chunk": 0,
+            "paragraph": 10
+          },
+          "question": "Дамир помог пострадавшей туристке и попросил десять минут без вопросов. Как Алиса уважит эту границу?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Остаться рядом, не вытягивая разговор"
+            },
+            {
+              "code": "B",
+              "label": "Дать ему тишину без попытки угадать ответ"
+            }
+          ],
+          "resultingText": "Алиса села в соседнее кресло и оставила между ними столик. Она не стала превращать его помощь туристке в новый разбор прошлого."
+        },
+        {
+          "id": "S16-C91",
+          "selectedOption": "B",
+          "sourceRef": {
+            "chunk": 2,
+            "paragraph": 4
+          },
+          "question": "На кухне перед завтрашней дорогой какую границу Алиса сохранит вокруг черновика?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Показать каждому только узнаваемые для него строки"
+            },
+            {
+              "code": "B",
+              "label": "Оставить сегодняшнюю помощь туристке вне черновика"
+            }
+          ],
+          "resultingText": "Она не внесла травму туристки в черновик. Это произошло при всех, но не стало её материалом без отдельной договорённости."
+        }
+      ],
+      "authored": {
+        "id": "S16-C1",
+        "code": "A",
+        "sourceRef": {
+          "chunk": 1,
+          "paragraph": 0
+        },
+        "resultingText": "— Я сделаю тебе чай, — сказала Алиса. — Если не хочешь, скажи.\n\n— Хочу. Без сахара, пожалуйста.",
+        "question": null,
+        "options": [
+          {
+            "code": "A",
+            "label": "Подойти с конкретной заботой и не требовать разговора"
+          },
+          {
+            "code": "B",
+            "label": "Дать ему пространство и ясно назвать, когда увидятся снова"
+          }
+        ]
+      },
+      "metrics": {
+        "samples": 4,
+        "maxClipped": 0,
+        "overflowCount": 0,
+        "internalScrollCount": 0,
+        "cyrillicNarrativeCount": 4,
+        "leakedMarkupCount": 0
+      },
+      "contradictionCount": 0,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "screenshots": []
+    },
+    {
+      "sceneId": "S16",
+      "locale": "ru",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "authoredCode": "B",
+      "interactions": [
+        {
+          "id": "S16-C90",
+          "selectedOption": "A",
+          "sourceRef": {
+            "chunk": 0,
+            "paragraph": 10
+          },
+          "question": "Дамир помог пострадавшей туристке и попросил десять минут без вопросов. Как Алиса уважит эту границу?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Остаться рядом, не вытягивая разговор"
+            },
+            {
+              "code": "B",
+              "label": "Дать ему тишину без попытки угадать ответ"
+            }
+          ],
+          "resultingText": "Алиса села в соседнее кресло и оставила между ними столик. Она не стала превращать его помощь туристке в новый разбор прошлого."
+        },
+        {
+          "id": "S16-C91",
+          "selectedOption": "B",
+          "sourceRef": {
+            "chunk": 3,
+            "paragraph": 4
+          },
+          "question": "На кухне перед завтрашней дорогой какую границу Алиса сохранит вокруг черновика?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Показать каждому только узнаваемые для него строки"
+            },
+            {
+              "code": "B",
+              "label": "Оставить сегодняшнюю помощь туристке вне черновика"
+            }
+          ],
+          "resultingText": "Она не внесла травму туристки в черновик. Это произошло при всех, но не стало её материалом без отдельной договорённости."
+        }
+      ],
+      "authored": {
+        "id": "S16-C1",
+        "code": "B",
+        "sourceRef": {
+          "chunk": 1,
+          "paragraph": 0
+        },
+        "resultingText": "— Я пойду помогу с ужином, — сказала Алиса. — Ты просил десять минут. Если потом захочешь присоединиться, мы будем на кухне. Если нет — оставлю тебе порцию.\n\nДамир выдохнул, почти беззвучно.",
+        "question": null,
+        "options": [
+          {
+            "code": "A",
+            "label": "Подойти с конкретной заботой и не требовать разговора"
+          },
+          {
+            "code": "B",
+            "label": "Дать ему пространство и ясно назвать, когда увидятся снова"
+          }
+        ]
+      },
+      "metrics": {
+        "samples": 4,
+        "maxClipped": 0,
+        "overflowCount": 0,
+        "internalScrollCount": 0,
+        "cyrillicNarrativeCount": 4,
+        "leakedMarkupCount": 0
+      },
+      "contradictionCount": 0,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "screenshots": []
+    },
+    {
+      "sceneId": "S16",
+      "locale": "ru",
+      "viewport": {
+        "width": 1920,
+        "height": 900
+      },
+      "authoredCode": "A",
+      "interactions": [
+        {
+          "id": "S16-C90",
+          "selectedOption": "A",
+          "sourceRef": {
+            "chunk": 0,
+            "paragraph": 10
+          },
+          "question": "Дамир помог пострадавшей туристке и попросил десять минут без вопросов. Как Алиса уважит эту границу?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Остаться рядом, не вытягивая разговор"
+            },
+            {
+              "code": "B",
+              "label": "Дать ему тишину без попытки угадать ответ"
+            }
+          ],
+          "resultingText": "Алиса села в соседнее кресло и оставила между ними столик. Она не стала превращать его помощь туристке в новый разбор прошлого."
+        },
+        {
+          "id": "S16-C91",
+          "selectedOption": "B",
+          "sourceRef": {
+            "chunk": 2,
+            "paragraph": 4
+          },
+          "question": "На кухне перед завтрашней дорогой какую границу Алиса сохранит вокруг черновика?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Показать каждому только узнаваемые для него строки"
+            },
+            {
+              "code": "B",
+              "label": "Оставить сегодняшнюю помощь туристке вне черновика"
+            }
+          ],
+          "resultingText": "Она не внесла травму туристки в черновик. Это произошло при всех, но не стало её материалом без отдельной договорённости."
+        }
+      ],
+      "authored": {
+        "id": "S16-C1",
+        "code": "A",
+        "sourceRef": {
+          "chunk": 1,
+          "paragraph": 0
+        },
+        "resultingText": "— Я сделаю тебе чай, — сказала Алиса. — Если не хочешь, скажи.\n\n— Хочу. Без сахара, пожалуйста.",
+        "question": null,
+        "options": [
+          {
+            "code": "A",
+            "label": "Подойти с конкретной заботой и не требовать разговора"
+          },
+          {
+            "code": "B",
+            "label": "Дать ему пространство и ясно назвать, когда увидятся снова"
+          }
+        ]
+      },
+      "metrics": {
+        "samples": 21,
+        "maxClipped": 0,
+        "overflowCount": 0,
+        "internalScrollCount": 0,
+        "cyrillicNarrativeCount": 21,
+        "leakedMarkupCount": 0
+      },
+      "contradictionCount": 0,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep03-04-interaction-continuity\\S16-ru-1920x900-interaction-choice.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 1792963,
+          "sha256": "d7024e60a32c3bfd081cc429e7e89929af29734f0b9508a14edffa8bf02c6e53"
+        },
+        {
+          "path": "output\\playwright\\ep03-04-interaction-continuity\\S16-ru-1920x900-authored-choice.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 1829241,
+          "sha256": "dc5eda2422af88d42a2b8f6327af71eb5002fc09f4c38627ab1d5e1a7f13abfb"
+        }
+      ]
+    },
+    {
+      "sceneId": "S16",
+      "locale": "ru",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "authoredCode": "A",
+      "interactions": [
+        {
+          "id": "S16-C90",
+          "selectedOption": "A",
+          "sourceRef": {
+            "chunk": 0,
+            "paragraph": 10
+          },
+          "question": "Дамир помог пострадавшей туристке и попросил десять минут без вопросов. Как Алиса уважит эту границу?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Остаться рядом, не вытягивая разговор"
+            },
+            {
+              "code": "B",
+              "label": "Дать ему тишину без попытки угадать ответ"
+            }
+          ],
+          "resultingText": "Алиса села в соседнее кресло и оставила между ними столик. Она не стала превращать его помощь туристке в новый разбор прошлого."
+        },
+        {
+          "id": "S16-C91",
+          "selectedOption": "B",
+          "sourceRef": {
+            "chunk": 2,
+            "paragraph": 4
+          },
+          "question": "На кухне перед завтрашней дорогой какую границу Алиса сохранит вокруг черновика?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Показать каждому только узнаваемые для него строки"
+            },
+            {
+              "code": "B",
+              "label": "Оставить сегодняшнюю помощь туристке вне черновика"
+            }
+          ],
+          "resultingText": "Она не внесла травму туристки в черновик. Это произошло при всех, но не стало её материалом без отдельной договорённости."
+        }
+      ],
+      "authored": {
+        "id": "S16-C1",
+        "code": "A",
+        "sourceRef": {
+          "chunk": 1,
+          "paragraph": 0
+        },
+        "resultingText": "— Я сделаю тебе чай, — сказала Алиса. — Если не хочешь, скажи.\n\n— Хочу. Без сахара, пожалуйста.",
+        "question": null,
+        "options": [
+          {
+            "code": "A",
+            "label": "Подойти с конкретной заботой и не требовать разговора"
+          },
+          {
+            "code": "B",
+            "label": "Дать ему пространство и ясно назвать, когда увидятся снова"
+          }
+        ]
+      },
+      "metrics": {
+        "samples": 21,
+        "maxClipped": 0,
+        "overflowCount": 0,
+        "internalScrollCount": 0,
+        "cyrillicNarrativeCount": 21,
+        "leakedMarkupCount": 0
+      },
+      "contradictionCount": 0,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep03-04-interaction-continuity\\S16-ru-390x844-interaction-choice.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 379631,
+          "sha256": "57e3e3f9c981a696cf5fceedfdfe546b2d99cfc9a181db968431d8b7eaee4f4a"
+        },
+        {
+          "path": "output\\playwright\\ep03-04-interaction-continuity\\S16-ru-390x844-authored-choice.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 374216,
+          "sha256": "adfe1eaa9e173cbf218e48d875eb4eb927cc7e898b94314cdb4bd6082adc3d34"
+        }
+      ]
+    },
+    {
+      "sceneId": "S16",
+      "locale": "ru",
+      "viewport": {
+        "width": 360,
+        "height": 640
+      },
+      "authoredCode": "A",
+      "interactions": [
+        {
+          "id": "S16-C90",
+          "selectedOption": "A",
+          "sourceRef": {
+            "chunk": 0,
+            "paragraph": 10
+          },
+          "question": "Дамир помог пострадавшей туристке и попросил десять минут без вопросов. Как Алиса уважит эту границу?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Остаться рядом, не вытягивая разговор"
+            },
+            {
+              "code": "B",
+              "label": "Дать ему тишину без попытки угадать ответ"
+            }
+          ],
+          "resultingText": "Алиса села в соседнее кресло и оставила между ними столик. Она не стала превращать его помощь туристке в новый разбор прошлого."
+        },
+        {
+          "id": "S16-C91",
+          "selectedOption": "B",
+          "sourceRef": {
+            "chunk": 2,
+            "paragraph": 4
+          },
+          "question": "На кухне перед завтрашней дорогой какую границу Алиса сохранит вокруг черновика?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Показать каждому только узнаваемые для него строки"
+            },
+            {
+              "code": "B",
+              "label": "Оставить сегодняшнюю помощь туристке вне черновика"
+            }
+          ],
+          "resultingText": "Она не внесла травму туристки в черновик. Это произошло при всех, но не стало её материалом без отдельной договорённости."
+        }
+      ],
+      "authored": {
+        "id": "S16-C1",
+        "code": "A",
+        "sourceRef": {
+          "chunk": 1,
+          "paragraph": 0
+        },
+        "resultingText": "— Я сделаю тебе чай, — сказала Алиса. — Если не хочешь, скажи.\n\n— Хочу. Без сахара, пожалуйста.",
+        "question": null,
+        "options": [
+          {
+            "code": "A",
+            "label": "Подойти с конкретной заботой и не требовать разговора"
+          },
+          {
+            "code": "B",
+            "label": "Дать ему пространство и ясно назвать, когда увидятся снова"
+          }
+        ]
+      },
+      "metrics": {
+        "samples": 21,
+        "maxClipped": 0,
+        "overflowCount": 0,
+        "internalScrollCount": 0,
+        "cyrillicNarrativeCount": 21,
+        "leakedMarkupCount": 0
+      },
+      "contradictionCount": 0,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep03-04-interaction-continuity\\S16-ru-360x640-interaction-choice.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 276027,
+          "sha256": "26aeba80c97d77e72637a104a3f5ca2acae51987497a32a18a559c9e4bb6d000"
+        },
+        {
+          "path": "output\\playwright\\ep03-04-interaction-continuity\\S16-ru-360x640-authored-choice.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 277980,
+          "sha256": "3e18e96983584dcf762dbb624fbbc6ed2b20f918ed79b6fca952d81b2163b920"
+        }
+      ]
+    },
+    {
+      "sceneId": "S11",
+      "locale": "en",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "authoredCode": "A",
+      "interactions": [
+        {
+          "id": "S11-C90",
+          "selectedOption": "A",
+          "sourceRef": {
+            "chunk": 4,
+            "paragraph": 9
+          },
+          "question": "Nick moves toward dangerous water for a reflection. How should Alice respond?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Ask him to move away immediately"
+            },
+            {
+              "code": "B",
+              "label": "Call Eric, who knows the safe boundary"
+            }
+          ],
+          "resultingText": "“Nick, not here,” Alice said. He looked up, and Eric was already walking toward him."
+        },
+        {
+          "id": "S11-C91",
+          "selectedOption": "B",
+          "sourceRef": {
+            "chunk": 6,
+            "paragraph": 8
+          },
+          "question": "After the group moves away from the water, what will Alice do with Nick?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Walk the dry path with him"
+            },
+            {
+              "code": "B",
+              "label": "Listen to the footsteps together"
+            }
+          ],
+          "resultingText": "She took one earbud. They heard the same footsteps on the dry path without deciding in advance what belonged in the film."
+        }
+      ],
+      "authored": {
+        "id": "S11-C1",
+        "code": "A",
+        "sourceRef": {
+          "chunk": 5,
+          "paragraph": 0
+        },
+        "resultingText": "He turned the screen toward her. The cloud lay in the black sand almost like a second island.\n\n“The reflection. It’s only here.”",
+        "question": null,
+        "options": [
+          {
+            "code": "A",
+            "label": "Suggest a safe place for the same idea"
+          },
+          {
+            "code": "B",
+            "label": "Ask everyone to move away from the water and leave the shot for later"
+          },
+          {
+            "code": "C",
+            "label": "Check the rules first, then decide about filming"
+          }
+        ]
+      },
+      "metrics": {
+        "samples": 4,
+        "maxClipped": 0,
+        "overflowCount": 0,
+        "internalScrollCount": 0,
+        "cyrillicNarrativeCount": 0,
+        "leakedMarkupCount": 0
+      },
+      "contradictionCount": 0,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "screenshots": []
+    },
+    {
+      "sceneId": "S11",
+      "locale": "en",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "authoredCode": "B",
+      "interactions": [
+        {
+          "id": "S11-C90",
+          "selectedOption": "A",
+          "sourceRef": {
+            "chunk": 4,
+            "paragraph": 9
+          },
+          "question": "Nick moves toward dangerous water for a reflection. How should Alice respond?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Ask him to move away immediately"
+            },
+            {
+              "code": "B",
+              "label": "Call Eric, who knows the safe boundary"
+            }
+          ],
+          "resultingText": "“Nick, not here,” Alice said. He looked up, and Eric was already walking toward him."
+        },
+        {
+          "id": "S11-C91",
+          "selectedOption": "B",
+          "sourceRef": {
+            "chunk": 9,
+            "paragraph": 2
+          },
+          "question": "After the group moves away from the water, what will Alice do with Nick?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Walk the dry path with him"
+            },
+            {
+              "code": "B",
+              "label": "Listen to the footsteps together"
+            }
+          ],
+          "resultingText": "She took one earbud. They heard the same footsteps on the dry path without deciding in advance what belonged in the film."
+        }
+      ],
+      "authored": {
+        "id": "S11-C1",
+        "code": "B",
+        "sourceRef": {
+          "chunk": 5,
+          "paragraph": 0
+        },
+        "resultingText": "Nick put the camera away more sharply than necessary, but went with them. On the path, he stopped by a bin and threw out a torn wrapper the wind had carried in. When Eric walked back to the car, Nick said to Alice:",
+        "question": null,
+        "options": [
+          {
+            "code": "A",
+            "label": "Suggest a safe place for the same idea"
+          },
+          {
+            "code": "B",
+            "label": "Ask everyone to move away from the water and leave the shot for later"
+          },
+          {
+            "code": "C",
+            "label": "Check the rules first, then decide about filming"
+          }
+        ]
+      },
+      "metrics": {
+        "samples": 4,
+        "maxClipped": 0,
+        "overflowCount": 0,
+        "internalScrollCount": 0,
+        "cyrillicNarrativeCount": 0,
+        "leakedMarkupCount": 0
+      },
+      "contradictionCount": 0,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "screenshots": []
+    },
+    {
+      "sceneId": "S11",
+      "locale": "en",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "authoredCode": "C",
+      "interactions": [
+        {
+          "id": "S11-C90",
+          "selectedOption": "A",
+          "sourceRef": {
+            "chunk": 4,
+            "paragraph": 9
+          },
+          "question": "Nick moves toward dangerous water for a reflection. How should Alice respond?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Ask him to move away immediately"
+            },
+            {
+              "code": "B",
+              "label": "Call Eric, who knows the safe boundary"
+            }
+          ],
+          "resultingText": "“Nick, not here,” Alice said. He looked up, and Eric was already walking toward him."
+        },
+        {
+          "id": "S11-C91",
+          "selectedOption": "B",
+          "sourceRef": {
+            "chunk": 9,
+            "paragraph": 0
+          },
+          "question": "After the group moves away from the water, what will Alice do with Nick?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Walk the dry path with him"
+            },
+            {
+              "code": "B",
+              "label": "Listen to the footsteps together"
+            }
+          ],
+          "resultingText": "She took one earbud. They heard the same footsteps on the dry path without deciding in advance what belonged in the film."
+        }
+      ],
+      "authored": {
+        "id": "S11-C1",
+        "code": "C",
+        "sourceRef": {
+          "chunk": 5,
+          "paragraph": 0
+        },
+        "resultingText": "“I didn’t notice how far the water had come either,” Alice said. “Let’s go back to the board. Nick, can you show us the idea afterward? I want to understand it, just not from here.”\n\nHe straightened slowly.",
+        "question": null,
+        "options": [
+          {
+            "code": "A",
+            "label": "Suggest a safe place for the same idea"
+          },
+          {
+            "code": "B",
+            "label": "Ask everyone to move away from the water and leave the shot for later"
+          },
+          {
+            "code": "C",
+            "label": "Check the rules first, then decide about filming"
+          }
+        ]
+      },
+      "metrics": {
+        "samples": 4,
+        "maxClipped": 0,
+        "overflowCount": 0,
+        "internalScrollCount": 0,
+        "cyrillicNarrativeCount": 0,
+        "leakedMarkupCount": 0
+      },
+      "contradictionCount": 0,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "screenshots": []
+    },
+    {
+      "sceneId": "S11",
+      "locale": "en",
+      "viewport": {
+        "width": 1920,
+        "height": 900
+      },
+      "authoredCode": "A",
+      "interactions": [
+        {
+          "id": "S11-C90",
+          "selectedOption": "A",
+          "sourceRef": {
+            "chunk": 4,
+            "paragraph": 9
+          },
+          "question": "Nick moves toward dangerous water for a reflection. How should Alice respond?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Ask him to move away immediately"
+            },
+            {
+              "code": "B",
+              "label": "Call Eric, who knows the safe boundary"
+            }
+          ],
+          "resultingText": "“Nick, not here,” Alice said. He looked up, and Eric was already walking toward him."
+        },
+        {
+          "id": "S11-C91",
+          "selectedOption": "B",
+          "sourceRef": {
+            "chunk": 6,
+            "paragraph": 8
+          },
+          "question": "After the group moves away from the water, what will Alice do with Nick?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Walk the dry path with him"
+            },
+            {
+              "code": "B",
+              "label": "Listen to the footsteps together"
+            }
+          ],
+          "resultingText": "She took one earbud. They heard the same footsteps on the dry path without deciding in advance what belonged in the film."
+        }
+      ],
+      "authored": {
+        "id": "S11-C1",
+        "code": "A",
+        "sourceRef": {
+          "chunk": 5,
+          "paragraph": 0
+        },
+        "resultingText": "He turned the screen toward her. The cloud lay in the black sand almost like a second island.\n\n“The reflection. It’s only here.”",
+        "question": null,
+        "options": [
+          {
+            "code": "A",
+            "label": "Suggest a safe place for the same idea"
+          },
+          {
+            "code": "B",
+            "label": "Ask everyone to move away from the water and leave the shot for later"
+          },
+          {
+            "code": "C",
+            "label": "Check the rules first, then decide about filming"
+          }
+        ]
+      },
+      "metrics": {
+        "samples": 27,
+        "maxClipped": 0,
+        "overflowCount": 0,
+        "internalScrollCount": 0,
+        "cyrillicNarrativeCount": 0,
+        "leakedMarkupCount": 0
+      },
+      "contradictionCount": 0,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep03-04-interaction-continuity\\S11-en-1920x900-interaction-choice.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 1846749,
+          "sha256": "2b07ffeaf141aa0e23d294280a7617ac19beacdda5059ecfa283da9b18ed46a8"
+        },
+        {
+          "path": "output\\playwright\\ep03-04-interaction-continuity\\S11-en-1920x900-authored-choice.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 1849299,
+          "sha256": "14a6725ec1bb629d16db213ef2383f378e99190fdb249cbd8a1e7cf7c2b7d6db"
+        }
+      ]
+    },
+    {
+      "sceneId": "S11",
+      "locale": "en",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "authoredCode": "A",
+      "interactions": [
+        {
+          "id": "S11-C90",
+          "selectedOption": "A",
+          "sourceRef": {
+            "chunk": 4,
+            "paragraph": 9
+          },
+          "question": "Nick moves toward dangerous water for a reflection. How should Alice respond?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Ask him to move away immediately"
+            },
+            {
+              "code": "B",
+              "label": "Call Eric, who knows the safe boundary"
+            }
+          ],
+          "resultingText": "“Nick, not here,” Alice said. He looked up, and Eric was already walking toward him."
+        },
+        {
+          "id": "S11-C91",
+          "selectedOption": "B",
+          "sourceRef": {
+            "chunk": 6,
+            "paragraph": 8
+          },
+          "question": "After the group moves away from the water, what will Alice do with Nick?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Walk the dry path with him"
+            },
+            {
+              "code": "B",
+              "label": "Listen to the footsteps together"
+            }
+          ],
+          "resultingText": "She took one earbud. They heard the same footsteps on the dry path without deciding in advance what belonged in the film."
+        }
+      ],
+      "authored": {
+        "id": "S11-C1",
+        "code": "A",
+        "sourceRef": {
+          "chunk": 5,
+          "paragraph": 0
+        },
+        "resultingText": "He turned the screen toward her. The cloud lay in the black sand almost like a second island.\n\n“The reflection. It’s only here.”",
+        "question": null,
+        "options": [
+          {
+            "code": "A",
+            "label": "Suggest a safe place for the same idea"
+          },
+          {
+            "code": "B",
+            "label": "Ask everyone to move away from the water and leave the shot for later"
+          },
+          {
+            "code": "C",
+            "label": "Check the rules first, then decide about filming"
+          }
+        ]
+      },
+      "metrics": {
+        "samples": 27,
+        "maxClipped": 0,
+        "overflowCount": 0,
+        "internalScrollCount": 0,
+        "cyrillicNarrativeCount": 0,
+        "leakedMarkupCount": 0
+      },
+      "contradictionCount": 0,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep03-04-interaction-continuity\\S11-en-390x844-interaction-choice.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 335070,
+          "sha256": "5c5186cbe62990f79d156622cff66eb8efc49167ba53c67a70e2408729183f7e"
+        },
+        {
+          "path": "output\\playwright\\ep03-04-interaction-continuity\\S11-en-390x844-authored-choice.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 331834,
+          "sha256": "97183061c4523d17550c2046d4564e3ecd3c895fb826e16298d7aedc22d141bc"
+        }
+      ]
+    },
+    {
+      "sceneId": "S11",
+      "locale": "en",
+      "viewport": {
+        "width": 360,
+        "height": 640
+      },
+      "authoredCode": "A",
+      "interactions": [
+        {
+          "id": "S11-C90",
+          "selectedOption": "A",
+          "sourceRef": {
+            "chunk": 4,
+            "paragraph": 9
+          },
+          "question": "Nick moves toward dangerous water for a reflection. How should Alice respond?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Ask him to move away immediately"
+            },
+            {
+              "code": "B",
+              "label": "Call Eric, who knows the safe boundary"
+            }
+          ],
+          "resultingText": "“Nick, not here,” Alice said. He looked up, and Eric was already walking toward him."
+        },
+        {
+          "id": "S11-C91",
+          "selectedOption": "B",
+          "sourceRef": {
+            "chunk": 6,
+            "paragraph": 8
+          },
+          "question": "After the group moves away from the water, what will Alice do with Nick?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Walk the dry path with him"
+            },
+            {
+              "code": "B",
+              "label": "Listen to the footsteps together"
+            }
+          ],
+          "resultingText": "She took one earbud. They heard the same footsteps on the dry path without deciding in advance what belonged in the film."
+        }
+      ],
+      "authored": {
+        "id": "S11-C1",
+        "code": "A",
+        "sourceRef": {
+          "chunk": 5,
+          "paragraph": 0
+        },
+        "resultingText": "He turned the screen toward her. The cloud lay in the black sand almost like a second island.\n\n“The reflection. It’s only here.”",
+        "question": null,
+        "options": [
+          {
+            "code": "A",
+            "label": "Suggest a safe place for the same idea"
+          },
+          {
+            "code": "B",
+            "label": "Ask everyone to move away from the water and leave the shot for later"
+          },
+          {
+            "code": "C",
+            "label": "Check the rules first, then decide about filming"
+          }
+        ]
+      },
+      "metrics": {
+        "samples": 27,
+        "maxClipped": 0,
+        "overflowCount": 0,
+        "internalScrollCount": 0,
+        "cyrillicNarrativeCount": 0,
+        "leakedMarkupCount": 0
+      },
+      "contradictionCount": 0,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep03-04-interaction-continuity\\S11-en-360x640-interaction-choice.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 252679,
+          "sha256": "a5b9265e6a0832f3130f2d68ec24dccaef12981ea525426a77362dec7612440f"
+        },
+        {
+          "path": "output\\playwright\\ep03-04-interaction-continuity\\S11-en-360x640-authored-choice.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 231433,
+          "sha256": "a08d665e10d83dde4f9562f2320607fc351028267a8338689adca98f574c9ffc"
+        }
+      ]
+    },
+    {
+      "sceneId": "S15",
+      "locale": "en",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "authoredCode": "A",
+      "interactions": [
+        {
+          "id": "S15-C90",
+          "selectedOption": "A",
+          "sourceRef": {
+            "chunk": 3,
+            "paragraph": 6
+          },
+          "question": "Nick pauses by the glacier lagoon. What should Alice do?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Ask why he is not reaching for the camera"
+            },
+            {
+              "code": "B",
+              "label": "Wait until he decides to tell her"
+            }
+          ],
+          "resultingText": "Nick looked at the water and spoke about a film he had once been afraid to show an audience."
+        },
+        {
+          "id": "S15-C91",
+          "selectedOption": "B",
+          "sourceRef": {
+            "chunk": 3,
+            "paragraph": 26
+          },
+          "question": "After Nick talks about the unfinished film, what will Alice leave in the draft until tomorrow?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Keep only the boundary she actually saw"
+            },
+            {
+              "code": "B",
+              "label": "Leave the material open for both of them to review"
+            }
+          ],
+          "resultingText": "Alice closed the file with a blank space for Nick. Until their conversation, she would not turn his personal confession into a finished paragraph."
+        }
+      ],
+      "authored": {
+        "id": "S15-C1",
+        "code": "A",
+        "sourceRef": null,
+        "resultingText": null
+      },
+      "metrics": {
+        "samples": 3,
+        "maxClipped": 0,
+        "overflowCount": 0,
+        "internalScrollCount": 0,
+        "cyrillicNarrativeCount": 0,
+        "leakedMarkupCount": 0
+      },
+      "contradictionCount": 0,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "screenshots": []
+    },
+    {
+      "sceneId": "S15",
+      "locale": "en",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "authoredCode": "B",
+      "interactions": [
+        {
+          "id": "S15-C90",
+          "selectedOption": "A",
+          "sourceRef": {
+            "chunk": 3,
+            "paragraph": 6
+          },
+          "question": "Nick pauses by the glacier lagoon. What should Alice do?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Ask why he is not reaching for the camera"
+            },
+            {
+              "code": "B",
+              "label": "Wait until he decides to tell her"
+            }
+          ],
+          "resultingText": "Nick looked at the water and spoke about a film he had once been afraid to show an audience."
+        },
+        {
+          "id": "S15-C91",
+          "selectedOption": "B",
+          "sourceRef": {
+            "chunk": 3,
+            "paragraph": 26
+          },
+          "question": "After Nick talks about the unfinished film, what will Alice leave in the draft until tomorrow?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Keep only the boundary she actually saw"
+            },
+            {
+              "code": "B",
+              "label": "Leave the material open for both of them to review"
+            }
+          ],
+          "resultingText": "Alice closed the file with a blank space for Nick. Until their conversation, she would not turn his personal confession into a finished paragraph."
+        }
+      ],
+      "authored": {
+        "id": "S15-C1",
+        "code": "B",
+        "sourceRef": null,
+        "resultingText": null
+      },
+      "metrics": {
+        "samples": 3,
+        "maxClipped": 0,
+        "overflowCount": 0,
+        "internalScrollCount": 0,
+        "cyrillicNarrativeCount": 0,
+        "leakedMarkupCount": 0
+      },
+      "contradictionCount": 0,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "screenshots": []
+    },
+    {
+      "sceneId": "S15",
+      "locale": "en",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "authoredCode": "C",
+      "interactions": [
+        {
+          "id": "S15-C90",
+          "selectedOption": "A",
+          "sourceRef": {
+            "chunk": 3,
+            "paragraph": 6
+          },
+          "question": "Nick pauses by the glacier lagoon. What should Alice do?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Ask why he is not reaching for the camera"
+            },
+            {
+              "code": "B",
+              "label": "Wait until he decides to tell her"
+            }
+          ],
+          "resultingText": "Nick looked at the water and spoke about a film he had once been afraid to show an audience."
+        },
+        {
+          "id": "S15-C91",
+          "selectedOption": "B",
+          "sourceRef": {
+            "chunk": 3,
+            "paragraph": 26
+          },
+          "question": "After Nick talks about the unfinished film, what will Alice leave in the draft until tomorrow?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Keep only the boundary she actually saw"
+            },
+            {
+              "code": "B",
+              "label": "Leave the material open for both of them to review"
+            }
+          ],
+          "resultingText": "Alice closed the file with a blank space for Nick. Until their conversation, she would not turn his personal confession into a finished paragraph."
+        }
+      ],
+      "authored": {
+        "id": "S15-C1",
+        "code": "C",
+        "sourceRef": null,
+        "resultingText": null
+      },
+      "metrics": {
+        "samples": 3,
+        "maxClipped": 0,
+        "overflowCount": 0,
+        "internalScrollCount": 0,
+        "cyrillicNarrativeCount": 0,
+        "leakedMarkupCount": 0
+      },
+      "contradictionCount": 0,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "screenshots": []
+    },
+    {
+      "sceneId": "S15",
+      "locale": "en",
+      "viewport": {
+        "width": 1920,
+        "height": 900
+      },
+      "authoredCode": "A",
+      "interactions": [
+        {
+          "id": "S15-C90",
+          "selectedOption": "A",
+          "sourceRef": {
+            "chunk": 3,
+            "paragraph": 6
+          },
+          "question": "Nick pauses by the glacier lagoon. What should Alice do?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Ask why he is not reaching for the camera"
+            },
+            {
+              "code": "B",
+              "label": "Wait until he decides to tell her"
+            }
+          ],
+          "resultingText": "Nick looked at the water and spoke about a film he had once been afraid to show an audience."
+        },
+        {
+          "id": "S15-C91",
+          "selectedOption": "B",
+          "sourceRef": {
+            "chunk": 3,
+            "paragraph": 26
+          },
+          "question": "After Nick talks about the unfinished film, what will Alice leave in the draft until tomorrow?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Keep only the boundary she actually saw"
+            },
+            {
+              "code": "B",
+              "label": "Leave the material open for both of them to review"
+            }
+          ],
+          "resultingText": "Alice closed the file with a blank space for Nick. Until their conversation, she would not turn his personal confession into a finished paragraph."
+        }
+      ],
+      "authored": {
+        "id": "S15-C1",
+        "code": "A",
+        "sourceRef": null,
+        "resultingText": null
+      },
+      "metrics": {
+        "samples": 33,
+        "maxClipped": 0,
+        "overflowCount": 0,
+        "internalScrollCount": 0,
+        "cyrillicNarrativeCount": 0,
+        "leakedMarkupCount": 0
+      },
+      "contradictionCount": 0,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep03-04-interaction-continuity\\S15-en-1920x900-interaction-choice.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 1744801,
+          "sha256": "aabafea3d3f3e89603871821cf80da69c0e691187841b3baa687fe888551cbed"
+        }
+      ]
+    },
+    {
+      "sceneId": "S15",
+      "locale": "en",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "authoredCode": "A",
+      "interactions": [
+        {
+          "id": "S15-C90",
+          "selectedOption": "A",
+          "sourceRef": {
+            "chunk": 3,
+            "paragraph": 6
+          },
+          "question": "Nick pauses by the glacier lagoon. What should Alice do?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Ask why he is not reaching for the camera"
+            },
+            {
+              "code": "B",
+              "label": "Wait until he decides to tell her"
+            }
+          ],
+          "resultingText": "Nick looked at the water and spoke about a film he had once been afraid to show an audience."
+        },
+        {
+          "id": "S15-C91",
+          "selectedOption": "B",
+          "sourceRef": {
+            "chunk": 3,
+            "paragraph": 26
+          },
+          "question": "After Nick talks about the unfinished film, what will Alice leave in the draft until tomorrow?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Keep only the boundary she actually saw"
+            },
+            {
+              "code": "B",
+              "label": "Leave the material open for both of them to review"
+            }
+          ],
+          "resultingText": "Alice closed the file with a blank space for Nick. Until their conversation, she would not turn his personal confession into a finished paragraph."
+        }
+      ],
+      "authored": {
+        "id": "S15-C1",
+        "code": "A",
+        "sourceRef": null,
+        "resultingText": null
+      },
+      "metrics": {
+        "samples": 33,
+        "maxClipped": 0,
+        "overflowCount": 0,
+        "internalScrollCount": 0,
+        "cyrillicNarrativeCount": 0,
+        "leakedMarkupCount": 0
+      },
+      "contradictionCount": 0,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep03-04-interaction-continuity\\S15-en-390x844-interaction-choice.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 351427,
+          "sha256": "92b0007fdc3410bc41862faf1221baa674594aa17566b8e4bce487c5aa15c65c"
+        }
+      ]
+    },
+    {
+      "sceneId": "S15",
+      "locale": "en",
+      "viewport": {
+        "width": 360,
+        "height": 640
+      },
+      "authoredCode": "A",
+      "interactions": [
+        {
+          "id": "S15-C90",
+          "selectedOption": "A",
+          "sourceRef": {
+            "chunk": 3,
+            "paragraph": 6
+          },
+          "question": "Nick pauses by the glacier lagoon. What should Alice do?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Ask why he is not reaching for the camera"
+            },
+            {
+              "code": "B",
+              "label": "Wait until he decides to tell her"
+            }
+          ],
+          "resultingText": "Nick looked at the water and spoke about a film he had once been afraid to show an audience."
+        },
+        {
+          "id": "S15-C91",
+          "selectedOption": "B",
+          "sourceRef": {
+            "chunk": 3,
+            "paragraph": 26
+          },
+          "question": "After Nick talks about the unfinished film, what will Alice leave in the draft until tomorrow?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Keep only the boundary she actually saw"
+            },
+            {
+              "code": "B",
+              "label": "Leave the material open for both of them to review"
+            }
+          ],
+          "resultingText": "Alice closed the file with a blank space for Nick. Until their conversation, she would not turn his personal confession into a finished paragraph."
+        }
+      ],
+      "authored": {
+        "id": "S15-C1",
+        "code": "A",
+        "sourceRef": null,
+        "resultingText": null
+      },
+      "metrics": {
+        "samples": 33,
+        "maxClipped": 0,
+        "overflowCount": 0,
+        "internalScrollCount": 0,
+        "cyrillicNarrativeCount": 0,
+        "leakedMarkupCount": 0
+      },
+      "contradictionCount": 0,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep03-04-interaction-continuity\\S15-en-360x640-interaction-choice.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 263401,
+          "sha256": "bf93d589aedc2ba09781c6e439869ac1ed516a391fad32eb6981127371f77d82"
+        }
+      ]
+    },
+    {
+      "sceneId": "S16",
+      "locale": "en",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "authoredCode": "A",
+      "interactions": [
+        {
+          "id": "S16-C90",
+          "selectedOption": "A",
+          "sourceRef": {
+            "chunk": 0,
+            "paragraph": 10
+          },
+          "question": "Damir has just helped the injured tourist and asks for ten minutes without questions. How will Alice respect that boundary?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Stay nearby without pulling him into a talk"
+            },
+            {
+              "code": "B",
+              "label": "Give him quiet without guessing his answer"
+            }
+          ],
+          "resultingText": "Alice sat in the neighbouring chair and left the small table between them. She did not turn his help into another examination of their past."
+        },
+        {
+          "id": "S16-C91",
+          "selectedOption": "B",
+          "sourceRef": {
+            "chunk": 2,
+            "paragraph": 4
+          },
+          "question": "At the kitchen table, what boundary will Alice keep around tomorrow’s draft?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Show each person only recognizable lines"
+            },
+            {
+              "code": "B",
+              "label": "Leave today’s help outside the draft"
+            }
+          ],
+          "resultingText": "She kept the tourist’s injury out of the draft. It happened in front of everyone, but it was not Alice’s material without a separate agreement."
+        }
+      ],
+      "authored": {
+        "id": "S16-C1",
+        "code": "A",
+        "sourceRef": {
+          "chunk": 1,
+          "paragraph": 0
+        },
+        "resultingText": "“I do. No sugar, please.”\n\nShe put on the kettle and found two mismatched mugs: one with a faded map of the island, the other with a whale in an absurd scarf. She kept the map and handed Damir the whale. He looked at the drawing.",
+        "question": null,
+        "options": [
+          {
+            "code": "A",
+            "label": "Offer concrete care without asking for a conversation"
+          },
+          {
+            "code": "B",
+            "label": "Give him space and clearly name when they will see each other again"
+          }
+        ]
+      },
+      "metrics": {
+        "samples": 4,
+        "maxClipped": 0,
+        "overflowCount": 0,
+        "internalScrollCount": 0,
+        "cyrillicNarrativeCount": 0,
+        "leakedMarkupCount": 0
+      },
+      "contradictionCount": 0,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "screenshots": []
+    },
+    {
+      "sceneId": "S16",
+      "locale": "en",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "authoredCode": "B",
+      "interactions": [
+        {
+          "id": "S16-C90",
+          "selectedOption": "A",
+          "sourceRef": {
+            "chunk": 0,
+            "paragraph": 10
+          },
+          "question": "Damir has just helped the injured tourist and asks for ten minutes without questions. How will Alice respect that boundary?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Stay nearby without pulling him into a talk"
+            },
+            {
+              "code": "B",
+              "label": "Give him quiet without guessing his answer"
+            }
+          ],
+          "resultingText": "Alice sat in the neighbouring chair and left the small table between them. She did not turn his help into another examination of their past."
+        },
+        {
+          "id": "S16-C91",
+          "selectedOption": "B",
+          "sourceRef": {
+            "chunk": 3,
+            "paragraph": 4
+          },
+          "question": "At the kitchen table, what boundary will Alice keep around tomorrow’s draft?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Show each person only recognizable lines"
+            },
+            {
+              "code": "B",
+              "label": "Leave today’s help outside the draft"
+            }
+          ],
+          "resultingText": "She kept the tourist’s injury out of the draft. It happened in front of everyone, but it was not Alice’s material without a separate agreement."
+        }
+      ],
+      "authored": {
+        "id": "S16-C1",
+        "code": "B",
+        "sourceRef": {
+          "chunk": 1,
+          "paragraph": 0
+        },
+        "resultingText": "“I’ll help with dinner,” Alice said. “You asked for ten minutes. If you want to join us afterward, we’ll be in the kitchen. If not, I’ll leave you a portion.”\n\nDamir exhaled, almost silently.",
+        "question": null,
+        "options": [
+          {
+            "code": "A",
+            "label": "Offer concrete care without asking for a conversation"
+          },
+          {
+            "code": "B",
+            "label": "Give him space and clearly name when they will see each other again"
+          }
+        ]
+      },
+      "metrics": {
+        "samples": 4,
+        "maxClipped": 0,
+        "overflowCount": 0,
+        "internalScrollCount": 0,
+        "cyrillicNarrativeCount": 0,
+        "leakedMarkupCount": 0
+      },
+      "contradictionCount": 0,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "screenshots": []
+    },
+    {
+      "sceneId": "S16",
+      "locale": "en",
+      "viewport": {
+        "width": 1920,
+        "height": 900
+      },
+      "authoredCode": "A",
+      "interactions": [
+        {
+          "id": "S16-C90",
+          "selectedOption": "A",
+          "sourceRef": {
+            "chunk": 0,
+            "paragraph": 10
+          },
+          "question": "Damir has just helped the injured tourist and asks for ten minutes without questions. How will Alice respect that boundary?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Stay nearby without pulling him into a talk"
+            },
+            {
+              "code": "B",
+              "label": "Give him quiet without guessing his answer"
+            }
+          ],
+          "resultingText": "Alice sat in the neighbouring chair and left the small table between them. She did not turn his help into another examination of their past."
+        },
+        {
+          "id": "S16-C91",
+          "selectedOption": "B",
+          "sourceRef": {
+            "chunk": 2,
+            "paragraph": 4
+          },
+          "question": "At the kitchen table, what boundary will Alice keep around tomorrow’s draft?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Show each person only recognizable lines"
+            },
+            {
+              "code": "B",
+              "label": "Leave today’s help outside the draft"
+            }
+          ],
+          "resultingText": "She kept the tourist’s injury out of the draft. It happened in front of everyone, but it was not Alice’s material without a separate agreement."
+        }
+      ],
+      "authored": {
+        "id": "S16-C1",
+        "code": "A",
+        "sourceRef": {
+          "chunk": 1,
+          "paragraph": 0
+        },
+        "resultingText": "“I do. No sugar, please.”\n\nShe put on the kettle and found two mismatched mugs: one with a faded map of the island, the other with a whale in an absurd scarf. She kept the map and handed Damir the whale. He looked at the drawing.",
+        "question": null,
+        "options": [
+          {
+            "code": "A",
+            "label": "Offer concrete care without asking for a conversation"
+          },
+          {
+            "code": "B",
+            "label": "Give him space and clearly name when they will see each other again"
+          }
+        ]
+      },
+      "metrics": {
+        "samples": 22,
+        "maxClipped": 0,
+        "overflowCount": 0,
+        "internalScrollCount": 0,
+        "cyrillicNarrativeCount": 0,
+        "leakedMarkupCount": 0
+      },
+      "contradictionCount": 0,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep03-04-interaction-continuity\\S16-en-1920x900-interaction-choice.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 1797416,
+          "sha256": "0a1f4c6b23a5c9b55f44e92efb5f9cb5573188a42fc36a07b5fa4b2981aaa5b6"
+        },
+        {
+          "path": "output\\playwright\\ep03-04-interaction-continuity\\S16-en-1920x900-authored-choice.png",
+          "width": 1920,
+          "height": 900,
+          "bytes": 1829663,
+          "sha256": "1f335b80b52e094fb05f90eae50dddf266d12c615e28701c90d7647201ea56eb"
+        }
+      ]
+    },
+    {
+      "sceneId": "S16",
+      "locale": "en",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "authoredCode": "A",
+      "interactions": [
+        {
+          "id": "S16-C90",
+          "selectedOption": "A",
+          "sourceRef": {
+            "chunk": 0,
+            "paragraph": 10
+          },
+          "question": "Damir has just helped the injured tourist and asks for ten minutes without questions. How will Alice respect that boundary?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Stay nearby without pulling him into a talk"
+            },
+            {
+              "code": "B",
+              "label": "Give him quiet without guessing his answer"
+            }
+          ],
+          "resultingText": "Alice sat in the neighbouring chair and left the small table between them. She did not turn his help into another examination of their past."
+        },
+        {
+          "id": "S16-C91",
+          "selectedOption": "B",
+          "sourceRef": {
+            "chunk": 2,
+            "paragraph": 4
+          },
+          "question": "At the kitchen table, what boundary will Alice keep around tomorrow’s draft?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Show each person only recognizable lines"
+            },
+            {
+              "code": "B",
+              "label": "Leave today’s help outside the draft"
+            }
+          ],
+          "resultingText": "She kept the tourist’s injury out of the draft. It happened in front of everyone, but it was not Alice’s material without a separate agreement."
+        }
+      ],
+      "authored": {
+        "id": "S16-C1",
+        "code": "A",
+        "sourceRef": {
+          "chunk": 1,
+          "paragraph": 0
+        },
+        "resultingText": "“I do. No sugar, please.”\n\nShe put on the kettle and found two mismatched mugs: one with a faded map of the island, the other with a whale in an absurd scarf. She kept the map and handed Damir the whale. He looked at the drawing.",
+        "question": null,
+        "options": [
+          {
+            "code": "A",
+            "label": "Offer concrete care without asking for a conversation"
+          },
+          {
+            "code": "B",
+            "label": "Give him space and clearly name when they will see each other again"
+          }
+        ]
+      },
+      "metrics": {
+        "samples": 22,
+        "maxClipped": 0,
+        "overflowCount": 0,
+        "internalScrollCount": 0,
+        "cyrillicNarrativeCount": 0,
+        "leakedMarkupCount": 0
+      },
+      "contradictionCount": 0,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep03-04-interaction-continuity\\S16-en-390x844-interaction-choice.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 381770,
+          "sha256": "b32f2a11cb8549f19d94e47d7c94b52f822474257f31c4183f0e40a6d4f31e83"
+        },
+        {
+          "path": "output\\playwright\\ep03-04-interaction-continuity\\S16-en-390x844-authored-choice.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 374577,
+          "sha256": "b8267aa5d733e0af3cd10ee7fea712b6badfd93c5538f550cac90454b17b8a03"
+        }
+      ]
+    },
+    {
+      "sceneId": "S16",
+      "locale": "en",
+      "viewport": {
+        "width": 360,
+        "height": 640
+      },
+      "authoredCode": "A",
+      "interactions": [
+        {
+          "id": "S16-C90",
+          "selectedOption": "A",
+          "sourceRef": {
+            "chunk": 0,
+            "paragraph": 10
+          },
+          "question": "Damir has just helped the injured tourist and asks for ten minutes without questions. How will Alice respect that boundary?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Stay nearby without pulling him into a talk"
+            },
+            {
+              "code": "B",
+              "label": "Give him quiet without guessing his answer"
+            }
+          ],
+          "resultingText": "Alice sat in the neighbouring chair and left the small table between them. She did not turn his help into another examination of their past."
+        },
+        {
+          "id": "S16-C91",
+          "selectedOption": "B",
+          "sourceRef": {
+            "chunk": 2,
+            "paragraph": 4
+          },
+          "question": "At the kitchen table, what boundary will Alice keep around tomorrow’s draft?",
+          "options": [
+            {
+              "code": "A",
+              "label": "Show each person only recognizable lines"
+            },
+            {
+              "code": "B",
+              "label": "Leave today’s help outside the draft"
+            }
+          ],
+          "resultingText": "She kept the tourist’s injury out of the draft. It happened in front of everyone, but it was not Alice’s material without a separate agreement."
+        }
+      ],
+      "authored": {
+        "id": "S16-C1",
+        "code": "A",
+        "sourceRef": {
+          "chunk": 1,
+          "paragraph": 0
+        },
+        "resultingText": "“I do. No sugar, please.”\n\nShe put on the kettle and found two mismatched mugs: one with a faded map of the island, the other with a whale in an absurd scarf. She kept the map and handed Damir the whale. He looked at the drawing.",
+        "question": null,
+        "options": [
+          {
+            "code": "A",
+            "label": "Offer concrete care without asking for a conversation"
+          },
+          {
+            "code": "B",
+            "label": "Give him space and clearly name when they will see each other again"
+          }
+        ]
+      },
+      "metrics": {
+        "samples": 22,
+        "maxClipped": 0,
+        "overflowCount": 0,
+        "internalScrollCount": 0,
+        "cyrillicNarrativeCount": 0,
+        "leakedMarkupCount": 0
+      },
+      "contradictionCount": 0,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "screenshots": [
+        {
+          "path": "output\\playwright\\ep03-04-interaction-continuity\\S16-en-360x640-interaction-choice.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 277595,
+          "sha256": "8816020bb104cafabdc09d13c19292db835e247198720377b0b1261efc213b31"
+        },
+        {
+          "path": "output\\playwright\\ep03-04-interaction-continuity\\S16-en-360x640-authored-choice.png",
+          "width": 360,
+          "height": 640,
+          "bytes": 278270,
+          "sha256": "27a3bdce1ac0f5f4e0b399b2cf680a1b825bb7df1bf7c8ba847d7e26300185d6"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "caseCount": 34,
+    "contradictionCount": 0,
+    "leakedMarkupCount": 0,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "assertions": [
+    "S11/S15/S16 both extra beats reached in order",
+    "authored choice reached for every authored A/B/C outcome where defined",
+    "RU and EN runtime text recorded after each selected beat",
+    "EN has zero Cyrillic narrative leak",
+    "zero clipping, document/internal overflow, leaked --- markup, console errors and failed requests"
+  ]
+}

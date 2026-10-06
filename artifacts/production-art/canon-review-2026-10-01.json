@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "commit": "5de266f7a1af06eebad32116aef3007cd8df1f6e",
+  "canonicalAlice": {
+    "master": "assets/characters/alice-stage.webp",
+    "anchors": ["short wavy light-brown hair", "recognizable warm brown eyes", "adult proportions", "mustard rain jacket", "burgundy scarf", "dark knit layer"],
+    "identityDecision": "Use alice-stage/master as the face, hair, age and silhouette reference; wardrobe may vary only by authored beat."
+  },
+  "style": "cinematic natural-light Iceland travel romance, restrained editorial realism, no embedded text or UI",
+  "brandingReview": {
+    "menuHero": "replace current laptop image with title-free canonical-Alice key visual",
+    "storeCover": "dedicated branded composition may contain title for store use",
+    "icon": "replace current laptop image with close readable canonical Alice portrait"
+  },
+  "generationBoundary": "Generate only dedicated backgrounds/branding listed in the inventory; no random location substitution and no new character identity."
+}

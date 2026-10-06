@@ -10,6 +10,9 @@ http.createServer((req,res)=>{
  try {
   if(!['GET','HEAD'].includes(req.method)){res.writeHead(405,{'Allow':'GET, HEAD'});res.end();return}
   const url=new URL(req.url,`http://${host}:${port}`);
+  // Yandex serves this path in production. Keep local fallback semantics without
+  // turning a static production bootstrap into a development 404 or SDK mock.
+  if(url.pathname==='/sdk.js'){res.writeHead(200,{'Content-Type':'text/javascript; charset=utf-8','Content-Length':'0','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'});res.end();return}
   const relative=decodeURIComponent(url.pathname).replace(/^\/+/, '')||'index.html';
   const full=path.resolve(root,relative);
   if(!full.startsWith(root+path.sep)||full.includes(`${path.sep}.git${path.sep}`)) {res.writeHead(403);res.end();return}

@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "source": "content/season-1-literary-episode-07.md",
+  "scenes": {
+    "S55": {
+      "title": "Day 14. A Horse Named Noise",
+      "chunks": {
+        "S55.C000": {
+          "title": "",
+          "paragraphs": {
+            "S55.C000.P000": "The instructor gave them helmets and explained how to hold the reins. The route followed a flat fenced path; part of the trail was closed because of the wind, and the group stayed within the farm. Alice was given a calm bay mare. Damir got a small light-coloured horse named Noise, who immediately decided that standing by the gate was more interesting than walking.",
+            "S55.C000.P001": "“Is he always like this?” Damir asked.",
+            "S55.C000.P002": "“Only when he’s bored,” the instructor said, showing him how to make the animal understand the direction.",
+            "S55.C000.P003": "Alice had not seen Damir at a loss in a situation that could not be solved with knowledge and speed for a long time. He listened to the instructor seriously, tried the movement, received complete stillness in reply, and swore under his breath. Alice laughed. He turned towards her and laughed too; then the horse finally took a step.",
+            "S55.C000.P004": "At a stop, the instructor let them remove their helmets and drink water. Alice realised she was still smiling. Damir wiped sweat from his forehead with his sleeve and said that at work he did not have to ask patients where they wanted to go, but Noise clearly thought otherwise.",
+            "S55.C000.P005": "“He has an advantage,” Alice said. “He can pretend not to understand your question.”",
+            "S55.C000.P006": "“Sometimes I did that too.”",
+            "S55.C000.P007": "She expected him to continue, but Damir simply closed the bottle and went to adjust the saddle at the instructor’s request. Alice liked that the day had not turned into another discussion of their breakup. She was left with a new memory: Damir in a crooked helmet, politely asking a horse for at least one step."
+          }
+        },
+        "S55.C001": {
+          "title": "Choice S55-C1 — After the ride",
+          "paragraphs": {}
+        },
+        "S55.C002": {
+          "title": "A. Tease Damir with the photograph",
+          "paragraphs": {
+            "S55.C002.P000": "Alice showed him a picture in which Noise looked straight into the lens while Damir looked somewhere entirely different. He asked her to send it and called it the best shot of the trip. She sent it without a caption."
+          }
+        },
+        "S55.C003": {
+          "title": "B. Tell him she liked seeing him like that",
+          "paragraphs": {
+            "S55.C003.P000": "“I liked the way you laughed,” she said. “Not when everything works, but when nothing works at all.”",
+            "S55.C003.P001": "Damir took off his gloves and looked at her a little longer than usual. Then he asked whether she would choose their music tomorrow. Alice nodded."
+          }
+        },
+        "S55.C004": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S55.C004.P000": "At the farm gate they met Nick, who had come with Eric for coffee. Nick wanted to ask who had won—the person or the horse—but saw Damir’s expression and changed his mind. All the way back Alice tried to remember the last time it had been this easy to be beside her former lover. It turned out she did not want to compare."
+          }
+        },
+        "S55.C005": {
+          "title": "If `S30-C2=A`",
+          "paragraphs": {
+            "S55.C005.P000": "At the farm gate, Damir was quietly whistling the melody he had chosen for their walk. Alice recognised it and suddenly understood: a new memory had appeared so easily that no one had noticed when it happened."
+          }
+        },
+        "S55.C006": {
+          "title": "If `S30-C2=B`",
+          "paragraphs": {
+            "S55.C006.P000": "At the farm gate, Damir showed Alice the postcard with the ridiculous horse. She took off one glove and pulled the sheep-patterned socks from her pocket: their promised exchange had unexpectedly turned out to be suitable clothing for a ride."
+          }
+        }
+      }
+    }
+  }
+}

@@ -23,12 +23,12 @@ let previewChoice = null;
 
 app.innerHTML = `
   <section class="game-shell" data-scene="season-1">
-    <img id="scene-art" class="scene-art" src="/assets/backgrounds/keflavik-airport-arrivals-v1.png" alt="Зал выдачи багажа аэропорта Кефлавика" />
+    <img id="scene-art" class="scene-art" src="/assets/backgrounds/keflavik-airport-arrivals-v1.webp" alt="Зал выдачи багажа аэропорта Кефлавика" />
     <canvas id="scene-canvas" aria-hidden="true"></canvas>
     <div class="atmosphere" aria-hidden="true"></div>
     <div class="hud"><p id="episode-label" class="episode-label"></p><p id="location" class="location"></p></div>
     <section class="dialogue" aria-live="polite">
-      <img id="portrait" class="portrait" src="/assets/characters/alice-master.png" alt="" />
+      <img id="portrait" class="portrait" src="/assets/characters/alice-master.webp" alt="" />
       <div class="speaker-row"><span id="speaker" class="speaker"></span><span id="progress" class="progress"></span></div>
       <p id="scene-title" class="scene-title"></p><p id="text" class="dialogue-text"></p>
       <div id="actions" class="actions"></div>
@@ -145,12 +145,12 @@ function showSettings() {
   });
 }
 const gallery = [
-  ['Кефлавик', '/assets/backgrounds/keflavik-airport-arrivals-v1.png'],
-  ['Рейкьявик', '/assets/backgrounds/reykjavik-harbour-master.png'],
-  ['Þingvellir', '/assets/backgrounds/thingvellir-master.png'],
-  ['Skógafoss', '/assets/backgrounds/skogafoss-master.png'],
-  ['Восточные фьорды', '/assets/backgrounds/eastfjords-road-master.png'],
-  ['Snæfellsnes', '/assets/backgrounds/snaefellsnes-master.png']
+  ['Кефлавик', '/assets/backgrounds/keflavik-airport-arrivals-v1.webp'],
+  ['Рейкьявик', '/assets/backgrounds/reykjavik-harbour-master.webp'],
+  ['Þingvellir', '/assets/backgrounds/thingvellir-master.webp'],
+  ['Skógafoss', '/assets/backgrounds/skogafoss-master.webp'],
+  ['Восточные фьорды', '/assets/backgrounds/eastfjords-road-master.webp'],
+  ['Snæfellsnes', '/assets/backgrounds/snaefellsnes-master.webp']
 ];
 function showGallery() {
   showPanel('Галерея Исландии', panel => {
@@ -210,26 +210,26 @@ else { gameMenu.hidden = false; refreshMenu(); }
 
 
 const portraitBySpeaker = {
-  'Алиса': '/assets/characters/alice-master.png', 'Эрик': '/assets/characters/eric-master.png',
-  'Ник': '/assets/characters/nick-master.png', 'Дамир': '/assets/characters/damir-master.png',
-  'Редактор': '/assets/characters/alice-master.png', 'Хозяйка': '/assets/characters/alice-master.png',
-  'Партнёр': '/assets/characters/alice-master.png', 'Система': '/assets/characters/alice-master.png'
+  'Алиса': '/assets/characters/alice-master.webp', 'Эрик': '/assets/characters/eric-master.webp',
+  'Ник': '/assets/characters/nick-master.webp', 'Дамир': '/assets/characters/damir-master.webp',
+  'Редактор': '/assets/characters/alice-master.webp', 'Хозяйка': '/assets/characters/alice-master.webp',
+  'Партнёр': '/assets/characters/alice-master.webp', 'Система': '/assets/characters/alice-master.webp'
 };
 const portraitVariantsByNode = {
-  'ep1-intro': { 'Алиса': '/assets/characters/alice-reflective.png' },
-  'ep5-drive': { 'Дамир': '/assets/characters/damir-vulnerable.png' },
-  'ep8-eric': { 'Эрик': '/assets/characters/eric-tender.png' },
-  'ep8-nick': { 'Ник': '/assets/characters/nick-serious.png' },
-  'ep8-damir': { 'Дамир': '/assets/characters/damir-vulnerable.png' },
+  'ep1-intro': { 'Алиса': '/assets/characters/alice-reflective.webp' },
+  'ep5-drive': { 'Дамир': '/assets/characters/damir-vulnerable.webp' },
+  'ep8-eric': { 'Эрик': '/assets/characters/eric-tender.webp' },
+  'ep8-nick': { 'Ник': '/assets/characters/nick-serious.webp' },
+  'ep8-damir': { 'Дамир': '/assets/characters/damir-vulnerable.webp' },
   'ep9-conflict': {
-    'Эрик': '/assets/characters/eric-tender.png',
-    'Ник': '/assets/characters/nick-serious.png',
-    'Дамир': '/assets/characters/damir-vulnerable.png'
+    'Эрик': '/assets/characters/eric-tender.webp',
+    'Ник': '/assets/characters/nick-serious.webp',
+    'Дамир': '/assets/characters/damir-vulnerable.webp'
   },
-  'ending-eric': { 'Эрик': '/assets/characters/eric-tender.png' },
-  'ending-nick': { 'Ник': '/assets/characters/nick-serious.png' },
-  'ending-damir': { 'Дамир': '/assets/characters/damir-vulnerable.png' },
-  'ending-alice': { 'Алиса': '/assets/characters/alice-reflective.png' }
+  'ending-eric': { 'Эрик': '/assets/characters/eric-tender.webp' },
+  'ending-nick': { 'Ник': '/assets/characters/nick-serious.webp' },
+  'ending-damir': { 'Дамир': '/assets/characters/damir-vulnerable.webp' },
+  'ending-alice': { 'Алиса': '/assets/characters/alice-reflective.webp' }
 };
 
 function node() { return season.nodes[state.nodeId] ?? season.nodes['ep1-intro']; }
@@ -248,7 +248,7 @@ function renderS18Preview() {
   textNode.textContent = line?.text || '';
   portrait.hidden = Boolean(line?.narration);
   portrait.style.display = line?.narration ? 'none' : '';
-  portrait.src = line?.speaker === 'Эрик' ? '/assets/characters/eric-tender.png' : '/assets/characters/alice-reflective.png';
+  portrait.src = line?.speaker === 'Эрик' ? '/assets/characters/eric-tender.webp' : '/assets/characters/alice-reflective.webp';
   portrait.alt = line?.narration ? '' : `Портрет: ${line?.speaker}`;
   const isHarbour = scene === 'harbour-evening';
   document.querySelector('.game-shell').dataset.previewScene = scene;
@@ -295,7 +295,7 @@ function render() {
   portrait.style.display = line.narration ? 'none' : '';
   portrait.src = portraitVariantsByNode[state.nodeId]?.[line.speaker] ?? portraitBySpeaker[line.speaker] ?? portraitBySpeaker.Алиса;
   portrait.alt = line.narration || line.speaker === 'Система' ? '' : `Портрет: ${line.speaker}`;
-  sceneArt.src = current.cg ?? current.background ?? '/assets/backgrounds/reykjavik-harbour-master.png';
+  sceneArt.src = current.cg ?? current.background ?? '/assets/backgrounds/reykjavik-harbour-master.webp';
   const atEnd = state.lineIndex >= current.lines.length - 1;
   continueButton.hidden = !(atEnd ? current.next : true);
   actionsNode.replaceChildren();

@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "sourceLocale": "ru",
+  "source": "content/season-1-literary-episode-03.md",
+  "scenes": {
+    "S09": {
+      "title": "Skógafoss, Day 5, Morning. Not a Postcard",
+      "chunks": {
+        "S09.C000": {"title":"","paragraphs":{
+          "S09.C000.P000":"Nick carried three bags out of the guesthouse, along with the yellow hat he had stopped pretending was a joke. Eric checked the tire pressure; Damir went back for the thermos he had left behind. Alice paused at the door, rereading Marina’s message: “If you find something at the waterfall that isn’t another postcard, send me two lines.”",
+          "S09.C000.P001":"“I promised I’d find an unexpected place,” she said as she got into the car. “I didn’t promise it would be beautiful.”",
+          "S09.C000.P002":"“You promised we’d look together,” Nick reminded her.",
+          "S09.C000.P003":"Eric glanced at the rear-view mirror.",
+          "S09.C000.P004":"“We’ll get there first. If the rain gets worse, we stay at the bottom.”",
+          "S09.C000.P005":"“That’s why we brought an adult,” Nick said.",
+          "S09.C000.P006":"“I’m thirty-four,” Eric replied.",
+          "S09.C000.P007":"“You don’t have to support my theory with data.”",
+          "S09.C000.P008":"Buses stood at Skógafoss. People got out, took pictures by the railings, and returned to their warm seats, adjusting their wet hoods. Nick reached for his camera, then looked at Alice—not to ask permission to film her, but as if checking whether they were going to keep yesterday’s agreement.",
+          "S09.C000.P009":"“If all we find is the view from the front,” he said, “I have officially failed the assignment.”",
+          "S09.C000.P010":"“Then you’ll have to write about the failure,” Alice said.",
+          "S09.C000.P011":"They followed the marked path without going down to the wet rocks by the water. From the usual viewpoint, the waterfall looked so large that Alice couldn’t find anything of her own in it. Eric pointed out the trail to the lookout, but didn’t take them up at once: above the steps, the wind was turning the rain around. They took shelter behind a low building by the parking area. The waterfall was almost invisible from there. What they could hear was how it swallowed conversation whenever they stepped more than a few paces from the door.",
+          "S09.C000.P012":"Damir took the lid off the thermos.",
+          "S09.C000.P013":"“So our special place is next to the restroom?” he asked.",
+          "S09.C000.P014":"“Best one available so far,” Eric said.",
+          "S09.C000.P015":"Nick tried to record the sound and discovered the wind was hitting the microphone. He tucked the camera under his jacket and, for once, simply listened. A woman and a child hurried past them on the path. The child’s shoelace had come undone; the woman crouched, holding her hood in place with her chin. They didn’t look at the waterfall while she tied the knot. Then the boy looked up and laughed: the spray had reached even this far.",
+          "S09.C000.P016":"“Give it five minutes?” Alice suggested. “The wind might move on.”",
+          "S09.C000.P017":"Nick glanced at his watch but didn’t argue. In five minutes, the bus had left and the lookout had emptied. Eric checked the steps first, went down, and came back.",
+          "S09.C000.P018":"“It’s safe to go up now. Just don’t run. Staying here is also an option.”",
+          "S09.C000.P019":"Alice chose to go. Halfway up, she stopped to catch her breath and saw not the waterfall below but their car, small and absurdly domestic beside the buses. Damir was already farther up; he didn’t call for her to hurry. Nick had fallen behind to help a couple take a picture. Eric waited at the next landing, leaning on the railing, watching not the clock but the road they had taken.",
+          "S09.C000.P020":"At the top, the water fell with such force that they had to speak close to one another. Alice noticed a narrow strip of dry ground behind the railing where visitors left their gloves for a moment while wiping a lens. A child’s mitten lay there. Nick picked it up between two fingers.",
+          "S09.C000.P021":"“Our second lost item,” he said. “It’s a system now.”",
+          "S09.C000.P022":"“Put it somewhere visible,” Alice said. “They may come back.”",
+          "S09.C000.P023":"They fastened the mitten to the railing so the wind couldn’t take it. A minute later, the boy in the blue jacket came running back. His mother thanked them, almost shouting over the water. The boy waved to each of them separately, and for some reason waved twice at Damir.",
+          "S09.C000.P024":"Alice made one note in her notebook. No rainbow, no superlative. “We came to find a new view of the waterfall and first found the place where it couldn’t be seen.” When she looked up, all three men were looking in different directions: Nick after the boy, Eric at the clouds, Damir down at the tiny car."
+        }},
+        "S09.C001":{"title":"Choice S09-C1 — who should tell Alice about the place first?","paragraphs":{}},
+        "S09.C002":{"title":"A. Ask Eric to show her the place he remembers","paragraphs":{
+          "S09.C002.P000":"Alice went over to him.",
+          "S09.C002.P001":"“You’ve been here before. Show me the place you don’t take groups.”",
+          "S09.C002.P002":"“That’s an unfair assignment for a guide.”",
+          "S09.C002.P003":"“I’m asking you, not the guide.”",
+          "S09.C002.P004":"He hesitated, then pointed to a dark stretch of road far below.",
+          "S09.C002.P005":"“I once waited there for my sister after her first hike on her own. She was an hour late. I watched the waterfall until I stopped seeing it at all.”",
+          "S09.C002.P006":"“What did you say when she arrived?”",
+          "S09.C002.P007":"“That her shoelaces were undone. Then we went home.”",
+          "S09.C002.P008":"Alice didn’t write down his sister’s name. Eric noticed and gave a small nod. On the way back, he handed her a dry napkin for the notebook, though the rain was already easing."
+        }},
+        "S09.C003":{"title":"B. Ask Nick to name what the camera missed","paragraphs":{
+          "S09.C003.P000":"“Give me one frame you don’t have,” Alice said.",
+          "S09.C003.P001":"Nick turned the camera’s screen toward his palm.",
+          "S09.C003.P002":"“The boy waved at Damir twice. I was changing the battery.”",
+          "S09.C003.P003":"“Why him?”",
+          "S09.C003.P004":"“No idea. Maybe Damir was the only one who waved back like a normal person instead of waving at the lens.”",
+          "S09.C003.P005":"Damir heard his name, but the water took the rest of the sentence. Nick raised his voice:",
+          "S09.C003.P006":"“I’m saying random Icelandic children are showing you favoritism!”",
+          "S09.C003.P007":"Damir looked at Alice: Really? She laughed and shook her head. Nick lowered the camera instead of trying to reconstruct the missing second."
+        }},
+        "S09.C004":{"title":"C. Ask Damir to remember the climb","paragraphs":{
+          "S09.C004.P000":"“What did you see from here?” Alice asked Damir.",
+          "S09.C004.P001":"“The car. Ours, I think. You can’t confirm it from this distance.”",
+          "S09.C004.P002":"“A remarkably brave assumption.”",
+          "S09.C004.P003":"He handed her the thermos lid. The tea was still warm.",
+          "S09.C004.P004":"“I realized today is the first time I haven’t counted how long until the next place. I usually do that on trips. Even when I’m off duty.”",
+          "S09.C004.P005":"Alice took a sip and handed the lid back.",
+          "S09.C004.P006":"“What do you do instead?”",
+          "S09.C004.P007":"“Watch to see whether Nick flies away with his hat.”",
+          "S09.C004.P008":"Nick stood with his back to the wind, holding the hat down with both hands. Alice wrote the observation without Damir’s name; he hadn’t asked her to, but he noticed and said nothing."
+        }},
+        "S09.C005":{"title":"Shared continuation S09","paragraphs":{"S09.C005.P000":"In the parking area, they found the boy in the blue jacket once more. Now he was showing his mitten to his father as something that had survived an adventure. Nick didn’t film him. In the car, Alice opened the draft message to Marina."}},
+        "S09.C006":{"title":"If `careerThesis=people`","paragraphs":{"S09.C006.P000":"She wrote: “At Skógafoss, we agreed to look for an unusual view, but first stood beside a wall where the waterfall was almost invisible. Then a boy lost his mitten, Nick turned off the camera, Eric waited for everyone to climb up, and Damir was the first to wave back. I want to write about people who stayed in one place and still carried different days away from it.”"}},
+        "S09.C007":{"title":"If `careerThesis=place`","paragraphs":{"S09.C007.P000":"She wrote: “To see Skógafoss, we first stood where it was almost impossible to see. Then the wind eased and we climbed the wet stairs. From above, there was more than water and a black slope: the parking area, the road, and our car all fit below. The place changes your sense of scale before it gives you a beautiful frame.”"}},
+        "S09.C008":{"title":"If `careerThesis=own-choice`","paragraphs":{"S09.C008.P000":"She wrote: “We could have taken the ordinary picture and moved on. Instead, we waited out the wind, climbed together, and found someone else’s lost mitten. Our unusual view of Skógafoss began with the decision to stay; no frame could have made us do that.”"}},
+        "S09.C009":{"title":"Shared continuation","paragraphs":{"S09.C009.P000":"Marina replied: “Keep that. But don’t pretend you all saw the same thing.” Alice put the phone away. Outside the window, the waterfall disappeared sooner than she expected; the road carried them toward Vík."
+        }}
+      }
+    }
+  }
+}

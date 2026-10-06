@@ -27,26 +27,6 @@ Do not introduce service workers, PWA install flows, CDN runtime assets or a Web
 - browser back/escape behavior where applicable;
 - production build with zero critical console errors and runtime 404s.
 
-## Visual-novel runtime scenarios
-
-- Traverse every declared visual-event transition from the authored scene map;
-  assert the cue's scene/chunk/paragraph, location, time, characters and route
-  condition before showing a CG or changing stage composition.
-- For each CG, verify entry and exit at desktop and 390x844: no stale stage
-  character, duplicate character, wrong background, flash, skipped authored cue
-  or route-inappropriate image. A matching filename or attractive screenshot is
-  not proof of event fidelity.
-- Check mobile composition with the actual dialogue/choice panel active:
-  faces, hands and meaningful props remain readable, wide CGs do not collapse
-  the emotional action into an unreadable letterboxed strip, and controls do
-  not overlap the image or become too small. Include at least one long RU
-  dialogue and a choice immediately after a CG.
-- Repeat a visual transition after save/load, refresh and route restoration;
-  assert that the visual state, wardrobe and scene history remain coherent.
-- Record scene IDs, visual-event IDs, viewport, route, screenshot paths and
-  console/resource findings in the evidence artifact. Missing source mapping or
-  current-runtime screenshots is `BLOCKED`, not PASS.
-
 ## Runtime leak checks
 
 After repeated transitions, verify no growth in:

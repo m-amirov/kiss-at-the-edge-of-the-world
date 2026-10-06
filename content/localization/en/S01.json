@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "sourceLocale": "ru",
+  "source": "content/season-1-vertical-slice-episodes-01-02.md",
+  "scenes": {
+    "S01": {
+      "title": "Keflavík, Day 1. The Red Suitcase",
+      "chunks": {
+        "S01.C000": {
+          "title": "",
+          "paragraphs": {
+            "S01.C000.P000": "Alice's red suitcase appeared on the carousel last and immediately tried to disappear back through the service hatch.",
+            "S01.C000.P001": "\u201cEven my luggage knows this was a questionable idea,\u201d she said into her phone.",
+            "S01.C000.P002": "Marina, her editor, was present only as a recorded voice note and couldn't answer. Alice pinned the suitcase with one knee, grabbed the side handle, and heard a voice behind her.",
+            "S01.C000.P003": "\u201cWant some help, or is this an important part of your personal introduction to Iceland?\u201d",
+            "S01.C000.P004": "The man was holding a cardboard sign with ALICE, JOURNALIST bleeding across it in marker. The rain had turned the last few letters into a gray cloud. A camera hung around his neck, its lens pointed at the floor.",
+            "S01.C000.P005": "\u201cIf you help, I can't write that I defeated the suitcase single-handedly.\u201d",
+            "S01.C000.P006": "\u201cWrite that you consulted a local expert.\u201d",
+            "S01.C000.P007": "\u201cYou're not local.\u201d",
+            "S01.C000.P008": "\u201cAnd I've already failed my first interview.\u201d",
+            "S01.C000.P009": "He held out a hand but stopped short of the handle.",
+            "S01.C000.P010": "\u201cNick. May I?\u201d",
+            "S01.C000.P011": "Alice nodded. The suitcase came off the carousel without a fight, as if it had been waiting all along for someone with the right degree of confidence.",
+            "S01.C000.P012": "\u201cAre you filming this?\u201d she asked.",
+            "S01.C000.P013": "\u201cNo. Eric says everyone looks like a bad passport photo after a flight. I decided not to ruin our relationship in the first thirty seconds.\u201d",
+            "S01.C000.P014": "\u201cSensible man, Eric.\u201d",
+            "S01.C000.P015": "\u201cGive him time. He'll have you counting your socks.\u201d",
+            "S01.C000.P016": "Beyond the airport's glass doors, the rain was coming down almost sideways. A tall man in a dark jacket stood near the exit, without a sign or a camera. He was talking to someone from the rental desk while watching the wind push an empty luggage cart toward the road. He caught it one-handed, returned it to the shelter, and only then looked at Alice.",
+            "S01.C000.P017": "\u201cEric. Welcome. The car's ten minutes away, unless Nick takes you by the shortcut.\u201d",
+            "S01.C000.P018": "\u201cThere was a door,\u201d Nick protested.",
+            "S01.C000.P019": "\u201cTo a stockroom.\u201d",
+            "S01.C000.P020": "\u201cStill shorter.\u201d",
+            "S01.C000.P021": "Eric smiled with his eyes rather than his mouth\u2014quickly, as though without permission. Alice caught it before he took the suitcase from Nick and set it beside the other bags.",
+            "S01.C000.P022": "\u201cThere are four of you?\u201d she asked.",
+            "S01.C000.P023": "\u201cUs,\u201d Nick corrected. \u201cYou're part of the disaster now.\u201d",
+            "S01.C000.P024": "The fourth member of the group stood by a coffee machine. Alice recognized him before he turned around. By the way he held his paper cup, thumb close to the rim as if it might suddenly slip. By the gray scarf she'd given him for his birthday, which she had absolutely no intention of recognizing two years later.",
+            "S01.C000.P025": "Damir saw her and went still for exactly one breath.",
+            "S01.C000.P026": "\u201cHi,\u201d he said.",
+            "S01.C000.P027": "Nick looked from him to Alice and knew at once that this was an especially bad time for a camera.",
+            "S01.C000.P028": "\u201cYou two know each other?\u201d Eric asked.",
+            "S01.C000.P029": "\u201cWe did,\u201d Alice said.",
+            "S01.C000.P030": "Damir set his coffee on the windowsill.",
+            "S01.C000.P031": "\u201cI didn't know you were the journalist.\u201d",
+            "S01.C000.P032": "\u201cAnd I didn't know you were the doctor. Excellent work on those forms.\u201d",
+            "S01.C000.P033": "\u201cThe organizer's list only named the publication. It didn't have your name.\u201d",
+            "S01.C000.P034": "\u201cMine just said, 'Doctor\u2014clinic meeting.'\u201d",
+            "S01.C000.P035": "Nick quietly raised the sign and studied the rain-softened name, as if searching it for emergency instructions.",
+            "S01.C000.P036": "Eric didn't ask how badly they had broken up or whether the group needed to be rearranged immediately. He checked his watch.",
+            "S01.C000.P037": "\u201cReykjavík is about fifty kilometers from here. There's a coffee stop on the way. We can head there, or just get out of the airport and decide once we're on the road.\u201d",
+            "S01.C000.P038": "Alice looked at Damir. He made no move toward her, and she was almost grateful for it."
+          }
+        },
+        "S01.C001": {
+          "title": "Choice S01-C1 \u2014 where to spend the first hour of the drive",
+          "paragraphs": {
+            "S01.C001.P000": "Choose one passage. Where Alice sits does not lock in a romance route."
+          }
+        },
+        "S01.C002": {
+          "title": "A. Sit in front with Eric",
+          "paragraphs": {
+            "S01.C002.P000": "\u201cCan I sit up front?\u201d Alice asked.",
+            "S01.C002.P001": "\u201cOf course. Better take off your jacket. The passenger-side heater runs hot.\u201d",
+            "S01.C002.P002": "She settled in beside the map. Eric showed her the door handle, which had to be lifted slightly before the door would close, then waited in silence while Alice managed it herself.",
+            "S01.C002.P003": "\u201cYou can tell me if I'm looking the wrong way,\u201d she said.",
+            "S01.C002.P004": "\u201cYou're looking the right way now. The exit's on the right.\u201d",
+            "S01.C002.P005": "Alice smiled and opened the map on her phone. From the back row, Nick asked if the front seat counted as a promotion. Eric waited until he had merged into traffic before answering.",
+            "S01.C002.P006": "\u201cYou get a better view of the road.\u201d",
+            "S01.C002.P007": "Alice noticed that he had given her a short, honest answer instead of trying to make the encounter with Damir less awkward."
+          }
+        },
+        "S01.C003": {
+          "title": "B. Sit with Nick",
+          "paragraphs": {
+            "S01.C003.P000": "Nick saved her the window seat in the back row. Once she sat down, he placed the sign face down between them.",
+            "S01.C003.P001": "\u201cI could just be quiet,\u201d he said.",
+            "S01.C003.P002": "\u201cI'm not sure you're equipped for that.\u201d",
+            "S01.C003.P003": "\u201cLet's see if I make it to the first turnoff.\u201d",
+            "S01.C003.P004": "He did stay quiet. Then he noticed the strap of her suitcase caught under the seat and pulled the bag closer with his foot without touching Alice.",
+            "S01.C003.P005": "\u201cThank you,\u201d she said.",
+            "S01.C003.P006": "\u201cYou're welcome.\u201d",
+            "S01.C003.P007": "It was nicer than his opening jokes."
+          }
+        },
+        "S01.C004": {
+          "title": "C. Sit beside Damir",
+          "paragraphs": {
+            "S01.C004.P000": "Alice opened the rear door herself. Damir moved his backpack off the seat beside him.",
+            "S01.C004.P001": "\u201cAre you sure?\u201d he asked.",
+            "S01.C004.P002": "\u201cThat I can choose my own seat? Yes.\u201d",
+            "S01.C004.P003": "He nodded and didn't ask again. When the car started moving, his coffee rocked in the cup holder. Alice steadied it the way she used to, then let go at once.",
+            "S01.C004.P004": "\u201cI can switch seats at the stop,\u201d Damir said.",
+            "S01.C004.P005": "\u201cNot yet.\u201d",
+            "S01.C004.P006": "He turned toward the window. Their shoulders didn't touch, but the drive could no longer pretend they were strangers."
+          }
+        },
+        "S01.C005": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S01.C005.P000": "Black lava fields and a low sky stretched beyond the windows; the ocean appeared and vanished behind walls of rain. Nick flipped over the sign with her name and wrote on the back: THE GROUP THAT HASN'T CHANGED ITS MIND YET. Then he tucked it under the seat. For the first time that morning, Alice could watch the road instead of the other passengers."
+          }
+        }
+      }
+    }
+  }
+}

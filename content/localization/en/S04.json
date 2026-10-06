@@ -1,0 +1,188 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "sourceLocale": "ru",
+  "source": "content/season-1-vertical-slice-episodes-01-02.md",
+  "scenes": {
+    "S04": {
+      "title": "Þingvellir, Day 2. Before the Lens",
+      "chunks": {
+        "S04.C000": {
+          "title": "",
+          "paragraphs": {
+            "S04.C000.P000": "At the lookout, the wind tried to wrench the car doors open. Eric got out first, walked around, and held Alice's door.",
+            "S04.C000.P001": "\u201cI can manage,\u201d she said.",
+            "S04.C000.P002": "\u201cI know. I'm holding the door, not you.\u201d",
+            "S04.C000.P003": "He let go as soon as both of Alice's feet were on the ground.",
+            "S04.C000.P004": "The road ran between dark cliffs. Nick filmed the wide shot, sometimes lowering the camera simply to look. Damir pulled his hat too far down, and Alice remembered how she used to laugh when his eyebrows disappeared in winter.",
+            "S04.C000.P005": "\u201cWhat?\u201d he asked.",
+            "S04.C000.P006": "\u201cNothing.\u201d",
+            "S04.C000.P007": "\u201cThat was your 'nothing from the past' face.\u201d",
+            "S04.C000.P008": "\u201cYour eyebrows are gone again.\u201d",
+            "S04.C000.P009": "Damir adjusted his hat.",
+            "S04.C000.P010": "\u201cBetter?\u201d",
+            "S04.C000.P011": "\u201cWorse. Now there's only one.\u201d",
+            "S04.C000.P012": "Nick heard them and turned the camera their way, but stopped before pressing record.",
+            "S04.C000.P013": "\u201cCan I film this? It's the first time you two have looked like people instead of witnesses waiting for a notary.\u201d",
+            "S04.C000.P014": "Alice looked at Damir. He shrugged: her decision."
+          }
+        },
+        "S04.C001": {
+          "title": "Choice S04-C1",
+          "paragraphs": {}
+        },
+        "S04.C002": {
+          "title": "A. Allow a short shared shot (`consent.camera=accepted`)",
+          "paragraphs": {
+            "S04.C002.P000": "\u201cFilm it. But show us afterward.\u201d",
+            "S04.C002.P001": "Nick filmed for a few seconds. The wind swallowed Damir's words, Alice laughed and turned away from the lens, and Nick stopped recording. He showed her the screen. She kept the beginning and asked him to remove the moment when she covered her face with her hand. Nick trimmed it in front of her.",
+            "S04.C002.P002": "\u201cIs this okay?\u201d",
+            "S04.C002.P003": "\u201cThis is okay.\u201d"
+          }
+        },
+        "S04.C003": {
+          "title": "B. Ask him to put the camera away (`consent.camera=declined_respected`)",
+          "paragraphs": {
+            "S04.C003.P000": "\u201cLet's leave the camera off for now.\u201d",
+            "S04.C003.P001": "Nick lowered the camera. Alice expected the usual \u201cI was only filming for myself,\u201d but he simply zipped the case shut.",
+            "S04.C003.P002": "\u201cAll right. Sometimes I want to just remember things too.\u201d",
+            "S04.C003.P003": "He walked beside her and asked how Damir had managed to make her laugh with one word. Alice did not answer, but she stopped checking whether the camera had come up again."
+          }
+        },
+        "S04.C004": {
+          "title": "C. Suggest a shot of the whole group (`consent.camera=negotiated`)",
+          "paragraphs": {
+            "S04.C004.P000": "\u201cIf we're taking a shot, make it all four of us. And not for the film until we've seen it.\u201d",
+            "S04.C004.P001": "Nick set the camera on the railing, switched on the timer, and called for Eric. Eric reached them at the last second and bent awkwardly to fit in the frame.",
+            "S04.C004.P002": "On the screen, they still looked like strangers, but they were standing closer together than they had the day before at the airport. Eric asked Alice to send him the picture. Nick promised to send it to everyone first and show it to no one without their consent."
+          }
+        },
+        "S04.C005": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S04.C005.P000": "They walked on. Eric told a short story about trying to jump a stream as a child and losing a boot. Nick began searching for the site of this achievement. Damir asked Alice if her hands were cold and accepted her no without checking again.",
+            "S04.C005.P001": "At the edge of the lookout, Alice fell a few steps behind. A wet path ran between two stone walls. Eric was already waiting ahead; she wanted to catch up before he decided she had stopped again for a note.",
+            "S04.C005.P002": "Nick wrestled with his hood in the wind. Damir kept to the side, not moving closer without an invitation.",
+            "S04.C005.P003": "Alice put her notebook in her pocket. Until they reached the car, she decided not to write anything down.",
+            "S04.C005.P004": "At the next fork, Eric suggested a shorter path to the water. The road was level, but the wind was stronger there. They reached the shore of a small lake and found a wooden platform with a single red child's mitten left on it.",
+            "S04.C005.P005": "\u201cIceland has a plot now,\u201d Nick said. \u201cThe lost mitten is looking for its owner.\u201d",
+            "S04.C005.P006": "\u201cDon't shoot a close-up,\u201d Alice said. \u201cOtherwise the viewer will expect us to find the owner.\u201d",
+            "S04.C005.P007": "\u201cWe will find them.\u201d",
+            "S04.C005.P008": "\u201cHow?\u201d",
+            "S04.C005.P009": "Nick picked up the mitten between two fingers.",
+            "S04.C005.P010": "\u201cSocial media, local police, international cooperation.\u201d",
+            "S04.C005.P011": "\u201cLeave it there,\u201d Eric said. \u201cPeople come back for things they've lost.\u201d",
+            "S04.C005.P012": "\u201cThat's too peaceful a solution.\u201d",
+            "S04.C005.P013": "\u201cSometimes a story ends with the thing waiting where it was forgotten.\u201d",
+            "S04.C005.P014": "Alice looked at him.",
+            "S04.C005.P015": "\u201cAnd people?\u201d",
+            "S04.C005.P016": "Eric caught what she meant and did not pretend they were still talking about the mitten.",
+            "S04.C005.P017": "\u201cPeople usually keep going.\u201d",
+            "S04.C005.P018": "Damir stood by the water, the wind pressing his jacket against his back. Alice knew he had heard. He did not turn around.",
+            "S04.C005.P019": "Nick set the mitten on the post by the entrance and filmed a wide shot without zooming in.",
+            "S04.C005.P020": "\u201cMore honest?\u201d",
+            "S04.C005.P021": "\u201cAt least it doesn't promise an ending,\u201d Alice said.",
+            "S04.C005.P022": "They walked along the water. The path was wide enough to walk in pairs and uneven enough to keep changing the pairs.",
+            "S04.C005.P023": "Nick was beside her first.",
+            "S04.C005.P024": "\u201cDo you always check what a story is promising?\u201d he asked.",
+            "S04.C005.P025": "\u201cIt's my job.\u201d",
+            "S04.C005.P026": "\u201cAnd in life?\u201d",
+            "S04.C005.P027": "\u201cIn life, promises usually come with fine print.\u201d",
+            "S04.C005.P028": "\u201cThat sounds like experience.\u201d",
+            "S04.C005.P029": "\u201cIt sounds like someone who reads contracts.\u201d",
+            "S04.C005.P030": "Nick smiled but did not draw out a confession. Instead, he showed her a frame: the red mitten, the gray lake, two blurred figures far ahead.",
+            "S04.C005.P031": "\u201cBeautiful,\u201d Alice said.",
+            "S04.C005.P032": "\u201cAre Eric and Damir the two up there?\u201d Alice asked.",
+            "S04.C005.P033": "\u201cYes. I was trying to film the mitten, and they wandered into the shot.\u201d",
+            "S04.C005.P034": "\u201cI didn't recognize them. They got far away.\u201d",
+            "S04.C005.P035": "Nick enlarged the image, but their faces stayed blurred. Alice did not ask him to delete the frame: Nick was interested in the abandoned thing, not in her.",
+            "S04.C005.P036": "Then Nick sped up to film Eric, and Damir came alongside her.",
+            "S04.C005.P037": "\u201cI wasn't trying to overhear,\u201d he said.",
+            "S04.C005.P038": "\u201cWe were talking in the wind ten meters away from you.\u201d",
+            "S04.C005.P039": "\u201cStill.\u201d",
+            "S04.C005.P040": "\u201cAnd?\u201d",
+            "S04.C005.P041": "\u201cNothing. I just don't want every sentence to become a conversation about us.\u201d",
+            "S04.C005.P042": "\u201cGood plan.\u201d",
+            "S04.C005.P043": "They walked a few steps.",
+            "S04.C005.P044": "\u201cThough I would have taken the mitten,\u201d Damir said. \u201cLeft a note and brought it to the café.\u201d",
+            "S04.C005.P045": "\u201cOf course. You can't leave a problem on a post.\u201d",
+            "S04.C005.P046": "\u201cAnd you?\u201d",
+            "S04.C005.P047": "Alice looked back at the red dot behind them.",
+            "S04.C005.P048": "\u201cI'm learning.\u201d",
+            "S04.C005.P049": "At the end of the path, there was a bench. Eric took a small bar of chocolate from his backpack and divided it into four uneven pieces. Nick got the smallest.",
+            "S04.C005.P050": "\u201cWhat did I do to deserve that?\u201d he asked.",
+            "S04.C005.P051": "\u201cInternational cooperation.\u201d",
+            "S04.C005.P052": "Nick traded pieces with Alice without asking, then froze.",
+            "S04.C005.P053": "\u201cWait. You like milk chocolate?\u201d",
+            "S04.C005.P054": "\u201cYou've already traded it.\u201d",
+            "S04.C005.P055": "\u201cI can give it back.\u201d",
+            "S04.C005.P056": "\u201cKeep it. I like it.\u201d",
+            "S04.C005.P057": "\u201cExcellent. Consent obtained retroactively. The lawyers are crying.\u201d",
+            "S04.C005.P058": "\u201cAsk before the diplomatic operation next time.\u201d",
+            "S04.C005.P059": "\u201cNoted.\u201d",
+            "S04.C005.P060": "They drove back to Reykjavík by a different road. Nick fell asleep with the camera against his chest. Damir read the clinic's letter. Eric turned the heat up without asking who was cold, then lowered the window by a centimeter a minute later and admitted he had overdone it.",
+            "S04.C005.P061": "\u201cDo you always fix everything immediately?\u201d Alice asked.",
+            "S04.C005.P062": "\u201cIf I notice it.\u201d",
+            "S04.C005.P063": "\u201cAnd if you don't?\u201d",
+            "S04.C005.P064": "\u201cThen I hope someone tells me.\u201d",
+            "S04.C005.P065": "She thought of Damir. Two years ago, she had not said soon enough how much his decision frightened her. He had not asked directly enough. Each of them had taken the other's silence for an answer.",
+            "S04.C005.P066": "\u201cComplicated system,\u201d Alice said.",
+            "S04.C005.P067": "\u201cWhat is?\u201d",
+            "S04.C005.P068": "\u201cPeople needing to talk.\u201d",
+            "S04.C005.P069": "Eric gave her a quick look.",
+            "S04.C005.P070": "\u201cTerribly impractical.\u201d",
+            "S04.C005.P071": "Nick opened his eyes.",
+            "S04.C005.P072": "\u201cDid I wake up in the middle of philosophy?\u201d",
+            "S04.C005.P073": "\u201cNo,\u201d Alice said. \u201cWe were discussing the heating.\u201d",
+            "S04.C005.P074": "\u201cEven worse.\u201d",
+            "S04.C005.P075": "At the guesthouse, they found the parking space occupied by a small blue car. Eric got out, checked the sign, and came back.",
+            "S04.C005.P076": "\u201cWe'll wait five minutes. Then we'll unload here.\u201d",
+            "S04.C005.P077": "Nick looked at the narrow street.",
+            "S04.C005.P078": "\u201cI can film us heroically carrying suitcases twenty meters.\u201d",
+            "S04.C005.P079": "\u201cOnly if you take mine,\u201d Alice said.",
+            "S04.C005.P080": "\u201cArt doesn't carry props.\u201d",
+            "S04.C005.P081": "Damir was already getting the bags out.",
+            "S04.C005.P082": "\u201cArt carries two suitcases today.\u201d",
+            "S04.C005.P083": "\u201cI'll take it,\u201d Nick said, lifting Alice's suitcase by the handle.",
+            "S04.C005.P084": "The blue car left a minute later. Eric did not call everyone back; they had already reached the door. For some reason, Alice liked his ability not to turn a minor failure into another operation.",
+            "S04.C005.P085": "In the sitting room, Nick opened his laptop and showed them his first footage. Not a film, but several short shots: rain on glass, Eric's hands on the map, Damir's cup on the windowsill, boots on the path, and the soggy sign.",
+            "S04.C005.P086": "\u201cThere are hardly any people,\u201d Alice said.",
+            "S04.C005.P087": "\u201cI don't know how to film them yet.\u201d",
+            "S04.C005.P088": "\u201cYou've filmed hundreds of people.\u201d",
+            "S04.C005.P089": "\u201cNot these people.\u201d",
+            "S04.C005.P090": "He switched to the frame of Alice laughing in the shop.",
+            "S04.C005.P091": "\u201cI kept this one separate.\u201d",
+            "S04.C005.P092": "\u201cI remember.\u201d",
+            "S04.C005.P093": "\u201cRegretting it yet?\u201d",
+            "S04.C005.P094": "\u201cNot yet.\u201d",
+            "S04.C005.P095": "Eric stood behind the sofa, looking at his own hands on the screen.",
+            "S04.C005.P096": "\u201cYou made them look older.\u201d",
+            "S04.C005.P097": "\u201cThat's the light.\u201d",
+            "S04.C005.P098": "\u201cConvenient profession. Everything can be blamed on the light.\u201d",
+            "S04.C005.P099": "\u201cIn yours, everything can be blamed on the weather.\u201d",
+            "S04.C005.P100": "Damir sat on the arm of the sofa. His cup appeared on the screen, but not his face.",
+            "S04.C005.P101": "\u201cThank you,\u201d he said.",
+            "S04.C005.P102": "Nick understood without asking what he meant.",
+            "S04.C005.P103": "\u201cIf you want to be in the frame, tell me.\u201d",
+            "S04.C005.P104": "Alice watched them and suddenly felt that the trip had really begun. Not at the airport, not on the road, and not between the cliffs. It began now, when they saw themselves through someone else's eyes and did not argue that the version was wrong.",
+            "S04.C005.P105": "Later, Alice was alone in the sitting room. A message from Marina blinked on her phone: \u201cHow's the opening coming? Same deadline\u2014after day four.\u201d Alice wrote, \u201cWe've arrived in a country where the weather changes plans faster than people do,\u201d and deleted it.",
+            "S04.C005.P106": "Then: \u201cFour people are crossing Iceland because each of them needs to make a decision,\u201d and deleted that too.",
+            "S04.C005.P107": "Finally, she left the document blank. The first two days had not earned a conclusion yet."
+          }
+        },
+        "S04.C006": {
+          "title": "If `S03-C1=A`",
+          "paragraphs": {
+            "S04.C006.P000": "By the path, Damir raised his phone as if he wanted to ask something, but saw her message from yesterday and simply smiled. Alice recognized the smile and did not look away."
+          }
+        },
+        "S04.C007": {
+          "title": "If `S03-C1=B`",
+          "paragraphs": {
+            "S04.C007.P000": "When Damir caught up with the group, Alice met his eyes without needing to return to yesterday's conversation. She liked that he understood her silence."
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "source": "content/season-1-literary-episode-07.md",
+  "scenes": {
+    "S31": {
+      "title": "Day 14. Not Their Story",
+      "chunks": {
+        "S31.C000": {
+          "title": "",
+          "paragraphs": {
+            "S31.C000.P000": "Marina came online late. People kept walking behind her on the screen, and twice someone asked her to sign a document. Alice sat on the guesthouse windowsill because her roommate was watching a film. She had rewritten the beginning of the article three times and still did not want to send any version.",
+            "S31.C000.P001": "“Do you have someone worth following?” Marina asked. “Not views, not hotels. A person.”",
+            "S31.C000.P002": "“Several people. But I’m not sure I want to write about them as if they came here for my story.”",
+            "S31.C000.P003": "“You’re a journalist. People usually don’t travel for your article.”",
+            "S31.C000.P004": "Alice smiled. Marina was not a villain; she simply wanted a piece with a beginning and an end. The picture of the boardwalk Inga had sent lay on the table beside her. Alice turned the phone so Marina could see it.",
+            "S31.C000.P005": "“I want to write about who stays when the tourists leave. We helped for an hour, and Inga will be back there tomorrow. That’s a person worth following too. Only I have to ask whether she agrees.”",
+            "S31.C000.P006": "Marina asked for a three-paragraph outline. Alice opened her notes and, for the first time in a long while, dictated an opening without trying to guess the answer her editor wanted."
+          }
+        },
+        "S31.C001": {
+          "title": "Choice S31-C1 — What story will she propose?",
+          "paragraphs": {}
+        },
+        "S31.C002": {
+          "title": "A. Make Inga the subject, after a separate agreement",
+          "paragraphs": {
+            "S31.C002.P000": "Alice wrote Inga a short message. It did not ask her to rescue the editorial team on short notice. Alice offered to send questions and give Inga the right to check facts about the work on the trail. The reply came later: Inga was willing to talk, but did not want to be called a “saviour of nature.”"
+          }
+        },
+        "S31.C003": {
+          "title": "B. Tell the story of the shared trip without anyone else’s private details",
+          "paragraphs": {
+            "S31.C003.P000": "Alice chose five small actions by the group: a postponed interview, wet gloves, a careful stop by the road, dinner without filming, and a returned mitten. Each fact had a person who had agreed to tell it. Marina suggested strengthening the opening, but did not ask for anyone’s confession."
+          }
+        },
+        "S31.C004": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S31.C004.P000": "After the call, Alice put her phone face down and heard someone in the next room playing an out-of-tune guitar for the first time that evening. She did not go to find out who it was. She was glad to be alone, and this time it was neither a gesture against anyone nor an expectation that something significant was about to happen."
+          }
+        },
+        "S31.C005": {
+          "title": "Choice S31-C2 — What will Alice do for herself after the call with her editor?",
+          "paragraphs": {}
+        },
+        "S31.C006": {
+          "title": "A. Write a short letter to herself at home",
+          "paragraphs": {
+            "S31.C006.P000": "Alice opened her notes and wrote what she wanted to try after returning: finish an old film with a friend, complete the article without working nights, and choose a walk where no one would be waiting for a report. The letter remained in drafts."
+          }
+        },
+        "S31.C007": {
+          "title": "B. Choose tomorrow’s breakfast place for herself",
+          "paragraphs": {
+            "S31.C007.P000": "Alice asked the guesthouse owner where they baked bread in the mornings. He named a small shop; she saved the address and went to check when its door opened. Even such a small promise to herself lifted her mood."
+          }
+        }
+      }
+    }
+  }
+}

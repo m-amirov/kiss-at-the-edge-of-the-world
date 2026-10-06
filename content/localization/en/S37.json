@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "source": "content/season-1-literary-episode-09.md",
+  "scenes": {
+    "S37": {
+      "title": "Day 18. Eric Without a List",
+      "chunks": {
+        "S37.C000": {
+          "title": "If `routeStatus=paused`",
+          "paragraphs": {
+            "S37.C000.P000": "Eric was waiting outside the guesthouse with two paper cups of coffee. He had bought one for Alice out of habit, but did not offer it at once: first he asked whether she wanted to go out with him today. Alice could have said no, and he was prepared for that. She said she wanted to walk and finish saying what had been left between them after Akureyri. They went along the lit street without a single romantic gesture. Eric spoke about the school’s winter sessions, but for the first time did not offer her a place beside his future schedule. Alice told him about her city series and admitted that she had missed him yesterday, though she herself had asked for a pause. He did not move closer in reply; he asked what she wanted now. It was a question about a walk, not an agreement for the year ahead."
+          }
+        },
+        "S37.C001": {
+          "title": "If `routeStatus=active`",
+          "paragraphs": {
+            "S37.C001.P000": "The next morning, Eric left a map in her room. Not as a test or a demonstration of change. He was simply offering Alice a free day together: coffee, ridiculous postcards, a museum, if they both felt like going in. It was cold outside. Alice chose a shop selling woollen hats and bought one that was bright and far too large. Eric put it on first so she could judge the fit. He looked so solemn that Alice photographed him on her phone before she laughed. The picture remained hers alone.",
+            "S37.C001.P001": "They stopped at a small fishing museum. Eric read a few captions in Icelandic and told Alice not everything, but the story of a woman who had kept a weather journal for her neighbours for years. Alice asked whether he had a notebook like that at home. He said he did, though half its pages were now taken up with lists from his sister. She asked him to show her, one day, a page on which he had written something for himself. Eric said he would think about it, without turning it into a grand vow.",
+            "S37.C001.P002": "At the end of the street they found a café with three empty tables and one enormous window. Alice sat where she could watch the passers-by. Eric sat beside her rather than opposite. He told her how his sister had once persuaded him to perform at a family evening with a song he did not know. Alice pictured him as a child with sheet music and wanted to hear the story again at home, in another city."
+          }
+        },
+        "S37.C002": {
+          "title": "Choice S37-C1 — What does Alice want after the trip?",
+          "paragraphs": {}
+        },
+        "S37.C003": {
+          "title": "A. Suggest a specific meeting after they return home",
+          "paragraphs": {
+            "S37.C003.P000": "“Let’s see when two days off line up,” she said. “I’m not moving tomorrow, and I’m not asking you to cancel work. But I do want to see you again.”",
+            "S37.C003.P001": "Eric took out his phone. Not to buy a ticket at once: together they marked two possible dates and agreed to confirm one after he spoke to the head of training. Alice finished her coffee. The unfinishedness was comfortingly specific: for the first time, their next meeting depended on two people, not on the programme of a trip."
+          }
+        },
+        "S37.C004": {
+          "title": "B. Leave the closeness to the journey and end the romance",
+          "paragraphs": {
+            "S37.C004.P000": "“I was happy with you, but I don’t want to make a promise I can’t keep right now.”",
+            "S37.C004.P001": "Eric looked out of the window for a long time. Then he asked Alice to leave him the photograph of her in the ridiculous hat. She sent it and put her phone away. They walked back to the guesthouse together; after that, each went to their own room. Their romance was over, but the road they had shared remained shared."
+          }
+        },
+        "S37.C005": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S37.C005.P000": "That evening Nick asked whether they had managed a day without a map. Alice said they had almost not got lost. Eric looked at her over his cup and said he was not sure where his hat was now. Nick proposed drawing up a missing-person notice, and for the first time in days Alice laughed for a reason other than someone trying to cheer her up."
+          }
+        },
+        "S37.C006": {
+          "title": "Choice S37-C2 — How will Alice suggest that Eric spend a free morning?",
+          "paragraphs": {}
+        },
+        "S37.C007": {
+          "title": "A. Ask him to watch the sunrise with her",
+          "paragraphs": {
+            "S37.C007.P000": "“Only if you want to as well,” Alice added. They went out to the lit path before the others woke. Eric brought one thermos for the two of them, and for the first time in a week Alice did not ask how much time they had."
+          }
+        },
+        "S37.C008": {
+          "title": "B. Invite him to make a late breakfast together",
+          "paragraphs": {
+            "S37.C008.P000": "Alice found flour in the kitchen and asked Eric to help with the dough. He read the recipe twice and still mixed up the bowls. Their breakfast was later than planned, but Nick was the first to ask for seconds."
+          }
+        },
+        "S37.C009": {
+          "title": "If `S50-C2=A`",
+          "paragraphs": {
+            "S37.C009.P000": "During their free day Eric remembered the story of the family board game. Alice suggested they invent one ridiculous rule for the two of them, and they laughed without even taking the box out."
+          }
+        },
+        "S37.C010": {
+          "title": "If `S50-C2=B`",
+          "paragraphs": {
+            "S37.C010.P000": "On their free day Eric showed Alice a message from his sister: she had received the wooden bird and promised to send a photograph. Alice recognised the little gift they had chosen together."
+          }
+        }
+      }
+    }
+  }
+}

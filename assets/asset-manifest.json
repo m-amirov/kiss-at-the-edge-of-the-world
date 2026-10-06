@@ -8,56 +8,64 @@
       "family": "character",
       "path": "assets/characters/alice-master.png",
       "status": "integrated",
-      "runtime": "portraitBySpeaker.Алиса"
+      "runtime": "portraitBySpeaker.Алиса",
+      "runtimePath": "assets/characters/alice-master.webp"
     },
     {
       "id": "eric-master",
       "family": "character",
       "path": "assets/characters/eric-master.png",
       "status": "integrated",
-      "runtime": "portraitBySpeaker.Эрик"
+      "runtime": "portraitBySpeaker.Эрик",
+      "runtimePath": "assets/characters/eric-master.webp"
     },
     {
       "id": "nick-master",
       "family": "character",
       "path": "assets/characters/nick-master.png",
       "status": "integrated",
-      "runtime": "portraitBySpeaker.Ник"
+      "runtime": "portraitBySpeaker.Ник",
+      "runtimePath": "assets/characters/nick-master.webp"
     },
     {
       "id": "damir-master",
       "family": "character",
       "path": "assets/characters/damir-master.png",
       "status": "integrated",
-      "runtime": "portraitBySpeaker.Дамир"
+      "runtime": "portraitBySpeaker.Дамир",
+      "runtimePath": "assets/characters/damir-master.webp"
     },
     {
       "id": "alice-reflective",
       "family": "character-variant",
       "path": "assets/characters/alice-reflective.png",
       "status": "integrated",
-      "runtime": "portraitVariantsByNode"
+      "runtime": "portraitVariantsByNode",
+      "runtimePath": "assets/characters/alice-reflective.webp"
     },
     {
       "id": "eric-tender",
       "family": "character-variant",
       "path": "assets/characters/eric-tender.png",
       "status": "integrated",
-      "runtime": "portraitVariantsByNode"
+      "runtime": "portraitVariantsByNode",
+      "runtimePath": "assets/characters/eric-tender.webp"
     },
     {
       "id": "nick-serious",
       "family": "character-variant",
       "path": "assets/characters/nick-serious.png",
       "status": "integrated",
-      "runtime": "portraitVariantsByNode"
+      "runtime": "portraitVariantsByNode",
+      "runtimePath": "assets/characters/nick-serious.webp"
     },
     {
       "id": "damir-vulnerable",
       "family": "character-variant",
       "path": "assets/characters/damir-vulnerable.png",
       "status": "integrated",
-      "runtime": "portraitVariantsByNode"
+      "runtime": "portraitVariantsByNode",
+      "runtimePath": "assets/characters/damir-vulnerable.webp"
     },
     {
       "id": "alice-stage",
@@ -65,7 +73,8 @@
       "path": "assets/characters/alice-stage.png",
       "status": "integrated",
       "runtime": "src/literary-stage.js scene-directed stage compositing (solo/pair/group)",
-      "alphaChannel": "true RGBA"
+      "alphaChannel": "true RGBA",
+      "runtimePath": "assets/characters/alice-stage.webp"
     },
     {
       "id": "eric-stage",
@@ -73,7 +82,8 @@
       "path": "assets/characters/eric-stage.png",
       "status": "integrated",
       "runtime": "src/literary-stage.js scene-directed stage compositing (solo/pair/group)",
-      "alphaChannel": "true RGBA"
+      "alphaChannel": "true RGBA",
+      "runtimePath": "assets/characters/eric-stage.webp"
     },
     {
       "id": "nick-stage",
@@ -81,7 +91,8 @@
       "path": "assets/characters/nick-stage.png",
       "status": "integrated",
       "runtime": "src/literary-stage.js scene-directed stage compositing (solo/pair/group)",
-      "alphaChannel": "true RGBA"
+      "alphaChannel": "true RGBA",
+      "runtimePath": "assets/characters/nick-stage.webp"
     },
     {
       "id": "damir-stage",
@@ -89,56 +100,64 @@
       "path": "assets/characters/damir-stage.png",
       "status": "integrated",
       "runtime": "src/literary-stage.js scene-directed stage compositing (solo/pair/group)",
-      "alphaChannel": "true RGBA"
+      "alphaChannel": "true RGBA",
+      "runtimePath": "assets/characters/damir-stage.webp"
     },
     {
       "id": "reykjavik-harbour-master",
       "family": "background",
       "path": "assets/backgrounds/reykjavik-harbour-master.png",
       "status": "integrated",
-      "runtime": "sceneArt default"
+      "runtime": "sceneArt default",
+      "runtimePath": "assets/backgrounds/reykjavik-harbour-master.webp"
     },
     {
       "id": "keflavik-airport-arrivals-v1",
       "family": "background",
       "path": "assets/backgrounds/keflavik-airport-arrivals-v1.png",
       "status": "integrated",
-      "runtime": "episode 1 arrival"
+      "runtime": "episode 1 arrival",
+      "runtimePath": "assets/backgrounds/keflavik-airport-arrivals-v1.webp"
     },
     {
       "id": "reynisfjara-master",
       "family": "background",
       "path": "assets/backgrounds/reynisfjara-master.png",
       "status": "integrated",
-      "runtime": "episode 4"
+      "runtime": "episode 4",
+      "runtimePath": "assets/backgrounds/reynisfjara-master.webp"
     },
     {
       "id": "thingvellir-master",
       "family": "background",
       "path": "assets/backgrounds/thingvellir-master.png",
       "status": "integrated",
-      "runtime": "episode 2"
+      "runtime": "episode 2",
+      "runtimePath": "assets/backgrounds/thingvellir-master.webp"
     },
     {
       "id": "skogafoss-master",
       "family": "background",
       "path": "assets/backgrounds/skogafoss-master.png",
       "status": "integrated",
-      "runtime": "episode 3"
+      "runtime": "episode 3",
+      "runtimePath": "assets/backgrounds/skogafoss-master.webp"
     },
     {
       "id": "jokulsarlon-master",
       "family": "background",
       "path": "assets/backgrounds/jokulsarlon-master.png",
       "status": "integrated",
-      "runtime": "episode 5"
+      "runtime": "episode 5",
+      "runtimePath": "assets/backgrounds/jokulsarlon-master.webp"
     },
     {
       "id": "eastfjords-road-master",
       "family": "background",
       "path": "assets/backgrounds/eastfjords-road-master.png",
       "status": "integrated",
-      "runtime": "episodes 6-7"
+      "runtime": "episodes 6-7",
+      "runtimePath": "assets/backgrounds/eastfjords-road-master.webp"
     },
     {
       "id": "myvatn-pool-master",
@@ -152,63 +171,72 @@
       "family": "background",
       "path": "assets/backgrounds/akureyri-street-master.png",
       "status": "integrated",
-      "runtime": "episodes 8-9"
+      "runtime": "episodes 8-9",
+      "runtimePath": "assets/backgrounds/akureyri-street-master.webp"
     },
     {
       "id": "snaefellsnes-master",
       "family": "background",
       "path": "assets/backgrounds/snaefellsnes-master.png",
       "status": "integrated",
-      "runtime": "episode 10"
+      "runtime": "episode 10",
+      "runtimePath": "assets/backgrounds/snaefellsnes-master.webp"
     },
     {
       "id": "eric-route-hand",
       "family": "cg",
       "path": "assets/cg/eric-route-hand.png",
       "status": "integrated",
-      "runtime": "Eric ending"
+      "runtime": "Eric ending",
+      "runtimePath": "assets/cg/eric-route-hand.webp"
     },
     {
       "id": "nick-route-editing",
       "family": "cg",
       "path": "assets/cg/nick-route-editing.png",
       "status": "integrated",
-      "runtime": "Nick ending"
+      "runtime": "Nick ending",
+      "runtimePath": "assets/cg/nick-route-editing.webp"
     },
     {
       "id": "damir-route-letter",
       "family": "cg",
       "path": "assets/cg/damir-route-letter.png",
       "status": "integrated",
-      "runtime": "Damir ending"
+      "runtime": "Damir ending",
+      "runtimePath": "assets/cg/damir-route-letter.webp"
     },
     {
       "id": "alice-independent-ending",
       "family": "cg",
       "path": "assets/cg/alice-independent-ending.png",
       "status": "integrated",
-      "runtime": "independent ending"
+      "runtime": "independent ending",
+      "runtimePath": "assets/cg/alice-independent-ending.webp"
     },
     {
       "id": "eric-myvattn-dawn",
       "family": "cg",
       "path": "assets/cg/eric-myvattn-dawn.png",
       "status": "integrated",
-      "runtime": "episode 8 Eric route"
+      "runtime": "episode 8 Eric route",
+      "runtimePath": "assets/cg/eric-myvattn-dawn.webp"
     },
     {
       "id": "nick-akureyri-edit",
       "family": "cg",
       "path": "assets/cg/nick-akureyri-edit.png",
       "status": "integrated",
-      "runtime": "episode 8 Nick route"
+      "runtime": "episode 8 Nick route",
+      "runtimePath": "assets/cg/nick-akureyri-edit.webp"
     },
     {
       "id": "damir-road-letter",
       "family": "cg",
       "path": "assets/cg/damir-road-letter.png",
       "status": "integrated",
-      "runtime": "episode 8 Damir route"
+      "runtime": "episode 8 Damir route",
+      "runtimePath": "assets/cg/damir-road-letter.webp"
     },
     {
       "id": "s02-expedition-planning-iceland",
@@ -224,7 +252,9 @@
       "status": "integrated",
       "runtime": "S13 authored source 0:12 onward; not the Vík breakfast or Skaftafell parking",
       "portraitAsset": "assets/cg/s13-skaftafell-travelers-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s13-skaftafell-travelers.webp",
+      "runtimePortraitAsset": "assets/cg/s13-skaftafell-travelers-portrait.webp"
     },
     {
       "id": "s18-hofn-dance-lights",
@@ -233,7 +263,9 @@
       "status": "integrated",
       "runtime": "S18 authored source 0:35-0:38 dance, before S18-C1 and independent of its result",
       "portraitAsset": "assets/cg/s18-hofn-dance-lights-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s18-hofn-dance-lights.webp",
+      "runtimePortraitAsset": "assets/cg/s18-hofn-dance-lights-portrait.webp"
     },
     {
       "id": "s45-reykjavik-warm-montage",
@@ -242,7 +274,9 @@
       "status": "integrated",
       "runtime": "S45 film review, before month-later home epilogue",
       "portraitAsset": "assets/cg/s45-reykjavik-warm-montage-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s45-reykjavik-warm-montage.webp",
+      "runtimePortraitAsset": "assets/cg/s45-reykjavik-warm-montage-portrait.webp"
     },
     {
       "id": "s46-airport-goodbye",
@@ -251,7 +285,9 @@
       "status": "integrated",
       "runtime": "S46 airport check-in source 0:1 onward, before month-later home epilogue",
       "portraitAsset": "assets/cg/s46-airport-goodbye-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s46-airport-goodbye.webp",
+      "runtimePortraitAsset": "assets/cg/s46-airport-goodbye-portrait.webp"
     },
     {
       "id": "s47-reykjavik-harbour-alice",
@@ -260,7 +296,9 @@
       "status": "integrated",
       "runtime": "S47 harbour, before month-later domestic epilogue",
       "portraitAsset": "assets/cg/s47-reykjavik-harbour-alice-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s47-reykjavik-harbour-alice.webp",
+      "runtimePortraitAsset": "assets/cg/s47-reykjavik-harbour-alice-portrait.webp"
     },
     {
       "id": "s44-eric-epilogue-month-later",
@@ -273,7 +311,9 @@
       "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s44-eric-epilogue-month-later-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s44-eric-epilogue-month-later.webp",
+      "runtimePortraitAsset": "assets/cg/s44-eric-epilogue-month-later-portrait.webp"
     },
     {
       "id": "s45-nick-home-epilogue-month-later",
@@ -286,7 +326,9 @@
       "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s45-nick-home-epilogue-month-later-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s45-nick-home-epilogue-month-later.webp",
+      "runtimePortraitAsset": "assets/cg/s45-nick-home-epilogue-month-later-portrait.webp"
     },
     {
       "id": "s46-damir-epilogue-month-later",
@@ -299,7 +341,9 @@
       "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s46-damir-epilogue-month-later-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s46-damir-epilogue-month-later.webp",
+      "runtimePortraitAsset": "assets/cg/s46-damir-epilogue-month-later-portrait.webp"
     },
     {
       "id": "s47-alice-home-epilogue-month-later",
@@ -312,7 +356,9 @@
       "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s47-alice-home-epilogue-month-later-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s47-alice-home-epilogue-month-later.webp",
+      "runtimePortraitAsset": "assets/cg/s47-alice-home-epilogue-month-later-portrait.webp"
     },
     {
       "id": "s02-roadside-cafe",
@@ -323,7 +369,8 @@
       "creationMethod": "Built-in image generation from ART_BIBLE direction; empty environment, no character references",
       "createdAt": "2026-09-23",
       "dimensions": "1672x941",
-      "mobileSafe": true
+      "mobileSafe": true,
+      "runtimePath": "assets/backgrounds/s02-roadside-cafe.webp"
     },
     {
       "id": "s26-eric-choice",
@@ -336,7 +383,9 @@
       "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s26-eric-choice-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s26-eric-choice.webp",
+      "runtimePortraitAsset": "assets/cg/s26-eric-choice-portrait.webp"
     },
     {
       "id": "s23-eric-harbor-plan",
@@ -349,7 +398,9 @@
       "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s23-eric-harbor-plan-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s23-eric-harbor-plan.webp",
+      "runtimePortraitAsset": "assets/cg/s23-eric-harbor-plan-portrait.webp"
     },
     {
       "id": "s24-nick-pier-consent",
@@ -362,7 +413,9 @@
       "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s24-nick-pier-consent-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s24-nick-pier-consent.webp",
+      "runtimePortraitAsset": "assets/cg/s24-nick-pier-consent-portrait.webp"
     },
     {
       "id": "s25-damir-clarity-talk",
@@ -375,7 +428,9 @@
       "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s25-damir-clarity-talk-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s25-damir-clarity-talk.webp",
+      "runtimePortraitAsset": "assets/cg/s25-damir-clarity-talk-portrait.webp"
     },
     {
       "id": "s26-nick-choice",
@@ -388,7 +443,9 @@
       "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s26-nick-choice-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s26-nick-choice.webp",
+      "runtimePortraitAsset": "assets/cg/s26-nick-choice-portrait.webp"
     },
     {
       "id": "s26-damir-choice",
@@ -401,7 +458,9 @@
       "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s26-damir-choice-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s26-damir-choice.webp",
+      "runtimePortraitAsset": "assets/cg/s26-damir-choice-portrait.webp"
     },
     {
       "id": "s26-alice-choice",
@@ -414,7 +473,9 @@
       "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s26-alice-choice-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s26-alice-choice.webp",
+      "runtimePortraitAsset": "assets/cg/s26-alice-choice-portrait.webp"
     },
     {
       "id": "s66-hveragerdi-greenhouse",
@@ -427,7 +488,9 @@
       "dimensions": "1832x859",
       "mobileSafe": true,
       "portraitAsset": "assets/backgrounds/s66-hveragerdi-greenhouse-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/backgrounds/s66-hveragerdi-greenhouse.webp",
+      "runtimePortraitAsset": "assets/backgrounds/s66-hveragerdi-greenhouse-portrait.webp"
     },
     {
       "id": "s05-hveragerdi-road",
@@ -440,7 +503,9 @@
       "dimensions": "1832x859",
       "mobileSafe": true,
       "portraitAsset": "assets/backgrounds/s05-hveragerdi-road-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/backgrounds/s05-hveragerdi-road.webp",
+      "runtimePortraitAsset": "assets/backgrounds/s05-hveragerdi-road-portrait.webp"
     },
     {
       "id": "s06-hveragerdi-eric-alice",
@@ -453,7 +518,9 @@
       "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s06-hveragerdi-eric-alice-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s06-hveragerdi-eric-alice.webp",
+      "runtimePortraitAsset": "assets/cg/s06-hveragerdi-eric-alice-portrait.webp"
     },
     {
       "id": "s07-kitchen-pasta",
@@ -466,7 +533,9 @@
       "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s07-kitchen-pasta-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s07-kitchen-pasta.webp",
+      "runtimePortraitAsset": "assets/cg/s07-kitchen-pasta-portrait.webp"
     },
     {
       "id": "s07-kitchen-cards",
@@ -479,7 +548,9 @@
       "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s07-kitchen-cards-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s07-kitchen-cards.webp",
+      "runtimePortraitAsset": "assets/cg/s07-kitchen-cards-portrait.webp"
     },
     {
       "id": "s08-guesthouse-strap",
@@ -492,7 +563,9 @@
       "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s08-guesthouse-strap-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s08-guesthouse-strap.webp",
+      "runtimePortraitAsset": "assets/cg/s08-guesthouse-strap-portrait.webp"
     },
     {
       "id": "s10-vik-road-song",
@@ -505,7 +578,9 @@
       "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s10-vik-road-song-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s10-vik-road-song.webp",
+      "runtimePortraitAsset": "assets/cg/s10-vik-road-song-portrait.webp"
     },
     {
       "id": "s12-vik-cafe-damir",
@@ -518,7 +593,9 @@
       "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s12-vik-cafe-damir-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s12-vik-cafe-damir.webp",
+      "runtimePortraitAsset": "assets/cg/s12-vik-cafe-damir-portrait.webp"
     },
     {
       "id": "s14-skaftafell-pace",
@@ -531,7 +608,9 @@
       "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s14-skaftafell-pace-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s14-skaftafell-pace.webp",
+      "runtimePortraitAsset": "assets/cg/s14-skaftafell-pace-portrait.webp"
     },
     {
       "id": "s16-guesthouse-help",
@@ -544,7 +623,9 @@
       "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s16-guesthouse-help-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s16-guesthouse-help.webp",
+      "runtimePortraitAsset": "assets/cg/s16-guesthouse-help-portrait.webp"
     },
     {
       "id": "s16-kitchen-soup",
@@ -557,7 +638,9 @@
       "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s16-kitchen-soup-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s16-kitchen-soup.webp",
+      "runtimePortraitAsset": "assets/cg/s16-kitchen-soup-portrait.webp"
     },
     {
       "id": "s17-hofn-guesthouse",
@@ -570,7 +653,9 @@
       "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s17-hofn-guesthouse-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s17-hofn-guesthouse.webp",
+      "runtimePortraitAsset": "assets/cg/s17-hofn-guesthouse-portrait.webp"
     },
     {
       "id": "s19-hofn-pool",
@@ -583,7 +668,9 @@
       "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s19-hofn-pool-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s19-hofn-pool.webp",
+      "runtimePortraitAsset": "assets/cg/s19-hofn-pool-portrait.webp"
     },
     {
       "id": "s20-hofn-damir-kitchen",
@@ -596,7 +683,9 @@
       "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s20-hofn-damir-kitchen-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s20-hofn-damir-kitchen.webp",
+      "runtimePortraitAsset": "assets/cg/s20-hofn-damir-kitchen-portrait.webp"
     },
     {
       "id": "s21-alice-hofn-room",
@@ -609,7 +698,9 @@
       "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s21-alice-hofn-room-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s21-alice-hofn-room.webp",
+      "runtimePortraitAsset": "assets/cg/s21-alice-hofn-room-portrait.webp"
     },
     {
       "id": "s61-hofn-streets",
@@ -622,7 +713,9 @@
       "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/backgrounds/s61-hofn-streets-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/backgrounds/s61-hofn-streets.webp",
+      "runtimePortraitAsset": "assets/backgrounds/s61-hofn-streets-portrait.webp"
     },
     {
       "id": "s27-egilsstadir-boardwalk",
@@ -635,7 +728,9 @@
       "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s27-egilsstadir-boardwalk-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s27-egilsstadir-boardwalk.webp",
+      "runtimePortraitAsset": "assets/cg/s27-egilsstadir-boardwalk-portrait.webp"
     },
     {
       "id": "s28-hverfjall-hood",
@@ -648,7 +743,9 @@
       "dimensions": "1920x900",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s28-hverfjall-hood-portrait.png",
-      "portraitDimensions": "390x844"
+      "portraitDimensions": "390x844",
+      "runtimePath": "assets/cg/s28-hverfjall-hood.webp",
+      "runtimePortraitAsset": "assets/cg/s28-hverfjall-hood-portrait.webp"
     },
     {
       "id": "s49-reykjahlid-window-dance",
@@ -661,7 +758,9 @@
       "dimensions": "1920x900",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s49-reykjahlid-window-dance-portrait.png",
-      "portraitDimensions": "390x844"
+      "portraitDimensions": "390x844",
+      "runtimePath": "assets/cg/s49-reykjahlid-window-dance.webp",
+      "runtimePortraitAsset": "assets/cg/s49-reykjahlid-window-dance-portrait.webp"
     },
     {
       "id": "s30-damir-sleeve-promise",
@@ -674,7 +773,9 @@
       "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s30-damir-sleeve-promise-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s30-damir-sleeve-promise.webp",
+      "runtimePortraitAsset": "assets/cg/s30-damir-sleeve-promise-portrait.webp"
     },
     {
       "id": "s55-shum-first-step",
@@ -687,7 +788,9 @@
       "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s55-shum-first-step-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s55-shum-first-step.webp",
+      "runtimePortraitAsset": "assets/cg/s55-shum-first-step-portrait.webp"
     },
     {
       "id": "s32-eric-calendar-crossroads",
@@ -700,7 +803,9 @@
       "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s32-eric-calendar-crossroads-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s32-eric-calendar-crossroads.webp",
+      "runtimePortraitAsset": "assets/cg/s32-eric-calendar-crossroads-portrait.webp"
     },
     {
       "id": "s33-nick-teaser-reveal",
@@ -713,7 +818,9 @@
       "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s33-nick-teaser-reveal-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s33-nick-teaser-reveal.webp",
+      "runtimePortraitAsset": "assets/cg/s33-nick-teaser-reveal-portrait.webp"
     },
     {
       "id": "s53-nick-no-camera-pool",
@@ -726,7 +833,480 @@
       "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s53-nick-no-camera-pool-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s53-nick-no-camera-pool.webp",
+      "runtimePortraitAsset": "assets/cg/s53-nick-no-camera-pool-portrait.webp"
+    },
+    {
+      "id": "guesthouse-common-kitchen-evening",
+      "family": "background",
+      "path": "assets/backgrounds/guesthouse-common-kitchen-evening.png",
+      "status": "integrated",
+      "runtime": "S07,S08,S13,S16,S20,S21,S48,S51,S58,S59,S60,S65",
+      "runtimePath": "assets/backgrounds/guesthouse-common-kitchen-evening.webp"
+    },
+    {
+      "id": "small-icelandic-cafe-rain",
+      "family": "background",
+      "path": "assets/backgrounds/small-icelandic-cafe-rain.png",
+      "status": "integrated",
+      "runtime": "S12,S30,S35,S42,S43,S56",
+      "runtimePath": "assets/backgrounds/small-icelandic-cafe-rain.webp"
+    },
+    {
+      "id": "south-coast-road-rain",
+      "family": "background",
+      "path": "assets/backgrounds/south-coast-road-rain.png",
+      "status": "integrated",
+      "runtime": "S05,S10",
+      "runtimePath": "assets/backgrounds/south-coast-road-rain.webp"
+    },
+    {
+      "id": "hofn-open-pool-evening",
+      "family": "background",
+      "path": "assets/backgrounds/hofn-open-pool-evening.png",
+      "status": "integrated",
+      "runtime": "S19",
+      "runtimePath": "assets/backgrounds/hofn-open-pool-evening.webp"
+    },
+    {
+      "id": "lagarfljot-volunteer-trail",
+      "family": "background",
+      "path": "assets/backgrounds/lagarfljot-volunteer-trail.png",
+      "status": "integrated",
+      "runtime": "S27",
+      "runtimePath": "assets/backgrounds/lagarfljot-volunteer-trail.webp"
+    },
+    {
+      "id": "myvatn-rainy-lodge-interior",
+      "family": "background",
+      "path": "assets/backgrounds/myvatn-rainy-lodge-interior.png",
+      "status": "integrated",
+      "runtime": "S31,S32,S33",
+      "runtimePath": "assets/backgrounds/myvatn-rainy-lodge-interior.webp"
+    },
+    {
+      "id": "seydisfjordur-community-hall",
+      "family": "background",
+      "path": "assets/backgrounds/seydisfjordur-community-hall.png",
+      "status": "integrated",
+      "runtime": "S49,S63",
+      "runtimePath": "assets/backgrounds/seydisfjordur-community-hall.webp"
+    },
+    {
+      "id": "horse-farm-riding-lane",
+      "family": "background",
+      "path": "assets/backgrounds/horse-farm-riding-lane.png",
+      "status": "integrated",
+      "runtime": "S55",
+      "runtimePath": "assets/backgrounds/horse-farm-riding-lane.webp"
+    },
+    {
+      "id": "road-trip-van-interior-rain",
+      "family": "background",
+      "path": "assets/backgrounds/road-trip-van-interior-rain.png",
+      "status": "integrated",
+      "runtime": "S02",
+      "runtimePath": "assets/backgrounds/road-trip-van-interior-rain.webp"
+    },
+    {
+      "id": "seydisfjordur-guesthouse-smokehouse-morning",
+      "family": "background",
+      "path": "assets/backgrounds/seydisfjordur-guesthouse-smokehouse-morning.png",
+      "status": "integrated",
+      "runtime": "S25",
+      "runtimePath": "assets/backgrounds/seydisfjordur-guesthouse-smokehouse-morning.webp"
+    },
+    {
+      "id": "myvatn-hverfjall-viewpoint-overcast",
+      "family": "background",
+      "path": "assets/backgrounds/myvatn-hverfjall-viewpoint-overcast.png",
+      "status": "integrated",
+      "runtime": "S28,S29",
+      "runtimePath": "assets/backgrounds/myvatn-hverfjall-viewpoint-overcast.webp"
+    },
+    {
+      "id": "keflavik-airport-departures",
+      "family": "background",
+      "path": "assets/backgrounds/keflavik-airport-departures.png",
+      "status": "integrated",
+      "runtime": "S46",
+      "runtimePath": "assets/backgrounds/keflavik-airport-departures.webp"
+    },
+    {
+      "id": "snaefellsnes-bakery-dawn",
+      "family": "background",
+      "path": "assets/backgrounds/snaefellsnes-bakery-dawn.png",
+      "status": "integrated",
+      "runtime": "S57",
+      "runtimePath": "assets/backgrounds/snaefellsnes-bakery-dawn.webp"
+    },
+    {
+      "id": "reykjahlid-bookshop-day",
+      "family": "background",
+      "path": "assets/backgrounds/reykjahlid-bookshop-day.png",
+      "status": "integrated",
+      "runtime": "S62",
+      "runtimePath": "assets/backgrounds/reykjahlid-bookshop-day.webp"
+    },
+    {
+      "id": "hveragerdi-greenhouse-cafe",
+      "family": "background",
+      "path": "assets/backgrounds/hveragerdi-greenhouse-cafe.png",
+      "status": "integrated",
+      "runtime": "S66",
+      "runtimePath": "assets/backgrounds/hveragerdi-greenhouse-cafe.webp"
+    },
+    {
+      "id": "s03-reykjavik-guesthouse-morning",
+      "family": "background",
+      "path": "assets/backgrounds/s03-reykjavik-guesthouse-morning.png",
+      "status": "integrated",
+      "runtime": "authored beat-level environment background",
+      "creationMethod": "Codex imagegen, current production-art run, environment-only",
+      "createdAt": "2026-10-01",
+      "dimensions": "1920x900",
+      "runtimePath": "assets/backgrounds/s03-reykjavik-guesthouse-morning.webp"
+    },
+    {
+      "id": "s06-hveragerdi-geothermal-day",
+      "family": "background",
+      "path": "assets/backgrounds/s06-hveragerdi-geothermal-day.png",
+      "status": "integrated",
+      "runtime": "authored beat-level environment background",
+      "creationMethod": "Codex imagegen, current production-art run, environment-only",
+      "createdAt": "2026-10-01",
+      "dimensions": "1920x900",
+      "runtimePath": "assets/backgrounds/s06-hveragerdi-geothermal-day.webp"
+    },
+    {
+      "id": "s09-guesthouse-to-skogafoss-morning",
+      "family": "background",
+      "path": "assets/backgrounds/s09-guesthouse-to-skogafoss-morning.png",
+      "status": "integrated",
+      "runtime": "authored beat-level environment background",
+      "creationMethod": "Codex imagegen, current production-art run, environment-only",
+      "createdAt": "2026-10-01",
+      "dimensions": "1920x900",
+      "runtimePath": "assets/backgrounds/s09-guesthouse-to-skogafoss-morning.webp"
+    },
+    {
+      "id": "s10-vik-guesthouse-arrival",
+      "family": "background",
+      "path": "assets/backgrounds/s10-vik-guesthouse-arrival.png",
+      "status": "integrated",
+      "runtime": "authored beat-level environment background",
+      "creationMethod": "Codex imagegen, current production-art run, environment-only",
+      "createdAt": "2026-10-01",
+      "dimensions": "1920x900",
+      "runtimePath": "assets/backgrounds/s10-vik-guesthouse-arrival.webp"
+    },
+    {
+      "id": "s12-vik-street-day",
+      "family": "background",
+      "path": "assets/backgrounds/s12-vik-street-day.png",
+      "status": "integrated",
+      "runtime": "authored beat-level environment background",
+      "creationMethod": "Codex imagegen, current production-art run, environment-only",
+      "createdAt": "2026-10-01",
+      "dimensions": "1920x900",
+      "runtimePath": "assets/backgrounds/s12-vik-street-day.webp"
+    },
+    {
+      "id": "s13-skaftafell-visitor-parking",
+      "family": "background",
+      "path": "assets/backgrounds/s13-skaftafell-visitor-parking.png",
+      "status": "integrated",
+      "runtime": "authored beat-level environment background",
+      "creationMethod": "Codex imagegen, current production-art run, environment-only",
+      "createdAt": "2026-10-01",
+      "dimensions": "1920x900",
+      "runtimePath": "assets/backgrounds/s13-skaftafell-visitor-parking.webp"
+    },
+    {
+      "id": "s14-lagoon-road",
+      "family": "background",
+      "path": "assets/backgrounds/s14-lagoon-road.png",
+      "status": "integrated",
+      "runtime": "authored beat-level environment background",
+      "creationMethod": "Codex imagegen, current production-art run, environment-only",
+      "createdAt": "2026-10-01",
+      "dimensions": "1920x900",
+      "runtimePath": "assets/backgrounds/s14-lagoon-road.webp"
+    },
+    {
+      "id": "s15-jokulsarlon-parking-day",
+      "family": "background",
+      "path": "assets/backgrounds/s15-jokulsarlon-parking-day.png",
+      "status": "integrated",
+      "runtime": "authored beat-level environment background",
+      "creationMethod": "Codex imagegen, current production-art run, environment-only",
+      "createdAt": "2026-10-01",
+      "dimensions": "1920x900",
+      "runtimePath": "assets/backgrounds/s15-jokulsarlon-parking-day.webp"
+    },
+    {
+      "id": "s18-hofn-room-morning",
+      "family": "background",
+      "path": "assets/backgrounds/s18-hofn-room-morning.png",
+      "status": "integrated",
+      "runtime": "authored beat-level environment background",
+      "creationMethod": "Codex imagegen, current production-art run, environment-only",
+      "createdAt": "2026-10-01",
+      "dimensions": "1920x900",
+      "runtimePath": "assets/backgrounds/s18-hofn-room-morning.webp"
+    },
+    {
+      "id": "s18-hofn-breakfast-morning",
+      "family": "background",
+      "path": "assets/backgrounds/s18-hofn-breakfast-morning.png",
+      "status": "unused-candidate",
+      "runtime": "authored beat-level environment background",
+      "creationMethod": "Codex imagegen, current production-art run, environment-only",
+      "createdAt": "2026-10-01",
+      "dimensions": "1920x900"
+    },
+    {
+      "id": "s26-eastfjords-guesthouse-courtyard",
+      "family": "background",
+      "path": "assets/backgrounds/s26-eastfjords-guesthouse-courtyard.png",
+      "status": "integrated",
+      "runtime": "authored beat-level environment background",
+      "creationMethod": "Codex imagegen, current production-art run, environment-only",
+      "createdAt": "2026-10-01",
+      "dimensions": "1920x900",
+      "runtimePath": "assets/backgrounds/s26-eastfjords-guesthouse-courtyard.webp"
+    },
+    {
+      "id": "s37-snaefellsnes-guesthouse-day",
+      "family": "background",
+      "path": "assets/backgrounds/s37-snaefellsnes-guesthouse-day.png",
+      "status": "integrated",
+      "runtime": "authored beat-level environment background",
+      "creationMethod": "Codex imagegen, current production-art run, environment-only",
+      "createdAt": "2026-10-01",
+      "dimensions": "1920x900",
+      "runtimePath": "assets/backgrounds/s37-snaefellsnes-guesthouse-day.webp"
+    },
+    {
+      "id": "s39-alice-damir-cafe-walk",
+      "family": "background",
+      "path": "assets/backgrounds/s39-alice-damir-cafe-walk.png",
+      "status": "unused-candidate",
+      "runtime": "authored beat-level environment background",
+      "creationMethod": "Codex imagegen, current production-art run, environment-only",
+      "createdAt": "2026-10-01",
+      "dimensions": "1920x900"
+    },
+    {
+      "id": "s40-alice-room-laptop-window",
+      "family": "background",
+      "path": "assets/backgrounds/s40-alice-room-laptop-window.png",
+      "status": "unused-candidate",
+      "runtime": "authored beat-level environment background",
+      "creationMethod": "Codex imagegen, current production-art run, environment-only",
+      "createdAt": "2026-10-01",
+      "dimensions": "1920x900"
+    },
+    {
+      "id": "s46-airport-bus-day",
+      "family": "background",
+      "path": "assets/backgrounds/s46-airport-bus-day.png",
+      "status": "integrated",
+      "runtime": "authored beat-level environment background",
+      "creationMethod": "Codex imagegen, current production-art run, environment-only",
+      "createdAt": "2026-10-01",
+      "dimensions": "1920x900",
+      "runtimePath": "assets/backgrounds/s46-airport-bus-day.webp"
+    },
+    {
+      "id": "s48-guesthouse-exit-morning",
+      "family": "background",
+      "path": "assets/backgrounds/s48-guesthouse-exit-morning.png",
+      "status": "unused-candidate",
+      "runtime": "authored beat-level environment background",
+      "creationMethod": "Codex imagegen, current production-art run, environment-only",
+      "createdAt": "2026-10-01",
+      "dimensions": "1920x900"
+    },
+    {
+      "id": "s52-hofn-streets-post-workshop",
+      "family": "background",
+      "path": "assets/backgrounds/s52-hofn-streets-post-workshop.png",
+      "status": "integrated",
+      "runtime": "authored beat-level environment background",
+      "creationMethod": "Codex imagegen, current production-art run, environment-only",
+      "createdAt": "2026-10-01",
+      "dimensions": "1920x900",
+      "runtimePath": "assets/backgrounds/s52-hofn-streets-post-workshop.webp"
+    },
+    {
+      "id": "s03-editor-call-damir",
+      "family": "cg",
+      "path": "assets/cg/s03-editor-call-damir.png",
+      "status": "integrated",
+      "runtime": "S03 authored Damir-enters morning guesthouse conversation",
+      "creationMethod": "Codex imagegen current production-art run using canonical character references; independent desktop and portrait derivatives",
+      "createdAt": "2026-10-01",
+      "dimensions": "1672x941",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s03-editor-call-damir-portrait.png",
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s03-editor-call-damir.webp",
+      "runtimePortraitAsset": "assets/cg/s03-editor-call-damir-portrait.webp"
+    },
+    {
+      "id": "s18-hofn-breakfast-group",
+      "family": "cg",
+      "path": "assets/cg/s18-hofn-breakfast-group.png",
+      "status": "integrated",
+      "runtime": "S18 authored group breakfast with spatially composed cast",
+      "creationMethod": "Codex imagegen current production-art run using canonical character references; independent desktop and portrait derivatives",
+      "createdAt": "2026-10-01",
+      "dimensions": "1920x900",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s18-hofn-breakfast-group-portrait.png",
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s18-hofn-breakfast-group.webp",
+      "runtimePortraitAsset": "assets/cg/s18-hofn-breakfast-group-portrait.webp"
+    },
+    {
+      "id": "s38-alice-nick-ordinary-day",
+      "family": "cg",
+      "path": "assets/cg/s38-alice-nick-ordinary-day.png",
+      "status": "integrated",
+      "runtime": "S38 authored Alice/Nick ordinary walk and museum day",
+      "creationMethod": "Codex imagegen current production-art run using canonical character references; independent desktop and portrait derivatives",
+      "createdAt": "2026-10-01",
+      "dimensions": "1920x900",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s38-alice-nick-ordinary-day-portrait.png",
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s38-alice-nick-ordinary-day.webp",
+      "runtimePortraitAsset": "assets/cg/s38-alice-nick-ordinary-day-portrait.webp"
+    },
+    {
+      "id": "s54-alice-nick-karaoke",
+      "family": "cg",
+      "path": "assets/cg/s54-alice-nick-karaoke.png",
+      "status": "integrated",
+      "runtime": "S54 authored Alice/Nick karaoke evening",
+      "creationMethod": "Codex imagegen current production-art run using canonical character references; independent desktop and portrait derivatives",
+      "createdAt": "2026-10-01",
+      "dimensions": "1920x900",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s54-alice-nick-karaoke-portrait.png",
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s54-alice-nick-karaoke.webp",
+      "runtimePortraitAsset": "assets/cg/s54-alice-nick-karaoke-portrait.webp"
+    },
+    {
+      "id": "s39-alice-damir-cafe",
+      "family": "cg",
+      "path": "assets/cg/s39-alice-damir-cafe.png",
+      "status": "integrated",
+      "runtime": "S39 authored Alice/Damir café conversation after walk",
+      "creationMethod": "Codex imagegen current production-art run using canonical character references; independent desktop and portrait derivatives",
+      "createdAt": "2026-10-01",
+      "dimensions": "1920x900",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s39-alice-damir-cafe-portrait.png",
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s39-alice-damir-cafe.webp",
+      "runtimePortraitAsset": "assets/cg/s39-alice-damir-cafe-portrait.webp"
+    },
+    {
+      "id": "s40-alice-laptop-window",
+      "family": "cg",
+      "path": "assets/cg/s40-alice-laptop-window.png",
+      "status": "integrated",
+      "runtime": "S40 authored Alice working at laptop by window",
+      "creationMethod": "Codex imagegen current production-art run using canonical character references; independent desktop and portrait derivatives",
+      "createdAt": "2026-10-01",
+      "dimensions": "1920x900",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s40-alice-laptop-window-portrait.png",
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s40-alice-laptop-window.webp",
+      "runtimePortraitAsset": "assets/cg/s40-alice-laptop-window-portrait.webp"
+    },
+    {
+      "id": "s64-alice-snaefellsnes-trail",
+      "family": "cg",
+      "path": "assets/cg/s64-alice-snaefellsnes-trail.png",
+      "status": "integrated",
+      "runtime": "S64 authored solo Snæfellsnes trail",
+      "creationMethod": "Codex imagegen current production-art run using canonical character references; independent desktop and portrait derivatives",
+      "createdAt": "2026-10-01",
+      "dimensions": "1920x900",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s64-alice-snaefellsnes-trail-portrait.png",
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s64-alice-snaefellsnes-trail.webp",
+      "runtimePortraitAsset": "assets/cg/s64-alice-snaefellsnes-trail-portrait.webp"
+    },
+    {
+      "id": "s26-eastfjords-courtyard-group",
+      "family": "cg",
+      "path": "assets/cg/s26-eastfjords-courtyard-group.png",
+      "status": "integrated",
+      "runtime": "S26 authored group courtyard transition/route choice",
+      "creationMethod": "Codex imagegen current production-art run using canonical character references; independent desktop and portrait derivatives",
+      "createdAt": "2026-10-01",
+      "dimensions": "1920x900",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s26-eastfjords-courtyard-group-portrait.png",
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s26-eastfjords-courtyard-group.webp",
+      "runtimePortraitAsset": "assets/cg/s26-eastfjords-courtyard-group-portrait.webp"
+    },
+    {
+      "id": "s48-guesthouse-exit-group",
+      "family": "cg",
+      "path": "assets/cg/s48-guesthouse-exit-group.png",
+      "status": "integrated",
+      "runtime": "S48 authored group guesthouse exit",
+      "creationMethod": "Codex imagegen current production-art run using canonical character references; independent desktop and portrait derivatives",
+      "createdAt": "2026-10-01",
+      "dimensions": "1920x900",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s48-guesthouse-exit-group-portrait.png",
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s48-guesthouse-exit-group.webp",
+      "runtimePortraitAsset": "assets/cg/s48-guesthouse-exit-group-portrait.webp"
+    },
+    {
+      "id": "menu-hero-alice",
+      "family": "branding",
+      "path": "assets/branding/menu-hero.webp",
+      "status": "integrated",
+      "runtime": "src/literary-player.js menu background/key visual, title-free",
+      "creationMethod": "Codex imagegen using canonical Alice stage reference",
+      "createdAt": "2026-10-01",
+      "dimensions": "1920x900",
+      "runtimePath": "assets/branding/menu-hero.webp"
+    },
+    {
+      "id": "kiss-at-the-edge-cover",
+      "family": "branding",
+      "path": "assets/branding/kiss-at-the-edge-cover.png",
+      "status": "integrated",
+      "runtime": "store cover key visual",
+      "creationMethod": "Codex imagegen using canonical Alice stage reference",
+      "createdAt": "2026-10-01",
+      "dimensions": "1920x900",
+      "runtimePath": "assets/branding/kiss-at-the-edge-cover.png"
+    },
+    {
+      "id": "kiss-at-the-edge-icon",
+      "family": "branding",
+      "path": "assets/branding/kiss-at-the-edge-icon.png",
+      "status": "integrated",
+      "runtime": "small canonical Alice icon",
+      "creationMethod": "Codex imagegen using canonical Alice stage reference",
+      "createdAt": "2026-10-01",
+      "dimensions": "512x512",
+      "runtimePath": "assets/branding/kiss-at-the-edge-icon.png"
     }
   ],
   "routingTrace": {
@@ -748,7 +1328,8 @@
       "family": "background",
       "path": "assets/backgrounds/s18-hofn-harbour.png",
       "status": "preview-integrated",
-      "scope": "S18 only, not full new season"
+      "scope": "S18 only, not full new season",
+      "runtimePath": "assets/backgrounds/s18-hofn-harbour.webp"
     },
     {
       "id": "s18-hofn-dance",
@@ -793,7 +1374,9 @@
       "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s29-nick-playback-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s29-nick-playback.webp",
+      "runtimePortraitAsset": "assets/cg/s29-nick-playback-portrait.webp"
     },
     {
       "id": "s52-glove-found",
@@ -806,7 +1389,9 @@
       "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s52-glove-found-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s52-glove-found.webp",
+      "runtimePortraitAsset": "assets/cg/s52-glove-found-portrait.webp"
     },
     {
       "id": "s31-alice-independent-evening",
@@ -819,7 +1404,9 @@
       "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s31-alice-independent-evening-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s31-alice-independent-evening.webp",
+      "runtimePortraitAsset": "assets/cg/s31-alice-independent-evening-portrait.webp"
     },
     {
       "id": "s34-cancelled-evening",
@@ -832,7 +1419,9 @@
       "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s34-cancelled-evening-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s34-cancelled-evening.webp",
+      "runtimePortraitAsset": "assets/cg/s34-cancelled-evening-portrait.webp"
     },
     {
       "id": "s56-cafe-musicians",
@@ -845,7 +1434,9 @@
       "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s56-cafe-musicians-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s56-cafe-musicians.webp",
+      "runtimePortraitAsset": "assets/cg/s56-cafe-musicians-portrait.webp"
     },
     {
       "id": "s62-alice-bookstore-choice",
@@ -858,7 +1449,9 @@
       "dimensions": "1672x940",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s62-alice-bookstore-choice-portrait.png",
-      "portraitDimensions": "940x1672"
+      "portraitDimensions": "940x1672",
+      "runtimePath": "assets/cg/s62-alice-bookstore-choice.webp",
+      "runtimePortraitAsset": "assets/cg/s62-alice-bookstore-choice-portrait.webp"
     },
     {
       "id": "s63-alice-solo-concert",
@@ -871,7 +1464,9 @@
       "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s63-alice-solo-concert-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s63-alice-solo-concert.webp",
+      "runtimePortraitAsset": "assets/cg/s63-alice-solo-concert-portrait.webp"
     },
     {
       "id": "s37-eric-alice-cafe",
@@ -884,7 +1479,9 @@
       "dimensions": "1672x941",
       "mobileSafe": true,
       "portraitAsset": "assets/cg/s37-eric-alice-cafe-portrait.png",
-      "portraitDimensions": "941x1672"
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s37-eric-alice-cafe.webp",
+      "runtimePortraitAsset": "assets/cg/s37-eric-alice-cafe-portrait.webp"
     }
   ],
   "visualDirection": {
@@ -892,6 +1489,7 @@
     "sceneCount": 66,
     "file": "src/literary-visual-directions.js",
     "condition": "unillustrated location uses neutral stage; do not display a CG for an unrelated event",
-    "currentGate": "BATCH_S13_S16_INTEGRATED; season incomplete"
+    "currentGate": "BEAT_LEVEL_VISUAL_REPAIR_INTEGRATED",
+    "runId": "2026-10-01T18-36-42-265Z-production-art-4f6b0d"
   }
 }

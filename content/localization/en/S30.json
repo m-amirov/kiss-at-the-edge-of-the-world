@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "source": "content/season-1-literary-episode-07.md",
+  "scenes": {
+    "S30": {
+      "title": "Day 14. A Future That Wasn’t Invented",
+      "chunks": {
+        "S30.C000": {
+          "title": "",
+          "paragraphs": {
+            "S30.C000.P000": "Damir ordered soup and took out a message from the clinic. In the past, Alice would have read his face to decide whether the news was good or bad. This time she could not guess: he was staring at the screen with the concentration of someone reading another person’s test results.",
+            "S30.C000.P001": "“They want to talk after the trip. Not a job, and not a promise. Just a video interview with the head of the department,” he said.",
+            "S30.C000.P002": "“Do you want to accept?”",
+            "S30.C000.P003": "“I want to find out what the place is like. But after Brussels, I’m afraid to talk about it as if you are supposed to pack a suitcase after me again.”",
+            "S30.C000.P004": "Alice picked up her spoon, although the soup was still too hot. She remembered their last evening together two years earlier, when Damir told her about the signed contract and asked whether she could come a month later. It had taken her two seconds to understand: the question had come after the decision, not before it. Now there was no contract in front of him, only an open message.",
+            "S30.C000.P005": "“If they offer you the job, will you want to go?” she asked.",
+            "S30.C000.P006": "“Maybe. But I don’t want you to answer today. We can talk when I have something besides a message.”",
+            "S30.C000.P007": "Outside, Nick was arguing with Eric about the number of stops. Alice suddenly realised that she and Damir did not have to spend this lunch conducting an interview for the position of former lovers. She asked what he would order if the menu contained only the one dish that had always made him sick in the student cafeteria. Damir looked at his plate, grimaced, and finally smiled."
+          }
+        },
+        "S30.C001": {
+          "title": "Choice S30-C1 — How does Alice answer the message?",
+          "paragraphs": {}
+        },
+        "S30.C002": {
+          "title": "A. Congratulate him and suggest discussing the options later",
+          "paragraphs": {
+            "S30.C002.P000": "“I’m glad they asked you. I really am. Let’s talk when you know whether you want it.”",
+            "S30.C002.P001": "Damir laid his hand over the edge of her sleeve on the table. It was clearly easier for him that the conversation had ended neither in a quarrel nor in a grand promise."
+          }
+        },
+        "S30.C003": {
+          "title": "B. Ask him to name the important dates now and make no shared plans before them",
+          "paragraphs": {
+            "S30.C003.P000": "“Write to me when the interview is. I don’t want to build guesses about where you will be in winter.”",
+            "S30.C003.P001": "“I will. And I won’t present a possibility as a decision.”",
+            "S30.C003.P002": "They finished their soup and went outside without a new arrangement. For the first time, this did not feel like emptiness to Alice, but like an honest pause."
+          }
+        },
+        "S30.C004": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S30.C004.P000": "On the way to the car, Damir bought two identical chocolate bars from a little shop. Alice said she liked a different filling now. He went back and exchanged one. It was funny and a little awkward; at least this time he did not insist that he remembered her better than she remembered herself."
+          }
+        },
+        "S30.C005": {
+          "title": "Choice S30-C2 — How will Alice invite Damir to spend his free time?",
+          "paragraphs": {}
+        },
+        "S30.C006": {
+          "title": "A. Ask him to choose a new song for a walk together",
+          "paragraphs": {
+            "S30.C006.P000": "“Not the one we listened to before,” Alice said. Damir played a melody she did not know, and they walked from the café to the guesthouse sharing one pair of earphones. At the end she asked him to send her the title."
+          }
+        },
+        "S30.C007": {
+          "title": "B. Invite him to the shop for ridiculous souvenirs",
+          "paragraphs": {
+            "S30.C007.P000": "In the souvenir shop, Damir found a postcard with an absurd drawing of a horse, while Alice found sheep-patterned socks. They exchanged the purchases at the till. Damir said the socks would be useful on a farm; she suggested they test that tomorrow."
+          }
+        }
+      }
+    }
+  }
+}

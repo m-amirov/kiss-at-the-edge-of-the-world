@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "source": "content/season-1-literary-episode-08.md",
+  "scenes": {
+    "S35": {
+      "title": "Day 16. Do Not Give Them Someone Else’s Words",
+      "chunks": {
+        "S35.C000": {
+          "title": "",
+          "paragraphs": {
+            "S35.C000.P000": "Marina sent a draft headline: “How Four Strangers Found One Another at the Edge of the World.” Alice read it three times. They were not strangers, and not all of them had been looking for one another. Besides, Marina had put a line from a private conversation into the subheading—a line Alice had once repeated anonymously in an editorial email. In the email it had been a working observation; in the finished piece it turned a living person into a striking quote.",
+            "S35.C000.P001": "Alice called Marina from a café that smelled of wet clothes and cinnamon. She explained that she could not confirm words for someone who had not agreed to speak for the article. Marina answered irritably that readers needed a particular hero. Alice did not argue about what readers liked in general. She showed Marina Inga’s boardwalk photograph and suggested making the work tourists usually failed to notice the subject.",
+            "S35.C000.P002": "Marina fell silent, then asked Alice to send the finished structure by evening. The conversation was not a victory over the editorial office. Alice still had to prove that the material could be interesting without someone else’s confession."
+          }
+        },
+        "S35.C001": {
+          "title": "Choice S35-C1 — What does Alice keep in the article?",
+          "paragraphs": {}
+        },
+        "S35.C002": {
+          "title": "A. Keep the agreed direct quotes and remove the private details",
+          "paragraphs": {
+            "S35.C002.P000": "Alice opened her list of interviewees and wrote to each person what she intended to use. Inga sent a corrected name for the trail; the owner of the smokehouse asked her to remove the shift time. Alice made the changes and felt the familiar fatigue of good journalism—specific, slow, and free of dramatic promises."
+          }
+        },
+        "S35.C003": {
+          "title": "B. Rebuild the piece around her own observations",
+          "paragraphs": {
+            "S35.C003.P000": "Alice took five notes made during the trip and crossed out every word someone had spoken without intending it for publication. What remained were things she had seen herself: a closed road, wet gloves, a light in the guesthouse, and people willing to change their plans. The material became quieter, but more precise."
+          }
+        },
+        "S35.C004": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S35.C004.P000": "That evening Marina sent one message: “I see the new angle. Finish it.” Alice did not know whether the whole piece would be approved. But now she had a story for which she could answer for every line."
+          }
+        }
+      }
+    }
+  }
+}

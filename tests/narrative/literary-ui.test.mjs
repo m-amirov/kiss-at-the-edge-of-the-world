@@ -7,6 +7,7 @@ const root = fileURLToPath(new URL('../../', import.meta.url));
 const cssPath = fileURLToPath(new URL('../../src/literary.css', import.meta.url));
 const css = fs.readFileSync(cssPath, 'utf8');
 const player = fs.readFileSync(fileURLToPath(new URL('../../src/literary-player.js', import.meta.url)), 'utf8');
+const localization = fs.readFileSync(fileURLToPath(new URL('../../src/localization.js', import.meta.url)), 'utf8');
 const assetManifest = JSON.parse(fs.readFileSync(`${root}/assets/asset-manifest.json`, 'utf8'));
 
 test('production literary UI bundles the approved Cinematic Romance fonts locally', () => {
@@ -19,8 +20,9 @@ test('production literary UI bundles the approved Cinematic Romance fonts locall
   assert.match(css, /url\('\.\.\/assets\/fonts\/CormorantGaramond\[wght\]\.ttf'\)/);
   assert.match(css, /url\('\.\.\/assets\/fonts\/Manrope\[wght\]\.ttf'\)/);
   assert.doesNotMatch(css, /fonts\.googleapis\.com|fonts\.gstatic\.com/);
-  assert.match(player, /const cover = '\.\.\/assets\/backgrounds\/snaefellsnes-master\.png'/);
-  assert.doesNotMatch(player, /const cover = '\.\/assets\/backgrounds\/snaefellsnes-master\.png'/);
+ assert.match(player, /const cover = '\.\.\/assets\/branding\/menu-hero\.webp'/);
+  assert.doesNotMatch(player, /const cover = '\.\/assets\/branding\/kiss-at-the-edge-cover\.png'/);
+  assert.match(fs.readFileSync(fileURLToPath(new URL('../../literary.html', import.meta.url)), 'utf8'), /assets\/branding\/kiss-at-the-edge-icon\.png/);
 });
 
 test('production literary UI preserves mobile reading and control invariants', () => {
@@ -32,6 +34,43 @@ test('production literary UI preserves mobile reading and control invariants', (
   assert.match(css, /prefers-reduced-motion:reduce/);
 });
 
+test('main menu keeps only the supported actions and has no retired panels or footer', () => {
+  assert.match(player, /\['episodes',t\('episodes'\)\]/);
+  assert.match(player, /t\('continueEpisode'/);
+  assert.match(player, /button\(t\('newGame'\),startNew/);
+  assert.doesNotMatch(player, /Галерея|Об игре|История доступна от начала до одного из четырёх финалов/);
+  assert.doesNotMatch(player, /galleryPanel|literary-gallery/);
+  assert.doesNotMatch(css, /literary-gallery/);
+  assert.match(css, /\.home-actions-secondary \{ display: grid; grid-template-columns: repeat\(2/);
+  assert.match(css, /\.home-actions-secondary \{ grid-template-columns: 1fr; \}/);
+});
+
+test('narrative navigation is stage-first and retired text controls are absent', () => {
+  assert.doesNotMatch(player, /Далее|К выбору|skip-to-choice/);
+  assert.match(player, /bindStageNavigation\(picture\)/);
+  assert.match(player, /bindStageTapTarget\(sheet\)/);
+  assert.match(player, /picture\.dataset\.stageAdvance='true'/);
+  assert.match(player, /picture\.setAttribute\('aria-label',t\('stageAdvanceAria'\)\)/);
+  assert.match(player, /pointerdown/);
+  assert.match(player, /pointerup/);
+  assert.match(player, /picture\.addEventListener\('click'/);
+  assert.match(player, /picture\.addEventListener\('keydown'/);
+  assert.match(player, /event\.stopPropagation\(\)/);
+  assert.match(player, /tapThreshold=10/);
+  assert.match(player, /Math\.hypot\(event\.clientX-pointer\.x,event\.clientY-pointer\.y\)>tapThreshold/);
+  assert.match(player, /interactiveSelector/);
+  assert.match(player, /advanceNarrative\(\)/);
+  assert.match(player, /\['Enter',' ','Spacebar','ArrowRight'\]/);
+  assert.match(player, /isInteractiveTarget\(event\.target\)/);
+  assert.match(css, /\.advance-cue\{/);
+  assert.match(css, /\.literary-picture\[data-stage-advance\]:focus-visible/);
+  assert.match(css, /\.choice-button::before\{/);
+  assert.match(css, /\.choice-button::before\{[\s\S]*?border-right:2px solid[\s\S]*?border-bottom:2px solid[\s\S]*?rotate\(-45deg\)/);
+  assert.match(css, /\.choice-button::after\{\s*content:none/);
+  assert.doesNotMatch(css, /\.choice-button::(?:before|after)\{[^}]*content:\s*['"][^'"]+['"]/);
+  assert.match(css, /\.choice-button\{[\s\S]*?min-height:56px/);
+});
+
 test('Cinematic A mobile polish keeps artwork visible without a nested menu scroller', () => {
   assert.match(css, /\.literary-home::after\{[^}]*linear-gradient/);
   assert.match(css, /\.literary-home-card\{[^}]*overflow:visible/);
@@ -41,11 +80,12 @@ test('Cinematic A mobile polish keeps artwork visible without a nested menu scro
 });
 
 test('ending screens use authored emotional headings instead of engine copy', () => {
-  for (const heading of ['Дорога, которую выбирают вдвоём', 'Без чужого голоса', 'Начать заново — вместе', 'Свой следующий маршрут']) {
-    assert.match(player, new RegExp(heading.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
+  for (const key of ['endingEric', 'endingNick', 'endingDamir', 'endingAlice']) {
+    assert.match(player, new RegExp(`endingHeadings[\\s\\S]*${key}`));
+    assert.match(localization, new RegExp(`${key}:`));
   }
   assert.doesNotMatch(player, /Конец первого сезона|Это завершение выбранной истории|начать другое прохождение можно из меню/);
-  assert.match(player, /sheet\.prepend\(el\(endingHeadings\[scene\.id\]/);
+  assert.match(player, /sheet\.prepend\(el\(t\(endingHeadings\[scene\.id\]\)/);
 });
 
 test('all production reader states use explicit fullscreen presentation modes', () => {
@@ -79,7 +119,7 @@ test('every active production CG has an explicit portrait derivative mapping', (
     const asset = assetManifest.assets.find(entry => entry.id === id);
     assert.ok(asset?.portraitAsset, `${id} needs an explicit portraitAsset`);
     assert.ok(fs.existsSync(`${root}/${asset.portraitAsset}`), `${id} portrait file must exist`);
-    assert.match(player, new RegExp(`'${asset.path.split('/').pop()}'\\s*:`));
+    assert.match(player, new RegExp(`'${asset.runtimePath.split('/').pop()}'\\s*:`));
   }
 });
 

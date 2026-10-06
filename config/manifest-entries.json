@@ -590,7 +590,7 @@
     {
       "source": "config/yandex-doc-snapshot.json",
       "logicalId": "managed:yandex-doc-snapshot",
-      "ownership": "managed",
+      "ownership": "semantic-merge",
       "target": "config/yandex-doc-snapshot.json",
       "modes": [
         "init",
@@ -600,7 +600,7 @@
         "new",
         "mature"
       ],
-      "conflictPolicy": "replace-if-baseline"
+      "conflictPolicy": "semantic-merge"
     },
     {
       "source": "config/game-spec.schema.json",
@@ -680,7 +680,7 @@
     {
       "source": "config/skill-policy.json",
       "logicalId": "managed:skill-policy",
-      "ownership": "managed",
+      "ownership": "semantic-merge",
       "target": "config/skill-policy.json",
       "modes": [
         "init",
@@ -690,7 +690,7 @@
         "new",
         "mature"
       ],
-      "conflictPolicy": "replace-if-baseline"
+      "conflictPolicy": "semantic-merge"
     },
     {
       "source": "docs/EXTERNAL_SKILL_SOURCES.md",
@@ -981,7 +981,7 @@
     {
       "source": "config/manifest-entries.json",
       "logicalId": "managed:manifest-entry-config",
-      "ownership": "managed",
+      "ownership": "semantic-merge",
       "target": "config/manifest-entries.json",
       "modes": [
         "init",
@@ -991,7 +991,7 @@
         "new",
         "mature"
       ],
-      "conflictPolicy": "replace-if-baseline"
+      "conflictPolicy": "semantic-merge"
     },
     {
       "source": "config/starter-kit-manifest.schema.json",
@@ -1436,24 +1436,6 @@
       "modes": ["init", "update"],
       "projectTypes": ["new", "mature"],
       "conflictPolicy": "replace-if-baseline"
-    },
-    {
-      "source": ".codex/skills/visual-novel-art-continuity/SKILL.md",
-      "logicalId": "skill:visual-novel-art-continuity:SKILL.md",
-      "ownership": "target-mapped",
-      "targetTemplate": "{skillRoot}/visual-novel-art-continuity/SKILL.md",
-      "modes": ["init", "update"],
-      "projectTypes": ["new", "mature"],
-      "conflictPolicy": "semantic-merge"
-    },
-    {
-      "source": ".codex/skills/visual-novel-narrative-qa/SKILL.md",
-      "logicalId": "skill:visual-novel-narrative-qa:SKILL.md",
-      "ownership": "target-mapped",
-      "targetTemplate": "{skillRoot}/visual-novel-narrative-qa/SKILL.md",
-      "modes": ["init", "update"],
-      "projectTypes": ["new", "mature"],
-      "conflictPolicy": "semantic-merge"
     }
   ]
 }

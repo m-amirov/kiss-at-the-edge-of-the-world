@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "sourceLocale": "ru",
+  "source": "content/season-1-vertical-slice-episodes-01-02.md",
+  "scenes": {
+    "S02": {
+      "title": "The Road to Reykjavík. Four Versions of the Same Route",
+      "chunks": {
+        "S02.C000": {
+          "title": "",
+          "paragraphs": {
+            "S02.C000.P000": "Once they had exhausted the subjects of seats and luggage, the only sound for a while was the windshield wipers.",
+            "S02.C000.P001": "Nick tried to connect his phone to the car, accidentally found an Icelandic radio station, and left it on, claiming uncertainty was good for the edit. A woman was singing something slow and angry.",
+            "S02.C000.P002": "\u201cIs she singing about love?\u201d Alice asked.",
+            "S02.C000.P003": "\u201cHer tax return,\u201d Eric said.",
+            "S02.C000.P004": "Nick turned to him.",
+            "S02.C000.P005": "\u201cSeriously?\u201d",
+            "S02.C000.P006": "\u201cNo.\u201d",
+            "S02.C000.P007": "This time the smile reached his mouth. Alice made a mental note: he joked rarely, but never by accident.",
+            "S02.C000.P008": "Eric laid a printed itinerary on the dashboard. The overnight stops and alternate roads were marked on it.",
+            "S02.C000.P009": "\u201cNorthern Road, a small local agency, put the route together,\u201d he said. \u201cMarina booked you a place with them. Nick's making their road film. I'm driving and leading the hikes.\u201d",
+            "S02.C000.P010": "\u201cAnd Damir?\u201d Alice asked without turning around.",
+            "S02.C000.P011": "\u201cI booked the open spot myself,\u201d Damir said. \u201cThe clinic told me this group would reach Akureyri in time for my meeting. I never saw the passenger list.\u201d",
+            "S02.C000.P012": "Alice looked at the itinerary header. There were no last names, only room numbers and four seats in the car. The explanation did not make the coincidence any more pleasant, but it no longer looked like anyone's scheme.",
+            "S02.C000.P013": "\u201cThree weeks,\u201d Eric said. \u201cThe south coast, the Eastfjords, north, then west. In October, the weather sometimes changes the order of the stops.\u201d",
+            "S02.C000.P014": "Alice folded the map so she could see the day of the Akureyri meeting. Damir was indeed due there on the sixteenth day of the trip, not the sixteenth of the month.",
+            "S02.C000.P015": "Nick leaned between the seats.",
+            "S02.C000.P016": "\u201cOne request. If we change the route, tell me in advance. I need the light.\u201d",
+            "S02.C000.P017": "\u201cThe light doesn't care whether I warn you.\u201d",
+            "S02.C000.P018": "\u201cI do.\u201d",
+            "S02.C000.P019": "\u201cThat's why you'll get the forecast in the morning and the decision before we leave.\u201d",
+            "S02.C000.P020": "Damir scrolled through an email on his phone.",
+            "S02.C000.P021": "\u201cThe Akureyri meeting is still on day sixteen?\u201d",
+            "S02.C000.P022": "\u201cIf the road is open, yes,\u201d Eric said. \u201cIf it isn't, the clinic knows how to make a video call.\u201d",
+            "S02.C000.P023": "\u201cThey asked to meet in person.\u201d",
+            "S02.C000.P024": "\u201cIf the road closes, we'll tell them that day.\u201d",
+            "S02.C000.P025": "On another day, Alice might have thought Eric was being too terse. Right now, she liked that he would not promise the impossible just to put strangers at ease.",
+            "S02.C000.P026": "\u201cAnd where does my work fit in?\u201d she asked.",
+            "S02.C000.P027": "\u201cAnywhere it doesn't hold everyone else up on a dangerous road.\u201d",
+            "S02.C000.P028": "\u201cUnderstood,\u201d Alice said. \u201cJust tell me ahead of time when we can't stop for notes.\u201d",
+            "S02.C000.P029": "\u201cI'll show you on the map after coffee.\u201d",
+            "S02.C000.P030": "Damir laughed unexpectedly. Alice turned around. She knew the sound, though it had changed a little\u2014lower now, and easier. He used to laugh that way only at home, when there was no chance of a call from the hospital. Apparently, he could do it now in a car with people he had only just met.",
+            "S02.C000.P031": "Eric pulled in at a roadside café. The wind struck the doors so hard they had to get out one at a time. Inside, the air smelled of coffee, wet wool, and cinnamon. While the others chose pastries, Alice called Marina back.",
+            "S02.C000.P032": "\u201cThree profiles, plus one piece from you,\u201d her editor reminded her. \u201cNot an ad for the agency. We're paying for the trip, so you're free to say you hated the route. Send me the opening paragraph by the evening of day four. The rest is due when you get back.\u201d",
+            "S02.C000.P033": "\u201cNick is filming for the agency,\u201d Alice said.",
+            "S02.C000.P034": "\u201cHis film isn't your story. You only need to agree on who can be filmed and when.\u201d",
+            "S02.C000.P035": "Alice promised to send the paragraph and returned to the table. Now she knew which questions she was asking as a journalist and which ones she was asking simply because she wanted the answer.",
+            "S02.C000.P036": "At the table, Alice opened her notebook.",
+            "S02.C000.P037": "\u201cLet's make this quick. I don't need your life stories. I need to know why you agreed to spend three weeks in the same car.\u201d",
+            "S02.C000.P038": "\u201cYou first,\u201d Nick said. \u201cWhy did you agree?\u201d",
+            "S02.C000.P039": "\u201cI'm asking the questions.\u201d",
+            "S02.C000.P040": "\u201cThat's not a reason. It's a way not to answer.\u201d",
+            "S02.C000.P041": "Eric stirred sugar into his coffee and watched her with an almost imperceptible interest. Damir studied the menu as if it might contain a clue.",
+            "S02.C000.P042": "\u201cFine,\u201d Alice said. \u201cI'm tired of writing pieces that only make people want to buy a ticket. I want to write one that makes them want to make a choice.\u201d",
+            "S02.C000.P043": "Nick took his elbows off the table.",
+            "S02.C000.P044": "\u201cAlready better than the forms.\u201d",
+            "S02.C000.P045": "\u201cYour turn.\u201d",
+            "S02.C000.P046": "\u201cNorthern Road hired me to make a film about the trip. I talked them into keeping people in the frame, not just pretty places. After my last film, I don't want to make another film that's nothing but pretty views.\u201d",
+            "S02.C000.P047": "\u201cWas that one about you?\u201d",
+            "S02.C000.P048": "\u201cI was hoping we'd at least get dessert before that question.\u201d",
+            "S02.C000.P049": "Eric spoke next.",
+            "S02.C000.P050": "\u201cI've driven groups for this agency before. They needed someone who knows the roads in October.\u201d",
+            "S02.C000.P051": "\u201cThat's the official version,\u201d Alice observed.",
+            "S02.C000.P052": "\u201cIt's the only one for now.\u201d",
+            "S02.C000.P053": "Damir closed the menu.",
+            "S02.C000.P054": "\u201cThe clinic meeting falls during the northern part of the route. I have three weeks off between contracts, and I paid for the place myself. If I'm going to say yes to a year in Akureyri, I want to know more than the hospital and the apartment.\u201d",
+            "S02.C000.P055": "Alice looked up.",
+            "S02.C000.P056": "\u201cThinking before you answer. New habit?\u201d",
+            "S02.C000.P057": "The air around the table tightened. Damir held her gaze.",
+            "S02.C000.P058": "\u201cYes.\u201d",
+            "S02.C000.P059": "Nick picked up a pastry and turned its cut side toward him, making a show of studying the raisins. Eric took a sip of coffee.",
+            "S02.C000.P060": "\u201cWe leave in ten minutes,\u201d Eric said. \u201cIf you need longer, say so now.\u201d",
+            "S02.C000.P061": "Alice said she was ready to go. The conversation with Damir could wait."
+          }
+        },
+        "S02.C001": {
+          "title": "Choice S02-C1 \u2014 the first approach to the story",
+          "paragraphs": {
+            "S02.C001.P000": "Choose one passage. The state notes are for later narrative tracking and are not part of the dialogue."
+          }
+        },
+        "S02.C002": {
+          "title": "A. Observe first (`careerThesis=people`)",
+          "paragraphs": {
+            "S02.C002.P000": "Alice did not ask a second question. Nick stopped pretending to be fascinated by the raisins and finally took a bite of his pastry. Damir set the closed menu aside. Eric checked his watch but did not hurry her.",
+            "S02.C002.P001": "She wrote: \u201cAfter Damir answered, each of them made room for his silence in a different way.\u201d It was a rough note, but it was about people, not the road. Nick caught a glimpse of it and did not ask to see."
+          }
+        },
+        "S02.C003": {
+          "title": "B. Begin with the place (`careerThesis=place`)",
+          "paragraphs": {
+            "S02.C003.P000": "\u201cWhat's this town called?\u201d Alice asked Eric. \u201cAnd why did you stop here instead of at the gas station farther on?\u201d",
+            "S02.C003.P001": "\u201cVogar,\u201d Eric said, pointing out the turn on the map. \u201cYou can pull off the road here and get out safely, without opening a door into the wind.\u201d",
+            "S02.C003.P002": "\u201cThat's what I want to write about,\u201d Alice said. \u201cNot the view from the window, but the way the road changes our decisions.\u201d",
+            "S02.C003.P003": "She wrote down the name of the town and the way Nick held the door for an elderly couple he did not know."
+          }
+        },
+        "S02.C004": {
+          "title": "C. Ask about the decision (`careerThesis=own-choice`, `damirDirect=true`)",
+          "paragraphs": {
+            "S02.C004.P000": "\u201cDamir, do you know what you're going to tell the clinic?\u201d Alice asked.",
+            "S02.C004.P001": "He set his phone down, screen facing the table.",
+            "S02.C004.P002": "\u201cNo. That's why I came early, before the meeting.\u201d",
+            "S02.C004.P003": "\u201cFor the story, I need to understand what people need to find out on a journey besides which places to visit. But if you don't want to talk about it, you don't have to.\u201d",
+            "S02.C004.P004": "\u201cWhat it would be like for me to live here. But I'm not ready to talk about that for the article.\u201d",
+            "S02.C004.P005": "\u201cAll right. Then not for the article,\u201d Alice said, closing her notebook.",
+            "S02.C004.P006": "She did not get an interview. Instead, she learned that he could refuse her as a journalist without pulling away from her as a person."
+          }
+        },
+        "S02.C005": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S02.C005.P000": "On the way back to the car, Nick gave Alice half his pastry; she hadn't ordered anything to eat. Eric waited by the door while everyone zipped their jackets. Damir threw away the empty cups and made no attempt to get her alone."
+          }
+        }
+      }
+    }
+  }
+}

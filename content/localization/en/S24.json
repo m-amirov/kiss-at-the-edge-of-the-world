@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "sourceLocale": "ru",
+  "source": "content/season-1-literary-episode-06.md",
+  "scenes": {
+    "S24": {
+      "title": "Day 12. The Pier Without a Shot",
+      "chunks": {
+        "S24.C000": {"title": "", "paragraphs": {
+          "S24.C000.P000": "Morning opened with a view of colourful houses on the other side of the narrow water. Nick was already sitting on the empty pier, swinging his legs above the boards. The camera lay in a closed bag by his shoes. Alice came over because she saw a second cup of coffee beside him.",
+          "S24.C000.P001": "“Is that an invitation, or are you taking a terrible risk with two doses of caffeine?” she asked.",
+          "S24.C000.P002": "“An invitation. The coffee is insurance in case you refuse.”",
+          "S24.C000.P003": "He moved the cup closer, but did not touch her hand. On his phone was an email from the producer: a short teaser of the trip was needed by evening. He wanted to see “the group's living closeness,” especially Alice, because she spoke on camera without prepared lines.",
+          "S24.C000.P004": "“I didn't promise them you,” Nick said. “And I didn't come to ask permission for everything already filmed. I want to understand first what can be shown at all. If you say ‘not now’, I'll find another answer. Just don't say yes out of pity for a deadline.”",
+          "S24.C000.P005": "The water moved slowly beneath the pier. Alice remembered Nick's hands on the camera on the windy road and his message to the driver yesterday. He was learning not to run ahead of consent, but the producer's email could make running tempting again."
+        }},
+        "S24.C001": {"title": "Response to the evening of episode 5 — select exactly one fragment by `eveningState`", "paragraphs": {}},
+        "S24.C002": {"title": "A. After an evening with Eric (`eveningState=eric`)", "paragraphs": {
+          "S24.C002.P000": "“You don't have to discuss your emails with me to find out what happened between Eric and me in Höfn,” Alice said.",
+          "S24.C002.P001": "Nick shook his head.",
+          "S24.C002.P002": "“I don't know what happened. I barely know what will happen to me. The email concerns your face and voice—that's why I'm here. If you want, we can return to it with Eric beside us.”",
+          "S24.C002.P003": "She heard in the offer not jealousy but a way to make a professional conversation safer."
+        }},
+        "S24.C003": {"title": "B. After an evening with Nick (`eveningState=nick`)", "paragraphs": {
+          "S24.C003.P000": "“You put the camera away the day before yesterday,” Alice said. “It mattered to me that you did it before I asked.”",
+          "S24.C003.P001": "“I remember. That's why I came before answering the producer. Our evening doesn't give me the right to today's teaser.”",
+          "S24.C003.P002": "He said “our evening” quietly, without a smile. There was warmth between them, but it could not sign permission on her behalf. Alice sat beside him and waited for him to open the folder of material."
+        }},
+        "S24.C004": {"title": "C. After an evening with Damir (`eveningState=damir`)", "paragraphs": {
+          "S24.C004.P000": "“I saw how you left the kitchen to Damir and me in Höfn,” Alice said.",
+          "S24.C004.P001": "“It doesn't belong to me,” Nick replied. “Neither do your relationships. I'm asking you because of the email, and also because I can admit to you that I'm afraid of making a person into a convenient shot again.”",
+          "S24.C004.P002": "He was not trying to be better than Damir in words. The fear was his own and stayed on the pier between them."
+        }},
+        "S24.C005": {"title": "D. After an evening alone (`eveningState=alice`)", "paragraphs": {
+          "S24.C005.P000": "“In Höfn, you chose your article over our company,” Nick said. “Do you need the same distance today? I'll write to the producer myself.”",
+          "S24.C005.P001": "“Then I chose to finish the letter,” Alice corrected him. “Today I can look. But my free morning does not turn me into your editor.”",
+          "S24.C005.P002": "“Fair. Our editor is expensive and rather nervous. Me.”",
+          "S24.C005.P003": "This time the joke did not hide the request. He waited for her answer, looking at her rather than the screen."
+        }},
+        "S24.C006": {"title": "S24-I-K — after the kiss at the pool", "paragraphs": {
+          "S24.C006.P000": "Nick touched the edge of the second cup, then stopped his hand.",
+          "S24.C006.P001": "“I wanted to kiss you again,” he admitted. “But first I'll show you the email. I don't want one thing to pay for the other.”",
+          "S24.C006.P002": "“I thought about the kiss too,” Alice said. “I'll look at the email separately anyway.”",
+          "S24.C006.P003": "He moved the phone toward her, leaving the cup between them."
+        }},
+        "S24.C007": {"title": "S24-I-H — after the hug", "paragraphs": {
+          "S24.C007.P000": "“Do you still have that film title?” Nick asked.",
+          "S24.C007.P001": "“In my notebook. I like it better than your working title today.”",
+          "S24.C007.P002": "“Me too. I'd like to hug you now, but first I'll explain the email.”",
+          "S24.C007.P003": "Alice sat beside him without taking responsibility for the rest of the day."
+        }},
+        "S24.C008": {"title": "S24-I-D — after asking to walk alone", "paragraphs": {
+          "S24.C008.P000": "Nick put the second cup an arm's length away.",
+          "S24.C008.P001": "“If you need another morning alone today, I'll leave,” he said.",
+          "S24.C008.P002": "“Today I came over myself. Tell me why you asked.”",
+          "S24.C008.P003": "He did not call it a change in her decision about him; they talked about a new invitation."
+        }},
+        "S24.C009": {"title": "Common continuation", "paragraphs": {
+          "S24.C009.P000": "Nick showed her four short fragments without sound. The road beyond the glass. Eric by the map. Damir handing Alice an apple. Alice at the guesthouse, laughing when her bag strap caught on a suitcase. The last fragment had been filmed yesterday, when Nick asked permission for a group shot after the long drive. Alice remembered the camera and had not objected then. Now, seeing her face apart from that evening, she understood that this permission was not enough for the email to the producer.",
+          "S24.C009.P001": "“Delete this,” Alice said.",
+          "S24.C009.P002": "Nick asked whether she needed a full copy for checking, then deleted the fragment from the working folder and the teaser selection in front of her. He did not argue that she had seen the camera once.",
+          "S24.C009.P003": "“I asked permission to film the shared day,” he said. “I didn't ask whether I could send your face in the teaser. That's my mistake.”",
+          "S24.C009.P004": "“Yes.”",
+          "S24.C009.P005": "He did not ask her to praise him for admitting it. Alice herself suggested discussing later which shared shots could be shown at all; for now she wanted to finish her coffee beside him.",
+          "S24.C009.P006": "“What do you want from me now?” she asked.",
+          "S24.C009.P007": "“To look at the remaining three fragments together. Or to leave for coffee and let me tell the producer myself that I am not showing people yet. Those are two different invitations. One is work; the other is simply staying.”"
+        }},
+        "S24.C010": {"title": "Choice S24-C1 — What will Alice offer Nick", "paragraphs": {}},
+        "S24.C011": {"title": "A. Review the material together under limited conditions", "paragraphs": {
+          "S24.C011.P000": "“Let's watch for ten minutes today,” Alice said. “Only the parts where I am present. Consent to watching is not consent to sending. And you will ask Eric and Damir separately.”",
+          "S24.C011.P001": "Nick set a ten-minute timer and showed her the pause button.",
+          "S24.C011.P002": "“Do you always count time so seriously?” she asked.",
+          "S24.C011.P003": "“Only when I promise not to steal it.”",
+          "S24.C011.P004": "They found a road fragment containing only the sound of tyres and rain. It would have been enough for the beginning of a teaser. But Alice did not say “send it”: that decision required two more conversations, and Nick took the work on himself."
+        }},
+        "S24.C012": {"title": "B. Decline the joint viewing and stay beside him", "paragraphs": {
+          "S24.C012.P000": "“Today I don't want to be in your edit even as a reviewer,” Alice said. “But I'll finish the coffee. If you tell them the teaser will be without me, I'll trust the answer in the email, not a promise on the pier.”",
+          "S24.C012.P001": "Nick put the phone in his pocket.",
+          "S24.C012.P002": "“I'll answer before lunch. I'll show you only my reply, not a new draft asking you to change your mind.”",
+          "S24.C012.P003": "They finished their coffee, discussing why the colourful houses opposite looked as if each owner had argued with the previous one. Nick invented three imaginary neighbours; Alice added a fourth who simply loved yellow. They laughed without recording it, and the producer did not need proof."
+        }},
+        "S24.C013": {"title": "Common continuation", "paragraphs": {
+          "S24.C013.P000": "Nick stood first and offered Alice a hand to get up from the low boards. She leaned on it for a moment while finding a stable board with her foot. Nick let go as soon as she straightened.",
+          "S24.C013.P001": "“There is another invitation,” he said. “After the trip, find an evening without a camera. Not a promise about a film, but a test of whether we are interested in talking when there is nowhere to put it. You don't have to answer now.”",
+          "S24.C013.P002": "Alice saw what it had cost him to say the last sentence. He was used to filling pauses. Here he left the pause to her.",
+          "S24.C013.P003": "On the way to the house, she received confirmation from the smokehouse owner: the agreed twenty minutes still stood, and Alice was expected alone and without a camera before lunch. Alice asked whether they could talk about how working days change when a road is closed. The woman replied, “We can talk about that.” The story began with an agreed question."
+        }},
+        "S24.C014": {"title": "If `S19-C3=A`", "paragraphs": {"S24.C014.P000": "On the pier, Nick remembered yesterday's promise to walk without the camera. He put his phone in his pocket and spent a few minutes simply listening to Alice without trying to invent a shot."}},
+        "S24.C015": {"title": "If `S19-C3=B`", "paragraphs": {"S24.C015.P000": "On the pier, Nick asked Alice whether she regretted the breakfast they had chosen at random. She said she was glad: at last they had found something without someone else's reviews."}}
+      }
+    }
+  }
+}

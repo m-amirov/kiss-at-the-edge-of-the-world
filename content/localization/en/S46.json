@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "source": "content/season-1-literary-episode-10.md",
+  "scenes": {
+    "S46": {
+      "title": "Day 21. Damir. The First of Three Dates",
+      "chunks": {
+        "S46.C000": {
+          "title": "",
+          "paragraphs": {
+            "S46.C000.P000": "On the bus to the airport Damir held his ticket as though he feared losing it again between the pages of his passport. Alice sat beside him and listened as he spoke about next week’s interview. He did not know whether he would want the position even if it was offered. She did not know how demanding her editorial project would be. But both knew the date of their first date at home: Saturday after his shift, at a small bakery near Alice.",
+            "S46.C000.P001": "At the check-in desk Damir stopped and asked whether she wanted to change anything in their arrangement before leaving. Alice thought, then said she wanted to agree on only one thing: if either could not come, they would say so in advance rather than disappear from the conversation. Damir nodded and made clear that she could change her mind too. Alice agreed. Their first new story began with simple words, not a move or a promise never to make mistakes again."
+          }
+        },
+        "S46.C001": {
+          "title": "Choice S46-C1 — What does Alice say to Damir before boarding?",
+          "paragraphs": {}
+        },
+        "S46.C002": {
+          "title": "A. Call their meeting at home their first new date",
+          "paragraphs": {
+            "S46.C002.P000": "“Saturday. And it will be a first date, not a continuation of the one we failed to finish two years ago.”",
+            "S46.C002.P001": "Damir smiled and kissed her. Then he walked her to security and went to his gate, without turning back every ten steps."
+          }
+        },
+        "S46.C003": {
+          "title": "B. Ask to confirm the date once more after they return",
+          "paragraphs": {
+            "S46.C003.P000": "“Write to me when you arrive. I’ll write too. We’ll confirm Saturday after we have both unpacked.”",
+            "S46.C003.P001": "Damir said he would. Alice hugged him and went to her gate. She did not feel the old fear as he stayed behind: their meeting no longer depended on who travelled after whom."
+          }
+        },
+        "S46.C004": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S46.C004.P000": "A month later Alice and Damir met for the second time since returning. Their first date had happened, though Damir was ten minutes late because a metro passage was closed and warned her in advance. This time Alice chose the place: a small museum, then a bakery. Damir said he had passed the interview, but had not yet decided about the new position. They ordered different rolls and traded bites again. Many questions remained ahead. But this day belonged to them both, and neither intended to decide it alone."
+          }
+        }
+      }
+    }
+  }
+}

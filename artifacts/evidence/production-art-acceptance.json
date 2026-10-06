@@ -1,0 +1,436 @@
+{
+  "schemaVersion": 1,
+  "recordType": "production-art-acceptance",
+  "status": "PASS",
+  "verdict": "PASS_PRODUCTION_ART_COMPLETE",
+  "repository": {
+    "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-recovery-2026-10-05",
+    "remote": "https://github.com/m-amirov/kiss-at-the-edge-of-the-world.git",
+    "head": "acf94f4b2567ee07ea37d9c58966c833f80f5c4b"
+  },
+  "currentHead": "acf94f4b2567ee07ea37d9c58966c833f80f5c4b",
+  "starterKitVersion": "0.5.9",
+  "productionArtRuns": [
+    {
+      "runId": "2026-09-27T18-09-26-374Z-production-art-ec2ea9",
+      "result": "PASS",
+      "sourceProjectDir": "E:/Work/YandexGames/Novells/Поцелуй на краю света",
+      "evidence": ".ceos-runs/2026-09-27T18-09-26-374Z-production-art-ec2ea9"
+    },
+    {
+      "runId": "2026-09-28T05-06-20-967Z-production-art-87087b",
+      "result": "PASS",
+      "sourceProjectDir": "E:/Work/YandexGames/Novells/Поцелуй на краю света",
+      "evidence": ".ceos-runs/2026-09-28T05-06-20-967Z-production-art-87087b"
+    },
+    {
+      "runId": "2026-10-01T18-36-42-265Z-production-art-4f6b0d",
+      "result": "PASS",
+      "sourceProjectDir": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-recovery-2026-10-05",
+      "evidence": ".ceos-runs/2026-10-01T18-36-42-265Z-production-art-4f6b0d"
+    }
+  ],
+  "acceptedSceneCoverage": {
+    "expected": 66,
+    "covered": 66,
+    "remaining": 0,
+    "source": "current beat-level visual ledger and runtime mapping reconciliation"
+  },
+  "placeholders": 0,
+  "brokenPaths": 0,
+  "webHigh": {
+    "result": "PASS",
+    "agent": "ceos_art_director_web",
+    "source": "formal final-batch-reaudit.json; byte-identical accepted assets and restored canonical mappings"
+  },
+  "manifestSha256": "0eaca26999adfd588777d44348732f8511be67045c9a9bcab4d74f0912d956b2",
+  "acceptedAssets": [
+    {
+      "path": "assets/backgrounds/guesthouse-common-kitchen-evening.png",
+      "sha256": "f6c3e566baf906961a9540d927f73477dcd1734cd8850051a1abce31af9e2fb8",
+      "scenes": [
+        "S07",
+        "S08",
+        "S13",
+        "S16",
+        "S20",
+        "S21",
+        "S48",
+        "S51",
+        "S58",
+        "S59",
+        "S60",
+        "S65"
+      ],
+      "dimensions": "1672x941",
+      "format": "PNG",
+      "sourceRunId": "2026-09-27T18-09-26-374Z-production-art-ec2ea9"
+    },
+    {
+      "path": "assets/backgrounds/small-icelandic-cafe-rain.png",
+      "sha256": "8ee77c853233c5e9ccbca3a5714d46052d295284744e36550824181635c17411",
+      "scenes": [
+        "S12",
+        "S30",
+        "S35",
+        "S42",
+        "S43",
+        "S56"
+      ],
+      "dimensions": "1672x941",
+      "format": "PNG",
+      "sourceRunId": "2026-09-27T18-09-26-374Z-production-art-ec2ea9"
+    },
+    {
+      "path": "assets/backgrounds/south-coast-road-rain.png",
+      "sha256": "6e5d7bc3fe561db6d0447b038f4f476a0730620dabc549b7d42b4b95fd4bc7c4",
+      "scenes": [
+        "S05",
+        "S10"
+      ],
+      "dimensions": "1672x941",
+      "format": "PNG",
+      "sourceRunId": "2026-09-27T18-09-26-374Z-production-art-ec2ea9"
+    },
+    {
+      "path": "assets/backgrounds/hofn-open-pool-evening.png",
+      "sha256": "c9f0034f869c6a4ea574460c38ebe91549e847871e739ec39bbc58a90f08bef5",
+      "scenes": [
+        "S19"
+      ],
+      "dimensions": "1672x941",
+      "format": "PNG",
+      "sourceRunId": "2026-09-27T18-09-26-374Z-production-art-ec2ea9"
+    },
+    {
+      "path": "assets/backgrounds/lagarfljot-volunteer-trail.png",
+      "sha256": "c75abb37b42483f40f47b37f75c047986d77c78b1a9fbf85f21c2d25064bef87",
+      "scenes": [
+        "S27"
+      ],
+      "dimensions": "1672x941",
+      "format": "PNG",
+      "sourceRunId": "2026-09-27T18-09-26-374Z-production-art-ec2ea9"
+    },
+    {
+      "path": "assets/backgrounds/myvatn-rainy-lodge-interior.png",
+      "sha256": "8d04133a79bca4dbc6f37664a144496c709902a8c5c09c5f3bcf0fafb4a23bf3",
+      "scenes": [
+        "S31",
+        "S32",
+        "S33"
+      ],
+      "dimensions": "1672x941",
+      "format": "PNG",
+      "sourceRunId": "2026-09-27T18-09-26-374Z-production-art-ec2ea9"
+    },
+    {
+      "path": "assets/backgrounds/seydisfjordur-community-hall.png",
+      "sha256": "f61a2ad71491201983c5dc892fbeff0974ba42d93674090f4143d23b5cc870df",
+      "scenes": [
+        "S49",
+        "S63"
+      ],
+      "dimensions": "1672x941",
+      "format": "PNG",
+      "sourceRunId": "2026-09-27T18-09-26-374Z-production-art-ec2ea9"
+    },
+    {
+      "path": "assets/backgrounds/horse-farm-riding-lane.png",
+      "sha256": "1844afcbd548c34acb1694e97bd925295a94c2a746bdb90bc31c4cebdd1a70a5",
+      "scenes": [
+        "S55"
+      ],
+      "dimensions": "1672x941",
+      "format": "PNG",
+      "sourceRunId": "2026-09-27T18-09-26-374Z-production-art-ec2ea9"
+    },
+    {
+      "path": "assets/backgrounds/road-trip-van-interior-rain.png",
+      "sha256": "dbd19409c079c98e0141818e85935ae84ed14655d2897c0400953191d5a7c269",
+      "scenes": [
+        "S02"
+      ],
+      "dimensions": "1672x941",
+      "format": "PNG",
+      "sourceRunId": "2026-09-28T05-06-20-967Z-production-art-87087b"
+    },
+    {
+      "path": "assets/backgrounds/seydisfjordur-guesthouse-smokehouse-morning.png",
+      "sha256": "fb4f8a4497b43ac787fae9e2393e1c211c2b42680ecf9eec84cbd03a023dc92c",
+      "scenes": [
+        "S25"
+      ],
+      "dimensions": "1672x941",
+      "format": "PNG",
+      "sourceRunId": "2026-09-28T05-06-20-967Z-production-art-87087b"
+    },
+    {
+      "path": "assets/backgrounds/myvatn-hverfjall-viewpoint-overcast.png",
+      "sha256": "c66c1ac0ee9942cc9cfc3add3f29399b8dc04ef8e5ef9993c78430ebedb85620",
+      "scenes": [
+        "S28",
+        "S29"
+      ],
+      "dimensions": "1672x941",
+      "format": "PNG",
+      "sourceRunId": "2026-09-28T05-06-20-967Z-production-art-87087b"
+    },
+    {
+      "path": "assets/backgrounds/keflavik-airport-departures.png",
+      "sha256": "a232967851c5a47b21005c85d2622ee0a9bd75f985fe7d4609e8c8a399c79c05",
+      "scenes": [
+        "S46"
+      ],
+      "dimensions": "1672x941",
+      "format": "PNG",
+      "sourceRunId": "2026-09-28T05-06-20-967Z-production-art-87087b"
+    },
+    {
+      "path": "assets/backgrounds/snaefellsnes-bakery-dawn.png",
+      "sha256": "bfc88acd5919b194d4de46cf00ba0f893a6977247b75ac404360a9c7d0b7e5fa",
+      "scenes": [
+        "S57"
+      ],
+      "dimensions": "1672x941",
+      "format": "PNG",
+      "sourceRunId": "2026-09-28T05-06-20-967Z-production-art-87087b"
+    },
+    {
+      "path": "assets/backgrounds/reykjahlid-bookshop-day.png",
+      "sha256": "f08067b3a390987dde0d7b9de89bf88c90fb664ed04bb2d0af35948ecb1d15b9",
+      "scenes": [
+        "S62"
+      ],
+      "dimensions": "1672x941",
+      "format": "PNG",
+      "sourceRunId": "2026-09-28T05-06-20-967Z-production-art-87087b"
+    },
+    {
+      "path": "assets/backgrounds/hveragerdi-greenhouse-cafe.png",
+      "sha256": "f19d430c65a0b92f313bc89ae57c45f63482da8bf10ff1018af862f8203d018f",
+      "scenes": [
+        "S66"
+      ],
+      "dimensions": "1672x941",
+      "format": "PNG",
+      "sourceRunId": "2026-09-28T05-06-20-967Z-production-art-87087b"
+    },
+    {
+      "path": "assets/backgrounds/s03-reykjavik-guesthouse-morning.png",
+      "sha256": "2ca12077112219ffbc9dfd916f504574ee624c2504a3a3c3fad90e741d3ed4bd",
+      "scenes": [],
+      "dimensions": "1920x900",
+      "format": "PNG",
+      "sourceRunId": "2026-10-01T18-36-42-265Z-production-art-4f6b0d"
+    },
+    {
+      "path": "assets/backgrounds/s06-hveragerdi-geothermal-day.png",
+      "sha256": "0610dbae504ca1a3de51f9c74936f402b02d9af016f2c1020eb07ffb4dd6d1a7",
+      "scenes": [],
+      "dimensions": "1920x900",
+      "format": "PNG",
+      "sourceRunId": "2026-10-01T18-36-42-265Z-production-art-4f6b0d"
+    },
+    {
+      "path": "assets/backgrounds/s09-guesthouse-to-skogafoss-morning.png",
+      "sha256": "f47a9a30b9668d4c50e466d914e2612dc45c61bfc4ba46b85a29ea686df91a49",
+      "scenes": [],
+      "dimensions": "1920x900",
+      "format": "PNG",
+      "sourceRunId": "2026-10-01T18-36-42-265Z-production-art-4f6b0d"
+    },
+    {
+      "path": "assets/backgrounds/s10-vik-guesthouse-arrival.png",
+      "sha256": "94356b1e97aa3ed8559b6864d4d948de03e96df4a07872b3f82dedbf98ddb894",
+      "scenes": [],
+      "dimensions": "1920x900",
+      "format": "PNG",
+      "sourceRunId": "2026-10-01T18-36-42-265Z-production-art-4f6b0d"
+    },
+    {
+      "path": "assets/backgrounds/s12-vik-street-day.png",
+      "sha256": "31cbbebd5a782f5f0cfbb77495ef39cee2fbb14939feed6f44deea25c7b4b770",
+      "scenes": [],
+      "dimensions": "1920x900",
+      "format": "PNG",
+      "sourceRunId": "2026-10-01T18-36-42-265Z-production-art-4f6b0d"
+    },
+    {
+      "path": "assets/backgrounds/s13-skaftafell-visitor-parking.png",
+      "sha256": "2b7425c0b1a6da2e03a78cd88ad07a5974c509530ea9cdacffa8c89674a782e7",
+      "scenes": [],
+      "dimensions": "1920x900",
+      "format": "PNG",
+      "sourceRunId": "2026-10-01T18-36-42-265Z-production-art-4f6b0d"
+    },
+    {
+      "path": "assets/backgrounds/s14-lagoon-road.png",
+      "sha256": "17c88d319dff19d82022a8369f51c0614b369391a1282f1422f07392108eb2a9",
+      "scenes": [],
+      "dimensions": "1920x900",
+      "format": "PNG",
+      "sourceRunId": "2026-10-01T18-36-42-265Z-production-art-4f6b0d"
+    },
+    {
+      "path": "assets/backgrounds/s15-jokulsarlon-parking-day.png",
+      "sha256": "4ee1645d83e732806438c1c19156f06840c44b39b626b9332dce488c551447d8",
+      "scenes": [],
+      "dimensions": "1920x900",
+      "format": "PNG",
+      "sourceRunId": "2026-10-01T18-36-42-265Z-production-art-4f6b0d"
+    },
+    {
+      "path": "assets/backgrounds/s18-hofn-room-morning.png",
+      "sha256": "fc75aa2d8fbd96ae2ac78a0d47906b8f211680bebdff8bf1f2443894ce33f2ed",
+      "scenes": [],
+      "dimensions": "1920x900",
+      "format": "PNG",
+      "sourceRunId": "2026-10-01T18-36-42-265Z-production-art-4f6b0d"
+    },
+    {
+      "path": "assets/backgrounds/s26-eastfjords-guesthouse-courtyard.png",
+      "sha256": "f165bd26a68f0c9c1ab1d4ec73d6fc6d28780fe9004fd5f965e781bc71ed9431",
+      "scenes": [],
+      "dimensions": "1920x900",
+      "format": "PNG",
+      "sourceRunId": "2026-10-01T18-36-42-265Z-production-art-4f6b0d"
+    },
+    {
+      "path": "assets/backgrounds/s37-snaefellsnes-guesthouse-day.png",
+      "sha256": "eaef888cc0f4d38058c4f8c58eba13818903dc1e26a264ae65fabd28050f60df",
+      "scenes": [],
+      "dimensions": "1920x900",
+      "format": "PNG",
+      "sourceRunId": "2026-10-01T18-36-42-265Z-production-art-4f6b0d"
+    },
+    {
+      "path": "assets/backgrounds/s46-airport-bus-day.png",
+      "sha256": "bdd60db4665ffbefb7d18a2b63f16e19042073920254a7aa8eac6a0a59a39c13",
+      "scenes": [],
+      "dimensions": "1920x900",
+      "format": "PNG",
+      "sourceRunId": "2026-10-01T18-36-42-265Z-production-art-4f6b0d"
+    },
+    {
+      "path": "assets/backgrounds/s52-hofn-streets-post-workshop.png",
+      "sha256": "05af3a95007cf4abbc07dc3f866c11d6974d36a29229d1302e1cd7304aff1332",
+      "scenes": [],
+      "dimensions": "1920x900",
+      "format": "PNG",
+      "sourceRunId": "2026-10-01T18-36-42-265Z-production-art-4f6b0d"
+    },
+    {
+      "path": "assets/cg/s03-editor-call-damir.png",
+      "sha256": "aea38cdcffafe5233e8e6d3d93ad5618e41ab94addae40c0a143325a9b80561a",
+      "scenes": [],
+      "dimensions": "1672x941",
+      "format": "PNG",
+      "sourceRunId": "2026-10-01T18-36-42-265Z-production-art-4f6b0d"
+    },
+    {
+      "path": "assets/cg/s18-hofn-breakfast-group.png",
+      "sha256": "163e828c7eefaf887fd7276da86e906941ebf9fee0acafcb90456ff2794cf2b4",
+      "scenes": [],
+      "dimensions": "1920x900",
+      "format": "PNG",
+      "sourceRunId": "2026-10-01T18-36-42-265Z-production-art-4f6b0d"
+    },
+    {
+      "path": "assets/cg/s38-alice-nick-ordinary-day.png",
+      "sha256": "c67f933507fe2e560fe805b15105eacdde757e419b0bdbded50eb4b553e6b935",
+      "scenes": [],
+      "dimensions": "1920x900",
+      "format": "PNG",
+      "sourceRunId": "2026-10-01T18-36-42-265Z-production-art-4f6b0d"
+    },
+    {
+      "path": "assets/cg/s54-alice-nick-karaoke.png",
+      "sha256": "c9327f345d06886001e2e60edd2e32e0dbed7526f3a7a033530412ef4d4fc26e",
+      "scenes": [],
+      "dimensions": "1920x900",
+      "format": "PNG",
+      "sourceRunId": "2026-10-01T18-36-42-265Z-production-art-4f6b0d"
+    },
+    {
+      "path": "assets/cg/s39-alice-damir-cafe.png",
+      "sha256": "ac78f268a1d82832a34df2f930e98416c29a26e3454b750d6b15742e05899397",
+      "scenes": [],
+      "dimensions": "1920x900",
+      "format": "PNG",
+      "sourceRunId": "2026-10-01T18-36-42-265Z-production-art-4f6b0d"
+    },
+    {
+      "path": "assets/cg/s40-alice-laptop-window.png",
+      "sha256": "8192692fe1b4baf4d0ec1228349a9732aa462b0079f0e11b01271983d656969c",
+      "scenes": [],
+      "dimensions": "1920x900",
+      "format": "PNG",
+      "sourceRunId": "2026-10-01T18-36-42-265Z-production-art-4f6b0d"
+    },
+    {
+      "path": "assets/cg/s64-alice-snaefellsnes-trail.png",
+      "sha256": "697c61cfc89eae4fb8494dd15dd223258c920e7c6bfa940c55bd626819e0aab1",
+      "scenes": [],
+      "dimensions": "1920x900",
+      "format": "PNG",
+      "sourceRunId": "2026-10-01T18-36-42-265Z-production-art-4f6b0d"
+    },
+    {
+      "path": "assets/cg/s26-eastfjords-courtyard-group.png",
+      "sha256": "dff3a7f5738ef5ea7c6369fdefed6a81285dece3a3892a92146047144c0c05b9",
+      "scenes": [],
+      "dimensions": "1920x900",
+      "format": "PNG",
+      "sourceRunId": "2026-10-01T18-36-42-265Z-production-art-4f6b0d"
+    },
+    {
+      "path": "assets/cg/s48-guesthouse-exit-group.png",
+      "sha256": "7a695ba7a055539dc80dd04f5c69563b264f6f74f634cb71b21af451aa29bc85",
+      "scenes": [],
+      "dimensions": "1920x900",
+      "format": "PNG",
+      "sourceRunId": "2026-10-01T18-36-42-265Z-production-art-4f6b0d"
+    }
+  ],
+  "verifier": {
+    "type": "automated-current-worktree-hash-verifier",
+    "source": "tools/release/art-acceptance.mjs + current beat-level visual ledger",
+    "algorithm": "sha256",
+    "acceptanceTimestamp": "2026-10-06T04:05:57.013Z"
+  },
+  "compatibility": {
+    "status": "PASS",
+    "result": "CURRENT_WORKTREE_HASHES_MATCH",
+    "sourceAssets": 37,
+    "targetAssets": 37,
+    "manifestMappings": "PASS",
+    "pngRegeneratedAfterAcceptance": false,
+    "coverageMethod": "66 authored scenes reconciled at beat level; backgrounds limited to establishing/transition beats and dedicated CGs used for dialogue/action beats"
+  },
+  "runtimeVerification": {
+    "status": "PASS",
+    "evidencePath": "artifacts/evidence/full-route-runtime-qa-2026-09-30.json",
+    "generatedAt": "2026-10-06T04:05:57.013Z",
+    "viewports": [
+      "1920x900",
+      "390x844"
+    ],
+    "routes": 8,
+    "consoleErrors": 0,
+    "failedRequests": 0,
+    "endings": [
+      "S44",
+      "S44",
+      "S45",
+      "S45",
+      "S46",
+      "S46",
+      "S47",
+      "S47"
+    ],
+    "placeholders": 0,
+    "brokenPaths": 0
+  },
+  "releaseSourceHead": "acf94f4b2567ee07ea37d9c58966c833f80f5c4b"
+}

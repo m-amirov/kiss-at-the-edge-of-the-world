@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "locale": "en",
+  "source": "content/season-1-literary-episode-07.md",
+  "scenes": {
+    "S59": {
+      "title": "Day 13. The Worst Song",
+      "chunks": {
+        "S59.C000": {
+          "title": "",
+          "paragraphs": {
+            "S59.C000.P000": "The sandwiches were coming apart in their paper. Eric laid them out on the lid of a plastic container, Damir gave everyone a dry napkin, and Nick refused the last one before asking for two a minute later. Alice’s hands still smelled of wet wood, even though she had washed them at the guesthouse.",
+            "S59.C000.P001": "“We’re choosing the song for the road,” Nick announced when they had finished eating. “Not the favourite. The one that makes the driver’s eye twitch.”",
+            "S59.C000.P002": "“Then the driver will revoke our musical rights,” Eric said.",
+            "S59.C000.P003": "“We have democracy.”",
+            "S59.C000.P004": "“And a driver with the keys.”",
+            "S59.C000.P005": "Damir suggested an old tune everyone but Eric had known since childhood. Alice caught herself ready to supply the words. On another trip it would have felt so natural she would not have noticed. This time she did not try to guess which kind of evening they were entitled to after her decision. She simply sang the first line; Damir continued, slightly off-key.",
+            "S59.C000.P006": "Nick chose a shampoo jingle that had lodged in his head after the airport. To everyone’s surprise, Eric sang a perfectly serious children’s counting song he remembered from his sister. When the others laughed, he shrugged and finished his sandwich."
+          }
+        },
+        "S59.C001": {
+          "title": "Choice S59-C1 — Whose song will Alice play in the car",
+          "paragraphs": {}
+        },
+        "S59.C002": {
+          "title": "A. Eric’s childhood counting song",
+          "paragraphs": {
+            "S59.C002.P000": "Eric listened to the opening, tapped his fingers on the steering wheel, and observed that the song was missing a verse. Nick tried to extract it from him all the way there. Eric refused to give in."
+          }
+        },
+        "S59.C003": {
+          "title": "B. Nick’s unfortunate advertising jingle",
+          "paragraphs": {
+            "S59.C003.P000": "Nick played it for forty seconds, but that was enough: half an hour later Damir was quietly whistling the chorus without noticing. Alice laughed when he heard himself."
+          }
+        },
+        "S59.C004": {
+          "title": "C. The song from Alice and Damir’s childhood",
+          "paragraphs": {
+            "S59.C004.P000": "Damir looked out of the window at first. During the second verse he joined in, but did not reach for her hand. Alice was glad. The memory had room to remain simply a memory."
+          }
+        },
+        "S59.C005": {
+          "title": "Common continuation",
+          "paragraphs": {
+            "S59.C005.P000": "That evening Inga sent them a picture of the repaired boardwalk. Nick suggested printing it and sticking it to the side of the car. Eric said they had to ask the car’s owner first. Alice saved the picture in the article folder and a separate copy for herself. Sometimes a day stayed with you not because of what happened to you, but because of what you managed to do together."
+          }
+        }
+      }
+    }
+  }
+}
