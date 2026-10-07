@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "runId": "2026-10-07T15-17-33-578Z-production-art-f7cb94",
+  "baseline": "7899a736750baea4b83f6abee951d219a35dbbee",
+  "visualReview": "pixel inspection completed for all listed approved references before generation",
+  "identityAnchors": {
+    "alice": "alice-master.png: short tousled light-brown bob, warm brown eyes, yellow shell, maroon scarf, grounded agency",
+    "eric": "eric-master.png: sandy wind-tossed hair, short beard, blue-grey eyes, navy shell, map satchel",
+    "damir": "damir-master.png: dark wavy hair, light stubble, beige coat, maroon scarf"
+  },
+  "locationAnchors": {
+    "S44": "reykjavik-harbour-master.png: wet harbour boards, boats, grey water, Reykjavik skyline; morning overcast adaptation",
+    "S42": "small-icelandic-cafe-rain.png: warm timber cafe, rain-streaked window, harbour view; cool grey exterior",
+    "S18": "s18-hofn-room-morning.png: bed, window, pale daylight, Höfn coastal view",
+    "S03": "s03-reykjavik-guesthouse-morning.png: Reykjavik guesthouse workspace/interior",
+    "S46": "s46-airport-bus-day.png: coach interior, wet windows, airport road and volcanic terrain"
+  },
+  "acceptedCompositionRules": [
+    "integrated medium compositions, not independent stage figures",
+    "portrait-safe faces, hands and props clear above dialogue sheet at 390x844",
+    "desktop 1920x900 remains a deliberate composition, not stretched mobile crop",
+    "no readable generated text, logos, watermark or UI"
+  ],
+  "itemsReady": ["CG-1", "CG-2", "CG-3", "CG-4", "CG-5"]
+}

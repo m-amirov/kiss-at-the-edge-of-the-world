@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "runId": "2026-10-07T15-17-33-578Z-production-art-f7cb94",
+  "baseline": "7899a736750baea4b83f6abee951d219a35dbbee",
+  "scope": "exactly five new CGs; no other production art",
+  "approvedReferences": {
+    "characters": ["assets/characters/alice-master.png", "assets/characters/eric-master.png", "assets/characters/damir-master.png"],
+    "locations": ["assets/backgrounds/reykjavik-harbour-master.png", "assets/backgrounds/small-icelandic-cafe-rain.png", "assets/backgrounds/s18-hofn-room-morning.png", "assets/backgrounds/s03-reykjavik-guesthouse-morning.png", "assets/backgrounds/s46-airport-bus-day.png"],
+    "style": ["artifacts/art-direction/ART_BIBLE.md", "artifacts/art-direction/VISUAL_LANGUAGE.json"]
+  },
+  "items": [
+    {"id":"CG-1","scene":"S44","cue":"eric-morning-harbour","occurrences":["O070","O071"],"source":"content/season-1-literary-episode-10.md:S44","cast":["alice","eric"],"beat":"morning Reykjavik harbour farewell","desktop":"1920x900","portrait":"941x1672","runtimeMapping":"src/literary-visual-directions.js:S44/eric-morning-harbour","status":"brief-ready"},
+    {"id":"CG-2","scene":"S46","cue":"airport-bus","occurrences":["O072","O073"],"source":"content/season-1-literary-episode-10.md:S46","cast":["alice","damir"],"beat":"conversation on the bus to Keflavik airport; never airport check-in","desktop":"1920x900","portrait":"941x1672","runtimeMapping":"src/literary-visual-directions.js:S46/airport-bus","status":"brief-ready"},
+    {"id":"CG-3","scene":"S42","cue":"s42-harbour-cafe","occurrences":["O068"],"source":"content/season-1-literary-episode-09.md:S42","cast":["alice","eric"],"beat":"personal evening conversation at the small cafe by the harbour","desktop":"1920x900","portrait":"941x1672","runtimeMapping":"src/literary-visual-directions.js:S42 (new authored cue)","status":"brief-ready"},
+    {"id":"CG-4","scene":"S18","cue":"hofn-day10-room","occurrences":["O034"],"source":"content/season-1-literary-episode-05.md:S18/S21 context","cast":["alice"],"beat":"morning Höfn room; Alice reads Eric's message","desktop":"1920x900","portrait":"941x1672","runtimeMapping":"src/literary-visual-directions.js:S18/hofn-day10-room","status":"brief-ready"},
+    {"id":"CG-5","scene":"S03","cue":"editor-call","occurrences":["O008","O009"],"source":"content/season-1-vertical-slice-episodes-01-02.md:S03 context","cast":["alice"],"beat":"Alice editor call in Reykjavik interior/workspace","desktop":"1920x900","portrait":"941x1672","runtimeMapping":"src/literary-visual-directions.js:S03/editor-call","status":"brief-ready"}
+  ],
+  "generationConstraints": ["integrated medium compositions, not stage overlays", "preserve approved identity, hairstyle, face, age and clothing continuity", "faces and key props clear above dialogue sheet at 390x844", "no generated readable text, watermarks, logos or airport-check-in reuse", "generate and review one CG at a time"]
+}

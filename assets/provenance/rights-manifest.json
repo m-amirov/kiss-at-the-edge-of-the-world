@@ -1,6 +1,61 @@
 {
-  "generatedAt": "2026-10-01",
+  "generatedAt": "2026-10-07",
   "assets": [
+    {
+      "path": "assets/cg/s46-airport-bus.png",
+      "sha256": "528B613714652BD19F84284D440BB4BDED09D9AAA29697D6B6D3A7D540F9CD57",
+      "dimensions": "1832x859",
+      "method": "New integrated medium two-shot generated from approved Alice/Damir masters and airport-bus reference",
+      "source": "Generated in Codex imagegen during production-art run 2026-10-07T15-17-33-578Z-production-art-f7cb94",
+      "license": "generated for this project"
+    },
+    {"path":"assets/cg/s46-airport-bus-portrait.png","sha256":"3677442E937967BD7F96CE6A48EF72A5573700438DF700259ACCD0514AE0CCAB","dimensions":"982x1602","method":"Portrait-safe derivative of accepted CG-2","source":"Generated in Codex imagegen during production-art run 2026-10-07T15-17-33-578Z-production-art-f7cb94","license":"generated for this project"},
+    {"path":"assets/cg/s46-airport-bus.webp","sha256":"65708F08F70087B4963398F6BCD1A7A60AE818ECF24E1E1C75425FC1EB6774C0","dimensions":"1920x900","method":"Production WebP derivative","source":"Derived locally with ffmpeg from accepted CG-2 source","license":"generated for this project"},
+    {"path":"assets/cg/s46-airport-bus-portrait.webp","sha256":"850EBBCED8CB8A5CA2725A5B9A08D4BEE7142A4E5366227B04E3A9775197166A","dimensions":"941x1672","method":"Production WebP derivative","source":"Derived locally with ffmpeg from accepted CG-2 portrait","license":"generated for this project"},
+    {"path":"assets/cg/s42-harbour-cafe.png","sha256":"EBF7502A28EFF0B4E8ED9A28DC325EF6E1163F7F54E1069C3513E2EAAF088243","dimensions":"1832x859","method":"New integrated medium two-shot generated from approved Alice/Eric masters and cafe reference","source":"Generated in Codex imagegen during production-art run 2026-10-07T15-17-33-578Z-production-art-f7cb94","license":"generated for this project"},
+    {"path":"assets/cg/s42-harbour-cafe-portrait.png","sha256":"22B7792D040E55573BB1C297710BB0B609FD86F5673031774A38AA9C05C70CCF","dimensions":"940x1672","method":"Portrait-safe derivative of accepted CG-3","source":"Generated in Codex imagegen during production-art run 2026-10-07T15-17-33-578Z-production-art-f7cb94","license":"generated for this project"},
+    {"path":"assets/cg/s42-harbour-cafe.webp","sha256":"C9C2A67A5E1F49B7BAE6C1AF50821DCF1A4F495FC4B1247335D2E1268FCB3CB2","dimensions":"1920x900","method":"Production WebP derivative","source":"Derived locally with ffmpeg from accepted CG-3 source","license":"generated for this project"},
+    {"path":"assets/cg/s42-harbour-cafe-portrait.webp","sha256":"39A9D7A7E8183C3E28510FCCFDBF7C0CB61CF49550C8695194A9DA2C3240B2F5","dimensions":"941x1672","method":"Production WebP derivative","source":"Derived locally with ffmpeg from accepted CG-3 portrait","license":"generated for this project"},
+    {"path":"assets/cg/s18-hofn-day10-room.png","sha256":"07FA57785A8FDD64685A8A2F2B660BB1DC7905C846F0A201660B7B92D360BC11","dimensions":"1832x859","method":"New integrated medium solo generated from approved Alice and Höfn room references","source":"Generated in Codex imagegen during production-art run 2026-10-07T15-17-33-578Z-production-art-f7cb94","license":"generated for this project"},
+    {"path":"assets/cg/s18-hofn-day10-room-portrait.png","sha256":"12F88DAE5D47953A7B7C805EFB02CF22DED0929DA67E89CFDD81DAD94CD5E881","dimensions":"940x1672","method":"Portrait-safe derivative of accepted CG-4","source":"Generated in Codex imagegen during production-art run 2026-10-07T15-17-33-578Z-production-art-f7cb94","license":"generated for this project"},
+    {"path":"assets/cg/s18-hofn-day10-room.webp","sha256":"240AD5A5023FF8533F48328B53E254789E9A24EF4F1A3BFF561757AD667F6C81","dimensions":"1920x900","method":"Production WebP derivative","source":"Derived locally with ffmpeg from accepted CG-4 source","license":"generated for this project"},
+    {"path":"assets/cg/s18-hofn-day10-room-portrait.webp","sha256":"F77E6810F3DD3AF6049E9738BCA7808F6668B120CE2B0FEC24615B5AB8EC4218","dimensions":"941x1672","method":"Production WebP derivative","source":"Derived locally with ffmpeg from accepted CG-4 portrait","license":"generated for this project"},
+    {"path":"assets/cg/s03-editor-call.png","sha256":"EF8EF130D4ADDCEC3EF17BED3A971989639AFC65190357AAAB5D6149221A1383","dimensions":"1831x859","method":"New integrated medium solo generated from approved Alice and Reykjavik workspace references","source":"Generated in Codex imagegen during production-art run 2026-10-07T15-17-33-578Z-production-art-f7cb94","license":"generated for this project"},
+    {"path":"assets/cg/s03-editor-call-portrait.png","sha256":"0FE0531645E65D9FB4CF583AAAEF1A1BD3F6E57105E0A1693532A3456698EB8C","dimensions":"939x1675","method":"Portrait-safe derivative of accepted CG-5","source":"Generated in Codex imagegen during production-art run 2026-10-07T15-17-33-578Z-production-art-f7cb94","license":"generated for this project"},
+    {"path":"assets/cg/s03-editor-call.webp","sha256":"BD19FB2304371C91DE2DCF69CE58E22E64D6A2814B0B3A79CD4E620709F6189D","dimensions":"1920x900","method":"Production WebP derivative","source":"Derived locally with ffmpeg from accepted CG-5 source","license":"generated for this project"},
+    {"path":"assets/cg/s03-editor-call-portrait.webp","sha256":"45980C4D6930742EFF29FE0EDBF1228B811AD27D3B34526351B703C8FFB9B761","dimensions":"941x1672","method":"Production WebP derivative","source":"Derived locally with ffmpeg from accepted CG-5 portrait","license":"generated for this project"},
+    {
+      "path": "assets/cg/s44-eric-morning-harbour.png",
+      "sha256": "852DB6471BAB43E05576E38BCC6D6DB2275330F2EFF7987DDE521669487D38E5",
+      "dimensions": "1832x858",
+      "method": "New integrated medium two-shot generated from approved Alice/Eric character masters and Reykjavik harbour master; reviewed against S44 farewell brief",
+      "source": "Generated in Codex imagegen during production-art run 2026-10-07T15-17-33-578Z-production-art-f7cb94",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s44-eric-morning-harbour-portrait.png",
+      "sha256": "FAB95B8844E318CD68436B2C28680C80643E9BBF84B5BF8173402320D5CC205E",
+      "dimensions": "941x1672",
+      "method": "Portrait-safe re-composition of accepted CG-1 source using the same approved character/location references",
+      "source": "Generated in Codex imagegen during production-art run 2026-10-07T15-17-33-578Z-production-art-f7cb94; derivative of assets/cg/s44-eric-morning-harbour.png",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s44-eric-morning-harbour.webp",
+      "sha256": "1D23D8D6E10B567499A474B31D5FF86CC8F9DF2F797E417DAB4E271EBDF23EE5",
+      "dimensions": "1920x900",
+      "method": "Production WebP derivative of accepted CG-1 desktop source",
+      "source": "Derived locally with ffmpeg from assets/cg/s44-eric-morning-harbour.png",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s44-eric-morning-harbour-portrait.webp",
+      "sha256": "E399044851181144542C989A20DC21508EBCFCF2F594A27AB881847FB917DCE1",
+      "dimensions": "941x1672",
+      "method": "Production WebP derivative of accepted CG-1 portrait source",
+      "source": "Derived locally with ffmpeg from assets/cg/s44-eric-morning-harbour-portrait.png",
+      "license": "generated for this project"
+    },
     {
       "path": "assets/cg/s44-eric-epilogue-month-later-portrait.png",
       "sha256": "EF6869CE864369E5EE8384F2AED0CDE47AA7CCBCEBED1D0B645FAB350D4DCB9E",

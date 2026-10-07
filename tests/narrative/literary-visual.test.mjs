@@ -181,7 +181,7 @@ test('S18 dance happens before the kiss choice on all options; walking back and 
   const dance=indexOfSource(flow,0,35),walk=indexOfSource(flow,0,39),morning=indexOfSource(flow,5,1),breakfast=indexOfSource(flow,5,3);
   assert.equal(shot('S18',flow,dance,choices).art?.file,'s18-hofn-dance-lights.webp');
   assert.equal(shot('S18',flow,walk,choices).art?.type,'background');
-  assert.equal(shot('S18',flow,morning,choices).art?.file,'s18-hofn-room-morning.webp');
+  assert.equal(shot('S18',flow,morning,choices).art?.file,'s18-hofn-day10-room.webp');
   assert.equal(shot('S18',flow,breakfast,choices).art?.file,'s18-hofn-breakfast-group.webp');
   assert.deepEqual(shot('S18',flow,breakfast,choices).cast,['alice','eric','nick','damir']);
   assert.ok(dance<walk&&walk<morning&&morning<breakfast);
@@ -194,10 +194,10 @@ test('finale location and art change at the literal month-later epilogue for all
   const {flow,choices}=complete(id);
   const first=shot(id,flow,0,choices);
   if(id==='S45')assert.equal(first.art?.file,'s45-reykjavik-warm-montage.webp');
-  if(id==='S46')assert.equal(first.art?.file,'s46-airport-bus-day.webp');
+  if(id==='S46')assert.equal(first.art?.file,'s46-airport-bus.webp');
   if(id==='S47')assert.equal(first.art?.file,'s47-reykjavik-harbour-alice.webp');
   if(id==='S46'){
-   assert.equal(first.art?.file,'s46-airport-bus-day.webp');
+   assert.equal(first.art?.file,'s46-airport-bus.webp');
    assert.equal(shot(id,flow,indexOfSource(flow,0,1),choices).art?.file,'s46-airport-goodbye.webp');
   }
   const month=indexOfSource(flow,chapter,0);
