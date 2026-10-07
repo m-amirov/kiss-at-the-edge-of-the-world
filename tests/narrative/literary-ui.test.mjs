@@ -20,8 +20,8 @@ test('production literary UI bundles the approved Cinematic Romance fonts locall
   assert.match(css, /url\('\.\.\/assets\/fonts\/CormorantGaramond\[wght\]\.ttf'\)/);
   assert.match(css, /url\('\.\.\/assets\/fonts\/Manrope\[wght\]\.ttf'\)/);
   assert.doesNotMatch(css, /fonts\.googleapis\.com|fonts\.gstatic\.com/);
- assert.match(player, /const cover = '\.\.\/assets\/branding\/menu-hero\.webp'/);
-  assert.doesNotMatch(player, /const cover = '\.\/assets\/branding\/kiss-at-the-edge-cover\.png'/);
+  assert.match(player, /const cover = runtimeAssetUrl\('branding\/kiss-at-the-edge-cover\.png'\)/);
+  assert.match(css, /@media\(max-width:680px\)[\s\S]*?\.literary-home::before[\s\S]*?background-position:\s*18%\s*center/);
   assert.match(fs.readFileSync(fileURLToPath(new URL('../../literary.html', import.meta.url)), 'utf8'), /assets\/branding\/kiss-at-the-edge-icon\.png/);
 });
 

@@ -10,6 +10,7 @@ import { literaryLocaleBundles } from './literary-localization-bundle.js';
 import { interactionBeats } from './literary-interactive-beats.js';
 import { createDialogueHistory } from './literary-history.js';
 import { createAudioDirector } from './audio-director.js';
+import { runtimeAssetUrl } from './runtime-assets.js';
 import { musicCues, musicCueForScene } from './music-cues.js';
 
 const canonicalById = new Map(literarySeason.scenes.map(scene => [scene.id, scene]));
@@ -111,9 +112,8 @@ function assetFileForViewport(art){
   return portrait ? (portraitAssetByDesktopAsset[art.file]??art.file) : art.file;
 }
 const stageAsset = { alice:'alice-stage.webp', eric:'eric-stage.webp', nick:'nick-stage.webp', damir:'damir-stage.webp' };
-// This value is consumed by a url() inside src/literary.css; resolve from the
-// stylesheet directory so the cover never becomes /src/assets/... at runtime.
-const cover = '../assets/branding/menu-hero.webp';
+// Resolve the menu cover through the same module-aware archive asset contract.
+const cover = runtimeAssetUrl('branding/kiss-at-the-edge-cover.png');
 const blank = () => ({ schemaVersion:3,sceneId:'S01',position:0,choices:{},finished:false, visited:['S01'],runId:`literary-${Date.now()}-${crypto.randomUUID?.() ?? Math.random().toString(36).slice(2)}`, revision:0 });
 function parseSaved(raw) {
   try {
@@ -346,7 +346,7 @@ function renderStage(direction) {
     figure.dataset.mood=direction.mood;
     figure.style.setProperty('--stage-index',index);
     const image=el('','','img');
-    image.src=`./assets/characters/${stageAsset[person]}`;
+    image.src=runtimeAssetUrl(`characters/${stageAsset[person]}`);
     image.alt='';image.decoding='async';
     figure.append(image);stage.append(figure);
   });
@@ -377,7 +377,7 @@ function renderReader(){
   const art=direction.art;
   const picture=el('','literary-picture');picture.setAttribute('aria-hidden','true');picture.dataset.presentation=mode;picture.dataset.mode=art?.presentation??(art?.type==='cg'?'cinematic':'environment');
   picture.dataset.visualBeat=direction.beatId;picture.dataset.location=direction.location;picture.dataset.time=direction.time;
-  if(art){const file=assetFileForViewport(art);const img=el('','','img');img.src=`./assets/${art.type==='cg'?'cg':'backgrounds'}/${file}`;img.alt='';img.decoding='async';img.dataset.desktopAsset=art.file;img.dataset.asset=file;picture.append(img);picture.style.setProperty('--focus',focalPointByAsset[file]??focalPointByAsset[art.file]??'50% 50%');if(art.type==='cg'){picture.classList.add('is-cg');picture.style.setProperty('--cg-url',`url("${img.src}")`)}}
+  if(art){const file=assetFileForViewport(art);const img=el('','','img');img.src=runtimeAssetUrl(`${art.type==='cg'?'cg':'backgrounds'}/${file}`);img.alt='';img.decoding='async';img.dataset.desktopAsset=art.file;img.dataset.asset=file;picture.append(img);picture.style.setProperty('--focus',focalPointByAsset[file]??focalPointByAsset[art.file]??'50% 50%');if(art.type==='cg'){picture.classList.add('is-cg');picture.style.setProperty('--cg-url',`url("${img.src}")`)}}
   else picture.classList.add('no-art');
   if(art?.presentation!=='cinematic') picture.append(renderStage({...direction,mode:direction.cast.length>2?'group':direction.cast.length===2?'pair':'solo',mood:stageForScene(scene.id,reader.choices).mood}));
   picture.append(el('','literary-vignette'));app.append(picture);bindStageNavigation(picture);

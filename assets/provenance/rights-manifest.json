@@ -883,10 +883,10 @@
     },
     {
       "path": "assets/cg/s03-editor-call-damir-portrait.png",
-      "sha256": "C6933C24C457D53804CF284880DB8BF6668B38ABDDD3DA0ED7322487C9B764C1",
+      "sha256": "347900742DE900F01A2E0D5D1932E1B246F04E9CDE16276FC798994CAD3EE860",
       "dimensions": "941x1672",
-      "method": "Portrait derivative cropped from the accepted desktop CG for mobile runtime",
-      "source": "Derived from assets/cg/s03-editor-call-damir.png, 2026-10-01",
+      "method": "Codex imagegen portrait re-composition using the S03 setting plus canonical Alice and Damir references; both subjects retained within the mobile safe composition",
+      "source": "Generated in Codex imagegen, 2026-10-06; replaces the portrait derivative that cropped both subjects",
       "license": "generated for this project"
     },
     {

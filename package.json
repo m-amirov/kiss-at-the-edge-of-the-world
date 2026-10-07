@@ -1,7 +1,7 @@
 {
   "scripts": {
     "test:narrative": "node tests/narrative/season-state.test.mjs && node tests/narrative/save-state.test.mjs && node tests/narrative/s18-preview.test.mjs && node tests/narrative/literary-reader.test.mjs && node tests/narrative/literary-ui.test.mjs && node tests/narrative/literary-stage.test.mjs && node tests/narrative/literary-interactivity.test.mjs && node tests/narrative/release-preflight.test.mjs && node tests/narrative/literary-pacing.test.mjs && node tests/narrative/literary-visual.test.mjs && node tests/narrative/literary-qa-isolation.test.mjs",
-    "test:yandex-sdk": "node --test tests/yandex/sdk-runtime.test.mjs",
+    "test:yandex-sdk": "node --test tests/yandex/sdk-runtime.test.mjs tests/yandex/runtime-assets.test.mjs",
     "test:localization": "node --test tests/narrative/localization-contract.test.mjs tests/narrative/localization-runtime.test.mjs",
     "starter-kit:self-test": "node tools/starter-kit/self-test.mjs",
     "starter-kit:status": "node tools/starter-kit/status.mjs",

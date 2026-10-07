@@ -1,3 +1,5 @@
+import { runtimeAssetUrl } from './runtime-assets.js';
+
 const settingsKey = 'kiss-at-the-edge-of-the-world:audio-settings:v1';
 
 function readSettings(storage) {
@@ -18,7 +20,7 @@ export function createAudioDirector({ AudioClass = globalThis.Audio, storage = g
   const setAudioVolume = (audio, value) => { if (audio) audio.volume = Math.min(1, Math.max(0, value)); };
   const createAudio = (cue) => {
     const audio = new AudioClass();
-    audio.src = `./assets/audio/music/${cue.file}`;
+    audio.src = runtimeAssetUrl(`audio/music/${cue.file}`);
     audio.preload = 'auto';
     audio.loop = Boolean(cue.loopable);
     audio.setAttribute?.('aria-hidden', 'true');
