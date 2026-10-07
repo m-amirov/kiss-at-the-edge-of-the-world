@@ -2,8 +2,10 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {literarySeason} from '../../src/literary-season-data.js';
-import {stageSceneIds, stageForScene, stageForPlayback} from '../../src/literary-stage.js';
+import {stageSceneIds, stageForScene, stageForPlayback, stageCastForPresentation} from '../../src/literary-stage.js';
 import {compileScenePlayback} from '../../src/literary-engine.js';
+import {compileInteractivePlayback} from '../../src/literary-pacing.js';
+import {visualAt, visualCues} from '../../src/literary-visual-directions.js';
 
 const byId=new Map(literarySeason.scenes.map(s=>[s.id,s]));
 test('all authored scene IDs have a deterministic staging contract',()=>{
@@ -35,6 +37,28 @@ test('S18 breakfast cast is revealed only after the morning transition',()=>{
  assert.deepEqual(stageForPlayback('S18',flow,dawn-1,choices).cast,['alice','eric']);
  assert.deepEqual(stageForPlayback('S18',flow,dawn,choices).cast,['alice','eric','nick','damir']);
  assert.deepEqual(stageForScene('S42',{'S26-C1':'B'}).cast,['alice','nick']);
+});
+test('S01 airport group presence keeps the active three-person beat visible',()=>{
+ const choices={'S01-C1':'A','S01-C90':'A','S01-C91':'A'};
+ const flow=compileInteractivePlayback(byId.get('S01'),choices,'ru');
+ const position=flow.findIndex(entry=>entry.sourceStartRef?.chunk===0&&entry.sourceStartRef?.paragraph===21);
+ assert.ok(position>=0);
+ const direction=visualAt('S01',flow[position],choices,stageForScene('S01',choices).cast);
+ assert.deepEqual(direction.requiredCast,['alice','nick','eric']);
+ assert.deepEqual(stageCastForPresentation(direction),['alice','nick','eric']);
+});
+test('group staging uses required presence when declared, but keeps ordinary groups focal',()=>{
+ assert.deepEqual(stageCastForPresentation({cast:['alice','eric','nick','damir'],requiredCast:[]}),['alice','eric']);
+ assert.deepEqual(stageCastForPresentation({cast:['alice','eric','nick','damir'],requiredCast:['alice','nick','eric','damir']}),['alice','nick','eric','damir']);
+ assert.deepEqual(stageCastForPresentation({cast:['alice','nick','eric'],requiredCast:['alice','nick','eric']}),['alice','nick','eric']);
+});
+test('every non-cinematic authored 3-4-person cue declares its required presence',()=>{
+ const affected=Object.values(visualCues).flat().filter(cue=>cue.cast?.length>2 && !String(cue.art??'').startsWith('cg/') && cue.presentation!=='cinematic');
+ const narrativeRequired=['airport-outside','damir-arrives','s10-vik-arrival','s14-lagoon-road'];
+ assert.deepEqual(affected.map(cue=>cue.id).sort(),narrativeRequired.sort());
+ for(const cue of affected)assert.deepEqual(cue.requiredCast,cue.cast,`${cue.id} must not hide its authored group`);
+ for(const cue of Object.values(visualCues).flat().filter(cue=>cue.cast?.length>2 && String(cue.art??'').startsWith('cg/')))
+  if(cue.requiredCast)assert.deepEqual(cue.requiredCast,cue.cast,`${cue.id} must retain its authored cinematic group metadata`);
 });
 test('all stage actor exports have real transparent RGBA pixels, never RGB black matte',()=>{
  for(const id of ['alice','eric','nick','damir']){

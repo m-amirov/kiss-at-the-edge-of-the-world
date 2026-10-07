@@ -39,6 +39,20 @@ export function stageForScene(sceneId, choices={}) {
   return {cast:[...spec.cast],mood:spec.mood,mode:spec.cast.length>2?'group':spec.cast.length===2?'pair':'solo'};
 }
 
+/**
+ * Keep ordinary background groups readable while preserving any cast that the
+ * active visual beat explicitly requires for narrative continuity.
+ */
+export function stageCastForPresentation(direction) {
+ const cast=[...(direction?.cast??[])];
+ const required=[...(direction?.requiredCast??[])];
+ if(required.length){
+  if(required.some(person=>!cast.includes(person)))throw new Error(`Required stage cast is not part of authored cast: ${required.join(',')}`);
+  return required;
+ }
+ return cast.length>2?cast.slice(0,2):cast;
+}
+
 // One-off authored entrance/exit cues are tied to exact story beats, not
 // substring matches of character names in arbitrary prose.
 const beatCues = {

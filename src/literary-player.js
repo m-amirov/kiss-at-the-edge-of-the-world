@@ -2,7 +2,7 @@ import { literarySeason } from './literary-season-data.js';
 import { compileScenePlayback, nextLiteraryScene, literarySaveKey, cleanLiteraryText } from './literary-engine.js';
 import { initYandexPlatform } from './yandex-sdk.js';
 import { createCloudSaveQueue } from './save-state.js';
-import { stageForScene } from './literary-stage.js';
+import { stageForScene, stageCastForPresentation } from './literary-stage.js';
 import { visualAt, visualEntryForPosition } from './literary-visual-directions.js';
 import { compileInteractivePlayback } from './literary-pacing.js';
 import { applyLiteraryLocale, createTranslator, validateLiteraryInteractionLocale } from './localization.js';
@@ -384,11 +384,10 @@ function renderReader(){
   if(art){const file=assetFileForViewport(art);const img=el('','','img');img.src=runtimeAssetUrl(`${art.type==='cg'?'cg':'backgrounds'}/${file}`);img.alt='';img.decoding='async';img.dataset.desktopAsset=art.file;img.dataset.asset=file;picture.append(img);picture.style.setProperty('--focus',focalPointByAsset[file]??focalPointByAsset[art.file]??'50% 50%');if(art.type==='cg'){picture.classList.add('is-cg');picture.style.setProperty('--cg-url',`url("${img.src}")`)}}
   else picture.classList.add('no-art');
   if(art?.presentation!=='cinematic'){
-    // Background staging is deliberately limited to the active visual beat.
-    // More than two cut-outs read as a lineup on portrait phones; the narrative
-    // cast remains intact in `direction`, while presentation keeps key speakers legible.
-    const presentationCast=direction.cast.length>2?direction.cast.slice(0,2):direction.cast;
-    picture.append(renderStage({...direction,cast:presentationCast,mode:presentationCast.length===2?'pair':'solo',mood:stageForScene(scene.id,reader.choices).mood}));
+    // Ordinary background groups stay focal, but a visual beat may explicitly
+    // require three or four people for narrative continuity.
+    const presentationCast=stageCastForPresentation(direction);
+    picture.append(renderStage({...direction,cast:presentationCast,mode:presentationCast.length>2?'group':presentationCast.length===2?'pair':'solo',mood:stageForScene(scene.id,reader.choices).mood}));
   }
   picture.append(el('','literary-vignette'));app.append(picture);bindStageNavigation(picture);
   const header=el('','reader-header');

@@ -612,3 +612,19 @@ button.primary:hover{background:linear-gradient(135deg,#d19b76,#a36d51);filter:n
   .scene-stage[data-mode="solo"] .stage-character{width:72vw;max-width:none;flex:0 0 72vw}
   .scene-stage[data-mode="solo"] .stage-character img{transform:scale(1.08);transform-origin:center bottom}
 }
+
+/* Required three- and four-person beats keep the full authored cast while
+   using depth and controlled overlap instead of a small straight lineup. */
+.scene-stage[data-mode="group"][data-count="3"]{gap:0}
+.scene-stage[data-mode="group"][data-count="3"] .stage-character{width:min(29vw,340px);margin-inline:-.75vw}
+.scene-stage[data-mode="group"][data-count="4"]{gap:0}
+.scene-stage[data-mode="group"][data-count="4"] .stage-character{width:min(24vw,300px);margin-inline:-1.5vw}
+.scene-stage[data-mode="group"][data-count="3"] .stage-character:nth-child(2),
+.scene-stage[data-mode="group"][data-count="4"] .stage-character:nth-child(2),
+.scene-stage[data-mode="group"][data-count="4"] .stage-character:nth-child(4){transform:translateY(-3%)}
+@media(max-width:680px){
+  .scene-stage[data-mode="group"][data-count="3"]{inset-inline:-2vw}
+  .scene-stage[data-mode="group"][data-count="3"] .stage-character{width:42vw;margin-inline:-5vw}
+  .scene-stage[data-mode="group"][data-count="4"]{inset-inline:-2vw}
+  .scene-stage[data-mode="group"][data-count="4"] .stage-character{width:34vw;margin-inline:-4vw}
+}

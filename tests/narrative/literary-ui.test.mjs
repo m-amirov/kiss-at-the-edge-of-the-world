@@ -53,10 +53,13 @@ test('cloud restore is an explicitly separated utility action, not a primary men
 });
 
 test('background staging prioritizes readable key speakers over a group lineup', () => {
-  assert.match(player, /const presentationCast=direction\.cast\.length>2\?direction\.cast\.slice\(0,2\):direction\.cast/);
-  assert.match(player, /cast:presentationCast,mode:presentationCast\.length===2\?'pair':'solo'/);
+  assert.match(player, /stageCastForPresentation\(direction\)/);
+  assert.doesNotMatch(player, /direction\.cast\.length>2\?direction\.cast\.slice\(0,2\)/);
+  assert.match(player, /cast:presentationCast,mode:presentationCast\.length>2\?'group':presentationCast\.length===2\?'pair':'solo'/);
+  assert.match(player, /require three or four people/i);
   assert.match(css, /\.scene-stage\[data-mode="solo"\]\{inset:4% 10% 23%/);
   assert.match(css, /\.scene-stage\[data-mode="solo"\] \.stage-character\{width:72vw/);
+  assert.match(css, /\.scene-stage\[data-mode="group"\]\[data-count="4"\]/);
 });
 
 test('narrative navigation is stage-first and retired text controls are absent', () => {
