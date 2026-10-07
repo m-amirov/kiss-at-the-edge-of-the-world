@@ -334,7 +334,11 @@ function renderMenu(){
   for(const [name,label] of [['episodes',t('episodes')],['settings',t('settings')]])secondary.append(button(label,()=>{modal=name;renderMenu()}));
   actions.append(secondary);
   section.append(actions);
-  if(cloudCandidate)section.append(button(t('restoreCloud'),()=>{if(!window.confirm(t('restoreCloudConfirm')))return;cloudLocked=true;dialogueHistory.clear();reader=cloudCandidate;cloudCandidate=null;persist();continueGame()}));
+  if(cloudCandidate){
+    const utility=el('','home-utility');
+    utility.append(button(t('restoreCloud'),()=>{if(!window.confirm(t('restoreCloudConfirm')))return;cloudLocked=true;dialogueHistory.clear();reader=cloudCandidate;cloudCandidate=null;persist();continueGame()},'cloud-restore'));
+    section.append(utility);
+  }
 }
 function renderStage(direction) {
   const stage=el('','scene-stage');
@@ -379,7 +383,13 @@ function renderReader(){
   picture.dataset.visualBeat=direction.beatId;picture.dataset.location=direction.location;picture.dataset.time=direction.time;
   if(art){const file=assetFileForViewport(art);const img=el('','','img');img.src=runtimeAssetUrl(`${art.type==='cg'?'cg':'backgrounds'}/${file}`);img.alt='';img.decoding='async';img.dataset.desktopAsset=art.file;img.dataset.asset=file;picture.append(img);picture.style.setProperty('--focus',focalPointByAsset[file]??focalPointByAsset[art.file]??'50% 50%');if(art.type==='cg'){picture.classList.add('is-cg');picture.style.setProperty('--cg-url',`url("${img.src}")`)}}
   else picture.classList.add('no-art');
-  if(art?.presentation!=='cinematic') picture.append(renderStage({...direction,mode:direction.cast.length>2?'group':direction.cast.length===2?'pair':'solo',mood:stageForScene(scene.id,reader.choices).mood}));
+  if(art?.presentation!=='cinematic'){
+    // Background staging is deliberately limited to the active visual beat.
+    // More than two cut-outs read as a lineup on portrait phones; the narrative
+    // cast remains intact in `direction`, while presentation keeps key speakers legible.
+    const presentationCast=direction.cast.length>2?direction.cast.slice(0,2):direction.cast;
+    picture.append(renderStage({...direction,cast:presentationCast,mode:presentationCast.length===2?'pair':'solo',mood:stageForScene(scene.id,reader.choices).mood}));
+  }
   picture.append(el('','literary-vignette'));app.append(picture);bindStageNavigation(picture);
   const header=el('','reader-header');
   const back=button(locale==='ru'?'Назад':'Back',rollbackNarrative,'small-button dialogue-back');back.disabled=!dialogueHistory.canRollback();

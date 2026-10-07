@@ -45,6 +45,20 @@ test('main menu keeps only the supported actions and has no retired panels or fo
   assert.match(css, /\.home-actions-secondary \{ grid-template-columns: 1fr; \}/);
 });
 
+test('cloud restore is an explicitly separated utility action, not a primary menu CTA', () => {
+  assert.match(player, /const utility=el\('','home-utility'\)/);
+  assert.match(player, /'cloud-restore'\)/);
+  assert.match(css, /\.home-utility\{[\s\S]*?border-top/);
+  assert.match(css, /\.cloud-restore\{[\s\S]*?font-size:\.86em/);
+});
+
+test('background staging prioritizes readable key speakers over a group lineup', () => {
+  assert.match(player, /const presentationCast=direction\.cast\.length>2\?direction\.cast\.slice\(0,2\):direction\.cast/);
+  assert.match(player, /cast:presentationCast,mode:presentationCast\.length===2\?'pair':'solo'/);
+  assert.match(css, /\.scene-stage\[data-mode="solo"\]\{inset:4% 10% 23%/);
+  assert.match(css, /\.scene-stage\[data-mode="solo"\] \.stage-character\{width:72vw/);
+});
+
 test('narrative navigation is stage-first and retired text controls are absent', () => {
   assert.doesNotMatch(player, /Далее|К выбору|skip-to-choice/);
   assert.match(player, /bindStageNavigation\(picture\)/);
