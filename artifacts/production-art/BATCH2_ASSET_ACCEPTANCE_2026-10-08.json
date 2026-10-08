@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "runId": "2026-10-08T04-43-32-234Z-production-art-cb403f",
+  "requestedModel": "Sol High",
+  "capability": {
+    "challengeId": "cap-68060c259dd3ac5679dd",
+    "observedTool": "image_gen.imagegen",
+    "presence": "PRESENT",
+    "serviceAvailability": "UNKNOWN",
+    "generationAllowed": true
+  },
+  "scope": [
+    "S01/airport-outside",
+    "S01/damir-arrives",
+    "S48/scene-start",
+    "S26/scene-start",
+    "S02/scene-start",
+    "S60/scene-start"
+  ],
+  "assets": [
+    {
+      "scene": "S01/airport-outside",
+      "cast": ["alice", "nick", "eric"],
+      "cue": "S01.C000.P016",
+      "source": {"path": "assets/cg/s01-airport-outside-batch2.png", "sha256": "9ED6076F0252FE4A37CBC6D5EDC3121C9379ED90159A2E030D3611F7720E5A23", "dimensions": "1672x941"},
+      "desktop": {"path": "assets/cg/s01-airport-outside-batch2.webp", "sha256": "64B408097BDE09EC0CF06DA2141A45DB92F083F34F28FE0F19918756FCC7404B2"},
+      "portrait": {"path": "assets/cg/s01-airport-outside-batch2-portrait.webp", "sha256": "54C9BA37DF1AC940D53FE96A0F339680CDEB335B2FD95DF839E4ADDA8C86C45F", "dimensions": "853x1844"},
+      "acceptance": "PASS"
+    },
+    {
+      "scene": "S01/damir-arrives",
+      "cast": ["alice", "nick", "eric", "damir"],
+      "cue": "S01.C000.P024",
+      "source": {"path": "assets/cg/s01-damir-arrives-batch2.png", "sha256": "1B8BBE70C35837D70AA364D439BEB4A44EB7B0F12A7F35EDF6838D9172ED0A41", "dimensions": "1672x941"},
+      "desktop": {"path": "assets/cg/s01-damir-arrives-batch2.webp", "sha256": "FC1C47537F5FDC4C6F4322E0273CFACDB5BF8401D82A7EB0C9A331B2544AA08D"},
+      "portrait": {"path": "assets/cg/s01-damir-arrives-batch2-portrait.webp", "sha256": "D223659022DD1091A7C2AE788473479D5E426FE7211ED672D7C696CEB33F2756", "dimensions": "853x1844"},
+      "acceptance": "PASS"
+    },
+    {
+      "scene": "S48/scene-start",
+      "cast": ["alice", "eric", "nick", "damir"],
+      "cue": "S48.C000.P000",
+      "source": {"path": "assets/cg/s48-last-breakfast-batch2.png", "sha256": "A8364039B1C5A5C38BE7528E65BC22341A0FA4519A713EFA936FF9A512B566A6", "dimensions": "1672x941"},
+      "desktop": {"path": "assets/cg/s48-last-breakfast-batch2.webp", "sha256": "F6747F24B3135F3827D0FC4C2911FA88CFC7C660E8293FA2090D21A951D4E550"},
+      "portrait": {"path": "assets/cg/s48-last-breakfast-batch2-portrait.webp", "sha256": "A71B2AA5CD847CBBEB025804CE24212ED263213F7D30479DC98E0CB875AD6C3D", "dimensions": "1024x1536"},
+      "acceptance": "PASS"
+    },
+    {
+      "scene": "S26/scene-start",
+      "cast": ["alice", "eric", "nick", "damir"],
+      "cue": "S26.C000.P000",
+      "source": {"path": "assets/cg/s26-route-choice-courtyard-batch2.png", "sha256": "D9483ABE612515734F52B0A1EDD3522DCB2B0F190F4C0C8F2EEB0DFFC0649FA6", "dimensions": "1672x941"},
+      "desktop": {"path": "assets/cg/s26-route-choice-courtyard-batch2.webp", "sha256": "158DDF463E44826367EB239243CBB4DE56B666812BCC69712DB206DFFD32833D"},
+      "portrait": {"path": "assets/cg/s26-route-choice-courtyard-batch2-portrait.webp", "sha256": "CE1E81CA80D8B4CFE68A2B391B7017E7608B7C1595B40FF97AE488CBDF832E12", "dimensions": "853x1844"},
+      "acceptance": "PASS"
+    },
+    {
+      "scene": "S02/scene-start",
+      "cast": ["alice", "eric", "nick", "damir"],
+      "cue": "S02.C000.P000",
+      "presentation": "cinematic moving van",
+      "source": {"path": "assets/cg/s02-van-group-batch2.png", "sha256": "B7B01C7A9F13FF73474DDD0BEC17F7F76374A4B7503EB31230D968F3CC274B3E", "dimensions": "1672x940"},
+      "desktop": {"path": "assets/cg/s02-van-group-batch2.webp", "sha256": "B2C8FD257112AE39DCF1F318C22D31CA59786D173A4AA8F01E07DFBE5D317E0E"},
+      "portrait": {"path": "assets/cg/s02-van-group-batch2-portrait.webp", "sha256": "3FD2C593BACDCA6C83281436B262B340E8534BA1E43FC38E50EA305F8BE35ECA", "dimensions": "853x1844"},
+      "acceptance": "PASS"
+    },
+    {
+      "scene": "S60/scene-start",
+      "cast": ["alice", "eric", "nick", "damir"],
+      "cue": "S60.C000.P000",
+      "source": {"path": "assets/cg/s60-souvenir-kitchen-batch2.png", "sha256": "DBE0A40BE91701EE4C9537D88A614BA6E91F918C6F84382790D139F4C0B8876B", "dimensions": "1672x941"},
+      "desktop": {"path": "assets/cg/s60-souvenir-kitchen-batch2.webp", "sha256": "507D3627A25B6042B87FBB7374D24D07A3B15E7EF49E2F0C41ECE3C63D2EEBB1"},
+      "portrait": {"path": "assets/cg/s60-souvenir-kitchen-batch2-portrait.webp", "sha256": "50221C5EECAACFB04F3B42670FCD84EAB1AD0BF34BA1DE769CFFA1ED5987C9F6", "dimensions": "853x1844"},
+      "acceptance": "PASS"
+    }
+  ],
+  "visualEvidence": {
+    "primary": "artifacts/evidence/production-art-batch2/runtime-evidence.json",
+    "primaryTargets": 12,
+    "primaryPasses": 12,
+    "consoleErrors": 0,
+    "gameOwned404": 0,
+    "failedRequests": 0,
+    "neighbor": "artifacts/evidence/production-art-batch2/neighbors/neighbor-evidence.json",
+    "neighborTargets": 20,
+    "neighborPasses": 20
+  },
+  "outOfScopePreserved": ["34 REFRAME_STAGE states", "Batch 1 S03/S18/S42/S44/S46", "narrative", "localization", "audio", "SDK", "save/load", "Back", "menu"],
+  "acceptance": "PASS"
+}

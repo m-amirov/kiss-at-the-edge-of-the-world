@@ -48,18 +48,16 @@ test('all 66 scenes have a real authored place, time, cast and bounded image ref
  }
 });
 
-test('S02 keeps the current production road background until the authored cafe cue',()=>{
+test('S02 keeps the integrated moving-van CG until the authored cafe cue',()=>{
  const {flow,choices}=complete('S02');
  assert.equal(shot('S02',flow,0,choices).location,'Автомобиль по дороге в Рейкьявик');
- // Baseline updated for cf0cb3d: the release mapping intentionally added the
- // integrated road-trip environment at scene start; the cafe cue remains exact.
- assert.equal(shot('S02',flow,0,choices).art?.file,'road-trip-van-interior-rain.webp');
+ assert.equal(shot('S02',flow,0,choices).art?.file,'s02-van-group-batch2.webp');
+ assert.equal(shot('S02',flow,0,choices).art?.type,'cg');
  const cafe=indexOfSource(flow,0,31);
  assert.equal(shot('S02',flow,cafe,choices).beatId,'roadside-cafe');
  assert.equal(shot('S02',flow,cafe,choices).art?.file,'s02-roadside-cafe.webp');
  assert.equal(shot('S02',flow,cafe,choices).art?.type,'background');
- assert.equal(shot('S02',flow,cafe-1,choices).art?.file,'road-trip-van-interior-rain.webp');
- assert.ok(flow.every((e,i)=>shot('S02',flow,i,choices).art?.type!=='cg'));
+ assert.equal(shot('S02',flow,cafe-1,choices).art?.file,'s02-van-group-batch2.webp');
 });
 
 test('Episode 1 S02 never interleaves the roadside cafe and car across choice variants',()=>{
