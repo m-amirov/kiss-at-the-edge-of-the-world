@@ -48,18 +48,40 @@ test('all 66 scenes have a real authored place, time, cast and bounded image ref
  }
 });
 
-test('S02 keeps the current production road background until the authored cafe cue',()=>{
+test('S02 uses the accepted integrated moving-van CG until the authored cafe cue',()=>{
  const {flow,choices}=complete('S02');
  assert.equal(shot('S02',flow,0,choices).location,'Автомобиль по дороге в Рейкьявик');
- // Baseline updated for cf0cb3d: the release mapping intentionally added the
- // integrated road-trip environment at scene start; the cafe cue remains exact.
- assert.equal(shot('S02',flow,0,choices).art?.file,'road-trip-van-interior-rain.webp');
+ assert.equal(shot('S02',flow,0,choices).beatId,'scene-start');
+ assert.equal(shot('S02',flow,0,choices).art?.file,'s02-van-group-batch2.webp');
+ assert.equal(shot('S02',flow,0,choices).art?.type,'cg');
+ assert.deepEqual(shot('S02',flow,0,choices).requiredCast,['alice','eric','nick','damir']);
  const cafe=indexOfSource(flow,0,31);
  assert.equal(shot('S02',flow,cafe,choices).beatId,'roadside-cafe');
  assert.equal(shot('S02',flow,cafe,choices).art?.file,'s02-roadside-cafe.webp');
  assert.equal(shot('S02',flow,cafe,choices).art?.type,'background');
- assert.equal(shot('S02',flow,cafe-1,choices).art?.file,'road-trip-van-interior-rain.webp');
- assert.ok(flow.every((e,i)=>shot('S02',flow,i,choices).art?.type!=='cg'));
+ assert.equal(shot('S02',flow,cafe-1,choices).art?.file,'s02-van-group-batch2.webp');
+});
+
+test('Batch 2 recovery maps the six accepted CGs to exact canonical cues and cast',()=>{
+ const expected={
+  'S01/airport-outside':{id:'S01',ref:[0,16],beat:'airport-outside',file:'s01-airport-outside-batch2.webp',cast:['alice','nick','eric']},
+  'S01/damir-arrives':{id:'S01',ref:[0,24],beat:'damir-arrives',file:'s01-damir-arrives-batch2.webp',cast:['alice','nick','eric','damir']},
+  'S48/scene-start':{id:'S48',ref:[0,0],file:'s48-last-breakfast-batch2.webp',cast:['alice','eric','nick','damir']},
+  'S26/scene-start':{id:'S26',ref:[0,0],file:'s26-route-choice-courtyard-batch2.webp',cast:['alice','eric','nick','damir']},
+  'S02/scene-start':{id:'S02',ref:[0,0],file:'s02-van-group-batch2.webp',cast:['alice','eric','nick','damir']},
+  'S60/scene-start':{id:'S60',ref:[0,0],file:'s60-souvenir-kitchen-batch2.webp',cast:['alice','eric','nick','damir']}
+ };
+ for(const [cue,cfg] of Object.entries(expected)){
+  const {choices}=complete(cfg.id);
+  const direction=shot(cfg.id,[{sourceEndRef:{chunk:cfg.ref[0],paragraph:cfg.ref[1]}}],0,choices);
+  assert.equal(direction.beatId,cfg.beat ?? 'scene-start',cue);
+  assert.equal(direction.art?.type,'cg',cue);
+  assert.equal(direction.art?.file,cfg.file,cue);
+  assert.deepEqual(direction.cast,cfg.cast,cue);
+  assert.deepEqual(direction.requiredCast,cfg.cast,cue);
+  assert.ok(fs.existsSync(new URL(`../../assets/cg/${cfg.file}`,import.meta.url)),cue);
+  assert.ok(fs.existsSync(new URL(`../../assets/cg/${cfg.file.replace('.webp','-portrait.webp')}`,import.meta.url)),cue);
+ }
 });
 
 test('Episode 1 S02 never interleaves the roadside cafe and car across choice variants',()=>{

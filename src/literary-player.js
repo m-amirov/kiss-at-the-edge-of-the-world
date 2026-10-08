@@ -106,6 +106,12 @@ const portraitAssetByDesktopAsset = {
   ,'s64-alice-snaefellsnes-trail.webp':'s64-alice-snaefellsnes-trail-portrait.webp'
   ,'s26-eastfjords-courtyard-group.webp':'s26-eastfjords-courtyard-group-portrait.webp'
   ,'s48-guesthouse-exit-group.webp':'s48-guesthouse-exit-group-portrait.webp'
+  ,'s01-airport-outside-batch2.webp':'s01-airport-outside-batch2-portrait.webp'
+  ,'s01-damir-arrives-batch2.webp':'s01-damir-arrives-batch2-portrait.webp'
+  ,'s48-last-breakfast-batch2.webp':'s48-last-breakfast-batch2-portrait.webp'
+  ,'s26-route-choice-courtyard-batch2.webp':'s26-route-choice-courtyard-batch2-portrait.webp'
+  ,'s02-van-group-batch2.webp':'s02-van-group-batch2-portrait.webp'
+  ,'s60-souvenir-kitchen-batch2.webp':'s60-souvenir-kitchen-batch2-portrait.webp'
 };
 function assetFileForViewport(art){
   const portrait=window.matchMedia?.('(max-width: 680px) and (orientation: portrait)').matches;

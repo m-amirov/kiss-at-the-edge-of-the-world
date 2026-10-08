@@ -1073,6 +1073,102 @@
       "license": "generated for this project"
     },
     {
+      "path": "assets/cg/s01-airport-outside-batch2.png",
+      "sha256": "9ED6076F0252FE4A37CBC6D5EDC3121C9379ED90159A2E030D3611F7720E5A23",
+      "dimensions": "1672x941",
+      "method": "Immutable accepted integrated full-scene CG; no regeneration during canonical recovery",
+      "source": "Prior Batch 2 generation run 2026-10-08; recovered from the dirty checkout as an immutable input",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s01-airport-outside-batch2-portrait.png",
+      "sha256": "6D0B8E44EFAA8B85C854C8913D967CD9D8C50CA82D269BE11152C0D556295C3C",
+      "dimensions": "853x1844",
+      "method": "Immutable accepted portrait derivative; no regeneration during canonical recovery",
+      "source": "Prior Batch 2 generation run 2026-10-08; paired with s01-airport-outside-batch2.png",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s01-damir-arrives-batch2.png",
+      "sha256": "1B8BBE70C35837D70AA364D439BEB4A44EB7B0F12A7F35EDF6838D9172ED0A41",
+      "dimensions": "1672x941",
+      "method": "Immutable accepted integrated full-scene CG; no regeneration during canonical recovery",
+      "source": "Prior Batch 2 generation run 2026-10-08; recovered from the dirty checkout as an immutable input",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s01-damir-arrives-batch2-portrait.png",
+      "sha256": "9A0562920502AD313190D3547887D81F5E0134F6AEA96136ED1748FC249A3A8B",
+      "dimensions": "853x1844",
+      "method": "Immutable accepted portrait derivative; no regeneration during canonical recovery",
+      "source": "Prior Batch 2 generation run 2026-10-08; paired with s01-damir-arrives-batch2.png",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s48-last-breakfast-batch2.png",
+      "sha256": "A8364039B1C5A5C38BE7528E65BC22341A0FA4519A713EFA936FF9A512B566A6",
+      "dimensions": "1672x941",
+      "method": "Immutable accepted integrated full-scene CG; no regeneration during canonical recovery",
+      "source": "Prior Batch 2 generation run 2026-10-08; recovered from the dirty checkout as an immutable input",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s48-last-breakfast-batch2-portrait.png",
+      "sha256": "7362F0C38CE4DF98E265C64B1026FA421039DB6785B0B9075A3BAE6AEC8582DE",
+      "dimensions": "1024x1536",
+      "method": "Immutable accepted portrait derivative; no regeneration during canonical recovery",
+      "source": "Prior Batch 2 generation run 2026-10-08; paired with s48-last-breakfast-batch2.png",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s26-route-choice-courtyard-batch2.png",
+      "sha256": "D9483ABE612515734F52B0A1EDD3522DCB2B0F190F4C0C8F2EEB0DFFC0649FA6",
+      "dimensions": "1672x941",
+      "method": "Immutable accepted integrated full-scene CG; no regeneration during canonical recovery",
+      "source": "Prior Batch 2 generation run 2026-10-08; recovered from the dirty checkout as an immutable input",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s26-route-choice-courtyard-batch2-portrait.png",
+      "sha256": "2325AB9EA01FADA35D3FEF79C5CD2A749AAC44D8B0CD86336D1F3C6FE75E9FE2",
+      "dimensions": "853x1844",
+      "method": "Immutable accepted portrait derivative; no regeneration during canonical recovery",
+      "source": "Prior Batch 2 generation run 2026-10-08; paired with s26-route-choice-courtyard-batch2.png",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s02-van-group-batch2.png",
+      "sha256": "B7B01C7A9F13FF73474DDD0BEC17F7F76374A4B7503EB31230D968F3CC274B3E",
+      "dimensions": "1672x940",
+      "method": "Immutable accepted integrated full-scene CG; no regeneration during canonical recovery",
+      "source": "Prior Batch 2 generation run 2026-10-08; recovered from the dirty checkout as an immutable input",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s02-van-group-batch2-portrait.png",
+      "sha256": "714CEE2BAD29F8073316C400D8CBE83BE890236DA825EB4C80F36A36F85E4FA5",
+      "dimensions": "853x1844",
+      "method": "Immutable accepted portrait derivative; no regeneration during canonical recovery",
+      "source": "Prior Batch 2 generation run 2026-10-08; paired with s02-van-group-batch2.png",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s60-souvenir-kitchen-batch2.png",
+      "sha256": "DBE0A40BE91701EE4C9537D88A614BA6E91F918C6F84382790D139F4C0B8876B",
+      "dimensions": "1672x941",
+      "method": "Immutable accepted integrated full-scene CG; no regeneration during canonical recovery",
+      "source": "Prior Batch 2 generation run 2026-10-08; recovered from the dirty checkout as an immutable input",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s60-souvenir-kitchen-batch2-portrait.png",
+      "sha256": "F7654ED2A16ED3A8F999DA79466719590A99E987E8ADCA4BF24FCE9A17EB0297",
+      "dimensions": "853x1844",
+      "method": "Immutable accepted portrait derivative; no regeneration during canonical recovery",
+      "source": "Prior Batch 2 generation run 2026-10-08; paired with s60-souvenir-kitchen-batch2.png",
+      "license": "generated for this project"
+    },
+    {
       "path": "assets/branding/kiss-at-the-edge-cover.png",
       "sha256": "8F38B9516533FA0CDC760CD44E7DFD21F05D87E7A3589F5229B90A9D5B9FA6A5",
       "dimensions": "1920x900",

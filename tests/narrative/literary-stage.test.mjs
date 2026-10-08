@@ -54,7 +54,7 @@ test('group staging uses required presence when declared, but keeps ordinary gro
 });
 test('every non-cinematic authored 3-4-person cue declares its required presence',()=>{
  const affected=Object.values(visualCues).flat().filter(cue=>cue.cast?.length>2 && !String(cue.art??'').startsWith('cg/') && cue.presentation!=='cinematic');
- const narrativeRequired=['airport-outside','damir-arrives','s10-vik-arrival','s14-lagoon-road'];
+ const narrativeRequired=['s10-vik-arrival','s14-lagoon-road'];
  assert.deepEqual(affected.map(cue=>cue.id).sort(),narrativeRequired.sort());
  for(const cue of affected)assert.deepEqual(cue.requiredCast,cue.cast,`${cue.id} must not hide its authored group`);
  for(const cue of Object.values(visualCues).flat().filter(cue=>cue.cast?.length>2 && String(cue.art??'').startsWith('cg/')))
