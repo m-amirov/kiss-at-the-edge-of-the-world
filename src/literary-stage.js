@@ -46,6 +46,7 @@ export function stageForScene(sceneId, choices={}) {
 export function stageCastForPresentation(direction) {
  const cast=[...(direction?.cast??[])];
  const required=[...(direction?.requiredCast??[])];
+ if(direction?.stageComposition)return cast;
  if(required.length){
   if(required.some(person=>!cast.includes(person)))throw new Error(`Required stage cast is not part of authored cast: ${required.join(',')}`);
   return required;

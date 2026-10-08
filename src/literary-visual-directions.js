@@ -72,6 +72,20 @@ export const visualScenes = {
   S48:['Общая кухня: последний завтрак','день 21, утро','guesthouse-common-kitchen-evening.webp']
 };
 
+// First bounded REFRAME_STAGE repair batch. These are presentation contracts
+// for exact authored beats; they do not change the prose, choices, or artwork.
+const reframeStageCompositionByBeat = new Map([
+  ['S04:scene-start','four-person-depth-s04'],
+  ['S04:thingvellir-trail','four-person-depth-s04'],
+  ['S09:scene-start','four-person-depth-s09'],
+  ['S09:skogafoss-trail','four-person-depth-s09'],
+  ['S13:scene-start','four-person-depth-s13'],
+  ['S13:skaftafell-parking','four-person-depth-s13'],
+  ['S36:scene-start','four-person-depth-s36'],
+  ['S36:snaefellsnes-drive','four-person-depth-s36']
+]);
+const reframeRequiredGroup = ['alice','eric','nick','damir'];
+
 // Format: [chunkIndex, paragraphIndex]. Changes persist to the next cue.
 // Every cue is an explicit editorial decision; never infer actions from prose.
 const cues = {
@@ -85,13 +99,13 @@ const cues = {
       {at:[0,31],id:'roadside-cafe',location:'Придорожное кафе',art:'s02-roadside-cafe.webp'}],
  S03:[{at:[0,0],id:'editor-call',cast:['alice'],art:'cg/s03-editor-call.webp',presentation:'cinematic'},
       {at:[4,0],id:'damir-enters',cast:['alice','damir'],art:'cg/s03-editor-call-damir.webp'}],
- S04:[{at:[0,4],id:'thingvellir-trail',location:'Þingvellir: тропа и ущелье',art:'thingvellir-master.webp'}],
- S09:[{at:[0,8],id:'skogafoss-trail',location:'Skógafoss: водопад',art:'skogafoss-master.webp'}],
+ S04:[{at:[0,4],id:'thingvellir-trail',location:'Þingvellir: тропа и ущелье',art:'thingvellir-master.webp',cast:[...reframeRequiredGroup],requiredCast:[...reframeRequiredGroup]}],
+ S09:[{at:[0,8],id:'skogafoss-trail',location:'Skógafoss: водопад',art:'skogafoss-master.webp',cast:[...reframeRequiredGroup],requiredCast:[...reframeRequiredGroup]}],
  S10:[{at:[0,0],id:'s10-vik-road-song',location:'АЗС у дороги к Vík: переднее сиденье автомобиля',cast:['alice','eric'],art:'cg/s10-vik-road-song.webp'},
       {at:[6,0],id:'s10-vik-arrival',location:'Гостевой дом Vík: заселение',cast:['alice','nick','eric','damir'],requiredCast:['alice','nick','eric','damir'],art:'s10-vik-guesthouse-arrival.webp'}],
  S12:[{at:[0,0],id:'s12-vik-cafe-damir',location:'Кафе Vík: стол у окна',cast:['alice','damir'],art:'cg/s12-vik-cafe-damir.webp'},
       {at:[11,0],id:'s12-vik-street',location:'Улица Vík после кафе',cast:['alice','damir'],art:'s12-vik-street-day.webp'}],
- S13:[{at:[0,7],id:'skaftafell-parking',location:'Скафтафетль: информационный центр',art:'s13-skaftafell-visitor-parking.webp'},
+ S13:[{at:[0,7],id:'skaftafell-parking',location:'Скафтафетль: информационный центр',art:'s13-skaftafell-visitor-parking.webp',cast:[...reframeRequiredGroup],requiredCast:[...reframeRequiredGroup]},
       {at:[0,12],id:'skaftafell-notebook',location:'Скафтафетль: тропа и блокнот',art:'cg/s13-skaftafell-travelers.webp'}],
  S14:[{at:[0,0],id:'s14-skaftafell-pace',location:'Скафтафетль: тропа над ледниковой равниной',cast:['alice','eric'],art:'cg/s14-skaftafell-pace.webp'},
       {at:[7,0],id:'s14-lagoon-road',location:'Дорога к ледниковой лагуне',cast:['alice','eric','nick','damir'],requiredCast:['alice','eric','nick','damir'],art:'s14-lagoon-road.webp'}],
@@ -135,7 +149,7 @@ const cues = {
       {at:[0,0],id:'s56-cafe-new-song-paused',location:'Акюрейри: музыкальное кафе, стол у окна; музыканты играют новую для Алисы и Дамира песню',time:'день 16, вечер',cast:['alice','damir'],art:'cg/s56-cafe-musicians.webp',when:{'S34-C1':'B'}}],
  S63:[{at:[0,1],id:'s63-alice-solo-concert',location:'Акюрейри: небольшой камерный зал со складными стульями и случайными слушателями',time:'день 16, вечер',cast:['alice'],art:'cg/s63-alice-solo-concert.webp'}],
  S37:[{at:[1,2],id:'s37-eric-alice-cafe',location:'Небольшое кафе Snæfellsnes после музея рыболовства, большое окно',time:'день 18, холодный день',cast:['alice','eric'],art:'cg/s37-eric-alice-cafe.webp'}],
- S36:[{at:[0,1],id:'snaefellsnes-drive',location:'Дорога по Snæfellsnes',art:'snaefellsnes-master.webp'}],
+ S36:[{at:[0,1],id:'snaefellsnes-drive',location:'Дорога по Snæfellsnes',art:'snaefellsnes-master.webp',cast:[...reframeRequiredGroup],requiredCast:[...reframeRequiredGroup]}],
  S41:[{at:[0,1],id:'editor-cafe-call',location:'Рейкьявик: кафе, видеозвонок редактору'}],
  S42:[{at:[0,0],id:'s42-harbour-cafe',location:'Рейкьявик: небольшое кафе у гавани',time:'день 20, вечер',art:'cg/s42-harbour-cafe.webp',presentation:'cinematic',cast:['alice','eric']}],
  S44:[{at:[0,0],id:'eric-morning-harbour',location:'Рейкьявик: утренняя гавань',art:'cg/s44-eric-morning-harbour.webp',presentation:'cinematic',cast:['alice','eric']},
@@ -176,7 +190,9 @@ export function visualAt(sceneId,entry,choices={},baseCast=['alice']){
  const record=visualScenes[sceneId];
  if(!record)throw new Error(`Missing visual scene contract: ${sceneId}`);
  const [baseLocation,baseTime,baseBackground]=record;
- const state={sceneId,beatId:'scene-start',location:baseLocation,time:baseTime,cast:[...(openingCast[sceneId]??baseCast)],requiredCast:[],art:baseBackground ? {type:'background',presentation:'environment',file:baseBackground}:null};
+ const initialBeat=`${sceneId}:scene-start`;
+ const initialCast=[...(openingCast[sceneId]??baseCast)];
+ const state={sceneId,beatId:'scene-start',location:baseLocation,time:baseTime,cast:initialCast,requiredCast:reframeStageCompositionByBeat.has(initialBeat)?[...reframeRequiredGroup]:[],stageComposition:reframeStageCompositionByBeat.get(initialBeat)??null,art:baseBackground ? {type:'background',presentation:'environment',file:baseBackground}:null};
  const ref=entry?.sourceEndRef ?? entry?.sourceStartRef;
  const at=ref?address([ref.chunk,ref.paragraph]):-1;
  for(const cue of cues[sceneId]??[]){
@@ -192,6 +208,7 @@ export function visualAt(sceneId,entry,choices={},baseCast=['alice']){
    if(state.art && cue.presentation)state.art.presentation=cue.presentation;
   }
   state.beatId=cue.id;
+  state.stageComposition=reframeStageCompositionByBeat.get(`${sceneId}:${cue.id}`)??null;
  }
  return state;
 }

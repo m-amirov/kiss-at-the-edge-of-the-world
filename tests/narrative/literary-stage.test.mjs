@@ -52,9 +52,22 @@ test('group staging uses required presence when declared, but keeps ordinary gro
  assert.deepEqual(stageCastForPresentation({cast:['alice','eric','nick','damir'],requiredCast:['alice','nick','eric','damir']}),['alice','nick','eric','damir']);
  assert.deepEqual(stageCastForPresentation({cast:['alice','nick','eric'],requiredCast:['alice','nick','eric']}),['alice','nick','eric']);
 });
+test('first bounded reframe batch keeps the exact four-person cast in a depth composition',()=>{
+ const cases=[['S04','scene-start'],['S04','thingvellir-trail'],['S09','scene-start'],['S09','skogafoss-trail'],['S13','scene-start'],['S13','skaftafell-parking'],['S36','scene-start'],['S36','snaefellsnes-drive']];
+ for(const [id,beatId] of cases){
+  const choices={'S26-C1':'A'};
+  const flow=compileInteractivePlayback(byId.get(id),choices,'ru');
+  const position=flow.findIndex(entry=>visualAt(id,entry,choices,stageForScene(id,choices).cast).beatId===beatId);
+  assert.ok(position>=0,`${id}/${beatId} must have a runtime position`);
+  const direction=visualAt(id,flow[position],choices,stageForScene(id,choices).cast);
+  assert.equal(direction.stageComposition,`four-person-depth-${id.toLowerCase()}`);
+  assert.deepEqual(direction.requiredCast,['alice','eric','nick','damir']);
+  assert.deepEqual(stageCastForPresentation(direction),direction.cast);
+ }
+});
 test('every non-cinematic authored 3-4-person cue declares its required presence',()=>{
  const affected=Object.values(visualCues).flat().filter(cue=>cue.cast?.length>2 && !String(cue.art??'').startsWith('cg/') && cue.presentation!=='cinematic');
- const narrativeRequired=['s10-vik-arrival','s14-lagoon-road'];
+ const narrativeRequired=['s10-vik-arrival','s14-lagoon-road','skaftafell-parking','skogafoss-trail','snaefellsnes-drive','thingvellir-trail'];
  assert.deepEqual(affected.map(cue=>cue.id).sort(),narrativeRequired.sort());
  for(const cue of affected)assert.deepEqual(cue.requiredCast,cue.cast,`${cue.id} must not hide its authored group`);
  for(const cue of Object.values(visualCues).flat().filter(cue=>cue.cast?.length>2 && String(cue.art??'').startsWith('cg/')))

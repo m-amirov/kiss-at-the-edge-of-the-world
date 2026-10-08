@@ -351,6 +351,7 @@ function renderStage(direction) {
   stage.dataset.count=String(direction.cast.length);
   stage.dataset.mode=direction.mode;
   stage.dataset.mood=direction.mood;
+  if(direction.stageComposition)stage.dataset.layout=direction.stageComposition;
   direction.cast.forEach((person,index)=>{
     const figure=el('',`stage-character stage-${person}`);
     figure.dataset.mood=direction.mood;
