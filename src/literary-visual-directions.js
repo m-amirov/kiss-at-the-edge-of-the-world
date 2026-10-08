@@ -72,8 +72,8 @@ export const visualScenes = {
   S48:['Общая кухня: последний завтрак','день 21, утро','guesthouse-common-kitchen-evening.webp']
 };
 
-// First bounded REFRAME_STAGE repair batch. These are presentation contracts
-// for exact authored beats; they do not change the prose, choices, or artwork.
+// Bounded REFRAME_STAGE repair batches. These are presentation contracts for
+// exact authored beats; they do not change the prose, choices, or artwork.
 const reframeStageCompositionByBeat = new Map([
   ['S04:scene-start','four-person-depth-s04'],
   ['S04:thingvellir-trail','four-person-depth-s04'],
@@ -82,9 +82,25 @@ const reframeStageCompositionByBeat = new Map([
   ['S13:scene-start','four-person-depth-s13'],
   ['S13:skaftafell-parking','four-person-depth-s13'],
   ['S36:scene-start','four-person-depth-s36'],
-  ['S36:snaefellsnes-drive','four-person-depth-s36']
+  ['S36:snaefellsnes-drive','four-person-depth-s36'],
+  ['S05:scene-start','batch2-four-person-depth-s05'],
+  ['S07:scene-start','batch2-four-person-depth-s07'],
+  ['S11:scene-start','batch2-four-person-depth-s11'],
+  ['S16:scene-start','batch2-four-person-depth-s16'],
+  ['S22:scene-start','batch2-four-person-depth-s22'],
+  ['S58:scene-start','batch2-four-person-depth-s58'],
+  ['S15:scene-start','batch2-pair-depth-s15-opening'],
+  ['S15:jokulsarlon-lagoon','batch2-pair-depth-s15-lagoon']
 ]);
 const reframeRequiredGroup = ['alice','eric','nick','damir'];
+const reframeRequiredCastByBeat = new Map([
+  ...[...reframeStageCompositionByBeat.entries()]
+    .filter(([beat]) => !beat.startsWith('S15:'))
+    .map(([beat]) => [beat, reframeRequiredGroup]),
+  ['S15:scene-start',['alice','nick']],
+  ['S15:jokulsarlon-lagoon',['alice','nick']]
+]);
+const requiredCastForReframe = beat => reframeRequiredCastByBeat.get(beat)?.slice() ?? [];
 
 // Format: [chunkIndex, paragraphIndex]. Changes persist to the next cue.
 // Every cue is an explicit editorial decision; never infer actions from prose.
@@ -109,7 +125,7 @@ const cues = {
       {at:[0,12],id:'skaftafell-notebook',location:'Скафтафетль: тропа и блокнот',art:'cg/s13-skaftafell-travelers.webp'}],
  S14:[{at:[0,0],id:'s14-skaftafell-pace',location:'Скафтафетль: тропа над ледниковой равниной',cast:['alice','eric'],art:'cg/s14-skaftafell-pace.webp'},
       {at:[7,0],id:'s14-lagoon-road',location:'Дорога к ледниковой лагуне',cast:['alice','eric','nick','damir'],requiredCast:['alice','eric','nick','damir'],art:'s14-lagoon-road.webp'}],
- S15:[{at:[0,5],id:'jokulsarlon-lagoon',location:'Jökulsárlón: лагуна',art:'jokulsarlon-master.webp'}],
+S15:[{at:[0,5],id:'jokulsarlon-lagoon',location:'Jökulsárlón: лагуна',art:'jokulsarlon-master.webp',cast:['alice','nick'],requiredCast:['alice','nick']}],
  S16:[{at:[0,1],id:'s16-guesthouse-help',location:'Придорожный гостевой дом: вход и скамья',cast:['alice','damir','eric','nick'],requiredCast:['alice','damir','eric','nick'],art:'cg/s16-guesthouse-help.webp'},
       {at:[4,0],id:'s16-kitchen-soup',location:'Придорожный гостевой дом: общая кухня',cast:['alice','damir','eric','nick'],requiredCast:['alice','damir','eric','nick'],art:'cg/s16-kitchen-soup.webp'}],
  S17:[{at:[0,0],id:'s17-hofn-guesthouse',location:'Гостевой дом Höfn: общая кухня',art:'cg/s17-hofn-guesthouse.webp',cast:['alice','eric','nick','damir'],requiredCast:['alice','eric','nick','damir']}],
@@ -192,7 +208,7 @@ export function visualAt(sceneId,entry,choices={},baseCast=['alice']){
  const [baseLocation,baseTime,baseBackground]=record;
  const initialBeat=`${sceneId}:scene-start`;
  const initialCast=[...(openingCast[sceneId]??baseCast)];
- const state={sceneId,beatId:'scene-start',location:baseLocation,time:baseTime,cast:initialCast,requiredCast:reframeStageCompositionByBeat.has(initialBeat)?[...reframeRequiredGroup]:[],stageComposition:reframeStageCompositionByBeat.get(initialBeat)??null,art:baseBackground ? {type:'background',presentation:'environment',file:baseBackground}:null};
+ const state={sceneId,beatId:'scene-start',location:baseLocation,time:baseTime,cast:initialCast,requiredCast:requiredCastForReframe(initialBeat),stageComposition:reframeStageCompositionByBeat.get(initialBeat)??null,art:baseBackground ? {type:'background',presentation:'environment',file:baseBackground}:null};
  const ref=entry?.sourceEndRef ?? entry?.sourceStartRef;
  const at=ref?address([ref.chunk,ref.paragraph]):-1;
  for(const cue of cues[sceneId]??[]){

@@ -65,6 +65,27 @@ test('first bounded reframe batch keeps the exact four-person cast in a depth co
   assert.deepEqual(stageCastForPresentation(direction),direction.cast);
  }
 });
+test('second bounded reframe batch keeps the selected cast in per-cue compositions',()=>{
+ const groups=[['S05','scene-start'],['S07','scene-start'],['S11','scene-start'],['S16','scene-start'],['S22','scene-start'],['S58','scene-start']];
+ for(const [id,beatId] of groups){
+  const choices={'S04-C1':'A','S05-C1':'A','S13-C1':'A','S15-C1':'A','S17-C2':'A','S22-C1':'A','S26-C1':'A'};
+  const flow=compileInteractivePlayback(byId.get(id),choices,'ru');
+  const position=flow.findIndex(entry => visualAt(id,entry,choices,stageForScene(id,choices).cast).beatId===beatId);
+  const direction=visualAt(id,flow[position],choices,stageForScene(id,choices).cast);
+  assert.match(direction.stageComposition,/^batch2-four-person-depth-s\d+$/);
+  assert.deepEqual(direction.requiredCast,['alice','eric','nick','damir']);
+  assert.deepEqual(stageCastForPresentation(direction),direction.cast);
+ }
+ for(const [id,beatId] of [['S15','scene-start'],['S15','jokulsarlon-lagoon']]){
+  const choices={'S04-C1':'A','S05-C1':'A','S13-C1':'A','S15-C1':'A','S17-C2':'A','S22-C1':'A','S26-C1':'A'};
+  const flow=compileInteractivePlayback(byId.get(id),choices,'ru');
+  const position=flow.findIndex(entry => visualAt(id,entry,choices,stageForScene(id,choices).cast).beatId===beatId);
+  const direction=visualAt(id,flow[position],choices,stageForScene(id,choices).cast);
+  assert.match(direction.stageComposition,/^batch2-pair-depth-s15-/);
+  assert.deepEqual(direction.requiredCast,['alice','nick']);
+  assert.deepEqual(stageCastForPresentation(direction),direction.cast);
+ }
+});
 test('every non-cinematic authored 3-4-person cue declares its required presence',()=>{
  const affected=Object.values(visualCues).flat().filter(cue=>cue.cast?.length>2 && !String(cue.art??'').startsWith('cg/') && cue.presentation!=='cinematic');
  const narrativeRequired=['s10-vik-arrival','s14-lagoon-road','skaftafell-parking','skogafoss-trail','snaefellsnes-drive','thingvellir-trail'];

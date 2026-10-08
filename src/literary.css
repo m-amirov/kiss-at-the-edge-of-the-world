@@ -629,6 +629,90 @@ button.primary:hover{background:linear-gradient(135deg,#d19b76,#a36d51);filter:n
   .scene-stage[data-mode="group"][data-count="4"] .stage-character{width:34vw;margin-inline:-4vw}
 }
 
+/* Second bounded REFRAME_STAGE batch: each selected authored cue owns its
+   foreground scale and depth arc. The four-person beats retain all travelers;
+   the two S15 beats use a closer two-shot without changing the background. */
+.scene-stage[data-layout^="batch2-four-person-depth-"]{
+  inset:4% 0 21%;
+  display:block;
+  overflow:visible;
+}
+.scene-stage[data-layout^="batch2-four-person-depth-"] .stage-character{
+  position:absolute;
+  bottom:0;
+  width:min(38vw,540px);
+  height:108%;
+  min-width:0;
+  margin:0;
+  transform-origin:center bottom;
+}
+.scene-stage[data-layout^="batch2-four-person-depth-"] .stage-character img{width:100%;height:100%;object-position:center bottom}
+.scene-stage[data-layout="batch2-four-person-depth-s05"] .stage-character:nth-child(1){left:6%;transform:scale(1.06);z-index:4}
+.scene-stage[data-layout="batch2-four-person-depth-s05"] .stage-character:nth-child(2){left:25%;transform:scale(.95) translateY(-5%);z-index:2}
+.scene-stage[data-layout="batch2-four-person-depth-s05"] .stage-character:nth-child(3){left:44%;transform:scale(1.02) translateY(-1%);z-index:3}
+.scene-stage[data-layout="batch2-four-person-depth-s05"] .stage-character:nth-child(4){left:63%;transform:scale(.94) translateY(-5%);z-index:2}
+.scene-stage[data-layout="batch2-four-person-depth-s07"] .stage-character:nth-child(1){left:5%;transform:scale(1.04);z-index:4}
+.scene-stage[data-layout="batch2-four-person-depth-s07"] .stage-character:nth-child(2){left:24%;transform:scale(.95) translateY(-4%);z-index:2}
+.scene-stage[data-layout="batch2-four-person-depth-s07"] .stage-character:nth-child(3){left:43%;transform:scale(1.01);z-index:3}
+.scene-stage[data-layout="batch2-four-person-depth-s07"] .stage-character:nth-child(4){left:62%;transform:scale(.95) translateY(-4%);z-index:2}
+.scene-stage[data-layout="batch2-four-person-depth-s11"] .stage-character:nth-child(1){left:3%;transform:scale(1.08);z-index:4}
+.scene-stage[data-layout="batch2-four-person-depth-s11"] .stage-character:nth-child(2){left:23%;transform:scale(.95) translateY(-4%);z-index:2}
+.scene-stage[data-layout="batch2-four-person-depth-s11"] .stage-character:nth-child(3){left:44%;transform:scale(1.02) translateY(-1%);z-index:3}
+.scene-stage[data-layout="batch2-four-person-depth-s11"] .stage-character:nth-child(4){left:65%;transform:scale(.93) translateY(-5%);z-index:2}
+.scene-stage[data-layout="batch2-four-person-depth-s16"] .stage-character:nth-child(1){left:5%;transform:scale(1.03);z-index:4}
+.scene-stage[data-layout="batch2-four-person-depth-s16"] .stage-character:nth-child(2){left:24%;transform:scale(.95) translateY(-4%);z-index:2}
+.scene-stage[data-layout="batch2-four-person-depth-s16"] .stage-character:nth-child(3){left:43%;transform:scale(1.01);z-index:3}
+.scene-stage[data-layout="batch2-four-person-depth-s16"] .stage-character:nth-child(4){left:62%;transform:scale(.95) translateY(-4%);z-index:2}
+.scene-stage[data-layout="batch2-four-person-depth-s22"] .stage-character:nth-child(1){left:6%;transform:scale(1.06);z-index:4}
+.scene-stage[data-layout="batch2-four-person-depth-s22"] .stage-character:nth-child(2){left:25%;transform:scale(.94) translateY(-5%);z-index:2}
+.scene-stage[data-layout="batch2-four-person-depth-s22"] .stage-character:nth-child(3){left:44%;transform:scale(1.03) translateY(-1%);z-index:3}
+.scene-stage[data-layout="batch2-four-person-depth-s22"] .stage-character:nth-child(4){left:63%;transform:scale(.94) translateY(-5%);z-index:2}
+.scene-stage[data-layout="batch2-four-person-depth-s58"] .stage-character:nth-child(1){left:5%;transform:scale(1.04);z-index:4}
+.scene-stage[data-layout="batch2-four-person-depth-s58"] .stage-character:nth-child(2){left:24%;transform:scale(.95) translateY(-4%);z-index:2}
+.scene-stage[data-layout="batch2-four-person-depth-s58"] .stage-character:nth-child(3){left:43%;transform:scale(1.01);z-index:3}
+.scene-stage[data-layout="batch2-four-person-depth-s58"] .stage-character:nth-child(4){left:62%;transform:scale(.95) translateY(-4%);z-index:2}
+@media(max-width:680px){
+  .scene-stage[data-layout^="batch2-four-person-depth-"]{inset:10% -10% 34%;}
+  .scene-stage[data-layout^="batch2-four-person-depth-"] .stage-character{width:58vw;height:108%;}
+  .scene-stage[data-layout^="batch2-four-person-depth-s05"] .stage-character:nth-child(1){left:0;transform:scale(1.04)}
+  .scene-stage[data-layout^="batch2-four-person-depth-s05"] .stage-character:nth-child(2){left:18%;transform:scale(.94) translateY(-7%)}
+  .scene-stage[data-layout^="batch2-four-person-depth-s05"] .stage-character:nth-child(3){left:36%;transform:scale(1.01) translateY(-2%)}
+  .scene-stage[data-layout^="batch2-four-person-depth-s05"] .stage-character:nth-child(4){left:54%;transform:scale(.94) translateY(-7%)}
+  .scene-stage[data-layout^="batch2-four-person-depth-s07"] .stage-character:nth-child(1){left:0;transform:scale(1.03)}
+  .scene-stage[data-layout^="batch2-four-person-depth-s07"] .stage-character:nth-child(2){left:18%;transform:scale(.94) translateY(-6%)}
+  .scene-stage[data-layout^="batch2-four-person-depth-s07"] .stage-character:nth-child(3){left:36%;transform:scale(1.01) translateY(-2%)}
+  .scene-stage[data-layout^="batch2-four-person-depth-s07"] .stage-character:nth-child(4){left:54%;transform:scale(.94) translateY(-6%)}
+  .scene-stage[data-layout^="batch2-four-person-depth-s11"] .stage-character:nth-child(1){left:0;transform:scale(1.05)}
+  .scene-stage[data-layout^="batch2-four-person-depth-s11"] .stage-character:nth-child(2){left:17%;transform:scale(.94) translateY(-7%)}
+  .scene-stage[data-layout^="batch2-four-person-depth-s11"] .stage-character:nth-child(3){left:35%;transform:scale(1.01) translateY(-2%)}
+  .scene-stage[data-layout^="batch2-four-person-depth-s11"] .stage-character:nth-child(4){left:53%;transform:scale(.93) translateY(-7%)}
+  .scene-stage[data-layout^="batch2-four-person-depth-s16"] .stage-character:nth-child(1){left:0;transform:scale(1.03)}
+  .scene-stage[data-layout^="batch2-four-person-depth-s16"] .stage-character:nth-child(2){left:18%;transform:scale(.94) translateY(-6%)}
+  .scene-stage[data-layout^="batch2-four-person-depth-s16"] .stage-character:nth-child(3){left:36%;transform:scale(1.01) translateY(-2%)}
+  .scene-stage[data-layout^="batch2-four-person-depth-s16"] .stage-character:nth-child(4){left:54%;transform:scale(.94) translateY(-6%)}
+  .scene-stage[data-layout^="batch2-four-person-depth-s22"] .stage-character:nth-child(1){left:0;transform:scale(1.04)}
+  .scene-stage[data-layout^="batch2-four-person-depth-s22"] .stage-character:nth-child(2){left:18%;transform:scale(.93) translateY(-7%)}
+  .scene-stage[data-layout^="batch2-four-person-depth-s22"] .stage-character:nth-child(3){left:36%;transform:scale(1.02) translateY(-2%)}
+  .scene-stage[data-layout^="batch2-four-person-depth-s22"] .stage-character:nth-child(4){left:54%;transform:scale(.93) translateY(-7%)}
+  .scene-stage[data-layout^="batch2-four-person-depth-s58"] .stage-character:nth-child(1){left:0;transform:scale(1.03)}
+  .scene-stage[data-layout^="batch2-four-person-depth-s58"] .stage-character:nth-child(2){left:18%;transform:scale(.94) translateY(-6%)}
+  .scene-stage[data-layout^="batch2-four-person-depth-s58"] .stage-character:nth-child(3){left:36%;transform:scale(1.01) translateY(-2%)}
+  .scene-stage[data-layout^="batch2-four-person-depth-s58"] .stage-character:nth-child(4){left:54%;transform:scale(.94) translateY(-6%)}
+}
+.scene-stage[data-layout^="batch2-pair-depth-s15-"]{inset:4% 8% 21%;display:block;overflow:visible}
+.scene-stage[data-layout^="batch2-pair-depth-s15-"] .stage-character{position:absolute;bottom:0;width:min(31vw,400px);height:100%;min-width:0;margin:0;transform-origin:center bottom}
+.scene-stage[data-layout^="batch2-pair-depth-s15-"] .stage-character img{width:100%;height:100%;object-position:center bottom}
+.scene-stage[data-layout="batch2-pair-depth-s15-opening"] .stage-character:nth-child(1),
+.scene-stage[data-layout="batch2-pair-depth-s15-lagoon"] .stage-character:nth-child(1){left:20%;transform:scale(1.03);z-index:3}
+.scene-stage[data-layout="batch2-pair-depth-s15-opening"] .stage-character:nth-child(2),
+.scene-stage[data-layout="batch2-pair-depth-s15-lagoon"] .stage-character:nth-child(2){left:47%;transform:scale(.97) translateY(-4%);z-index:2}
+@media(max-width:680px){
+  .scene-stage[data-layout^="batch2-pair-depth-s15-"]{inset:10% -6% 34%;}
+  .scene-stage[data-layout^="batch2-pair-depth-s15-"] .stage-character{width:68vw;height:108%;}
+  .scene-stage[data-layout^="batch2-pair-depth-s15-"] .stage-character:nth-child(1){left:2%;transform:scale(1.03)}
+  .scene-stage[data-layout^="batch2-pair-depth-s15-"] .stage-character:nth-child(2){left:40%;transform:scale(.96) translateY(-5%)}
+}
+
 /* First bounded REFRAME_STAGE batch: the four authored travelers stay visible,
    but occupy a shallow depth arc instead of four equal-width columns. The
    selector is opt-in per visual beat; ordinary staging keeps its existing
