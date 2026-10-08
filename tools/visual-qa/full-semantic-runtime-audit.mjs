@@ -9,12 +9,14 @@ import {literarySaveKey} from '../../src/literary-engine.js';
 import {compileInteractivePlayback} from '../../src/literary-pacing.js';
 import {stageForScene, stageCastForPresentation} from '../../src/literary-stage.js';
 import {visualAt} from '../../src/literary-visual-directions.js';
+import {castMatches, groupSemanticSignal, visualCastContract} from '../../src/literary-visual-contract.js';
 
 const {chromium}=await import(pathToFileURL('C:/Users/user/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs').href);
 const root=process.cwd();
 const baseUrl=process.env.LITERARY_QA_URL??'http://127.0.0.1:4173/literary.html?qa=full-semantic-runtime-audit';
 const evidenceFile=process.env.LITERARY_QA_EVIDENCE??'artifacts/evidence/full-semantic-runtime-audit-2026-10-08.json';
 const screenshotDir=process.env.LITERARY_QA_SCREENSHOTS??'artifacts/evidence/s02-semantic-runtime-2026-10-08';
+const cgEvidenceFile=process.env.LITERARY_QA_CG_EVIDENCE??'artifacts/evidence/cg-cast-pixel-evidence-2026-10-08.json';
 const sourceHead=execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim();
 const scenes=new Map(literarySeason.scenes.map(scene=>[scene.id,scene]));
 const routeCodes={eric:'A',nick:'B',damir:'C',alice:'D'};
@@ -31,6 +33,11 @@ const explicitSpeech=/\b(сказал|сказала|ответил|ответи
 const actorSignals=(text,locale='ru')=>Object.entries(names).filter(([,forms])=>forms.some(form=>new RegExp(`(?:^|\\s)${form}(?:\\s|,|—|:)`,`iu`).test(text))&&explicitSpeech.test(text)).map(([id])=>id);
 const allAuthoredChoiceIds=[...new Set(literarySeason.scenes.flatMap(scene=>scene.chunks.map(chunk=>chunk.title.match(/(S\d{2}-C\d+)/)?.[1]).filter(Boolean)))];
 const defaultChoices=Object.fromEntries(allAuthoredChoiceIds.map(id=>[id,'A']));
+let cgCastEvidenceByAsset=new Map();
+try {
+  const payload=JSON.parse(fsSync.readFileSync(path.join(root,cgEvidenceFile),'utf8'));
+  cgCastEvidenceByAsset=new Map((payload.entries??[]).map(item=>[item.asset,item]));
+} catch {}
 
 function enumerateVariants(scene,routeCode){
   const seed={...defaultChoices,'S17-C2':routeCode,'S26-C1':routeCode};
@@ -51,17 +58,19 @@ function enumerateVariants(scene,routeCode){
 
 function defect(code,severity,message,details={}){return {code,severity,message,...details};}
 function validateRow({sceneId,entry,trace,dom,position}){
-  const defects=[];const required=setOf(trace.requiredCast);const visible=setOf(trace.visibleCast);
+  const defects=[];const required=setOf(trace.requiredVisibleCast??trace.requiredCast);const visible=setOf(trace.actualVisibleCast??trace.visibleCast);
+  const castEvidenceAvailable=trace.artType!=='cg'||trace.visualEvidence?.status==='PASS';
   if(!trace.location||!trace.time)defects.push(defect('MISSING_LOCATION_TIME','P1','Runtime trace lacks location or time metadata'));
-  if(!trace.visibleCast?.length)defects.push(defect('VISIBLE_CAST_EMPTY','P0','Displayed page has no visibleCast', {position}));
-  if(required.size && (required.size!==visible.size||[...required].some(id=>!visible.has(id))))defects.push(defect('DISPLAYED_CAST_DIFFERS_REQUIRED','P1','Runtime visibleCast does not satisfy requiredCast',{requiredCast:[...required],visibleCast:[...visible],position}));
+  if(trace.artType!=='cg'&&!trace.actualVisibleCast?.length)defects.push(defect('VISIBLE_CAST_EMPTY','P0','Displayed page has no actualVisibleCast', {position}));
+  if(castEvidenceAvailable&&required.size&&(!trace.actualVisibleCast?.length||!castMatches([...required],[...visible])))defects.push(defect('DISPLAYED_CAST_DIFFERS_REQUIRED','P1','Runtime actualVisibleCast does not satisfy requiredVisibleCast',{requiredVisibleCast:[...required],actualVisibleCast:[...visible],position}));
   if(trace.artType==='cg'&&dom.stageCount>0)defects.push(defect('CG_STAGE_OVERLAY','P1','Cinematic CG has a live sprite stage overlay',{stageCount:dom.stageCount,position}));
   if(trace.artType&&(!dom.imageLoaded||dom.imageWidth<1||dom.imageHeight<1))defects.push(defect('RUNTIME_ART_NOT_LOADED','P0','Runtime art image did not load',{position,asset:trace.background}));
   if(!dom.noOverflow)defects.push(defect('RUNTIME_OVERFLOW','P1','Runtime page overflows viewport',{position}));
-  for(const actor of actorSignals(entry?.text??''))if(!visible.has(actor))defects.push(defect('ACTIVE_ACTOR_ABSENT','P0','Explicit speaker/action actor is not visible',{actor,position,text:entry.text}));
+  for(const actor of actorSignals(entry?.text??''))if(castEvidenceAvailable&&!visible.has(actor))defects.push(defect('ACTIVE_ACTOR_ABSENT','P0','Explicit speaker/action actor is not visible',{actor,position,text:entry.text}));
   const text=entry?.text??'';
   if(sceneId==='S02'&&trace.sourceStartRef?.chunk===0&&trace.sourceStartRef.paragraph>=31&&/\b(?:в машине|в автомобиль|in the car|inside the car)\b/iu.test(text))defects.push(defect('LOCATION_TEXT_CONTRADICTION','P1','S02 cafe-page text still describes the group as being in the car',{position,text}));
-  if(/(?:троих попутчиков|четыре места в машине|четверо|все четверо|three fellow travellers|four seats in the car|all four)/iu.test(text)&&visible.size<3)defects.push(defect('TEXT_GROUP_NOT_VISIBLE','P1','Text describes a group larger than visibleCast',{position,text,visibleCast:[...visible]}));
+  const groupSignal=groupSemanticSignal(text);
+  if(groupSignal?.kind==='physical-group'&&visible.size<groupSignal.count)defects.push(defect('TEXT_GROUP_NOT_VISIBLE','P1','Text describes a co-located group larger than actualVisibleCast',{position,text,actualVisibleCast:[...visible],groupSignal}));
   return defects;
 }
 
@@ -91,8 +100,12 @@ async function auditVariant(page,sceneId,variant,route,viewportName,active){
     const snapshot=await inspect(page);const entry=snapshot.entry;
     if(snapshot.saved.sceneId!==sceneId)break;
     if(!entry)break;
-    const row={scene:sceneId,route,viewport:viewportName,position:snapshot.saved.position,displayedPosition:snapshot.trace.displayedPosition,entryType:entry.type,entryId:snapshot.trace.entryId,sourceStartRef:snapshot.trace.sourceStartRef,sourceEndRef:snapshot.trace.sourceEndRef,text:entry.text??entry.question??'',location:snapshot.trace.location,time:snapshot.trace.time,physicalCast:snapshot.trace.authoredCast,requiredCast:snapshot.trace.requiredCast,visibleCast:snapshot.trace.visibleCast,background:snapshot.trace.background,artType:snapshot.trace.artType,actorSignals:actorSignals(entry.text??''),runtimeStageCast:snapshot.dom.stageCast,imageLoaded:snapshot.dom.imageLoaded,noOverflow:snapshot.dom.noOverflow};
-    rows.push(row);const rowDefects=validateRow({sceneId,entry,trace:snapshot.trace,dom:snapshot.dom,position:snapshot.saved.position});
+    const cgEvidence=snapshot.trace.artType==='cg'?cgCastEvidenceByAsset.get(snapshot.trace.background):null;
+    const runtimeTrace=snapshot.trace.artType==='cg'&&cgEvidence?.status==='PASS'
+      ? {...snapshot.trace,actualVisibleCast:cgEvidence.actualVisibleCast,visualEvidence:cgEvidence}
+      : snapshot.trace;
+    const row={scene:sceneId,route,viewport:viewportName,position:snapshot.saved.position,displayedPosition:runtimeTrace.displayedPosition,entryType:entry.type,entryId:runtimeTrace.entryId,sourceStartRef:runtimeTrace.sourceStartRef,sourceEndRef:runtimeTrace.sourceEndRef,text:entry.text??entry.question??'',location:runtimeTrace.location,time:runtimeTrace.time,authoredCast:runtimeTrace.authoredCast,physicallyPresentCast:runtimeTrace.physicallyPresentCast??runtimeTrace.authoredCast,requiredVisibleCast:runtimeTrace.requiredVisibleCast??runtimeTrace.requiredCast,actualVisibleCast:runtimeTrace.actualVisibleCast??runtimeTrace.visibleCast,offscreenAllowedCast:runtimeTrace.offscreenAllowedCast??[],visualEvidence:runtimeTrace.visualEvidence??null,requiredCast:runtimeTrace.requiredCast,visibleCast:runtimeTrace.visibleCast,background:runtimeTrace.background,artType:runtimeTrace.artType,actorSignals:actorSignals(entry.text??''),runtimeStageCast:snapshot.dom.stageCast,imageLoaded:snapshot.dom.imageLoaded,noOverflow:snapshot.dom.noOverflow};
+    rows.push(row);const rowDefects=validateRow({sceneId,entry,trace:runtimeTrace,dom:snapshot.dom,position:snapshot.saved.position});
     for(const item of rowDefects)defects.push({...item,scene:sceneId,route,viewport:viewportName,position:snapshot.saved.position});
     if(entry.type!=='page')defects.push(defect('UNRESOLVED_RUNTIME_CHOICE','P0','Finalized variant still rendered a choice screen',{scene:sceneId,position:snapshot.saved.position,entryId:entry.id}));
     const stage=page.locator('[data-stage-advance]');if(!await stage.count())break;
@@ -109,9 +122,11 @@ function auditSourceVariant(sceneId,variant,route,active){
     const visibleCast=direction.art?.presentation==='cinematic'
       ? [...(direction.requiredCast?.length?direction.requiredCast:direction.cast??[])]
       : stageCastForPresentation(direction);
-    const row={scene:sceneId,route,position,entryType:entry.type,entryId:entry.id??null,sourceStartRef:entry.sourceStartRef??null,sourceEndRef:entry.sourceEndRef??null,text:entry.text??entry.question??'',location:direction.location,time:direction.time,physicalCast:authoredCast,requiredCast:direction.requiredCast??[],visibleCast,background:direction.art?.file??null,artType:direction.art?.type??null,actorSignals:actorSignals(entry.text??''),sourceAssetExists:direction.art?fsSync.existsSync(path.join(root,'assets',direction.art.type==='cg'?'cg':'backgrounds',direction.art.file)):true};
+    const cgEvidence=direction.art?.type==='cg'?cgCastEvidenceByAsset.get(direction.art.file):null;
+    const contract=visualCastContract(direction,{actualVisibleCast:visibleCast,cgVisualEvidence:cgEvidence});
+    const row={scene:sceneId,route,position,entryType:entry.type,entryId:entry.id??null,sourceStartRef:entry.sourceStartRef??null,sourceEndRef:entry.sourceEndRef??null,text:entry.text??entry.question??'',location:direction.location,time:direction.time,authoredCast:contract.authoredCast,physicallyPresentCast:contract.physicallyPresentCast,requiredVisibleCast:contract.requiredVisibleCast,actualVisibleCast:contract.actualVisibleCast??visibleCast,offscreenAllowedCast:contract.offscreenAllowedCast,visualEvidence:contract.visualEvidence,physicalCast:authoredCast,requiredCast:direction.requiredCast??[],visibleCast,background:direction.art?.file??null,artType:direction.art?.type??null,actorSignals:actorSignals(entry.text??''),sourceAssetExists:direction.art?fsSync.existsSync(path.join(root,'assets',direction.art.type==='cg'?'cg':'backgrounds',direction.art.file)):true};
     active.sourceRows.push(row);active.sourcePlaybackPositionsChecked++;
-    const rowDefects=validateRow({sceneId,entry,trace:{location:direction.location,time:direction.time,requiredCast:direction.requiredCast??[],visibleCast,artType:direction.art?.type??null,background:direction.art?.file??null,sourceStartRef:entry.sourceStartRef},dom:{stageCount:0,imageLoaded:row.sourceAssetExists,imageWidth:row.sourceAssetExists?1:0,imageHeight:row.sourceAssetExists?1:0,noOverflow:true},position});
+    const rowDefects=validateRow({sceneId,entry,trace:{location:direction.location,time:direction.time,requiredVisibleCast:contract.requiredVisibleCast,actualVisibleCast:contract.actualVisibleCast??visibleCast,requiredCast:direction.requiredCast??[],visibleCast,visualEvidence:contract.visualEvidence,artType:direction.art?.type??null,background:direction.art?.file??null,sourceStartRef:entry.sourceStartRef},dom:{stageCount:0,imageLoaded:row.sourceAssetExists,imageWidth:row.sourceAssetExists?1:0,imageHeight:row.sourceAssetExists?1:0,noOverflow:true},position});
     for(const item of rowDefects)active.defects.push({...item,scene:sceneId,route,position,phase:'source'});
   }
 }

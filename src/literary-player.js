@@ -4,6 +4,7 @@ import { initYandexPlatform } from './yandex-sdk.js';
 import { createCloudSaveQueue } from './save-state.js';
 import { stageForScene, stageCastForPresentation } from './literary-stage.js';
 import { visualAt, visualEntryForPosition } from './literary-visual-directions.js';
+import { visualCastContract } from './literary-visual-contract.js';
 import { compileInteractivePlayback } from './literary-pacing.js';
 import { applyLiteraryLocale, createTranslator, validateLiteraryInteractionLocale } from './localization.js';
 import { literaryLocaleBundles } from './literary-localization-bundle.js';
@@ -586,9 +587,10 @@ window.__LITERARY_QA__={
     const authoredCast=stageForScene(scene.id,reader.choices).cast;
     const direction=visualAt(scene.id,visualEntry,reader.choices,authoredCast);
     const visibleCast=visibleCastForDirection(direction);
+    const castContract=visualCastContract(direction,{actualVisibleCast:visibleCast});
     const text=entry?.text??entry?.question??'';
     let hash=2166136261;for(const char of text)hash=Math.imul(hash^char.charCodeAt(0),16777619);
-    return {displayedPosition:`${reader.position+1}/${flow.length}`,sceneId:scene.id,entryId:entry?.id??null,entryType:entry?.type??null,sourceStartRef:entry?.sourceStartRef??null,sourceEndRef:entry?.sourceEndRef??null,dialogueHash:(hash>>>0).toString(16),speaker:null,platformMode:platform?.mode??'booting',revision:reader.revision,choiceState:structuredClone(reader.choices),location:direction.location,time:direction.time,visualBeat:direction.beatId,background:direction.art?.file??null,artType:direction.art?.type??null,authoredCast,requiredCast:direction.requiredCast??[],visibleCast,cast:direction.cast,stage:stageForScene(scene.id,reader.choices)};
+    return {displayedPosition:`${reader.position+1}/${flow.length}`,sceneId:scene.id,entryId:entry?.id??null,entryType:entry?.type??null,sourceStartRef:entry?.sourceStartRef??null,sourceEndRef:entry?.sourceEndRef??null,dialogueHash:(hash>>>0).toString(16),speaker:null,platformMode:platform?.mode??'booting',revision:reader.revision,choiceState:structuredClone(reader.choices),location:direction.location,time:direction.time,visualBeat:direction.beatId,background:direction.art?.file??null,artType:direction.art?.type??null,authoredCast:castContract.authoredCast,physicallyPresentCast:castContract.physicallyPresentCast,requiredVisibleCast:castContract.requiredVisibleCast,actualVisibleCast:castContract.actualVisibleCast,offscreenAllowedCast:castContract.offscreenAllowedCast,visualEvidence:castContract.visualEvidence,requiredCast:direction.requiredCast??[],visibleCast,cast:direction.cast,stage:stageForScene(scene.id,reader.choices)};
   },
   // QA methods are strictly read-only; preview and the old game have separate state keys.
 };

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "sourceHead": "9e8ddf4e997f3457dfe1eed74805563f74ff8121",
+  "generatedAt": "2026-10-08T14:03:00Z",
+  "method": "current-runtime desktop screenshot plus raw current asset pixels; character presence inspected from supplied pixels, never inferred from DOM sprite count",
+  "entries": [
+    {
+      "scene": "S21",
+      "cue": "s21-alice-hofn-room",
+      "asset": "s21-alice-hofn-room.webp",
+      "actualVisibleCast": ["alice"],
+      "status": "PASS",
+      "evidence": {
+        "runtimeScreenshot": "output/playwright/rendered-coverage-audit/S21-desktop.png",
+        "runtimeScreenshotSha256": "52df1e3bb2915e6741ad95decbc481e22fa1cc85e6969084c25b786291610638",
+        "runtimeScreenshotBytes": 1655516,
+        "runtimeViewport": "1920x900",
+        "rawAsset": "assets/cg/s21-alice-hofn-room.webp",
+        "rawAssetSha256": "54ccdf2a83c33345d7cd7b4f39ce1d0c3ff2fb6ac5b1d584c73bae25a0fa0b20",
+        "rawAssetDimensions": "1672x941"
+      }
+    },
+    {
+      "scene": "S23",
+      "cue": "s23-eric-harbor-plan",
+      "asset": "s23-eric-harbor-plan.webp",
+      "actualVisibleCast": ["alice", "eric"],
+      "status": "PASS",
+      "evidence": {
+        "runtimeScreenshot": "output/playwright/rendered-coverage-audit/S23-desktop.png",
+        "runtimeScreenshotSha256": "87a691fa19d766641964eacbd7fe8e2041d36dd6e28b960da3d9971d19189a31",
+        "runtimeScreenshotBytes": 2034433,
+        "runtimeViewport": "1920x900",
+        "rawAsset": "assets/cg/s23-eric-harbor-plan.webp",
+        "rawAssetSha256": "b4d23a5bb5e956505972450fd151838e12fcbe83b6fd8e785779d38673e6f9bf",
+        "rawAssetDimensions": "1672x941"
+      }
+    }
+  ]
+}

@@ -1,0 +1,6363 @@
+{
+  "generatedAt": "2026-10-08T13:43:46.823Z",
+  "head": "9e8ddf4e997f3457dfe1eed74805563f74ff8121",
+  "baseUrl": "http://127.0.0.1:4174/literary.html?qa=rendered-coverage-audit",
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1920,
+      "height": 900
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "scenes": [
+    {
+      "sceneId": "S01",
+      "targetIndex": 2,
+      "expected": "background/keflavik-airport-arrivals-v1.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/keflavik-airport-arrivals-v1.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "nick-arrives",
+        "mode": "environment",
+        "asset": "keflavik-airport-arrivals-v1.webp",
+        "desktopAsset": "keflavik-airport-arrivals-v1.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 2
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S01-desktop.png",
+      "screenshotSha256": "834a0b2237240a6a7adcf0e6c1318946e5f44625371ae46c354a6f5412447876",
+      "screenshotBytes": 1787656,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S01",
+      "targetIndex": 2,
+      "expected": "background/keflavik-airport-arrivals-v1.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/keflavik-airport-arrivals-v1.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "nick-arrives",
+        "mode": "environment",
+        "asset": "keflavik-airport-arrivals-v1.webp",
+        "desktopAsset": "keflavik-airport-arrivals-v1.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 2
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S01-mobile.png",
+      "screenshotSha256": "8cc3828967709a2fa34f354592d754fb31c90cf2294916aeea41569f739c9d39",
+      "screenshotBytes": 390212,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S02",
+      "targetIndex": 11,
+      "expected": "cg/s02-van-group-batch2.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s02-van-group-batch2.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "scene-start",
+        "mode": "cinematic",
+        "asset": "s02-van-group-batch2.webp",
+        "desktopAsset": "s02-van-group-batch2.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          940
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S02-desktop.png",
+      "screenshotSha256": "a845a8136d47903ba7a6bb2cf33652b0754ea77a3abc6ba785c85e744753e738",
+      "screenshotBytes": 1951128,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S02",
+      "targetIndex": 11,
+      "expected": "cg/s02-van-group-batch2-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s02-van-group-batch2-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "scene-start",
+        "mode": "cinematic",
+        "asset": "s02-van-group-batch2-portrait.webp",
+        "desktopAsset": "s02-van-group-batch2.webp",
+        "imageComplete": true,
+        "natural": [
+          853,
+          1844
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S02-mobile.png",
+      "screenshotSha256": "889e6c7fbf49ef76cc1c603ce500d534ad46ec4075ad6f180ef2c9b6e2c24969",
+      "screenshotBytes": 425283,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S65",
+      "targetIndex": 18,
+      "expected": "background/guesthouse-common-kitchen-evening.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/guesthouse-common-kitchen-evening.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "scene-start",
+        "mode": "environment",
+        "asset": "guesthouse-common-kitchen-evening.webp",
+        "desktopAsset": "guesthouse-common-kitchen-evening.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 2
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S65-desktop.png",
+      "screenshotSha256": "e29ac0445da85ff675ccf8c774305195510c23f3801defc7736019afec2c7c6c",
+      "screenshotBytes": 1692251,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S65",
+      "targetIndex": 18,
+      "expected": "background/guesthouse-common-kitchen-evening.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/guesthouse-common-kitchen-evening.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "scene-start",
+        "mode": "environment",
+        "asset": "guesthouse-common-kitchen-evening.webp",
+        "desktopAsset": "guesthouse-common-kitchen-evening.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 2
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S65-mobile.png",
+      "screenshotSha256": "5679190fc2b7663471e8a1c57827367cc069908c31bae32424e29c6fced615c2",
+      "screenshotBytes": 376953,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S03",
+      "targetIndex": 0,
+      "expected": "cg/s03-editor-call.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s03-editor-call.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "editor-call",
+        "mode": "cinematic",
+        "asset": "s03-editor-call.webp",
+        "desktopAsset": "s03-editor-call.webp",
+        "imageComplete": true,
+        "natural": [
+          1920,
+          900
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S03-desktop.png",
+      "screenshotSha256": "509d8ec5b330f191b446f2db626ea285ae36f6e0bb191fbbae3ce8aa5e30fde8",
+      "screenshotBytes": 1558957,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S03",
+      "targetIndex": 0,
+      "expected": "cg/s03-editor-call-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s03-editor-call-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "editor-call",
+        "mode": "cinematic",
+        "asset": "s03-editor-call-portrait.webp",
+        "desktopAsset": "s03-editor-call.webp",
+        "imageComplete": true,
+        "natural": [
+          941,
+          1672
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S03-mobile.png",
+      "screenshotSha256": "1169447faf6e9b3836add8d09cd7bb4b5a20c080cdeac26c1c7af68ef168f676",
+      "screenshotBytes": 423600,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S04",
+      "targetIndex": 2,
+      "expected": "background/thingvellir-master.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/thingvellir-master.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "thingvellir-trail",
+        "mode": "environment",
+        "asset": "thingvellir-master.webp",
+        "desktopAsset": "thingvellir-master.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 4
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S04-desktop.png",
+      "screenshotSha256": "c670840d1ab61439c02d31f50ff1144b0df2b693743608042fd04345125b96ea",
+      "screenshotBytes": 2025233,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S04",
+      "targetIndex": 2,
+      "expected": "background/thingvellir-master.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/thingvellir-master.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "thingvellir-trail",
+        "mode": "environment",
+        "asset": "thingvellir-master.webp",
+        "desktopAsset": "thingvellir-master.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 4
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S04-mobile.png",
+      "screenshotSha256": "fa0241220cc9fda6d47a3c744dd1b00605ad1bb45236702c663df92bebf24e24",
+      "screenshotBytes": 392924,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S05",
+      "targetIndex": 16,
+      "expected": "background/south-coast-road-rain.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/south-coast-road-rain.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "scene-start",
+        "mode": "environment",
+        "asset": "south-coast-road-rain.webp",
+        "desktopAsset": "south-coast-road-rain.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 4
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S05-desktop.png",
+      "screenshotSha256": "e9476bed7770cd21a738ccf1dd7419fe285b1844abbc188a30604eae848fc137",
+      "screenshotBytes": 1601071,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S05",
+      "targetIndex": 16,
+      "expected": "background/south-coast-road-rain.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/south-coast-road-rain.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "scene-start",
+        "mode": "environment",
+        "asset": "south-coast-road-rain.webp",
+        "desktopAsset": "south-coast-road-rain.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 4
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S05-mobile.png",
+      "screenshotSha256": "cdbea929e7f22401b47ec3c435ca10b798830c6017f559bf6a48654e3c9552e3",
+      "screenshotBytes": 310250,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S06",
+      "targetIndex": 9,
+      "expected": "cg/s06-hveragerdi-eric-alice.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s06-hveragerdi-eric-alice.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s06-eric-alice-stream",
+        "mode": "cinematic",
+        "asset": "s06-hveragerdi-eric-alice.webp",
+        "desktopAsset": "s06-hveragerdi-eric-alice.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S06-desktop.png",
+      "screenshotSha256": "b07896508669696bbdcf05ff58b11a94dd424289f20b314b4a7e5eddbee4227e",
+      "screenshotBytes": 2042492,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S06",
+      "targetIndex": 9,
+      "expected": "cg/s06-hveragerdi-eric-alice-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s06-hveragerdi-eric-alice-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s06-eric-alice-stream",
+        "mode": "cinematic",
+        "asset": "s06-hveragerdi-eric-alice-portrait.webp",
+        "desktopAsset": "s06-hveragerdi-eric-alice.webp",
+        "imageComplete": true,
+        "natural": [
+          941,
+          1672
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S06-mobile.png",
+      "screenshotSha256": "eff101b68433076761470e50ac711966cbe3bd7eac83506aab7b2354fe1815ef",
+      "screenshotBytes": 468728,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S07",
+      "targetIndex": 3,
+      "expected": "cg/s07-kitchen-pasta.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s07-kitchen-pasta.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s07-kitchen-pasta",
+        "mode": "cinematic",
+        "asset": "s07-kitchen-pasta.webp",
+        "desktopAsset": "s07-kitchen-pasta.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S07-desktop.png",
+      "screenshotSha256": "2f9f4e60d6b8d586119b7728c5e87e90648c3edbb8684a4b685639e34d8c7e5a",
+      "screenshotBytes": 2047530,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S07",
+      "targetIndex": 3,
+      "expected": "cg/s07-kitchen-pasta-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s07-kitchen-pasta-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s07-kitchen-pasta",
+        "mode": "cinematic",
+        "asset": "s07-kitchen-pasta-portrait.webp",
+        "desktopAsset": "s07-kitchen-pasta.webp",
+        "imageComplete": true,
+        "natural": [
+          941,
+          1672
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S07-mobile.png",
+      "screenshotSha256": "9b6ed436a589ff5b90554bc1db694b5079efe3bd9a085f6dac442ce474fcc222",
+      "screenshotBytes": 467228,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S08",
+      "targetIndex": 2,
+      "expected": "cg/s08-guesthouse-strap.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s08-guesthouse-strap.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s08-guesthouse-strap",
+        "mode": "cinematic",
+        "asset": "s08-guesthouse-strap.webp",
+        "desktopAsset": "s08-guesthouse-strap.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S08-desktop.png",
+      "screenshotSha256": "4dfc612a1c30c811672a68c018e478743d9785482cca366ae99bcf116363957b",
+      "screenshotBytes": 1723512,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S08",
+      "targetIndex": 2,
+      "expected": "cg/s08-guesthouse-strap-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s08-guesthouse-strap-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s08-guesthouse-strap",
+        "mode": "cinematic",
+        "asset": "s08-guesthouse-strap-portrait.webp",
+        "desktopAsset": "s08-guesthouse-strap.webp",
+        "imageComplete": true,
+        "natural": [
+          941,
+          1672
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S08-mobile.png",
+      "screenshotSha256": "74ed8c3afc6dbc057f52056433992c50e1874b5dca6f1ac4791c078c2a3b20a7",
+      "screenshotBytes": 441161,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S66",
+      "targetIndex": 21,
+      "expected": "background/hveragerdi-greenhouse-cafe.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/hveragerdi-greenhouse-cafe.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "scene-start",
+        "mode": "environment",
+        "asset": "hveragerdi-greenhouse-cafe.webp",
+        "desktopAsset": "hveragerdi-greenhouse-cafe.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 2
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S66-desktop.png",
+      "screenshotSha256": "40a721f4a06b5dbace417d567b486b7b1dd19183c9a0bb221e6376bc2eb9ae37",
+      "screenshotBytes": 2197260,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S66",
+      "targetIndex": 21,
+      "expected": "background/hveragerdi-greenhouse-cafe.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/hveragerdi-greenhouse-cafe.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "scene-start",
+        "mode": "environment",
+        "asset": "hveragerdi-greenhouse-cafe.webp",
+        "desktopAsset": "hveragerdi-greenhouse-cafe.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 2
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S66-mobile.png",
+      "screenshotSha256": "c2bef7ffdc5de98b1b612f8be7286dcc1f7f65b8a2df54c887c518afee8ad15b",
+      "screenshotBytes": 465153,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S09",
+      "targetIndex": 5,
+      "expected": "background/skogafoss-master.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/skogafoss-master.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "skogafoss-trail",
+        "mode": "environment",
+        "asset": "skogafoss-master.webp",
+        "desktopAsset": "skogafoss-master.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 4
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S09-desktop.png",
+      "screenshotSha256": "02afecd6e2886a73bf62bcda8db95230fb301e37c952b0fe3a45b2035fc50b68",
+      "screenshotBytes": 2078295,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S09",
+      "targetIndex": 5,
+      "expected": "background/skogafoss-master.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/skogafoss-master.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "skogafoss-trail",
+        "mode": "environment",
+        "asset": "skogafoss-master.webp",
+        "desktopAsset": "skogafoss-master.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 4
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S09-mobile.png",
+      "screenshotSha256": "1a63867789a502aec4ccbb47002874f9fc73d24a4b28ed2f954e888dedafa4ec",
+      "screenshotBytes": 407462,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S10",
+      "targetIndex": 0,
+      "expected": "cg/s10-vik-road-song.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s10-vik-road-song.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s10-vik-road-song",
+        "mode": "cinematic",
+        "asset": "s10-vik-road-song.webp",
+        "desktopAsset": "s10-vik-road-song.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S10-desktop.png",
+      "screenshotSha256": "f875dcbf7905e431ad0cc8921dc8e2724b7386576897ee4e6ec578df012f5277",
+      "screenshotBytes": 1892569,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S10",
+      "targetIndex": 0,
+      "expected": "cg/s10-vik-road-song-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s10-vik-road-song-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s10-vik-road-song",
+        "mode": "cinematic",
+        "asset": "s10-vik-road-song-portrait.webp",
+        "desktopAsset": "s10-vik-road-song.webp",
+        "imageComplete": true,
+        "natural": [
+          941,
+          1672
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S10-mobile.png",
+      "screenshotSha256": "bfe9691299b35f962edb5f04b71912ee120a8cbd719b1f8c725b504a57d21fcb",
+      "screenshotBytes": 438174,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S11",
+      "targetIndex": 11,
+      "expected": "background/reynisfjara-master.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/reynisfjara-master.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "scene-start",
+        "mode": "environment",
+        "asset": "reynisfjara-master.webp",
+        "desktopAsset": "reynisfjara-master.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 4
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S11-desktop.png",
+      "screenshotSha256": "f9869371061c130f5eca420696d26008d64841c4ce99014fd2948bcb70e0940a",
+      "screenshotBytes": 1840224,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S11",
+      "targetIndex": 11,
+      "expected": "background/reynisfjara-master.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/reynisfjara-master.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "scene-start",
+        "mode": "environment",
+        "asset": "reynisfjara-master.webp",
+        "desktopAsset": "reynisfjara-master.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 4
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S11-mobile.png",
+      "screenshotSha256": "186f00f3d5b621b81e26bce3c7062d205f5580cffa1359474117a9b86dd905cf",
+      "screenshotBytes": 336895,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S12",
+      "targetIndex": 0,
+      "expected": "cg/s12-vik-cafe-damir.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s12-vik-cafe-damir.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s12-vik-cafe-damir",
+        "mode": "cinematic",
+        "asset": "s12-vik-cafe-damir.webp",
+        "desktopAsset": "s12-vik-cafe-damir.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S12-desktop.png",
+      "screenshotSha256": "561675d4b0551bf593db618d4f8f2e6998c766c0a8dfa67ba2c7c44618a5f499",
+      "screenshotBytes": 1995752,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S12",
+      "targetIndex": 0,
+      "expected": "cg/s12-vik-cafe-damir-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s12-vik-cafe-damir-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s12-vik-cafe-damir",
+        "mode": "cinematic",
+        "asset": "s12-vik-cafe-damir-portrait.webp",
+        "desktopAsset": "s12-vik-cafe-damir.webp",
+        "imageComplete": true,
+        "natural": [
+          941,
+          1672
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S12-mobile.png",
+      "screenshotSha256": "1963483b2cceb3ba9cef82fd56ccc754d44a9e9791580a4f182cba0dacffcb62",
+      "screenshotBytes": 447225,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S13",
+      "targetIndex": 4,
+      "expected": "background/s13-skaftafell-visitor-parking.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/s13-skaftafell-visitor-parking.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "skaftafell-parking",
+        "mode": "environment",
+        "asset": "s13-skaftafell-visitor-parking.webp",
+        "desktopAsset": "s13-skaftafell-visitor-parking.webp",
+        "imageComplete": true,
+        "natural": [
+          1920,
+          900
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 4
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S13-desktop.png",
+      "screenshotSha256": "18a020c6a74de6f91b18a68a5063575065842bf83d174e6557501dedf1db7ba5",
+      "screenshotBytes": 1868539,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S13",
+      "targetIndex": 4,
+      "expected": "background/s13-skaftafell-visitor-parking.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/s13-skaftafell-visitor-parking.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "skaftafell-parking",
+        "mode": "environment",
+        "asset": "s13-skaftafell-visitor-parking.webp",
+        "desktopAsset": "s13-skaftafell-visitor-parking.webp",
+        "imageComplete": true,
+        "natural": [
+          1920,
+          900
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 4
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S13-mobile.png",
+      "screenshotSha256": "989ae954534a7b4fcb79706f7b8f272cd520e8e0ba2a37d1fb68ee2152f4daee",
+      "screenshotBytes": 366913,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S14",
+      "targetIndex": 0,
+      "expected": "cg/s14-skaftafell-pace.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s14-skaftafell-pace.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s14-skaftafell-pace",
+        "mode": "cinematic",
+        "asset": "s14-skaftafell-pace.webp",
+        "desktopAsset": "s14-skaftafell-pace.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S14-desktop.png",
+      "screenshotSha256": "2cb3d4a28093c6c74e21a323063920db1e2987c5bbde6265a1f15c8594d50214",
+      "screenshotBytes": 2096444,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S14",
+      "targetIndex": 0,
+      "expected": "cg/s14-skaftafell-pace-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s14-skaftafell-pace-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s14-skaftafell-pace",
+        "mode": "cinematic",
+        "asset": "s14-skaftafell-pace-portrait.webp",
+        "desktopAsset": "s14-skaftafell-pace.webp",
+        "imageComplete": true,
+        "natural": [
+          941,
+          1672
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S14-mobile.png",
+      "screenshotSha256": "1856f58693274cb5525d8e461341e5d54501a14d435254bc458462cac118388f",
+      "screenshotBytes": 488483,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S15",
+      "targetIndex": 4,
+      "expected": "background/jokulsarlon-master.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/jokulsarlon-master.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "jokulsarlon-lagoon",
+        "mode": "environment",
+        "asset": "jokulsarlon-master.webp",
+        "desktopAsset": "jokulsarlon-master.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 2
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S15-desktop.png",
+      "screenshotSha256": "eb6460a5a491ea9474ac4399a1945ce9c85e6c95a5a9ec60be73713c09aadfa2",
+      "screenshotBytes": 1819404,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S15",
+      "targetIndex": 4,
+      "expected": "background/jokulsarlon-master.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/jokulsarlon-master.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "jokulsarlon-lagoon",
+        "mode": "environment",
+        "asset": "jokulsarlon-master.webp",
+        "desktopAsset": "jokulsarlon-master.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 2
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S15-mobile.png",
+      "screenshotSha256": "38f5bab445bd905c8620005fcc1f6d884d23fcdc4c5c952d3d0dbcff891cc4e4",
+      "screenshotBytes": 387497,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S16",
+      "targetIndex": 1,
+      "expected": "cg/s16-guesthouse-help.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s16-guesthouse-help.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s16-guesthouse-help",
+        "mode": "cinematic",
+        "asset": "s16-guesthouse-help.webp",
+        "desktopAsset": "s16-guesthouse-help.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S16-desktop.png",
+      "screenshotSha256": "1a76e0c9b8a749dcf330020132f162af11eaf20c2caf190dee5c51dd22e9b20e",
+      "screenshotBytes": 1874380,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S16",
+      "targetIndex": 1,
+      "expected": "cg/s16-guesthouse-help-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s16-guesthouse-help-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s16-guesthouse-help",
+        "mode": "cinematic",
+        "asset": "s16-guesthouse-help-portrait.webp",
+        "desktopAsset": "s16-guesthouse-help.webp",
+        "imageComplete": true,
+        "natural": [
+          981,
+          1602
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S16-mobile.png",
+      "screenshotSha256": "9cfb32b5b04e7846946d887b4b163a10ac8d419e647bc28c4af24edf1639d51e",
+      "screenshotBytes": 404068,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S17",
+      "targetIndex": 0,
+      "expected": "cg/s17-hofn-guesthouse.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s17-hofn-guesthouse.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s17-hofn-guesthouse",
+        "mode": "cinematic",
+        "asset": "s17-hofn-guesthouse.webp",
+        "desktopAsset": "s17-hofn-guesthouse.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S17-desktop.png",
+      "screenshotSha256": "15d87a621823a23eff9de02a218a65e084c780ec26a903c6cc7bbf499c3045bc",
+      "screenshotBytes": 1996226,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S17",
+      "targetIndex": 0,
+      "expected": "cg/s17-hofn-guesthouse-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s17-hofn-guesthouse-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s17-hofn-guesthouse",
+        "mode": "cinematic",
+        "asset": "s17-hofn-guesthouse-portrait.webp",
+        "desktopAsset": "s17-hofn-guesthouse.webp",
+        "imageComplete": true,
+        "natural": [
+          941,
+          1672
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S17-mobile.png",
+      "screenshotSha256": "90c379e992a9908565372ac87b0772577834e92dcb4e0d4ed771df315fd4f7d7",
+      "screenshotBytes": 460579,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S18",
+      "targetIndex": 3,
+      "expected": "background/s18-hofn-harbour.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/s18-hofn-harbour.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "hofn-lighthouse",
+        "mode": "environment",
+        "asset": "s18-hofn-harbour.webp",
+        "desktopAsset": "s18-hofn-harbour.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 2
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S18-desktop.png",
+      "screenshotSha256": "52e8d58f02d9ea2a855db6fde135e32d528759e93aa23ee8dcd1085ed69466d7",
+      "screenshotBytes": 1844786,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S18",
+      "targetIndex": 3,
+      "expected": "background/s18-hofn-harbour.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/s18-hofn-harbour.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "hofn-lighthouse",
+        "mode": "environment",
+        "asset": "s18-hofn-harbour.webp",
+        "desktopAsset": "s18-hofn-harbour.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 2
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S18-mobile.png",
+      "screenshotSha256": "593cd44029f5f537ef6615024f8fb6a420bb88934a8d4b35017469d7fa9f2816",
+      "screenshotBytes": 375099,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S19",
+      "targetIndex": 0,
+      "expected": "cg/s19-hofn-pool.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s19-hofn-pool.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s19-hofn-pool",
+        "mode": "cinematic",
+        "asset": "s19-hofn-pool.webp",
+        "desktopAsset": "s19-hofn-pool.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S19-desktop.png",
+      "screenshotSha256": "808cff17ce7234c5010bcaa9e135b4d35ab9a9569a76c8af8150e765b3451009",
+      "screenshotBytes": 1788742,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S19",
+      "targetIndex": 0,
+      "expected": "cg/s19-hofn-pool-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s19-hofn-pool-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s19-hofn-pool",
+        "mode": "cinematic",
+        "asset": "s19-hofn-pool-portrait.webp",
+        "desktopAsset": "s19-hofn-pool.webp",
+        "imageComplete": true,
+        "natural": [
+          941,
+          1672
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S19-mobile.png",
+      "screenshotSha256": "3c535fb998c6256a521be38d857cea47d5fcd81423aad069b9f062ac18beb57e",
+      "screenshotBytes": 411165,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S20",
+      "targetIndex": 0,
+      "expected": "cg/s20-hofn-damir-kitchen.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s20-hofn-damir-kitchen.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s20-hofn-damir-kitchen",
+        "mode": "cinematic",
+        "asset": "s20-hofn-damir-kitchen.webp",
+        "desktopAsset": "s20-hofn-damir-kitchen.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S20-desktop.png",
+      "screenshotSha256": "c7293375ec4d009d56580c46a1858549c5ea19a2a48ccbf6edd42bf47dac5202",
+      "screenshotBytes": 1928533,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S20",
+      "targetIndex": 0,
+      "expected": "cg/s20-hofn-damir-kitchen-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s20-hofn-damir-kitchen-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s20-hofn-damir-kitchen",
+        "mode": "cinematic",
+        "asset": "s20-hofn-damir-kitchen-portrait.webp",
+        "desktopAsset": "s20-hofn-damir-kitchen.webp",
+        "imageComplete": true,
+        "natural": [
+          941,
+          1672
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S20-mobile.png",
+      "screenshotSha256": "402492c690566e728d6a8de0e32e909096f0f14c189911a1087fd335be92f29f",
+      "screenshotBytes": 464926,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S21",
+      "targetIndex": 0,
+      "expected": "cg/s21-alice-hofn-room.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s21-alice-hofn-room.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s21-alice-hofn-room",
+        "mode": "cinematic",
+        "asset": "s21-alice-hofn-room.webp",
+        "desktopAsset": "s21-alice-hofn-room.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S21-desktop.png",
+      "screenshotSha256": "52df1e3bb2915e6741ad95decbc481e22fa1cc85e6969084c25b786291610638",
+      "screenshotBytes": 1655516,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S21",
+      "targetIndex": 0,
+      "expected": "cg/s21-alice-hofn-room-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s21-alice-hofn-room-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s21-alice-hofn-room",
+        "mode": "cinematic",
+        "asset": "s21-alice-hofn-room-portrait.webp",
+        "desktopAsset": "s21-alice-hofn-room.webp",
+        "imageComplete": true,
+        "natural": [
+          941,
+          1672
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S21-mobile.png",
+      "screenshotSha256": "5ca43d305f8ff83fa9d2f7ae25a6d2138bad8766fec0004a8c0a35bd1f488cc5",
+      "screenshotBytes": 395920,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S61",
+      "targetIndex": 0,
+      "expected": "background/s61-hofn-streets.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/s61-hofn-streets.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s61-hofn-streets",
+        "mode": "environment",
+        "asset": "s61-hofn-streets.webp",
+        "desktopAsset": "s61-hofn-streets.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 1
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S61-desktop.png",
+      "screenshotSha256": "2cb311dc95f58a183ed82e6d4f81c70d15f9737f6380eaffdb013c9eb639c3eb",
+      "screenshotBytes": 2265190,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S61",
+      "targetIndex": 0,
+      "expected": "background/s61-hofn-streets-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/s61-hofn-streets-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s61-hofn-streets",
+        "mode": "environment",
+        "asset": "s61-hofn-streets-portrait.webp",
+        "desktopAsset": "s61-hofn-streets.webp",
+        "imageComplete": true,
+        "natural": [
+          941,
+          1672
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 1
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S61-mobile.png",
+      "screenshotSha256": "2e6bc0285118e1a904aed195d7ad7186ec76c501471d9ea755d8a0665ce5e84d",
+      "screenshotBytes": 542725,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S22",
+      "targetIndex": 11,
+      "expected": "background/eastfjords-road-master.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/eastfjords-road-master.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "scene-start",
+        "mode": "environment",
+        "asset": "eastfjords-road-master.webp",
+        "desktopAsset": "eastfjords-road-master.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 4
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S22-desktop.png",
+      "screenshotSha256": "79ecbddd59643b9276c1b1dd94015f31c7c6f7fca90ee76805cd6622d5361b2b",
+      "screenshotBytes": 1816423,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S22",
+      "targetIndex": 11,
+      "expected": "background/eastfjords-road-master.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/eastfjords-road-master.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "scene-start",
+        "mode": "environment",
+        "asset": "eastfjords-road-master.webp",
+        "desktopAsset": "eastfjords-road-master.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 4
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S22-mobile.png",
+      "screenshotSha256": "d507a9200be4a3ca0dda513d8298a3145dacfe8671d98f5117b78d47bf25f328",
+      "screenshotBytes": 330388,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S23",
+      "targetIndex": 0,
+      "expected": "cg/s23-eric-harbor-plan.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s23-eric-harbor-plan.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s23-eric-harbor-plan",
+        "mode": "cinematic",
+        "asset": "s23-eric-harbor-plan.webp",
+        "desktopAsset": "s23-eric-harbor-plan.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S23-desktop.png",
+      "screenshotSha256": "87a691fa19d766641964eacbd7fe8e2041d36dd6e28b960da3d9971d19189a31",
+      "screenshotBytes": 2034433,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S23",
+      "targetIndex": 0,
+      "expected": "cg/s23-eric-harbor-plan-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s23-eric-harbor-plan-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s23-eric-harbor-plan",
+        "mode": "cinematic",
+        "asset": "s23-eric-harbor-plan-portrait.webp",
+        "desktopAsset": "s23-eric-harbor-plan.webp",
+        "imageComplete": true,
+        "natural": [
+          961,
+          1637
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S23-mobile.png",
+      "screenshotSha256": "6a4150b2ebbf1092ca258c7b8801f4cfd7bae453a0a178c9ca75d4c4069a72b3",
+      "screenshotBytes": 489754,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S24",
+      "targetIndex": 0,
+      "expected": "cg/s24-nick-pier-consent.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s24-nick-pier-consent.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s24-nick-pier-consent",
+        "mode": "cinematic",
+        "asset": "s24-nick-pier-consent.webp",
+        "desktopAsset": "s24-nick-pier-consent.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S24-desktop.png",
+      "screenshotSha256": "0945aa86f2180d8186bf44fd9efe023e90df081db551a5f74608890519057871",
+      "screenshotBytes": 1947670,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S24",
+      "targetIndex": 0,
+      "expected": "cg/s24-nick-pier-consent-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s24-nick-pier-consent-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s24-nick-pier-consent",
+        "mode": "cinematic",
+        "asset": "s24-nick-pier-consent-portrait.webp",
+        "desktopAsset": "s24-nick-pier-consent.webp",
+        "imageComplete": true,
+        "natural": [
+          962,
+          1635
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S24-mobile.png",
+      "screenshotSha256": "2b3032d11cd87f70dba65d203e2eb9cfe090533c494f517e222ec3386f52620b",
+      "screenshotBytes": 450560,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S25",
+      "targetIndex": 0,
+      "expected": "cg/s25-damir-clarity-talk.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s25-damir-clarity-talk.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s25-damir-clarity-talk",
+        "mode": "cinematic",
+        "asset": "s25-damir-clarity-talk.webp",
+        "desktopAsset": "s25-damir-clarity-talk.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S25-desktop.png",
+      "screenshotSha256": "ba5f3ae51b3be1d887161766834f81e846772a482bc1aa55f2a9e37c4cae739d",
+      "screenshotBytes": 1893905,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S25",
+      "targetIndex": 0,
+      "expected": "cg/s25-damir-clarity-talk-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s25-damir-clarity-talk-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s25-damir-clarity-talk",
+        "mode": "cinematic",
+        "asset": "s25-damir-clarity-talk-portrait.webp",
+        "desktopAsset": "s25-damir-clarity-talk.webp",
+        "imageComplete": true,
+        "natural": [
+          968,
+          1625
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S25-mobile.png",
+      "screenshotSha256": "40008fac5714048c2e6b82605d33da20c8d53c754567445b66a17a219efd3658",
+      "screenshotBytes": 455492,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S58",
+      "targetIndex": 7,
+      "expected": "background/guesthouse-common-kitchen-evening.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/guesthouse-common-kitchen-evening.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "scene-start",
+        "mode": "environment",
+        "asset": "guesthouse-common-kitchen-evening.webp",
+        "desktopAsset": "guesthouse-common-kitchen-evening.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 4
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S58-desktop.png",
+      "screenshotSha256": "ce1fe2e6330a19d3daabe30ca77a4413c4114c4c68ac96cd0f3da7bab46dd7ee",
+      "screenshotBytes": 1728087,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S58",
+      "targetIndex": 7,
+      "expected": "background/guesthouse-common-kitchen-evening.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/guesthouse-common-kitchen-evening.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "scene-start",
+        "mode": "environment",
+        "asset": "guesthouse-common-kitchen-evening.webp",
+        "desktopAsset": "guesthouse-common-kitchen-evening.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 4
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S58-mobile.png",
+      "screenshotSha256": "bfdcc5821e991fe57d7623bc361efe5d2e9354044997743a5bd301a2e5896224",
+      "screenshotBytes": 374062,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S26",
+      "targetIndex": 2,
+      "expected": "cg/s26-eastfjords-courtyard-group.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s26-eastfjords-courtyard-group.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "guesthouse-courtyard",
+        "mode": "cinematic",
+        "asset": "s26-eastfjords-courtyard-group.webp",
+        "desktopAsset": "s26-eastfjords-courtyard-group.webp",
+        "imageComplete": true,
+        "natural": [
+          1920,
+          900
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S26-desktop.png",
+      "screenshotSha256": "e2764ef4583d58caac58866c5963f70754873ba08a0dfd9bbe640729fa539f42",
+      "screenshotBytes": 1768941,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S26",
+      "targetIndex": 2,
+      "expected": "cg/s26-eastfjords-courtyard-group-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s26-eastfjords-courtyard-group-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "guesthouse-courtyard",
+        "mode": "cinematic",
+        "asset": "s26-eastfjords-courtyard-group-portrait.webp",
+        "desktopAsset": "s26-eastfjords-courtyard-group.webp",
+        "imageComplete": true,
+        "natural": [
+          940,
+          1672
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S26-mobile.png",
+      "screenshotSha256": "dbe24da89bf26dfbdfef200261eb99db4821a0978ad6524d54d58f1fed29ba08",
+      "screenshotBytes": 335552,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S27",
+      "targetIndex": 0,
+      "expected": "cg/s27-egilsstadir-boardwalk.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s27-egilsstadir-boardwalk.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s27-egilsstadir-boardwalk",
+        "mode": "cinematic",
+        "asset": "s27-egilsstadir-boardwalk.webp",
+        "desktopAsset": "s27-egilsstadir-boardwalk.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S27-desktop.png",
+      "screenshotSha256": "db2f9e6704d3e1123b828c728872eb1a33cc706213f262fef5ad937d9e1d81c1",
+      "screenshotBytes": 2036517,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S27",
+      "targetIndex": 0,
+      "expected": "cg/s27-egilsstadir-boardwalk-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s27-egilsstadir-boardwalk-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s27-egilsstadir-boardwalk",
+        "mode": "cinematic",
+        "asset": "s27-egilsstadir-boardwalk-portrait.webp",
+        "desktopAsset": "s27-egilsstadir-boardwalk.webp",
+        "imageComplete": true,
+        "natural": [
+          941,
+          1672
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S27-mobile.png",
+      "screenshotSha256": "01a9619aa2c7028f2f2c9386836bf7c09d1e33127dd8896cc53e41ea1073376f",
+      "screenshotBytes": 469240,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S59",
+      "targetIndex": 3,
+      "expected": "background/guesthouse-common-kitchen-evening.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/guesthouse-common-kitchen-evening.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "scene-start",
+        "mode": "environment",
+        "asset": "guesthouse-common-kitchen-evening.webp",
+        "desktopAsset": "guesthouse-common-kitchen-evening.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 2
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S59-desktop.png",
+      "screenshotSha256": "3a4c93d8a805e06911c9fb0210df78b3110a14b29dbf24404b28cc6c0eb2e531",
+      "screenshotBytes": 1719265,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S59",
+      "targetIndex": 3,
+      "expected": "background/guesthouse-common-kitchen-evening.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/guesthouse-common-kitchen-evening.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "scene-start",
+        "mode": "environment",
+        "asset": "guesthouse-common-kitchen-evening.webp",
+        "desktopAsset": "guesthouse-common-kitchen-evening.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 2
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S59-mobile.png",
+      "screenshotSha256": "e9845698abb244e2b93def2f9610b65724bb1746ce5f759731859131315e6634",
+      "screenshotBytes": 377546,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S28",
+      "targetIndex": 3,
+      "expected": "cg/s28-hverfjall-hood.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s28-hverfjall-hood.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s28-hverfjall-hood",
+        "mode": "cinematic",
+        "asset": "s28-hverfjall-hood.webp",
+        "desktopAsset": "s28-hverfjall-hood.webp",
+        "imageComplete": true,
+        "natural": [
+          1920,
+          900
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S28-desktop.png",
+      "screenshotSha256": "046a489f53dcd662c54b25f88cdeff97b168521a1c76d0df61cd89c6414089ee",
+      "screenshotBytes": 2043179,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S28",
+      "targetIndex": 3,
+      "expected": "cg/s28-hverfjall-hood-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s28-hverfjall-hood-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s28-hverfjall-hood",
+        "mode": "cinematic",
+        "asset": "s28-hverfjall-hood-portrait.webp",
+        "desktopAsset": "s28-hverfjall-hood.webp",
+        "imageComplete": true,
+        "natural": [
+          390,
+          844
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S28-mobile.png",
+      "screenshotSha256": "876b3047d83d49b7e757616379dacfc71e3c4172126e02b4524a939d1dd5f9d9",
+      "screenshotBytes": 463665,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S49",
+      "targetIndex": 3,
+      "expected": "cg/s49-reykjahlid-window-dance.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s49-reykjahlid-window-dance.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s49-reykjahlid-window-dance",
+        "mode": "cinematic",
+        "asset": "s49-reykjahlid-window-dance.webp",
+        "desktopAsset": "s49-reykjahlid-window-dance.webp",
+        "imageComplete": true,
+        "natural": [
+          1920,
+          900
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S49-desktop.png",
+      "screenshotSha256": "ba05bc505966dceacfd1af2fbb68b25cb8591b3d278b389e84bdca6a1ad9a632",
+      "screenshotBytes": 1925315,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S49",
+      "targetIndex": 3,
+      "expected": "cg/s49-reykjahlid-window-dance-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s49-reykjahlid-window-dance-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s49-reykjahlid-window-dance",
+        "mode": "cinematic",
+        "asset": "s49-reykjahlid-window-dance-portrait.webp",
+        "desktopAsset": "s49-reykjahlid-window-dance.webp",
+        "imageComplete": true,
+        "natural": [
+          390,
+          844
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S49-mobile.png",
+      "screenshotSha256": "e080c85287d60f55e1869d2755a5fbf0d351e5bd1f044ef60d1ac5ed035b195e",
+      "screenshotBytes": 455745,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S29",
+      "targetIndex": 0,
+      "expected": "cg/s29-nick-playback.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s29-nick-playback.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s29-nick-playback",
+        "mode": "cinematic",
+        "asset": "s29-nick-playback.webp",
+        "desktopAsset": "s29-nick-playback.webp",
+        "imageComplete": true,
+        "natural": [
+          1671,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S29-desktop.png",
+      "screenshotSha256": "537170d361ccff375a0e6e1c4aa20ddc411c695eaba4e09a5d93c077df643434",
+      "screenshotBytes": 1709874,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S29",
+      "targetIndex": 0,
+      "expected": "cg/s29-nick-playback-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s29-nick-playback-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s29-nick-playback",
+        "mode": "cinematic",
+        "asset": "s29-nick-playback-portrait.webp",
+        "desktopAsset": "s29-nick-playback.webp",
+        "imageComplete": true,
+        "natural": [
+          941,
+          1672
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S29-mobile.png",
+      "screenshotSha256": "7d1a8dc070adb5aa1188bbf290ee491cdcfc1727d0cc3f56c8bcb01ca50d3570",
+      "screenshotBytes": 447861,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S52",
+      "targetIndex": 3,
+      "expected": "cg/s52-glove-found.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s52-glove-found.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s52-glove-found",
+        "mode": "cinematic",
+        "asset": "s52-glove-found.webp",
+        "desktopAsset": "s52-glove-found.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S52-desktop.png",
+      "screenshotSha256": "28a28f5fe6604755829af4c1619eb8e9600f7e07d059a84a4ebb76267ff8f45c",
+      "screenshotBytes": 1939932,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S52",
+      "targetIndex": 3,
+      "expected": "cg/s52-glove-found-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s52-glove-found-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s52-glove-found",
+        "mode": "cinematic",
+        "asset": "s52-glove-found-portrait.webp",
+        "desktopAsset": "s52-glove-found.webp",
+        "imageComplete": true,
+        "natural": [
+          941,
+          1672
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S52-mobile.png",
+      "screenshotSha256": "b4f6f78501d1466c3a331ea2faeb5e46efc95176595c110985d30e34dfa7ca78",
+      "screenshotBytes": 466517,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S30",
+      "targetIndex": 4,
+      "expected": "background/small-icelandic-cafe-rain.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/small-icelandic-cafe-rain.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "scene-start",
+        "mode": "environment",
+        "asset": "small-icelandic-cafe-rain.webp",
+        "desktopAsset": "small-icelandic-cafe-rain.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 2
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S30-desktop.png",
+      "screenshotSha256": "0b9cc5d23a4e3a9b78e8e83bc57d6cb42aa3a9145e67959f68e8c58fd8c4f27d",
+      "screenshotBytes": 1581873,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S30",
+      "targetIndex": 4,
+      "expected": "background/small-icelandic-cafe-rain.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/small-icelandic-cafe-rain.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "scene-start",
+        "mode": "environment",
+        "asset": "small-icelandic-cafe-rain.webp",
+        "desktopAsset": "small-icelandic-cafe-rain.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 2
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S30-mobile.png",
+      "screenshotSha256": "a151353ae6ce5cb4e2a01eb7a5fdcbe846ac3a8d83d8e427b09f6307478f0c9f",
+      "screenshotBytes": 354320,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S55",
+      "targetIndex": 2,
+      "expected": "cg/s55-shum-first-step.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s55-shum-first-step.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s55-shum-first-step",
+        "mode": "cinematic",
+        "asset": "s55-shum-first-step.webp",
+        "desktopAsset": "s55-shum-first-step.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S55-desktop.png",
+      "screenshotSha256": "3d4ec8130c8a6d60182d07779a512e52074da435529bfcdd72d3892b8463ee99",
+      "screenshotBytes": 1963278,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S55",
+      "targetIndex": 2,
+      "expected": "cg/s55-shum-first-step-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s55-shum-first-step-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s55-shum-first-step",
+        "mode": "cinematic",
+        "asset": "s55-shum-first-step-portrait.webp",
+        "desktopAsset": "s55-shum-first-step.webp",
+        "imageComplete": true,
+        "natural": [
+          941,
+          1672
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S55-mobile.png",
+      "screenshotSha256": "bc884da306ddd9a59ba06962f743ab518e841456897f912eff1a72b930797f36",
+      "screenshotBytes": 484008,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S31",
+      "targetIndex": 0,
+      "expected": "cg/s31-alice-independent-evening.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s31-alice-independent-evening.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s31-alice-independent-evening",
+        "mode": "cinematic",
+        "asset": "s31-alice-independent-evening.webp",
+        "desktopAsset": "s31-alice-independent-evening.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S31-desktop.png",
+      "screenshotSha256": "6eddf584e0f315272b613581bd4307a9a24d7e66904ef1fdd54fdd201144ad11",
+      "screenshotBytes": 1773968,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S31",
+      "targetIndex": 0,
+      "expected": "cg/s31-alice-independent-evening-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s31-alice-independent-evening-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s31-alice-independent-evening",
+        "mode": "cinematic",
+        "asset": "s31-alice-independent-evening-portrait.webp",
+        "desktopAsset": "s31-alice-independent-evening.webp",
+        "imageComplete": true,
+        "natural": [
+          941,
+          1672
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S31-mobile.png",
+      "screenshotSha256": "90d6510a33d5a3fd7f28474bc95e97bfcd22f3ecfe734820ded651396ac3a636",
+      "screenshotBytes": 448900,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S62",
+      "targetIndex": 1,
+      "expected": "cg/s62-alice-bookstore-choice.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s62-alice-bookstore-choice.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s62-alice-bookstore-choice",
+        "mode": "cinematic",
+        "asset": "s62-alice-bookstore-choice.webp",
+        "desktopAsset": "s62-alice-bookstore-choice.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          940
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S62-desktop.png",
+      "screenshotSha256": "83cf23ccbe4f25a80434009b9334c6b1960169f6c4878822c429b23df6e19585",
+      "screenshotBytes": 1897142,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S62",
+      "targetIndex": 1,
+      "expected": "cg/s62-alice-bookstore-choice-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s62-alice-bookstore-choice-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s62-alice-bookstore-choice",
+        "mode": "cinematic",
+        "asset": "s62-alice-bookstore-choice-portrait.webp",
+        "desktopAsset": "s62-alice-bookstore-choice.webp",
+        "imageComplete": true,
+        "natural": [
+          940,
+          1672
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S62-mobile.png",
+      "screenshotSha256": "42a0da848c82c735e9b0647e8a9131e4f740d656097d2470ff2afc75e1b15f72",
+      "screenshotBytes": 481226,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S32",
+      "targetIndex": 0,
+      "expected": "cg/s32-eric-calendar-crossroads.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s32-eric-calendar-crossroads.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s32-eric-calendar-crossroads",
+        "mode": "cinematic",
+        "asset": "s32-eric-calendar-crossroads.webp",
+        "desktopAsset": "s32-eric-calendar-crossroads.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S32-desktop.png",
+      "screenshotSha256": "55c9fce2bef5756da5c0d2cb7777060958143de92a167dfc97ca3de14f7b31e5",
+      "screenshotBytes": 1868329,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S32",
+      "targetIndex": 0,
+      "expected": "cg/s32-eric-calendar-crossroads-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s32-eric-calendar-crossroads-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s32-eric-calendar-crossroads",
+        "mode": "cinematic",
+        "asset": "s32-eric-calendar-crossroads-portrait.webp",
+        "desktopAsset": "s32-eric-calendar-crossroads.webp",
+        "imageComplete": true,
+        "natural": [
+          941,
+          1672
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S32-mobile.png",
+      "screenshotSha256": "584e25b42a9dfc214579f613e794466dbe9300f5496006bf49e2a62f4f50341e",
+      "screenshotBytes": 481714,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S50",
+      "targetIndex": 5,
+      "expected": "background/akureyri-street-master.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/akureyri-street-master.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "scene-start",
+        "mode": "environment",
+        "asset": "akureyri-street-master.webp",
+        "desktopAsset": "akureyri-street-master.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 2
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S50-desktop.png",
+      "screenshotSha256": "b29940b43a5b457c1d8c274d47d57fb8ad4dcfc65d7cbda5c6ea77447448d299",
+      "screenshotBytes": 2065204,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S50",
+      "targetIndex": 5,
+      "expected": "background/akureyri-street-master.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/akureyri-street-master.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "scene-start",
+        "mode": "environment",
+        "asset": "akureyri-street-master.webp",
+        "desktopAsset": "akureyri-street-master.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 2
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S50-mobile.png",
+      "screenshotSha256": "4b0ea45fe5e6da7d7b9facdafaa572f0fb1f1bb0d7280889fbe50cce9bbbee9e",
+      "screenshotBytes": 404416,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S33",
+      "targetIndex": 2,
+      "expected": "cg/s33-nick-teaser-reveal.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s33-nick-teaser-reveal.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "hotel-teaser",
+        "mode": "cinematic",
+        "asset": "s33-nick-teaser-reveal.webp",
+        "desktopAsset": "s33-nick-teaser-reveal.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S33-desktop.png",
+      "screenshotSha256": "e19a1b1b88221ce4c4963292723556f57faf1f05cd3311976223a35e7aaa7111",
+      "screenshotBytes": 1610072,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S33",
+      "targetIndex": 2,
+      "expected": "cg/s33-nick-teaser-reveal-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s33-nick-teaser-reveal-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "hotel-teaser",
+        "mode": "cinematic",
+        "asset": "s33-nick-teaser-reveal-portrait.webp",
+        "desktopAsset": "s33-nick-teaser-reveal.webp",
+        "imageComplete": true,
+        "natural": [
+          941,
+          1672
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S33-mobile.png",
+      "screenshotSha256": "28d89bd0e85fd2201bd4d9176f09ab148d4d8d95c3b83b15cb55caeadffe5d60",
+      "screenshotBytes": 431580,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S53",
+      "targetIndex": 0,
+      "expected": "cg/s53-nick-no-camera-pool.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s53-nick-no-camera-pool.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s53-nick-no-camera-pool",
+        "mode": "cinematic",
+        "asset": "s53-nick-no-camera-pool.webp",
+        "desktopAsset": "s53-nick-no-camera-pool.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S53-desktop.png",
+      "screenshotSha256": "ab478789fa33a0a1a2878e6b56bd7702a5174d6d614c706b1f41aa72e0afceb5",
+      "screenshotBytes": 1900782,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S53",
+      "targetIndex": 0,
+      "expected": "cg/s53-nick-no-camera-pool-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s53-nick-no-camera-pool-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s53-nick-no-camera-pool",
+        "mode": "cinematic",
+        "asset": "s53-nick-no-camera-pool-portrait.webp",
+        "desktopAsset": "s53-nick-no-camera-pool.webp",
+        "imageComplete": true,
+        "natural": [
+          941,
+          1672
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S53-mobile.png",
+      "screenshotSha256": "306d864c6c20a8955c363aea347ea055fc93b6d1ed7f61dec99a6ce53d17d76c",
+      "screenshotBytes": 422754,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S34",
+      "targetIndex": 4,
+      "expected": "cg/s34-cancelled-evening.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s34-cancelled-evening.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s34-cancelled-evening-entrance",
+        "mode": "cinematic",
+        "asset": "s34-cancelled-evening.webp",
+        "desktopAsset": "s34-cancelled-evening.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S34-desktop.png",
+      "screenshotSha256": "53325a9b8214cf8c4e550b5133937c570974f0f58c04516410d6a742337baf66",
+      "screenshotBytes": 1809937,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S34",
+      "targetIndex": 4,
+      "expected": "cg/s34-cancelled-evening-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s34-cancelled-evening-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s34-cancelled-evening-entrance",
+        "mode": "cinematic",
+        "asset": "s34-cancelled-evening-portrait.webp",
+        "desktopAsset": "s34-cancelled-evening.webp",
+        "imageComplete": true,
+        "natural": [
+          941,
+          1672
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S34-mobile.png",
+      "screenshotSha256": "68ec8a5d0ebe4c3ecac09d340405e751bf6f21af5715bdb8b1d0ffb48f1087d6",
+      "screenshotBytes": 448201,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S56",
+      "targetIndex": 0,
+      "expected": "cg/s56-cafe-musicians.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s56-cafe-musicians.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s56-cafe-new-song-active",
+        "mode": "cinematic",
+        "asset": "s56-cafe-musicians.webp",
+        "desktopAsset": "s56-cafe-musicians.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S56-desktop.png",
+      "screenshotSha256": "79011b191a23255b87d7a8debc7850dda5562abf85c631e7fcc36bb800320d49",
+      "screenshotBytes": 1980823,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S56",
+      "targetIndex": 0,
+      "expected": "cg/s56-cafe-musicians-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s56-cafe-musicians-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s56-cafe-new-song-active",
+        "mode": "cinematic",
+        "asset": "s56-cafe-musicians-portrait.webp",
+        "desktopAsset": "s56-cafe-musicians.webp",
+        "imageComplete": true,
+        "natural": [
+          941,
+          1672
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S56-mobile.png",
+      "screenshotSha256": "e5dfe0969a258eb3f9b3892c3878378415fbb39bfe2d98d0eed74cf59e18642d",
+      "screenshotBytes": 459542,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S35",
+      "targetIndex": 4,
+      "expected": "background/small-icelandic-cafe-rain.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/small-icelandic-cafe-rain.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "scene-start",
+        "mode": "environment",
+        "asset": "small-icelandic-cafe-rain.webp",
+        "desktopAsset": "small-icelandic-cafe-rain.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 1
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S35-desktop.png",
+      "screenshotSha256": "99d1fc9dc71bbf66075cd7a0c8b75a20b7fdcf52f5b077351744c35f7702fabe",
+      "screenshotBytes": 1523928,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S35",
+      "targetIndex": 4,
+      "expected": "background/small-icelandic-cafe-rain.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/small-icelandic-cafe-rain.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "scene-start",
+        "mode": "environment",
+        "asset": "small-icelandic-cafe-rain.webp",
+        "desktopAsset": "small-icelandic-cafe-rain.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 1
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S35-mobile.png",
+      "screenshotSha256": "b422808ba35646d84b37a208c717d45dc6d13f2d05f7ba36f744d6c61949e451",
+      "screenshotBytes": 367369,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S63",
+      "targetIndex": 2,
+      "expected": "cg/s63-alice-solo-concert.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s63-alice-solo-concert.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s63-alice-solo-concert",
+        "mode": "cinematic",
+        "asset": "s63-alice-solo-concert.webp",
+        "desktopAsset": "s63-alice-solo-concert.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S63-desktop.png",
+      "screenshotSha256": "2153ac86a9f6d161053ff3662f025229fcd67b395f6f6b06531ffd865fb7ccd3",
+      "screenshotBytes": 1599964,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S63",
+      "targetIndex": 2,
+      "expected": "cg/s63-alice-solo-concert-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s63-alice-solo-concert-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s63-alice-solo-concert",
+        "mode": "cinematic",
+        "asset": "s63-alice-solo-concert-portrait.webp",
+        "desktopAsset": "s63-alice-solo-concert.webp",
+        "imageComplete": true,
+        "natural": [
+          941,
+          1672
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S63-mobile.png",
+      "screenshotSha256": "b2e9d460351f9d8c9747fe6fb5bfbe0c302f69c4638c7df4c9077ed88f9e3fe6",
+      "screenshotBytes": 420917,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S36",
+      "targetIndex": 2,
+      "expected": "background/snaefellsnes-master.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/snaefellsnes-master.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "snaefellsnes-drive",
+        "mode": "environment",
+        "asset": "snaefellsnes-master.webp",
+        "desktopAsset": "snaefellsnes-master.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 4
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S36-desktop.png",
+      "screenshotSha256": "b085dd2d1f4fdb4fe2a77f154b4ce84c2c606504b4b4937f85a758f929579f51",
+      "screenshotBytes": 1916909,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S36",
+      "targetIndex": 2,
+      "expected": "background/snaefellsnes-master.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/snaefellsnes-master.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "snaefellsnes-drive",
+        "mode": "environment",
+        "asset": "snaefellsnes-master.webp",
+        "desktopAsset": "snaefellsnes-master.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 4
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S36-mobile.png",
+      "screenshotSha256": "45aa9e26d4659a220372785476facc4541e99a38be92c6d11632c68ce4fc9852",
+      "screenshotBytes": 391524,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S37",
+      "targetIndex": 4,
+      "expected": "cg/s37-eric-alice-cafe.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s37-eric-alice-cafe.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s37-eric-alice-cafe",
+        "mode": "cinematic",
+        "asset": "s37-eric-alice-cafe.webp",
+        "desktopAsset": "s37-eric-alice-cafe.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S37-desktop.png",
+      "screenshotSha256": "861c912e11d3285859f3be3e7c12d5ea7c5fbf18111daf5e30aa1732e8d73de2",
+      "screenshotBytes": 1851110,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S37",
+      "targetIndex": 4,
+      "expected": "cg/s37-eric-alice-cafe-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s37-eric-alice-cafe-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s37-eric-alice-cafe",
+        "mode": "cinematic",
+        "asset": "s37-eric-alice-cafe-portrait.webp",
+        "desktopAsset": "s37-eric-alice-cafe.webp",
+        "imageComplete": true,
+        "natural": [
+          941,
+          1672
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S37-mobile.png",
+      "screenshotSha256": "3e33b4499e4a093d83c731d12182545d8cc003b13520dd843dd84886f16010b9",
+      "screenshotBytes": 423736,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S51",
+      "targetIndex": 6,
+      "expected": "background/guesthouse-common-kitchen-evening.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/guesthouse-common-kitchen-evening.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "scene-start",
+        "mode": "environment",
+        "asset": "guesthouse-common-kitchen-evening.webp",
+        "desktopAsset": "guesthouse-common-kitchen-evening.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 2
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S51-desktop.png",
+      "screenshotSha256": "0df16b77063847e2a874e224f91acf737eb9729a2a6ec0ac1b84c3bde5967bf8",
+      "screenshotBytes": 1727176,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S51",
+      "targetIndex": 6,
+      "expected": "background/guesthouse-common-kitchen-evening.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/guesthouse-common-kitchen-evening.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "scene-start",
+        "mode": "environment",
+        "asset": "guesthouse-common-kitchen-evening.webp",
+        "desktopAsset": "guesthouse-common-kitchen-evening.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 2
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S51-mobile.png",
+      "screenshotSha256": "12c6b925e2fb7bebc5e23b09d94f7a761860249b4e0669621d58b0c483a109b0",
+      "screenshotBytes": 372986,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S38",
+      "targetIndex": 0,
+      "expected": "cg/s38-alice-nick-ordinary-day.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s38-alice-nick-ordinary-day.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s38-ordinary-day",
+        "mode": "cinematic",
+        "asset": "s38-alice-nick-ordinary-day.webp",
+        "desktopAsset": "s38-alice-nick-ordinary-day.webp",
+        "imageComplete": true,
+        "natural": [
+          1920,
+          900
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S38-desktop.png",
+      "screenshotSha256": "7fc2c0c275c7bd580fc7e921a65ee643bba92dc87652c1f505720a99ede8d206",
+      "screenshotBytes": 2067821,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S38",
+      "targetIndex": 0,
+      "expected": "cg/s38-alice-nick-ordinary-day-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s38-alice-nick-ordinary-day-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s38-ordinary-day",
+        "mode": "cinematic",
+        "asset": "s38-alice-nick-ordinary-day-portrait.webp",
+        "desktopAsset": "s38-alice-nick-ordinary-day.webp",
+        "imageComplete": true,
+        "natural": [
+          940,
+          1672
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S38-mobile.png",
+      "screenshotSha256": "20e68f1b0da6f27f8f1162b3ff2f1482154fadc00b4b9b9e2df83d27ecf7ef2a",
+      "screenshotBytes": 384041,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S54",
+      "targetIndex": 0,
+      "expected": "cg/s54-alice-nick-karaoke.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s54-alice-nick-karaoke.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s54-karaoke-evening",
+        "mode": "cinematic",
+        "asset": "s54-alice-nick-karaoke.webp",
+        "desktopAsset": "s54-alice-nick-karaoke.webp",
+        "imageComplete": true,
+        "natural": [
+          1920,
+          900
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S54-desktop.png",
+      "screenshotSha256": "f6418262ca99fba65cff36554d6ad88b968f45826392c53cb0d75bc0d4990a17",
+      "screenshotBytes": 1629725,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S54",
+      "targetIndex": 0,
+      "expected": "cg/s54-alice-nick-karaoke-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s54-alice-nick-karaoke-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s54-karaoke-evening",
+        "mode": "cinematic",
+        "asset": "s54-alice-nick-karaoke-portrait.webp",
+        "desktopAsset": "s54-alice-nick-karaoke.webp",
+        "imageComplete": true,
+        "natural": [
+          940,
+          1672
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S54-mobile.png",
+      "screenshotSha256": "585760993426a89ba101093d6cc671d366f86cdd243ac86922548dbf7caf02a2",
+      "screenshotBytes": 329441,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S39",
+      "targetIndex": 0,
+      "expected": "cg/s39-alice-damir-cafe.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s39-alice-damir-cafe.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s39-cafe-conversation",
+        "mode": "cinematic",
+        "asset": "s39-alice-damir-cafe.webp",
+        "desktopAsset": "s39-alice-damir-cafe.webp",
+        "imageComplete": true,
+        "natural": [
+          1920,
+          900
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S39-desktop.png",
+      "screenshotSha256": "bb387127c877214b02320909d26c22976d7e4d56597168520a48e9ff18b1ae4c",
+      "screenshotBytes": 1727879,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S39",
+      "targetIndex": 0,
+      "expected": "cg/s39-alice-damir-cafe-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s39-alice-damir-cafe-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s39-cafe-conversation",
+        "mode": "cinematic",
+        "asset": "s39-alice-damir-cafe-portrait.webp",
+        "desktopAsset": "s39-alice-damir-cafe.webp",
+        "imageComplete": true,
+        "natural": [
+          940,
+          1672
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S39-mobile.png",
+      "screenshotSha256": "40339089a3091c16b0f2daf8d0e230757c5442696a3db1d7a644642d9be0b348",
+      "screenshotBytes": 377650,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S57",
+      "targetIndex": 5,
+      "expected": "background/snaefellsnes-bakery-dawn.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/snaefellsnes-bakery-dawn.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "scene-start",
+        "mode": "environment",
+        "asset": "snaefellsnes-bakery-dawn.webp",
+        "desktopAsset": "snaefellsnes-bakery-dawn.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 2
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S57-desktop.png",
+      "screenshotSha256": "41f98a7631876fb8894aabdcfd42eeb5d02494cc102f4e1156aab5e7ca2ae679",
+      "screenshotBytes": 1750778,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S57",
+      "targetIndex": 5,
+      "expected": "background/snaefellsnes-bakery-dawn.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/snaefellsnes-bakery-dawn.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "scene-start",
+        "mode": "environment",
+        "asset": "snaefellsnes-bakery-dawn.webp",
+        "desktopAsset": "snaefellsnes-bakery-dawn.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 2
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S57-mobile.png",
+      "screenshotSha256": "ac3484882f8ca5e116eaed5c71613a965d796442d1f18e76b9da62e1f0b74227",
+      "screenshotBytes": 357057,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S40",
+      "targetIndex": 0,
+      "expected": "cg/s40-alice-laptop-window.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s40-alice-laptop-window.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s40-laptop-window",
+        "mode": "cinematic",
+        "asset": "s40-alice-laptop-window.webp",
+        "desktopAsset": "s40-alice-laptop-window.webp",
+        "imageComplete": true,
+        "natural": [
+          1920,
+          900
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S40-desktop.png",
+      "screenshotSha256": "61b80d85091dad4fa95d21861a6cf9b9e197287b1621b5c0c27e0ae517740d41",
+      "screenshotBytes": 1571411,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S40",
+      "targetIndex": 0,
+      "expected": "cg/s40-alice-laptop-window-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s40-alice-laptop-window-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s40-laptop-window",
+        "mode": "cinematic",
+        "asset": "s40-alice-laptop-window-portrait.webp",
+        "desktopAsset": "s40-alice-laptop-window.webp",
+        "imageComplete": true,
+        "natural": [
+          940,
+          1672
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S40-mobile.png",
+      "screenshotSha256": "36bfe15f9976ffe14b50993f1d7b0807dfeadbe638d1cb3dcf439806113ed11c",
+      "screenshotBytes": 344421,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S64",
+      "targetIndex": 0,
+      "expected": "cg/s64-alice-snaefellsnes-trail.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s64-alice-snaefellsnes-trail.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s64-snaefellsnes-trail",
+        "mode": "cinematic",
+        "asset": "s64-alice-snaefellsnes-trail.webp",
+        "desktopAsset": "s64-alice-snaefellsnes-trail.webp",
+        "imageComplete": true,
+        "natural": [
+          1920,
+          900
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S64-desktop.png",
+      "screenshotSha256": "1ceea78e628f4ce000a1bbbfd4b864841c89d6e912b01e2e5178809bfa86971b",
+      "screenshotBytes": 1977378,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S64",
+      "targetIndex": 0,
+      "expected": "cg/s64-alice-snaefellsnes-trail-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s64-alice-snaefellsnes-trail-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s64-snaefellsnes-trail",
+        "mode": "cinematic",
+        "asset": "s64-alice-snaefellsnes-trail-portrait.webp",
+        "desktopAsset": "s64-alice-snaefellsnes-trail.webp",
+        "imageComplete": true,
+        "natural": [
+          940,
+          1672
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S64-mobile.png",
+      "screenshotSha256": "0ed9c063f0245f1589718df5eab719b9dacd24fd4dc5bb0fb72febca821f5b87",
+      "screenshotBytes": 353494,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S60",
+      "targetIndex": 3,
+      "expected": "cg/s60-souvenir-kitchen-batch2.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s60-souvenir-kitchen-batch2.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "scene-start",
+        "mode": "cinematic",
+        "asset": "s60-souvenir-kitchen-batch2.webp",
+        "desktopAsset": "s60-souvenir-kitchen-batch2.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S60-desktop.png",
+      "screenshotSha256": "b9ec7e1c9221f2b6307da4bedba3c512abfeb0d64ce14abebac1f8f91e41424c",
+      "screenshotBytes": 1838849,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S60",
+      "targetIndex": 3,
+      "expected": "cg/s60-souvenir-kitchen-batch2-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s60-souvenir-kitchen-batch2-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "scene-start",
+        "mode": "cinematic",
+        "asset": "s60-souvenir-kitchen-batch2-portrait.webp",
+        "desktopAsset": "s60-souvenir-kitchen-batch2.webp",
+        "imageComplete": true,
+        "natural": [
+          853,
+          1844
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S60-mobile.png",
+      "screenshotSha256": "1fa54ef8af1b24ffeb8c8ba2e00eff43af7af503994473a64def65c6d41b4500",
+      "screenshotBytes": 428988,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S41",
+      "targetIndex": 2,
+      "expected": "background/small-icelandic-cafe-rain.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/small-icelandic-cafe-rain.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "editor-cafe-call",
+        "mode": "environment",
+        "asset": "small-icelandic-cafe-rain.webp",
+        "desktopAsset": "small-icelandic-cafe-rain.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 1
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S41-desktop.png",
+      "screenshotSha256": "138a3facf33da615046b0f40808edf69647f402ef242c37d96e3cf24a7e067d9",
+      "screenshotBytes": 1593256,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S41",
+      "targetIndex": 2,
+      "expected": "background/small-icelandic-cafe-rain.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/small-icelandic-cafe-rain.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "editor-cafe-call",
+        "mode": "environment",
+        "asset": "small-icelandic-cafe-rain.webp",
+        "desktopAsset": "small-icelandic-cafe-rain.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 1
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S41-mobile.png",
+      "screenshotSha256": "9c414954f6129c096d3c747f59897b5919259ccf13f07e9e07dbe754b070976d",
+      "screenshotBytes": 392123,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S42",
+      "targetIndex": 0,
+      "expected": "cg/s42-harbour-cafe.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s42-harbour-cafe.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s42-harbour-cafe",
+        "mode": "cinematic",
+        "asset": "s42-harbour-cafe.webp",
+        "desktopAsset": "s42-harbour-cafe.webp",
+        "imageComplete": true,
+        "natural": [
+          1920,
+          900
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S42-desktop.png",
+      "screenshotSha256": "975076c15badb1c2bec516b2399adbb2607541978cd54e08d6e74bc9df8b3c69",
+      "screenshotBytes": 1852089,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S42",
+      "targetIndex": 0,
+      "expected": "cg/s42-harbour-cafe-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s42-harbour-cafe-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "s42-harbour-cafe",
+        "mode": "cinematic",
+        "asset": "s42-harbour-cafe-portrait.webp",
+        "desktopAsset": "s42-harbour-cafe.webp",
+        "imageComplete": true,
+        "natural": [
+          941,
+          1672
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S42-mobile.png",
+      "screenshotSha256": "ba6fe84836b41177d935c863ec7e59ca25a7bc53cd76e10679348257ddb2195b",
+      "screenshotBytes": 457581,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S43",
+      "targetIndex": 3,
+      "expected": "background/small-icelandic-cafe-rain.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/small-icelandic-cafe-rain.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "scene-start",
+        "mode": "environment",
+        "asset": "small-icelandic-cafe-rain.webp",
+        "desktopAsset": "small-icelandic-cafe-rain.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 1
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S43-desktop.png",
+      "screenshotSha256": "5bae2778ea19453df30b9dadb14c882c659d8e781d0895f4de1ecb525f547460",
+      "screenshotBytes": 1524775,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S43",
+      "targetIndex": 3,
+      "expected": "background/small-icelandic-cafe-rain.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/backgrounds/small-icelandic-cafe-rain.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "scene-start",
+        "mode": "environment",
+        "asset": "small-icelandic-cafe-rain.webp",
+        "desktopAsset": "small-icelandic-cafe-rain.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 1
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S43-mobile.png",
+      "screenshotSha256": "98c50eb9670df7241279c8e049bb2a6c441286599a59b2c20b375242a66271c3",
+      "screenshotBytes": 346594,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S44",
+      "targetIndex": 0,
+      "expected": "cg/s44-eric-morning-harbour.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s44-eric-morning-harbour.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "eric-morning-harbour",
+        "mode": "cinematic",
+        "asset": "s44-eric-morning-harbour.webp",
+        "desktopAsset": "s44-eric-morning-harbour.webp",
+        "imageComplete": true,
+        "natural": [
+          1920,
+          900
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S44-desktop.png",
+      "screenshotSha256": "12651d12827018780827fcbed9b1ac4fb95e81fa65c71f5afc06fce55f42e37b",
+      "screenshotBytes": 1860053,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S44",
+      "targetIndex": 0,
+      "expected": "cg/s44-eric-morning-harbour-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "FAIL",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s44-eric-morning-harbour.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "eric-morning-harbour",
+        "mode": "cinematic",
+        "asset": "s44-eric-morning-harbour.webp",
+        "desktopAsset": "s44-eric-morning-harbour.webp",
+        "imageComplete": true,
+        "natural": [
+          1920,
+          900
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S44-mobile.png",
+      "screenshotSha256": "ca2343d2d31c980626cb9e5b697ba52f6e28dc6be5608066989bf489102998b7",
+      "screenshotBytes": 373650,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S45",
+      "targetIndex": 0,
+      "expected": "cg/s45-reykjavik-warm-montage.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s45-reykjavik-warm-montage.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "nick-film-final",
+        "mode": "cinematic",
+        "asset": "s45-reykjavik-warm-montage.webp",
+        "desktopAsset": "s45-reykjavik-warm-montage.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S45-desktop.png",
+      "screenshotSha256": "9cda6a9b3e76cde14ecb15ea57889fbe2c37cfc426900fcc0166b883d8ef79a8",
+      "screenshotBytes": 1583473,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S45",
+      "targetIndex": 0,
+      "expected": "cg/s45-reykjavik-warm-montage-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s45-reykjavik-warm-montage-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "nick-film-final",
+        "mode": "cinematic",
+        "asset": "s45-reykjavik-warm-montage-portrait.webp",
+        "desktopAsset": "s45-reykjavik-warm-montage.webp",
+        "imageComplete": true,
+        "natural": [
+          941,
+          1672
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S45-mobile.png",
+      "screenshotSha256": "ac1303b0f1bd5352b277e48631c3157d7cf463c1e83ea2c2a8f1101031b46554",
+      "screenshotBytes": 409469,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S46",
+      "targetIndex": 0,
+      "expected": "cg/s46-airport-bus.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s46-airport-bus.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "airport-bus",
+        "mode": "cinematic",
+        "asset": "s46-airport-bus.webp",
+        "desktopAsset": "s46-airport-bus.webp",
+        "imageComplete": true,
+        "natural": [
+          1920,
+          900
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S46-desktop.png",
+      "screenshotSha256": "18b7106e9059a68ddbc4638c1d5d29dfa01624e45d0433f6234fde67974c2ddf",
+      "screenshotBytes": 1983129,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S46",
+      "targetIndex": 0,
+      "expected": "cg/s46-airport-bus-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s46-airport-bus-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "airport-bus",
+        "mode": "cinematic",
+        "asset": "s46-airport-bus-portrait.webp",
+        "desktopAsset": "s46-airport-bus.webp",
+        "imageComplete": true,
+        "natural": [
+          941,
+          1672
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S46-mobile.png",
+      "screenshotSha256": "a2ea0d3a19bbf6dc33bb07357b87f5467b549ec16b581f6c8075fcec6e30564f",
+      "screenshotBytes": 434166,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S47",
+      "targetIndex": 0,
+      "expected": "cg/s47-reykjavik-harbour-alice.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s47-reykjavik-harbour-alice.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "alice-morning-harbour",
+        "mode": "cinematic",
+        "asset": "s47-reykjavik-harbour-alice.webp",
+        "desktopAsset": "s47-reykjavik-harbour-alice.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S47-desktop.png",
+      "screenshotSha256": "1f3fb6b7fd6470a5d14f54c2ae8522e4adf5e9ddce7efcfb03b6b50d9c75d2a3",
+      "screenshotBytes": 1801730,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S47",
+      "targetIndex": 0,
+      "expected": "cg/s47-reykjavik-harbour-alice-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s47-reykjavik-harbour-alice-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "alice-morning-harbour",
+        "mode": "cinematic",
+        "asset": "s47-reykjavik-harbour-alice-portrait.webp",
+        "desktopAsset": "s47-reykjavik-harbour-alice.webp",
+        "imageComplete": true,
+        "natural": [
+          941,
+          1672
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S47-mobile.png",
+      "screenshotSha256": "258ccbb9cf022b021643a53a48352abe25b4303e2089df4dd9c404c25b26a671",
+      "screenshotBytes": 478693,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S48",
+      "targetIndex": 4,
+      "expected": "cg/s48-last-breakfast-batch2.webp",
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s48-last-breakfast-batch2.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "scene-start",
+        "mode": "cinematic",
+        "asset": "s48-last-breakfast-batch2.webp",
+        "desktopAsset": "s48-last-breakfast-batch2.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S48-desktop.png",
+      "screenshotSha256": "bd3c88e871f8aca9748e08f8a5427e9747158d5e4b35d889382b920799f869c1",
+      "screenshotBytes": 1892449,
+      "actualPixelsReceived": true
+    },
+    {
+      "sceneId": "S48",
+      "targetIndex": 4,
+      "expected": "cg/s48-last-breakfast-batch2-portrait.webp",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4174/assets/cg/s48-last-breakfast-batch2-portrait.webp",
+          "status": 200
+        }
+      ],
+      "readback": {
+        "sceneId": null,
+        "cue": "scene-start",
+        "mode": "cinematic",
+        "asset": "s48-last-breakfast-batch2-portrait.webp",
+        "desktopAsset": "s48-last-breakfast-batch2.webp",
+        "imageComplete": true,
+        "natural": [
+          1024,
+          1536
+        ],
+        "imageOpacity": "1",
+        "imageDisplay": "block",
+        "imageVisibility": "visible",
+        "pictureBackground": "none",
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false,
+        "stageCount": 0
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S48-mobile.png",
+      "screenshotSha256": "c42dec802fb907c1bbbfc620d65235c639b38ea7041d5abb87a0e2b10c5e350a",
+      "screenshotBytes": 452617,
+      "actualPixelsReceived": true
+    }
+  ],
+  "summary": {
+    "scenes": 66,
+    "captures": 132,
+    "failures": 1,
+    "failureScenes": [
+      "S44"
+    ]
+  }
+}
