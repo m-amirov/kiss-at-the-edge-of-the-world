@@ -26,7 +26,7 @@ The only production change is the explicit `portraitAssetByDesktopAsset` entry:
 - Before/after capture set: 12 frames per phase across S43 previous page, S44 current page and S44 next page at desktop, 360×640, 390×844 and 412×915.
 - Faces, authored two-person action and HUD remain readable in the repaired portrait frames.
 - Before evidence: `output/playwright/s44-portrait-repair/before.json` (HEAD `c50dbdbe…`).
-- After evidence: `output/playwright/s44-portrait-repair/after.json` (HEAD `04a27f977…`).
+- After evidence: `output/playwright/s44-portrait-repair/after.json` (evidence-only descendant HEAD `6402c5aea…`; source behavior is from `04a27f977…`).
 
 ### Rendered coverage
 

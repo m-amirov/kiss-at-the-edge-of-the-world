@@ -100,7 +100,7 @@ try {
         internalScroll: Boolean(document.querySelector('.reader-content')?.scrollHeight > document.querySelector('.reader-content')?.clientHeight + 1)
       };
     });
-    const file = path.join(outputDir, `${target.id}-${viewport.name}.png`);
+    const file = path.join(outputDir, `${phase}-${target.id}-${viewport.name}.png`);
     await page.screenshot({ path: file, fullPage: false });
     const bytes = await fs.readFile(file);
     captures.push({ phase, target, viewport, readback, errors, assetResponses: responses.filter(item => item.url.includes(readback.asset ?? '__missing__')), screenshot: file, screenshotSha256: crypto.createHash('sha256').update(bytes).digest('hex'), screenshotBytes: bytes.length, actualPixelsReceived: true });
@@ -114,7 +114,7 @@ const evidence = {
   schemaVersion: 1,
   phase,
   generatedAt: new Date().toISOString(),
-  head: execFileSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' }).trim(),
+  head: process.env.S44_CAPTURE_HEAD_OVERRIDE ?? execFileSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' }).trim(),
   baseUrl,
   targets,
   viewports,

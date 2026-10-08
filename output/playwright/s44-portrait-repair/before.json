@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "phase": "before",
-  "generatedAt": "2026-10-08T14:55:37.102Z",
+  "generatedAt": "2026-10-08T15:16:01.579Z",
   "head": "c50dbdbe087938b9f53b6b039009dc7ca1c3e94d",
   "baseUrl": "http://127.0.0.1:4173/literary.html",
   "targets": [
@@ -131,9 +131,9 @@
           "status": 200
         }
       ],
-      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\s44-portrait-repair\\previous-scene-S43-desktop.png",
-      "screenshotSha256": "f58cdc577d0ee2da9b679958376882993e826c904d3d7626b0ba8b1a354284ec",
-      "screenshotBytes": 1596307,
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\s44-portrait-repair\\before-previous-scene-S43-desktop.png",
+      "screenshotSha256": "8a52145ba8adb0837160e8b1c3f77632d5b1f5ab23e8781e0f4898ddb1d7a182",
+      "screenshotBytes": 1596311,
       "actualPixelsReceived": true
     },
     {
@@ -223,9 +223,9 @@
           "status": 200
         }
       ],
-      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\s44-portrait-repair\\previous-scene-S43-360x640.png",
-      "screenshotSha256": "3624b223f4e1303baad15787dc7f6a7c63578ca728bfe0d4fc616c3418c3b410",
-      "screenshotBytes": 273011,
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\s44-portrait-repair\\before-previous-scene-S43-360x640.png",
+      "screenshotSha256": "f4c0fb103e0feaafc9d5a8c2db0e3584d72952996bf97689bad54367777cff97",
+      "screenshotBytes": 273017,
       "actualPixelsReceived": true
     },
     {
@@ -315,9 +315,9 @@
           "status": 200
         }
       ],
-      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\s44-portrait-repair\\previous-scene-S43-390x844.png",
-      "screenshotSha256": "b0833a67188d54dd004c89677dc4c0d9a558d6386b8f8acfb00ab336ed10674f",
-      "screenshotBytes": 371138,
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\s44-portrait-repair\\before-previous-scene-S43-390x844.png",
+      "screenshotSha256": "9e05591cfa333efaad30a446fda50a207ff657e6886e574193cdd13d90250f98",
+      "screenshotBytes": 371135,
       "actualPixelsReceived": true
     },
     {
@@ -407,9 +407,9 @@
           "status": 200
         }
       ],
-      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\s44-portrait-repair\\previous-scene-S43-412x915.png",
-      "screenshotSha256": "19fb2097cec7edd1cd4d7f3ac291e908f50b3edec48e579f9bbe8d741a0f978c",
-      "screenshotBytes": 419303,
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\s44-portrait-repair\\before-previous-scene-S43-412x915.png",
+      "screenshotSha256": "4f88ba616181cc14344a095a44225db6587eef7782db079bdc16a858cbc9685e",
+      "screenshotBytes": 419302,
       "actualPixelsReceived": true
     },
     {
@@ -487,9 +487,9 @@
           "status": 200
         }
       ],
-      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\s44-portrait-repair\\s44-before-current-desktop.png",
-      "screenshotSha256": "d7d41379a6cee86c232b81a0b173719760f94345f858c123ad9f1d9c8499f620",
-      "screenshotBytes": 1860070,
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\s44-portrait-repair\\before-s44-before-current-desktop.png",
+      "screenshotSha256": "93c2ee7f790fa0a0aff9c0c0f413712a1aa417933eac41e32db3e52eaebe4808",
+      "screenshotBytes": 1860050,
       "actualPixelsReceived": true
     },
     {
@@ -567,9 +567,9 @@
           "status": 200
         }
       ],
-      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\s44-portrait-repair\\s44-before-current-360x640.png",
-      "screenshotSha256": "2c28886bdc69fd02c6dd141e87a59a2e8e677b599e211e82d124e5afc53602d8",
-      "screenshotBytes": 287389,
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\s44-portrait-repair\\before-s44-before-current-360x640.png",
+      "screenshotSha256": "7bd691b29a16fdf0a9b55b88a6c75160b0ee9cb5865d0ae350971992c5286c27",
+      "screenshotBytes": 287388,
       "actualPixelsReceived": true
     },
     {
@@ -647,9 +647,9 @@
           "status": 200
         }
       ],
-      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\s44-portrait-repair\\s44-before-current-390x844.png",
-      "screenshotSha256": "bf927524b5fb117c48805c2c237f69b8fd2e41ba5ffb911f85c592bcf7a42aca",
-      "screenshotBytes": 373646,
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\s44-portrait-repair\\before-s44-before-current-390x844.png",
+      "screenshotSha256": "ca2343d2d31c980626cb9e5b697ba52f6e28dc6be5608066989bf489102998b7",
+      "screenshotBytes": 373650,
       "actualPixelsReceived": true
     },
     {
@@ -727,9 +727,9 @@
           "status": 200
         }
       ],
-      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\s44-portrait-repair\\s44-before-current-412x915.png",
-      "screenshotSha256": "9c73c4b25a33c09d81a3c08891568c6ae692d8374e5ade286cfc82e6a40c7f8a",
-      "screenshotBytes": 414146,
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\s44-portrait-repair\\before-s44-before-current-412x915.png",
+      "screenshotSha256": "5510ebe204a276ac4ad5f3b7b0eefda746107d537f0908cb2016b1117d3434aa",
+      "screenshotBytes": 414155,
       "actualPixelsReceived": true
     },
     {
@@ -807,7 +807,7 @@
           "status": 200
         }
       ],
-      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\s44-portrait-repair\\s44-after-next-desktop.png",
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\s44-portrait-repair\\before-s44-after-next-desktop.png",
       "screenshotSha256": "216f44392624457c4ce3a3639bc2fc9f946f7da982f8ad4277c6c144de6606b1",
       "screenshotBytes": 1846107,
       "actualPixelsReceived": true
@@ -887,9 +887,9 @@
           "status": 200
         }
       ],
-      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\s44-portrait-repair\\s44-after-next-360x640.png",
-      "screenshotSha256": "488033d176e05b96cc9c25ddfd7db0aeaa3b9d45450788b37f93c27d6ed31acf",
-      "screenshotBytes": 284219,
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\s44-portrait-repair\\before-s44-after-next-360x640.png",
+      "screenshotSha256": "75c5f966bc34dec19d8bfdcc7ca32a2824c6305cc8da71555cbab26897600e09",
+      "screenshotBytes": 284217,
       "actualPixelsReceived": true
     },
     {
@@ -967,9 +967,9 @@
           "status": 200
         }
       ],
-      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\s44-portrait-repair\\s44-after-next-390x844.png",
-      "screenshotSha256": "794e5ca6faab7936ba1bb918a5c4018946955e6590480adf1da9bcf73fa97076",
-      "screenshotBytes": 374121,
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\s44-portrait-repair\\before-s44-after-next-390x844.png",
+      "screenshotSha256": "6f7bfd0561b2a3461c74220da2237d28b1e89bca30f7c3d43ab53a4fed4cb843",
+      "screenshotBytes": 374124,
       "actualPixelsReceived": true
     },
     {
@@ -1047,9 +1047,9 @@
           "status": 200
         }
       ],
-      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\s44-portrait-repair\\s44-after-next-412x915.png",
-      "screenshotSha256": "65202f3d671c554b5e810491b54fca42d764fa6f97d69da20627cef6a24b33fc",
-      "screenshotBytes": 414681,
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\s44-portrait-repair\\before-s44-after-next-412x915.png",
+      "screenshotSha256": "a86b33d1538d16e251e7de477ce78437f639fb2b18315f859b3172b5395f3a83",
+      "screenshotBytes": 414676,
       "actualPixelsReceived": true
     }
   ],
