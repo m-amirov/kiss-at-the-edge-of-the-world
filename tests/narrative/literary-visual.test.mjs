@@ -84,6 +84,33 @@ test('Batch 2 recovery maps the six accepted CGs to exact canonical cues and cas
  }
 });
 
+test('Batch 3 reframes bind only the eight selected authored cues',()=>{
+ const pairCues=[
+  ['S01','nick-arrives',{},'batch3-pair-depth-s01-nick-arrives'],
+  ['S18','scene-start',{},'batch3-pair-depth-s18-opening'],
+  ['S28','scene-start',{},'batch3-pair-depth-s28-opening'],
+  ['S30','scene-start',{},'batch3-pair-depth-s30-opening']
+ ];
+ for(const [id,beat,choices,layout] of pairCues){
+  const {flow}=complete(id,choices);
+  const position=flow.findIndex(entry=>shot(id,flow,flow.indexOf(entry),choices).beatId===beat);
+  const direction=shot(id,flow,position,choices);
+  assert.equal(direction.stageComposition,layout,`${id}/${beat} must own its Batch 3 layout`);
+  assert.deepEqual(direction.cast,['alice',id==='S01'?'nick':id==='S18'||id==='S28'?'eric':'damir']);
+ }
+ for(const route of ['A','B','C']){
+  const choices={'S26-C1':route};
+  const {flow}=complete('S42',choices);
+  const direction=shot('S42',flow,0,choices);
+  assert.equal(direction.beatId,'s42-harbour-cafe');
+  assert.equal(direction.art?.file,'s42-harbour-cafe.webp');
+ }
+ const {flow}=complete('S46');
+ const airport=shot('S46',flow,0,{});
+ assert.equal(airport.beatId,'airport-bus');
+ assert.equal(airport.art?.file,'s46-airport-bus.webp');
+});
+
 test('Episode 1 S02 never interleaves the roadside cafe and car across choice variants',()=>{
  for(const extraA of ['A','B'])for(const extraB of ['A','B'])for(const authored of ['A','B','C']){
   const choices={'S01-C1':'A','S02-C90':extraA,'S02-C91':extraB,'S02-C1':authored};

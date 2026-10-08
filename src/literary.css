@@ -713,6 +713,45 @@ button.primary:hover{background:linear-gradient(135deg,#d19b76,#a36d51);filter:n
   .scene-stage[data-layout^="batch2-pair-depth-s15-"] .stage-character:nth-child(2){left:40%;transform:scale(.96) translateY(-5%)}
 }
 
+/* Third bounded REFRAME_STAGE batch: four exact pair openings receive a
+   closer foreground arc. The selectors are cue-owned and leave ordinary
+   pair staging and previously accepted batches unchanged. */
+.scene-stage[data-layout^="batch3-pair-depth-"]{
+  inset:6% 0 20%;
+  display:block;
+  overflow:visible;
+}
+.scene-stage[data-layout^="batch3-pair-depth-"] .stage-character{
+  position:absolute;
+  bottom:0;
+  width:min(36vw,480px);
+  height:100%;
+  min-width:0;
+  margin:0;
+  transform-origin:center bottom;
+}
+.scene-stage[data-layout^="batch3-pair-depth-"] .stage-character img{width:100%;height:100%;object-position:center bottom}
+.scene-stage[data-layout="batch3-pair-depth-s01-nick-arrives"] .stage-character:nth-child(1){left:14%;transform:scale(1.08);z-index:3}
+.scene-stage[data-layout="batch3-pair-depth-s01-nick-arrives"] .stage-character:nth-child(2){left:45%;transform:scale(.98) translateY(-4%);z-index:2}
+.scene-stage[data-layout="batch3-pair-depth-s18-opening"] .stage-character:nth-child(1){left:12%;transform:scale(1.08);z-index:3}
+.scene-stage[data-layout="batch3-pair-depth-s18-opening"] .stage-character:nth-child(2){left:44%;transform:scale(.98) translateY(-4%);z-index:2}
+.scene-stage[data-layout="batch3-pair-depth-s28-opening"] .stage-character:nth-child(1){left:10%;transform:scale(1.1);z-index:3}
+.scene-stage[data-layout="batch3-pair-depth-s28-opening"] .stage-character:nth-child(2){left:44%;transform:scale(.97) translateY(-5%);z-index:2}
+.scene-stage[data-layout="batch3-pair-depth-s30-opening"] .stage-character:nth-child(1){left:14%;transform:scale(1.08);z-index:3}
+.scene-stage[data-layout="batch3-pair-depth-s30-opening"] .stage-character:nth-child(2){left:45%;transform:scale(.98) translateY(-4%);z-index:2}
+@media(max-width:680px){
+  .scene-stage[data-layout^="batch3-pair-depth-"]{inset:8% -4% 32%;}
+  .scene-stage[data-layout^="batch3-pair-depth-"] .stage-character{width:68vw;height:112%;}
+  .scene-stage[data-layout^="batch3-pair-depth-s01"] .stage-character:nth-child(1){left:4%;transform:scale(1.05)}
+  .scene-stage[data-layout^="batch3-pair-depth-s01"] .stage-character:nth-child(2){left:37%;transform:scale(.97) translateY(-5%)}
+  .scene-stage[data-layout^="batch3-pair-depth-s18"] .stage-character:nth-child(1){left:2%;transform:scale(1.06)}
+  .scene-stage[data-layout^="batch3-pair-depth-s18"] .stage-character:nth-child(2){left:36%;transform:scale(.97) translateY(-5%)}
+  .scene-stage[data-layout^="batch3-pair-depth-s28"] .stage-character:nth-child(1){left:1%;transform:scale(1.07)}
+  .scene-stage[data-layout^="batch3-pair-depth-s28"] .stage-character:nth-child(2){left:36%;transform:scale(.96) translateY(-6%)}
+  .scene-stage[data-layout^="batch3-pair-depth-s30"] .stage-character:nth-child(1){left:4%;transform:scale(1.05)}
+  .scene-stage[data-layout^="batch3-pair-depth-s30"] .stage-character:nth-child(2){left:37%;transform:scale(.97) translateY(-5%)}
+}
+
 /* First bounded REFRAME_STAGE batch: the four authored travelers stay visible,
    but occupy a shallow depth arc instead of four equal-width columns. The
    selector is opt-in per visual beat; ordinary staging keeps its existing
