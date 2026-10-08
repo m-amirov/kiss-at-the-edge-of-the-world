@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "sourceHead": "9e8ddf4e997f3457dfe1eed74805563f74ff8121",
-  "generatedAt": "2026-10-08T14:03:00Z",
+  "sourceHead": "d29d4265ec85dc5228f108621207633be41e6d58",
+  "generatedAt": "2026-10-08T15:12:00Z",
   "method": "current-runtime desktop screenshot plus raw current asset pixels; character presence inspected from supplied pixels, never inferred from DOM sprite count",
   "entries": [
     {
@@ -28,8 +28,8 @@
       "status": "PASS",
       "evidence": {
         "runtimeScreenshot": "output/playwright/rendered-coverage-audit/S23-desktop.png",
-        "runtimeScreenshotSha256": "87a691fa19d766641964eacbd7fe8e2041d36dd6e28b960da3d9971d19189a31",
-        "runtimeScreenshotBytes": 2034433,
+        "runtimeScreenshotSha256": "16f2ce97b8e95cefc14e3c4f8868e4d3f1e3dc65bdf15daf92cf8e94b70d6c69",
+        "runtimeScreenshotBytes": 2034438,
         "runtimeViewport": "1920x900",
         "rawAsset": "assets/cg/s23-eric-harbor-plan.webp",
         "rawAssetSha256": "b4d23a5bb5e956505972450fd151838e12fcbe83b6fd8e785779d38673e6f9bf",
