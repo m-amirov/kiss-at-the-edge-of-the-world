@@ -1341,7 +1341,7 @@
       "path": "assets/cg/s48-guesthouse-exit-group.png",
       "status": "integrated",
       "runtime": "S48 authored group guesthouse exit",
-      "creationMethod": "Codex imagegen current production-art run using canonical character references; independent desktop and portrait derivatives",
+      "creationMethod": "Codex imagegen current production-art run using canonical character references; immutable desktop CG plus portrait-safe derivative recomposed from the same desktop pixels on 2026-10-08",
       "createdAt": "2026-10-01",
       "dimensions": "1920x900",
       "mobileSafe": true,

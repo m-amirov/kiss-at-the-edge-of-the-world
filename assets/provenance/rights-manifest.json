@@ -1066,10 +1066,10 @@
     },
     {
       "path": "assets/cg/s48-guesthouse-exit-group-portrait.png",
-      "sha256": "C41E6549A0587D676CA3F3EF1136BA4B07C1AF9D3EDE90E923EC8F98D30FF03C",
+      "sha256": "DF679FE75CB874D5BDA9097F3692BEF65EBC8B85FC3B51FB80881BA5CCFDEC5A",
       "dimensions": "941x1672",
-      "method": "Portrait derivative cropped from the accepted desktop CG for mobile runtime",
-      "source": "Derived from assets/cg/s48-guesthouse-exit-group.png, 2026-10-01",
+      "method": "Portrait-safe derivative recomposed from the accepted desktop CG; complete four-person cast retained in a readable central band over a blurred same-image background",
+      "source": "Derived from assets/cg/s48-guesthouse-exit-group.png, 2026-10-08; desktop CG unchanged",
       "license": "generated for this project"
     },
     {
