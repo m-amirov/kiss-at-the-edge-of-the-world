@@ -70,6 +70,7 @@ const portraitAssetByDesktopAsset = {
   's45-reykjavik-warm-montage.webp':'s45-reykjavik-warm-montage-portrait.webp',
   's46-airport-goodbye.webp':'s46-airport-goodbye-portrait.webp',
   's47-reykjavik-harbour-alice.webp':'s47-reykjavik-harbour-alice-portrait.webp',
+  's44-eric-morning-harbour.webp':'s44-eric-morning-harbour-portrait.webp',
   's44-eric-epilogue-month-later.webp':'s44-eric-epilogue-month-later-portrait.webp',
   's45-nick-home-epilogue-month-later.webp':'s45-nick-home-epilogue-month-later-portrait.webp',
   's46-damir-epilogue-month-later.webp':'s46-damir-epilogue-month-later-portrait.webp',

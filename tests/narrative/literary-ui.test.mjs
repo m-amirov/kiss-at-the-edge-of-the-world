@@ -132,7 +132,7 @@ test('mobile cinematic presentation fills the viewport without empty bands', () 
 });
 
 test('every active production CG has an explicit portrait derivative mapping', () => {
-  const active = ['s13-skaftafell-travelers','s18-hofn-dance-lights','s26-eric-choice','s44-eric-epilogue-month-later','s45-nick-home-epilogue-month-later','s45-reykjavik-warm-montage','s46-airport-goodbye','s46-damir-epilogue-month-later','s47-alice-home-epilogue-month-later','s47-reykjavik-harbour-alice'];
+  const active = ['s13-skaftafell-travelers','s18-hofn-dance-lights','s26-eric-choice','s44-eric-morning-harbour','s44-eric-epilogue-month-later','s45-nick-home-epilogue-month-later','s45-reykjavik-warm-montage','s46-airport-goodbye','s46-damir-epilogue-month-later','s47-alice-home-epilogue-month-later','s47-reykjavik-harbour-alice'];
   for (const id of active) {
     const asset = assetManifest.assets.find(entry => entry.id === id);
     assert.ok(asset?.portraitAsset, `${id} needs an explicit portraitAsset`);
