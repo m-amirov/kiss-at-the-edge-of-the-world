@@ -1,4 +1,4 @@
-# Production Art Debt Ledger — Reframe Batch 2
+# Production Art Debt Ledger — Reframe Batch 4
 
 Date: 2026-10-08  
 Source ancestry: `7181c60e3e0236befe915f43e45e90241db78b32` → `b7163bc9ac00f750e5e716b80928feccbf7e797f`  
@@ -88,6 +88,65 @@ Remaining `REFRAME_STAGE`: `S33/scene-start`; `S34/scene-start`; `S37/scene-star
 
 The 11 out-of-scope `NEW_FULL_SCENE_CG_REQUIRED` states remain unchanged: `S02/roadside-cafe`; `S65/scene-start`; `S06/scene-start`; `S08/scene-start`; `S66/scene-start`; `S12/s12-vik-street`; `S18/hofn-lighthouse`; `S59/scene-start`; `S51/scene-start`; `S57/scene-start`; `S44/eric-morning-harbour`.
 
+## Production Reframe Final Batch 4 acceptance
+
+Source start: `dde8cc1d1cd49cbd9d67612acfb75dc5aea7eb0e`. Canonical ancestry is
+preserved through Batch 1/2/3 (`b7163bc` → `b1e7c4a` → `dde8cc1`); the
+canonical worktree was clean before scoped edits. No image or CG file was
+generated or modified.
+
+The ten remaining `REFRAME_STAGE` cues were processed in two sequential
+groups. Each target has before/after captures at `390×844` and `1920×900`,
+plus previous/target/next runtime captures and readback.
+
+| Group | Exact cue | Contract | Acceptance |
+|---|---|---|---|
+| 1 | `S33/scene-start` | `batch4-pair-depth-s33` | PASS |
+| 1 | `S34/scene-start` | `batch4-pair-depth-s34` | PASS |
+| 1 | `S37/scene-start` | `batch4-pair-depth-s37` | PASS |
+| 1 | `S49/scene-start` | `batch4-pair-depth-s49` | PASS |
+| 1 | `S50/scene-start` | `batch4-pair-depth-s50` | PASS |
+| 2 | `S52/scene-start` | `batch4-pair-depth-s52` | PASS |
+| 2 | `S55/scene-start` | `batch4-pair-depth-s55` | PASS |
+| 2 | `S03/editor-call` | existing CG; desktop cue-owned scale; existing portrait derivative on mobile | PASS |
+| 2 | `S35/scene-start` | `batch4-solo-depth-s35` | PASS |
+| 2 | `S41/editor-cafe-call` | `batch4-solo-depth-s41` | PASS |
+
+Evidence: `artifacts/evidence/reframe-batch4-2026-10-08/group1/` and
+`group2/`. Each group has 5 targets × 3 positions × 2 viewports × 2 phases
+= 60 PNG captures. Both group validators report `PASS`; pixel acceptance is
+`PASS` for 20/20 target viewport comparisons with changed pixels in every
+comparison. Runtime health is console errors `0`, failed requests `0`,
+game-owned 404 `0`, overflow `0`, internal scroll `0`, and all images ready.
+Visual acceptance passed after pixel review; no character was hidden and no
+global CSS shift was introduced.
+
+S03 mobile readback is `s03-editor-call-portrait.webp` with portrait natural
+dimensions and cue-owned focal point; S55 mobile keeps both required
+characters grounded and readable. Previous/next captures are included in
+both groups.
+
+Batch 3 preservation was rechecked on the final Batch 4 runtime using fresh
+pixels and runtime mapping: `artifacts/evidence/reframe-batch4-2026-10-08/batch3-preservation/`.
+`S42/scene-start` A/B/C and `S46/airport-bus` are `PASS` in 8/8 viewport
+comparisons; all changed-pixel counts are `0`, mapping is stable, and runtime
+health is clean. Accepted full-scene CGs remain displayed on their cinematic
+cues.
+
+Remaining debt after Final Batch 4:
+
+| Classification | Remaining |
+|---|---:|
+| `REFRAME_STAGE` | 0 |
+| `NEW_FULL_SCENE_CG_REQUIRED` | 11 |
+
+The 11 unchanged out-of-scope `NEW_FULL_SCENE_CG_REQUIRED` states are listed
+above. No state was promoted from `REFRAME_STAGE` to `CG_REQUIRED`.
+
+`PASS_REFRAME_BATCH_4` is issued only after the bounded local commit is
+created. This ledger is not a release, Yandex-hosted, CG-generation, or
+publication approval.
+
 ## Verdict
 
-`PASS_REFRAME_BATCH_2` is issued only after the bounded local commit is created. This ledger is not a release, Yandex-hosted, CG-generation, or publication approval.
+`PASS_REFRAME_BATCH_4`

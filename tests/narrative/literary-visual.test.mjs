@@ -111,6 +111,28 @@ test('Batch 3 reframes bind only the eight selected authored cues',()=>{
  assert.equal(airport.art?.file,'s46-airport-bus.webp');
 });
 
+test('Final Batch 4 reframes bind only the ten selected authored cues',()=>{
+ const expected={
+  'S33/scene-start':'batch4-pair-depth-s33','S34/scene-start':'batch4-pair-depth-s34',
+  'S37/scene-start':'batch4-pair-depth-s37','S49/scene-start':'batch4-pair-depth-s49',
+  'S50/scene-start':'batch4-pair-depth-s50','S52/scene-start':'batch4-pair-depth-s52',
+  'S55/scene-start':'batch4-pair-depth-s55','S35/scene-start':'batch4-solo-depth-s35',
+  'S41/editor-cafe-call':'batch4-solo-depth-s41'
+ };
+ for(const [cue,layout] of Object.entries(expected)){
+  const [id,beat]=cue.split('/');
+  const {flow,choices}=complete(id);
+  const position=flow.findIndex((_,index)=>shot(id,flow,index,choices).beatId===beat);
+  assert.ok(position>=0,`${cue} must be reachable`);
+  assert.equal(shot(id,flow,position,choices).stageComposition,layout,cue);
+ }
+ const {flow,choices}=complete('S03');
+ const editor=shot('S03',flow,0,choices);
+ assert.equal(editor.beatId,'editor-call');
+ assert.equal(editor.art?.file,'s03-editor-call.webp');
+ assert.equal(editor.art?.type,'cg');
+});
+
 test('Episode 1 S02 never interleaves the roadside cafe and car across choice variants',()=>{
  for(const extraA of ['A','B'])for(const extraB of ['A','B'])for(const authored of ['A','B','C']){
   const choices={'S01-C1':'A','S02-C90':extraA,'S02-C91':extraB,'S02-C1':authored};

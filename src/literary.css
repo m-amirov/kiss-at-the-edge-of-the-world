@@ -786,3 +786,83 @@ button.primary:hover{background:linear-gradient(135deg,#d19b76,#a36d51);filter:n
   .scene-stage[data-layout^="four-person-depth-"] .stage-character:nth-child(3){left:36%;transform:scale(1.02) translateY(-2%)}
   .scene-stage[data-layout^="four-person-depth-"] .stage-character:nth-child(4){left:54%;transform:scale(.95) translateY(-6%)}
 }
+
+/* Final bounded REFRAME_STAGE batch: each remaining pair/solo opening owns
+   its foreground scale and ground line. S03 keeps its existing CG and uses
+   only the cue-owned desktop/portrait asset framing in literary-player.js. */
+.scene-stage[data-layout^="batch4-pair-depth-"]{
+  inset:6% 0 20%;
+  display:block;
+  overflow:visible;
+}
+.scene-stage[data-layout^="batch4-pair-depth-"] .stage-character{
+  position:absolute;
+  bottom:0;
+  width:min(36vw,480px);
+  height:100%;
+  min-width:0;
+  margin:0;
+  transform-origin:center bottom;
+}
+.scene-stage[data-layout^="batch4-pair-depth-"] .stage-character img{width:100%;height:100%;object-position:center bottom}
+.scene-stage[data-layout="batch4-pair-depth-s33"] .stage-character:nth-child(1){left:10%;transform:scale(1.05);z-index:3}
+.scene-stage[data-layout="batch4-pair-depth-s33"] .stage-character:nth-child(2){left:44%;transform:scale(.96) translateY(-3%);z-index:2}
+.scene-stage[data-layout="batch4-pair-depth-s34"] .stage-character:nth-child(1){left:12%;transform:scale(1.04);z-index:3}
+.scene-stage[data-layout="batch4-pair-depth-s34"] .stage-character:nth-child(2){left:45%;transform:scale(.95) translateY(-4%);z-index:2}
+.scene-stage[data-layout="batch4-pair-depth-s37"] .stage-character:nth-child(1){left:9%;transform:scale(1.04);z-index:3}
+.scene-stage[data-layout="batch4-pair-depth-s37"] .stage-character:nth-child(2){left:43%;transform:scale(.94) translateY(-4%);z-index:2}
+.scene-stage[data-layout="batch4-pair-depth-s49"] .stage-character:nth-child(1){left:10%;transform:scale(1.05);z-index:3}
+.scene-stage[data-layout="batch4-pair-depth-s49"] .stage-character:nth-child(2){left:44%;transform:scale(.95) translateY(-4%);z-index:2}
+.scene-stage[data-layout="batch4-pair-depth-s50"] .stage-character:nth-child(1){left:8%;transform:scale(1.06);z-index:3}
+.scene-stage[data-layout="batch4-pair-depth-s50"] .stage-character:nth-child(2){left:46%;transform:scale(.94) translateY(-5%);z-index:2}
+.scene-stage[data-layout="batch4-pair-depth-s52"] .stage-character:nth-child(1){left:12%;transform:scale(1.04);z-index:3}
+.scene-stage[data-layout="batch4-pair-depth-s52"] .stage-character:nth-child(2){left:45%;transform:scale(.95) translateY(-4%);z-index:2}
+.scene-stage[data-layout="batch4-pair-depth-s55"] .stage-character:nth-child(1){left:10%;transform:scale(1.05);z-index:3}
+.scene-stage[data-layout="batch4-pair-depth-s55"] .stage-character:nth-child(2){left:44%;transform:scale(.95) translateY(-4%);z-index:2}
+@media(max-width:680px){
+  .scene-stage[data-layout^="batch4-pair-depth-"]{inset:8% -5% 32%;}
+  .scene-stage[data-layout^="batch4-pair-depth-"] .stage-character{width:70vw;height:112%;}
+  .scene-stage[data-layout^="batch4-pair-depth-s33"] .stage-character:nth-child(1){left:1%;transform:scale(1.06)}
+  .scene-stage[data-layout^="batch4-pair-depth-s33"] .stage-character:nth-child(2){left:38%;transform:scale(.97) translateY(-4%)}
+  .scene-stage[data-layout^="batch4-pair-depth-s34"] .stage-character:nth-child(1){left:3%;transform:scale(1.05)}
+  .scene-stage[data-layout^="batch4-pair-depth-s34"] .stage-character:nth-child(2){left:39%;transform:scale(.96) translateY(-5%)}
+  .scene-stage[data-layout^="batch4-pair-depth-s37"] .stage-character:nth-child(1){left:0;transform:scale(1.05)}
+  .scene-stage[data-layout^="batch4-pair-depth-s37"] .stage-character:nth-child(2){left:36%;transform:scale(.95) translateY(-5%)}
+  .scene-stage[data-layout^="batch4-pair-depth-s49"] .stage-character:nth-child(1){left:1%;transform:scale(1.06)}
+  .scene-stage[data-layout^="batch4-pair-depth-s49"] .stage-character:nth-child(2){left:38%;transform:scale(.96) translateY(-5%)}
+  .scene-stage[data-layout^="batch4-pair-depth-s50"] .stage-character:nth-child(1){left:-1%;transform:scale(1.07)}
+  .scene-stage[data-layout^="batch4-pair-depth-s50"] .stage-character:nth-child(2){left:40%;transform:scale(.95) translateY(-6%)}
+  .scene-stage[data-layout^="batch4-pair-depth-s52"] .stage-character:nth-child(1){left:3%;transform:scale(1.05)}
+  .scene-stage[data-layout^="batch4-pair-depth-s52"] .stage-character:nth-child(2){left:39%;transform:scale(.96) translateY(-5%)}
+  .scene-stage[data-layout^="batch4-pair-depth-s55"] .stage-character:nth-child(1){left:1%;transform:scale(1.06)}
+  .scene-stage[data-layout^="batch4-pair-depth-s55"] .stage-character:nth-child(2){left:37%;transform:scale(.96) translateY(-5%)}
+}
+.scene-stage[data-layout^="batch4-solo-depth-"]{
+  inset:6% 0 20%;
+  display:block;
+  overflow:visible;
+}
+.scene-stage[data-layout^="batch4-solo-depth-"] .stage-character{
+  position:absolute;
+  bottom:0;
+  width:min(44vw,520px);
+  height:100%;
+  min-width:0;
+  margin:0;
+  transform-origin:center bottom;
+}
+.scene-stage[data-layout^="batch4-solo-depth-"] .stage-character img{width:100%;height:100%;object-position:center bottom}
+.scene-stage[data-layout="batch4-solo-depth-s35"] .stage-character{left:28%;transform:scale(1.05);z-index:3}
+.scene-stage[data-layout="batch4-solo-depth-s41"] .stage-character{left:31%;transform:scale(1.06);z-index:3}
+@media(max-width:680px){
+  .scene-stage[data-layout^="batch4-solo-depth-"]{inset:8% -4% 32%;}
+  .scene-stage[data-layout^="batch4-solo-depth-"] .stage-character{width:86vw;height:112%;}
+  .scene-stage[data-layout="batch4-solo-depth-s35"] .stage-character{left:7%;transform:scale(1.04)}
+  .scene-stage[data-layout="batch4-solo-depth-s41"] .stage-character{left:9%;transform:scale(1.05)}
+}
+@media(min-width:681px){
+  .literary-picture.is-cg[data-visual-beat="editor-call"] > img[data-asset="s03-editor-call.webp"]{
+    transform:scale(1.04) translateY(-1%);
+    transform-origin:50% 34%;
+  }
+}

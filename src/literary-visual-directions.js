@@ -94,7 +94,16 @@ const reframeStageCompositionByBeat = new Map([
   ['S01:nick-arrives','batch3-pair-depth-s01-nick-arrives'],
   ['S18:scene-start','batch3-pair-depth-s18-opening'],
   ['S28:scene-start','batch3-pair-depth-s28-opening'],
-  ['S30:scene-start','batch3-pair-depth-s30-opening']
+  ['S30:scene-start','batch3-pair-depth-s30-opening'],
+  ['S33:scene-start','batch4-pair-depth-s33'],
+  ['S34:scene-start','batch4-pair-depth-s34'],
+  ['S37:scene-start','batch4-pair-depth-s37'],
+  ['S49:scene-start','batch4-pair-depth-s49'],
+  ['S50:scene-start','batch4-pair-depth-s50'],
+  ['S52:scene-start','batch4-pair-depth-s52'],
+  ['S55:scene-start','batch4-pair-depth-s55'],
+  ['S35:scene-start','batch4-solo-depth-s35'],
+  ['S41:editor-cafe-call','batch4-solo-depth-s41']
 ]);
 const reframeRequiredGroup = ['alice','eric','nick','damir'];
 const reframeRequiredCastByBeat = new Map([

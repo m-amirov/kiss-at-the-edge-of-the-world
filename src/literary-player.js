@@ -46,7 +46,9 @@ const focalPointByAsset = {
   's44-eric-epilogue-month-later.webp': '50% 48%',
   's45-nick-home-epilogue-month-later.webp': '50% 45%',
   's46-damir-epilogue-month-later.webp': '50% 44%',
-  's47-alice-home-epilogue-month-later.webp': '67% 44%'
+  's47-alice-home-epilogue-month-later.webp': '67% 44%',
+  's03-editor-call.webp': '50% 34%',
+  's03-editor-call-portrait.webp': '50% 31%'
 };
 const portraitAssetByDesktopAsset = {
   's06-hveragerdi-eric-alice.webp':'s06-hveragerdi-eric-alice-portrait.webp',
@@ -98,6 +100,7 @@ const portraitAssetByDesktopAsset = {
   ,'s63-alice-solo-concert.webp':'s63-alice-solo-concert-portrait.webp'
   ,'s37-eric-alice-cafe.webp':'s37-eric-alice-cafe-portrait.webp'
   ,'s03-editor-call-damir.webp':'s03-editor-call-damir-portrait.webp'
+  ,'s03-editor-call.webp':'s03-editor-call-portrait.webp'
   ,'s18-hofn-breakfast-group.webp':'s18-hofn-breakfast-group-portrait.webp'
   ,'s38-alice-nick-ordinary-day.webp':'s38-alice-nick-ordinary-day-portrait.webp'
   ,'s54-alice-nick-karaoke.webp':'s54-alice-nick-karaoke-portrait.webp'
