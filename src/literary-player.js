@@ -115,6 +115,7 @@ const portraitAssetByDesktopAsset = {
   ,'s26-route-choice-courtyard-batch2.webp':'s26-route-choice-courtyard-batch2-portrait.webp'
   ,'s02-van-group-batch2.webp':'s02-van-group-batch2-portrait.webp'
   ,'s60-souvenir-kitchen-batch2.webp':'s60-souvenir-kitchen-batch2-portrait.webp'
+  ,'s02-roadside-cafe-group.webp':'s02-roadside-cafe-group-portrait.webp'
 };
 const portraitAssetByBeat = {
   'airport-bus': 's46-airport-bus-portrait.webp',
@@ -123,6 +124,10 @@ const portraitAssetByBeat = {
 function assetFileForViewport(art, beatId){
   const portrait=window.matchMedia?.('(max-width: 680px) and (orientation: portrait)').matches;
   return portrait ? (portraitAssetByBeat[beatId] ?? portraitAssetByDesktopAsset[art.file] ?? art.file) : art.file;
+}
+function visibleCastForDirection(direction){
+  if(direction?.art?.presentation==='cinematic')return [...(direction.requiredCast?.length?direction.requiredCast:direction.cast??[])];
+  return stageCastForPresentation(direction);
 }
 const stageAsset = { alice:'alice-stage.webp', eric:'eric-stage.webp', nick:'nick-stage.webp', damir:'damir-stage.webp' };
 // Resolve the menu cover through the same module-aware archive asset contract.
@@ -473,7 +478,7 @@ function renderReader(){
   if(art?.presentation!=='cinematic'){
     // Ordinary background groups stay focal, but a visual beat may explicitly
     // require three or four people for narrative continuity.
-    const presentationCast=stageCastForPresentation(direction);
+    const presentationCast=visibleCastForDirection(direction);
     picture.append(renderStage({...direction,cast:presentationCast,mode:presentationCast.length>2?'group':presentationCast.length===2?'pair':'solo',mood:stageForScene(scene.id,reader.choices).mood}));
   }
   picture.append(el('','literary-vignette'));app.append(picture);bindStageNavigation(picture);
@@ -578,10 +583,12 @@ window.__LITERARY_QA__={
   getRuntimeTrace:()=>{
     const scene=byId.get(reader.sceneId),flow=compileInteractivePlayback(scene,reader.choices,locale),entry=flow[reader.position]??flow.at(-1)??null;
     const visualEntry=visualEntryForPosition(flow,reader.position);
-    const direction=visualAt(scene.id,visualEntry,reader.choices,stageForScene(scene.id,reader.choices).cast);
+    const authoredCast=stageForScene(scene.id,reader.choices).cast;
+    const direction=visualAt(scene.id,visualEntry,reader.choices,authoredCast);
+    const visibleCast=visibleCastForDirection(direction);
     const text=entry?.text??entry?.question??'';
     let hash=2166136261;for(const char of text)hash=Math.imul(hash^char.charCodeAt(0),16777619);
-    return {displayedPosition:`${reader.position+1}/${flow.length}`,sceneId:scene.id,entryId:entry?.id??null,entryType:entry?.type??null,sourceStartRef:entry?.sourceStartRef??null,sourceEndRef:entry?.sourceEndRef??null,dialogueHash:(hash>>>0).toString(16),speaker:null,platformMode:platform?.mode??'booting',revision:reader.revision,choiceState:structuredClone(reader.choices),location:direction.location,visualBeat:direction.beatId,background:direction.art?.file??null,cast:direction.cast,stage:stageForScene(scene.id,reader.choices)};
+    return {displayedPosition:`${reader.position+1}/${flow.length}`,sceneId:scene.id,entryId:entry?.id??null,entryType:entry?.type??null,sourceStartRef:entry?.sourceStartRef??null,sourceEndRef:entry?.sourceEndRef??null,dialogueHash:(hash>>>0).toString(16),speaker:null,platformMode:platform?.mode??'booting',revision:reader.revision,choiceState:structuredClone(reader.choices),location:direction.location,time:direction.time,visualBeat:direction.beatId,background:direction.art?.file??null,artType:direction.art?.type??null,authoredCast,requiredCast:direction.requiredCast??[],visibleCast,cast:direction.cast,stage:stageForScene(scene.id,reader.choices)};
   },
   // QA methods are strictly read-only; preview and the old game have separate state keys.
 };

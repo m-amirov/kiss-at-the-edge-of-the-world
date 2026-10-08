@@ -57,8 +57,10 @@ test('S02 uses the accepted integrated moving-van CG until the authored cafe cue
  assert.deepEqual(shot('S02',flow,0,choices).requiredCast,['alice','eric','nick','damir']);
  const cafe=indexOfSource(flow,0,31);
  assert.equal(shot('S02',flow,cafe,choices).beatId,'roadside-cafe');
- assert.equal(shot('S02',flow,cafe,choices).art?.file,'s02-roadside-cafe.webp');
- assert.equal(shot('S02',flow,cafe,choices).art?.type,'background');
+ assert.equal(shot('S02',flow,cafe,choices).art?.file,'s02-roadside-cafe-group.webp');
+ assert.equal(shot('S02',flow,cafe,choices).art?.type,'cg');
+ assert.deepEqual(shot('S02',flow,cafe,choices).cast,['alice','eric','nick','damir']);
+ assert.deepEqual(shot('S02',flow,cafe,choices).requiredCast,['alice','eric','nick','damir']);
  assert.equal(shot('S02',flow,cafe-1,choices).art?.file,'s02-van-group-batch2.webp');
 });
 
@@ -142,7 +144,7 @@ test('Episode 1 S02 never interleaves the roadside cafe and car across choice va
   assert.deepEqual(transitions,['Автомобиль по дороге в Рейкьявик','Придорожное кафе'],`${extraA}/${extraB}/${authored}`);
   const cafe=indexOfSource(flow,0,31);
   assert.ok(flow.slice(cafe).every(entry=>shot('S02',[entry],0,choices).location==='Придорожное кафе'));
-  assert.ok(flow.slice(cafe).every(entry=>shot('S02',[entry],0,choices).art?.file==='s02-roadside-cafe.webp'));
+  assert.ok(flow.slice(cafe).every(entry=>shot('S02',[entry],0,choices).art?.file==='s02-roadside-cafe-group.webp'));
  }
 });
 
@@ -318,7 +320,7 @@ test('S02 and S26 visual state survives a save/load-shaped choice round trip',()
  const s02=complete('S02');
  const s02Saved=JSON.parse(JSON.stringify(s02.choices));
  const s02Cafe=indexOfSource(s02.flow,0,31);
- assert.equal(shot('S02',s02.flow,s02Cafe,s02Saved).art?.file,'s02-roadside-cafe.webp');
+ assert.equal(shot('S02',s02.flow,s02Cafe,s02Saved).art?.file,'s02-roadside-cafe-group.webp');
  const s26=complete('S26',{'S26-C90':'A','S26-C1':'A'});
  const s26Saved=JSON.parse(JSON.stringify(s26.choices));
  const s26Eric=indexOfSource(s26.flow,7,0);

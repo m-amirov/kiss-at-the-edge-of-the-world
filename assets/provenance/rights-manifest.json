@@ -1255,6 +1255,38 @@
       "license": "ACE-Step code and model MIT; generated output permitted for commercial use per official model card",
       "cueId": "ending",
       "loopable": false
+    },
+    {
+      "path": "assets/cg/s02-roadside-cafe-group.png",
+      "sha256": "DFF2AAE7D2375B4AF67DCE628110EEDD04246A7ECDFE6B547CFAEA0259970771",
+      "dimensions": "1831x859",
+      "method": "Integrated desktop full-scene CG generated with canonical Alice, Eric, Nick, Damir and roadside-cafe references",
+      "source": "Generated in Codex imagegen during production-art run 2026-10-08T11-26-36-655Z-production-art-6e0221",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s02-roadside-cafe-group-portrait.png",
+      "sha256": "B2259FB52452E9D531A41D4469DFC5D0969F059A6BF627A6965863ECBA70BA6D",
+      "dimensions": "941x1672",
+      "method": "Portrait-safe integrated full-scene CG generated with the same canonical cast and location references",
+      "source": "Generated in Codex imagegen during production-art run 2026-10-08T11-26-36-655Z-production-art-6e0221",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s02-roadside-cafe-group.webp",
+      "sha256": "EB7848A8EDBA79BB36B2F0E88620F4131BA0103883729BB96A1773074AC78092",
+      "dimensions": "1831x859",
+      "method": "Lossless runtime WebP derivative of the integrated desktop CG",
+      "source": "Derived locally from assets/cg/s02-roadside-cafe-group.png",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s02-roadside-cafe-group-portrait.webp",
+      "sha256": "E93ADBC77C25FD23A7BE2796044B471BAE878198B12A3E0A61A5239786CF72DA",
+      "dimensions": "941x1672",
+      "method": "Lossless runtime WebP derivative of the portrait-safe integrated CG",
+      "source": "Derived locally from assets/cg/s02-roadside-cafe-group-portrait.png",
+      "license": "generated for this project"
     }
   ]
 }

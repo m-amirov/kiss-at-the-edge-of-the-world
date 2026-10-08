@@ -6051,7 +6051,7 @@ export const literaryLocaleBundles = {
             {
               "code": "B",
               "label": "Leave the statement without explanation",
-              "text": "Alice did not justify her thought. A silence settled over the car, and it held more than the magazine's plans."
+              "text": "Alice did not justify her thought. A silence settled over the cafe table, and it held more than the magazine's plans."
             }
           ]
         }

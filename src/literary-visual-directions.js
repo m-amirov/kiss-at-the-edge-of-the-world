@@ -125,7 +125,7 @@ const cues = {
       {at:[3,0],id:'car-nick',location:'Автомобиль: заднее сиденье',art:'road-trip-van-interior-rain.webp',presentation:'cinematic',cast:['alice','eric','nick','damir'],when:{'S01-C1':'B'}},
       {at:[4,0],id:'car-damir',location:'Автомобиль: заднее сиденье',art:'road-trip-van-interior-rain.webp',presentation:'cinematic',cast:['alice','eric','nick','damir'],when:{'S01-C1':'C'}}],
  S02:[{at:[0,0],id:'scene-start',cast:['alice','eric','nick','damir'],requiredCast:['alice','eric','nick','damir'],art:'cg/s02-van-group-batch2.webp'},
-      {at:[0,31],id:'roadside-cafe',location:'Придорожное кафе',art:'s02-roadside-cafe.webp'}],
+      {at:[0,31],id:'roadside-cafe',location:'Придорожное кафе',cast:['alice','eric','nick','damir'],requiredCast:['alice','eric','nick','damir'],art:'cg/s02-roadside-cafe-group.webp'}],
  S03:[{at:[0,0],id:'editor-call',cast:['alice'],art:'cg/s03-editor-call.webp',presentation:'cinematic'},
       {at:[4,0],id:'damir-enters',cast:['alice','damir'],art:'cg/s03-editor-call-damir.webp'}],
  S04:[{at:[0,4],id:'thingvellir-trail',location:'Þingvellir: тропа и ущелье',art:'thingvellir-master.webp',cast:[...reframeRequiredGroup],requiredCast:[...reframeRequiredGroup]}],

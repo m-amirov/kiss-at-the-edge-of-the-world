@@ -1751,6 +1751,21 @@
       "portraitDimensions": "941x1672",
       "runtimePath": "assets/cg/s37-eric-alice-cafe.webp",
       "runtimePortraitAsset": "assets/cg/s37-eric-alice-cafe-portrait.webp"
+    },
+    {
+      "id": "s02-roadside-cafe-group",
+      "family": "cg",
+      "path": "assets/cg/s02-roadside-cafe-group.png",
+      "status": "integrated",
+      "runtime": "S02 authored cue [0,31], roadside cafe transition; Alice, Eric, Nick and Damir remain physically present",
+      "creationMethod": "Codex imagegen current production-art run using approved character and roadside-cafe canon; one integrated desktop CG plus portrait-safe derivative",
+      "createdAt": "2026-10-08",
+      "dimensions": "1831x859",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s02-roadside-cafe-group-portrait.png",
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s02-roadside-cafe-group.webp",
+      "runtimePortraitAsset": "assets/cg/s02-roadside-cafe-group-portrait.webp"
     }
   ],
   "visualDirection": {
