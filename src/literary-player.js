@@ -467,7 +467,7 @@ function renderReader(){
   const flow=compileInteractivePlayback(scene,reader.choices,locale);reader.position=Math.min(reader.position,flow.at(-1)?.type==='choice'?Math.max(0,flow.length-1):flow.length);
   const isEnding=['S44','S45','S46','S47'].includes(scene.id);
   const mode=artMode(scene,flow[reader.position],reader.choices,isEnding);
-  app.className='literary-reader';app.dataset.presentation=mode;app.replaceChildren();
+  app.className='literary-reader';app.dataset.presentation=mode;app.dataset.scene=scene.id;app.replaceChildren();
   const current=flow[reader.position];
   const visualEntry=visualEntryForPosition(flow,reader.position);
   const direction=visualAt(scene.id,visualEntry,reader.choices,stageForScene(scene.id,reader.choices).cast);

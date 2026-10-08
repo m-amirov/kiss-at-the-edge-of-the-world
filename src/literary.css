@@ -911,3 +911,19 @@ button.primary:hover{background:linear-gradient(135deg,#d19b76,#a36d51);filter:n
     transform-origin:50% 34%;
   }
 }
+
+/* Mobile HUD safe zone: move the existing stage as a unit below the header.
+   The translation preserves authored character scale and keeps the reader
+   sheet as a separate lower layer; pixel QA verifies both exclusion zones. */
+@media(max-width:680px) and (orientation:portrait){
+  .literary-reader .scene-stage{
+    --mobile-hud-safe-shift:clamp(104px,14dvh,122px);
+    transform:translateY(var(--mobile-hud-safe-shift));
+  }
+  .literary-reader[data-scene="S35"] .scene-stage{
+    transform:translateY(calc(var(--mobile-hud-safe-shift) + clamp(8px,1dvh,10px)));
+  }
+  .literary-reader[data-scene="S66"] .scene-stage{
+    --mobile-hud-safe-shift:clamp(82px,10dvh,92px);
+  }
+}

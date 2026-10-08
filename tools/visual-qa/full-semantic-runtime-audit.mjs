@@ -81,8 +81,9 @@ async function setState(page,state){
   await page.waitForFunction(()=>Boolean(window.__LITERARY_QA__));
   const resume=page.getByRole('button',{name:/Продолжить|Continue|Новая игра|New game/}).first();
   if(await resume.count())await resume.click();
-  await page.waitForTimeout(150);
   await page.waitForFunction(()=>{const image=document.querySelector('.literary-picture img');return !image||Boolean(image.complete&&image.naturalWidth>0)},{timeout:10000}).catch(()=>{});
+  await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+  await page.waitForTimeout(420);
 }
 
 async function inspect(page){

@@ -6,10 +6,14 @@ const root = process.cwd();
 const oldPath = process.env.SEMANTIC_LEDGER_SOURCE ?? 'artifacts/evidence/full-semantic-runtime-audit-2026-10-08.json';
 const freshPath = process.env.SEMANTIC_LEDGER_FRESH ?? 'artifacts/evidence/full-semantic-runtime-audit-2026-10-08-reaudit.json';
 const cgPath = process.env.SEMANTIC_CG_EVIDENCE ?? 'artifacts/evidence/cg-cast-pixel-evidence-2026-10-08.json';
+const hudPath = process.env.SEMANTIC_HUD_EVIDENCE ?? 'artifacts/evidence/mobile-hud-overlap-2026-10-08.json';
+const hudBeforePath = process.env.SEMANTIC_HUD_BEFORE_EVIDENCE ?? 'artifacts/evidence/mobile-hud-overlap-before-2026-10-08.json';
 const outPath = process.env.SEMANTIC_LEDGER_OUTPUT ?? 'artifacts/evidence/semantic-defect-ledger-2026-10-08-reaudit.json';
 
 const readJson = async file => JSON.parse(await fs.readFile(path.resolve(root, file), 'utf8'));
-const [oldAudit, freshAudit, cgEvidence] = await Promise.all([readJson(oldPath), readJson(freshPath), readJson(cgPath)]);
+const [oldAudit, freshAudit, cgEvidence, hudEvidence, hudBeforeEvidence] = await Promise.all([
+  readJson(oldPath), readJson(freshPath), readJson(cgPath), readJson(hudPath), readJson(hudBeforePath)
+]);
 const cgByAsset = new Map((cgEvidence.entries ?? []).map(entry => [entry.asset, entry]));
 
 const refKey = ref => ref ? `${ref.chunk}:${ref.paragraph}` : '';
@@ -126,6 +130,27 @@ const severityCounts = ['P0', 'P1', 'P2'].reduce((result, severity) => {
   result[severity] = records.filter(record => record.classification === 'CONFIRMED_VISUAL_DEFECT' && record.severity === severity).length;
   return result;
 }, {});
+const hudTargetBefore = hudBeforeEvidence.scenes.filter(record => record.scene === 'S01' && ['2/9', '3/9'].includes(record.displayedPosition));
+const hudTargetAfter = hudEvidence.scenes.filter(record => record.scene === 'S01' && ['2/9', '3/9'].includes(record.displayedPosition));
+const supplementalHudDefect = {
+  code: 'MOBILE_HUD_CHARACTER_OVERLAP',
+  classification: 'CONFIRMED_VISUAL_DEFECT',
+  severity: 'P1',
+  status: hudTargetAfter.length === 6 && hudTargetAfter.every(record => record.status === 'PASS' && record.measurement.overlaps.length === 0 && record.measurement.lowerOverlaps.length === 0) ? 'REPAIRED' : 'UNRESOLVED',
+  scene: 'S01',
+  positions: ['2/9', '3/9'],
+  viewports: ['360x640', '390x844', '412x915'],
+  before: {
+    evidence: hudBeforePath,
+    affectedStates: hudTargetBefore.filter(record => record.measurement.overlaps.length > 0).length,
+    records: hudTargetBefore.map(record => ({ viewport: `${record.viewport.width}x${record.viewport.height}`, displayedPosition: record.displayedPosition, hud: record.measurement.hud, critical: record.measurement.characters.map(character => ({ id: character.id, critical: character.critical })), overlapPixels: record.measurement.overlaps.map(item => ({ id: item.id, pixels: item.pixels })) }))
+  },
+  after: {
+    evidence: hudPath,
+    affectedStates: hudTargetAfter.filter(record => record.measurement.overlaps.length || record.measurement.lowerOverlaps.length).length,
+    records: hudTargetAfter.map(record => ({ viewport: `${record.viewport.width}x${record.viewport.height}`, displayedPosition: record.displayedPosition, hud: record.measurement.hud, critical: record.measurement.characters.map(character => ({ id: character.id, critical: character.critical })), lowerOverlapPixels: record.measurement.lowerOverlaps.map(item => ({ id: item.id, pixels: item.pixels })) }))
+  }
+};
 
 const output = {
   schemaVersion: 2,
@@ -151,8 +176,10 @@ const output = {
     cgCastAlreadyPresent: counts('CG_CAST_ALREADY_PRESENT'),
     semanticDetectorFalsePositive: counts('SEMANTIC_DETECTOR_FALSE_POSITIVE'),
     needsManualReview: counts('NEEDS_MANUAL_REVIEW'),
-    confirmedSeverity: severityCounts
+    confirmedSeverity: severityCounts,
+    supplementalDefects: [supplementalHudDefect]
   },
+  supplementalDefects: [supplementalHudDefect],
   records
 };
 await fs.writeFile(path.resolve(root, outPath), `${JSON.stringify(output, null, 2)}\n`);
