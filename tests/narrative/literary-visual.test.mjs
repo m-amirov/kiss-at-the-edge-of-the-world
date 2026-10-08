@@ -26,6 +26,22 @@ function indexOfSource(flow,chunk,paragraph){
  const i=flow.findIndex(e=>e.sourceStartRef?.chunk===chunk && e.sourceStartRef.paragraph===paragraph);
  assert.ok(i>=0,`Missing source ${chunk}:${paragraph}`);return i;
 }
+test('S01 physical placard is localized at the authored nick-arrives cue and stays separate from airport-outside',()=>{
+ const cue=visualCues.S01.find(item=>item.id==='nick-arrives');
+ assert.deepEqual(cue.at,[0,4]);
+ assert.deepEqual(cue.localizedArt,{ru:'cg/s01-nick-arrives-placard-ru.webp',en:'cg/s01-nick-arrives-placard-en.webp'});
+ assert.deepEqual(cue.localizedPortraitArt,{ru:'cg/s01-nick-arrives-placard-ru-portrait.webp',en:'cg/s01-nick-arrives-placard-en-portrait.webp'});
+ const {flow,choices}=complete('S01');
+ const position=indexOfSource(flow,0,4);
+ const direction=shot('S01',flow,position,choices);
+ assert.equal(direction.beatId,'nick-arrives');
+ assert.equal(direction.art?.file,'s01-nick-arrives-placard-ru.webp');
+ assert.deepEqual(direction.art?.localeFiles,{ru:'s01-nick-arrives-placard-ru.webp',en:'s01-nick-arrives-placard-en.webp'});
+ assert.deepEqual(direction.art?.localePortraitFiles,{ru:'s01-nick-arrives-placard-ru-portrait.webp',en:'s01-nick-arrives-placard-en-portrait.webp'});
+ const outside=shot('S01',flow,indexOfSource(flow,0,16),choices);
+ assert.equal(outside.beatId,'airport-outside');
+ assert.equal(outside.art?.file,'s01-airport-outside-batch2.webp');
+});
 test('all 66 scenes have a real authored place, time, cast and bounded image reference',()=>{
  assert.deepEqual(new Set(Object.keys(visualScenes)),new Set(scenes.keys()));
  for(const [id,scene] of scenes){

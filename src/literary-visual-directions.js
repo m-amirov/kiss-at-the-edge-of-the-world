@@ -118,7 +118,7 @@ const requiredCastForReframe = beat => reframeRequiredCastByBeat.get(beat)?.slic
 // Format: [chunkIndex, paragraphIndex]. Changes persist to the next cue.
 // Every cue is an explicit editorial decision; never infer actions from prose.
 const cues = {
- S01:[{at:[0,4],id:'nick-arrives',cast:['alice','nick']},
+ S01:[{at:[0,4],id:'nick-arrives',cast:['alice','nick'],art:'cg/s01-nick-arrives-placard-ru.webp',localizedArt:{ru:'cg/s01-nick-arrives-placard-ru.webp',en:'cg/s01-nick-arrives-placard-en.webp'},localizedPortraitArt:{ru:'cg/s01-nick-arrives-placard-ru-portrait.webp',en:'cg/s01-nick-arrives-placard-en-portrait.webp'}},
       {at:[0,16],id:'airport-outside',cast:['alice','nick','eric'],requiredCast:['alice','nick','eric'],location:'Кефлавик: выход под дождь',art:'cg/s01-airport-outside-batch2.webp'},
       {at:[0,24],id:'damir-arrives',cast:['alice','nick','eric','damir'],requiredCast:['alice','nick','eric','damir'],art:'cg/s01-damir-arrives-batch2.webp'},
       {at:[2,0],id:'car-eric',location:'Автомобиль: переднее сиденье',art:'road-trip-van-interior-rain.webp',presentation:'cinematic',cast:['alice','eric','nick','damir'],when:{'S01-C1':'A'}},
@@ -235,6 +235,8 @@ export function visualAt(sceneId,entry,choices={},baseCast=['alice']){
    if(!validArt(cue.art))throw new Error(`Invalid art for ${sceneId}/${cue.id}`);
    state.art=cue.art===null?null:cue.art.startsWith('cg/')?{type:'cg',presentation:'cinematic',file:cue.art.slice(3)}:{type:'background',presentation:'environment',file:cue.art};
    if(state.art && cue.presentation)state.art.presentation=cue.presentation;
+   if(state.art && cue.localizedArt){state.art.localeFiles=Object.fromEntries(Object.entries(cue.localizedArt).map(([locale,file])=>[locale,file.slice(3)]));}
+   if(state.art && cue.localizedPortraitArt){state.art.localePortraitFiles=Object.fromEntries(Object.entries(cue.localizedPortraitArt).map(([locale,file])=>[locale,file.slice(3)]));}
   }
   state.beatId=cue.id;
   state.stageComposition=reframeStageCompositionByBeat.get(`${sceneId}:${cue.id}`)??null;

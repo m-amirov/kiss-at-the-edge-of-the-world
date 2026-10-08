@@ -123,9 +123,9 @@ const portraitAssetByBeat = {
   'airport-bus': 's46-airport-bus-portrait.webp',
   's42-harbour-cafe': 's42-harbour-cafe-portrait.webp'
 };
-function assetFileForViewport(art, beatId){
+function assetFileForViewport(art, beatId, locale){
   const portrait=window.matchMedia?.('(max-width: 680px) and (orientation: portrait)').matches;
-  return portrait ? (portraitAssetByBeat[beatId] ?? portraitAssetByDesktopAsset[art.file] ?? art.file) : art.file;
+  return portrait ? (art.localePortraitFiles?.[locale] ?? portraitAssetByBeat[beatId] ?? portraitAssetByDesktopAsset[art.file] ?? art.file) : (art.localeFiles?.[locale] ?? art.file);
 }
 function visibleCastForDirection(direction){
   if(direction?.art?.presentation==='cinematic')return [...(direction.requiredCast?.length?direction.requiredCast:direction.cast??[])];
@@ -475,7 +475,7 @@ function renderReader(){
   const art=direction.art;
   const picture=el('','literary-picture');picture.setAttribute('aria-hidden','true');picture.dataset.presentation=mode;picture.dataset.mode=art?.presentation??(art?.type==='cg'?'cinematic':'environment');
   picture.dataset.visualBeat=direction.beatId;picture.dataset.location=direction.location;picture.dataset.time=direction.time;
-  if(art){const file=assetFileForViewport(art,direction.beatId);const img=el('','','img');img.src=runtimeAssetUrl(`${art.type==='cg'?'cg':'backgrounds'}/${file}`);img.alt='';img.decoding='async';img.dataset.desktopAsset=art.file;img.dataset.asset=file;picture.append(img);picture.style.setProperty('--focus',focalPointByAsset[file]??focalPointByAsset[art.file]??'50% 50%');if(art.type==='cg'){picture.classList.add('is-cg');picture.style.setProperty('--cg-url',`url("${img.src}")`)}}
+  if(art){const file=assetFileForViewport(art,direction.beatId,locale);const img=el('','','img');img.src=runtimeAssetUrl(`${art.type==='cg'?'cg':'backgrounds'}/${file}`);img.alt='';img.decoding='async';img.dataset.desktopAsset=art.file;img.dataset.asset=file;picture.append(img);picture.style.setProperty('--focus',focalPointByAsset[file]??focalPointByAsset[art.file]??'50% 50%');if(art.type==='cg'){picture.classList.add('is-cg');picture.style.setProperty('--cg-url',`url("${img.src}")`)}}
   else picture.classList.add('no-art');
   if(art?.presentation!=='cinematic'){
     // Ordinary background groups stay focal, but a visual beat may explicitly

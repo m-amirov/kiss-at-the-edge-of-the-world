@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "phase": "analysis",
+  "pipeline": "production-art",
+  "agent": "ceos_art_director_web",
+  "model": "chatgpt-web/gpt-6-sol",
+  "reasoning": "high",
+  "taskId": "01a11c8b-4fe7-7472-a962-adaa682249f7",
+  "reviewTraceId": "01a11c8b-4fe7-7472-a962-adaa682249f7-analysis",
+  "sourceHead": "6e9a546c187ca6fec9bf4a413bdd1a6139756c91",
+  "status": "FINDINGS",
+  "actualPixelsReceived": true,
+  "reviewedItems": ["S01.C000.P004:nick-arrives", "S01.C000.P016:airport-outside-exclusion", "desktop-runtime-composition"],
+  "evidenceRefs": [
+    "assets/characters/nick-master.png",
+    "assets/characters/alice-stage.png",
+    "assets/backgrounds/keflavik-airport-arrivals-v1.png",
+    "artifacts/evidence/s01-placard-2026-10-08/before/ru-target-desktop-1920x900.png"
+  ],
+  "receivedEvidenceRefs": [
+    "assets/characters/nick-master.png",
+    "assets/characters/alice-stage.png",
+    "assets/backgrounds/keflavik-airport-arrivals-v1.png",
+    "artifacts/evidence/s01-placard-2026-10-08/before/ru-target-desktop-1920x900.png"
+  ],
+  "decision": "Use a new integrated interior-arrivals full-scene CG pair. Keep Alice left and Nick right, place the physical wet cardboard sign between them above the dialogue sheet, preserve Nick's neck camera and both character identities, and keep the sign text physically painted and locale-specific.",
+  "findings": [
+    { "id": "S01-PLACARD-MISSING", "severity": "P2", "detail": "Current runtime is a cut-out stage and does not depict the authored physical placard beat." },
+    { "id": "S01-CANON-LOCK", "severity": "REQUIRED", "detail": "The repair must remain inside the Keflavik arrivals hall; airport-outside [0,16] is a separate no-sign/no-camera beat." },
+    { "id": "S01-MOBILE-PROOF", "severity": "EVIDENCE_REQUIRED", "detail": "Portrait-safe mobile readability remains to be proven with the generated pair and runtime captures." }
+  ],
+  "unresolved": ["S01-MOBILE-PROOF"],
+  "evidenceArtifact": "artifacts/production-art/S01_PLACARD_WEB_ANALYSIS_REVIEW.json"
+}

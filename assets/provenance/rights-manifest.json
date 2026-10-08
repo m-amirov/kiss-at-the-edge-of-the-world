@@ -1287,6 +1287,70 @@
       "method": "Lossless runtime WebP derivative of the portrait-safe integrated CG",
       "source": "Derived locally from assets/cg/s02-roadside-cafe-group-portrait.png",
       "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s01-nick-arrives-placard-ru.png",
+      "sha256": "106CBA1DB10083037E2A3C06EB3051EB5FF2133D30DF4ED8D5F6520EB0ECDD68",
+      "dimensions": "1672x941",
+      "method": "Integrated desktop CG generated with canonical Alice, Nick and Keflavik arrivals references; exact Russian marker lettering composited onto the physical wet cardboard",
+      "source": "Generated in Codex imagegen during production-art run 2026-10-08T17-21-04-993Z-production-art-c6e9de; lettering composited locally from the authored S01.C000.P004 text",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s01-nick-arrives-placard-ru-portrait.png",
+      "sha256": "1A457EBBEA221FF36FA9E8CFA6A9E1897DDAA12A183D6AB7D26C2A6DB7DCE5A7",
+      "dimensions": "940x1672",
+      "method": "Portrait-safe integrated CG generated with the same canonical cast and location references; exact Russian marker lettering composited onto the physical wet cardboard",
+      "source": "Generated in Codex imagegen during production-art run 2026-10-08T17-21-04-993Z-production-art-c6e9de; lettering composited locally from the authored S01.C000.P004 text",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s01-nick-arrives-placard-ru.webp",
+      "sha256": "25910C3C449B71162F1F44924347478502748513917A506F2EAE95E955CB69F7",
+      "dimensions": "1672x941",
+      "method": "Runtime WebP derivative of the integrated Russian desktop CG",
+      "source": "Derived locally from assets/cg/s01-nick-arrives-placard-ru.png",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s01-nick-arrives-placard-ru-portrait.webp",
+      "sha256": "A86F7F376015D2A6D100A661F0C81F55ADEDB62A23DA2D228117C5DA246B0666",
+      "dimensions": "940x1672",
+      "method": "Runtime WebP derivative of the integrated Russian portrait-safe CG",
+      "source": "Derived locally from assets/cg/s01-nick-arrives-placard-ru-portrait.png",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s01-nick-arrives-placard-en.png",
+      "sha256": "C61F5A9485F5EAC8B7F59B8AB232031710E635DA98AE1DAF233940B4878D8BCD",
+      "dimensions": "1672x941",
+      "method": "Integrated desktop CG generated with canonical Alice, Nick and Keflavik arrivals references; exact English marker lettering composited onto the physical wet cardboard",
+      "source": "Generated in Codex imagegen during production-art run 2026-10-08T17-21-04-993Z-production-art-c6e9de; lettering composited locally from the authored S01.C000.P004 text",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s01-nick-arrives-placard-en-portrait.png",
+      "sha256": "B9E914D403A87A3A7E974B34853C36531565AF555D8A1D19D99D518289FF748F",
+      "dimensions": "940x1672",
+      "method": "Portrait-safe integrated CG generated with the same canonical cast and location references; exact English marker lettering composited onto the physical wet cardboard",
+      "source": "Generated in Codex imagegen during production-art run 2026-10-08T17-21-04-993Z-production-art-c6e9de; lettering composited locally from the authored S01.C000.P004 text",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s01-nick-arrives-placard-en.webp",
+      "sha256": "324E10760EFF6D24D7D9174E14A6D10FF94479B76BBEF68316BC19BC3CF544C5",
+      "dimensions": "1672x941",
+      "method": "Runtime WebP derivative of the integrated English desktop CG",
+      "source": "Derived locally from assets/cg/s01-nick-arrives-placard-en.png",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s01-nick-arrives-placard-en-portrait.webp",
+      "sha256": "818B4F8FE29CAAF771104E3AA78796993B51F4ECCBD2C2DC86CBBDD98B7FD1B4",
+      "dimensions": "940x1672",
+      "method": "Runtime WebP derivative of the integrated English portrait-safe CG",
+      "source": "Derived locally from assets/cg/s01-nick-arrives-placard-en-portrait.png",
+      "license": "generated for this project"
     }
   ]
 }

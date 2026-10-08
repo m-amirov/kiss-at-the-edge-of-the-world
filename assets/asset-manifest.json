@@ -1766,6 +1766,36 @@
       "portraitDimensions": "941x1672",
       "runtimePath": "assets/cg/s02-roadside-cafe-group.webp",
       "runtimePortraitAsset": "assets/cg/s02-roadside-cafe-group-portrait.webp"
+    },
+    {
+      "id": "s01-nick-arrives-placard-ru",
+      "family": "cg",
+      "path": "assets/cg/s01-nick-arrives-placard-ru.png",
+      "status": "integrated",
+      "runtime": "S01 authored cue [0,4], Nick physically holds the wet cardboard placard in the Russian localization",
+      "creationMethod": "Codex imagegen current production-art run using canonical Alice, Nick and Keflavik arrivals references; exact Russian marker lettering composited onto the generated physical cardboard",
+      "createdAt": "2026-10-08",
+      "dimensions": "1672x941",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s01-nick-arrives-placard-ru-portrait.png",
+      "portraitDimensions": "940x1672",
+      "runtimePath": "assets/cg/s01-nick-arrives-placard-ru.webp",
+      "runtimePortraitAsset": "assets/cg/s01-nick-arrives-placard-ru-portrait.webp"
+    },
+    {
+      "id": "s01-nick-arrives-placard-en",
+      "family": "cg",
+      "path": "assets/cg/s01-nick-arrives-placard-en.png",
+      "status": "integrated",
+      "runtime": "S01 authored cue [0,4], Nick physically holds the wet cardboard placard in the English localization",
+      "creationMethod": "Codex imagegen current production-art run using canonical Alice, Nick and Keflavik arrivals references; exact English marker lettering composited onto the generated physical cardboard",
+      "createdAt": "2026-10-08",
+      "dimensions": "1672x941",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s01-nick-arrives-placard-en-portrait.png",
+      "portraitDimensions": "940x1672",
+      "runtimePath": "assets/cg/s01-nick-arrives-placard-en.webp",
+      "runtimePortraitAsset": "assets/cg/s01-nick-arrives-placard-en-portrait.webp"
     }
   ],
   "visualDirection": {
