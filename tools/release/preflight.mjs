@@ -62,7 +62,12 @@ export function releasePreflight(){
  block('EXTERNAL_YANDEX_EVIDENCE','Live Yandex SDK/cloud/ad/release media and moderation evidence for the new edition are unavailable offline.');
  const starterKitStatus=inspectTargetStatus({sourceRoot:root,targetRoot:root});
  if(starterKitStatus.status!=='clean')block('STARTER_KIT_DRIFT',`Starter Kit target status is ${starterKitStatus.status}; resolve managed drift without bypassing the guard.`);
- const routeQa=exists('artifacts/evidence/full-route-runtime-qa-2026-09-30.json')?JSON.parse(fs.readFileSync(path.join(root,'artifacts/evidence/full-route-runtime-qa-2026-09-30.json'),'utf8')):null;
+ const routeQaCandidates=[
+  'artifacts/evidence/full-route-interaction-final-rc-2026-10-08.json',
+  'artifacts/evidence/full-route-runtime-qa-2026-09-30.json'
+ ];
+ const routeQaPath=routeQaCandidates.find(candidate=>exists(candidate));
+ const routeQa=routeQaPath?JSON.parse(fs.readFileSync(path.join(root,routeQaPath),'utf8')):null;
  const currentHead=execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).trim();
  const routeQaPass=routeQa?.status==='PASS'&&routeQa.head===currentHead&&routeQa.results?.length===8&&routeQa.results.every(item=>item.ending===item.expectedEnding&&item.finished&&item.softLocks===0&&item.errors?.length===0&&item.failed?.length===0);
  if(!routeQaPass)block('FINAL_QA_MISSING','Fresh full-route browser evidence for all four routes and both required viewports is missing or does not match the audited HEAD.');
