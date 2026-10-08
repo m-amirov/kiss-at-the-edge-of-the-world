@@ -602,6 +602,51 @@ button.primary:hover{background:linear-gradient(135deg,#d19b76,#a36d51);filter:n
   .advance-cue{animation:none}
 }
 
+/* One shared confirmation surface for destructive menu actions. It lives
+   above the reader so the underlying menu remains visually present but inert. */
+.literary-confirm-backdrop{
+  position:fixed;
+  z-index:40;
+  inset:0;
+  display:grid;
+  place-items:center;
+  padding:max(18px,env(safe-area-inset-top)) max(18px,env(safe-area-inset-right)) max(18px,env(safe-area-inset-bottom)) max(18px,env(safe-area-inset-left));
+  background:rgba(3,9,14,.76);
+  backdrop-filter:blur(7px);
+  overscroll-behavior:contain;
+  touch-action:manipulation;
+}
+.literary-confirm-dialog{
+  width:min(100%,520px);
+  max-height:min(88dvh,520px);
+  overflow:auto;
+  padding:clamp(24px,4vw,38px);
+  color:var(--cinema-ink,#fff8ed);
+  background:linear-gradient(145deg,rgba(16,29,37,.98),rgba(34,43,46,.98));
+  border:1px solid rgba(244,218,187,.66);
+  border-radius:22px;
+  box-shadow:0 24px 90px rgba(0,0,0,.56),0 0 0 1px rgba(7,15,20,.42);
+  outline:none;
+}
+.confirm-dialog-title{margin:0;color:var(--cinema-ink,#fff8ed);font-family:'Cinematic Cormorant',Georgia,serif;font-size:clamp(31px,5vw,46px);font-weight:600;line-height:1.02}
+.confirm-dialog-message{margin:18px 0 26px;color:var(--cinema-muted,#e8ddd0);font-family:'Cinematic Manrope',Arial,sans-serif;font-size:clamp(16px,2.2vw,20px);line-height:1.55}
+.confirm-dialog-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.confirm-dialog-actions button{min-height:52px;width:100%}
+.confirm-dialog-confirm{background:linear-gradient(135deg,var(--button-primary-top),var(--button-primary-bottom));font-weight:700}
+.confirm-dialog-cancel{background:rgba(12,24,32,.72)}
+.confirm-dialog-actions button:focus-visible{outline:2px solid var(--button-focus);outline-offset:3px}
+@media(max-width:680px){
+  .literary-confirm-backdrop{padding:16px}
+  .literary-confirm-dialog{width:100%;max-height:calc(100dvh - 32px);padding:24px 20px;border-radius:20px}
+  .confirm-dialog-title{font-size:clamp(32px,10vw,42px)}
+  .confirm-dialog-message{margin:16px 0 22px;font-size:16px;line-height:1.5}
+  .confirm-dialog-actions{grid-template-columns:1fr;gap:8px}
+  .confirm-dialog-actions button{min-height:54px}
+}
+@media(prefers-reduced-motion:reduce){
+  .literary-confirm-backdrop{backdrop-filter:none}
+}
+
 /* Visual composition contract: foreground cut-outs are a readable close stage,
    never a small sticker or a four-person lineup over an unrelated background. */
 .scene-stage[data-mode="solo"]{inset:4% 10% 23%;justify-content:flex-end}

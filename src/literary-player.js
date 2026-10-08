@@ -148,6 +148,8 @@ let cloudLocked=false;
 let cloudCandidate=null;
 let menuOpen=true;
 let modal=null;
+let confirmDialog=null;
+let confirmHistoryPushed=false;
 let platform=null;
 let locale='ru';
 let t=createTranslator(locale);
@@ -198,6 +200,73 @@ function el(value='',className='',tag='div'){
 }
 function button(label,handler,className=''){
   const b=el(label,className,'button');b.type='button';b.addEventListener('click',handler);return b;
+}
+function settleConfirmDialog(confirmed,{fromHistory=false}={}){
+  const current=confirmDialog;
+  if(!current || current.settled)return false;
+  current.settled=true;
+  confirmDialog=null;
+  document.removeEventListener('keydown',current.onKeydown,true);
+  current.node.remove();
+  app.inert=current.previousInert;
+  if(current.previousAriaHidden===null)app.removeAttribute('aria-hidden');
+  else app.setAttribute('aria-hidden',current.previousAriaHidden);
+  if(confirmHistoryPushed){
+    confirmHistoryPushed=false;
+    if(!fromHistory)history.back();
+  }
+  if(current.returnFocus?.isConnected)current.returnFocus.focus({preventScroll:true});
+  if(confirmed)current.onConfirm();
+  return true;
+}
+function ConfirmDialog({title,message,onConfirm}){
+  const backdrop=el('','literary-confirm-backdrop');
+  const dialog=el('','literary-confirm-dialog','section');
+  const stamp=Date.now();
+  const titleId=`confirm-dialog-title-${stamp}`;
+  const messageId=`confirm-dialog-message-${stamp}`;
+  dialog.setAttribute('role','dialog');
+  dialog.setAttribute('aria-modal','true');
+  dialog.setAttribute('aria-labelledby',titleId);
+  dialog.setAttribute('aria-describedby',messageId);
+  dialog.tabIndex=-1;
+  const heading=el(title,'confirm-dialog-title','h2');heading.id=titleId;
+  const copy=el(message,'confirm-dialog-message','p');copy.id=messageId;
+  const actions=el('','confirm-dialog-actions');
+  const cancel=button(t('confirmDialogCancel'),()=>settleConfirmDialog(false),'confirm-dialog-cancel');
+  const confirm=button(t('confirmDialogConfirm'),()=>settleConfirmDialog(true),'confirm-dialog-confirm');
+  cancel.setAttribute('data-confirm-dialog-action','cancel');confirm.setAttribute('data-confirm-dialog-action','confirm');
+  actions.append(cancel,confirm);dialog.append(heading,copy,actions);backdrop.append(dialog);
+  for(const type of ['pointerdown','pointerup','click','touchstart']){
+    backdrop.addEventListener(type,event=>{event.stopPropagation()});
+  }
+  return {backdrop,dialog,cancel,onConfirm};
+}
+function openConfirmDialog({messageKey,messageValues={},onConfirm}){
+  if(confirmDialog)return false;
+  history.pushState({...((history.state && typeof history.state==='object')?history.state:{}),literaryConfirmDialog:true},document.title);
+  confirmHistoryPushed=true;
+  const previousFocus=document.activeElement instanceof HTMLElement?document.activeElement:null;
+  const previousAriaHidden=app.getAttribute('aria-hidden');
+  const built=ConfirmDialog({title:t('confirmDialogTitle'),message:t(messageKey,messageValues),onConfirm});
+  const onKeydown=event=>{
+    if(!confirmDialog)return;
+    if(event.key==='Escape'){
+      event.preventDefault();event.stopPropagation();settleConfirmDialog(false);
+      return;
+    }
+    if(event.key!=='Tab')return;
+    const focusable=[...built.dialog.querySelectorAll('button:not([disabled]),[href],input,select,textarea,[tabindex]:not([tabindex="-1"])')];
+    if(!focusable.length)return;
+    const first=focusable[0],last=focusable.at(-1);
+    if(event.shiftKey && document.activeElement===first){event.preventDefault();last.focus();}
+    else if(!event.shiftKey && document.activeElement===last){event.preventDefault();first.focus();}
+  };
+  confirmDialog={node:built.backdrop,returnFocus:previousFocus,previousInert:app.inert,previousAriaHidden,onKeydown,onConfirm,settled:false};
+  app.inert=true;app.setAttribute('aria-hidden','true');
+  document.body.append(built.backdrop);document.addEventListener('keydown',onKeydown,true);
+  built.cancel.focus({preventScroll:true});
+  return true;
 }
 const interactiveSelector='button,a,input,select,textarea,summary,[role="button"],[role="link"],[contenteditable="true"],[data-interactive]';
 const tapThreshold=10;
@@ -292,9 +361,12 @@ function bindStageTapTarget(node){
   });
 }
 function goHome(){menuOpen=true;modal=null;renderMenu()}
-function startNew(){
-  if(hasSave && !window.confirm(t('confirmNew')))return;
+function beginNewGame(){
   cloudLocked=true;dialogueHistory.clear();reader=blank();persist();menuOpen=false;modal=null;renderReader();
+}
+function startNew(){
+  if(hasSave){openConfirmDialog({messageKey:'confirmNew',onConfirm:beginNewGame});return;}
+  beginNewGame();
 }
 function continueGame(){menuOpen=false;modal=null;renderReader()}
 function panel(headingKey,children){
@@ -311,15 +383,16 @@ function episodeSelection(section){
     const unlocked=runtimeSeason.scenes.some(s=>s.episode===ep&&known.has(s.id));
     const item=button(t(unlocked?'episodeUnlocked':'episodeLocked',{episode:ep}),()=>{
       if(!unlocked)return;
-      if(!window.confirm(t('episodeReplayConfirm',{episode:ep})))return;
-      // A chapter replay from its first scene requires rebuilding later state;
-      // using only the original choices from before this episode is safe.
-      const epChoiceIds=literarySeason.scenes.filter(s=>s.episode>=ep).map(s=>s.id);
-      for(const id of Object.keys(reader.choices)){
-        if(epChoiceIds.some(prefix=>id.startsWith(prefix+'-')))delete reader.choices[id];
-      }
-      dialogueHistory.clear();reader.sceneId=first.id;reader.position=0;reader.finished=false;reader.migrationNotice=false;reader.visited=reader.visited.filter(id=>byId.get(id).episode<ep);reader.visited.push(first.id);
-      cloudLocked=true;persist();continueGame();
+      openConfirmDialog({messageKey:'episodeReplayConfirm',messageValues:{episode:ep},onConfirm:()=>{
+        // A chapter replay from its first scene requires rebuilding later state;
+        // using only the original choices from before this episode is safe.
+        const epChoiceIds=literarySeason.scenes.filter(s=>s.episode>=ep).map(s=>s.id);
+        for(const id of Object.keys(reader.choices)){
+          if(epChoiceIds.some(prefix=>id.startsWith(prefix+'-')))delete reader.choices[id];
+        }
+        dialogueHistory.clear();reader.sceneId=first.id;reader.position=0;reader.finished=false;reader.migrationNotice=false;reader.visited=reader.visited.filter(id=>byId.get(id).episode<ep);reader.visited.push(first.id);
+        cloudLocked=true;persist();continueGame();
+      }});
     },'episode-select');item.disabled=!unlocked;section.append(item);
   }
 }
@@ -349,7 +422,7 @@ function renderMenu(){
   section.append(actions);
   if(cloudCandidate){
     const utility=el('','home-utility');
-    utility.append(button(t('restoreCloud'),()=>{if(!window.confirm(t('restoreCloudConfirm')))return;cloudLocked=true;dialogueHistory.clear();reader=cloudCandidate;cloudCandidate=null;persist();continueGame()},'cloud-restore'));
+    utility.append(button(t('restoreCloud'),()=>openConfirmDialog({messageKey:'restoreCloudConfirm',onConfirm:()=>{cloudLocked=true;dialogueHistory.clear();reader=cloudCandidate;cloudCandidate=null;persist();continueGame()}}),'cloud-restore'));
     section.append(utility);
   }
 }
@@ -445,6 +518,7 @@ window.addEventListener('keydown',event=>{
   if(menuOpen || !['Enter',' ','Spacebar','ArrowRight'].includes(event.key) || event.altKey || event.ctrlKey || event.metaKey || isInteractiveTarget(event.target) || isInteractiveTarget(document.activeElement) || document.activeElement?.closest?.('[data-stage-advance]'))return;
   if(advanceNarrative())event.preventDefault();
 });
+window.addEventListener('popstate',()=>{if(confirmDialog)settleConfirmDialog(false,{fromHistory:true})});
 window.addEventListener('pointerdown',()=>{audioDirector.unlock().catch(()=>{})},{passive:true});
 window.addEventListener('keydown',()=>{audioDirector.unlock().catch(()=>{})},{passive:true});
 document.addEventListener('visibilitychange',()=>{if(document.hidden)audioDirector.pause();else audioDirector.resume().catch(()=>{})});
