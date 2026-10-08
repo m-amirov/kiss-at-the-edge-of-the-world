@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-08T14:37:40.049Z",
-  "head": "d29d4265ec85dc5228f108621207633be41e6d58",
-  "baseUrl": "http://127.0.0.1:4174/literary.html?qa=rendered-coverage-audit",
+  "generatedAt": "2026-10-08T15:08:02.247Z",
+  "head": "04a27f977aabecfa095a2f4c8367d8b673455d60",
+  "baseUrl": "http://127.0.0.1:4173/literary.html",
   "viewports": [
     {
       "name": "desktop",
@@ -28,7 +28,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/keflavik-airport-arrivals-v1.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/keflavik-airport-arrivals-v1.webp",
           "status": 200
         }
       ],
@@ -59,8 +59,8 @@
         "stageCount": 2
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S01-desktop.png",
-      "screenshotSha256": "6c221fcd83649450cc34f695b73838a893ce8b2ee73d68a0083966f1ff4f9ebc",
-      "screenshotBytes": 1787635,
+      "screenshotSha256": "55c0d5f12ac5320cb6f509fe05ab09f06fc6f50c01397d5d95a680786c0952c0",
+      "screenshotBytes": 1787646,
       "actualPixelsReceived": true
     },
     {
@@ -76,7 +76,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/keflavik-airport-arrivals-v1.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/keflavik-airport-arrivals-v1.webp",
           "status": 200
         }
       ],
@@ -107,8 +107,8 @@
         "stageCount": 2
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S01-mobile.png",
-      "screenshotSha256": "a33159133a7a39d409f0281d7e6b45ea6c78e2aaac2ecd3d089a1b93adbeac3b",
-      "screenshotBytes": 385131,
+      "screenshotSha256": "009adc424b0edaa4cc733e50abc3bc27521fcd91e2089de447155f2db0ec923b",
+      "screenshotBytes": 385136,
       "actualPixelsReceived": true
     },
     {
@@ -124,7 +124,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s02-van-group-batch2.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s02-van-group-batch2.webp",
           "status": 200
         }
       ],
@@ -172,7 +172,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s02-van-group-batch2-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s02-van-group-batch2-portrait.webp",
           "status": 200
         }
       ],
@@ -220,7 +220,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/guesthouse-common-kitchen-evening.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/guesthouse-common-kitchen-evening.webp",
           "status": 200
         }
       ],
@@ -268,7 +268,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/guesthouse-common-kitchen-evening.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/guesthouse-common-kitchen-evening.webp",
           "status": 200
         }
       ],
@@ -316,7 +316,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s03-editor-call.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s03-editor-call.webp",
           "status": 200
         }
       ],
@@ -364,7 +364,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s03-editor-call-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s03-editor-call-portrait.webp",
           "status": 200
         }
       ],
@@ -395,8 +395,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S03-mobile.png",
-      "screenshotSha256": "c152b39fd2af3e2f8fb6f71e2a4ac49c6cd1dcb00995ba0b9b7372acb5df2561",
-      "screenshotBytes": 423593,
+      "screenshotSha256": "1169447faf6e9b3836add8d09cd7bb4b5a20c080cdeac26c1c7af68ef168f676",
+      "screenshotBytes": 423600,
       "actualPixelsReceived": true
     },
     {
@@ -412,7 +412,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/thingvellir-master.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/thingvellir-master.webp",
           "status": 200
         }
       ],
@@ -443,8 +443,8 @@
         "stageCount": 4
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S04-desktop.png",
-      "screenshotSha256": "069b1cc5e7307aded42bded7cfc4a64ae9bef3aeb125431f4215a0be55f863c3",
-      "screenshotBytes": 2025239,
+      "screenshotSha256": "7b662842f60ed6f215f6f1cd32365425f1387c10a56712175bf24f41a1b079e0",
+      "screenshotBytes": 2025231,
       "actualPixelsReceived": true
     },
     {
@@ -460,7 +460,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/thingvellir-master.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/thingvellir-master.webp",
           "status": 200
         }
       ],
@@ -508,7 +508,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/south-coast-road-rain.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/south-coast-road-rain.webp",
           "status": 200
         }
       ],
@@ -556,7 +556,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/south-coast-road-rain.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/south-coast-road-rain.webp",
           "status": 200
         }
       ],
@@ -604,7 +604,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s06-hveragerdi-eric-alice.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s06-hveragerdi-eric-alice.webp",
           "status": 200
         }
       ],
@@ -635,8 +635,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S06-desktop.png",
-      "screenshotSha256": "63501015775b4c8ce66b688a95898b47ffe596bd961ec50817cc84ceae326432",
-      "screenshotBytes": 2042488,
+      "screenshotSha256": "3f1f9d85221bbb9f72efb286a77c801cd37040910143b104eaf7c8f1d2a42321",
+      "screenshotBytes": 2042489,
       "actualPixelsReceived": true
     },
     {
@@ -652,7 +652,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s06-hveragerdi-eric-alice-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s06-hveragerdi-eric-alice-portrait.webp",
           "status": 200
         }
       ],
@@ -683,8 +683,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S06-mobile.png",
-      "screenshotSha256": "a30c8d0bd245705c8c14c2ba60dd9d8c94e4ad7c75e36cafb7c8a8c12bb1a26a",
-      "screenshotBytes": 468723,
+      "screenshotSha256": "eff101b68433076761470e50ac711966cbe3bd7eac83506aab7b2354fe1815ef",
+      "screenshotBytes": 468728,
       "actualPixelsReceived": true
     },
     {
@@ -700,7 +700,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s07-kitchen-pasta.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s07-kitchen-pasta.webp",
           "status": 200
         }
       ],
@@ -731,8 +731,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S07-desktop.png",
-      "screenshotSha256": "1e69d97ff26b5433a5783ae3d47be5debc1438499b782b7603c811c91c7e1f0e",
-      "screenshotBytes": 2047536,
+      "screenshotSha256": "2f9f4e60d6b8d586119b7728c5e87e90648c3edbb8684a4b685639e34d8c7e5a",
+      "screenshotBytes": 2047530,
       "actualPixelsReceived": true
     },
     {
@@ -748,7 +748,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s07-kitchen-pasta-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s07-kitchen-pasta-portrait.webp",
           "status": 200
         }
       ],
@@ -796,7 +796,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s08-guesthouse-strap.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s08-guesthouse-strap.webp",
           "status": 200
         }
       ],
@@ -844,7 +844,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s08-guesthouse-strap-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s08-guesthouse-strap-portrait.webp",
           "status": 200
         }
       ],
@@ -875,8 +875,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S08-mobile.png",
-      "screenshotSha256": "2adb4bba2256d7dfa86607cfe2c9f2abed47e2ca004646ae907d2f2578e1f19c",
-      "screenshotBytes": 441166,
+      "screenshotSha256": "74ed8c3afc6dbc057f52056433992c50e1874b5dca6f1ac4791c078c2a3b20a7",
+      "screenshotBytes": 441161,
       "actualPixelsReceived": true
     },
     {
@@ -892,7 +892,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/hveragerdi-greenhouse-cafe.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/hveragerdi-greenhouse-cafe.webp",
           "status": 200
         }
       ],
@@ -940,7 +940,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/hveragerdi-greenhouse-cafe.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/hveragerdi-greenhouse-cafe.webp",
           "status": 200
         }
       ],
@@ -988,7 +988,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/skogafoss-master.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/skogafoss-master.webp",
           "status": 200
         }
       ],
@@ -1019,8 +1019,8 @@
         "stageCount": 4
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S09-desktop.png",
-      "screenshotSha256": "af021764f4a53d2d20dd9c4c59977d84df1e8eae64a21d13b5a456898185b761",
-      "screenshotBytes": 2078307,
+      "screenshotSha256": "02afecd6e2886a73bf62bcda8db95230fb301e37c952b0fe3a45b2035fc50b68",
+      "screenshotBytes": 2078295,
       "actualPixelsReceived": true
     },
     {
@@ -1036,7 +1036,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/skogafoss-master.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/skogafoss-master.webp",
           "status": 200
         }
       ],
@@ -1067,8 +1067,8 @@
         "stageCount": 4
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S09-mobile.png",
-      "screenshotSha256": "6e0b018d50853061de5726655868cc1ede43f97ad0f89d71d2a4f5320cc51a12",
-      "screenshotBytes": 395072,
+      "screenshotSha256": "15561fdab9a0ce48cc5f953fd611d77c7f90280f90a2277823fe34364cb834a1",
+      "screenshotBytes": 395068,
       "actualPixelsReceived": true
     },
     {
@@ -1084,7 +1084,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s10-vik-road-song.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s10-vik-road-song.webp",
           "status": 200
         }
       ],
@@ -1115,8 +1115,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S10-desktop.png",
-      "screenshotSha256": "3c39b1d59b74b3b4a12701effcfd1f0857ac139416a46b39aed5ac5b43a654cb",
-      "screenshotBytes": 1892573,
+      "screenshotSha256": "a24190c2ddbb1efd6755af6423c921ecffad80a16b091dd8201b36474a953bf2",
+      "screenshotBytes": 1892577,
       "actualPixelsReceived": true
     },
     {
@@ -1132,7 +1132,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s10-vik-road-song-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s10-vik-road-song-portrait.webp",
           "status": 200
         }
       ],
@@ -1163,8 +1163,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S10-mobile.png",
-      "screenshotSha256": "e06db24d373879178648a3819bcbff980a5c99f51db24fdf51859166139c84d5",
-      "screenshotBytes": 438177,
+      "screenshotSha256": "bfe9691299b35f962edb5f04b71912ee120a8cbd719b1f8c725b504a57d21fcb",
+      "screenshotBytes": 438174,
       "actualPixelsReceived": true
     },
     {
@@ -1180,7 +1180,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/reynisfjara-master.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/reynisfjara-master.webp",
           "status": 200
         }
       ],
@@ -1228,7 +1228,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/reynisfjara-master.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/reynisfjara-master.webp",
           "status": 200
         }
       ],
@@ -1276,7 +1276,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s12-vik-cafe-damir.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s12-vik-cafe-damir.webp",
           "status": 200
         }
       ],
@@ -1307,8 +1307,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S12-desktop.png",
-      "screenshotSha256": "01bb9a67a7420ae817a8b7e491087681462d9d9508e444ddb574ff0d01a807af",
-      "screenshotBytes": 1995753,
+      "screenshotSha256": "561675d4b0551bf593db618d4f8f2e6998c766c0a8dfa67ba2c7c44618a5f499",
+      "screenshotBytes": 1995752,
       "actualPixelsReceived": true
     },
     {
@@ -1324,7 +1324,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s12-vik-cafe-damir-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s12-vik-cafe-damir-portrait.webp",
           "status": 200
         }
       ],
@@ -1372,7 +1372,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/s13-skaftafell-visitor-parking.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/s13-skaftafell-visitor-parking.webp",
           "status": 200
         }
       ],
@@ -1403,8 +1403,8 @@
         "stageCount": 4
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S13-desktop.png",
-      "screenshotSha256": "e4825e8c5bf5bf9a3ed7a82751d67c2404efa0f04aa3750d7fa781dd2b75a949",
-      "screenshotBytes": 1868549,
+      "screenshotSha256": "c039fdc3fdf3f918df0be4d012fdfbb4f9093874e8744ca8bd5a69b71c6c6d46",
+      "screenshotBytes": 1868555,
       "actualPixelsReceived": true
     },
     {
@@ -1420,7 +1420,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/s13-skaftafell-visitor-parking.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/s13-skaftafell-visitor-parking.webp",
           "status": 200
         }
       ],
@@ -1451,8 +1451,8 @@
         "stageCount": 4
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S13-mobile.png",
-      "screenshotSha256": "9403a46decd4c70048b759d0d121f2992f9fb3eb4d23c19b5caa748b561be64d",
-      "screenshotBytes": 379563,
+      "screenshotSha256": "f36887101c4b3a72b09e08c064451ff551c2d912bbf69a0c0da7a854527477d3",
+      "screenshotBytes": 379566,
       "actualPixelsReceived": true
     },
     {
@@ -1468,7 +1468,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s14-skaftafell-pace.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s14-skaftafell-pace.webp",
           "status": 200
         }
       ],
@@ -1516,7 +1516,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s14-skaftafell-pace-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s14-skaftafell-pace-portrait.webp",
           "status": 200
         }
       ],
@@ -1547,7 +1547,7 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S14-mobile.png",
-      "screenshotSha256": "e4ec4594d75f16e09926f3264dc9e5f90e8f2ba43be49ea98336167fce5a5f56",
+      "screenshotSha256": "ac463e041b687798e6e44c52a49b1486066cedb47e70903d4ab5f2e292b9bff2",
       "screenshotBytes": 488482,
       "actualPixelsReceived": true
     },
@@ -1564,7 +1564,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/jokulsarlon-master.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/jokulsarlon-master.webp",
           "status": 200
         }
       ],
@@ -1595,8 +1595,8 @@
         "stageCount": 2
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S15-desktop.png",
-      "screenshotSha256": "3c90fc1b91c473ec78bb4f80f0d8c979359dba957b55b5989c503db78fcfed38",
-      "screenshotBytes": 1819399,
+      "screenshotSha256": "09e51a4b508a632123dad6298c4bbbff60f000cc11ce99a01cc3d58a7705a7a4",
+      "screenshotBytes": 1819406,
       "actualPixelsReceived": true
     },
     {
@@ -1612,7 +1612,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/jokulsarlon-master.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/jokulsarlon-master.webp",
           "status": 200
         }
       ],
@@ -1643,8 +1643,8 @@
         "stageCount": 2
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S15-mobile.png",
-      "screenshotSha256": "2501ef2bd3d446516ad48ff45bb4f43b2dcaa9bd6aa8a762eea73e6c3e304863",
-      "screenshotBytes": 391350,
+      "screenshotSha256": "689e2e9f273e9f07b5c99661e879012bd20ef3f8c9aad948f8606b0e00a57996",
+      "screenshotBytes": 391353,
       "actualPixelsReceived": true
     },
     {
@@ -1660,7 +1660,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s16-guesthouse-help.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s16-guesthouse-help.webp",
           "status": 200
         }
       ],
@@ -1691,8 +1691,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S16-desktop.png",
-      "screenshotSha256": "11bc7bcb923deefec73370f2cdf207e83d15012348764f674d4f2ceed13151ed",
-      "screenshotBytes": 1874391,
+      "screenshotSha256": "9c00332e15160b0c15e2a3097060a2ba8b1d458abc4faa2b7e6f5e5920cb797e",
+      "screenshotBytes": 1874382,
       "actualPixelsReceived": true
     },
     {
@@ -1708,7 +1708,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s16-guesthouse-help-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s16-guesthouse-help-portrait.webp",
           "status": 200
         }
       ],
@@ -1739,8 +1739,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S16-mobile.png",
-      "screenshotSha256": "9cfb32b5b04e7846946d887b4b163a10ac8d419e647bc28c4af24edf1639d51e",
-      "screenshotBytes": 404068,
+      "screenshotSha256": "5802cb36b8cc078b329a5df144757e4cd95d19bb36946b14e8a342e689492ff0",
+      "screenshotBytes": 404060,
       "actualPixelsReceived": true
     },
     {
@@ -1756,7 +1756,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s17-hofn-guesthouse.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s17-hofn-guesthouse.webp",
           "status": 200
         }
       ],
@@ -1804,7 +1804,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s17-hofn-guesthouse-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s17-hofn-guesthouse-portrait.webp",
           "status": 200
         }
       ],
@@ -1835,8 +1835,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S17-mobile.png",
-      "screenshotSha256": "90c379e992a9908565372ac87b0772577834e92dcb4e0d4ed771df315fd4f7d7",
-      "screenshotBytes": 460579,
+      "screenshotSha256": "43ab7a2cb17642b5c4c6a304be0e889545f92f5d8214d91d36cd69ea37fba0b4",
+      "screenshotBytes": 460584,
       "actualPixelsReceived": true
     },
     {
@@ -1852,7 +1852,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/s18-hofn-harbour.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/s18-hofn-harbour.webp",
           "status": 200
         }
       ],
@@ -1883,8 +1883,8 @@
         "stageCount": 2
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S18-desktop.png",
-      "screenshotSha256": "4e0702cfe46c4da4a811b3c8e5566e1bb25641c6a072df9a22612b054e8b6c19",
-      "screenshotBytes": 1844787,
+      "screenshotSha256": "a1d70185e80f66bcd6ed6efca3e20b6b56ea82c1d1dd896e0ef28004db5a1a28",
+      "screenshotBytes": 1844784,
       "actualPixelsReceived": true
     },
     {
@@ -1900,7 +1900,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/s18-hofn-harbour.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/s18-hofn-harbour.webp",
           "status": 200
         }
       ],
@@ -1931,8 +1931,8 @@
         "stageCount": 2
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S18-mobile.png",
-      "screenshotSha256": "8ac287657fe97942049dffbddb8ad2c9957e80b6469d2c331e3e00f4add5e1c0",
-      "screenshotBytes": 375773,
+      "screenshotSha256": "06d1b8aa249d0d2f8ea75bcd4b51933a6326515f85d1ebcd008a213e668e7e05",
+      "screenshotBytes": 375776,
       "actualPixelsReceived": true
     },
     {
@@ -1948,7 +1948,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s19-hofn-pool.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s19-hofn-pool.webp",
           "status": 200
         }
       ],
@@ -1979,8 +1979,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S19-desktop.png",
-      "screenshotSha256": "3f6a68b3f954cea3eaa2015f1bcae9aacd2bb33f35d21d600d8978ed357590cf",
-      "screenshotBytes": 1788747,
+      "screenshotSha256": "72dd6628adfa84406f78fd9b4e1b86b6baeefa74d404e0e845bc730ddcb57566",
+      "screenshotBytes": 1788737,
       "actualPixelsReceived": true
     },
     {
@@ -1996,7 +1996,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s19-hofn-pool-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s19-hofn-pool-portrait.webp",
           "status": 200
         }
       ],
@@ -2044,7 +2044,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s20-hofn-damir-kitchen.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s20-hofn-damir-kitchen.webp",
           "status": 200
         }
       ],
@@ -2075,8 +2075,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S20-desktop.png",
-      "screenshotSha256": "c3113b59fa7af10d38a91f55448e1a40f860f752b73657db09a54886cfb7e30e",
-      "screenshotBytes": 1928533,
+      "screenshotSha256": "1d92d44a30b8ea71e523c3a0948d4770ef10ea161e6824999c07801e2ffb279d",
+      "screenshotBytes": 1928517,
       "actualPixelsReceived": true
     },
     {
@@ -2092,7 +2092,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s20-hofn-damir-kitchen-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s20-hofn-damir-kitchen-portrait.webp",
           "status": 200
         }
       ],
@@ -2140,7 +2140,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s21-alice-hofn-room.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s21-alice-hofn-room.webp",
           "status": 200
         }
       ],
@@ -2171,8 +2171,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S21-desktop.png",
-      "screenshotSha256": "52df1e3bb2915e6741ad95decbc481e22fa1cc85e6969084c25b786291610638",
-      "screenshotBytes": 1655516,
+      "screenshotSha256": "50328356b5d3750f6d479afe6f614cfca5afd2c35dbf2f69b3f94976eea1306f",
+      "screenshotBytes": 1655514,
       "actualPixelsReceived": true
     },
     {
@@ -2188,7 +2188,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s21-alice-hofn-room-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s21-alice-hofn-room-portrait.webp",
           "status": 200
         }
       ],
@@ -2219,8 +2219,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S21-mobile.png",
-      "screenshotSha256": "bd631a6da22b080b95ed0b834de817ad59c3cb28ece72eb146c9d540027a9b8c",
-      "screenshotBytes": 395915,
+      "screenshotSha256": "ced6829c567b0063269959309fc2ee7cbcb705e8b96b93033ded9836b3f6740b",
+      "screenshotBytes": 395916,
       "actualPixelsReceived": true
     },
     {
@@ -2236,7 +2236,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/s61-hofn-streets.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/s61-hofn-streets.webp",
           "status": 200
         }
       ],
@@ -2267,8 +2267,8 @@
         "stageCount": 1
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S61-desktop.png",
-      "screenshotSha256": "4bb1df9d3affe9e7157ac99cb9425cd16189ebafa127baa3832ead53577232ee",
-      "screenshotBytes": 2265182,
+      "screenshotSha256": "e938fc9071a894d49264b95ddaa10950453d692b87a3e3a3a8cd945fbfbba199",
+      "screenshotBytes": 2265180,
       "actualPixelsReceived": true
     },
     {
@@ -2284,7 +2284,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/s61-hofn-streets-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/s61-hofn-streets-portrait.webp",
           "status": 200
         }
       ],
@@ -2315,7 +2315,7 @@
         "stageCount": 1
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S61-mobile.png",
-      "screenshotSha256": "93933c7a0dcec7bd0c1347e47089af5671324a8a5e9154132e78f305f7d036b9",
+      "screenshotSha256": "2a0e16b4f579f40c4b010a8928268fec6584a42cd787faaf761393ecb82dbc37",
       "screenshotBytes": 540978,
       "actualPixelsReceived": true
     },
@@ -2332,7 +2332,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/eastfjords-road-master.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/eastfjords-road-master.webp",
           "status": 200
         }
       ],
@@ -2380,7 +2380,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/eastfjords-road-master.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/eastfjords-road-master.webp",
           "status": 200
         }
       ],
@@ -2428,7 +2428,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s23-eric-harbor-plan.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s23-eric-harbor-plan.webp",
           "status": 200
         }
       ],
@@ -2459,8 +2459,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S23-desktop.png",
-      "screenshotSha256": "16f2ce97b8e95cefc14e3c4f8868e4d3f1e3dc65bdf15daf92cf8e94b70d6c69",
-      "screenshotBytes": 2034438,
+      "screenshotSha256": "454c8441b3668376b020d874676d397ca6e82d317615ec0e9e204e7531cf3c54",
+      "screenshotBytes": 2034437,
       "actualPixelsReceived": true
     },
     {
@@ -2476,7 +2476,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s23-eric-harbor-plan-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s23-eric-harbor-plan-portrait.webp",
           "status": 200
         }
       ],
@@ -2524,7 +2524,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s24-nick-pier-consent.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s24-nick-pier-consent.webp",
           "status": 200
         }
       ],
@@ -2555,8 +2555,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S24-desktop.png",
-      "screenshotSha256": "0945aa86f2180d8186bf44fd9efe023e90df081db551a5f74608890519057871",
-      "screenshotBytes": 1947670,
+      "screenshotSha256": "e26c53785064c6f7939af00bc2c38c89e97ae16734406158f7895958644fa699",
+      "screenshotBytes": 1947666,
       "actualPixelsReceived": true
     },
     {
@@ -2572,7 +2572,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s24-nick-pier-consent-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s24-nick-pier-consent-portrait.webp",
           "status": 200
         }
       ],
@@ -2603,8 +2603,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S24-mobile.png",
-      "screenshotSha256": "2b3032d11cd87f70dba65d203e2eb9cfe090533c494f517e222ec3386f52620b",
-      "screenshotBytes": 450560,
+      "screenshotSha256": "91c520eff353b876f6b102307684fd61b72ac1eeb5b0968609b5f5a9d78d3a63",
+      "screenshotBytes": 450563,
       "actualPixelsReceived": true
     },
     {
@@ -2620,7 +2620,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s25-damir-clarity-talk.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s25-damir-clarity-talk.webp",
           "status": 200
         }
       ],
@@ -2651,8 +2651,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S25-desktop.png",
-      "screenshotSha256": "2fc4c1cb7fbea8e6e20c978430d721658f7019767b23880b71b791bacb2cda56",
-      "screenshotBytes": 1893895,
+      "screenshotSha256": "e4bca27b12e9d83e15630c75c2def404ddc4cb2ac593066c106b555800571cc6",
+      "screenshotBytes": 1893905,
       "actualPixelsReceived": true
     },
     {
@@ -2668,7 +2668,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s25-damir-clarity-talk-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s25-damir-clarity-talk-portrait.webp",
           "status": 200
         }
       ],
@@ -2699,8 +2699,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S25-mobile.png",
-      "screenshotSha256": "78ffde610be2c4bf4cd5b82af6974e4ee6cb7659f47e8b6c659bfc01f6fe3f69",
-      "screenshotBytes": 455492,
+      "screenshotSha256": "6d8e01752527f814a90bb2e96d5cfe115e9a01eacf6fdd92590a2d493b9fc212",
+      "screenshotBytes": 455493,
       "actualPixelsReceived": true
     },
     {
@@ -2716,7 +2716,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/guesthouse-common-kitchen-evening.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/guesthouse-common-kitchen-evening.webp",
           "status": 200
         }
       ],
@@ -2764,7 +2764,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/guesthouse-common-kitchen-evening.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/guesthouse-common-kitchen-evening.webp",
           "status": 200
         }
       ],
@@ -2812,7 +2812,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s26-eastfjords-courtyard-group.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s26-eastfjords-courtyard-group.webp",
           "status": 200
         }
       ],
@@ -2860,7 +2860,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s26-eastfjords-courtyard-group-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s26-eastfjords-courtyard-group-portrait.webp",
           "status": 200
         }
       ],
@@ -2908,7 +2908,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s27-egilsstadir-boardwalk.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s27-egilsstadir-boardwalk.webp",
           "status": 200
         }
       ],
@@ -2939,8 +2939,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S27-desktop.png",
-      "screenshotSha256": "db2f9e6704d3e1123b828c728872eb1a33cc706213f262fef5ad937d9e1d81c1",
-      "screenshotBytes": 2036517,
+      "screenshotSha256": "a662ad7066413edfc177565e7ff99024d533eb87fb4fe9feb47d9e4b77afea0b",
+      "screenshotBytes": 2036537,
       "actualPixelsReceived": true
     },
     {
@@ -2956,7 +2956,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s27-egilsstadir-boardwalk-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s27-egilsstadir-boardwalk-portrait.webp",
           "status": 200
         }
       ],
@@ -2987,8 +2987,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S27-mobile.png",
-      "screenshotSha256": "f3b1c5febed1a53b245985c8b7b7d87b078e7314b964f85ee29503444204ee3f",
-      "screenshotBytes": 469237,
+      "screenshotSha256": "01a9619aa2c7028f2f2c9386836bf7c09d1e33127dd8896cc53e41ea1073376f",
+      "screenshotBytes": 469240,
       "actualPixelsReceived": true
     },
     {
@@ -3004,7 +3004,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/guesthouse-common-kitchen-evening.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/guesthouse-common-kitchen-evening.webp",
           "status": 200
         }
       ],
@@ -3052,7 +3052,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/guesthouse-common-kitchen-evening.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/guesthouse-common-kitchen-evening.webp",
           "status": 200
         }
       ],
@@ -3100,7 +3100,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s28-hverfjall-hood.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s28-hverfjall-hood.webp",
           "status": 200
         }
       ],
@@ -3131,8 +3131,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S28-desktop.png",
-      "screenshotSha256": "046a489f53dcd662c54b25f88cdeff97b168521a1c76d0df61cd89c6414089ee",
-      "screenshotBytes": 2043179,
+      "screenshotSha256": "b68cb425c2c515fd42a08f887ce134a8962cb4097e8d591fcdd1bad401117b74",
+      "screenshotBytes": 2043182,
       "actualPixelsReceived": true
     },
     {
@@ -3148,7 +3148,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s28-hverfjall-hood-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s28-hverfjall-hood-portrait.webp",
           "status": 200
         }
       ],
@@ -3196,7 +3196,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s49-reykjahlid-window-dance.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s49-reykjahlid-window-dance.webp",
           "status": 200
         }
       ],
@@ -3244,7 +3244,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s49-reykjahlid-window-dance-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s49-reykjahlid-window-dance-portrait.webp",
           "status": 200
         }
       ],
@@ -3292,7 +3292,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s29-nick-playback.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s29-nick-playback.webp",
           "status": 200
         }
       ],
@@ -3323,8 +3323,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S29-desktop.png",
-      "screenshotSha256": "549d81a6883770d2d1ab0bb83394fa71109f766fb77861e5c19e0b84d37056ea",
-      "screenshotBytes": 1709880,
+      "screenshotSha256": "79d8b81d8bee6286ab1f86896c6d67bab73530c0a0db676a0b7743d123d5a7ed",
+      "screenshotBytes": 1709877,
       "actualPixelsReceived": true
     },
     {
@@ -3340,7 +3340,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s29-nick-playback-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s29-nick-playback-portrait.webp",
           "status": 200
         }
       ],
@@ -3371,8 +3371,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S29-mobile.png",
-      "screenshotSha256": "d7ef187271e15c82d2df41042f2851e02ebc5fd5398e996b9171382b403e242d",
-      "screenshotBytes": 447854,
+      "screenshotSha256": "4cfd5aa5b463f4b10ff8e19fe6e44ad4ca3d9438fccfcfd2c4a2902901d8ff7f",
+      "screenshotBytes": 447858,
       "actualPixelsReceived": true
     },
     {
@@ -3388,7 +3388,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s52-glove-found.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s52-glove-found.webp",
           "status": 200
         }
       ],
@@ -3436,7 +3436,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s52-glove-found-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s52-glove-found-portrait.webp",
           "status": 200
         }
       ],
@@ -3467,8 +3467,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S52-mobile.png",
-      "screenshotSha256": "b4f6f78501d1466c3a331ea2faeb5e46efc95176595c110985d30e34dfa7ca78",
-      "screenshotBytes": 466517,
+      "screenshotSha256": "9face75ec54f2ff4d4670b90e58c1bfc30e260a09394a70d0e9b09b3e443ad24",
+      "screenshotBytes": 466515,
       "actualPixelsReceived": true
     },
     {
@@ -3484,7 +3484,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/small-icelandic-cafe-rain.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/small-icelandic-cafe-rain.webp",
           "status": 200
         }
       ],
@@ -3532,7 +3532,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/small-icelandic-cafe-rain.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/small-icelandic-cafe-rain.webp",
           "status": 200
         }
       ],
@@ -3580,7 +3580,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s55-shum-first-step.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s55-shum-first-step.webp",
           "status": 200
         }
       ],
@@ -3611,8 +3611,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S55-desktop.png",
-      "screenshotSha256": "6a5d2ff4acbbd95029c072ec1f89693e317bf75c09e0abe2f2fb4b62ade2a9c0",
-      "screenshotBytes": 1963268,
+      "screenshotSha256": "3d4ec8130c8a6d60182d07779a512e52074da435529bfcdd72d3892b8463ee99",
+      "screenshotBytes": 1963278,
       "actualPixelsReceived": true
     },
     {
@@ -3628,7 +3628,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s55-shum-first-step-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s55-shum-first-step-portrait.webp",
           "status": 200
         }
       ],
@@ -3659,8 +3659,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S55-mobile.png",
-      "screenshotSha256": "04ffc4726f15975484a62d383be84e40f3653dfccd719c7e3355389029d662c2",
-      "screenshotBytes": 484008,
+      "screenshotSha256": "a9bcdff118bbe80aa1cd7abd0597071f35a24cc7de422c67baf8e46fd1460914",
+      "screenshotBytes": 485176,
       "actualPixelsReceived": true
     },
     {
@@ -3676,7 +3676,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s31-alice-independent-evening.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s31-alice-independent-evening.webp",
           "status": 200
         }
       ],
@@ -3724,7 +3724,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s31-alice-independent-evening-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s31-alice-independent-evening-portrait.webp",
           "status": 200
         }
       ],
@@ -3755,8 +3755,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S31-mobile.png",
-      "screenshotSha256": "20767de4d9f568e75369fd11990993a036f0dcefda8652bc45fcd5ada26bd810",
-      "screenshotBytes": 448905,
+      "screenshotSha256": "6e371d6f527e6a4def1ab5559f866a0a90240294c7f3b0fa9079b90a5d4bc408",
+      "screenshotBytes": 448898,
       "actualPixelsReceived": true
     },
     {
@@ -3772,7 +3772,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s62-alice-bookstore-choice.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s62-alice-bookstore-choice.webp",
           "status": 200
         }
       ],
@@ -3803,7 +3803,7 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S62-desktop.png",
-      "screenshotSha256": "2dffed242161705d3e18a7eab4b9af1f864b252b86a888e559c6fd94400f867f",
+      "screenshotSha256": "0982302a135e5c9d51b891ed46ea0f9aee06b5148877eb0bc29e0b732ee471a6",
       "screenshotBytes": 1897145,
       "actualPixelsReceived": true
     },
@@ -3820,7 +3820,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s62-alice-bookstore-choice-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s62-alice-bookstore-choice-portrait.webp",
           "status": 200
         }
       ],
@@ -3851,8 +3851,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S62-mobile.png",
-      "screenshotSha256": "2d873a75a0d8e277a18d2f148c56cae9cd54e100bf173d85b6dc879af6276c1d",
-      "screenshotBytes": 481224,
+      "screenshotSha256": "ff9bf405dadf4b3fd6a79e6bec12759f1532899ee869ac962ac774e51dfffa65",
+      "screenshotBytes": 481226,
       "actualPixelsReceived": true
     },
     {
@@ -3868,7 +3868,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s32-eric-calendar-crossroads.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s32-eric-calendar-crossroads.webp",
           "status": 200
         }
       ],
@@ -3899,8 +3899,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S32-desktop.png",
-      "screenshotSha256": "5464ca6934c7d16f53cec00e7dab46f07bd61d4ab7f244af8b4231e861db11f5",
-      "screenshotBytes": 1868332,
+      "screenshotSha256": "89333f01885dd539e7a778fd1e8e6c8b84278a1aae52c4e92a4c6214f8a16d09",
+      "screenshotBytes": 1868343,
       "actualPixelsReceived": true
     },
     {
@@ -3916,7 +3916,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s32-eric-calendar-crossroads-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s32-eric-calendar-crossroads-portrait.webp",
           "status": 200
         }
       ],
@@ -3947,8 +3947,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S32-mobile.png",
-      "screenshotSha256": "031912ac6f2e3d6302340e49cf62ceab04a7bd7f233ec694fac38197a2968b19",
-      "screenshotBytes": 481733,
+      "screenshotSha256": "7bb4d98fd82edef79658b64d6174070300e4eb02354a80ba7989ffcdef758d8a",
+      "screenshotBytes": 481720,
       "actualPixelsReceived": true
     },
     {
@@ -3964,7 +3964,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/akureyri-street-master.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/akureyri-street-master.webp",
           "status": 200
         }
       ],
@@ -4012,7 +4012,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/akureyri-street-master.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/akureyri-street-master.webp",
           "status": 200
         }
       ],
@@ -4060,7 +4060,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s33-nick-teaser-reveal.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s33-nick-teaser-reveal.webp",
           "status": 200
         }
       ],
@@ -4091,8 +4091,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S33-desktop.png",
-      "screenshotSha256": "c79be7d8cabce3400c3bb81fcadb99b0391a51ea64a269e2c2ab03c8cd76b3bf",
-      "screenshotBytes": 1610064,
+      "screenshotSha256": "e19a1b1b88221ce4c4963292723556f57faf1f05cd3311976223a35e7aaa7111",
+      "screenshotBytes": 1610072,
       "actualPixelsReceived": true
     },
     {
@@ -4108,7 +4108,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s33-nick-teaser-reveal-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s33-nick-teaser-reveal-portrait.webp",
           "status": 200
         }
       ],
@@ -4139,8 +4139,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S33-mobile.png",
-      "screenshotSha256": "917fb825a7e75c3b6d9ee5cd51917b0e561a92f22e5e02a9d8dfddf8749a1c55",
-      "screenshotBytes": 431585,
+      "screenshotSha256": "28d89bd0e85fd2201bd4d9176f09ab148d4d8d95c3b83b15cb55caeadffe5d60",
+      "screenshotBytes": 431580,
       "actualPixelsReceived": true
     },
     {
@@ -4156,7 +4156,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s53-nick-no-camera-pool.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s53-nick-no-camera-pool.webp",
           "status": 200
         }
       ],
@@ -4187,8 +4187,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S53-desktop.png",
-      "screenshotSha256": "50e6eaeaeadc3a2eca4325f2caf131a464b67e7194d4ff8ede1d1a9fc2393f7b",
-      "screenshotBytes": 1900789,
+      "screenshotSha256": "3ace41fab19cffdfc174f475dad5cf74b45b9bf2401cb57f3416d061569d6cb2",
+      "screenshotBytes": 1900792,
       "actualPixelsReceived": true
     },
     {
@@ -4204,7 +4204,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s53-nick-no-camera-pool-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s53-nick-no-camera-pool-portrait.webp",
           "status": 200
         }
       ],
@@ -4235,8 +4235,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S53-mobile.png",
-      "screenshotSha256": "c6c713fffebd1422e93856a4bb2d9c2019478ba76fd087c1c845048ef582bed8",
-      "screenshotBytes": 422757,
+      "screenshotSha256": "306d864c6c20a8955c363aea347ea055fc93b6d1ed7f61dec99a6ce53d17d76c",
+      "screenshotBytes": 422754,
       "actualPixelsReceived": true
     },
     {
@@ -4252,7 +4252,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s34-cancelled-evening.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s34-cancelled-evening.webp",
           "status": 200
         }
       ],
@@ -4300,7 +4300,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s34-cancelled-evening-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s34-cancelled-evening-portrait.webp",
           "status": 200
         }
       ],
@@ -4348,7 +4348,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s56-cafe-musicians.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s56-cafe-musicians.webp",
           "status": 200
         }
       ],
@@ -4379,8 +4379,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S56-desktop.png",
-      "screenshotSha256": "64a8c9dc5bf6c3f547ec9fb55a90dfd3fb3f9b12b7e466563ab0e0d6d4d55bb3",
-      "screenshotBytes": 1980834,
+      "screenshotSha256": "3b2467e3f982ea2a0a30506b2589e90b0ed8546e75abc968bfd867d7fe7b3ebf",
+      "screenshotBytes": 1980824,
       "actualPixelsReceived": true
     },
     {
@@ -4396,7 +4396,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s56-cafe-musicians-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s56-cafe-musicians-portrait.webp",
           "status": 200
         }
       ],
@@ -4427,8 +4427,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S56-mobile.png",
-      "screenshotSha256": "5bed855c8320a311099d9dff203f944080d2499ff0671d2c79bc6736885299b0",
-      "screenshotBytes": 459540,
+      "screenshotSha256": "281589b03940c6900f27c59d874f5fb02c90293eaf0e4c5eb88534095d6c86a9",
+      "screenshotBytes": 459542,
       "actualPixelsReceived": true
     },
     {
@@ -4444,7 +4444,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/small-icelandic-cafe-rain.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/small-icelandic-cafe-rain.webp",
           "status": 200
         }
       ],
@@ -4492,7 +4492,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/small-icelandic-cafe-rain.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/small-icelandic-cafe-rain.webp",
           "status": 200
         }
       ],
@@ -4540,7 +4540,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s63-alice-solo-concert.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s63-alice-solo-concert.webp",
           "status": 200
         }
       ],
@@ -4571,8 +4571,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S63-desktop.png",
-      "screenshotSha256": "b49a37164c9ffb234ea257d0f769b95c612dc3e79eb382240e9932d7cc454993",
-      "screenshotBytes": 1599981,
+      "screenshotSha256": "2153ac86a9f6d161053ff3662f025229fcd67b395f6f6b06531ffd865fb7ccd3",
+      "screenshotBytes": 1599964,
       "actualPixelsReceived": true
     },
     {
@@ -4588,7 +4588,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s63-alice-solo-concert-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s63-alice-solo-concert-portrait.webp",
           "status": 200
         }
       ],
@@ -4636,7 +4636,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/snaefellsnes-master.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/snaefellsnes-master.webp",
           "status": 200
         }
       ],
@@ -4684,7 +4684,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/snaefellsnes-master.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/snaefellsnes-master.webp",
           "status": 200
         }
       ],
@@ -4715,8 +4715,8 @@
         "stageCount": 4
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S36-mobile.png",
-      "screenshotSha256": "c5da1abba15bd4d2667d2623ebb5e07d901b80e462b68132fe18e627c3450f6a",
-      "screenshotBytes": 392290,
+      "screenshotSha256": "927bf62ab4dfeedafd0a0a883f87c5e284dd2b94f567eef65198bbe1a3640286",
+      "screenshotBytes": 392291,
       "actualPixelsReceived": true
     },
     {
@@ -4732,7 +4732,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s37-eric-alice-cafe.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s37-eric-alice-cafe.webp",
           "status": 200
         }
       ],
@@ -4780,7 +4780,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s37-eric-alice-cafe-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s37-eric-alice-cafe-portrait.webp",
           "status": 200
         }
       ],
@@ -4811,8 +4811,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S37-mobile.png",
-      "screenshotSha256": "747e102c2534246f5c008ebd9625b008466389b1c7b501c9dfe27ba2b7405f50",
-      "screenshotBytes": 423733,
+      "screenshotSha256": "d0e81dc9d80eebe6515f5202e67c569e349702d9a38aa073cc4969dd39eff82d",
+      "screenshotBytes": 423735,
       "actualPixelsReceived": true
     },
     {
@@ -4828,7 +4828,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/guesthouse-common-kitchen-evening.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/guesthouse-common-kitchen-evening.webp",
           "status": 200
         }
       ],
@@ -4876,7 +4876,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/guesthouse-common-kitchen-evening.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/guesthouse-common-kitchen-evening.webp",
           "status": 200
         }
       ],
@@ -4924,7 +4924,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s38-alice-nick-ordinary-day.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s38-alice-nick-ordinary-day.webp",
           "status": 200
         }
       ],
@@ -4955,8 +4955,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S38-desktop.png",
-      "screenshotSha256": "8d3865e0afee9ec9e9a23aaeb29aed49daf8b370bfd48a6877c3cf11778cd6f7",
-      "screenshotBytes": 2067818,
+      "screenshotSha256": "742a65619adee0b2d0b83e6e9aefcf7cbc1934ae54d2bc076c890a5909b226b8",
+      "screenshotBytes": 2067816,
       "actualPixelsReceived": true
     },
     {
@@ -4972,7 +4972,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s38-alice-nick-ordinary-day-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s38-alice-nick-ordinary-day-portrait.webp",
           "status": 200
         }
       ],
@@ -5003,8 +5003,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S38-mobile.png",
-      "screenshotSha256": "7b1db30b792ad27b57903d06d57d1ac037d6ca72649253684a7e85a189be3424",
-      "screenshotBytes": 384034,
+      "screenshotSha256": "20e68f1b0da6f27f8f1162b3ff2f1482154fadc00b4b9b9e2df83d27ecf7ef2a",
+      "screenshotBytes": 384041,
       "actualPixelsReceived": true
     },
     {
@@ -5020,7 +5020,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s54-alice-nick-karaoke.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s54-alice-nick-karaoke.webp",
           "status": 200
         }
       ],
@@ -5068,7 +5068,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s54-alice-nick-karaoke-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s54-alice-nick-karaoke-portrait.webp",
           "status": 200
         }
       ],
@@ -5099,8 +5099,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S54-mobile.png",
-      "screenshotSha256": "fbc181bd6aa99f2ca1dad62cea74407759521fdb6e1990db2570211549f0351e",
-      "screenshotBytes": 329442,
+      "screenshotSha256": "4075c1286ee173b7a2778b588701a6208802107b62d9b2e7382abfa2272ce09f",
+      "screenshotBytes": 329443,
       "actualPixelsReceived": true
     },
     {
@@ -5116,7 +5116,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s39-alice-damir-cafe.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s39-alice-damir-cafe.webp",
           "status": 200
         }
       ],
@@ -5164,7 +5164,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s39-alice-damir-cafe-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s39-alice-damir-cafe-portrait.webp",
           "status": 200
         }
       ],
@@ -5195,8 +5195,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S39-mobile.png",
-      "screenshotSha256": "8ad410e97017ff9521919e4e5d5a5daadce69d8ade723969089d49389000badb",
-      "screenshotBytes": 377656,
+      "screenshotSha256": "c9639b8dab6f5aafd918e07d41ab0376e29b9ddd0964b5314791cc5200efd652",
+      "screenshotBytes": 377651,
       "actualPixelsReceived": true
     },
     {
@@ -5212,7 +5212,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/snaefellsnes-bakery-dawn.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/snaefellsnes-bakery-dawn.webp",
           "status": 200
         }
       ],
@@ -5260,7 +5260,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/snaefellsnes-bakery-dawn.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/snaefellsnes-bakery-dawn.webp",
           "status": 200
         }
       ],
@@ -5308,7 +5308,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s40-alice-laptop-window.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s40-alice-laptop-window.webp",
           "status": 200
         }
       ],
@@ -5339,8 +5339,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S40-desktop.png",
-      "screenshotSha256": "b334b3b3c2b4798b1eaaaba3ea917ddd704515fc95a33b770bc6ca3d134c01fe",
-      "screenshotBytes": 1571407,
+      "screenshotSha256": "0b1304ecaba965f9082dced4b1e6dd25e55794155ed9925b136bc7f5c7aa2d86",
+      "screenshotBytes": 1571410,
       "actualPixelsReceived": true
     },
     {
@@ -5356,7 +5356,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s40-alice-laptop-window-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s40-alice-laptop-window-portrait.webp",
           "status": 200
         }
       ],
@@ -5387,8 +5387,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S40-mobile.png",
-      "screenshotSha256": "36bfe15f9976ffe14b50993f1d7b0807dfeadbe638d1cb3dcf439806113ed11c",
-      "screenshotBytes": 344421,
+      "screenshotSha256": "84c5fc64dd4c62de8f28f807c3aea9e3c33938cf695926fc6362da3604e7ef9d",
+      "screenshotBytes": 344418,
       "actualPixelsReceived": true
     },
     {
@@ -5404,7 +5404,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s64-alice-snaefellsnes-trail.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s64-alice-snaefellsnes-trail.webp",
           "status": 200
         }
       ],
@@ -5452,7 +5452,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s64-alice-snaefellsnes-trail-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s64-alice-snaefellsnes-trail-portrait.webp",
           "status": 200
         }
       ],
@@ -5483,8 +5483,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S64-mobile.png",
-      "screenshotSha256": "62f2b75f9e491ec7870d545c017faa36171aedc533755809f9ed5994f5abd4e7",
-      "screenshotBytes": 353488,
+      "screenshotSha256": "0ed9c063f0245f1589718df5eab719b9dacd24fd4dc5bb0fb72febca821f5b87",
+      "screenshotBytes": 353494,
       "actualPixelsReceived": true
     },
     {
@@ -5500,7 +5500,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s60-souvenir-kitchen-batch2.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s60-souvenir-kitchen-batch2.webp",
           "status": 200
         }
       ],
@@ -5548,7 +5548,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s60-souvenir-kitchen-batch2-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s60-souvenir-kitchen-batch2-portrait.webp",
           "status": 200
         }
       ],
@@ -5596,7 +5596,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/small-icelandic-cafe-rain.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/small-icelandic-cafe-rain.webp",
           "status": 200
         }
       ],
@@ -5627,8 +5627,8 @@
         "stageCount": 1
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S41-desktop.png",
-      "screenshotSha256": "ba6351ba88864350aaef73444e91316236ca9749168b6760afff888aefbc1733",
-      "screenshotBytes": 1593249,
+      "screenshotSha256": "82136b040d41172423185c993c135e6688800f8b625fbf90059865c9edac24de",
+      "screenshotBytes": 1593253,
       "actualPixelsReceived": true
     },
     {
@@ -5644,7 +5644,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/small-icelandic-cafe-rain.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/small-icelandic-cafe-rain.webp",
           "status": 200
         }
       ],
@@ -5675,8 +5675,8 @@
         "stageCount": 1
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S41-mobile.png",
-      "screenshotSha256": "1973ac313187181d658ac06e1d0e7222b8a92d4458d9ed99fe044384a8f2323a",
-      "screenshotBytes": 378149,
+      "screenshotSha256": "fdab4a455a61164bd5a5e8f008c9e24df1ee911514b6578a8beb5479fc53fa09",
+      "screenshotBytes": 378153,
       "actualPixelsReceived": true
     },
     {
@@ -5692,7 +5692,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s42-harbour-cafe.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s42-harbour-cafe.webp",
           "status": 200
         }
       ],
@@ -5740,7 +5740,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s42-harbour-cafe-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s42-harbour-cafe-portrait.webp",
           "status": 200
         }
       ],
@@ -5771,8 +5771,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S42-mobile.png",
-      "screenshotSha256": "c73f4c755c70b0153c880560c3cbaa7ac2515d0e2445bd2fb31029f3422bb2f1",
-      "screenshotBytes": 457586,
+      "screenshotSha256": "779b8c3177c6873c7745272c399add9c9df3dd4edc6c36ef5d3a0afc441df6e9",
+      "screenshotBytes": 457583,
       "actualPixelsReceived": true
     },
     {
@@ -5788,7 +5788,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/small-icelandic-cafe-rain.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/small-icelandic-cafe-rain.webp",
           "status": 200
         }
       ],
@@ -5836,7 +5836,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/backgrounds/small-icelandic-cafe-rain.webp",
+          "url": "http://127.0.0.1:4173/assets/backgrounds/small-icelandic-cafe-rain.webp",
           "status": 200
         }
       ],
@@ -5884,7 +5884,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s44-eric-morning-harbour.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s44-eric-morning-harbour.webp",
           "status": 200
         }
       ],
@@ -5915,8 +5915,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S44-desktop.png",
-      "screenshotSha256": "d7d41379a6cee86c232b81a0b173719760f94345f858c123ad9f1d9c8499f620",
-      "screenshotBytes": 1860070,
+      "screenshotSha256": "a201eb6497034cebfb27ebfd5673d16d642bc434cd0321dfa8fb4119d8e72f52",
+      "screenshotBytes": 1860063,
       "actualPixelsReceived": true
     },
     {
@@ -5928,11 +5928,11 @@
         "width": 390,
         "height": 844
       },
-      "status": "FAIL",
+      "status": "PASS",
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s44-eric-morning-harbour.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s44-eric-morning-harbour-portrait.webp",
           "status": 200
         }
       ],
@@ -5940,12 +5940,12 @@
         "sceneId": null,
         "cue": "eric-morning-harbour",
         "mode": "cinematic",
-        "asset": "s44-eric-morning-harbour.webp",
+        "asset": "s44-eric-morning-harbour-portrait.webp",
         "desktopAsset": "s44-eric-morning-harbour.webp",
         "imageComplete": true,
         "natural": [
-          1920,
-          900
+          941,
+          1672
         ],
         "imageOpacity": "1",
         "imageDisplay": "block",
@@ -5963,8 +5963,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S44-mobile.png",
-      "screenshotSha256": "bf927524b5fb117c48805c2c237f69b8fd2e41ba5ffb911f85c592bcf7a42aca",
-      "screenshotBytes": 373646,
+      "screenshotSha256": "21fe60077a8f6d5824ecbe7f5b8e300cbead24761e2caa00cce6965cac496ea8",
+      "screenshotBytes": 433795,
       "actualPixelsReceived": true
     },
     {
@@ -5980,7 +5980,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s45-reykjavik-warm-montage.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s45-reykjavik-warm-montage.webp",
           "status": 200
         }
       ],
@@ -6028,7 +6028,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s45-reykjavik-warm-montage-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s45-reykjavik-warm-montage-portrait.webp",
           "status": 200
         }
       ],
@@ -6059,8 +6059,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S45-mobile.png",
-      "screenshotSha256": "4479bbe3da07cb3d532930da108f32391739aefd6a0659f0d957cb7d10ef2a9f",
-      "screenshotBytes": 409466,
+      "screenshotSha256": "ac1303b0f1bd5352b277e48631c3157d7cf463c1e83ea2c2a8f1101031b46554",
+      "screenshotBytes": 409469,
       "actualPixelsReceived": true
     },
     {
@@ -6076,7 +6076,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s46-airport-bus.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s46-airport-bus.webp",
           "status": 200
         }
       ],
@@ -6107,7 +6107,7 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S46-desktop.png",
-      "screenshotSha256": "50693802609cefcfba2e73130f21afe5c61870ab3ee50ac823d5d610d60c8be8",
+      "screenshotSha256": "e3cdcc41770fc494f2f09e43307721d43e0274e7cdfa8622881e0400ba3f1363",
       "screenshotBytes": 1983127,
       "actualPixelsReceived": true
     },
@@ -6124,7 +6124,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s46-airport-bus-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s46-airport-bus-portrait.webp",
           "status": 200
         }
       ],
@@ -6172,7 +6172,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s47-reykjavik-harbour-alice.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s47-reykjavik-harbour-alice.webp",
           "status": 200
         }
       ],
@@ -6203,8 +6203,8 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S47-desktop.png",
-      "screenshotSha256": "9c4cc3a8f6eed4f2f4c4ad9480b42f785418b0c6d717f05bbc9b1ce3b238b428",
-      "screenshotBytes": 1801732,
+      "screenshotSha256": "7b480e30832fae7e809873dc137a994a7e06eb6516ce6305612bcf4bb2698059",
+      "screenshotBytes": 1801730,
       "actualPixelsReceived": true
     },
     {
@@ -6220,7 +6220,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s47-reykjavik-harbour-alice-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s47-reykjavik-harbour-alice-portrait.webp",
           "status": 200
         }
       ],
@@ -6251,7 +6251,7 @@
         "stageCount": 0
       },
       "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\rendered-coverage-audit\\S47-mobile.png",
-      "screenshotSha256": "e19a44865a3e71836285f1d42eb44b2e5d6ea2c7274ccd4a81e9328cc0aa70ef",
+      "screenshotSha256": "58e6bb25d7e59728ce95a64e06fb60bf01470451a71c83f0e73597d9acc1bd10",
       "screenshotBytes": 478690,
       "actualPixelsReceived": true
     },
@@ -6268,7 +6268,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s48-last-breakfast-batch2.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s48-last-breakfast-batch2.webp",
           "status": 200
         }
       ],
@@ -6316,7 +6316,7 @@
       "errors": [],
       "assetResponses": [
         {
-          "url": "http://127.0.0.1:4174/assets/cg/s48-last-breakfast-batch2-portrait.webp",
+          "url": "http://127.0.0.1:4173/assets/cg/s48-last-breakfast-batch2-portrait.webp",
           "status": 200
         }
       ],
@@ -6355,9 +6355,7 @@
   "summary": {
     "scenes": 66,
     "captures": 132,
-    "failures": 1,
-    "failureScenes": [
-      "S44"
-    ]
+    "failures": 0,
+    "failureScenes": []
   }
 }

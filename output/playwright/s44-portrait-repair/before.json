@@ -1,0 +1,1061 @@
+{
+  "schemaVersion": 1,
+  "phase": "before",
+  "generatedAt": "2026-10-08T14:55:37.102Z",
+  "head": "c50dbdbe087938b9f53b6b039009dc7ca1c3e94d",
+  "baseUrl": "http://127.0.0.1:4173/literary.html",
+  "targets": [
+    {
+      "id": "previous-scene-S43",
+      "sceneId": "S43",
+      "position": 2
+    },
+    {
+      "id": "s44-before-current",
+      "sceneId": "S44",
+      "position": 0
+    },
+    {
+      "id": "s44-after-next",
+      "sceneId": "S44",
+      "position": 1
+    }
+  ],
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1920,
+      "height": 900
+    },
+    {
+      "name": "360x640",
+      "width": 360,
+      "height": 640
+    },
+    {
+      "name": "390x844",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "name": "412x915",
+      "width": 412,
+      "height": 915
+    }
+  ],
+  "captures": [
+    {
+      "phase": "before",
+      "target": {
+        "id": "previous-scene-S43",
+        "sceneId": "S43",
+        "position": 2
+      },
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "readback": {
+        "sceneId": null,
+        "cue": "scene-start",
+        "mode": "environment",
+        "asset": "small-icelandic-cafe-rain.webp",
+        "desktopAsset": "small-icelandic-cafe-rain.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900,
+          "right": 1920,
+          "bottom": 900
+        },
+        "imageRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900,
+          "right": 1920,
+          "bottom": 900
+        },
+        "hudRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 74,
+          "right": 1920,
+          "bottom": 74
+        },
+        "sheetRect": {
+          "x": 0,
+          "y": 649.5,
+          "width": 1920,
+          "height": 250.5,
+          "right": 1920,
+          "bottom": 900
+        },
+        "footerRect": {
+          "x": 490,
+          "y": 850,
+          "width": 940,
+          "height": 30,
+          "right": 1430,
+          "bottom": 880
+        },
+        "stageCharacters": [
+          {
+            "id": "stage-alice",
+            "rect": {
+              "x": 1188,
+              "y": 36,
+              "width": 540,
+              "height": 657,
+              "right": 1728,
+              "bottom": 693
+            }
+          }
+        ],
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false
+      },
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4173/assets/backgrounds/small-icelandic-cafe-rain.webp",
+          "status": 200
+        }
+      ],
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\s44-portrait-repair\\previous-scene-S43-desktop.png",
+      "screenshotSha256": "f58cdc577d0ee2da9b679958376882993e826c904d3d7626b0ba8b1a354284ec",
+      "screenshotBytes": 1596307,
+      "actualPixelsReceived": true
+    },
+    {
+      "phase": "before",
+      "target": {
+        "id": "previous-scene-S43",
+        "sceneId": "S43",
+        "position": 2
+      },
+      "viewport": {
+        "name": "360x640",
+        "width": 360,
+        "height": 640
+      },
+      "readback": {
+        "sceneId": null,
+        "cue": "scene-start",
+        "mode": "environment",
+        "asset": "small-icelandic-cafe-rain.webp",
+        "desktopAsset": "small-icelandic-cafe-rain.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 640,
+          "right": 360,
+          "bottom": 640
+        },
+        "imageRect": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 640,
+          "right": 360,
+          "bottom": 640
+        },
+        "hudRect": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 60,
+          "right": 360,
+          "bottom": 60
+        },
+        "sheetRect": {
+          "x": 0,
+          "y": 297,
+          "width": 360,
+          "height": 343,
+          "right": 360,
+          "bottom": 640
+        },
+        "footerRect": {
+          "x": 18,
+          "y": 592,
+          "width": 324,
+          "height": 30,
+          "right": 342,
+          "bottom": 622
+        },
+        "stageCharacters": [
+          {
+            "id": "stage-alice",
+            "rect": {
+              "x": 50.40625,
+              "y": 142.390625,
+              "width": 259.1875,
+              "height": 416.015625,
+              "right": 309.59375,
+              "bottom": 558.40625
+            }
+          }
+        ],
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false
+      },
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4173/assets/backgrounds/small-icelandic-cafe-rain.webp",
+          "status": 200
+        }
+      ],
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\s44-portrait-repair\\previous-scene-S43-360x640.png",
+      "screenshotSha256": "3624b223f4e1303baad15787dc7f6a7c63578ca728bfe0d4fc616c3418c3b410",
+      "screenshotBytes": 273011,
+      "actualPixelsReceived": true
+    },
+    {
+      "phase": "before",
+      "target": {
+        "id": "previous-scene-S43",
+        "sceneId": "S43",
+        "position": 2
+      },
+      "viewport": {
+        "name": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "readback": {
+        "sceneId": null,
+        "cue": "scene-start",
+        "mode": "environment",
+        "asset": "small-icelandic-cafe-rain.webp",
+        "desktopAsset": "small-icelandic-cafe-rain.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "right": 390,
+          "bottom": 844
+        },
+        "imageRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "right": 390,
+          "bottom": 844
+        },
+        "hudRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 60,
+          "right": 390,
+          "bottom": 60
+        },
+        "sheetRect": {
+          "x": 0,
+          "y": 526.5,
+          "width": 390,
+          "height": 317.5,
+          "right": 390,
+          "bottom": 844
+        },
+        "footerRect": {
+          "x": 18,
+          "y": 796,
+          "width": 354,
+          "height": 30,
+          "right": 372,
+          "bottom": 826
+        },
+        "stageCharacters": [
+          {
+            "id": "stage-alice",
+            "rect": {
+              "x": 54.59375,
+              "y": 168.78500366210938,
+              "width": 280.796875,
+              "height": 548.625,
+              "right": 335.390625,
+              "bottom": 717.4100036621094
+            }
+          }
+        ],
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false
+      },
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4173/assets/backgrounds/small-icelandic-cafe-rain.webp",
+          "status": 200
+        }
+      ],
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\s44-portrait-repair\\previous-scene-S43-390x844.png",
+      "screenshotSha256": "b0833a67188d54dd004c89677dc4c0d9a558d6386b8f8acfb00ab336ed10674f",
+      "screenshotBytes": 371138,
+      "actualPixelsReceived": true
+    },
+    {
+      "phase": "before",
+      "target": {
+        "id": "previous-scene-S43",
+        "sceneId": "S43",
+        "position": 2
+      },
+      "viewport": {
+        "name": "412x915",
+        "width": 412,
+        "height": 915
+      },
+      "readback": {
+        "sceneId": null,
+        "cue": "scene-start",
+        "mode": "environment",
+        "asset": "small-icelandic-cafe-rain.webp",
+        "desktopAsset": "small-icelandic-cafe-rain.webp",
+        "imageComplete": true,
+        "natural": [
+          1672,
+          941
+        ],
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 412,
+          "height": 915,
+          "right": 412,
+          "bottom": 915
+        },
+        "imageRect": {
+          "x": 0,
+          "y": 0,
+          "width": 412,
+          "height": 915,
+          "right": 412,
+          "bottom": 915
+        },
+        "hudRect": {
+          "x": 0,
+          "y": 0,
+          "width": 412,
+          "height": 60,
+          "right": 412,
+          "bottom": 60
+        },
+        "sheetRect": {
+          "x": 0,
+          "y": 623,
+          "width": 412,
+          "height": 292,
+          "right": 412,
+          "bottom": 915
+        },
+        "footerRect": {
+          "x": 18,
+          "y": 867,
+          "width": 376,
+          "height": 30,
+          "right": 394,
+          "bottom": 897
+        },
+        "stageCharacters": [
+          {
+            "id": "stage-alice",
+            "rect": {
+              "x": 57.6875,
+              "y": 176.890625,
+              "width": 296.625,
+              "height": 594.765625,
+              "right": 354.3125,
+              "bottom": 771.65625
+            }
+          }
+        ],
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false
+      },
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4173/assets/backgrounds/small-icelandic-cafe-rain.webp",
+          "status": 200
+        }
+      ],
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\s44-portrait-repair\\previous-scene-S43-412x915.png",
+      "screenshotSha256": "19fb2097cec7edd1cd4d7f3ac291e908f50b3edec48e579f9bbe8d741a0f978c",
+      "screenshotBytes": 419303,
+      "actualPixelsReceived": true
+    },
+    {
+      "phase": "before",
+      "target": {
+        "id": "s44-before-current",
+        "sceneId": "S44",
+        "position": 0
+      },
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "readback": {
+        "sceneId": null,
+        "cue": "eric-morning-harbour",
+        "mode": "cinematic",
+        "asset": "s44-eric-morning-harbour.webp",
+        "desktopAsset": "s44-eric-morning-harbour.webp",
+        "imageComplete": true,
+        "natural": [
+          1920,
+          900
+        ],
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900,
+          "right": 1920,
+          "bottom": 900
+        },
+        "imageRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900,
+          "right": 1920,
+          "bottom": 900
+        },
+        "hudRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 74,
+          "right": 1920,
+          "bottom": 74
+        },
+        "sheetRect": {
+          "x": 0,
+          "y": 685.125,
+          "width": 1920,
+          "height": 214.875,
+          "right": 1920,
+          "bottom": 900
+        },
+        "footerRect": {
+          "x": 490,
+          "y": 850,
+          "width": 940,
+          "height": 30,
+          "right": 1430,
+          "bottom": 880
+        },
+        "stageCharacters": [],
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false
+      },
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4173/assets/cg/s44-eric-morning-harbour.webp",
+          "status": 200
+        }
+      ],
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\s44-portrait-repair\\s44-before-current-desktop.png",
+      "screenshotSha256": "d7d41379a6cee86c232b81a0b173719760f94345f858c123ad9f1d9c8499f620",
+      "screenshotBytes": 1860070,
+      "actualPixelsReceived": true
+    },
+    {
+      "phase": "before",
+      "target": {
+        "id": "s44-before-current",
+        "sceneId": "S44",
+        "position": 0
+      },
+      "viewport": {
+        "name": "360x640",
+        "width": 360,
+        "height": 640
+      },
+      "readback": {
+        "sceneId": null,
+        "cue": "eric-morning-harbour",
+        "mode": "cinematic",
+        "asset": "s44-eric-morning-harbour.webp",
+        "desktopAsset": "s44-eric-morning-harbour.webp",
+        "imageComplete": true,
+        "natural": [
+          1920,
+          900
+        ],
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 640,
+          "right": 360,
+          "bottom": 640
+        },
+        "imageRect": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 640,
+          "right": 360,
+          "bottom": 640
+        },
+        "hudRect": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 60,
+          "right": 360,
+          "bottom": 60
+        },
+        "sheetRect": {
+          "x": 0,
+          "y": 404.875,
+          "width": 360,
+          "height": 227.125,
+          "right": 360,
+          "bottom": 632
+        },
+        "footerRect": {
+          "x": 18,
+          "y": 584,
+          "width": 324,
+          "height": 30,
+          "right": 342,
+          "bottom": 614
+        },
+        "stageCharacters": [],
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false
+      },
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4173/assets/cg/s44-eric-morning-harbour.webp",
+          "status": 200
+        }
+      ],
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\s44-portrait-repair\\s44-before-current-360x640.png",
+      "screenshotSha256": "2c28886bdc69fd02c6dd141e87a59a2e8e677b599e211e82d124e5afc53602d8",
+      "screenshotBytes": 287389,
+      "actualPixelsReceived": true
+    },
+    {
+      "phase": "before",
+      "target": {
+        "id": "s44-before-current",
+        "sceneId": "S44",
+        "position": 0
+      },
+      "viewport": {
+        "name": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "readback": {
+        "sceneId": null,
+        "cue": "eric-morning-harbour",
+        "mode": "cinematic",
+        "asset": "s44-eric-morning-harbour.webp",
+        "desktopAsset": "s44-eric-morning-harbour.webp",
+        "imageComplete": true,
+        "natural": [
+          1920,
+          900
+        ],
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "right": 390,
+          "bottom": 844
+        },
+        "imageRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "right": 390,
+          "bottom": 844
+        },
+        "hudRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 60,
+          "right": 390,
+          "bottom": 60
+        },
+        "sheetRect": {
+          "x": 0,
+          "y": 608.875,
+          "width": 390,
+          "height": 227.125,
+          "right": 390,
+          "bottom": 836
+        },
+        "footerRect": {
+          "x": 18,
+          "y": 788,
+          "width": 354,
+          "height": 30,
+          "right": 372,
+          "bottom": 818
+        },
+        "stageCharacters": [],
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false
+      },
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4173/assets/cg/s44-eric-morning-harbour.webp",
+          "status": 200
+        }
+      ],
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\s44-portrait-repair\\s44-before-current-390x844.png",
+      "screenshotSha256": "bf927524b5fb117c48805c2c237f69b8fd2e41ba5ffb911f85c592bcf7a42aca",
+      "screenshotBytes": 373646,
+      "actualPixelsReceived": true
+    },
+    {
+      "phase": "before",
+      "target": {
+        "id": "s44-before-current",
+        "sceneId": "S44",
+        "position": 0
+      },
+      "viewport": {
+        "name": "412x915",
+        "width": 412,
+        "height": 915
+      },
+      "readback": {
+        "sceneId": null,
+        "cue": "eric-morning-harbour",
+        "mode": "cinematic",
+        "asset": "s44-eric-morning-harbour.webp",
+        "desktopAsset": "s44-eric-morning-harbour.webp",
+        "imageComplete": true,
+        "natural": [
+          1920,
+          900
+        ],
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 412,
+          "height": 915,
+          "right": 412,
+          "bottom": 915
+        },
+        "imageRect": {
+          "x": 0,
+          "y": 0,
+          "width": 412,
+          "height": 915,
+          "right": 412,
+          "bottom": 915
+        },
+        "hudRect": {
+          "x": 0,
+          "y": 0,
+          "width": 412,
+          "height": 60,
+          "right": 412,
+          "bottom": 60
+        },
+        "sheetRect": {
+          "x": 0,
+          "y": 679.875,
+          "width": 412,
+          "height": 227.125,
+          "right": 412,
+          "bottom": 907
+        },
+        "footerRect": {
+          "x": 18,
+          "y": 859,
+          "width": 376,
+          "height": 30,
+          "right": 394,
+          "bottom": 889
+        },
+        "stageCharacters": [],
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false
+      },
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4173/assets/cg/s44-eric-morning-harbour.webp",
+          "status": 200
+        }
+      ],
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\s44-portrait-repair\\s44-before-current-412x915.png",
+      "screenshotSha256": "9c73c4b25a33c09d81a3c08891568c6ae692d8374e5ade286cfc82e6a40c7f8a",
+      "screenshotBytes": 414146,
+      "actualPixelsReceived": true
+    },
+    {
+      "phase": "before",
+      "target": {
+        "id": "s44-after-next",
+        "sceneId": "S44",
+        "position": 1
+      },
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "readback": {
+        "sceneId": null,
+        "cue": "eric-morning-harbour",
+        "mode": "cinematic",
+        "asset": "s44-eric-morning-harbour.webp",
+        "desktopAsset": "s44-eric-morning-harbour.webp",
+        "imageComplete": true,
+        "natural": [
+          1920,
+          900
+        ],
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900,
+          "right": 1920,
+          "bottom": 900
+        },
+        "imageRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 900,
+          "right": 1920,
+          "bottom": 900
+        },
+        "hudRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 74,
+          "right": 1920,
+          "bottom": 74
+        },
+        "sheetRect": {
+          "x": 0,
+          "y": 674.125,
+          "width": 1920,
+          "height": 225.875,
+          "right": 1920,
+          "bottom": 900
+        },
+        "footerRect": {
+          "x": 490,
+          "y": 850,
+          "width": 940,
+          "height": 30,
+          "right": 1430,
+          "bottom": 880
+        },
+        "stageCharacters": [],
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false
+      },
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4173/assets/cg/s44-eric-morning-harbour.webp",
+          "status": 200
+        }
+      ],
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\s44-portrait-repair\\s44-after-next-desktop.png",
+      "screenshotSha256": "216f44392624457c4ce3a3639bc2fc9f946f7da982f8ad4277c6c144de6606b1",
+      "screenshotBytes": 1846107,
+      "actualPixelsReceived": true
+    },
+    {
+      "phase": "before",
+      "target": {
+        "id": "s44-after-next",
+        "sceneId": "S44",
+        "position": 1
+      },
+      "viewport": {
+        "name": "360x640",
+        "width": 360,
+        "height": 640
+      },
+      "readback": {
+        "sceneId": null,
+        "cue": "eric-morning-harbour",
+        "mode": "cinematic",
+        "asset": "s44-eric-morning-harbour.webp",
+        "desktopAsset": "s44-eric-morning-harbour.webp",
+        "imageComplete": true,
+        "natural": [
+          1920,
+          900
+        ],
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 640,
+          "right": 360,
+          "bottom": 640
+        },
+        "imageRect": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 640,
+          "right": 360,
+          "bottom": 640
+        },
+        "hudRect": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 60,
+          "right": 360,
+          "bottom": 60
+        },
+        "sheetRect": {
+          "x": 0,
+          "y": 394.875,
+          "width": 360,
+          "height": 237.125,
+          "right": 360,
+          "bottom": 632
+        },
+        "footerRect": {
+          "x": 18,
+          "y": 584,
+          "width": 324,
+          "height": 30,
+          "right": 342,
+          "bottom": 614
+        },
+        "stageCharacters": [],
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false
+      },
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4173/assets/cg/s44-eric-morning-harbour.webp",
+          "status": 200
+        }
+      ],
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\s44-portrait-repair\\s44-after-next-360x640.png",
+      "screenshotSha256": "488033d176e05b96cc9c25ddfd7db0aeaa3b9d45450788b37f93c27d6ed31acf",
+      "screenshotBytes": 284219,
+      "actualPixelsReceived": true
+    },
+    {
+      "phase": "before",
+      "target": {
+        "id": "s44-after-next",
+        "sceneId": "S44",
+        "position": 1
+      },
+      "viewport": {
+        "name": "390x844",
+        "width": 390,
+        "height": 844
+      },
+      "readback": {
+        "sceneId": null,
+        "cue": "eric-morning-harbour",
+        "mode": "cinematic",
+        "asset": "s44-eric-morning-harbour.webp",
+        "desktopAsset": "s44-eric-morning-harbour.webp",
+        "imageComplete": true,
+        "natural": [
+          1920,
+          900
+        ],
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "right": 390,
+          "bottom": 844
+        },
+        "imageRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "right": 390,
+          "bottom": 844
+        },
+        "hudRect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 60,
+          "right": 390,
+          "bottom": 60
+        },
+        "sheetRect": {
+          "x": 0,
+          "y": 622.0625,
+          "width": 390,
+          "height": 213.9375,
+          "right": 390,
+          "bottom": 836
+        },
+        "footerRect": {
+          "x": 18,
+          "y": 788,
+          "width": 354,
+          "height": 30,
+          "right": 372,
+          "bottom": 818
+        },
+        "stageCharacters": [],
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false
+      },
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4173/assets/cg/s44-eric-morning-harbour.webp",
+          "status": 200
+        }
+      ],
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\s44-portrait-repair\\s44-after-next-390x844.png",
+      "screenshotSha256": "794e5ca6faab7936ba1bb918a5c4018946955e6590480adf1da9bcf73fa97076",
+      "screenshotBytes": 374121,
+      "actualPixelsReceived": true
+    },
+    {
+      "phase": "before",
+      "target": {
+        "id": "s44-after-next",
+        "sceneId": "S44",
+        "position": 1
+      },
+      "viewport": {
+        "name": "412x915",
+        "width": 412,
+        "height": 915
+      },
+      "readback": {
+        "sceneId": null,
+        "cue": "eric-morning-harbour",
+        "mode": "cinematic",
+        "asset": "s44-eric-morning-harbour.webp",
+        "desktopAsset": "s44-eric-morning-harbour.webp",
+        "imageComplete": true,
+        "natural": [
+          1920,
+          900
+        ],
+        "pictureRect": {
+          "x": 0,
+          "y": 0,
+          "width": 412,
+          "height": 915,
+          "right": 412,
+          "bottom": 915
+        },
+        "imageRect": {
+          "x": 0,
+          "y": 0,
+          "width": 412,
+          "height": 915,
+          "right": 412,
+          "bottom": 915
+        },
+        "hudRect": {
+          "x": 0,
+          "y": 0,
+          "width": 412,
+          "height": 60,
+          "right": 412,
+          "bottom": 60
+        },
+        "sheetRect": {
+          "x": 0,
+          "y": 693.0625,
+          "width": 412,
+          "height": 213.9375,
+          "right": 412,
+          "bottom": 907
+        },
+        "footerRect": {
+          "x": 18,
+          "y": 859,
+          "width": 376,
+          "height": 30,
+          "right": 394,
+          "bottom": 889
+        },
+        "stageCharacters": [],
+        "edgeToEdge": true,
+        "overflow": false,
+        "internalScroll": false
+      },
+      "errors": [],
+      "assetResponses": [
+        {
+          "url": "http://127.0.0.1:4173/assets/cg/s44-eric-morning-harbour.webp",
+          "status": 200
+        }
+      ],
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\output\\playwright\\s44-portrait-repair\\s44-after-next-412x915.png",
+      "screenshotSha256": "65202f3d671c554b5e810491b54fca42d764fa6f97d69da20627cef6a24b33fc",
+      "screenshotBytes": 414681,
+      "actualPixelsReceived": true
+    }
+  ],
+  "summary": {
+    "captures": 12,
+    "errors": 0,
+    "missingPixels": 0
+  }
+}
