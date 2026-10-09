@@ -1,0 +1,28 @@
+name: Art Acceptance Contract
+
+on:
+  pull_request:
+    branches: [release/final-rc-2026-10-08]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  art-acceptance-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax validation
+        run: |
+          node --check tools/release/art-acceptance.mjs
+          node --check tools/release/visual-content-review.mjs
+          node --check tools/release/refresh-production-art-acceptance.mjs
+          node --check tests/narrative/art-acceptance.test.mjs
+          node --check tests/narrative/art-acceptance-visual-content.test.mjs
+      - name: Art acceptance regression tests
+        run: npm run test:art-acceptance
