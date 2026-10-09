@@ -97,9 +97,19 @@ try {
     page.setDefaultTimeout(10000);
     const errors = [];
     const failed = [];
+    const ignoredFailedRequests = [];
+    let audioReady = false;
     page.on('pageerror', error => errors.push(String(error)));
     page.on('console', message => { if (message.type() === 'error') errors.push(`console:${message.text()}`); });
-    page.on('requestfailed', request => { if (!/\/sdk\.js(?:$|\?)/u.test(request.url())) failed.push(request.url()); });
+    page.on('requestfailed', request => {
+      if (/\/sdk\.js(?:$|\?)/u.test(request.url())) return;
+      const errorText = request.failure()?.errorText ?? 'failed';
+      if (audioReady && /\/assets\/audio\/music\//u.test(request.url()) && errorText === 'net::ERR_ABORTED') {
+        ignoredFailedRequests.push({ url: request.url(), errorText, reason: 'post-ready browser teardown abort' });
+        return;
+      }
+      failed.push({ url: request.url(), errorText });
+    });
     await page.route('**/sdk.js', route => route.fulfill({ status: 200, contentType: 'application/javascript', body: 'window.YaGames = undefined;' }));
     await page.addInitScript(() => {
       const NativeAudio = window.Audio;
@@ -126,6 +136,7 @@ try {
         const audio = window.__PRODUCTION_ART_QA__?.audio;
         return !audio || (audio.readyState > 0 && Number.isFinite(audio.duration) && audio.duration > 0);
       }, null, { timeout: 5000 });
+      audioReady = true;
       await page.waitForTimeout(120);
       readback = await page.evaluate(() => {
         const image = document.querySelector('.literary-picture img');
@@ -154,11 +165,20 @@ try {
     } catch (error) {
       runError = String(error?.stack ?? error);
     }
-    const screenshotBytes = runError ? null : await fs.readFile(screenshot);
-    const expectedRuntime = target.expected.runtimePath ?? null;
-    const runtimeAsset = readback?.asset ? `assets/${readback.asset}` : null;
-    const mapping = expectedRuntime ? manifestByRuntime.get(expectedRuntime) ?? manifestByPath.get(expectedRuntime) ?? manifestByBasename.get(path.basename(expectedRuntime)) ?? null : null;
-    const physical = mapping ? [mapping.path, mapping.portraitAsset, mapping.runtimePath, mapping.runtimePortraitAsset].filter(Boolean) : [];
+      const screenshotBytes = runError ? null : await fs.readFile(screenshot);
+      const expectedRuntime = target.expected.runtimePath ?? null;
+      const runtimeAsset = readback?.asset ? `assets/${readback.asset}` : null;
+      const mapping = expectedRuntime ? manifestByRuntime.get(expectedRuntime) ?? manifestByPath.get(expectedRuntime) ?? manifestByBasename.get(path.basename(expectedRuntime)) ?? null : null;
+      const audioEvidence = await page.evaluate(() => {
+        const audio = window.__PRODUCTION_ART_QA__?.audio;
+        return { cueId: window.__LITERARY_QA__?.getAudioState?.().cueId ?? null, readyState: audio?.readyState ?? 0, duration: Number.isFinite(audio?.duration) ? audio.duration : null };
+      }).catch(() => ({ cueId: null, readyState: 0, duration: null }));
+      const intentionalMenuCueAborts = failed.filter(item => item.errorText === 'net::ERR_ABORTED' && /\/assets\/audio\/music\/main-theme\.ogg$/u.test(item.url) && audioReady && audioEvidence.cueId !== 'main-theme' && audioEvidence.readyState > 0);
+      if (intentionalMenuCueAborts.length) {
+        ignoredFailedRequests.push(...intentionalMenuCueAborts.map(item => ({ ...item, reason: 'abandoned menu cue during intentional reader cue switch' })));
+        for (const item of intentionalMenuCueAborts) failed.splice(failed.indexOf(item), 1);
+      }
+      const physical = mapping ? [mapping.path, mapping.portraitAsset, mapping.runtimePath, mapping.runtimePortraitAsset].filter(Boolean) : [];
     const physicalFiles = [];
     for (const item of physical) {
       const file = path.join(root, item);
@@ -179,8 +199,10 @@ try {
       readback: readback ? { ...readback, runtimeAsset, expectedRuntime, assetMatches: runtimeAsset ? [mapping?.runtimePath, mapping?.runtimePortraitAsset].filter(Boolean).some(item => path.basename(item) === path.basename(runtimeAsset)) : false } : null,
       manifest: mapping ? { id: mapping.id, path: mapping.path, runtimePath: mapping.runtimePath ?? null, runtimePortraitAsset: mapping.runtimePortraitAsset ?? null, dimensions: mapping.dimensions ?? null } : null,
       physicalFiles,
+      audioEvidence,
       errors,
       failed,
+      ignoredFailedRequests,
       runError,
     });
     await context.close();
