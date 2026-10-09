@@ -117,6 +117,19 @@ test('HOST_OBSERVED_ART_ACCEPTANCE_V1 covers 594 frame-role pairs and accepts no
   assert.equal(x.status,'PASS',JSON.stringify(x));
   assert.equal(x.assurance,HOST_OBSERVED_ART_ASSURANCE);
 });
+test('accepts observed user-turn acknowledgement with no synthetic user ID and viewport bound by physical PNG/matrix',()=>{
+  const f=makeFixture();
+  mutate(f,0,r=>{
+    r.hostObservedReceipt.browser.userTurnIdentity=null;
+    r.hostObservedReceipt.browser.submissionEvidence='user_turn';
+    for(const item of r.hostObservedReceipt.attachments) {
+      item.viewport=null;
+      item.dimensions=null;
+    }
+  });
+  const result=check(f);
+  assert.equal(result.status,'PASS',JSON.stringify(result));
+});
 const cases=[
   ['missing host receipt',f=>mutate(f,0,r=>{delete r.hostObservedReceipt}),'ART_ACCEPTANCE_HOST_RECEIPT_INVALID'],
   ['provider attested spoof',f=>mutate(f,0,r=>{r.hostObservedReceipt.providerAttested=true}),'ART_ACCEPTANCE_HOST_RECEIPT_INVALID'],
@@ -124,6 +137,19 @@ const cases=[
   ['missing browser user identity',f=>mutate(f,0,r=>{r.hostObservedReceipt.browser.userTurnIdentity=''}),'ART_ACCEPTANCE_HOST_RECEIPT_INVALID'],
   ['wrong model route',f=>mutate(f,0,r=>{r.hostObservedReceipt.route.model='chatgpt-web/light'}),'ART_ACCEPTANCE_HOST_RECEIPT_INVALID'],
   ['wrong effort',f=>mutate(f,0,r=>{r.hostObservedReceipt.route.reasoningEffort='medium'}),'ART_ACCEPTANCE_HOST_RECEIPT_INVALID'],
+  ['missing user-turn ack when browser has no user ID',f=>mutate(f,0,r=>{
+    r.hostObservedReceipt.browser.userTurnIdentity=null;
+  }),'ART_ACCEPTANCE_HOST_RECEIPT_INVALID'],
+  ['fabricated user-turn ack value',f=>mutate(f,0,r=>{
+    r.hostObservedReceipt.browser.userTurnIdentity=null;
+    r.hostObservedReceipt.browser.submissionEvidence='send_clicked';
+  }),'ART_ACCEPTANCE_HOST_RECEIPT_INVALID'],
+  ['explicitly wrong attachment viewport',f=>mutate(f,0,r=>{
+    r.hostObservedReceipt.attachments[0].viewport='portrait390';
+  }),'ART_ACCEPTANCE_HOST_FRAME_MISMATCH'],
+  ['explicitly wrong attachment dimensions',f=>mutate(f,0,r=>{
+    r.hostObservedReceipt.attachments[0].dimensions=[390,844];
+  }),'ART_ACCEPTANCE_HOST_FRAME_MISMATCH'],
   ['response tampered',f=>mutate(f,0,r=>{r.responseText+=' appended'}),'ART_ACCEPTANCE_HOST_RECEIPT_INVALID'],
   ['duplicate host browser trace',f=>mutate(f,1,r=>{r.hostObservedReceipt.browser.traceId=f.reviewRecords[0].review.hostObservedReceipt.browser.traceId}),'ART_ACCEPTANCE_HOST_RECEIPT_DUPLICATE'],
   ['missing one viewport for role',f=>mutate(f,0,r=>{
