@@ -117,6 +117,11 @@ const cases=[
   ['different viewport in review',f=>mutateReview(f,0,r=>{r.visualEvidence[0].viewport='desktop'}),'ART_ACCEPTANCE_CONTENT_FRAME_MISMATCH'],
   ['changed physical PNG',f=>{fs.writeFileSync(path.join(f.root,f.frames.get('S01:desktop').screenshot),'tampered')} ,'ART_ACCEPTANCE_SCREENSHOT_EVIDENCE_HASH_MISMATCH'],
   ['only 65 scenes in matrix',f=>mutateMatrix(f,m=>{m.scenes.pop()}),'ART_ACCEPTANCE_CONTENT_MATRIX_INVALID'],
+  ['S10 replaced by unexpected S67',f=>mutateMatrix(f,m=>{
+    const scene=m.scenes.find(s=>s.sceneId==='S10');
+    scene.sceneId='S67';
+    for(const capture of scene.captures){capture.sceneId='S67';capture.readback.sceneId='S67';}
+  }),'ART_ACCEPTANCE_CONTENT_MATRIX_INVALID'],
   ['incorrect visual readback',f=>mutateMatrix(f,m=>{m.scenes[0].captures[0].readback.assetMatches=false}),'ART_ACCEPTANCE_CONTENT_MATRIX_INVALID'],
   ['stale source matrix',f=>mutateMatrix(f,m=>{m.sourceHead='0'.repeat(40)}),'ART_ACCEPTANCE_EVIDENCE_SOURCE_MISMATCH'],
   ['wrong reviewer identity',f=>mutateReview(f,2,r=>{r.role='other_model'}),'ART_ACCEPTANCE_WEB_REVIEW_MISSING'],

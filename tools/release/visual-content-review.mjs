@@ -11,6 +11,7 @@ const block = (code, reason) => ({ status: 'BLOCKED', code, reason });
 const isText = value => typeof value === 'string' && value.trim().length > 0;
 const isSha = value => typeof value === 'string' && /^[a-f0-9]{64}$/i.test(value);
 const viewportNames = new Set(['desktop', 'portrait390', 'portrait360']);
+const expectedScenes = new Set(Array.from({ length: 66 }, (_, i) => 'S' + String(i + 1).padStart(2, '0')));
 export const VISUAL_REVIEW_ROLES = Object.freeze([
   'ceos_reasoner_web', 'ceos_bulk_checker_web', 'ceos_art_director_web'
 ]);
@@ -46,7 +47,7 @@ export function verifyVisualContentMatrix({ projectRoot, matrix, sourceHead }) {
   const paths = new Set();
   const sceneIds = new Set();
   for (const scene of matrix.scenes) {
-    if (!/^S\d{2}$/.test(scene?.sceneId ?? '') || sceneIds.has(scene.sceneId) ||
+    if (!expectedScenes.has(scene?.sceneId) || sceneIds.has(scene.sceneId) ||
         !Array.isArray(scene.captures) || scene.captures.length !== 3) {
       return block('ART_ACCEPTANCE_CONTENT_MATRIX_INVALID', 'Scene identities or viewport coverage are incomplete or duplicated.');
     }
@@ -106,8 +107,11 @@ export function verifyVisualContentReviews({ projectRoot, matrix, sourceHead, re
         !Array.isArray(evidence.findings) || evidence.findings.length > 0 ||
         !Array.isArray(evidence.unresolved) || evidence.unresolved.length > 0 ||
         !Array.isArray(evidence.reviewedItems) || evidence.reviewedItems.length === 0 ||
+        !evidence.reviewedItems.every(isText) ||
         !Array.isArray(evidence.evidenceRefs) || !evidence.evidenceRefs.length ||
+        !evidence.evidenceRefs.every(isText) ||
         !Array.isArray(evidence.receivedEvidenceRefs) ||
+        !evidence.receivedEvidenceRefs.every(isText) ||
         !Array.isArray(evidence.visualEvidence) ||
         evidence.visualEvidence.length !== evidence.evidenceRefs.length ||
         !isText(reference.path) || reviewFiles.has(reference.path)) {
@@ -135,7 +139,7 @@ export function verifyVisualContentReviews({ projectRoot, matrix, sourceHead, re
       const capture = checked.index.get(frame.sceneId + ':' + frame.viewport);
       if (!capture || capture.screenshot !== frame.path ||
           capture.screenshotSha256 !== frame.sha256 ||
-          !evidence.reviewedItems.some(item => item.includes(frame.sceneId))) {
+          !evidence.reviewedItems.some(item => item.startsWith(frame.sceneId + ':'))) {
         return block('ART_ACCEPTANCE_CONTENT_FRAME_MISMATCH', 'Reviewed frame is not bound to this scene/viewport/source matrix: ' + frame.ref);
       }
       reviewedSceneIds.add(frame.sceneId);
