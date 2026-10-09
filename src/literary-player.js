@@ -166,6 +166,7 @@ let t=createTranslator(locale);
 let cloudQueue=null;
 const audioDirector=createAudioDirector();
 const audioCueById=new Map(musicCues.map(cue=>[cue.cueId,{...cue,file:`${cue.cueId}.ogg`} ]));
+const menuAudioCue=audioCueById.get('main-theme');
 let settings=(()=>{try{return{scale:1,contrast:false,motion:false,...JSON.parse(localStorage.getItem(textSettingsKey)||'{}')}}catch{return{scale:1,contrast:false,motion:false}}})();
 function loadRuntimeSeason(selectedLocale,qaLocaleOverride){
   if(selectedLocale==='ru')return literarySeason;
@@ -417,7 +418,7 @@ function settingsPanel(section){
 }
 function renderMenu(){
   platform?.setGameplayActive(false);
-  audioDirector.pause();
+  audioDirector.setCue(menuAudioCue);
   menuOpen=true;app.className='literary-home';app.dataset.presentation=modal?`menu-${modal.toLowerCase()}`:'menu-home';app.style.setProperty('--cover',`url('${cover}')`);app.replaceChildren();
   const section=el('','literary-home-card');app.append(section);
   section.append(el(t('menuKicker'),'kicker'),el(t('gameTitle'),'home-title','h1'));
@@ -529,8 +530,14 @@ window.addEventListener('keydown',event=>{
   if(advanceNarrative())event.preventDefault();
 });
 window.addEventListener('popstate',()=>{if(confirmDialog)settleConfirmDialog(false,{fromHistory:true})});
-window.addEventListener('pointerdown',()=>{audioDirector.unlock().catch(()=>{})},{passive:true});
-window.addEventListener('keydown',()=>{audioDirector.unlock().catch(()=>{})},{passive:true});
+let audioUnlockInFlight=false;
+function unlockAudioFromInteraction(){
+  if(audioUnlockInFlight || audioDirector.getState().unlocked)return;
+  audioUnlockInFlight=true;
+  audioDirector.unlock().catch(()=>{}).finally(()=>{audioUnlockInFlight=false});
+}
+window.addEventListener('pointerdown',unlockAudioFromInteraction,{passive:true});
+window.addEventListener('keydown',unlockAudioFromInteraction,{passive:true});
 document.addEventListener('visibilitychange',()=>{if(document.hidden)audioDirector.pause();else audioDirector.resume().catch(()=>{})});
 window.addEventListener('blur',()=>audioDirector.pause());
 window.addEventListener('focus',()=>audioDirector.resume().catch(()=>{}));
@@ -585,6 +592,7 @@ window.__LITERARY_QA__={
   getPlatformMode:()=>platform?.mode??'booting',
   getPersistenceKeys:()=>({local:literarySaveKey,cloud:literaryCloudKey}),
   getScreen:()=>({menuOpen,sceneId:reader.sceneId,position:reader.position}),
+  getAudioState:()=>audioDirector.getState(),
   getRuntimeTrace:()=>{
     const scene=byId.get(reader.sceneId),flow=compileInteractivePlayback(scene,reader.choices,locale),entry=flow[reader.position]??flow.at(-1)??null;
     const visualEntry=visualEntryForPosition(flow,reader.position);

@@ -30,6 +30,7 @@
     ,"audio:check": "node tools/audio-generation/check-generator.mjs"
     ,"audio:build-cues": "node tools/audio-generation/build-music-cues.mjs"
     ,"test:audio": "node --test tests/audio/music-system.test.mjs"
+    ,"qa:audio-continuity": "node tools/audio-qa/menu-audio-continuity.mjs"
     ,"qa:audio-listening": "node tools/audio-qa/serve-listening-review.mjs"
   },
   "type": "module"
