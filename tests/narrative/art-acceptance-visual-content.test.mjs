@@ -119,7 +119,7 @@ const cases=[
   ['only 65 scenes in matrix',f=>mutateMatrix(f,m=>{m.scenes.pop()}),'ART_ACCEPTANCE_CONTENT_MATRIX_INVALID'],
   ['incorrect visual readback',f=>mutateMatrix(f,m=>{m.scenes[0].captures[0].readback.assetMatches=false}),'ART_ACCEPTANCE_CONTENT_MATRIX_INVALID'],
   ['stale source matrix',f=>mutateMatrix(f,m=>{m.sourceHead='0'.repeat(40)}),'ART_ACCEPTANCE_EVIDENCE_SOURCE_MISMATCH'],
-  ['wrong reviewer identity',f=>mutateReview(f,2,r=>{r.role='other_model'}),'ART_ACCEPTANCE_CONTENT_REVIEW_INVALID'],
+  ['wrong reviewer identity',f=>mutateReview(f,2,r=>{r.role='other_model'}),'ART_ACCEPTANCE_WEB_REVIEW_MISSING'],
 ];
 for(const [label,change,expected] of cases){
   test('v4 blocks '+label,()=>{const f=makeFixture();change(f);const actual=verify(f);assert.equal(actual.code,expected,JSON.stringify(actual))});
