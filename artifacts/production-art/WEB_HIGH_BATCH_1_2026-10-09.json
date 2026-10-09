@@ -1,0 +1,1159 @@
+{
+  "schemaVersion": 1,
+  "recordType": "host-observed-web-high-batch-plan",
+  "batchId": "BATCH1-S03-S18-S42-S44-S46-2026-10-09",
+  "status": "PENDING_WEB_HIGH",
+  "verdict": "NOT_RUN",
+  "sourceHead": "e106c59695a5092b0ad13fa0515e83989bc47837",
+  "captureSourceHead": "5a43fbd51bcd54db472c89956ad085b20b4e5c45",
+  "sceneIds": [
+    "S03",
+    "S18",
+    "S42",
+    "S44",
+    "S46"
+  ],
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1920,
+      "height": 900
+    },
+    {
+      "name": "portrait390",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "name": "portrait360",
+      "width": 360,
+      "height": 640
+    }
+  ],
+  "roles": [
+    "ceos_reasoner_web",
+    "ceos_bulk_checker_web",
+    "ceos_art_director_web"
+  ],
+  "deliveryContract": {
+    "model": "chatgpt-web/gpt-6-sol",
+    "reasoningEffort": "high",
+    "maxAttachmentsPerBrowserTurn": 10,
+    "maxBytesPerBrowserTurn": 50000000,
+    "requiredTurns": 6,
+    "incompleteDelivery": "BLOCKED",
+    "historicalReviews": "NOT_USED_AS_PASS"
+  },
+  "turns": [
+    {
+      "turnId": "batch1-ceos_reasoner_web-1",
+      "role": "ceos_reasoner_web",
+      "sceneIds": [
+        "S03",
+        "S18",
+        "S42"
+      ],
+      "attachments": [
+        {
+          "ref": "codex-input-image-1",
+          "sceneId": "S03",
+          "cue": "editor-call",
+          "viewport": "desktop",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S03-editor-call-1920x900.png",
+          "sha256": "0bdfacea9efe77e619fbe52c2f8a59280339bace66e8c7e0820c7803021e09ce",
+          "bytes": 1558898,
+          "dimensions": [
+            1920,
+            900
+          ]
+        },
+        {
+          "ref": "codex-input-image-2",
+          "sceneId": "S03",
+          "cue": "editor-call",
+          "viewport": "portrait390",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S03-editor-call-390x844.png",
+          "sha256": "c51f26f534eb19c5f876d8d6f90d05b341a9c99502f4645bbad796b8c11bc3cc",
+          "bytes": 423548,
+          "dimensions": [
+            390,
+            844
+          ]
+        },
+        {
+          "ref": "codex-input-image-3",
+          "sceneId": "S03",
+          "cue": "editor-call",
+          "viewport": "portrait360",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S03-editor-call-360x640.png",
+          "sha256": "45e0ed2bbce25158fdeeca26ada269c2ad76131ed940d0e84e681b54ca939284",
+          "bytes": 298139,
+          "dimensions": [
+            360,
+            640
+          ]
+        },
+        {
+          "ref": "codex-input-image-4",
+          "sceneId": "S18",
+          "cue": "hofn-lighthouse",
+          "viewport": "desktop",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S18-hofn-lighthouse-1920x900.png",
+          "sha256": "3e8c1da3e2e5e7d33f640fe46d10fc3bb043aa06dcb654d58662ad852b4389a4",
+          "bytes": 1834555,
+          "dimensions": [
+            1920,
+            900
+          ]
+        },
+        {
+          "ref": "codex-input-image-5",
+          "sceneId": "S18",
+          "cue": "hofn-lighthouse",
+          "viewport": "portrait390",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S18-hofn-lighthouse-390x844.png",
+          "sha256": "7fecf479639a70f1a9ba5289e901c8feeb6b48b71236081dc73292b573d8c1ee",
+          "bytes": 427696,
+          "dimensions": [
+            390,
+            844
+          ]
+        },
+        {
+          "ref": "codex-input-image-6",
+          "sceneId": "S18",
+          "cue": "hofn-lighthouse",
+          "viewport": "portrait360",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S18-hofn-lighthouse-360x640.png",
+          "sha256": "55096d5f4c57acb7687de5fbcd79842dd157dd29314dfb3e266a376cdb7392af",
+          "bytes": 297949,
+          "dimensions": [
+            360,
+            640
+          ]
+        },
+        {
+          "ref": "codex-input-image-7",
+          "sceneId": "S42",
+          "cue": "s42-harbour-cafe",
+          "viewport": "desktop",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S42-s42-harbour-cafe-1920x900.png",
+          "sha256": "2d0d1956db76feeba0d862318566e6434969088c8065b6ec439a244939fac4fd",
+          "bytes": 1852148,
+          "dimensions": [
+            1920,
+            900
+          ]
+        },
+        {
+          "ref": "codex-input-image-8",
+          "sceneId": "S42",
+          "cue": "s42-harbour-cafe",
+          "viewport": "portrait390",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S42-s42-harbour-cafe-390x844.png",
+          "sha256": "4a98cdd0ec252a7c9c9e83d93704a47ab1cd716e8e52b19dc50843cbe46aad07",
+          "bytes": 457629,
+          "dimensions": [
+            390,
+            844
+          ]
+        },
+        {
+          "ref": "codex-input-image-9",
+          "sceneId": "S42",
+          "cue": "s42-harbour-cafe",
+          "viewport": "portrait360",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S42-s42-harbour-cafe-360x640.png",
+          "sha256": "03bf063ac3e5ff0bd9571fcedd26cd71c5ad8d847611b108e589ca79460f1cfa",
+          "bytes": 327466,
+          "dimensions": [
+            360,
+            640
+          ]
+        }
+      ],
+      "maxAttachments": 10,
+      "delivery": "PENDING",
+      "verdict": "NOT_RUN"
+    },
+    {
+      "turnId": "batch1-ceos_reasoner_web-2",
+      "role": "ceos_reasoner_web",
+      "sceneIds": [
+        "S44",
+        "S46"
+      ],
+      "attachments": [
+        {
+          "ref": "codex-input-image-1",
+          "sceneId": "S44",
+          "cue": "eric-morning-harbour",
+          "viewport": "desktop",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S44-eric-morning-harbour-1920x900.png",
+          "sha256": "ffb073b3e9ebd25df2ae222c0daa490bea19b11d3b042146efc362977b090a39",
+          "bytes": 1860127,
+          "dimensions": [
+            1920,
+            900
+          ]
+        },
+        {
+          "ref": "codex-input-image-2",
+          "sceneId": "S44",
+          "cue": "eric-morning-harbour",
+          "viewport": "portrait390",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S44-eric-morning-harbour-390x844.png",
+          "sha256": "a13b52ba4b0d3b21376d39e99584b060302f3b7e17deb2049da5a7f726156477",
+          "bytes": 433862,
+          "dimensions": [
+            390,
+            844
+          ]
+        },
+        {
+          "ref": "codex-input-image-3",
+          "sceneId": "S44",
+          "cue": "eric-morning-harbour",
+          "viewport": "portrait360",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S44-eric-morning-harbour-360x640.png",
+          "sha256": "50665c66c081f347b27c9c9720d6e6c819d097e6aa3ca35e5e3579e908a15a64",
+          "bytes": 316543,
+          "dimensions": [
+            360,
+            640
+          ]
+        },
+        {
+          "ref": "codex-input-image-4",
+          "sceneId": "S46",
+          "cue": "airport-bus",
+          "viewport": "desktop",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S46-airport-bus-1920x900.png",
+          "sha256": "9a73b9120b5aedcd1b21f92de408c7fa10cc2d79b488c6ec0efa884b156908df",
+          "bytes": 1983164,
+          "dimensions": [
+            1920,
+            900
+          ]
+        },
+        {
+          "ref": "codex-input-image-5",
+          "sceneId": "S46",
+          "cue": "airport-bus",
+          "viewport": "portrait390",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S46-airport-bus-390x844.png",
+          "sha256": "66965d1312a401898172ef3f30ba20d803ef11e16890a4fad4fca797c4e61ac9",
+          "bytes": 434165,
+          "dimensions": [
+            390,
+            844
+          ]
+        },
+        {
+          "ref": "codex-input-image-6",
+          "sceneId": "S46",
+          "cue": "airport-bus",
+          "viewport": "portrait360",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S46-airport-bus-360x640.png",
+          "sha256": "2cb2222a62129876fa3e8dcd203986a316c03889b4ed6428e4347d300cd62162",
+          "bytes": 304623,
+          "dimensions": [
+            360,
+            640
+          ]
+        }
+      ],
+      "maxAttachments": 10,
+      "delivery": "PENDING",
+      "verdict": "NOT_RUN"
+    },
+    {
+      "turnId": "batch1-ceos_bulk_checker_web-1",
+      "role": "ceos_bulk_checker_web",
+      "sceneIds": [
+        "S03",
+        "S18",
+        "S42"
+      ],
+      "attachments": [
+        {
+          "ref": "codex-input-image-1",
+          "sceneId": "S03",
+          "cue": "editor-call",
+          "viewport": "desktop",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S03-editor-call-1920x900.png",
+          "sha256": "0bdfacea9efe77e619fbe52c2f8a59280339bace66e8c7e0820c7803021e09ce",
+          "bytes": 1558898,
+          "dimensions": [
+            1920,
+            900
+          ]
+        },
+        {
+          "ref": "codex-input-image-2",
+          "sceneId": "S03",
+          "cue": "editor-call",
+          "viewport": "portrait390",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S03-editor-call-390x844.png",
+          "sha256": "c51f26f534eb19c5f876d8d6f90d05b341a9c99502f4645bbad796b8c11bc3cc",
+          "bytes": 423548,
+          "dimensions": [
+            390,
+            844
+          ]
+        },
+        {
+          "ref": "codex-input-image-3",
+          "sceneId": "S03",
+          "cue": "editor-call",
+          "viewport": "portrait360",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S03-editor-call-360x640.png",
+          "sha256": "45e0ed2bbce25158fdeeca26ada269c2ad76131ed940d0e84e681b54ca939284",
+          "bytes": 298139,
+          "dimensions": [
+            360,
+            640
+          ]
+        },
+        {
+          "ref": "codex-input-image-4",
+          "sceneId": "S18",
+          "cue": "hofn-lighthouse",
+          "viewport": "desktop",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S18-hofn-lighthouse-1920x900.png",
+          "sha256": "3e8c1da3e2e5e7d33f640fe46d10fc3bb043aa06dcb654d58662ad852b4389a4",
+          "bytes": 1834555,
+          "dimensions": [
+            1920,
+            900
+          ]
+        },
+        {
+          "ref": "codex-input-image-5",
+          "sceneId": "S18",
+          "cue": "hofn-lighthouse",
+          "viewport": "portrait390",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S18-hofn-lighthouse-390x844.png",
+          "sha256": "7fecf479639a70f1a9ba5289e901c8feeb6b48b71236081dc73292b573d8c1ee",
+          "bytes": 427696,
+          "dimensions": [
+            390,
+            844
+          ]
+        },
+        {
+          "ref": "codex-input-image-6",
+          "sceneId": "S18",
+          "cue": "hofn-lighthouse",
+          "viewport": "portrait360",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S18-hofn-lighthouse-360x640.png",
+          "sha256": "55096d5f4c57acb7687de5fbcd79842dd157dd29314dfb3e266a376cdb7392af",
+          "bytes": 297949,
+          "dimensions": [
+            360,
+            640
+          ]
+        },
+        {
+          "ref": "codex-input-image-7",
+          "sceneId": "S42",
+          "cue": "s42-harbour-cafe",
+          "viewport": "desktop",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S42-s42-harbour-cafe-1920x900.png",
+          "sha256": "2d0d1956db76feeba0d862318566e6434969088c8065b6ec439a244939fac4fd",
+          "bytes": 1852148,
+          "dimensions": [
+            1920,
+            900
+          ]
+        },
+        {
+          "ref": "codex-input-image-8",
+          "sceneId": "S42",
+          "cue": "s42-harbour-cafe",
+          "viewport": "portrait390",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S42-s42-harbour-cafe-390x844.png",
+          "sha256": "4a98cdd0ec252a7c9c9e83d93704a47ab1cd716e8e52b19dc50843cbe46aad07",
+          "bytes": 457629,
+          "dimensions": [
+            390,
+            844
+          ]
+        },
+        {
+          "ref": "codex-input-image-9",
+          "sceneId": "S42",
+          "cue": "s42-harbour-cafe",
+          "viewport": "portrait360",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S42-s42-harbour-cafe-360x640.png",
+          "sha256": "03bf063ac3e5ff0bd9571fcedd26cd71c5ad8d847611b108e589ca79460f1cfa",
+          "bytes": 327466,
+          "dimensions": [
+            360,
+            640
+          ]
+        }
+      ],
+      "maxAttachments": 10,
+      "delivery": "PENDING",
+      "verdict": "NOT_RUN"
+    },
+    {
+      "turnId": "batch1-ceos_bulk_checker_web-2",
+      "role": "ceos_bulk_checker_web",
+      "sceneIds": [
+        "S44",
+        "S46"
+      ],
+      "attachments": [
+        {
+          "ref": "codex-input-image-1",
+          "sceneId": "S44",
+          "cue": "eric-morning-harbour",
+          "viewport": "desktop",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S44-eric-morning-harbour-1920x900.png",
+          "sha256": "ffb073b3e9ebd25df2ae222c0daa490bea19b11d3b042146efc362977b090a39",
+          "bytes": 1860127,
+          "dimensions": [
+            1920,
+            900
+          ]
+        },
+        {
+          "ref": "codex-input-image-2",
+          "sceneId": "S44",
+          "cue": "eric-morning-harbour",
+          "viewport": "portrait390",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S44-eric-morning-harbour-390x844.png",
+          "sha256": "a13b52ba4b0d3b21376d39e99584b060302f3b7e17deb2049da5a7f726156477",
+          "bytes": 433862,
+          "dimensions": [
+            390,
+            844
+          ]
+        },
+        {
+          "ref": "codex-input-image-3",
+          "sceneId": "S44",
+          "cue": "eric-morning-harbour",
+          "viewport": "portrait360",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S44-eric-morning-harbour-360x640.png",
+          "sha256": "50665c66c081f347b27c9c9720d6e6c819d097e6aa3ca35e5e3579e908a15a64",
+          "bytes": 316543,
+          "dimensions": [
+            360,
+            640
+          ]
+        },
+        {
+          "ref": "codex-input-image-4",
+          "sceneId": "S46",
+          "cue": "airport-bus",
+          "viewport": "desktop",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S46-airport-bus-1920x900.png",
+          "sha256": "9a73b9120b5aedcd1b21f92de408c7fa10cc2d79b488c6ec0efa884b156908df",
+          "bytes": 1983164,
+          "dimensions": [
+            1920,
+            900
+          ]
+        },
+        {
+          "ref": "codex-input-image-5",
+          "sceneId": "S46",
+          "cue": "airport-bus",
+          "viewport": "portrait390",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S46-airport-bus-390x844.png",
+          "sha256": "66965d1312a401898172ef3f30ba20d803ef11e16890a4fad4fca797c4e61ac9",
+          "bytes": 434165,
+          "dimensions": [
+            390,
+            844
+          ]
+        },
+        {
+          "ref": "codex-input-image-6",
+          "sceneId": "S46",
+          "cue": "airport-bus",
+          "viewport": "portrait360",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S46-airport-bus-360x640.png",
+          "sha256": "2cb2222a62129876fa3e8dcd203986a316c03889b4ed6428e4347d300cd62162",
+          "bytes": 304623,
+          "dimensions": [
+            360,
+            640
+          ]
+        }
+      ],
+      "maxAttachments": 10,
+      "delivery": "PENDING",
+      "verdict": "NOT_RUN"
+    },
+    {
+      "turnId": "batch1-ceos_art_director_web-1",
+      "role": "ceos_art_director_web",
+      "sceneIds": [
+        "S03",
+        "S18",
+        "S42"
+      ],
+      "attachments": [
+        {
+          "ref": "codex-input-image-1",
+          "sceneId": "S03",
+          "cue": "editor-call",
+          "viewport": "desktop",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S03-editor-call-1920x900.png",
+          "sha256": "0bdfacea9efe77e619fbe52c2f8a59280339bace66e8c7e0820c7803021e09ce",
+          "bytes": 1558898,
+          "dimensions": [
+            1920,
+            900
+          ]
+        },
+        {
+          "ref": "codex-input-image-2",
+          "sceneId": "S03",
+          "cue": "editor-call",
+          "viewport": "portrait390",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S03-editor-call-390x844.png",
+          "sha256": "c51f26f534eb19c5f876d8d6f90d05b341a9c99502f4645bbad796b8c11bc3cc",
+          "bytes": 423548,
+          "dimensions": [
+            390,
+            844
+          ]
+        },
+        {
+          "ref": "codex-input-image-3",
+          "sceneId": "S03",
+          "cue": "editor-call",
+          "viewport": "portrait360",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S03-editor-call-360x640.png",
+          "sha256": "45e0ed2bbce25158fdeeca26ada269c2ad76131ed940d0e84e681b54ca939284",
+          "bytes": 298139,
+          "dimensions": [
+            360,
+            640
+          ]
+        },
+        {
+          "ref": "codex-input-image-4",
+          "sceneId": "S18",
+          "cue": "hofn-lighthouse",
+          "viewport": "desktop",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S18-hofn-lighthouse-1920x900.png",
+          "sha256": "3e8c1da3e2e5e7d33f640fe46d10fc3bb043aa06dcb654d58662ad852b4389a4",
+          "bytes": 1834555,
+          "dimensions": [
+            1920,
+            900
+          ]
+        },
+        {
+          "ref": "codex-input-image-5",
+          "sceneId": "S18",
+          "cue": "hofn-lighthouse",
+          "viewport": "portrait390",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S18-hofn-lighthouse-390x844.png",
+          "sha256": "7fecf479639a70f1a9ba5289e901c8feeb6b48b71236081dc73292b573d8c1ee",
+          "bytes": 427696,
+          "dimensions": [
+            390,
+            844
+          ]
+        },
+        {
+          "ref": "codex-input-image-6",
+          "sceneId": "S18",
+          "cue": "hofn-lighthouse",
+          "viewport": "portrait360",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S18-hofn-lighthouse-360x640.png",
+          "sha256": "55096d5f4c57acb7687de5fbcd79842dd157dd29314dfb3e266a376cdb7392af",
+          "bytes": 297949,
+          "dimensions": [
+            360,
+            640
+          ]
+        },
+        {
+          "ref": "codex-input-image-7",
+          "sceneId": "S42",
+          "cue": "s42-harbour-cafe",
+          "viewport": "desktop",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S42-s42-harbour-cafe-1920x900.png",
+          "sha256": "2d0d1956db76feeba0d862318566e6434969088c8065b6ec439a244939fac4fd",
+          "bytes": 1852148,
+          "dimensions": [
+            1920,
+            900
+          ]
+        },
+        {
+          "ref": "codex-input-image-8",
+          "sceneId": "S42",
+          "cue": "s42-harbour-cafe",
+          "viewport": "portrait390",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S42-s42-harbour-cafe-390x844.png",
+          "sha256": "4a98cdd0ec252a7c9c9e83d93704a47ab1cd716e8e52b19dc50843cbe46aad07",
+          "bytes": 457629,
+          "dimensions": [
+            390,
+            844
+          ]
+        },
+        {
+          "ref": "codex-input-image-9",
+          "sceneId": "S42",
+          "cue": "s42-harbour-cafe",
+          "viewport": "portrait360",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S42-s42-harbour-cafe-360x640.png",
+          "sha256": "03bf063ac3e5ff0bd9571fcedd26cd71c5ad8d847611b108e589ca79460f1cfa",
+          "bytes": 327466,
+          "dimensions": [
+            360,
+            640
+          ]
+        }
+      ],
+      "maxAttachments": 10,
+      "delivery": "PENDING",
+      "verdict": "NOT_RUN"
+    },
+    {
+      "turnId": "batch1-ceos_art_director_web-2",
+      "role": "ceos_art_director_web",
+      "sceneIds": [
+        "S44",
+        "S46"
+      ],
+      "attachments": [
+        {
+          "ref": "codex-input-image-1",
+          "sceneId": "S44",
+          "cue": "eric-morning-harbour",
+          "viewport": "desktop",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S44-eric-morning-harbour-1920x900.png",
+          "sha256": "ffb073b3e9ebd25df2ae222c0daa490bea19b11d3b042146efc362977b090a39",
+          "bytes": 1860127,
+          "dimensions": [
+            1920,
+            900
+          ]
+        },
+        {
+          "ref": "codex-input-image-2",
+          "sceneId": "S44",
+          "cue": "eric-morning-harbour",
+          "viewport": "portrait390",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S44-eric-morning-harbour-390x844.png",
+          "sha256": "a13b52ba4b0d3b21376d39e99584b060302f3b7e17deb2049da5a7f726156477",
+          "bytes": 433862,
+          "dimensions": [
+            390,
+            844
+          ]
+        },
+        {
+          "ref": "codex-input-image-3",
+          "sceneId": "S44",
+          "cue": "eric-morning-harbour",
+          "viewport": "portrait360",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S44-eric-morning-harbour-360x640.png",
+          "sha256": "50665c66c081f347b27c9c9720d6e6c819d097e6aa3ca35e5e3579e908a15a64",
+          "bytes": 316543,
+          "dimensions": [
+            360,
+            640
+          ]
+        },
+        {
+          "ref": "codex-input-image-4",
+          "sceneId": "S46",
+          "cue": "airport-bus",
+          "viewport": "desktop",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S46-airport-bus-1920x900.png",
+          "sha256": "9a73b9120b5aedcd1b21f92de408c7fa10cc2d79b488c6ec0efa884b156908df",
+          "bytes": 1983164,
+          "dimensions": [
+            1920,
+            900
+          ]
+        },
+        {
+          "ref": "codex-input-image-5",
+          "sceneId": "S46",
+          "cue": "airport-bus",
+          "viewport": "portrait390",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S46-airport-bus-390x844.png",
+          "sha256": "66965d1312a401898172ef3f30ba20d803ef11e16890a4fad4fca797c4e61ac9",
+          "bytes": 434165,
+          "dimensions": [
+            390,
+            844
+          ]
+        },
+        {
+          "ref": "codex-input-image-6",
+          "sceneId": "S46",
+          "cue": "airport-bus",
+          "viewport": "portrait360",
+          "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S46-airport-bus-360x640.png",
+          "sha256": "2cb2222a62129876fa3e8dcd203986a316c03889b4ed6428e4347d300cd62162",
+          "bytes": 304623,
+          "dimensions": [
+            360,
+            640
+          ]
+        }
+      ],
+      "maxAttachments": 10,
+      "delivery": "PENDING",
+      "verdict": "NOT_RUN"
+    }
+  ],
+  "runtimeLineage": {
+    "status": "PASS",
+    "changedFiles": [
+      ".github/workflows/art-acceptance-contract.yml",
+      "artifacts/evidence/english-runtime-localization.json",
+      "artifacts/evidence/s38-host-observed-control-2026-10-09/S38-s38-ordinary-day-1920x900.png",
+      "artifacts/evidence/s38-host-observed-control-2026-10-09/S38-s38-ordinary-day-360x640.png",
+      "artifacts/evidence/s38-host-observed-control-2026-10-09/S38-s38-ordinary-day-390x844.png",
+      "artifacts/evidence/s38-host-observed-control-2026-10-09/evidence.json",
+      "artifacts/production-art/S15_GROUNDING_REWORK_2026-10-09.json",
+      "artifacts/production-art/S38_HOST_OBSERVED_CONTROL_REPORT_2026-10-09.json",
+      "artifacts/production-art/S38_HOST_OBSERVED_CONTROL_VERIFICATION_2026-10-09.json",
+      "artifacts/production-art/WEB_HIGH_CURRENT_TURN_E2E_HOST_OBSERVED_2026-10-09.json",
+      "artifacts/production-art/WEB_HIGH_CURRENT_TURN_MATRIX_2026-10-09.json",
+      "artifacts/production-art/WEB_HOST_SURFACE_AUDIT_2026-10-09.json",
+      "artifacts/production-art/WEB_TRANSPORT_DIAGNOSIS_2026-10-09.md",
+      "artifacts/production-art/web-reviews/s38-host-observed-control-2026-10-09-ceos_art_director_web.json",
+      "artifacts/production-art/web-reviews/s38-host-observed-control-2026-10-09-ceos_bulk_checker_web.json",
+      "artifacts/production-art/web-reviews/s38-host-observed-control-2026-10-09-ceos_reasoner_web.json",
+      "artifacts/production-art/web-reviews/s38-host-observed-raw-2026-10-09-art-director.json",
+      "artifacts/production-art/web-reviews/s38-host-observed-raw-2026-10-09-bulk-checker.json",
+      "artifacts/production-art/web-reviews/s38-host-observed-raw-2026-10-09-reasoner.json",
+      "docs/HOST_OBSERVED_ART_ACCEPTANCE_HANDOFF_2026-10-09.md",
+      "docs/HOST_OBSERVED_ART_ACCEPTANCE_V1.md",
+      "package.json",
+      "tests/narrative/art-acceptance-host-observed.test.mjs",
+      "tests/narrative/art-acceptance-visual-content.test.mjs",
+      "tests/narrative/art-acceptance.test.mjs",
+      "tools/release/art-acceptance.mjs",
+      "tools/release/host-observed-art-review.mjs",
+      "tools/release/refresh-production-art-acceptance.mjs",
+      "tools/release/visual-content-review.mjs",
+      "tools/visual-qa/english-runtime-localization.mjs",
+      "tools/visual-qa/localization-orientation-runtime.mjs"
+    ],
+    "runtimeFiles": []
+  },
+  "runtimePngs": [
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S03-editor-call-1920x900.png",
+      "sha256": "0bdfacea9efe77e619fbe52c2f8a59280339bace66e8c7e0820c7803021e09ce",
+      "bytes": 1558898,
+      "dimensions": [
+        1920,
+        900
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S03-editor-call-390x844.png",
+      "sha256": "c51f26f534eb19c5f876d8d6f90d05b341a9c99502f4645bbad796b8c11bc3cc",
+      "bytes": 423548,
+      "dimensions": [
+        390,
+        844
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S03-editor-call-360x640.png",
+      "sha256": "45e0ed2bbce25158fdeeca26ada269c2ad76131ed940d0e84e681b54ca939284",
+      "bytes": 298139,
+      "dimensions": [
+        360,
+        640
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S18-hofn-lighthouse-1920x900.png",
+      "sha256": "3e8c1da3e2e5e7d33f640fe46d10fc3bb043aa06dcb654d58662ad852b4389a4",
+      "bytes": 1834555,
+      "dimensions": [
+        1920,
+        900
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S18-hofn-lighthouse-390x844.png",
+      "sha256": "7fecf479639a70f1a9ba5289e901c8feeb6b48b71236081dc73292b573d8c1ee",
+      "bytes": 427696,
+      "dimensions": [
+        390,
+        844
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S18-hofn-lighthouse-360x640.png",
+      "sha256": "55096d5f4c57acb7687de5fbcd79842dd157dd29314dfb3e266a376cdb7392af",
+      "bytes": 297949,
+      "dimensions": [
+        360,
+        640
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S42-s42-harbour-cafe-1920x900.png",
+      "sha256": "2d0d1956db76feeba0d862318566e6434969088c8065b6ec439a244939fac4fd",
+      "bytes": 1852148,
+      "dimensions": [
+        1920,
+        900
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S42-s42-harbour-cafe-390x844.png",
+      "sha256": "4a98cdd0ec252a7c9c9e83d93704a47ab1cd716e8e52b19dc50843cbe46aad07",
+      "bytes": 457629,
+      "dimensions": [
+        390,
+        844
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S42-s42-harbour-cafe-360x640.png",
+      "sha256": "03bf063ac3e5ff0bd9571fcedd26cd71c5ad8d847611b108e589ca79460f1cfa",
+      "bytes": 327466,
+      "dimensions": [
+        360,
+        640
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S44-eric-morning-harbour-1920x900.png",
+      "sha256": "ffb073b3e9ebd25df2ae222c0daa490bea19b11d3b042146efc362977b090a39",
+      "bytes": 1860127,
+      "dimensions": [
+        1920,
+        900
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S44-eric-morning-harbour-390x844.png",
+      "sha256": "a13b52ba4b0d3b21376d39e99584b060302f3b7e17deb2049da5a7f726156477",
+      "bytes": 433862,
+      "dimensions": [
+        390,
+        844
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S44-eric-morning-harbour-360x640.png",
+      "sha256": "50665c66c081f347b27c9c9720d6e6c819d097e6aa3ca35e5e3579e908a15a64",
+      "bytes": 316543,
+      "dimensions": [
+        360,
+        640
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S46-airport-bus-1920x900.png",
+      "sha256": "9a73b9120b5aedcd1b21f92de408c7fa10cc2d79b488c6ec0efa884b156908df",
+      "bytes": 1983164,
+      "dimensions": [
+        1920,
+        900
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S46-airport-bus-390x844.png",
+      "sha256": "66965d1312a401898172ef3f30ba20d803ef11e16890a4fad4fca797c4e61ac9",
+      "bytes": 434165,
+      "dimensions": [
+        390,
+        844
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S46-airport-bus-360x640.png",
+      "sha256": "2cb2222a62129876fa3e8dcd203986a316c03889b4ed6428e4347d300cd62162",
+      "bytes": 304623,
+      "dimensions": [
+        360,
+        640
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S03-editor-call-1920x900.png",
+      "sha256": "0bdfacea9efe77e619fbe52c2f8a59280339bace66e8c7e0820c7803021e09ce",
+      "bytes": 1558898,
+      "dimensions": [
+        1920,
+        900
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S03-editor-call-390x844.png",
+      "sha256": "c51f26f534eb19c5f876d8d6f90d05b341a9c99502f4645bbad796b8c11bc3cc",
+      "bytes": 423548,
+      "dimensions": [
+        390,
+        844
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S03-editor-call-360x640.png",
+      "sha256": "45e0ed2bbce25158fdeeca26ada269c2ad76131ed940d0e84e681b54ca939284",
+      "bytes": 298139,
+      "dimensions": [
+        360,
+        640
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S18-hofn-lighthouse-1920x900.png",
+      "sha256": "3e8c1da3e2e5e7d33f640fe46d10fc3bb043aa06dcb654d58662ad852b4389a4",
+      "bytes": 1834555,
+      "dimensions": [
+        1920,
+        900
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S18-hofn-lighthouse-390x844.png",
+      "sha256": "7fecf479639a70f1a9ba5289e901c8feeb6b48b71236081dc73292b573d8c1ee",
+      "bytes": 427696,
+      "dimensions": [
+        390,
+        844
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S18-hofn-lighthouse-360x640.png",
+      "sha256": "55096d5f4c57acb7687de5fbcd79842dd157dd29314dfb3e266a376cdb7392af",
+      "bytes": 297949,
+      "dimensions": [
+        360,
+        640
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S42-s42-harbour-cafe-1920x900.png",
+      "sha256": "2d0d1956db76feeba0d862318566e6434969088c8065b6ec439a244939fac4fd",
+      "bytes": 1852148,
+      "dimensions": [
+        1920,
+        900
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S42-s42-harbour-cafe-390x844.png",
+      "sha256": "4a98cdd0ec252a7c9c9e83d93704a47ab1cd716e8e52b19dc50843cbe46aad07",
+      "bytes": 457629,
+      "dimensions": [
+        390,
+        844
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S42-s42-harbour-cafe-360x640.png",
+      "sha256": "03bf063ac3e5ff0bd9571fcedd26cd71c5ad8d847611b108e589ca79460f1cfa",
+      "bytes": 327466,
+      "dimensions": [
+        360,
+        640
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S44-eric-morning-harbour-1920x900.png",
+      "sha256": "ffb073b3e9ebd25df2ae222c0daa490bea19b11d3b042146efc362977b090a39",
+      "bytes": 1860127,
+      "dimensions": [
+        1920,
+        900
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S44-eric-morning-harbour-390x844.png",
+      "sha256": "a13b52ba4b0d3b21376d39e99584b060302f3b7e17deb2049da5a7f726156477",
+      "bytes": 433862,
+      "dimensions": [
+        390,
+        844
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S44-eric-morning-harbour-360x640.png",
+      "sha256": "50665c66c081f347b27c9c9720d6e6c819d097e6aa3ca35e5e3579e908a15a64",
+      "bytes": 316543,
+      "dimensions": [
+        360,
+        640
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S46-airport-bus-1920x900.png",
+      "sha256": "9a73b9120b5aedcd1b21f92de408c7fa10cc2d79b488c6ec0efa884b156908df",
+      "bytes": 1983164,
+      "dimensions": [
+        1920,
+        900
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S46-airport-bus-390x844.png",
+      "sha256": "66965d1312a401898172ef3f30ba20d803ef11e16890a4fad4fca797c4e61ac9",
+      "bytes": 434165,
+      "dimensions": [
+        390,
+        844
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S46-airport-bus-360x640.png",
+      "sha256": "2cb2222a62129876fa3e8dcd203986a316c03889b4ed6428e4347d300cd62162",
+      "bytes": 304623,
+      "dimensions": [
+        360,
+        640
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S03-editor-call-1920x900.png",
+      "sha256": "0bdfacea9efe77e619fbe52c2f8a59280339bace66e8c7e0820c7803021e09ce",
+      "bytes": 1558898,
+      "dimensions": [
+        1920,
+        900
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S03-editor-call-390x844.png",
+      "sha256": "c51f26f534eb19c5f876d8d6f90d05b341a9c99502f4645bbad796b8c11bc3cc",
+      "bytes": 423548,
+      "dimensions": [
+        390,
+        844
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S03-editor-call-360x640.png",
+      "sha256": "45e0ed2bbce25158fdeeca26ada269c2ad76131ed940d0e84e681b54ca939284",
+      "bytes": 298139,
+      "dimensions": [
+        360,
+        640
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S18-hofn-lighthouse-1920x900.png",
+      "sha256": "3e8c1da3e2e5e7d33f640fe46d10fc3bb043aa06dcb654d58662ad852b4389a4",
+      "bytes": 1834555,
+      "dimensions": [
+        1920,
+        900
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S18-hofn-lighthouse-390x844.png",
+      "sha256": "7fecf479639a70f1a9ba5289e901c8feeb6b48b71236081dc73292b573d8c1ee",
+      "bytes": 427696,
+      "dimensions": [
+        390,
+        844
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S18-hofn-lighthouse-360x640.png",
+      "sha256": "55096d5f4c57acb7687de5fbcd79842dd157dd29314dfb3e266a376cdb7392af",
+      "bytes": 297949,
+      "dimensions": [
+        360,
+        640
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S42-s42-harbour-cafe-1920x900.png",
+      "sha256": "2d0d1956db76feeba0d862318566e6434969088c8065b6ec439a244939fac4fd",
+      "bytes": 1852148,
+      "dimensions": [
+        1920,
+        900
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S42-s42-harbour-cafe-390x844.png",
+      "sha256": "4a98cdd0ec252a7c9c9e83d93704a47ab1cd716e8e52b19dc50843cbe46aad07",
+      "bytes": 457629,
+      "dimensions": [
+        390,
+        844
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S42-s42-harbour-cafe-360x640.png",
+      "sha256": "03bf063ac3e5ff0bd9571fcedd26cd71c5ad8d847611b108e589ca79460f1cfa",
+      "bytes": 327466,
+      "dimensions": [
+        360,
+        640
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S44-eric-morning-harbour-1920x900.png",
+      "sha256": "ffb073b3e9ebd25df2ae222c0daa490bea19b11d3b042146efc362977b090a39",
+      "bytes": 1860127,
+      "dimensions": [
+        1920,
+        900
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S44-eric-morning-harbour-390x844.png",
+      "sha256": "a13b52ba4b0d3b21376d39e99584b060302f3b7e17deb2049da5a7f726156477",
+      "bytes": 433862,
+      "dimensions": [
+        390,
+        844
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S44-eric-morning-harbour-360x640.png",
+      "sha256": "50665c66c081f347b27c9c9720d6e6c819d097e6aa3ca35e5e3579e908a15a64",
+      "bytes": 316543,
+      "dimensions": [
+        360,
+        640
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S46-airport-bus-1920x900.png",
+      "sha256": "9a73b9120b5aedcd1b21f92de408c7fa10cc2d79b488c6ec0efa884b156908df",
+      "bytes": 1983164,
+      "dimensions": [
+        1920,
+        900
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S46-airport-bus-390x844.png",
+      "sha256": "66965d1312a401898172ef3f30ba20d803ef11e16890a4fad4fca797c4e61ac9",
+      "bytes": 434165,
+      "dimensions": [
+        390,
+        844
+      ]
+    },
+    {
+      "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S46-airport-bus-360x640.png",
+      "sha256": "2cb2222a62129876fa3e8dcd203986a316c03889b4ed6428e4347d300cd62162",
+      "bytes": 304623,
+      "dimensions": [
+        360,
+        640
+      ]
+    }
+  ]
+}
