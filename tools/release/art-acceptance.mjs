@@ -11,6 +11,60 @@ const absolute = (root, value) => path.resolve(root, value);
 const normalize = value => path.normalize(value).replaceAll('\\', '/').toLowerCase();
 const git = (root, args) => execFileSync('git', args, { cwd: root, encoding: 'utf8' }).trim();
 const block = (code, reason) => ({ status: 'BLOCKED', code, reason });
+const STRICT_WEB_MODEL = 'chatgpt-web/gpt-6-sol';
+const STRICT_WEB_ROLES = new Set(['ceos_reasoner_web', 'ceos_bulk_checker_web', 'ceos_art_director_web']);
+const isText = value => typeof value === 'string' && value.trim().length > 0;
+const isSha = value => typeof value === 'string' && /^[a-f0-9]{64}$/i.test(value);
+
+/**
+ * Strict mode requires a host/provider receipt, not merely IDs copied into a JSON file.
+ * This predicate deliberately accepts only the envelope proposed by the bridge contract;
+ * it never derives provider identity or delivery state from local filenames or response text.
+ */
+export function verifyStrictWebReviewReceipt({ reference, evidence, sourceHead } = {}) {
+  const receipt = evidence?.hostReceipt;
+  const role = evidence?.role ?? evidence?.agent;
+  if (!STRICT_WEB_ROLES.has(role) || reference?.role !== role) {
+    return block('ART_ACCEPTANCE_WEB_PROVENANCE_MISSING', 'Strict Web review role is missing or does not match the host receipt.');
+  }
+  if (!isText(evidence?.taskId) || !isText(evidence?.reviewTraceId) ||
+      reference?.taskId !== evidence.taskId || reference?.reviewTraceId !== evidence.reviewTraceId ||
+      receipt?.provider?.taskId !== evidence.taskId || receipt?.provider?.traceId !== evidence.reviewTraceId ||
+      !isText(receipt?.provider?.responseId)) {
+    return block('ART_ACCEPTANCE_WEB_PROVENANCE_MISSING', 'Strict Web review requires matching provider task, trace and response identities.');
+  }
+  if (receipt?.schema !== 'codex.web.receipt.v1' || receipt?.integrity?.status !== 'verified' ||
+      receipt?.codex?.agentRole !== role || !isText(receipt.codex.sessionId) ||
+      !isText(receipt.codex.turnId) || !isText(receipt.codex.parentThreadId)) {
+    return block('ART_ACCEPTANCE_WEB_PROVENANCE_MISSING', 'Strict Web review lacks an authenticated host session/turn/role receipt.');
+  }
+  if (receipt?.route?.requestedModel !== STRICT_WEB_MODEL || receipt?.route?.selectedModel !== STRICT_WEB_MODEL ||
+      receipt?.route?.reasoningEffort !== 'high' || receipt?.route?.attestation !== 'host-authenticated') {
+    return block('ART_ACCEPTANCE_WEB_PROVENANCE_MISSING', 'Strict Web review lacks an attested GPT-6 Sol High route.');
+  }
+  if (receipt?.source?.snapshot !== sourceHead || receipt?.answer?.status !== 'completed' ||
+      receipt?.answer?.providerResponseId !== receipt.provider.responseId || !isSha(receipt?.answer?.answerSha256)) {
+    return block('ART_ACCEPTANCE_WEB_PROVENANCE_MISSING', 'Strict Web review is not bound to the accepted source and completed provider response.');
+  }
+  const refs = evidence.evidenceRefs;
+  const received = evidence.receivedEvidenceRefs;
+  const attachments = receipt?.source?.attachments;
+  if (!Array.isArray(refs) || !refs.length || !Array.isArray(received) ||
+      new Set(refs).size !== refs.length || new Set(received).size !== received.length ||
+      refs.some(ref => !isText(ref) || !received.includes(ref)) ||
+      !Array.isArray(attachments) || attachments.length !== refs.length ||
+      attachments.some(item => !isText(item?.ref) || !refs.includes(item.ref) ||
+        !isText(item.name) || !isText(item.mime) || !Number.isInteger(item.bytes) || item.bytes < 1 || item.bytes > 20_000_000 ||
+        !isSha(item.sha256) || item.acceptedUpload !== true || !Number.isInteger(item.deliveredBytes) || item.deliveredBytes < 1 ||
+        !isSha(item.deliveredSha256) || !isText(item.deliveryReceipt))) {
+    return block('ART_ACCEPTANCE_WEB_ATTACHMENT_INVALID', 'Strict Web review lacks a complete accepted-upload and delivered-attachment receipt.');
+  }
+  const totalBytes = attachments.reduce((sum, item) => sum + item.deliveredBytes, 0);
+  if (attachments.length > 10 || totalBytes > 50_000_000 || new Set(attachments.map(item => item.ref)).size !== attachments.length) {
+    return block('ART_ACCEPTANCE_WEB_ATTACHMENT_INVALID', 'Strict Web review attachment receipt exceeds the 10-file or 50 MB packet limit or repeats an attachment ref.');
+  }
+  return { status: 'PASS' };
+}
 
 export function repositoryIdentity(root) {
   const worktreePath = fs.realpathSync(path.resolve(root));
@@ -136,14 +190,20 @@ export function verifyArtAcceptance({ root, recordPath = DEFAULT_RECORD, recordO
     : verifyMatrixScreenshots({ projectRoot, matrix });
   if (screenshotResult.status !== 'PASS') return screenshotResult;
   const roles = new Set();
+  const strictTaskIds = new Set();
+  const strictTraceIds = new Set();
   const reviewEntries = [];
   for (const review of record.webHigh.reviews ?? []) {
     const result = verifyJsonEvidence({ projectRoot, reference: review, sourceHead: binding.sourceHead, requirePixels: true });
     if (result.status !== 'PASS') return result;
-    if (!visualContent && (!review.taskId || !review.reviewTraceId ||
-        !result.evidence.taskId || !result.evidence.reviewTraceId ||
-        review.taskId !== result.evidence.taskId || review.reviewTraceId !== result.evidence.reviewTraceId))
-      return block('ART_ACCEPTANCE_WEB_PROVENANCE_MISSING', 'Strict Web review requires matching real task and trace IDs.');
+    if (!visualContent) {
+      const strict = verifyStrictWebReviewReceipt({ reference: review, evidence: result.evidence, sourceHead: binding.sourceHead });
+      if (strict.status !== 'PASS') return strict;
+      if (strictTaskIds.has(result.evidence.taskId) || strictTraceIds.has(result.evidence.reviewTraceId))
+        return block('ART_ACCEPTANCE_WEB_PROVENANCE_DUPLICATE', 'Strict Web review task and trace identities must be unique across roles.');
+      strictTaskIds.add(result.evidence.taskId);
+      strictTraceIds.add(result.evidence.reviewTraceId);
+    }
     roles.add(result.evidence.role ?? result.evidence.agent);
     reviewEntries.push({ reference: review, evidence: result.evidence });
   }

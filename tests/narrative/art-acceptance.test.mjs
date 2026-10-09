@@ -29,7 +29,25 @@ function fixture() {
   const sourceHead = execFileSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' }).trim();
   const identity = repositoryIdentity(root);
   const matrix = { schemaVersion: 1, role: 'matrix', status: 'PASS', sourceHead, scope: { expectedScenes: 66, coveredScenes: 66, captures: 198 }, failures: [] };
-  const reviews = ['ceos_reasoner_web', 'ceos_bulk_checker_web', 'ceos_art_director_web'].map(role => ({ role, status: 'PASS', sourceHead, actualPixelsReceived: true, taskId: `${role}-task`, reviewTraceId: `${role}-trace` }));
+  const reviews = ['ceos_reasoner_web', 'ceos_bulk_checker_web', 'ceos_art_director_web'].map((role, index) => {
+    const taskId = `${role}-task`;
+    const reviewTraceId = `${role}-trace`;
+    const responseId = `provider-response-${index}`;
+    return {
+      role, status: 'PASS', sourceHead, actualPixelsReceived: true, taskId, reviewTraceId,
+      evidenceRefs: ['capture-1'], receivedEvidenceRefs: ['capture-1'],
+      hostReceipt: {
+        schema: 'codex.web.receipt.v1',
+        producerReceiptId: `${role}-producer`,
+        provider: { taskId, responseId, traceId: reviewTraceId },
+        codex: { sessionId: 'session-1', turnId: `${role}-turn`, parentThreadId: 'thread-1', agentRole: role },
+        route: { requestedModel: 'chatgpt-web/gpt-6-sol', selectedModel: 'chatgpt-web/gpt-6-sol', reasoningEffort: 'high', attestation: 'host-authenticated' },
+        source: { snapshot: sourceHead, attachments: [{ ref: 'capture-1', name: 'S38.png', mime: 'image/png', bytes: 1, sha256: 'a'.repeat(64), acceptedUpload: true, deliveredBytes: 1, deliveredSha256: 'a'.repeat(64), deliveryReceipt: `${role}-attachment` }] },
+        answer: { status: 'completed', providerResponseId: responseId, answerSha256: 'b'.repeat(64) },
+        integrity: { status: 'verified' },
+      },
+    };
+  });
   writeJson(root, 'artifacts/evidence/matrix.json', matrix);
   for (const review of reviews) writeJson(root, `artifacts/evidence/${review.role}.json`, review);
   const record = {
@@ -65,11 +83,20 @@ for (const [name, mutate, expected] of [
   ['incomplete coverage', record => { record.acceptedSceneCoverage.covered = 65; }, 'ART_ACCEPTANCE_COVERAGE_INVALID'],
   ['missing Web response', record => { record.webHigh.reviews = record.webHigh.reviews.slice(0, 2); }, 'ART_ACCEPTANCE_WEB_REVIEW_MISSING'],
   ['missing actual pixel receipt', record => { record.webHigh.reviews[2].actualPixelsReceived = false; }, 'ART_ACCEPTANCE_PIXEL_RECEIPT_MISSING'],
+  ['missing trusted attachment receipt', record => { record.__evidence[2].hostReceipt.source.attachments[0].deliveryReceipt = ''; }, 'ART_ACCEPTANCE_WEB_ATTACHMENT_INVALID'],
+  ['incomplete attachment receipt', record => { record.__evidence[2].hostReceipt.source.attachments = []; }, 'ART_ACCEPTANCE_WEB_ATTACHMENT_INVALID'],
+  ['wrong strict reviewer role', record => { record.__evidence[2].role = 'other_model'; record.webHigh.reviews[2].role = 'other_model'; }, 'ART_ACCEPTANCE_WEB_PROVENANCE_MISSING'],
+  ['repeated provider task identity', record => { record.__evidence[1].taskId = record.__evidence[0].taskId; record.__evidence[1].hostReceipt.provider.taskId = record.__evidence[0].hostReceipt.provider.taskId; record.webHigh.reviews[1].taskId = record.webHigh.reviews[0].taskId; }, 'ART_ACCEPTANCE_WEB_PROVENANCE_DUPLICATE'],
+  ['attachment packet over limit', record => { record.__evidence[2].evidenceRefs = Array.from({ length: 11 }, (_, i) => `capture-${i}`); record.__evidence[2].receivedEvidenceRefs = [...record.__evidence[2].evidenceRefs]; record.__evidence[2].hostReceipt.source.attachments = record.__evidence[2].evidenceRefs.map((ref, i) => ({ ref, name: `S38-${i}.png`, mime: 'image/png', bytes: 1, sha256: 'a'.repeat(64), acceptedUpload: true, deliveredBytes: 1, deliveredSha256: 'a'.repeat(64), deliveryReceipt: `receipt-${i}` })); }, 'ART_ACCEPTANCE_WEB_ATTACHMENT_INVALID'],
 ]) {
   test(`${name} blocks`, () => {
     const { root, record } = fixture(); record.__root = root;
+    record.__evidence = record.webHigh.reviews.map(review => JSON.parse(fs.readFileSync(path.join(root, review.path), 'utf8')));
     mutate(record);
+    for (const [index, evidence] of record.__evidence.slice(0, record.webHigh.reviews.length).entries()) fs.writeFileSync(path.join(root, record.webHigh.reviews[index].path), `${JSON.stringify(evidence, null, 2)}\n`);
+    for (const [index, review] of record.webHigh.reviews.entries()) review.sha256 = hash(path.join(root, review.path));
     delete record.__root;
+    delete record.__evidence;
     assert.equal(verifyArtAcceptance({ root, recordOverride: record }).code, expected);
   });
 }

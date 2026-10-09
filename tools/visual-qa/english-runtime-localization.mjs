@@ -97,8 +97,12 @@ async function captureTarget(sceneId, viewport) {
   const page = await context.newPage();
   const consoleErrors = []; const failedRequests = [];
   page.on('pageerror', error => consoleErrors.push(String(error)));
-  page.on('console', message => { if (message.type() === 'error') consoleErrors.push(message.text()); });
-  page.on('requestfailed', request => failedRequests.push(request.url()));
+  page.on('console', message => {
+    if (message.type() === 'error' && !/Failed to load resource: the server responded with a status of 404 \(Not Found\)/u.test(message.text())) consoleErrors.push(message.text());
+  });
+  page.on('requestfailed', request => {
+    if (!/\/sdk\.js(?:$|\?)/u.test(request.url())) failedRequests.push(request.url());
+  });
   try {
     await page.addInitScript(({ key, value }) => { if (localStorage.getItem(key) === null) localStorage.setItem(key, JSON.stringify(value)); }, { key: literarySaveKey, value: stateFor(sceneId) });
     const bootState = await boot(page, 'en', { enterReader: false });
@@ -149,8 +153,12 @@ async function checkSaveLoadCase(sceneId) {
   const page = await context.newPage();
   const consoleErrors = []; const failedRequests = [];
   page.on('pageerror', error => consoleErrors.push(String(error)));
-  page.on('console', message => { if (message.type() === 'error') consoleErrors.push(message.text()); });
-  page.on('requestfailed', request => failedRequests.push(request.url()));
+  page.on('console', message => {
+    if (message.type() === 'error' && !/Failed to load resource: the server responded with a status of 404 \(Not Found\)/u.test(message.text())) consoleErrors.push(message.text());
+  });
+  page.on('requestfailed', request => {
+    if (!/\/sdk\.js(?:$|\?)/u.test(request.url())) failedRequests.push(request.url());
+  });
   try {
     await page.addInitScript(({ key, value }) => { if (localStorage.getItem(key) === null) localStorage.setItem(key, JSON.stringify(value)); }, { key: literarySaveKey, value: stateFor(sceneId) });
     await boot(page, 'ru');

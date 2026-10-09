@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { execFileSync } from 'node:child_process';
-import { productSnapshot, repositoryIdentity, verifyArtAcceptance } from './art-acceptance.mjs';
+import { productSnapshot, repositoryIdentity, verifyArtAcceptance, verifyStrictWebReviewReceipt } from './art-acceptance.mjs';
 import { verifyVisualContentReviews } from './visual-content-review.mjs';
 
 const root = process.cwd();
@@ -30,11 +30,23 @@ if (!['strict','visual-content'].includes(assurance) || !matrixPath ||
     if (matrix.status !== 'PASS' || matrix.sourceHead !== sourceHead || matrix.scope?.expectedScenes !== 66 || matrix.scope?.coveredScenes !== 66 || matrix.scope?.captures !== 198 || matrix.failures?.length) throw new Error('matrix is not a PASS 66-scene current-HEAD matrix');
     const reviews = webPaths.map(file => ({ path: file, sha256: sha256(absolute(file)), evidence: readJson(file) }));
     const requiredRoles = new Set(['ceos_reasoner_web', 'ceos_bulk_checker_web', 'ceos_art_director_web']);
+    const strictTaskIds = new Set();
+    const strictTraceIds = new Set();
     for (const review of reviews) {
       if (!requiredRoles.has(review.evidence.role ?? review.evidence.agent) || review.evidence.status !== 'PASS' ||
-          review.evidence.sourceHead !== sourceHead || review.evidence.actualPixelsReceived !== true ||
-          (assurance === 'strict' && (!review.evidence.taskId || !review.evidence.reviewTraceId)))
+          review.evidence.sourceHead !== sourceHead || review.evidence.actualPixelsReceived !== true)
         throw new Error(`invalid Web review: ${review.path}`);
+      if (assurance === 'strict') {
+        const strict = verifyStrictWebReviewReceipt({
+          reference: { path: review.path, role: review.evidence.role ?? review.evidence.agent, taskId: review.evidence.taskId, reviewTraceId: review.evidence.reviewTraceId, actualPixelsReceived: true },
+          evidence: review.evidence, sourceHead
+        });
+        if (strict.status !== 'PASS') throw new Error(`${strict.code}: ${strict.reason}`);
+        if (strictTaskIds.has(review.evidence.taskId) || strictTraceIds.has(review.evidence.reviewTraceId))
+          throw new Error('ART_ACCEPTANCE_WEB_PROVENANCE_DUPLICATE: Web review task and trace identities must be unique across roles.');
+        strictTaskIds.add(review.evidence.taskId);
+        strictTraceIds.add(review.evidence.reviewTraceId);
+      }
     }
     if (new Set(reviews.map(item => item.evidence.role ?? item.evidence.agent)).size !== 3)
       throw new Error('Web reviews must contain all three required roles');

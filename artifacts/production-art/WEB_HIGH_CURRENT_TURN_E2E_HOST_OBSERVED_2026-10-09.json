@@ -1,0 +1,65 @@
+{
+  "schema": "codex.web.host-observed.e2e.v1",
+  "classification": "HOST_OBSERVED_ONLY",
+  "strictAcceptance": "BLOCKED_HOST_DEPENDENCY",
+  "sourceHead": "5a43fbd51bcd54db472c89956ad085b20b4e5c45",
+  "scene": "S38",
+  "cue": "s38-ordinary-day",
+  "viewports": [
+    "1920x900",
+    "390x844",
+    "360x640"
+  ],
+  "input": {
+    "attachmentCount": 3,
+    "attachments": [
+      {
+        "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S38-s38-ordinary-day-1920x900.png",
+        "bytes": 1872946,
+        "sha256": "3217d3ceb8df4597731216b1a4ce385102c14f6f89e4c9c2e08538fbe13341b5"
+      },
+      {
+        "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S38-s38-ordinary-day-390x844.png",
+        "bytes": 438763,
+        "sha256": "dbff51bc4d12eb96532aa0cf11ca4137d97415491be23a9b21a9d8f6c5443141"
+      },
+      {
+        "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S38-s38-ordinary-day-360x640.png",
+        "bytes": 304020,
+        "sha256": "b90c29b7eb7de01c029a5c8df5878469c6e28b1b5ab6683d4d754972ddf93df5"
+      }
+    ]
+  },
+  "transport": {
+    "bridge": "http://127.0.0.1:17841",
+    "healthz": "READY",
+    "hostCallCompleted": true,
+    "acceptedUpload": null,
+    "deliveredBytes": null,
+    "deliveredSha256": null,
+    "deliveryReceipt": null,
+    "providerTaskId": null,
+    "providerResponseId": null,
+    "reviewTraceId": null,
+    "sourceBinding": null,
+    "providerAttestation": null
+  },
+  "reviews": [
+    {
+      "role": "ceos_art_director_web",
+      "hostAgentId": "01a120e2-ca03-7820-8f9f-6e0ca2577ecd",
+      "hostObservation": "PASS scoped visual: 3/3 actual pixels; characters, tickets, camera, crop, readability and integration observed as passing; canon/source/runtime/transport remained unresolved."
+    },
+    {
+      "role": "ceos_bulk_checker_web",
+      "hostAgentId": "01a120e4-37c1-76d3-b069-7f11a615bc87",
+      "hostObservation": "PASS_SCOPED_VISUAL: 3/3; Alice, Nick, two tickets, camera/straps, crop and responsive consistency observed; 360 title slightly small but non-blocking; source binding, task/trace, provider attestation and E2E console/network not confirmed."
+    },
+    {
+      "role": "ceos_reasoner_web",
+      "hostAgentId": "01a120e4-87cb-7b93-be1d-725fc6465d89",
+      "hostObservation": "PASS_VISUAL_ONLY: visual-content, authored beat, crop and readability observed as passing; transport provenance, source binding, asset hash/runtime, console/network, task/trace, host attachment receipt and provider attestation not verified."
+    }
+  ],
+  "verdict": "Three independent current-turn Web role responses and the three supplied pixels were observed, but the host exposed no supported trusted receipt envelope. This artifact is diagnostic only and cannot satisfy strict Web High acceptance."
+}

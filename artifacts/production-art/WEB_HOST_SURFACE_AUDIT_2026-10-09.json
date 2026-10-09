@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "recordType": "web-high-host-surface-audit",
+  "status": "BLOCKED_HOST_DEPENDENCY",
+  "sourceHead": "5a43fbd51bcd54db472c89956ad085b20b4e5c45",
+  "observedAt": "2026-10-09",
+  "surfaces": {
+    "ceosRouting": {
+      "command": "ceos routing --json",
+      "status": "CONFIGURATION_ONLY",
+      "routes": [
+        "ceos_bulk_checker_web -> chatgpt-web/gpt-6-sol",
+        "ceos_reasoner_web -> chatgpt-web/gpt-6-sol",
+        "ceos_art_director_web -> chatgpt-web/gpt-6-sol"
+      ],
+      "receiptCapability": false
+    },
+    "webPreflight": {
+      "command": "ceos web-preflight --json",
+      "status": "READY",
+      "healthUrl": "http://127.0.0.1:17841/healthz",
+      "activity": {"status": "ok", "acceptingTurns": true, "activeHttpTurns": 0, "activeBrowserTurns": 0},
+      "receiptCapability": false,
+      "note": "Health/accepting-turns does not expose per-review task, trace or attachment provenance."
+    },
+    "webPlan": {
+      "command": "ceos web-plan --kind production-art --complexity high --visual --assurance visual-content --json",
+      "status": "PLAN_ONLY",
+      "execution": "parent-hosted-subagent-delegation-not-automatic-CLI-invocation",
+      "receiptCapability": false
+    },
+    "webReviewVerify": {
+      "command": "ceos web-review-verify ... --head 5a43fbd... --visual --assurance visual-content",
+      "status": "VALIDATOR_ONLY",
+      "observedResult": "WEB_REVIEW_NOT_VERIFIED",
+      "note": "Validates a supplied JSON record; it does not call the Web host or recover missing receipts."
+    },
+    "routingTrace": {
+      "status": "INGEST_ONLY",
+      "note": "CEOS routing-trace can ingest a real review file but cannot manufacture taskId, reviewTraceId or attachment receipt."
+    },
+    "availableComputerSurfaces": {
+      "status": "NO_SUPPORTED_RECEIPT_API_EXPOSED",
+      "observed": ["Chrome extension browser", "Codex in-app browser"],
+      "note": "No supported host contract was exposed through these surfaces for trusted Web review receipts."
+    }
+  },
+  "requiredHostContract": {
+    "attachmentReceipt": {
+      "sha256": "required",
+      "bytes": "required",
+      "actualFormat": "required",
+      "dimensions": "required",
+      "sourceHead": "required and bound to the supplied local screenshot"
+    },
+    "review": {
+      "taskId": "required provider-issued identifier",
+      "reviewTraceId": "required provider-issued identifier",
+      "reviewerRole": "required provider-attested role matching ceos_bulk_checker_web, ceos_reasoner_web or ceos_art_director_web",
+      "modelRoute": "required attested chatgpt-web/gpt-6-sol High route",
+      "actualPixelsReceived": "required true only when the host confirms receipt"
+    }
+  },
+  "observedMissingOrInvalidFields": [
+    "taskId",
+    "reviewTraceId",
+    "trusted attachment receipt with format",
+    "trusted sourceHead-to-attachment binding",
+    "attested model route",
+    "provider-attested reviewer role/agent field",
+    "current-head review records"
+  ],
+  "minimalHostSideFix": "Expose a trusted per-call response envelope or receipt store that atomically binds current sourceHead, local attachment path plus SHA-256/bytes/format/dimensions, provider taskId, reviewTraceId, attested model route and reviewer role to the returned review. Keep the existing fail-closed validators unchanged.",
+  "stopRule": "Do not resend attachments or continue Web High batches until one control scene returns this complete provenance envelope for all three roles."
+}

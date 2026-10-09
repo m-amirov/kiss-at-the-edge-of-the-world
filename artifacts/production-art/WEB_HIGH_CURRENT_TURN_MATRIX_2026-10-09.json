@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "recordType": "current-turn-web-high-visual-content-matrix",
+  "status": "BLOCKED",
+  "evidenceArtifact": "artifacts/production-art/WEB_HIGH_CURRENT_TURN_MATRIX_2026-10-09.json",
+  "sourceHead": "5a43fbd51bcd54db472c89956ad085b20b4e5c45",
+  "worktree": "E:/Work/YandexGames/Novells/kiss-at-the-edge-of-the-world-final-rc-2026-10-09",
+  "runtimeEvidence": {
+    "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/evidence.json",
+    "scenes": 66,
+    "captures": 198,
+    "viewports": ["1920x900", "390x844", "360x640"],
+    "failures": 0,
+    "independentVerification": "PASS: SHA-256, bytes, PNG dimensions, source HEAD, browser readback, manifest mappings, physical files, errors and failed requests"
+  },
+  "threeRoleCoverage": {
+    "completeScenes": ["S04", "S05", "S09", "S11", "S12", "S14", "S19", "S22"],
+    "completeCount": 8,
+    "total": 66,
+    "complete": false,
+    "unconfirmedScenes": ["S01", "S02", "S65", "S03", "S06", "S07", "S08", "S66", "S10", "S13", "S15", "S16", "S17", "S18", "S20", "S21", "S61", "S23", "S24", "S25", "S58", "S26", "S27", "S59", "S28", "S49", "S29", "S52", "S30", "S55", "S31", "S62", "S32", "S50", "S33", "S53", "S34", "S56", "S35", "S63", "S36", "S37", "S51", "S38", "S54", "S39", "S57", "S40", "S64", "S60", "S41", "S42", "S43", "S44", "S45", "S46", "S47", "S48"]
+  },
+  "roles": {
+    "ceos_art_director_web": {
+      "fixedNineAgentId": "01a12097-32a4-7343-b0e6-f20b45e3268f",
+      "fixedNineActualPixelsReceived": true,
+      "fixedNineSourceHead": "d2fec9fefef15020ad97bf7c2501f949fec47a1b",
+      "fixedNineVerdicts": {"S04":"PASS","S05":"PASS","S09":"REWORK","S11":"REWORK","S12":"REWORK","S14":"PASS","S15":"REWORK","S19":"PASS","S22":"REWORK"},
+      "invalidatedAfterProductChange": ["S15"],
+      "s13Probe": {"agentId":"01a12095-0348-74c0-95cc-2563ce36b61f","actualPixelsReceived":true,"verdict":"REWORK","screenshot":"artifacts/evidence/production-art-coverage-rc-2026-10-09/S13-skaftafell-parking-390x844.png","sha256":"52013a700488926a5e62cd666c4e636fdc313034ee6945d9506cfdcfbbe4d062"},
+      "partialRemainingTurns": [
+        {"agentId":"01a1209d-bb89-7bc3-a1ab-faec3cef21f3","requested":57,"received":10,"failure":"ATTACHMENT_TRANSPORT","scenes":["S64","S60","S41","S42","S43","S44","S45","S46","S47","S48"]},
+        {"agentId":"01a120a0-9a56-7f00-b11c-44ec2910c6a7","requested":47,"received":10,"failure":"ATTACHMENT_TRANSPORT","scenes":["S35","S63","S36","S37","S51","S38","S54","S39","S57","S40"]},
+        {"agentId":"01a120a4-7a15-71c1-a7e8-d34c8cd0f2ab","requested":37,"received":10,"failure":"ATTACHMENT_TRANSPORT","scenes":["S30","S55","S31","S62","S32","S50","S33","S53","S34","S56"]}
+      ],
+      "transportStop": "Bounded attachment retries exhausted; 26 art-director scene pixels were not received."
+    },
+    "ceos_bulk_checker_web": {
+      "agentId":"01a12099-7e68-76a0-b580-54651f1274bc",
+      "actualPixelsReceived":true,
+      "reviewedScenes":["S04","S05","S09","S11","S12","S14","S15","S19","S22"],
+      "reviewedSourceHead":"d2fec9fefef15020ad97bf7c2501f949fec47a1b",
+      "invalidatedAfterProductChange":["S15"],
+      "verdicts":{"S04":"PASS","S05":"REWORK","S09":"REWORK","S11":"REWORK","S12":"PASS","S14":"PASS","S15":"REWORK","S19":"PASS","S22":"REWORK"},
+      "remainingScenes":"NOT_RUN after attachment transport stop"
+    },
+    "ceos_reasoner_web": {
+      "agentId":"01a1209b-80f4-7221-8e97-f312edc5ffae",
+      "actualPixelsReceived":true,
+      "reviewedScenes":["S04","S05","S09","S11","S12","S14","S15","S19","S22"],
+      "reviewedSourceHead":"d2fec9fefef15020ad97bf7c2501f949fec47a1b",
+      "invalidatedAfterProductChange":["S15"],
+      "verdicts":{"S04":"PASS","S05":"REWORK","S09":"REWORK","S11":"REWORK","S12":"PASS","S14":"PASS","S15":"REWORK","S19":"PASS","S22":"PASS"},
+      "remainingScenes":"NOT_RUN after attachment transport stop"
+    }
+  },
+  "confirmedOpenRework": ["S05", "S09", "S11", "S12", "S15", "S22", "S13", "S64", "S60", "S41", "S42", "S43", "S44", "S46", "S35", "S36", "S51", "S54", "S39", "S57", "S55", "S31", "S32", "S50", "S33", "S53", "S34"],
+  "productChangeSincePreviousTurn": {
+    "commit": "5a43fbd51bcd54db472c89956ad085b20b4e5c45",
+    "scope": "S15:jokulsarlon-lagoon only",
+    "defect": "Character pair was visually ungrounded against the authored shoreline foreground.",
+    "localRuntimeVerification": "PASS: current HEAD 66/66 scenes, 198/198 PNG captures; S15 targeted 3/3 readback PASS.",
+    "webHighRecheck": "NOT_RUN: source-bound Web High receipt unavailable; prior S15 review invalidated by source change."
+  },
+  "acceptanceV4": "NOT_FORMED",
+  "stopReason": "Current runtime evidence is PASS on 5a43fbd, but required three-role Web High visual-content review is incomplete; S15 old reviews are invalidated by the product change; transport provenance has no trusted task/review receipt; no fictitious receipts or acceptance promotion.",
+  "recordedAt": "2026-10-09"
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "recordType": "scene-rework-verification",
+  "scene": "S15",
+  "cue": "jokulsarlon-lagoon",
+  "sourceHeadBefore": "d2fec9fefef15020ad97bf7c2501f949fec47a1b",
+  "sourceHeadAfter": "5a43fbd51bcd54db472c89956ad085b20b4e5c45",
+  "rootCause": "The authored Alice/Nick two-shot was placed over the lagoon without a cue-local shoreline grounding treatment; character feet visually terminated against water/dark gradient rather than the visible shore foreground.",
+  "change": {
+    "files": [
+      "src/literary-visual-directions.js",
+      "src/literary.css",
+      "tests/narrative/literary-stage.test.mjs"
+    ],
+    "scope": "Exact S15:jokulsarlon-lagoon cue only; S15 opening and neighboring scenes retain their mappings.",
+    "mapping": "batch5-pair-grounded-s15-lagoon",
+    "cast": ["alice", "nick"],
+    "asset": "jokulsarlon-master.webp"
+  },
+  "currentHeadEvidence": {
+    "status": "PASS",
+    "runner": "production-art-coverage-rc.mjs",
+    "captures": [
+      {"viewport": "1920x900", "sha256": "d4bb9722095a32598268e06aebd63b26c85c3f7da9ef6132adda6218a08fc17e", "bytes": 1815092},
+      {"viewport": "390x844", "sha256": "5df70a589618aebbdb6139f3814c650830867a74dce7b5151086f2c540ade442", "bytes": 391262},
+      {"viewport": "360x640", "sha256": "46b640c6db102dec3d87fc3cdea96b1a3f06c5d3b36a24f4fbf5488d6b4419f9", "bytes": 287211}
+    ],
+    "readback": "3/3 PNG captures, sourceRef [0,5], stageCount 2, asset match true, overflow false, internalScroll false"
+  },
+  "webHigh": {
+    "status": "BLOCKED_RECHECK_REQUIRED",
+    "reason": "Prior S15 reviews were bound to sourceHeadBefore and cannot be reused after the product change; no trusted taskId/reviewTraceId/attachment receipt is available for a new source-bound review."
+  },
+  "recordedAt": "2026-10-09"
+}

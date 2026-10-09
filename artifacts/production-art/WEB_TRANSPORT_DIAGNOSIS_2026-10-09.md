@@ -16,7 +16,7 @@ CEOS `web-preflight --json` returned `READY`, and the current host turn context 
 
 ## Root cause
 
-The current callable host adapter returns a native `agent_id` plus final text, while the CEOS 0.5.7 Web delegation contract is only a provenance validator. `src/web-delegation.mjs` validates required `taskId`, `reviewTraceId`, current `sourceHead`, complete evidence receipt and `actualPixelsReceived`; it does not invoke the Web backend or add missing receipts. The bridge health endpoint proves availability and accepting turns, not response-envelope provenance.
+The current callable host adapter returns a native `agent_id` plus final text, while the CEOS 0.5.7 Web delegation contract is only a provenance validator. The local validators in `tools/release/art-acceptance.mjs` and `tools/release/visual-content-review.mjs` validate required `taskId`, `reviewTraceId`, current `sourceHead`, complete evidence receipt and `actualPixelsReceived`; they do not invoke the Web backend or add missing receipts. The bridge health endpoint proves availability and accepting turns, not response-envelope provenance.
 
 The prior smoke records do not prove a different trusted backend envelope. Their human-readable `WHVA-*` / `WH-S56-*` identifiers were recorded in task/evidence text, while the current host trace inventory contains no callable receipt record that binds those identifiers to attachment bytes. They must not be reused as current IDs.
 
@@ -29,7 +29,7 @@ The prior smoke records do not prove a different trusted backend envelope. Their
 
 ## Why no local CEOS fix was applied
 
-The production-art validator is correctly fail-closed, and existing tests already reject missing Web IDs/pixel receipts. Deriving IDs from `hostAgentId`, timestamps, filenames, or response text would weaken provenance. The missing capability is in the callable host/bridge response envelope and is not patchable from this product repository without access to the bridge implementation and its trusted receipt store.
+The production-art validators are correctly fail-closed, and existing tests already reject missing Web IDs/pixel receipts. Deriving IDs from `hostAgentId`, timestamps, filenames, or response text would weaken provenance. The missing capability is in the callable host/bridge response envelope and is not patchable from this product repository without access to the bridge implementation and its trusted receipt store.
 
 Required host capability for recovery:
 
