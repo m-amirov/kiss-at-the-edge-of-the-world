@@ -87,8 +87,15 @@ const targetFilter = process.env.PRODUCTION_ART_COVERAGE_SCENES?.split(',').map(
 const targets = targetFilter?.length ? allTargets.filter(target => targetFilter.includes(target.sceneId)) : allTargets;
 
 await fs.mkdir(output, { recursive: true });
-const { chromium } = await import(pathToFileURL('C:/Users/user/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs').href);
-const browser = await chromium.launch({ executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: true });
+// GitHub Actions uses a temporary Playwright install. Local Codex retains the
+// existing explicit Windows runtime and Chrome path unless CI is requested.
+const inCI = process.env.PRODUCTION_ART_COVERAGE_BROWSER_MODE === 'ci';
+const { chromium } = inCI
+  ? await import('playwright')
+  : await import(pathToFileURL('C:/Users/user/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs').href);
+const browser = await chromium.launch(inCI
+  ? { headless: true, args: ['--autoplay-policy=no-user-gesture-required'] }
+  : { executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: true });
 const captures = [];
 try {
   for (const target of targets) for (const viewport of viewports) {
