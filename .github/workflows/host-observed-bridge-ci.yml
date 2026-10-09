@@ -1,0 +1,24 @@
+name: Bridge Host-Observed Receipt Safety
+
+on:
+  push:
+    branches: [bridge/trusted-web-receipts-2026-10-09]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  receipt-safety:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.0
+      - run: bun install --frozen-lockfile
+      - name: Validate types
+        run: bun run typecheck
+      - name: Receipt and writer regression
+        run: bun test tests/evidence-writer.test.ts tests/host-observed-receipt.test.ts
