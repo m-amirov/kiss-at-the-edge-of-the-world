@@ -7,6 +7,10 @@ import { ChatGptCompactionHandoffAccepted, ChatGptWebAdapterError } from "./adap
 import type { CompiledChatGptWebPrompt } from "./prompt";
 import type { BrowserTurn, ResolvedBrowserConfig } from "./browser-worker";
 import {
+  parseHostObservedReceipt,
+  type HostObservedReceipt,
+} from "./host-observed-receipt";
+import {
   parseChatGptLunaCheckpoint,
   type ChatGptLunaCheckpoint,
 } from "./rolling-checkpoint";
@@ -21,6 +25,8 @@ interface PendingTurn {
   localFailure?: Error;
   progressForwarding?: AbortController;
   acknowledgedMultipartStage?: number;
+  hostObservedReceiptReceived?: boolean;
+  hostObservedReceiptPromise?: Promise<void>;
 }
 
 type HelperMessage =
@@ -32,6 +38,7 @@ type HelperMessage =
   | { type: "event"; id: string; event: "completion_fence_commit"; requestId: number; revision: number }
   | { type: "event"; id: string; event: "prepared_selected"; reused: boolean }
   | { type: "event"; id: string; event: "luna_checkpoint"; checkpoint: ChatGptLunaCheckpoint; answerHash: string }
+  | { type: "event"; id: string; event: "host_observed_receipt"; receipt: HostObservedReceipt }
   | { type: "result"; id: string; text: string }
   | {
       type: "error";
@@ -104,6 +111,14 @@ function parseHelperMessage(line: string): HelperMessage {
         event,
         checkpoint: parseChatGptLunaCheckpoint(message.checkpoint),
         answerHash: message.answerHash,
+      };
+    }
+    if (event === "host_observed_receipt") {
+      return {
+        type: "event",
+        id: message.id,
+        event,
+        receipt: parseHostObservedReceipt(message.receipt),
       };
     }
     const text = message.text;
@@ -227,6 +242,11 @@ export class LauncherBrowserHelperClient {
         "Launcher browser helper does not support the MCP completion fence; update or restart the launcher",
       );
     }
+    if (turn.hostObservedReceipt && !this.helperFeatures.has("host-observed-receipt")) {
+      throw new Error(
+        "Launcher browser helper does not support host-observed receipt forwarding; update or restart the launcher",
+      );
+    }
     return await new Promise<string>((resolveResult, rejectResult) => {
         if (this.pending.has(turn.traceId)) {
           rejectResult(new Error(`Duplicate launcher browser turn: ${turn.traceId}`));
@@ -293,6 +313,7 @@ export class LauncherBrowserHelperClient {
             ...(turn.compaction ? { compaction: true } : {}),
             ...(turn.captureLunaCheckpoint ? { captureLunaCheckpoint: true } : {}),
             ...(turn.externalProgress ? { externalProgress: true } : {}),
+            ...(turn.hostObservedReceipt ? { hostObservedReceiptContext: turn.hostObservedReceipt.context } : {}),
           },
         })
           // Only mirror once the run frame is on the wire, so the helper never sees progress for a
@@ -552,6 +573,31 @@ export class LauncherBrowserHelperClient {
         }
         pending.turn.onLunaCheckpoint({ checkpoint: message.checkpoint, answerHash: message.answerHash });
       }
+      else if (message.event === "host_observed_receipt") {
+        if (!pending.turn.hostObservedReceipt) {
+          this.abortWithLocalFailure(
+            message.id,
+            new Error("Launcher browser helper emitted a host-observed receipt for a turn without receipt capture"),
+            pending,
+          );
+          return;
+        }
+        if (pending.hostObservedReceiptReceived) {
+          this.abortWithLocalFailure(
+            message.id,
+            new Error("Launcher browser helper emitted a duplicate host-observed receipt"),
+            pending,
+          );
+          return;
+        }
+        pending.hostObservedReceiptReceived = true;
+        pending.hostObservedReceiptPromise = Promise.resolve(pending.turn.hostObservedReceipt.onReceipt(message.receipt));
+        void pending.hostObservedReceiptPromise.catch(error => this.abortWithLocalFailure(
+          message.id,
+          error instanceof Error ? error : new Error(String(error)),
+          pending,
+        ));
+      }
       else if (message.event === "reasoning" && message.text) {
         pending.turn.onReasoningSummary?.(message.text, message.continuation === true);
       }
@@ -560,6 +606,25 @@ export class LauncherBrowserHelperClient {
       return;
     }
     if (message.type === "result") {
+      if (pending.turn.hostObservedReceipt && !pending.hostObservedReceiptReceived) {
+        this.finishWithError(
+          message.id,
+          new Error("Launcher browser helper completed a receipt-capturing turn without a host-observed receipt"),
+        );
+        return;
+      }
+      if (pending.hostObservedReceiptPromise) {
+        void pending.hostObservedReceiptPromise.then(() => {
+          if (this.pending.get(message.id) !== pending) return;
+          this.finish(message.id);
+          if (pending.localFailure) pending.reject(pending.localFailure);
+          else pending.resolve(message.text);
+        }).catch(error => this.finishWithError(
+          message.id,
+          error instanceof Error ? error : new Error(String(error)),
+        ));
+        return;
+      }
       this.finish(message.id);
       if (pending.localFailure) pending.reject(pending.localFailure);
       else pending.resolve(message.text);

@@ -19,6 +19,7 @@ test("daemon streams browser lifecycle through the real helper process", async (
   const helper = join(root, "helper.ts");
   writeFileSync(helper, `
     import { ChatGptBrowserWorker } from ${JSON.stringify(new URL("../src/adapters/chatgpt-web/browser-worker.ts", import.meta.url).href)};
+    import { createHostObservedReceipt } from ${JSON.stringify(new URL("../src/adapters/chatgpt-web/host-observed-receipt.ts", import.meta.url).href)};
     // Substitute only the browser. Both sides of the production IPC protocol run unchanged.
     ChatGptBrowserWorker.prototype.run = async function(turn) {
       if (this.config.useSavedChats !== true) throw new Error("Saved chat preference lost in helper IPC");
@@ -46,6 +47,15 @@ test("daemon streams browser lifecycle through the real helper process", async (
           pending: [],
         },
       });
+      if (turn.hostObservedReceipt) await turn.hostObservedReceipt.onReceipt(createHostObservedReceipt({
+        context: turn.hostObservedReceipt.context,
+        traceId: turn.traceId,
+        assistantTurnIdentity: "assistant-turn-ipc",
+        requestedModel: turn.modelId,
+        reasoning: turn.reasoning,
+        attachments: [],
+        answer: "done",
+      }));
       return "done";
     };
     await import(${JSON.stringify(new URL("../src/adapters/chatgpt-web/browser-helper-main.ts", import.meta.url).href)});
@@ -86,6 +96,7 @@ test("daemon streams browser lifecycle through the real helper process", async (
   const deltas: string[] = [];
   const checkpoints: unknown[] = [];
   const acknowledgedStages: number[] = [];
+  const receipts: unknown[] = [];
   let sendActivated = false;
   let submitted = false;
   let released = false;
@@ -112,6 +123,12 @@ test("daemon streams browser lifecycle through the real helper process", async (
       onTextDelta: text => deltas.push(text),
       captureLunaCheckpoint: true,
       onLunaCheckpoint: checkpoint => checkpoints.push(checkpoint),
+      hostObservedReceipt: {
+        context: {
+          sourceHead: "a".repeat(40), scene: "S38", viewport: "390x844", attachments: [],
+        },
+        onReceipt: receipt => { receipts.push(receipt); },
+      },
     });
     expect(result).toBe("done");
     expect(reasoning).toEqual([
@@ -134,6 +151,13 @@ test("daemon streams browser lifecycle through the real helper process", async (
       },
     }]);
     expect(released).toBe(true);
+    expect(receipts).toHaveLength(1);
+    expect(receipts[0]).toMatchObject({
+      assurance: "host-observed",
+      providerAttested: false,
+      provider: { taskId: null, responseId: null, reviewTraceId: null },
+      browser: { assistantTurnIdentity: "assistant-turn-ipc" },
+    });
   } finally {
     await client.close();
   }
@@ -354,6 +378,40 @@ test("an abort dispatched during run submission cannot overtake the run frame", 
 
   expect(messages).toEqual(["run", "abort"]);
   expect(released).toBe(false);
+});
+
+test("a receipt-capturing helper turn fails closed when it completes without a receipt", async () => {
+  const client = new LauncherBrowserHelperClient({
+    appName: "Codex Native", browserHost: "launcher", browserHostDescriptorPath: "/durable/launcher.json",
+    storageStatePath: "/durable/unused-state.json", chromeExecutablePath: "/durable/unused-chrome",
+    turnTimeoutMs: 60_000, headed: true, autoApproveToolCalls: false, useSavedChats: false,
+  });
+  const internal = client as unknown as {
+    child?: unknown;
+    helperFeatures: Set<string>;
+    ensureChild(): Promise<void>;
+    send(message: Record<string, unknown>): Promise<void>;
+    handleLine(child: unknown, line: string): void;
+  };
+  const child = {};
+  internal.child = child;
+  internal.helperFeatures = new Set(["host-observed-receipt"]);
+  internal.ensureChild = async () => {};
+  internal.send = async message => {
+    if (message.type === "run") queueMicrotask(() => internal.handleLine(child, JSON.stringify({
+      type: "result", id: message.id, text: "unreceipted",
+    })));
+  };
+
+  await expect(client.run({
+    traceId: "missing-receipt-123", modelId: "gpt-5.6-sol", reasoning: "high",
+    capabilities: { localToolsEnabled: false, solAvailable: true, extraHighAvailable: false, proAvailable: false },
+    prepare: async () => ({ text: "inspect", images: [], release() {} }), onTextDelta() {},
+    hostObservedReceipt: {
+      context: { sourceHead: "b".repeat(40), scene: "S38", viewport: "390x844", attachments: [] },
+      onReceipt() {},
+    },
+  })).rejects.toThrow("without a host-observed receipt");
 });
 
 test("structured helper errors preserve the ChatGPT adapter failure contract", async () => {

@@ -66,6 +66,11 @@ import {
 } from "../../chatgpt-session";
 import { loginVerificationMarkerPath } from "../../browser-login";
 import {
+  createHostObservedReceipt,
+  type HostObservedReceipt,
+  type HostObservedReceiptContext,
+} from "./host-observed-receipt";
+import {
   connectLauncherBrowserHost,
   LauncherBrowserTurnCancelledError,
   LauncherRetainedConversationUnavailableError,
@@ -1363,6 +1368,11 @@ export interface BrowserTurn {
   onCommentary?: (text: string, continuation?: boolean) => void;
   /** Append-only, structurally stable Markdown chunks. */
   onTextDelta: (delta: string) => void;
+  /** Optional local-only receipt; never provider-attested and never inferred from answer text. */
+  hostObservedReceipt?: {
+    context: HostObservedReceiptContext;
+    onReceipt: (receipt: HostObservedReceipt) => void | Promise<void>;
+  };
   /** Proven current-turn MCP activity; never response content or completion. */
   externalProgress?: ChatGptTurnProgressReader;
   /** Atomically fences browser completion against concurrent MCP claims in the turn broker. */
@@ -2216,7 +2226,7 @@ const imageExtensions = new Map([
   ["image/webp", "webp"],
 ]);
 
-export function chatGptImageFilePayloads(images: ChatGptWebPromptImage[]): Array<{ name: string; mimeType: string; buffer: Buffer }> {
+export function chatGptImageFilePayloads(images: ChatGptWebPromptImage[]): Array<{ ref: string; name: string; mimeType: string; buffer: Buffer }> {
   if (images.length > CHATGPT_MAX_INPUT_IMAGES) {
     throw new Error(`ChatGPT web accepts at most ${CHATGPT_MAX_INPUT_IMAGES} input images per Codex turn`);
   }
@@ -2234,7 +2244,7 @@ export function chatGptImageFilePayloads(images: ChatGptWebPromptImage[]): Array
     if (buffer.length > 20_000_000) throw new Error(`ChatGPT web input image ${image.ref} exceeds 20 MB`);
     totalBytes += buffer.length;
     if (totalBytes > 50_000_000) throw new Error("ChatGPT web input images exceed the 50 MB per-turn limit");
-    return { name: `${image.ref}.${extension}`, mimeType: parsed.mediaType.toLowerCase(), buffer };
+    return { ref: image.ref, name: `${image.ref}.${extension}`, mimeType: parsed.mediaType.toLowerCase(), buffer };
   });
 }
 
@@ -2250,7 +2260,7 @@ function assertChatGptPromptAttachments(prompt: CompiledChatGptWebPrompt): void 
 
 export function chatGptPromptFilePayloads(
   prompt: CompiledChatGptWebPrompt,
-): Array<{ name: string; mimeType: string; buffer: Buffer }> {
+): Array<{ ref?: string; name: string; mimeType: string; buffer: Buffer }> {
   assertChatGptPromptAttachments(prompt);
   const files = [...chatGptImageFilePayloads(prompt.images), ...(prompt.skillFiles ?? []).map(file => ({
     name: file.name, mimeType: "text/plain", buffer: Buffer.from(file.text, "utf8"),
@@ -4152,9 +4162,9 @@ export class ChatGptBrowserWorker {
     return { effort: mode.displayLabel, response: CHATGPT_SMOKE_EXPECTED };
   }
 
-  private async attachFiles(page: Page, prompt: CompiledChatGptWebPrompt): Promise<void> {
+  private async attachFiles(page: Page, prompt: CompiledChatGptWebPrompt): Promise<Array<{ ref?: string; name: string; mimeType: string; buffer: Buffer }>> {
     const files = chatGptPromptFilePayloads(prompt);
-    if (files.length === 0) return;
+    if (files.length === 0) return files;
     const composer = await this.activeComposer(page);
     const composerForm = composer.locator("xpath=ancestor::form[1]");
     const input = page.locator('input[data-testid="upload-photos-input"], form[data-chatgpt-composer] input[type="file"][multiple]:not([accept])');
@@ -4178,7 +4188,7 @@ export class ChatGptBrowserWorker {
     const send = composerForm.locator(CHATGPT_SEND_BUTTON_SELECTOR);
     const deadline = Date.now() + 60_000;
     while (Date.now() < deadline) {
-      if (await send.isEnabled().catch(() => false)) return;
+      if (await send.isEnabled().catch(() => false)) return files;
       await new Promise(resolveSleep => setTimeout(resolveSleep, 100));
     }
     throw new Error("ChatGPT accepted the prompt attachments but did not make the message ready to send");
@@ -5466,7 +5476,7 @@ export class ChatGptBrowserWorker {
         }
       }
       await diagnostics.capture(page, "prompt-attachment-complete");
-      await this.runStage(turn.traceId, "file_attachment", browserStageTimeouts.fileAttachment, () => (
+      const observedAttachments = await this.runStage(turn.traceId, "file_attachment", browserStageTimeouts.fileAttachment, () => (
         this.attachFiles(page, prepared)
       ));
       await diagnostics.capture(page, "file-attachment-complete");
@@ -5816,6 +5826,24 @@ export class ChatGptBrowserWorker {
         atomicWriteFile(this.config.storageStatePath, `${JSON.stringify(state)}\n`);
       }
       await diagnostics.capture(page, "turn-completed");
+      if (turn.hostObservedReceipt) {
+        if ((prepared.skillFiles?.length ?? 0) > 0) {
+          throw new Error("Host-observed image receipt cannot be issued when skill-file attachments share the submission");
+        }
+        const attachments = observedAttachments.map(item => {
+          if (!item.ref) throw new Error("Host-observed receipt encountered an attachment without an image reference");
+          return { ref: item.ref, buffer: item.buffer };
+        });
+        await turn.hostObservedReceipt.onReceipt(createHostObservedReceipt({
+          context: turn.hostObservedReceipt.context,
+          traceId: turn.traceId,
+          assistantTurnIdentity: responseTurn.identity,
+          requestedModel: turn.modelId,
+          reasoning: turn.reasoning,
+          attachments,
+          answer: finalText,
+        }));
+      }
       console.info(
         `[chatgpt-web] browser turn ${turn.traceId} completed`
         + ` (markdownChars=${finalText.length}, domFullScans=${responseDomCache.fullScans ?? 0}, domCacheHits=${responseDomCache.cacheHits ?? 0})`,

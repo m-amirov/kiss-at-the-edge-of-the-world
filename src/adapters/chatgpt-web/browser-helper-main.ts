@@ -10,6 +10,7 @@ import { createBrowserHelperPromptSelection } from "./browser-helper-prompt-sele
 import { isChatGptWebMultipartPartCount, type CompiledChatGptWebPrompt } from "./prompt";
 import { ChatGptMirroredTurnProgress } from "./turn-progress";
 import type { ChatGptExternalTurnProgressSnapshot } from "./turn-progress";
+import { parseHostObservedReceiptContext } from "./host-observed-receipt";
 
 interface RunMessage {
   type: "run";
@@ -36,6 +37,7 @@ interface RunMessage {
     compaction?: boolean;
     captureLunaCheckpoint?: boolean;
     externalProgress?: boolean;
+    hostObservedReceiptContext?: unknown;
   };
 }
 
@@ -216,6 +218,9 @@ async function run(message: RunMessage): Promise<void> {
   const promptSelection = createBrowserHelperPromptSelection();
   preparedSelections.set(message.id, promptSelection);
   const prepareSelected = async () => ({ ...await promptSelection.wait(), release: () => {} });
+  const hostObservedReceiptContext = message.turn.hostObservedReceiptContext === undefined
+    ? undefined
+    : parseHostObservedReceiptContext(message.turn.hostObservedReceiptContext);
   const turn: BrowserTurn = {
     traceId: message.turn.traceId,
     modelId: message.turn.modelId,
@@ -298,6 +303,16 @@ async function run(message: RunMessage): Promise<void> {
     }),
     onCommentary: (text, continuation) => writeProtocol({ type: "event", id: message.id, event: "commentary", text, ...(continuation ? { continuation: true } : {}) }),
     onTextDelta: text => writeProtocol({ type: "event", id: message.id, event: "text", text }),
+    ...(hostObservedReceiptContext ? {
+      hostObservedReceipt: {
+        context: hostObservedReceiptContext,
+        onReceipt: receipt => {
+          if (!writeProtocol({ type: "event", id: message.id, event: "host_observed_receipt", receipt })) {
+            throw new Error("Browser helper could not persist the host-observed receipt");
+          }
+        },
+      },
+    } : {}),
     ...(message.turn.captureLunaCheckpoint ? {
       captureLunaCheckpoint: true,
       onLunaCheckpoint: captured => writeProtocol({
@@ -535,4 +550,4 @@ process.once("SIGTERM", () => {
 });
 
 // Advertise the optional frames this helper understands so the daemon can negotiate them explicitly.
-writeProtocol({ type: "ready", features: ["progress", "tool-boundary-ack", "completion-fence", "multipart-stage-ack", "skill-attachments"] });
+writeProtocol({ type: "ready", features: ["progress", "tool-boundary-ack", "completion-fence", "multipart-stage-ack", "skill-attachments", "host-observed-receipt"] });
