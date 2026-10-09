@@ -129,6 +129,16 @@ test('Batch 3 reframes bind only the eight selected authored cues',()=>{
  assert.equal(airport.art?.file,'s46-airport-bus.webp');
 });
 
+test('S18 lighthouse short-mobile repair is cue-owned and route-stable',()=>{
+ const {flow,choices}=complete('S18',{'S17-C2':'A','S18-C1':'A'});
+ const position=flow.findIndex((_,index)=>shot('S18',flow,index,choices).beatId==='hofn-lighthouse');
+ assert.ok(position>=0,'S18 lighthouse cue must be reachable');
+ const direction=shot('S18',flow,position,choices);
+ assert.equal(direction.stageComposition,'s18-hofn-lighthouse-short-mobile');
+ assert.deepEqual(direction.cast,['alice','eric']);
+ assert.equal(direction.art?.file,'s18-hofn-harbour.webp');
+});
+
 test('Final Batch 4 reframes bind only the ten selected authored cues',()=>{
  const expected={
   'S33/scene-start':'batch4-pair-depth-s33','S34/scene-start':'batch4-pair-depth-s34',
