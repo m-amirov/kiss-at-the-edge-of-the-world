@@ -1,0 +1,286 @@
+{
+  "assurance": "host-observed",
+  "role": "ceos_reasoner_web",
+  "images": [
+    {
+      "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-final-rc-2026-10-09\\artifacts\\evidence\\production-art-coverage-rc-2026-10-09\\S03-editor-call-1920x900.png",
+      "ref": "codex-input-image-1",
+      "sha256": "0bdfacea9efe77e619fbe52c2f8a59280339bace66e8c7e0820c7803021e09ce",
+      "bytes": 1558898,
+      "fileBytes": 1558898
+    },
+    {
+      "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-final-rc-2026-10-09\\artifacts\\evidence\\production-art-coverage-rc-2026-10-09\\S03-editor-call-390x844.png",
+      "ref": "codex-input-image-2",
+      "sha256": "c51f26f534eb19c5f876d8d6f90d05b341a9c99502f4645bbad796b8c11bc3cc",
+      "bytes": 423548,
+      "fileBytes": 423548
+    },
+    {
+      "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-final-rc-2026-10-09\\artifacts\\evidence\\production-art-coverage-rc-2026-10-09\\S03-editor-call-360x640.png",
+      "ref": "codex-input-image-3",
+      "sha256": "45e0ed2bbce25158fdeeca26ada269c2ad76131ed940d0e84e681b54ca939284",
+      "bytes": 298139,
+      "fileBytes": 298139
+    },
+    {
+      "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-final-rc-2026-10-09\\artifacts\\evidence\\production-art-coverage-rc-2026-10-09\\S18-hofn-lighthouse-1920x900.png",
+      "ref": "codex-input-image-4",
+      "sha256": "3e8c1da3e2e5e7d33f640fe46d10fc3bb043aa06dcb654d58662ad852b4389a4",
+      "bytes": 1834555,
+      "fileBytes": 1834555
+    },
+    {
+      "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-final-rc-2026-10-09\\artifacts\\evidence\\production-art-coverage-rc-2026-10-09\\S18-hofn-lighthouse-390x844.png",
+      "ref": "codex-input-image-5",
+      "sha256": "7fecf479639a70f1a9ba5289e901c8feeb6b48b71236081dc73292b573d8c1ee",
+      "bytes": 427696,
+      "fileBytes": 427696
+    },
+    {
+      "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-final-rc-2026-10-09\\artifacts\\evidence\\production-art-coverage-rc-2026-10-09\\S18-hofn-lighthouse-360x640.png",
+      "ref": "codex-input-image-6",
+      "sha256": "55096d5f4c57acb7687de5fbcd79842dd157dd29314dfb3e266a376cdb7392af",
+      "bytes": 297949,
+      "fileBytes": 297949
+    },
+    {
+      "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-final-rc-2026-10-09\\artifacts\\evidence\\production-art-coverage-rc-2026-10-09\\S42-s42-harbour-cafe-1920x900.png",
+      "ref": "codex-input-image-7",
+      "sha256": "2d0d1956db76feeba0d862318566e6434969088c8065b6ec439a244939fac4fd",
+      "bytes": 1852148,
+      "fileBytes": 1852148
+    },
+    {
+      "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-final-rc-2026-10-09\\artifacts\\evidence\\production-art-coverage-rc-2026-10-09\\S42-s42-harbour-cafe-390x844.png",
+      "ref": "codex-input-image-8",
+      "sha256": "4a98cdd0ec252a7c9c9e83d93704a47ab1cd716e8e52b19dc50843cbe46aad07",
+      "bytes": 457629,
+      "fileBytes": 457629
+    },
+    {
+      "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-final-rc-2026-10-09\\artifacts\\evidence\\production-art-coverage-rc-2026-10-09\\S42-s42-harbour-cafe-360x640.png",
+      "ref": "codex-input-image-9",
+      "sha256": "03bf063ac3e5ff0bd9571fcedd26cd71c5ad8d847611b108e589ca79460f1cfa",
+      "bytes": 327466,
+      "fileBytes": 327466
+    }
+  ],
+  "request": {
+    "requestedModel": "chatgpt-web/gpt-6-sol",
+    "backendModel": "gpt-5.6-sol",
+    "selectedModel": "chatgpt-web/gpt-6-sol",
+    "requestedReasoning": "high",
+    "selectedReasoning": "high",
+    "scene": "batch1-ceos_reasoner_web-1",
+    "viewports": [
+      "desktop",
+      "portrait390",
+      "portrait360",
+      "desktop",
+      "portrait390",
+      "portrait360",
+      "desktop",
+      "portrait390",
+      "portrait360"
+    ],
+    "sourceHead": "e106c59695a5092b0ad13fa0515e83989bc47837"
+  },
+  "stages": [
+    {
+      "type": "heartbeat"
+    },
+    {
+      "type": "assistant_boundary"
+    },
+    {
+      "type": "text_delta"
+    },
+    {
+      "type": "assistant_boundary"
+    },
+    {
+      "type": "heartbeat"
+    },
+    {
+      "type": "heartbeat"
+    },
+    {
+      "type": "heartbeat"
+    },
+    {
+      "type": "assistant_boundary"
+    },
+    {
+      "type": "thinking_delta"
+    },
+    {
+      "type": "assistant_boundary"
+    },
+    {
+      "type": "thinking_delta"
+    },
+    {
+      "type": "heartbeat"
+    },
+    {
+      "type": "heartbeat"
+    },
+    {
+      "type": "heartbeat"
+    },
+    {
+      "type": "heartbeat"
+    },
+    {
+      "type": "assistant_boundary"
+    },
+    {
+      "type": "thinking_delta"
+    },
+    {
+      "type": "heartbeat"
+    },
+    {
+      "type": "heartbeat"
+    },
+    {
+      "type": "heartbeat"
+    },
+    {
+      "type": "assistant_boundary"
+    },
+    {
+      "type": "thinking_delta"
+    },
+    {
+      "type": "heartbeat"
+    },
+    {
+      "type": "heartbeat"
+    },
+    {
+      "type": "heartbeat"
+    },
+    {
+      "type": "text_delta"
+    },
+    {
+      "type": "done"
+    }
+  ],
+  "response": {
+    "text": "```\n{\n  \"verdict\": \"REWORK\",\n  \"reviewed\": 9,\n  \"passed\": 8,\n  \"rework\": 1,\n  \"blocked\": 0,\n  \"observations\": [\n    {\n      \"ref\": \"codex-input-image-1\",\n      \"sceneId\": \"S03\",\n      \"viewport\": \"desktop\",\n      \"verdict\": \"PASS\",\n      \"observation\": \"Композиция сбалансирована. Алиса крупно показана во время телефонного разговора, лицо и телефон хорошо видны. Интерьер и исландский городской пейзаж соответствуют сцене. Текст расположен на затемнённом участке, полностью читается. Перекрытий лица, обрезанных строк и видимых дефектов нет.\"\n    },\n    {\n      \"ref\": \"codex-input-image-2\",\n      \"sceneId\": \"S03\",\n      \"viewport\": \"portrait390\",\n      \"verdict\": \"PASS\",\n      \"observation\": \"Вертикальная композиция сохраняет лицо Алисы, телефон и важные детали окружения. Текст читается на тёмном градиенте. Заголовок, навигация и индикатор страницы видны. Обрезка части интерьера допустима для узкого экрана.\"\n    },\n    {\n      \"ref\": \"codex-input-image-3\",\n      \"sceneId\": \"S03\",\n      \"viewport\": \"portrait360\",\n      \"verdict\": \"PASS\",\n      \"observation\": \"На экране 360×640 лицо Алисы и телефон остаются полностью видимыми. Текст занимает нижнюю часть экрана, но не перекрывает лицо. Все строки, счётчик страниц и навигационные элементы видны. Существенных дефектов адаптации нет.\"\n    },\n    {\n      \"ref\": \"codex-input-image-4\",\n      \"sceneId\": \"S18\",\n      \"viewport\": \"desktop\",\n      \"verdict\": \"PASS\",\n      \"observation\": \"Портовая сцена композиционно целостна. Алиса и Эрик полностью видны, между персонажами достаточно пространства. Гавань, горы, суда и маяк хорошо различимы. Освещение соответствует вечерней атмосфере. Текст читается и не перекрывает лица персонажей.\"\n    },\n    {\n      \"ref\": \"codex-input-image-5\",\n      \"sceneId\": \"S18\",\n      \"viewport\": \"portrait390\",\n      \"verdict\": \"PASS\",\n      \"observation\": \"Оба персонажа узнаваемы, лица не перекрыты текстом. Маяк и горный пейзаж сохранены. Значительную часть верхней области занимает небо, поэтому персонажи выглядят относительно небольшими, однако сцена остаётся визуально понятной. Текст читается полностью. Нижние части фигур частично скрыты текстовой областью, но критического композиционного конфликта нет.\"\n    },\n    {\n      \"ref\": \"codex-input-image-6\",\n      \"sceneId\": \"S18\",\n      \"viewport\": \"portrait360\",\n      \"verdict\": \"REWORK\",\n      \"observation\": \"На экране 360×640 текстовый блок начинается непосредственно под лицами Алисы и Эрика и перекрывает значительную часть их торсов. Из-за этого персонажи визуально обрываются на уровне груди, а большая часть нижней композиции скрывается текстом. Верхняя часть экрана при этом занята преимущественно небом и горами. Лица, маяк, текст и навигация видны, однако вертикальное распределение пространства неудачное. Требуется корректировка композиции именно для короткого мобильного viewport.\"\n    },\n    {\n      \"ref\": \"codex-input-image-7\",\n      \"sceneId\": \"S42\",\n      \"viewport\": \"desktop\",\n      \"verdict\": \"PASS\",\n      \"observation\": \"Алиса и Эрик хорошо видны за столом кафе. Положение персонажей, направление взглядов и окружение создают понятную сцену разговора. Дождливый портовый пейзаж соответствует повествованию. Текст читается полностью, важные визуальные элементы не перекрыты.\"\n    },\n    {\n      \"ref\": \"codex-input-image-8\",\n      \"sceneId\": \"S42\",\n      \"viewport\": \"portrait390\",\n      \"verdict\": \"PASS\",\n      \"observation\": \"Оба лица сохранены и хорошо различимы. Стол, чашки и блокноты видны. Интерьер и дождливое окно формируют контекст сцены. Текст расположен ниже основной области взаимодействия персонажей и читается полностью. Навигационные элементы доступны визуально.\"\n    },\n    {\n      \"ref\": \"codex-input-image-9\",\n      \"sceneId\": \"S42\",\n      \"viewport\": \"portrait360\",\n      \"verdict\": \"PASS\",\n      \"observation\": \"На экране 360×640 сохранены оба персонажа, их взаимодействие и основные детали кафе. Текст не перекрывает лица или руки. Все строки помещаются в доступной области. Счётчик страниц и стрелка перехода видны. Критических дефектов композиции нет.\"\n    }\n  ],\n  \"findings\": [\n    {\n      \"id\": \"S18-P360-COMPOSITION\",\n      \"severity\": \"medium\",\n      \"sceneId\": \"S18\",\n      \"viewport\": \"portrait360\",\n      \"status\": \"REWORK\",\n      \"description\": \"Конфликт вертикального расположения персонажей и текстового блока. Текст накладывается на торсы обоих персонажей, тогда как значительная часть верхнего пространства отведена небу.\",\n      \"requiredFix\": \"Скорректировать вертикальное кадрирование или позиционирование персонажей для viewport 360×640. Увеличить визуальное разделение между персонажами и текстовой областью. Сохранить лица обоих персонажей и узнаваемый маяк. Не ухудшать читаемость текста.\",\n      \"acceptanceCriteria\": [\n        \"Лица Алисы и Эрика полностью видны.\",\n        \"Текст не создаёт визуального обрыва фигур непосредственно под лицами.\",\n        \"Маяк и портовая обстановка остаются узнаваемыми.\",\n        \"Все строки текста помещаются на экран.\",\n        \"Навигация и индикатор страницы остаются видимыми.\",\n        \"Изменение не ухудшает desktop и portrait390.\"\n      ]\n    }\n  ],\n  \"unresolved\": [\n    {\n      \"sceneId\": \"S18\",\n      \"viewport\": \"portrait360\",\n      \"issue\": \"Исправленная композиция ещё не представлена для повторной визуальной проверки.\"\n    },\n    {\n      \"scope\": \"runtime\",\n      \"issue\": \"Статические скриншоты не позволяют подтвердить корректность анимаций, интерактивных переходов и поведения интерфейса при изменении размера окна.\"\n    }\n  ],\n  \"summary\": \"Визуально проверены все 9 скриншотов. Отсутствующих изображений нет. S03 и S42 проходят проверку на всех трёх разрешениях. S18 проходит на desktop и portrait390, но требует композиционной корректировки на portrait360 (360×640). Общий вердикт REWORK. Повторная проверка необходима для исправленного S18 portrait360.\"\n}\n```",
+    "emittedText": "> **Local tools unavailable**\n>\n> `ChatGPT Web High` cannot access the local Codex computer in this turn. The accumulated context does not contain local tool results yet: it will see instructions and attachments, but not workspace contents. ChatGPT-native capabilities such as web search remain available when the product provides them.\n>\n> **Action:** Open `MCP` in `Codex Web GPT` and connect the `Full` harness to give the selected ChatGPT Web model access to local tools.```\n{\n  \"verdict\": \"REWORK\",\n  \"reviewed\": 9,\n  \"passed\": 8,\n  \"rework\": 1,\n  \"blocked\": 0,\n  \"observations\": [\n    {\n      \"ref\": \"codex-input-image-1\",\n      \"sceneId\": \"S03\",\n      \"viewport\": \"desktop\",\n      \"verdict\": \"PASS\",\n      \"observation\": \"Композиция сбалансирована. Алиса крупно показана во время телефонного разговора, лицо и телефон хорошо видны. Интерьер и исландский городской пейзаж соответствуют сцене. Текст расположен на затемнённом участке, полностью читается. Перекрытий лица, обрезанных строк и видимых дефектов нет.\"\n    },\n    {\n      \"ref\": \"codex-input-image-2\",\n      \"sceneId\": \"S03\",\n      \"viewport\": \"portrait390\",\n      \"verdict\": \"PASS\",\n      \"observation\": \"Вертикальная композиция сохраняет лицо Алисы, телефон и важные детали окружения. Текст читается на тёмном градиенте. Заголовок, навигация и индикатор страницы видны. Обрезка части интерьера допустима для узкого экрана.\"\n    },\n    {\n      \"ref\": \"codex-input-image-3\",\n      \"sceneId\": \"S03\",\n      \"viewport\": \"portrait360\",\n      \"verdict\": \"PASS\",\n      \"observation\": \"На экране 360×640 лицо Алисы и телефон остаются полностью видимыми. Текст занимает нижнюю часть экрана, но не перекрывает лицо. Все строки, счётчик страниц и навигационные элементы видны. Существенных дефектов адаптации нет.\"\n    },\n    {\n      \"ref\": \"codex-input-image-4\",\n      \"sceneId\": \"S18\",\n      \"viewport\": \"desktop\",\n      \"verdict\": \"PASS\",\n      \"observation\": \"Портовая сцена композиционно целостна. Алиса и Эрик полностью видны, между персонажами достаточно пространства. Гавань, горы, суда и маяк хорошо различимы. Освещение соответствует вечерней атмосфере. Текст читается и не перекрывает лица персонажей.\"\n    },\n    {\n      \"ref\": \"codex-input-image-5\",\n      \"sceneId\": \"S18\",\n      \"viewport\": \"portrait390\",\n      \"verdict\": \"PASS\",\n      \"observation\": \"Оба персонажа узнаваемы, лица не перекрыты текстом. Маяк и горный пейзаж сохранены. Значительную часть верхней области занимает небо, поэтому персонажи выглядят относительно небольшими, однако сцена остаётся визуально понятной. Текст читается полностью. Нижние части фигур частично скрыты текстовой областью, но критического композиционного конфликта нет.\"\n    },\n    {\n      \"ref\": \"codex-input-image-6\",\n      \"sceneId\": \"S18\",\n      \"viewport\": \"portrait360\",\n      \"verdict\": \"REWORK\",\n      \"observation\": \"На экране 360×640 текстовый блок начинается непосредственно под лицами Алисы и Эрика и перекрывает значительную часть их торсов. Из-за этого персонажи визуально обрываются на уровне груди, а большая часть нижней композиции скрывается текстом. Верхняя часть экрана при этом занята преимущественно небом и горами. Лица, маяк, текст и навигация видны, однако вертикальное распределение пространства неудачное. Требуется корректировка композиции именно для короткого мобильного viewport.\"\n    },\n    {\n      \"ref\": \"codex-input-image-7\",\n      \"sceneId\": \"S42\",\n      \"viewport\": \"desktop\",\n      \"verdict\": \"PASS\",\n      \"observation\": \"Алиса и Эрик хорошо видны за столом кафе. Положение персонажей, направление взглядов и окружение создают понятную сцену разговора. Дождливый портовый пейзаж соответствует повествованию. Текст читается полностью, важные визуальные элементы не перекрыты.\"\n    },\n    {\n      \"ref\": \"codex-input-image-8\",\n      \"sceneId\": \"S42\",\n      \"viewport\": \"portrait390\",\n      \"verdict\": \"PASS\",\n      \"observation\": \"Оба лица сохранены и хорошо различимы. Стол, чашки и блокноты видны. Интерьер и дождливое окно формируют контекст сцены. Текст расположен ниже основной области взаимодействия персонажей и читается полностью. Навигационные элементы доступны визуально.\"\n    },\n    {\n      \"ref\": \"codex-input-image-9\",\n      \"sceneId\": \"S42\",\n      \"viewport\": \"portrait360\",\n      \"verdict\": \"PASS\",\n      \"observation\": \"На экране 360×640 сохранены оба персонажа, их взаимодействие и основные детали кафе. Текст не перекрывает лица или руки. Все строки помещаются в доступной области. Счётчик страниц и стрелка перехода видны. Критических дефектов композиции нет.\"\n    }\n  ],\n  \"findings\": [\n    {\n      \"id\": \"S18-P360-COMPOSITION\",\n      \"severity\": \"medium\",\n      \"sceneId\": \"S18\",\n      \"viewport\": \"portrait360\",\n      \"status\": \"REWORK\",\n      \"description\": \"Конфликт вертикального расположения персонажей и текстового блока. Текст накладывается на торсы обоих персонажей, тогда как значительная часть верхнего пространства отведена небу.\",\n      \"requiredFix\": \"Скорректировать вертикальное кадрирование или позиционирование персонажей для viewport 360×640. Увеличить визуальное разделение между персонажами и текстовой областью. Сохранить лица обоих персонажей и узнаваемый маяк. Не ухудшать читаемость текста.\",\n      \"acceptanceCriteria\": [\n        \"Лица Алисы и Эрика полностью видны.\",\n        \"Текст не создаёт визуального обрыва фигур непосредственно под лицами.\",\n        \"Маяк и портовая обстановка остаются узнаваемыми.\",\n        \"Все строки текста помещаются на экран.\",\n        \"Навигация и индикатор страницы остаются видимыми.\",\n        \"Изменение не ухудшает desktop и portrait390.\"\n      ]\n    }\n  ],\n  \"unresolved\": [\n    {\n      \"sceneId\": \"S18\",\n      \"viewport\": \"portrait360\",\n      \"issue\": \"Исправленная композиция ещё не представлена для повторной визуальной проверки.\"\n    },\n    {\n      \"scope\": \"runtime\",\n      \"issue\": \"Статические скриншоты не позволяют подтвердить корректность анимаций, интерактивных переходов и поведения интерфейса при изменении размера окна.\"\n    }\n  ],\n  \"summary\": \"Визуально проверены все 9 скриншотов. Отсутствующих изображений нет. S03 и S42 проходят проверку на всех трёх разрешениях. S18 проходит на desktop и portrait390, но требует композиционной корректировки на portrait360 (360×640). Общий вердикт REWORK. Повторная проверка необходима для исправленного S18 portrait360.\"\n}\n```",
+    "textSha256": "8678d38722d1a5daf3b34fd399fb52f7ac21bce8782e002ac20712d76c92b7ac",
+    "eventTypes": [
+      "heartbeat",
+      "assistant_boundary",
+      "text_delta",
+      "assistant_boundary",
+      "heartbeat",
+      "heartbeat",
+      "heartbeat",
+      "assistant_boundary",
+      "thinking_delta",
+      "assistant_boundary",
+      "thinking_delta",
+      "heartbeat",
+      "heartbeat",
+      "heartbeat",
+      "heartbeat",
+      "assistant_boundary",
+      "thinking_delta",
+      "heartbeat",
+      "heartbeat",
+      "heartbeat",
+      "assistant_boundary",
+      "thinking_delta",
+      "heartbeat",
+      "heartbeat",
+      "heartbeat",
+      "text_delta",
+      "done"
+    ]
+  },
+  "receipt": {
+    "schema": "codex.web.host-observed-receipt.v1",
+    "assurance": "host-observed",
+    "providerAttested": false,
+    "provider": {
+      "taskId": null,
+      "responseId": null,
+      "reviewTraceId": null
+    },
+    "source": {
+      "sourceHead": "e106c59695a5092b0ad13fa0515e83989bc47837",
+      "scene": "batch1-ceos_reasoner_web-1",
+      "viewport": "multi",
+      "attachments": [
+        {
+          "ref": "codex-input-image-1",
+          "sha256": "0bdfacea9efe77e619fbe52c2f8a59280339bace66e8c7e0820c7803021e09ce",
+          "bytes": 1558898
+        },
+        {
+          "ref": "codex-input-image-2",
+          "sha256": "c51f26f534eb19c5f876d8d6f90d05b341a9c99502f4645bbad796b8c11bc3cc",
+          "bytes": 423548
+        },
+        {
+          "ref": "codex-input-image-3",
+          "sha256": "45e0ed2bbce25158fdeeca26ada269c2ad76131ed940d0e84e681b54ca939284",
+          "bytes": 298139
+        },
+        {
+          "ref": "codex-input-image-4",
+          "sha256": "3e8c1da3e2e5e7d33f640fe46d10fc3bb043aa06dcb654d58662ad852b4389a4",
+          "bytes": 1834555
+        },
+        {
+          "ref": "codex-input-image-5",
+          "sha256": "7fecf479639a70f1a9ba5289e901c8feeb6b48b71236081dc73292b573d8c1ee",
+          "bytes": 427696
+        },
+        {
+          "ref": "codex-input-image-6",
+          "sha256": "55096d5f4c57acb7687de5fbcd79842dd157dd29314dfb3e266a376cdb7392af",
+          "bytes": 297949
+        },
+        {
+          "ref": "codex-input-image-7",
+          "sha256": "2d0d1956db76feeba0d862318566e6434969088c8065b6ec439a244939fac4fd",
+          "bytes": 1852148
+        },
+        {
+          "ref": "codex-input-image-8",
+          "sha256": "4a98cdd0ec252a7c9c9e83d93704a47ab1cd716e8e52b19dc50843cbe46aad07",
+          "bytes": 457629
+        },
+        {
+          "ref": "codex-input-image-9",
+          "sha256": "03bf063ac3e5ff0bd9571fcedd26cd71c5ad8d847611b108e589ca79460f1cfa",
+          "bytes": 327466
+        }
+      ]
+    },
+    "browser": {
+      "bridgeTraceId": "0f0c1244ba00",
+      "assistantTurnIdentity": "group:assistant:12008776-56bd-4f80-9995-b916965f1da9",
+      "userTurnIdentity": "group:user:12008776-56bd-4f80-9995-b916965f1da9",
+      "submission": "tile-visible-and-send-enabled",
+      "submissionEvidence": "user_turn",
+      "completion": "stable-dom-completion-action"
+    },
+    "route": {
+      "requestedModel": "chatgpt-web/gpt-6-sol",
+      "selectedModel": "chatgpt-web/gpt-6-sol",
+      "reasoning": "high",
+      "selectedReasoning": "high"
+    },
+    "answer": {
+      "sha256": "8678d38722d1a5daf3b34fd399fb52f7ac21bce8782e002ac20712d76c92b7ac",
+      "text": "```\n{\n  \"verdict\": \"REWORK\",\n  \"reviewed\": 9,\n  \"passed\": 8,\n  \"rework\": 1,\n  \"blocked\": 0,\n  \"observations\": [\n    {\n      \"ref\": \"codex-input-image-1\",\n      \"sceneId\": \"S03\",\n      \"viewport\": \"desktop\",\n      \"verdict\": \"PASS\",\n      \"observation\": \"Композиция сбалансирована. Алиса крупно показана во время телефонного разговора, лицо и телефон хорошо видны. Интерьер и исландский городской пейзаж соответствуют сцене. Текст расположен на затемнённом участке, полностью читается. Перекрытий лица, обрезанных строк и видимых дефектов нет.\"\n    },\n    {\n      \"ref\": \"codex-input-image-2\",\n      \"sceneId\": \"S03\",\n      \"viewport\": \"portrait390\",\n      \"verdict\": \"PASS\",\n      \"observation\": \"Вертикальная композиция сохраняет лицо Алисы, телефон и важные детали окружения. Текст читается на тёмном градиенте. Заголовок, навигация и индикатор страницы видны. Обрезка части интерьера допустима для узкого экрана.\"\n    },\n    {\n      \"ref\": \"codex-input-image-3\",\n      \"sceneId\": \"S03\",\n      \"viewport\": \"portrait360\",\n      \"verdict\": \"PASS\",\n      \"observation\": \"На экране 360×640 лицо Алисы и телефон остаются полностью видимыми. Текст занимает нижнюю часть экрана, но не перекрывает лицо. Все строки, счётчик страниц и навигационные элементы видны. Существенных дефектов адаптации нет.\"\n    },\n    {\n      \"ref\": \"codex-input-image-4\",\n      \"sceneId\": \"S18\",\n      \"viewport\": \"desktop\",\n      \"verdict\": \"PASS\",\n      \"observation\": \"Портовая сцена композиционно целостна. Алиса и Эрик полностью видны, между персонажами достаточно пространства. Гавань, горы, суда и маяк хорошо различимы. Освещение соответствует вечерней атмосфере. Текст читается и не перекрывает лица персонажей.\"\n    },\n    {\n      \"ref\": \"codex-input-image-5\",\n      \"sceneId\": \"S18\",\n      \"viewport\": \"portrait390\",\n      \"verdict\": \"PASS\",\n      \"observation\": \"Оба персонажа узнаваемы, лица не перекрыты текстом. Маяк и горный пейзаж сохранены. Значительную часть верхней области занимает небо, поэтому персонажи выглядят относительно небольшими, однако сцена остаётся визуально понятной. Текст читается полностью. Нижние части фигур частично скрыты текстовой областью, но критического композиционного конфликта нет.\"\n    },\n    {\n      \"ref\": \"codex-input-image-6\",\n      \"sceneId\": \"S18\",\n      \"viewport\": \"portrait360\",\n      \"verdict\": \"REWORK\",\n      \"observation\": \"На экране 360×640 текстовый блок начинается непосредственно под лицами Алисы и Эрика и перекрывает значительную часть их торсов. Из-за этого персонажи визуально обрываются на уровне груди, а большая часть нижней композиции скрывается текстом. Верхняя часть экрана при этом занята преимущественно небом и горами. Лица, маяк, текст и навигация видны, однако вертикальное распределение пространства неудачное. Требуется корректировка композиции именно для короткого мобильного viewport.\"\n    },\n    {\n      \"ref\": \"codex-input-image-7\",\n      \"sceneId\": \"S42\",\n      \"viewport\": \"desktop\",\n      \"verdict\": \"PASS\",\n      \"observation\": \"Алиса и Эрик хорошо видны за столом кафе. Положение персонажей, направление взглядов и окружение создают понятную сцену разговора. Дождливый портовый пейзаж соответствует повествованию. Текст читается полностью, важные визуальные элементы не перекрыты.\"\n    },\n    {\n      \"ref\": \"codex-input-image-8\",\n      \"sceneId\": \"S42\",\n      \"viewport\": \"portrait390\",\n      \"verdict\": \"PASS\",\n      \"observation\": \"Оба лица сохранены и хорошо различимы. Стол, чашки и блокноты видны. Интерьер и дождливое окно формируют контекст сцены. Текст расположен ниже основной области взаимодействия персонажей и читается полностью. Навигационные элементы доступны визуально.\"\n    },\n    {\n      \"ref\": \"codex-input-image-9\",\n      \"sceneId\": \"S42\",\n      \"viewport\": \"portrait360\",\n      \"verdict\": \"PASS\",\n      \"observation\": \"На экране 360×640 сохранены оба персонажа, их взаимодействие и основные детали кафе. Текст не перекрывает лица или руки. Все строки помещаются в доступной области. Счётчик страниц и стрелка перехода видны. Критических дефектов композиции нет.\"\n    }\n  ],\n  \"findings\": [\n    {\n      \"id\": \"S18-P360-COMPOSITION\",\n      \"severity\": \"medium\",\n      \"sceneId\": \"S18\",\n      \"viewport\": \"portrait360\",\n      \"status\": \"REWORK\",\n      \"description\": \"Конфликт вертикального расположения персонажей и текстового блока. Текст накладывается на торсы обоих персонажей, тогда как значительная часть верхнего пространства отведена небу.\",\n      \"requiredFix\": \"Скорректировать вертикальное кадрирование или позиционирование персонажей для viewport 360×640. Увеличить визуальное разделение между персонажами и текстовой областью. Сохранить лица обоих персонажей и узнаваемый маяк. Не ухудшать читаемость текста.\",\n      \"acceptanceCriteria\": [\n        \"Лица Алисы и Эрика полностью видны.\",\n        \"Текст не создаёт визуального обрыва фигур непосредственно под лицами.\",\n        \"Маяк и портовая обстановка остаются узнаваемыми.\",\n        \"Все строки текста помещаются на экран.\",\n        \"Навигация и индикатор страницы остаются видимыми.\",\n        \"Изменение не ухудшает desktop и portrait390.\"\n      ]\n    }\n  ],\n  \"unresolved\": [\n    {\n      \"sceneId\": \"S18\",\n      \"viewport\": \"portrait360\",\n      \"issue\": \"Исправленная композиция ещё не представлена для повторной визуальной проверки.\"\n    },\n    {\n      \"scope\": \"runtime\",\n      \"issue\": \"Статические скриншоты не позволяют подтвердить корректность анимаций, интерактивных переходов и поведения интерфейса при изменении размера окна.\"\n    }\n  ],\n  \"summary\": \"Визуально проверены все 9 скриншотов. Отсутствующих изображений нет. S03 и S42 проходят проверку на всех трёх разрешениях. S18 проходит на desktop и portrait390, но требует композиционной корректировки на portrait360 (360×640). Общий вердикт REWORK. Повторная проверка необходима для исправленного S18 portrait360.\"\n}\n```"
+    }
+  }
+}
