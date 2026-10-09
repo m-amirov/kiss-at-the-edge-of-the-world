@@ -35,6 +35,7 @@ import {
   ChatGptLunaCheckpointStore,
   type CapturedChatGptLunaCheckpoint,
 } from "./rolling-checkpoint";
+import type { HostObservedReceipt, HostObservedReceiptContext } from "./host-observed-receipt";
 import { ChatGptExternalTurnProgress } from "./turn-progress";
 import {
   canonicalizeCompactionHandoff,
@@ -350,11 +351,17 @@ export function createChatGptWebAdapter(
   dependencies: {
     broker?: TurnBrokerOwner;
     zeroRiskManualControl?: ChatGptZeroRiskManualControl;
+    /** DEV-only observation hook; never provider-attested and never populated by production config. */
+    hostObservedReceipt?: {
+      context: HostObservedReceiptContext;
+      onReceipt: (receipt: HostObservedReceipt) => void | Promise<void>;
+    };
   } = {},
 ): ProviderAdapter {
   const worker = ChatGptBrowserWorker.forProvider(provider);
   const broker = dependencies.broker ?? TurnBroker.forSocket(brokerSocketPath(provider));
   const zeroRiskManualControl = dependencies.zeroRiskManualControl ?? launcherZeroRiskManualControl;
+  const hostObservedReceipt = dependencies.hostObservedReceipt;
   const structuredBroker = broker instanceof TurnBroker ? broker : undefined;
   const timeoutMs = provider.chatgptWeb?.turnTimeoutMs;
   const experimentalSkillAttachments = provider.chatgptWeb?.experimentalSkillAttachments;
@@ -723,6 +730,7 @@ export function createChatGptWebAdapter(
           captureLunaCheckpoint: true,
           onLunaCheckpoint: captureCheckpoint,
         } : {}),
+        ...(hostObservedReceipt ? { hostObservedReceipt } : {}),
       })), browserAbort);
       return {
         mode: "read-only",
@@ -795,6 +803,7 @@ export function createChatGptWebAdapter(
         captureLunaCheckpoint: true,
         onLunaCheckpoint: captureCheckpoint,
       } : {}),
+      ...(hostObservedReceipt ? { hostObservedReceipt } : {}),
     }))), browserAbort);
     void browserTurn.browser.catch(error => {
       if (!tokenSettled) {

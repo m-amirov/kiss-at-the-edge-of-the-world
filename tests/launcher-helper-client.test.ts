@@ -5,6 +5,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { ChatGptCompactionHandoffAccepted, ChatGptWebAdapterError } from "../src/adapters/chatgpt-web/adapter-error";
 import { LauncherBrowserHelperClient } from "../src/adapters/chatgpt-web/launcher-helper-client";
+import { createHostObservedReceipt } from "../src/adapters/chatgpt-web/host-observed-receipt";
 import type { BrowserTurn, ResolvedBrowserConfig } from "../src/adapters/chatgpt-web/browser-worker";
 import { LAUNCHER_BROWSER_HOST_KIND, LAUNCHER_BROWSER_IDLE_URL } from "../src/launcher-browser-host";
 
@@ -412,6 +413,47 @@ test("a receipt-capturing helper turn fails closed when it completes without a r
       onReceipt() {},
     },
   })).rejects.toThrow("without a host-observed receipt");
+});
+
+test("a duplicate host-observed receipt event fails closed", async () => {
+  const client = new LauncherBrowserHelperClient({
+    appName: "Codex Native", browserHost: "launcher", browserHostDescriptorPath: "/durable/launcher.json",
+    storageStatePath: "/durable/unused-state.json", chromeExecutablePath: "/durable/unused-chrome",
+    turnTimeoutMs: 60_000, headed: true, autoApproveToolCalls: false, useSavedChats: false,
+  });
+  const internal = client as unknown as {
+    child?: unknown;
+    pending: Map<string, { turn: BrowserTurn; resolve(value: string): void; reject(error: Error): void }>;
+    handleLine(child: unknown, line: string): void;
+    send(message: Record<string, unknown>): Promise<void>;
+    finishWithError(id: string, error: Error): void;
+  };
+  const child = {};
+  internal.child = child;
+  internal.send = async message => {
+    if (message.type === "abort") queueMicrotask(() => internal.finishWithError(String(message.id), new Error("duplicate host-observed receipt")));
+  };
+  let received = 0;
+  const context = { sourceHead: "c".repeat(40), scene: "S38", viewport: "390x844", attachments: [{ ref: "image", sha256: "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb", bytes: 1 }] };
+  const receipt = createHostObservedReceipt({
+    context, traceId: "duplicate-receipt-123", assistantTurnIdentity: "assistant-duplicate", requestedModel: "gpt-5.6-sol", reasoning: "high",
+    attachments: [{ ref: "image", buffer: Buffer.from("a") }], answer: "done",
+  });
+  const result = new Promise<string>((resolveResult, rejectResult) => {
+    internal.pending.set("duplicate-receipt-123", {
+      turn: {
+        traceId: "duplicate-receipt-123", modelId: "gpt-5.6-sol", reasoning: "high",
+        capabilities: { localToolsEnabled: false, solAvailable: true, extraHighAvailable: false, proAvailable: false },
+        prepare: async () => ({ text: "inspect", images: [], release() {} }), onTextDelta() {},
+        hostObservedReceipt: { context, onReceipt: () => { received += 1; } },
+      }, resolve: resolveResult, reject: rejectResult,
+    });
+  });
+  const frame = JSON.stringify({ type: "event", id: "duplicate-receipt-123", event: "host_observed_receipt", receipt });
+  internal.handleLine(child, frame);
+  internal.handleLine(child, frame);
+  await expect(result).rejects.toThrow("duplicate host-observed receipt");
+  expect(received).toBe(1);
 });
 
 test("structured helper errors preserve the ChatGPT adapter failure contract", async () => {

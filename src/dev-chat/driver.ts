@@ -3,6 +3,7 @@ import { join, resolve } from "node:path";
 import type { ProviderAdapter } from "../adapters/base";
 import { closeChatGptBrowserWorkers } from "../adapters/chatgpt-web/browser-worker";
 import { createChatGptWebAdapter } from "../adapters/chatgpt-web";
+import type { HostObservedReceipt, HostObservedReceiptContext } from "../adapters/chatgpt-web/host-observed-receipt";
 import { estimateChatGptWebInputTokens } from "../adapters/chatgpt-web/usage";
 import { RemoteTurnBroker, type TurnBrokerOwner } from "../adapters/chatgpt-web/turn-broker";
 import {
@@ -384,6 +385,10 @@ export function createLauncherDevAdapter(
   options: {
     broker?: TurnBrokerOwner;
     browserHelperScriptPath?: string;
+    hostObservedReceipt?: {
+      context: HostObservedReceiptContext;
+      onReceipt: (receipt: HostObservedReceipt) => void | Promise<void>;
+    };
   } = {},
 ): { broker: TurnBrokerOwner; adapterFactory: AdapterFactory } {
   const broker = options.broker ?? new RemoteTurnBroker(config.brokerSocketPath);
@@ -404,7 +409,7 @@ export function createLauncherDevAdapter(
         ? { experimentalBiggerContext: true }
         : {}),
     },
-  }, { broker });
+  }, { broker, ...(options.hostObservedReceipt ? { hostObservedReceipt: options.hostObservedReceipt } : {}) });
   return { broker, adapterFactory };
 }
 
