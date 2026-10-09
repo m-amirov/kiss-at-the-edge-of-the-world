@@ -11,6 +11,7 @@
     "yandex:docs:accept-snapshot": "node tools/yandex/docs-watch.mjs --accept-snapshot",
     "yandex:media:validate": "node tools/yandex/media-validation.mjs",
     "release:evidence:art": "node tools/release/refresh-production-art-acceptance.mjs",
+    "test:art-acceptance": "node --test tests/narrative/art-acceptance.test.mjs tests/narrative/art-acceptance-visual-content.test.mjs",
     "release:evidence:transcode": "node tools/release/refresh-runtime-transcode-acceptance.mjs",
     "yandex:external:verify": "node tools/yandex/external-evidence.mjs verify",
     "yandex:external:run": "node tools/yandex/external-evidence.mjs run",
