@@ -3,7 +3,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 import { productSnapshot, repositoryIdentity, verifyArtAcceptance, verifyStrictWebReviewReceipt } from './art-acceptance.mjs';
-import { verifyVisualContentReviews } from './visual-content-review.mjs';
+import { HOST_OBSERVED_ART_ASSURANCE, HOST_OBSERVED_ART_POLICY, verifyHostObservedArtReviews } from './host-observed-art-review.mjs';
 
 const root = process.cwd();
 const arg = name => {
@@ -21,9 +21,9 @@ const webPaths = (arg('--web-reviews') ?? '').split(';').map(item => item.trim()
 const outputPath = 'artifacts/evidence/production-art-acceptance.json';
 const assurance = arg('--assurance') ?? 'strict';
 
-if (!['strict','visual-content'].includes(assurance) || !matrixPath ||
+if (!['strict',HOST_OBSERVED_ART_ASSURANCE].includes(assurance) || !matrixPath ||
     webPaths.length < 3 || (assurance === 'strict' && webPaths.length !== 3)) {
-  fail('requires --matrix <json>, --assurance strict|visual-content and at least three semicolon-separated --web-reviews (exactly three in strict mode); no PASS record was created.');
+  fail('requires --matrix <json>, --assurance strict|host-observed-art-v1 and at least three semicolon-separated --web-reviews (exactly three in strict mode); legacy visual-content cannot issue a new release PASS.');
 } else {
   try {
     const matrix = readJson(matrixPath);
@@ -50,8 +50,8 @@ if (!['strict','visual-content'].includes(assurance) || !matrixPath ||
     }
     if (new Set(reviews.map(item => item.evidence.role ?? item.evidence.agent)).size !== 3)
       throw new Error('Web reviews must contain all three required roles');
-    if (assurance === 'visual-content') {
-      const checked = verifyVisualContentReviews({
+    if (assurance === HOST_OBSERVED_ART_ASSURANCE) {
+      const checked = verifyHostObservedArtReviews({
         projectRoot: root, matrix, sourceHead,
         reviewEntries: reviews.map(review => ({
           reference: { path: review.path, sha256: review.sha256, role: review.evidence.role ?? review.evidence.agent },
@@ -83,8 +83,8 @@ if (!['strict','visual-content'].includes(assurance) || !matrixPath ||
     const snapshot = productSnapshot(root);
     const identity = repositoryIdentity(root);
     const record = {
-      schemaVersion: assurance === 'visual-content' ? 4 : 3,
-      ...(assurance === 'visual-content' ? { assurance } : {}),
+      schemaVersion: assurance === HOST_OBSERVED_ART_ASSURANCE ? 5 : 3,
+      ...(assurance === HOST_OBSERVED_ART_ASSURANCE ? { assurance, policy: HOST_OBSERVED_ART_POLICY } : {}),
       recordType: 'production-art-acceptance',
       status: 'PASS',
       verdict: 'PASS_PRODUCTION_ART_66_66',
@@ -99,7 +99,7 @@ if (!['strict','visual-content'].includes(assurance) || !matrixPath ||
       acceptedAssets: [...accepted.values()],
       runtimeAssets: [...runtime.values()],
       webHigh: {
-        ...(assurance === 'visual-content' ? { assurance } : {}), result: 'PASS',
+        ...(assurance === HOST_OBSERVED_ART_ASSURANCE ? { assurance, policy: HOST_OBSERVED_ART_POLICY, providerAttested: false } : {}), result: 'PASS',
         reviews: reviews.map(({ evidence, ...reference }) => ({
           ...reference, role: evidence.role ?? evidence.agent,
           taskId: evidence.taskId ?? null, reviewTraceId: evidence.reviewTraceId ?? null,
