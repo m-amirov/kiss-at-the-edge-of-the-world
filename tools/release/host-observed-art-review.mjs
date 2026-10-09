@@ -41,7 +41,7 @@ function pngDimensions(file) {
  * All roles must independently review every scene and every required viewport.
  * Missing/duplicate/mismatched turns, findings and unverifiable frames fail closed.
  */
-export function verifyHostObservedArtReviews({ projectRoot, matrix, sourceHead, reviewEntries }) {
+function verifyReviews({ projectRoot, matrix, sourceHead, reviewEntries, controlSceneId = null }) {
   const checked = verifyVisualContentMatrix({ projectRoot, matrix, sourceHead });
   if (checked.status !== 'PASS') return checked;
   if (!Array.isArray(reviewEntries) || reviewEntries.length < 3)
@@ -49,7 +49,9 @@ export function verifyHostObservedArtReviews({ projectRoot, matrix, sourceHead, 
   const required = new Set();
   for (const role of VISUAL_REVIEW_ROLES)
     for (const scene of matrix.scenes)
-      for (const capture of scene.captures) required.add(role + ':' + scene.sceneId + ':' + capture.viewport.name);
+      if (!controlSceneId || scene.sceneId === controlSceneId)
+        for (const capture of scene.captures) required.add(role + ':' + scene.sceneId + ':' + capture.viewport.name);
+  if (!required.size) return block('ART_ACCEPTANCE_HOST_CONTROL_INVALID', 'Requested control scene is not in the current runtime matrix.');
   const seen = new Set(), traces = new Set(), assistantTurns = new Set(), reviewFiles = new Set();
   for (const { reference, evidence } of reviewEntries) {
     const role = evidence?.role ?? evidence?.agent;
@@ -146,7 +148,21 @@ export function verifyHostObservedArtReviews({ projectRoot, matrix, sourceHead, 
     return block('ART_ACCEPTANCE_HOST_COVERAGE_INCOMPLETE', 'Full three-role x 66-scene x three-viewport acceptance missing ' + (required.size - seen.size) + ' image reviews.');
   return {
     status: 'PASS', assurance: HOST_OBSERVED_ART_ASSURANCE, policy: HOST_OBSERVED_ART_POLICY,
-    imageReviews: seen.size, scenes: 66, viewports: 3, roles: VISUAL_REVIEW_ROLES.length,
+    imageReviews: seen.size, scenes: controlSceneId ? 1 : 66,
+    ...(controlSceneId ? { controlSceneId, verdict: 'PASS_HOST_OBSERVED_SCOPED_CONTROL_NOT_FULL_ACCEPTANCE' } : {}),
+    viewports: 3, roles: VISUAL_REVIEW_ROLES.length,
     providerAttested: false
   };
+}
+
+/** Release validator calls this only: full 66×3×3 coverage is mandatory. */
+export function verifyHostObservedArtReviews({ projectRoot, matrix, sourceHead, reviewEntries }) {
+  return verifyReviews({ projectRoot, matrix, sourceHead, reviewEntries });
+}
+
+/** Diagnostic E2E only. Cannot produce a production-art acceptance record. */
+export function verifyHostObservedArtControl({ projectRoot, matrix, sourceHead, reviewEntries, sceneId }) {
+  if (typeof sceneId !== 'string' || !/^S(0[1-9]|[1-5][0-9]|6[0-6])$/.test(sceneId))
+    return block('ART_ACCEPTANCE_HOST_CONTROL_INVALID', 'Control requires an authored S01–S66 scene ID.');
+  return verifyReviews({ projectRoot, matrix, sourceHead, reviewEntries, controlSceneId: sceneId });
 }
