@@ -6,7 +6,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 import { productSnapshot, repositoryIdentity, verifyArtAcceptance } from '../../tools/release/art-acceptance.mjs';
-import { HOST_OBSERVED_ART_ASSURANCE, HOST_OBSERVED_ART_POLICY } from '../../tools/release/host-observed-art-review.mjs';
+import { HOST_OBSERVED_ART_ASSURANCE, HOST_OBSERVED_ART_POLICY, verifyHostObservedArtControl } from '../../tools/release/host-observed-art-review.mjs';
 
 const ROLES = ['ceos_reasoner_web', 'ceos_bulk_checker_web', 'ceos_art_director_web'];
 const VIEWS = [['desktop',1920,900],['portrait390',390,844],['portrait360',360,640]];
@@ -129,6 +129,37 @@ test('accepts observed user-turn acknowledgement with no synthetic user ID and v
   });
   const result=check(f);
   assert.equal(result.status,'PASS',JSON.stringify(result));
+});
+test('S38 scoped control verifies three real-role contracts for three viewports, not full season',()=>{
+  const f=makeFixture();
+  const entries=f.reviewRecords.filter(x=>x.review.reviewedItems.includes('S38:opening'))
+    .map(x=>({reference:x.reference,evidence:x.review}));
+  const result=verifyHostObservedArtControl({
+    projectRoot:f.root,matrix:f.matrix,sourceHead:f.record.sourceProductHead,
+    sceneId:'S38',reviewEntries:entries
+  });
+  assert.equal(result.status,'PASS',JSON.stringify(result));
+  assert.equal(result.imageReviews,9);
+  assert.equal(result.controlSceneId,'S38');
+  f.record.webHigh.reviews=entries.map(x=>x.reference);
+  assert.equal(check(f).code,'ART_ACCEPTANCE_HOST_COVERAGE_INCOMPLETE');
+});
+test('S38 scoped control rejects any extra scene or missing viewport',()=>{
+  const f=makeFixture();
+  const entries=f.reviewRecords.filter(x=>x.review.reviewedItems.includes('S38:opening'))
+    .map(x=>({reference:x.reference,evidence:x.review}));
+  entries[0].evidence.visualEvidence.pop();
+  entries[0].evidence.evidenceRefs.pop();
+  entries[0].evidence.receivedEvidenceRefs.pop();
+  entries[0].evidence.hostObservedReceipt.attachments.pop();
+  assert.equal(verifyHostObservedArtControl({
+    projectRoot:f.root,matrix:f.matrix,sourceHead:f.record.sourceProductHead,
+    sceneId:'S38',reviewEntries:entries
+  }).code,'ART_ACCEPTANCE_HOST_COVERAGE_INCOMPLETE');
+  assert.equal(verifyHostObservedArtControl({
+    projectRoot:f.root,matrix:f.matrix,sourceHead:f.record.sourceProductHead,
+    sceneId:'S67',reviewEntries:entries
+  }).code,'ART_ACCEPTANCE_HOST_CONTROL_INVALID');
 });
 const cases=[
   ['missing host receipt',f=>mutate(f,0,r=>{delete r.hostObservedReceipt}),'ART_ACCEPTANCE_HOST_RECEIPT_INVALID'],
