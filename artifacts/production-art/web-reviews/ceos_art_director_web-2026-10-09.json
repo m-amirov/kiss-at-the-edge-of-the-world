@@ -1,0 +1,22 @@
+{
+  "role": "ceos_art_director_web",
+  "status": "REWORK",
+  "sourceHead": "0bcc70eb04111d72ccc1da71bc35f69347b26631",
+  "actualPixelsReceived": true,
+  "receivedImages": 10,
+  "expectedAdditionalImages": 15,
+  "taskId": null,
+  "reviewTraceId": null,
+  "agentId": "01a11ee2-9037-7af0-9ed9-ce55f4c0392d",
+  "resumedSubmissionId": "01a11ee3-be01-7d02-b721-d5d750537e75",
+  "findings": [
+    {"sceneId": "S07", "severity": "MEDIUM", "detail": "Desktop initiative/character emphasis conflicts with the authored pasta-cooking beat; mobile crop weakens the cauldron and outer cast."},
+    {"sceneId": "S18", "severity": "MEDIUM", "detail": "The lighthouse called out by the authored harbour beat disappears in portrait crop."},
+    {"sceneId": "S26", "severity": "HIGH", "detail": "Scene-start desktop shows an exterior fjord group while the authored opening beat is an interior guesthouse power-outage/notebook event; mapping/state is wrong."},
+    {"sceneId": "S38", "severity": "HIGH", "detail": "Desktop pixels show a camera although the authored cue says Nick brings two tickets instead of the camera."},
+    {"sceneId": "S38", "viewport": "390x844", "severity": "CRITICAL", "detail": "Nick head is cropped and Alice is absent in the current portrait composition."}
+  ],
+  "passNotes": ["S01 desktop previous readback: PASS_WITH_NOTES", "S18 desktop: PASS", "S44 desktop and portrait: PASS"],
+  "unresolved": ["S01 portrait", "S02 desktop and portrait", "S03 desktop and portrait", "15 additional image attachments"],
+  "recommendation": "Do not mass-generate; repair the confirmed scene-specific defects and complete the missing pixel attachments before acceptance."
+}

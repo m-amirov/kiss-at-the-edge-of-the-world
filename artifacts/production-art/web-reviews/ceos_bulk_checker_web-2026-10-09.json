@@ -1,0 +1,16 @@
+{
+  "role": "ceos_bulk_checker_web",
+  "status": "FAIL",
+  "sourceHead": "0bcc70eb04111d72ccc1da71bc35f69347b26631",
+  "checkedScenes": 66,
+  "checkedCaptures": 198,
+  "actualPixelsReceived": false,
+  "taskId": null,
+  "reviewTraceId": null,
+  "agentId": "01a11ee1-65b5-7b62-95e8-05002c2ef5e6",
+  "structuralChecks": {"uniqueScenes": 66, "viewportsPerScene": 3, "manifestMappings": 198, "metadataHashesPresent": true},
+  "findings": [
+    {"sceneId": "S40", "severity": "REVIEWER_FALSE_POSITIVE", "detail": "Web text rendering was interpreted as a backslash in the .webp path; local matrix and filesystem readback show assets/cg/s40-alice-laptop-window.webp exists with matching SHA-256."},
+    {"scope": "all", "severity": "BLOCKER", "detail": "Metadata bundle alone cannot independently verify transferred pixels; provider did not expose taskId/reviewTraceId."}
+  ]
+}

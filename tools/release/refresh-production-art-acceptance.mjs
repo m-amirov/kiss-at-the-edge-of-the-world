@@ -2,54 +2,85 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { execFileSync } from 'node:child_process';
-import { repositoryIdentity } from './art-acceptance.mjs';
+import { productSnapshot, repositoryIdentity, verifyArtAcceptance } from './art-acceptance.mjs';
 
 const root = process.cwd();
 const arg = name => {
   const index = process.argv.indexOf(name);
   return index >= 0 ? process.argv[index + 1] : undefined;
 };
-const file = path.join(root, 'artifacts/evidence/production-art-acceptance.json');
-const manifestFile = path.join(root, 'assets/asset-manifest.json');
-const sha256 = value => crypto.createHash('sha256').update(fs.readFileSync(value)).digest('hex');
+const fail = message => { console.error(`ART_ACCEPTANCE_REFRESH_BLOCKED: ${message}`); process.exitCode = 2; };
+const sha256 = file => crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
 const rel = value => path.relative(root, value).replaceAll('\\', '/');
-const historicalPath = arg('--historical-record');
-const record = historicalPath && fs.existsSync(path.resolve(root, historicalPath))
-  ? JSON.parse(fs.readFileSync(path.resolve(root, historicalPath), 'utf8'))
-  : {
-    schemaVersion: 2,
-    recordType: 'production-art-acceptance',
-    status: 'PASS',
-    verdict: 'PASS_PRODUCTION_ART_COMPLETE',
-    webHigh: { result: 'PASS' }
-  };
-const manifest = JSON.parse(fs.readFileSync(manifestFile, 'utf8'));
-const head = execFileSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' }).trim();
-const runtimeSource = [...fs.globSync('src/**/*.{js,css}'), 'index.html', 'literary.html']
-  .filter(item => fs.existsSync(path.join(root, item)))
-  .map(item => fs.readFileSync(path.join(root, item), 'utf8'))
-  .join('\n');
-const currentAssets = manifest.assets
-  .filter(entry => entry.path?.endsWith('.png') && entry.creationMethod?.includes('current production-art run') && (entry.runtimePath && runtimeSource.includes(path.basename(entry.runtimePath))))
-  .map(entry => {
-    const absolute = path.join(root, entry.path);
-    return { path: entry.path, sha256: sha256(absolute), scenes: [], dimensions: entry.dimensions ?? 'unknown', format: 'PNG', sourceRunId: manifest.visualDirection?.runId };
-  });
-const byPath = new Map((record.acceptedAssets ?? []).map(asset => [asset.path, asset]));
-const currentGeneratedPaths = new Set(manifest.assets.filter(entry => entry.path?.endsWith('.png') && entry.creationMethod?.includes('current production-art run')).map(entry => entry.path));
-for (const pathName of currentGeneratedPaths) if (!currentAssets.some(asset => asset.path === pathName)) byPath.delete(pathName);
-for (const asset of currentAssets) byPath.set(asset.path, { ...(byPath.get(asset.path) ?? {}), ...asset });
-record.acceptedAssets = [...byPath.values()];
-record.schemaVersion = 2;
-record.currentHead = head;
-record.repository = { ...repositoryIdentity(root), head, worktreeCleanAtAttestation: execFileSync('git', ['status', '--porcelain=v1', '--untracked-files=all'], { cwd: root, encoding: 'utf8' }).trim().length === 0 };
-record.manifestSha256 = sha256(manifestFile);
-record.productionArtRuns = [...(record.productionArtRuns ?? []).filter(item => item.runId !== manifest.visualDirection?.runId), { runId: manifest.visualDirection?.runId, result: 'PASS', sourceProjectDir: root, evidence: `.ceos-runs/${manifest.visualDirection?.runId}` }];
-record.acceptedSceneCoverage = { expected: 66, covered: 66, remaining: 0, source: 'current beat-level visual ledger and runtime mapping reconciliation' };
-record.placeholders = 0;
-record.brokenPaths = 0;
-record.verifier = { type: 'automated-current-worktree-hash-verifier', source: 'tools/release/art-acceptance.mjs + current beat-level visual ledger', algorithm: 'sha256', acceptanceTimestamp: new Date().toISOString(), historicalRecord: historicalPath ?? null };
-record.compatibility = { ...(record.compatibility ?? {}), status: 'PASS', result: 'CURRENT_WORKTREE_HASHES_MATCH', sourceAssets: record.acceptedAssets.length, targetAssets: record.acceptedAssets.length, manifestMappings: 'PASS', pngRegeneratedAfterAcceptance: false, coverageMethod: '66 authored scenes reconciled at beat level; backgrounds limited to establishing/transition beats and dedicated CGs used for dialogue/action beats' };
-record.runtimeVerification = { status: 'PASS', evidencePath: 'artifacts/evidence/full-route-runtime-qa-2026-09-30.json', generatedAt: new Date().toISOString(), viewports: ['1920x900', '390x844'], routes: 8, consoleErrors: 0, failedRequests: 0, endings: ['S44', 'S44', 'S45', 'S45', 'S46', 'S46', 'S47', 'S47'], placeholders: 0, brokenPaths: 0 };
-fs.writeFileSync(file, `${JSON.stringify(record, null, 2)}\n`);
-console.log(JSON.stringify({ head, acceptedAssets: record.acceptedAssets.length, manifestSha256: record.manifestSha256 }, null, 2));
+const absolute = value => path.resolve(root, value);
+const readJson = file => JSON.parse(fs.readFileSync(absolute(file), 'utf8'));
+const sourceHead = execFileSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' }).trim();
+const matrixPath = arg('--matrix');
+const webPaths = (arg('--web-reviews') ?? '').split(';').map(item => item.trim()).filter(Boolean);
+const outputPath = 'artifacts/evidence/production-art-acceptance.json';
+
+if (!matrixPath || webPaths.length !== 3) {
+  fail('requires --matrix <json> and exactly three semicolon-separated --web-reviews paths; no PASS record was created.');
+} else {
+  try {
+    const matrix = readJson(matrixPath);
+    if (matrix.status !== 'PASS' || matrix.sourceHead !== sourceHead || matrix.scope?.expectedScenes !== 66 || matrix.scope?.coveredScenes !== 66 || matrix.scope?.captures !== 198 || matrix.failures?.length) throw new Error('matrix is not a PASS 66-scene current-HEAD matrix');
+    const reviews = webPaths.map(file => ({ path: file, sha256: sha256(absolute(file)), evidence: readJson(file) }));
+    const requiredRoles = new Set(['ceos_reasoner_web', 'ceos_bulk_checker_web', 'ceos_art_director_web']);
+    for (const review of reviews) {
+      if (!requiredRoles.has(review.evidence.role ?? review.evidence.agent) || review.evidence.status !== 'PASS' || review.evidence.sourceHead !== sourceHead || review.evidence.actualPixelsReceived !== true || !review.evidence.taskId || !review.evidence.reviewTraceId) throw new Error(`invalid Web review: ${review.path}`);
+    }
+    if (new Set(reviews.map(item => item.evidence.role ?? item.evidence.agent)).size !== 3) throw new Error('Web reviews must contain three distinct required roles');
+
+    const manifest = readJson('assets/asset-manifest.json');
+    const manifestEntries = [...(manifest.assets ?? []), ...(manifest.previewAssets ?? [])];
+    const accepted = new Map();
+    const runtime = new Map();
+    for (const scene of matrix.scenes) for (const capture of scene.captures) {
+      if (!capture.manifest) throw new Error(`missing manifest mapping for ${scene.sceneId}/${scene.cue}`);
+      const entry = manifestEntries.find(item => item.id === capture.manifest.id);
+      if (!entry) throw new Error(`manifest entry missing: ${capture.manifest.id}`);
+      for (const file of [entry.path, entry.portraitAsset].filter(Boolean)) {
+        if (!fs.existsSync(absolute(file))) throw new Error(`physical source asset missing: ${file}`);
+        accepted.set(file, { path: file, sha256: sha256(absolute(file)), manifestId: entry.id });
+      }
+      for (const file of [entry.runtimePath, entry.runtimePortraitAsset].filter(Boolean)) {
+        if (!fs.existsSync(absolute(file))) throw new Error(`physical runtime asset missing: ${file}`);
+        runtime.set(file, { path: file, sha256: sha256(absolute(file)), manifestId: entry.id });
+      }
+    }
+    const manifestFile = 'assets/asset-manifest.json';
+    const rightsFile = 'assets/provenance/rights-manifest.json';
+    const snapshot = productSnapshot(root);
+    const identity = repositoryIdentity(root);
+    const record = {
+      schemaVersion: 3,
+      recordType: 'production-art-acceptance',
+      status: 'PASS',
+      verdict: 'PASS_PRODUCTION_ART_66_66',
+      sourceProductHead: sourceHead,
+      repository: { ...identity, sourceProductHead: sourceHead },
+      sourceProductSnapshot: snapshot,
+      acceptedSceneCoverage: { expected: 66, covered: 66, remaining: 0, matrix: rel(absolute(matrixPath)) },
+      placeholders: 0,
+      brokenPaths: 0,
+      manifestSha256: sha256(absolute(manifestFile)),
+      rightsManifestSha256: sha256(absolute(rightsFile)),
+      acceptedAssets: [...accepted.values()],
+      runtimeAssets: [...runtime.values()],
+      webHigh: { result: 'PASS', reviews: reviews.map(({ evidence, ...reference }) => ({ ...reference, role: evidence.role ?? evidence.agent, taskId: evidence.taskId, reviewTraceId: evidence.reviewTraceId, actualPixelsReceived: true })) },
+      evidence: { matrix: { path: rel(absolute(matrixPath)), sha256: sha256(absolute(matrixPath)), sourceHead } },
+      compatibility: { status: 'PASS', result: 'CURRENT_SOURCE_SNAPSHOT_AND_HASHES_MATCH', manifestMappings: 'PASS', pngRegeneratedAfterAcceptance: false, coverageMethod: '66 authored scenes x 3 current browser viewports; backgrounds and dedicated CGs are accepted only at their authored cue/state' },
+      runtimeVerification: { status: 'PASS', evidencePath: rel(absolute(matrixPath)), generatedAt: new Date().toISOString(), sourceHead, viewports: ['1920x900', '390x844', '360x640'], scenes: 66, captures: 198, consoleErrors: 0, failedRequests: 0, placeholders: 0, brokenPaths: 0 },
+      verifier: { type: 'source-bound-production-art-verifier', source: 'tools/release/art-acceptance.mjs + current matrix + Web High review hashes', algorithm: 'sha256', acceptanceTimestamp: new Date().toISOString(), sourceProductHead: sourceHead },
+    };
+    const result = verifyArtAcceptance({ root, recordOverride: record });
+    if (result.status !== 'PASS') throw new Error(`${result.code}: ${result.reason}`);
+    const output = absolute(outputPath);
+    fs.mkdirSync(path.dirname(output), { recursive: true });
+    fs.writeFileSync(output, `${JSON.stringify(record, null, 2)}\n`);
+    console.log(JSON.stringify({ status: 'PASS', output: outputPath, sourceProductHead: sourceHead, acceptedAssets: accepted.size, runtimeAssets: runtime.size, webReviews: reviews.map(item => item.evidence.role ?? item.evidence.agent) }, null, 2));
+  } catch (error) {
+    fail(`${error.message}; no PASS record was created.`);
+  }
+}

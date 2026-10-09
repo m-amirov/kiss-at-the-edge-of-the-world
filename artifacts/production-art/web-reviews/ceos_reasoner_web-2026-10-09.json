@@ -1,0 +1,13 @@
+{
+  "role": "ceos_reasoner_web",
+  "status": "BLOCKED",
+  "sourceHead": "0bcc70eb04111d72ccc1da71bc35f69347b26631",
+  "actualPixelsReceived": false,
+  "taskId": null,
+  "reviewTraceId": null,
+  "attempts": [
+    {"agentId": "01a11edf-6f7a-75c3-83b7-9f961e53edab", "status": "TRANSPORT_ERROR", "detail": "stream disconnected before completion"},
+    {"agentId": "01a11ee0-a5ac-7493-889f-8d761c4421e5", "status": "TRANSPORT_ERROR", "detail": "composer attachment delivery mismatch; expectedChars=193502 actualChars=403636 commonPrefix=88047"}
+  ],
+  "transportPolicy": "bounded_retry_exhausted; no semantic PASS inferred"
+}
