@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "recordType": "ceos-web-transport-proof",
+  "status": "BLOCKED_PROVENANCE",
+  "experiment": {
+    "role": "ceos_reasoner_web",
+    "agentType": "ceos_reasoner_web",
+    "hostAgentId": "01a11f76-7f0e-7c22-b5e2-c27d6f1cf9d7",
+    "taskId": null,
+    "reviewTraceId": null,
+    "configuredModelRoute": "chatgpt-web/gpt-6-sol",
+    "configuredReasoningEffort": "high",
+    "attestedModelRoute": null,
+    "actualPixelsReceived": true,
+    "semanticVerdict": "PARTIAL_TRANSPORT_PROOF"
+  },
+  "source": {
+    "productSourceHead": "724a3ec46a0b879e5fd34642ab9bc80f04b2a5aa",
+    "releaseHead": "be144a50241a64ea0e4cebd234c6530d05e03423",
+    "scene": "S38",
+    "cue": "s38-ordinary-day",
+    "viewport": "390x844",
+    "format": "PNG",
+    "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S38-s38-ordinary-day-390x844.png",
+    "bytes": 438763,
+    "sha256": "dbff51bc4d12eb96532aa0cf11ca4137d97415491be23a9b21a9d8f6c5443141"
+  },
+  "hostReceipt": {
+    "imageVisibleToReviewer": true,
+    "deliveredImagePersistedLocally": false,
+    "bytes": null,
+    "sha256": null,
+    "dimensions": null,
+    "actualFormat": null,
+    "bytesMatch": null,
+    "hashMatch": null,
+    "transcodingConfirmed": false,
+    "classification": "UNVERIFIED",
+    "sourceBinding": null
+  },
+  "bridgeReceipt": {
+    "service": "codex-chatgpt-web",
+    "version": "6.1.6",
+    "healthStatus": "ok",
+    "acceptingTurns": true,
+    "activeHttpTurns": 0,
+    "activeBrowserTurns": 0,
+    "routeUrl": "http://127.0.0.1:17841/v1",
+    "mode": "browser-only",
+    "doctor": "ready",
+    "trustedTaskId": null,
+    "trustedReviewTraceId": null,
+    "trustedAttachmentReceipt": null
+  },
+  "ceosPreflight": {
+    "status": "READY",
+    "ready": true,
+    "fallbackAllowed": false,
+    "meaning": "bridge health and current-session callable reviewer proof only; not per-call task/trace or attachment provenance"
+  },
+  "currentHostTurnContext": {
+    "sessionId": "01a11f52-c67f-7883-9d79-3b6753d3e5e4",
+    "turnId": "01a11f76-7fdd-70c3-8f5f-b45e58873d33",
+    "model": "chatgpt-web/gpt-6-sol",
+    "cwd": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-git",
+    "isPerCallReceipt": false
+  },
+  "response": {
+    "visualContentConfirmed": true,
+    "runtimeUiVisible": true,
+    "declaredViewport": "390x844",
+    "missingFields": [
+      "taskId",
+      "reviewTraceId",
+      "attestedModelRoute",
+      "attachmentReceipt.bytes",
+      "attachmentReceipt.sha256",
+      "attachmentReceipt.dimensions",
+      "attachmentReceipt.actualFormat",
+      "sourceBinding"
+    ],
+    "conclusion": "Пиксели визуально получены, но криптографическая целостность, source binding, task/trace identity и attested model route не подтверждены."
+  },
+  "interpretation": {
+    "pixelReencoding": "NOT_PROVEN",
+    "payloadCorruption": "NOT_PROVEN",
+    "sourceBindingError": "CONFIRMED_MISSING",
+    "transportCapability": "HOST_RESPONSE_ENVELOPE_DOES_NOT_EXPOSE_REQUIRED_FIELDS"
+  },
+  "acceptance": {
+    "productionArtPassCreated": false,
+    "validatorChanged": false,
+    "productAssetsChanged": false
+  }
+}
