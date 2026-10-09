@@ -1,0 +1,78 @@
+{
+  "checkpoint": "browser-receipt-persisted",
+  "sourceHead": "5bf338746b3b748b5b49454ee1dfb56c63ffa6be",
+  "scene": "s18-visual-repair-ceos_art_director_web-20261010",
+  "role": "ceos_art_director_web",
+  "turnId": "s18-visual-repair-ceos_art_director_web-20261010",
+  "planPath": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-s18-rework-2026-10-10\\artifacts\\production-art\\WEB_HIGH_S18_VISUAL_REPAIR_2026-10-10.json",
+  "attachments": [
+    {
+      "ref": "codex-input-image-1",
+      "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-s18-rework-2026-10-10\\artifacts\\evidence\\s18-repair-2026-10-10\\runtime\\target-desktop-1920x900.png",
+      "sha256": "b7b0a8f19143ca007bcfe85080ab462c0c555e951670f190f406912fa2ca3744",
+      "bytes": 1844789
+    },
+    {
+      "ref": "codex-input-image-2",
+      "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-s18-rework-2026-10-10\\artifacts\\evidence\\s18-repair-2026-10-10\\runtime\\target-portrait390-390x844.png",
+      "sha256": "d70a5b321acc6674e4aefb10bf47f50550bf6ef6a0e752105accaf0cf94bed9a",
+      "bytes": 429517
+    },
+    {
+      "ref": "codex-input-image-3",
+      "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-s18-rework-2026-10-10\\artifacts\\evidence\\s18-repair-2026-10-10\\runtime\\target-portrait360-360x640.png",
+      "sha256": "465c0c06832ac3b75cc3ed20d1ff07c07b2c67a00da45cece798aee828810f81",
+      "bytes": 297190
+    }
+  ],
+  "receipt": {
+    "schema": "codex.web.host-observed-receipt.v1",
+    "assurance": "host-observed",
+    "providerAttested": false,
+    "provider": {
+      "taskId": null,
+      "responseId": null,
+      "reviewTraceId": null
+    },
+    "source": {
+      "sourceHead": "5bf338746b3b748b5b49454ee1dfb56c63ffa6be",
+      "scene": "s18-visual-repair-ceos_art_director_web-20261010",
+      "viewport": "multi",
+      "attachments": [
+        {
+          "ref": "codex-input-image-1",
+          "sha256": "b7b0a8f19143ca007bcfe85080ab462c0c555e951670f190f406912fa2ca3744",
+          "bytes": 1844789
+        },
+        {
+          "ref": "codex-input-image-2",
+          "sha256": "d70a5b321acc6674e4aefb10bf47f50550bf6ef6a0e752105accaf0cf94bed9a",
+          "bytes": 429517
+        },
+        {
+          "ref": "codex-input-image-3",
+          "sha256": "465c0c06832ac3b75cc3ed20d1ff07c07b2c67a00da45cece798aee828810f81",
+          "bytes": 297190
+        }
+      ]
+    },
+    "browser": {
+      "bridgeTraceId": "a33c843e1a14",
+      "assistantTurnIdentity": "group:assistant:2b5247b0-27f4-43ea-ad46-46f9111a6d58",
+      "userTurnIdentity": "group:user:2b5247b0-27f4-43ea-ad46-46f9111a6d58",
+      "submission": "tile-visible-and-send-enabled",
+      "submissionEvidence": "user_turn",
+      "completion": "stable-dom-completion-action"
+    },
+    "route": {
+      "requestedModel": "chatgpt-web/gpt-6-sol",
+      "selectedModel": "chatgpt-web/gpt-6-sol",
+      "reasoning": "high",
+      "selectedReasoning": "high"
+    },
+    "answer": {
+      "sha256": "3d85c2a1fc24304ceea9b7ba0d9988b6d570dcf264f29b2d8d714891be0dcf37",
+      "text": "```\n{\n  \"verdict\": \"REWORK\",\n  \"sceneId\": \"S18\",\n  \"cue\": \"hofn-lighthouse\",\n  \"observations\": [\n    {\n      \"ref\": \"codex-input-image-1\",\n      \"sceneId\": \"S18\",\n      \"viewport\": \"desktop\",\n      \"verdict\": \"PASS\",\n      \"observation\": \"Композиция сбалансирована. Оба персонажа полностью видны, их силуэты не пересекаются с текстом. Текст начинается ниже обуви персонажей. Гавань, горы и маяк хорошо различимы. Контраст текста достаточный, навигация и индикатор 4/12 видны. Существенных визуальных дефектов не обнаружено.\"\n    },\n    {\n      \"ref\": \"codex-input-image-2\",\n      \"sceneId\": \"S18\",\n      \"viewport\": \"portrait390\",\n      \"verdict\": \"REWORK\",\n      \"observation\": \"Лица и верхние части персонажей хорошо видны. Однако текстовый блок начинается приблизительно на уровне бёдер персонажей и перекрывает нижние части обоих силуэтов. Ноги персонажей остаются различимыми за несколькими строками текста. Это создаёт композиционный конфликт между персонажами и повествовательным текстом. При этом текст читается, заголовок и навигационные элементы не обрезаны, горизонтального переполнения визуально не обнаружено. Требуется развести персонажей и текст по вертикали.\"\n    },\n    {\n      \"ref\": \"codex-input-image-3\",\n      \"sceneId\": \"S18\",\n      \"viewport\": \"portrait360\",\n      \"verdict\": \"REWORK\",\n      \"observation\": \"Персонажи расположены выше, чем на portrait390, однако конфликт композиции сохраняется. Первая строка текста начинается приблизительно на уровне нижней части куртки Алисы и нижней части корпуса Эрика. Силуэты визуально обрываются в зоне начала текста, а переход между персонажами и текстовым блоком недостаточно выражен. Лица видны, маяк различим, текст читается. Верхняя навигация и индикатор 4/12 помещаются в экран. Исправление кадрирования не обеспечивает достаточного визуального разделения персонажей и текста.\"\n    }\n  ],\n  \"findings\": [\n    {\n      \"severity\": \"major\",\n      \"viewports\": [\n        \"portrait390\",\n        \"portrait360\"\n      ],\n      \"issue\": \"Character/text composition overlap\",\n      \"description\": \"Текстовый блок пересекается с нижними частями силуэтов персонажей. Проблема особенно заметна на portrait390, где несколько строк располагаются поверх ног персонажей. На portrait360 пересечение меньше, но первая строка находится непосредственно в зоне нижней части силуэтов.\",\n      \"requiredFix\": \"Изменить мобильное кадрирование или расположение персонажей относительно текстовой области. Обеспечить визуально чистую границу между персонажами и началом повествовательного текста. Не допускать пересечения букв с непрозрачными частями силуэтов.\"\n    },\n    {\n      \"severity\": \"minor\",\n      \"viewports\": [\n        \"portrait360\"\n      ],\n      \"issue\": \"Insufficient visual separation\",\n      \"description\": \"Нижние части персонажей исчезают в затемнении непосредственно перед первой строкой текста. Из-за этого композиция выглядит обрезанной.\",\n      \"requiredFix\": \"Скорректировать положение или масштаб персонажей и переход затемнения так, чтобы силуэты визуально завершались до начала текста.\"\n    }\n  ],\n  \"unresolved\": [\n    \"Визуальное пересечение персонажей с текстом на portrait390.\",\n    \"Недостаточное разделение персонажей и текстовой области на portrait360.\",\n    \"После исправления необходимы новые реальные runtime-скриншоты portrait390 и portrait360 для независимой повторной проверки.\",\n    \"Статические скриншоты не подтверждают отсутствие ошибок JavaScript, внутренней прокрутки или дефектов интерактивности.\"\n  ],\n  \"recommendation\": {\n    \"action\": \"REWORK\",\n    \"scope\": \"S18:hofn-lighthouse\",\n    \"priority\": \"portrait390, portrait360\",\n    \"preserve\": [\n      \"Повествовательный текст\",\n      \"Исходные изображения персонажей\",\n      \"Фоновое изображение гавани\",\n      \"Навигационные элементы\",\n      \"Успешную desktop-композицию\"\n    ],\n    \"acceptanceCriteria\": [\n      \"Персонажи визуально отделены от текста на обоих мобильных разрешениях.\",\n      \"Ни одна строка текста не пересекает непрозрачные части силуэтов персонажей.\",\n      \"Лица обоих персонажей и маяк остаются видимыми.\",\n      \"Текст сохраняет читаемость.\",\n      \"Не возникает обрезания навигации или горизонтального переполнения.\",\n      \"Новые runtime-скриншоты получают независимый PASS.\"\n    ]\n  }\n}\n```\n\n**Итог Art Director: REWORK.**\n\nDesktop — **PASS**.  \nPortrait390 — **REWORK**.  \nPortrait360 — **REWORK**.\n\nОсновной блокирующий дефект — пересечение текста с нижними частями персонажей. Исправление необходимо проверить на обоих мобильных разрешениях."
+    }
+  }
+}

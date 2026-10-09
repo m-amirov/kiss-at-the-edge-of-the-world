@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "recordType": "host-observed-web-high-batch-plan",
+  "batchId": "S18-VISUAL-REPAIR-2026-10-10",
+  "status": "REWORK",
+  "verdict": "REWORK",
+  "sourceHead": "5bf338746b3b748b5b49454ee1dfb56c63ffa6be",
+  "captureSourceHead": "5bf338746b3b748b5b49454ee1dfb56c63ffa6be",
+  "sceneIds": ["S18"],
+  "viewports": [
+    {"name": "desktop", "width": 1920, "height": 900},
+    {"name": "portrait390", "width": 390, "height": 844},
+    {"name": "portrait360", "width": 360, "height": 640}
+  ],
+  "roles": ["ceos_reasoner_web", "ceos_bulk_checker_web", "ceos_art_director_web"],
+  "deliveryContract": {
+    "model": "chatgpt-web/gpt-6-sol",
+    "reasoningEffort": "high",
+    "maxAttachmentsPerBrowserTurn": 10,
+    "maxBytesPerBrowserTurn": 50000000,
+    "requiredTurns": 3,
+    "incompleteDelivery": "BLOCKED",
+    "historicalReviews": "NOT_USED_AS_PASS"
+  },
+  "turns": [
+    {
+      "turnId": "s18-visual-repair-ceos_reasoner_web-20261010",
+      "role": "ceos_reasoner_web",
+      "sceneIds": ["S18"],
+      "attachments": [
+        {"ref": "codex-input-image-1", "sceneId": "S18", "cue": "hofn-lighthouse", "viewport": "desktop", "path": "artifacts/evidence/s18-repair-2026-10-10/runtime/target-desktop-1920x900.png", "sha256": "b7b0a8f19143ca007bcfe85080ab462c0c555e951670f190f406912fa2ca3744", "bytes": 1844789, "dimensions": [1920, 900]},
+        {"ref": "codex-input-image-2", "sceneId": "S18", "cue": "hofn-lighthouse", "viewport": "portrait390", "path": "artifacts/evidence/s18-repair-2026-10-10/runtime/target-portrait390-390x844.png", "sha256": "d70a5b321acc6674e4aefb10bf47f50550bf6ef6a0e752105accaf0cf94bed9a", "bytes": 429517, "dimensions": [390, 844]},
+        {"ref": "codex-input-image-3", "sceneId": "S18", "cue": "hofn-lighthouse", "viewport": "portrait360", "path": "artifacts/evidence/s18-repair-2026-10-10/runtime/target-portrait360-360x640.png", "sha256": "465c0c06832ac3b75cc3ed20d1ff07c07b2c67a00da45cece798aee828810f81", "bytes": 297190, "dimensions": [360, 640]}
+      ]
+    },
+    {
+      "turnId": "s18-visual-repair-ceos_bulk_checker_web-20261010",
+      "role": "ceos_bulk_checker_web",
+      "sceneIds": ["S18"],
+      "attachments": [
+        {"ref": "codex-input-image-1", "sceneId": "S18", "cue": "hofn-lighthouse", "viewport": "desktop", "path": "artifacts/evidence/s18-repair-2026-10-10/runtime/target-desktop-1920x900.png", "sha256": "b7b0a8f19143ca007bcfe85080ab462c0c555e951670f190f406912fa2ca3744", "bytes": 1844789, "dimensions": [1920, 900]},
+        {"ref": "codex-input-image-2", "sceneId": "S18", "cue": "hofn-lighthouse", "viewport": "portrait390", "path": "artifacts/evidence/s18-repair-2026-10-10/runtime/target-portrait390-390x844.png", "sha256": "d70a5b321acc6674e4aefb10bf47f50550bf6ef6a0e752105accaf0cf94bed9a", "bytes": 429517, "dimensions": [390, 844]},
+        {"ref": "codex-input-image-3", "sceneId": "S18", "cue": "hofn-lighthouse", "viewport": "portrait360", "path": "artifacts/evidence/s18-repair-2026-10-10/runtime/target-portrait360-360x640.png", "sha256": "465c0c06832ac3b75cc3ed20d1ff07c07b2c67a00da45cece798aee828810f81", "bytes": 297190, "dimensions": [360, 640]}
+      ]
+    },
+    {
+      "turnId": "s18-visual-repair-ceos_art_director_web-20261010",
+      "role": "ceos_art_director_web",
+      "sceneIds": ["S18"],
+      "attachments": [
+        {"ref": "codex-input-image-1", "sceneId": "S18", "cue": "hofn-lighthouse", "viewport": "desktop", "path": "artifacts/evidence/s18-repair-2026-10-10/runtime/target-desktop-1920x900.png", "sha256": "b7b0a8f19143ca007bcfe85080ab462c0c555e951670f190f406912fa2ca3744", "bytes": 1844789, "dimensions": [1920, 900]},
+        {"ref": "codex-input-image-2", "sceneId": "S18", "cue": "hofn-lighthouse", "viewport": "portrait390", "path": "artifacts/evidence/s18-repair-2026-10-10/runtime/target-portrait390-390x844.png", "sha256": "d70a5b321acc6674e4aefb10bf47f50550bf6ef6a0e752105accaf0cf94bed9a", "bytes": 429517, "dimensions": [390, 844]},
+        {"ref": "codex-input-image-3", "sceneId": "S18", "cue": "hofn-lighthouse", "viewport": "portrait360", "path": "artifacts/evidence/s18-repair-2026-10-10/runtime/target-portrait360-360x640.png", "sha256": "465c0c06832ac3b75cc3ed20d1ff07c07b2c67a00da45cece798aee828810f81", "bytes": 297190, "dimensions": [360, 640]}
+      ]
+    }
+  ],
+  "turnResults": [
+    {"turnId": "s18-visual-repair-ceos_reasoner_web-20261010", "output": "artifacts/evidence/web-high-s18-visual-repair/reasoner-20261010.json", "rawReceipt": "artifacts/evidence/web-high-s18-visual-repair/reasoner-20261010.json.receipt.json", "trace": "891f61b06710", "verdict": "REWORK", "observations": 3},
+    {"turnId": "s18-visual-repair-ceos_bulk_checker_web-20261010", "output": "artifacts/evidence/web-high-s18-visual-repair/bulk-20261010.json", "rawReceipt": "artifacts/evidence/web-high-s18-visual-repair/bulk-20261010.json.receipt.json", "trace": "326d858d38c2", "verdict": "REWORK", "observations": 3},
+    {"turnId": "s18-visual-repair-ceos_art_director_web-20261010", "role": "ceos_art_director_web", "output": "artifacts/evidence/web-high-s18-visual-repair/art-director-20261010.json", "rawReceipt": "artifacts/evidence/web-high-s18-visual-repair/art-director-20261010.json.receipt.json", "trace": "a33c843e1a14", "verdict": "REWORK", "observations": 3}
+  ],
+  "stopReason": "All three independent Web High roles retain mobile character/text overlap; stop after preserving exact findings."
+}
