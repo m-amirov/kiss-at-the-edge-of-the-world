@@ -98,6 +98,17 @@ const receiptContext: HostObservedReceiptContext = {
   viewport: "multi",
   attachments: images.map(image => ({ ref: image.ref, sha256: image.sha256, bytes: image.buffer.length })),
 };
+if (process.argv.includes("--preflight-only")) {
+  console.log(JSON.stringify({
+    status: "READY_BROWSER_TURN_PREFLIGHT",
+    role, turnId: turnId ?? null, scene, sourceHead,
+    attachmentCount: images.length, totalBytes,
+    attachments: images.map(image => ({ ref: image.ref, sha256: image.sha256, bytes: image.fileBytes, path: image.path })),
+    outputPath, receiptSidecar: writer.receiptPath,
+    browserInvoked: false,
+  }, null, 2));
+  process.exit(0);
+}
 let receipt: HostObservedReceipt | undefined;
 const events: Array<{ type: AdapterEvent["type"] }> = [];
 
