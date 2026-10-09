@@ -91,7 +91,12 @@ function mutateMatrix(f,change) {
   change(f.matrix);
   f.record.evidence.matrix.sha256=write(f.root,'artifacts/evidence/matrix.json',f.matrix);
 }
-const verify=f=>verifyArtAcceptance({root:f.root,recordOverride:f.record});
+const verify=f=>verifyArtAcceptance({root:f.root,recordOverride:f.record,allowLegacyVisualContent:true});
+test('legacy visual-content PASS cannot satisfy official art release gate',()=>{
+  const f=makeFixture();
+  assert.equal(verifyArtAcceptance({root:f.root,recordOverride:f.record}).code,
+    'ART_ACCEPTANCE_LEGACY_VISUAL_CONTENT_NOT_RELEASE_ACCEPTED');
+});
 test('v4 content mode accepts all scenes and high-risk desktop/portrait frames without provider IDs',()=>{
   const f=makeFixture();const result=verify(f);
   assert.equal(result.status,'PASS',JSON.stringify(result));
