@@ -50,6 +50,7 @@ async function runViewport(viewport) {
   page.on('pageerror', error => consoleErrors.push(String(error)));
   page.on('console', message => { if (message.type() === 'error') consoleErrors.push(message.text()); });
   page.on('requestfailed', request => requestFailures.push(`${request.url()} :: ${request.failure()?.errorText ?? 'failed'}`));
+  await page.route('**/sdk.js', route => route.fulfill({ status: 200, contentType: 'application/javascript', body: 'window.YaGames = undefined;' }));
   await page.addInitScript(({ key, value }) => {
     localStorage.setItem(key, JSON.stringify(value));
     const NativeAudio = window.Audio;
