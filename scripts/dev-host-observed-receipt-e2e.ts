@@ -21,6 +21,7 @@ const scene = option("--scene");
 const viewport = option("--viewport");
 const ref = option("--ref");
 const outputPath = resolve(option("--output"));
+const visualReview = process.argv.includes("--visual-review");
 const image = readFileSync(imagePath);
 const imageSha256 = createHash("sha256").update(image).digest("hex");
 const imageStat = statSync(imagePath);
@@ -70,7 +71,9 @@ const request: CodexParsedRequest = {
       role: "user",
       timestamp: Date.now(),
       content: [
-        { type: "text", text: `Review the supplied runtime evidence for ${scene} at ${viewport}. Reply with exactly E2E RECEIVED.` },
+        { type: "text", text: visualReview
+          ? `Perform a concise visual control review of the supplied runtime evidence for ${scene} at ${viewport}. State whether the image is readable and whether any obvious crop, clipping, or composition defect is visible. Do not invent metadata.`
+          : `Review the supplied runtime evidence for ${scene} at ${viewport}. Reply with exactly E2E RECEIVED.` },
         { type: "image", imageUrl: `data:image/png;base64,${image.toString("base64")}`, detail: "high" },
       ],
     }],
@@ -121,7 +124,7 @@ try {
     image: { path: imagePath, ref, sha256: imageSha256, bytes: image.length, fileBytes: imageStat.size },
     request: { model: request.modelId, reasoning: request.options.reasoning, scene, viewport, sourceHead },
     stages: events,
-    response: { textSha256: createHash("sha256").update(emittedText.join(""), "utf8").digest("hex"), eventTypes: events.map(event => event.type) },
+    response: { text: emittedText.join(""), textSha256: createHash("sha256").update(emittedText.join(""), "utf8").digest("hex"), eventTypes: events.map(event => event.type) },
     receipt,
   }, null, 2)}\n`);
   console.log(JSON.stringify({ outputPath, traceId: receipt.browser.bridgeTraceId, assistantTurnIdentity: receipt.browser.assistantTurnIdentity, eventTypes: events.map(event => event.type) }));
