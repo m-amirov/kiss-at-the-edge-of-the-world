@@ -175,13 +175,13 @@ test('S66 greenhouse uses the authored environment and its independent portrait 
  assert.ok(fs.existsSync(new URL('../../assets/backgrounds/hveragerdi-greenhouse-cafe.webp',import.meta.url)));
 });
 
-test('S05 Hveragerði road uses the authored desktop background and independent portrait mapping',()=>{
+test('S05 Hveragerði van warning uses the repaired cinematic asset',()=>{
  const {flow,choices}=complete('S05');
  const opening=shot('S05',flow,0,choices);
- // Baseline updated for cf0cb3d: S05 now reuses the integrated rain-road
- // environment shared with the later south-coast route.
- assert.equal(opening.art?.file,'south-coast-road-rain.webp');
- assert.ok(fs.existsSync(new URL('../../assets/backgrounds/south-coast-road-rain.webp',import.meta.url)));
+ assert.equal(opening.art?.file,'s05-hveragerdi-van-warning-rework.webp');
+ assert.equal(opening.art?.type,'cg');
+ assert.ok(fs.existsSync(new URL('../../assets/cg/s05-hveragerdi-van-warning-rework.webp',import.meta.url)));
+ assert.ok(fs.existsSync(new URL('../../assets/cg/s05-hveragerdi-van-warning-rework-portrait.webp',import.meta.url)));
 });
 
 test('S06-S08 pilot uses authored cinematic events with independent portrait assets',()=>{
@@ -210,7 +210,7 @@ test('S06-S08 pilot uses authored cinematic events with independent portrait ass
 test('S10 and S12 use bounded cinematic events and clear them at the location transition',()=>{
  const expected={
   S10:{beat:'s10-vik-road-song',file:'s10-vik-road-song.webp',cast:['alice','eric'],ref:[0,0],clear:[6,0]},
-  S12:{beat:'s12-vik-cafe-damir',file:'s12-vik-cafe-damir.webp',cast:['alice','damir'],ref:[0,0],clear:[11,0]}
+  S12:{beat:'s12-vik-cafe-damir',file:'s12-vik-cafe-damir-rework.webp',cast:['alice','damir'],ref:[0,0],clear:[11,0]}
  };
  for(const [id,cfg] of Object.entries(expected)){
   const {flow,choices}=complete(id);
@@ -227,10 +227,36 @@ test('S10 and S12 use bounded cinematic events and clear them at the location tr
  }
 });
 
+test('offline art repair recovery maps the seven repaired cues to exact CG and portrait assets',()=>{
+ const expected={
+  S04:['thingvellir-trail',[0,4],'s04-thingvellir-trail-rework.webp',['alice','eric','nick','damir']],
+  S05:['s05-hveragerdi-van-warning',[0,0],'s05-hveragerdi-van-warning-rework.webp',['alice','eric','nick','damir']],
+  S11:['s11-reynisfjara-information-board',[0,0],'s11-reynisfjara-information-board-rework.webp',['alice','damir','nick','eric']],
+  S12:['s12-vik-cafe-damir',[0,0],'s12-vik-cafe-damir-rework.webp',['alice','damir']],
+  S14:['s14-skaftafell-pace',[0,0],'s14-skaftafell-pace-rework.webp',['alice','eric']],
+  S19:['s19-hofn-pool-entrance',[0,0],'s19-hofn-pool-opening-rework.webp',['alice','nick']],
+  S22:['s22-eastfjords-van-road',[0,0],'s22-eastfjords-van-road-rework.webp',['alice','eric','nick','damir']]
+ };
+ const player=fs.readFileSync(new URL('../../src/literary-player.js',import.meta.url),'utf8');
+ for(const [id,[beat,ref,file,cast]] of Object.entries(expected)){
+  const {flow,choices}=complete(id);
+  const at=indexOfSource(flow,...ref);
+  const direction=shot(id,flow,at,choices);
+  assert.equal(direction.beatId,beat,id);
+  assert.equal(direction.art?.type,'cg',id);
+  assert.equal(direction.art?.file,file,id);
+  assert.deepEqual(direction.cast,cast,id);
+  const portrait=file.replace('.webp','-portrait.webp');
+  assert.ok(fs.existsSync(new URL(`../../assets/cg/${file}`,import.meta.url)),id);
+  assert.ok(fs.existsSync(new URL(`../../assets/cg/${portrait}`,import.meta.url)),id);
+  assert.match(player,new RegExp(`'${file}':'${portrait}'`),id);
+ }
+});
+
 test('S13-S16 preserve environment transitions and use only authored cinematic events',()=>{
  const expected={
   S13:[['skaftafell-parking',[0,7],null,'environment'],['skaftafell-notebook',[0,12],'s13-skaftafell-travelers.webp','cinematic']],
-  S14:[['s14-skaftafell-pace',[0,0],'s14-skaftafell-pace.webp','cinematic'],['s14-lagoon-road',[7,0],null,'environment']],
+  S14:[['s14-skaftafell-pace',[0,0],'s14-skaftafell-pace-rework.webp','cinematic'],['s14-lagoon-road',[7,0],null,'environment']],
   S15:[['jokulsarlon-lagoon',[0,5],'jokulsarlon-master.webp','environment']],
   S16:[['s16-guesthouse-help',[0,1],'s16-guesthouse-help.webp','cinematic'],['s16-kitchen-soup',[4,0],'s16-kitchen-soup.webp','cinematic']]
  };

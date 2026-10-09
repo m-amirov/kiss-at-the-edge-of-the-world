@@ -121,6 +121,13 @@ const portraitAssetByDesktopAsset = {
   ,'s02-van-group-batch2.webp':'s02-van-group-batch2-portrait.webp'
   ,'s60-souvenir-kitchen-batch2.webp':'s60-souvenir-kitchen-batch2-portrait.webp'
   ,'s02-roadside-cafe-group.webp':'s02-roadside-cafe-group-portrait.webp'
+  ,'s04-thingvellir-trail-rework.webp':'s04-thingvellir-trail-rework-portrait.webp'
+  ,'s05-hveragerdi-van-warning-rework.webp':'s05-hveragerdi-van-warning-rework-portrait.webp'
+  ,'s11-reynisfjara-information-board-rework.webp':'s11-reynisfjara-information-board-rework-portrait.webp'
+  ,'s12-vik-cafe-damir-rework.webp':'s12-vik-cafe-damir-rework-portrait.webp'
+  ,'s14-skaftafell-pace-rework.webp':'s14-skaftafell-pace-rework-portrait.webp'
+  ,'s19-hofn-pool-opening-rework.webp':'s19-hofn-pool-opening-rework-portrait.webp'
+  ,'s22-eastfjords-van-road-rework.webp':'s22-eastfjords-van-road-rework-portrait.webp'
 };
 const portraitAssetByBeat = {
   'airport-bus': 's46-airport-bus-portrait.webp',

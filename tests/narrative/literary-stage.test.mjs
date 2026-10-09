@@ -88,7 +88,7 @@ test('second bounded reframe batch keeps the selected cast in per-cue compositio
 });
 test('every non-cinematic authored 3-4-person cue declares its required presence',()=>{
  const affected=Object.values(visualCues).flat().filter(cue=>cue.cast?.length>2 && !String(cue.art??'').startsWith('cg/') && cue.presentation!=='cinematic');
- const narrativeRequired=['s10-vik-arrival','s14-lagoon-road','skaftafell-parking','skogafoss-trail','snaefellsnes-drive','thingvellir-trail'];
+ const narrativeRequired=['s10-vik-arrival','s14-lagoon-road','skaftafell-parking','skogafoss-trail','snaefellsnes-drive'];
  assert.deepEqual(affected.map(cue=>cue.id).sort(),narrativeRequired.sort());
  for(const cue of affected)assert.deepEqual(cue.requiredCast,cue.cast,`${cue.id} must not hide its authored group`);
  for(const cue of Object.values(visualCues).flat().filter(cue=>cue.cast?.length>2 && String(cue.art??'').startsWith('cg/')))
