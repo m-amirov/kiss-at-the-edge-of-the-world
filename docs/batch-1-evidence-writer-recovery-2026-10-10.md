@@ -20,8 +20,11 @@ $plan = Join-Path $game 'artifacts\production-art\WEB_HIGH_BATCH_1_2026-10-09.js
 $bun = Join-Path $env:USERPROFILE '.bun\bin\bun.exe'
 $out = Join-Path $game 'artifacts\evidence\web-high-batch-1\reasoner-turn1-attempt2.json'
 Set-Location $bridge
-git fetch origin bridge/trusted-web-receipts-2026-10-09
-# Safely fast-forward the local bridge worktree to the published branch if clean.
+git status --short
+# Stop if the bridge worktree contains unrelated local modifications.
+git fetch https://github.com/m-amirov/kiss-at-the-edge-of-the-world.git bridge/trusted-web-receipts-2026-10-09
+git merge --ff-only FETCH_HEAD
+# The bridge staging commit is mirrored in the game GitHub repository, not in the read-only upstream.
 & $bun run scripts/dev-host-observed-receipt-e2e.ts --plan $plan --turn-id batch1-ceos_reasoner_web-1 --role ceos_reasoner_web --game-root $game --output $out --preflight-only
 # Only when preflight says READY_BROWSER_TURN_PREFLIGHT, run the identical command without --preflight-only.
 & $bun run scripts/dev-host-observed-receipt-e2e.ts --plan $plan --turn-id batch1-ceos_reasoner_web-1 --role ceos_reasoner_web --game-root $game --output $out
