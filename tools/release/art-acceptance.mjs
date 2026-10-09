@@ -3,6 +3,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 import { verifyVisualContentMatrix, verifyVisualContentReviews } from './visual-content-review.mjs';
+import { HOST_OBSERVED_ART_ASSURANCE, HOST_OBSERVED_ART_POLICY, verifyHostObservedArtReviews } from './host-observed-art-review.mjs';
 
 const DEFAULT_RECORD = 'artifacts/evidence/production-art-acceptance.json';
 const sha256 = file => crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
@@ -131,7 +132,7 @@ function verifySourceBinding(projectRoot, record, currentHead) {
   return { status: 'PASS', sourceHead, snapshot };
 }
 
-export function verifyArtAcceptance({ root, recordPath = DEFAULT_RECORD, recordOverride } = {}) {
+export function verifyArtAcceptance({ root, recordPath = DEFAULT_RECORD, recordOverride, allowLegacyVisualContent = false } = {}) {
   const projectRoot = path.resolve(root ?? process.cwd());
   const recordFile = absolute(projectRoot, recordPath);
   if (!recordOverride && !fs.existsSync(recordFile)) return block('ART_ACCEPTANCE_RECORD_MISSING', `Acceptance record missing: ${recordPath}`);
@@ -139,8 +140,15 @@ export function verifyArtAcceptance({ root, recordPath = DEFAULT_RECORD, recordO
   try { record = recordOverride ?? JSON.parse(fs.readFileSync(recordFile, 'utf8')); }
   catch (error) { return block('ART_ACCEPTANCE_RECORD_INVALID', `Acceptance record is not valid JSON: ${error.message}`); }
   if (record.schemaVersion === 1 || record.schemaVersion === 2) return block('ART_ACCEPTANCE_LEGACY_REATTESTATION_REQUIRED', 'Path-based or self-invalidating acceptance schema requires current re-attestation.');
-  if (![3, 4].includes(record.schemaVersion) || record.recordType !== 'production-art-acceptance') return block('ART_ACCEPTANCE_RECORD_INVALID', 'Unsupported acceptance record schema or record type.');
+  if (![3, 4, 5].includes(record.schemaVersion) || record.recordType !== 'production-art-acceptance') return block('ART_ACCEPTANCE_RECORD_INVALID', 'Unsupported acceptance record schema or record type.');
   const visualContent = record.schemaVersion === 4;
+  const hostObserved = record.schemaVersion === 5;
+  if (visualContent && !allowLegacyVisualContent)
+    return block('ART_ACCEPTANCE_LEGACY_VISUAL_CONTENT_NOT_RELEASE_ACCEPTED', 'Legacy visual-content evidence is advisory only; new art acceptance requires strict or HOST_OBSERVED_ART_ACCEPTANCE_V1.');
+  if (hostObserved && (record.assurance !== HOST_OBSERVED_ART_ASSURANCE || record.webHigh?.assurance !== HOST_OBSERVED_ART_ASSURANCE ||
+      record.policy !== HOST_OBSERVED_ART_POLICY || record.webHigh?.policy !== HOST_OBSERVED_ART_POLICY ||
+      record.webHigh?.providerAttested !== false))
+    return block('ART_ACCEPTANCE_ASSURANCE_INVALID', 'Schema v5 requires explicit host-observed art policy and providerAttested=false.');
   if (visualContent && (record.assurance !== 'visual-content' || record.webHigh?.assurance !== 'visual-content'))
     return block('ART_ACCEPTANCE_ASSURANCE_INVALID', 'Schema v4 requires explicit visual-content assurance on record and Web reviews.');
   if (record.status !== 'PASS' || record.verdict !== 'PASS_PRODUCTION_ART_66_66') return block('ART_ACCEPTANCE_PROVENANCE_INVALID', 'Acceptance record is not a formal PASS_PRODUCTION_ART_66_66 record.');
@@ -185,7 +193,7 @@ export function verifyArtAcceptance({ root, recordPath = DEFAULT_RECORD, recordO
   if (matrixResult.status !== 'PASS') return matrixResult;
   const matrix = matrixResult.evidence;
   if (matrix.scope?.expectedScenes !== 66 || matrix.scope?.coveredScenes !== 66 || matrix.scope?.captures !== 198 || matrix.failures?.length) return block('ART_ACCEPTANCE_COVERAGE_EVIDENCE_INVALID', 'Current matrix does not prove 66 scenes x 3 viewports with zero failures.');
-  const screenshotResult = visualContent
+  const screenshotResult = (visualContent || hostObserved)
     ? verifyVisualContentMatrix({ projectRoot, matrix, sourceHead: binding.sourceHead })
     : verifyMatrixScreenshots({ projectRoot, matrix });
   if (screenshotResult.status !== 'PASS') return screenshotResult;
@@ -196,7 +204,7 @@ export function verifyArtAcceptance({ root, recordPath = DEFAULT_RECORD, recordO
   for (const review of record.webHigh.reviews ?? []) {
     const result = verifyJsonEvidence({ projectRoot, reference: review, sourceHead: binding.sourceHead, requirePixels: true });
     if (result.status !== 'PASS') return result;
-    if (!visualContent) {
+    if (!visualContent && !hostObserved) {
       const strict = verifyStrictWebReviewReceipt({ reference: review, evidence: result.evidence, sourceHead: binding.sourceHead });
       if (strict.status !== 'PASS') return strict;
       if (strictTaskIds.has(result.evidence.taskId) || strictTraceIds.has(result.evidence.reviewTraceId))
@@ -209,14 +217,19 @@ export function verifyArtAcceptance({ root, recordPath = DEFAULT_RECORD, recordO
   }
   for (const role of ['ceos_reasoner_web', 'ceos_bulk_checker_web', 'ceos_art_director_web']) if (!roles.has(role))
     return block('ART_ACCEPTANCE_WEB_REVIEW_MISSING', `Required Web High role is missing: ${role}`);
+  if (hostObserved) {
+    const hostResult = verifyHostObservedArtReviews({ projectRoot, matrix, sourceHead: binding.sourceHead, reviewEntries });
+    if (hostResult.status !== 'PASS') return hostResult;
+  }
   if (visualContent) {
     const contentResult = verifyVisualContentReviews({ projectRoot, matrix, sourceHead: binding.sourceHead, reviewEntries });
     if (contentResult.status !== 'PASS') return contentResult;
   }
   return { status: 'PASS', code: null,
-    reason: visualContent ? '66 scenes reviewed at the image-content assurance level with source-bound local screenshot hashes (not provider-attested delivery).' :
+    reason: hostObserved ? '66 scenes x 3 viewports x 3 independent Web roles verified against browser-observed receipts and local PNG hashes; provider delivery is NOT attested.' :
+      visualContent ? '66 scenes reviewed at the image-content assurance level with source-bound local screenshot hashes (not provider-attested delivery).' :
       'Current product files, manifests, runtime matrix, hashes and strict Web High reviews match source-bound production-art acceptance.',
-    assurance: visualContent ? 'visual-content' : 'strict', recordPath, sourceProductHead: binding.sourceHead };
+    assurance: hostObserved ? HOST_OBSERVED_ART_ASSURANCE : visualContent ? 'visual-content' : 'strict', recordPath, sourceProductHead: binding.sourceHead };
 }
 
 export function persistVerifiedArtAcceptance({ root, record, recordPath = DEFAULT_RECORD } = {}) {
