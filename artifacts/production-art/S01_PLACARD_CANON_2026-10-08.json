@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "status": "CANON_READY",
+  "runId": "2026-10-08T17-21-04-993Z-production-art-c6e9de",
+  "sourceHead": "6e9a546c187ca6fec9bf4a413bdd1a6139756c91",
+  "webAnalysis": {
+    "agentRole": "ceos_art_director_web",
+    "model": "chatgpt-web/gpt-6-sol",
+    "reasoning": "high",
+    "agentId": "01a11c8b-4fe7-7472-a962-adaa682249f7",
+    "actualPixelsReceived": true,
+    "evidence": [
+      "assets/characters/nick-master.png",
+      "assets/characters/alice-stage.png",
+      "assets/backgrounds/keflavik-airport-arrivals-v1.png",
+      "artifacts/evidence/s01-placard-2026-10-08/before/ru-target-desktop-1920x900.png"
+    ],
+    "verdict": "ADVISORY_CANON_BRIEF"
+  },
+  "lockedCanon": {
+    "setting": "Interior Keflavik arrivals hall, not exterior airport threshold.",
+    "composition": "Alice left, Nick right; placard raised between them and above the dialogue sheet in desktop and portrait-safe crops.",
+    "nick": "Dark curls, light stubble, travel photographer, backpack, camera hanging from neck and visibly separate from the sign.",
+    "alice": "Short wavy light-brown hair, yellow jacket, burgundy scarf, dark sweater, dark cargo trousers, hiking boots, backpack.",
+    "action": "Nick holds a wet cardboard sign in one hand; water marks and softened edges are visible but lettering remains readable.",
+    "localizedText": { "ru": "АЛИСА, ЖУРНАЛИСТ", "en": "ALICE, JOURNALIST" },
+    "style": "Cohesive semi-realistic cinematic VN illustration with grounded contact shadows and shared overcast airport lighting.",
+    "prohibited": ["UI plaque", "nameplate", "baked dialogue", "text outside physical cardboard", "exterior airport scene", "sticker/cut-out integration", "identity drift"]
+  },
+  "acceptanceChecklist": [
+    "Physical sign visibly held by Nick",
+    "Camera remains on Nick's neck",
+    "RU and EN sign lettering readable in runtime dialogue-open pixels",
+    "Both faces and sign survive 360x640, 390x844 and 412x915 crops",
+    "No UI/text baked into the image outside the cardboard",
+    "Neighbor airport-outside [0,16] remains unchanged"
+  ]
+}

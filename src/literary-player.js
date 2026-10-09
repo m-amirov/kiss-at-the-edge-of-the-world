@@ -2,14 +2,16 @@ import { literarySeason } from './literary-season-data.js';
 import { compileScenePlayback, nextLiteraryScene, literarySaveKey, cleanLiteraryText } from './literary-engine.js';
 import { initYandexPlatform } from './yandex-sdk.js';
 import { createCloudSaveQueue } from './save-state.js';
-import { stageForScene } from './literary-stage.js';
+import { stageForScene, stageCastForPresentation } from './literary-stage.js';
 import { visualAt, visualEntryForPosition } from './literary-visual-directions.js';
+import { visualCastContract } from './literary-visual-contract.js';
 import { compileInteractivePlayback } from './literary-pacing.js';
 import { applyLiteraryLocale, createTranslator, validateLiteraryInteractionLocale } from './localization.js';
 import { literaryLocaleBundles } from './literary-localization-bundle.js';
 import { interactionBeats } from './literary-interactive-beats.js';
 import { createDialogueHistory } from './literary-history.js';
 import { createAudioDirector } from './audio-director.js';
+import { runtimeAssetUrl } from './runtime-assets.js';
 import { musicCues, musicCueForScene } from './music-cues.js';
 
 const canonicalById = new Map(literarySeason.scenes.map(scene => [scene.id, scene]));
@@ -31,6 +33,7 @@ const focalPointByAsset = {
   's02-roadside-cafe.webp': '50% 48%',
   's13-skaftafell-travelers.webp': '50% 42%',
   's18-hofn-dance-lights.webp': '50% 44%',
+  's18-hofn-harbour.webp': '90% 50%',
   's26-eric-choice.webp': '50% 40%',
   's23-eric-harbor-plan.webp': '50% 42%',
   's24-nick-pier-consent.webp': '50% 42%',
@@ -45,11 +48,14 @@ const focalPointByAsset = {
   's44-eric-epilogue-month-later.webp': '50% 48%',
   's45-nick-home-epilogue-month-later.webp': '50% 45%',
   's46-damir-epilogue-month-later.webp': '50% 44%',
-  's47-alice-home-epilogue-month-later.webp': '67% 44%'
+  's47-alice-home-epilogue-month-later.webp': '67% 44%',
+  's03-editor-call.webp': '50% 34%',
+  's03-editor-call-portrait.webp': '50% 31%'
 };
 const portraitAssetByDesktopAsset = {
   's06-hveragerdi-eric-alice.webp':'s06-hveragerdi-eric-alice-portrait.webp',
   's07-kitchen-pasta.webp':'s07-kitchen-pasta-portrait.webp',
+  's18-hofn-harbour.webp':'s18-hofn-harbour-portrait.webp',
   's07-kitchen-cards.webp':'s07-kitchen-cards-portrait.webp',
   's08-guesthouse-strap.webp':'s08-guesthouse-strap-portrait.webp',
   's05-hveragerdi-road.webp':'s05-hveragerdi-road-portrait.webp',
@@ -63,9 +69,11 @@ const portraitAssetByDesktopAsset = {
   's26-nick-choice.webp':'s26-nick-choice-portrait.webp',
   's26-damir-choice.webp':'s26-damir-choice-portrait.webp',
   's26-alice-choice.webp':'s26-alice-choice-portrait.webp',
+  's26-power-outage-notebook.webp':'s26-power-outage-notebook-portrait.webp',
   's45-reykjavik-warm-montage.webp':'s45-reykjavik-warm-montage-portrait.webp',
   's46-airport-goodbye.webp':'s46-airport-goodbye-portrait.webp',
   's47-reykjavik-harbour-alice.webp':'s47-reykjavik-harbour-alice-portrait.webp',
+  's44-eric-morning-harbour.webp':'s44-eric-morning-harbour-portrait.webp',
   's44-eric-epilogue-month-later.webp':'s44-eric-epilogue-month-later-portrait.webp',
   's45-nick-home-epilogue-month-later.webp':'s45-nick-home-epilogue-month-later-portrait.webp',
   's46-damir-epilogue-month-later.webp':'s46-damir-epilogue-month-later-portrait.webp',
@@ -97,6 +105,7 @@ const portraitAssetByDesktopAsset = {
   ,'s63-alice-solo-concert.webp':'s63-alice-solo-concert-portrait.webp'
   ,'s37-eric-alice-cafe.webp':'s37-eric-alice-cafe-portrait.webp'
   ,'s03-editor-call-damir.webp':'s03-editor-call-damir-portrait.webp'
+  ,'s03-editor-call.webp':'s03-editor-call-portrait.webp'
   ,'s18-hofn-breakfast-group.webp':'s18-hofn-breakfast-group-portrait.webp'
   ,'s38-alice-nick-ordinary-day.webp':'s38-alice-nick-ordinary-day-portrait.webp'
   ,'s54-alice-nick-karaoke.webp':'s54-alice-nick-karaoke-portrait.webp'
@@ -105,15 +114,36 @@ const portraitAssetByDesktopAsset = {
   ,'s64-alice-snaefellsnes-trail.webp':'s64-alice-snaefellsnes-trail-portrait.webp'
   ,'s26-eastfjords-courtyard-group.webp':'s26-eastfjords-courtyard-group-portrait.webp'
   ,'s48-guesthouse-exit-group.webp':'s48-guesthouse-exit-group-portrait.webp'
+  ,'s01-airport-outside-batch2.webp':'s01-airport-outside-batch2-portrait.webp'
+  ,'s01-damir-arrives-batch2.webp':'s01-damir-arrives-batch2-portrait.webp'
+  ,'s48-last-breakfast-batch2.webp':'s48-last-breakfast-batch2-portrait.webp'
+  ,'s26-route-choice-courtyard-batch2.webp':'s26-route-choice-courtyard-batch2-portrait.webp'
+  ,'s02-van-group-batch2.webp':'s02-van-group-batch2-portrait.webp'
+  ,'s60-souvenir-kitchen-batch2.webp':'s60-souvenir-kitchen-batch2-portrait.webp'
+  ,'s02-roadside-cafe-group.webp':'s02-roadside-cafe-group-portrait.webp'
+  ,'s04-thingvellir-trail-rework.webp':'s04-thingvellir-trail-rework-portrait.webp'
+  ,'s05-hveragerdi-van-warning-rework.webp':'s05-hveragerdi-van-warning-rework-portrait.webp'
+  ,'s11-reynisfjara-information-board-rework.webp':'s11-reynisfjara-information-board-rework-portrait.webp'
+  ,'s12-vik-cafe-damir-rework.webp':'s12-vik-cafe-damir-rework-portrait.webp'
+  ,'s14-skaftafell-pace-rework.webp':'s14-skaftafell-pace-rework-portrait.webp'
+  ,'s19-hofn-pool-opening-rework.webp':'s19-hofn-pool-opening-rework-portrait.webp'
+  ,'s22-eastfjords-van-road-rework.webp':'s22-eastfjords-van-road-rework-portrait.webp'
 };
-function assetFileForViewport(art){
+const portraitAssetByBeat = {
+  'airport-bus': 's46-airport-bus-portrait.webp',
+  's42-harbour-cafe': 's42-harbour-cafe-portrait.webp'
+};
+function assetFileForViewport(art, beatId, locale){
   const portrait=window.matchMedia?.('(max-width: 680px) and (orientation: portrait)').matches;
-  return portrait ? (portraitAssetByDesktopAsset[art.file]??art.file) : art.file;
+  return portrait ? (art.localePortraitFiles?.[locale] ?? portraitAssetByBeat[beatId] ?? portraitAssetByDesktopAsset[art.file] ?? art.file) : (art.localeFiles?.[locale] ?? art.file);
+}
+function visibleCastForDirection(direction){
+  if(direction?.art?.presentation==='cinematic')return [...(direction.requiredCast?.length?direction.requiredCast:direction.cast??[])];
+  return stageCastForPresentation(direction);
 }
 const stageAsset = { alice:'alice-stage.webp', eric:'eric-stage.webp', nick:'nick-stage.webp', damir:'damir-stage.webp' };
-// This value is consumed by a url() inside src/literary.css; resolve from the
-// stylesheet directory so the cover never becomes /src/assets/... at runtime.
-const cover = '../assets/branding/menu-hero.webp';
+// Resolve the menu cover through the same module-aware archive asset contract.
+const cover = runtimeAssetUrl('branding/kiss-at-the-edge-cover.png');
 const blank = () => ({ schemaVersion:3,sceneId:'S01',position:0,choices:{},finished:false, visited:['S01'],runId:`literary-${Date.now()}-${crypto.randomUUID?.() ?? Math.random().toString(36).slice(2)}`, revision:0 });
 function parseSaved(raw) {
   try {
@@ -135,12 +165,15 @@ let cloudLocked=false;
 let cloudCandidate=null;
 let menuOpen=true;
 let modal=null;
+let confirmDialog=null;
+let confirmHistoryPushed=false;
 let platform=null;
 let locale='ru';
 let t=createTranslator(locale);
 let cloudQueue=null;
 const audioDirector=createAudioDirector();
 const audioCueById=new Map(musicCues.map(cue=>[cue.cueId,{...cue,file:`${cue.cueId}.ogg`} ]));
+const menuAudioCue=audioCueById.get('main-theme');
 let settings=(()=>{try{return{scale:1,contrast:false,motion:false,...JSON.parse(localStorage.getItem(textSettingsKey)||'{}')}}catch{return{scale:1,contrast:false,motion:false}}})();
 function loadRuntimeSeason(selectedLocale,qaLocaleOverride){
   if(selectedLocale==='ru')return literarySeason;
@@ -185,6 +218,73 @@ function el(value='',className='',tag='div'){
 }
 function button(label,handler,className=''){
   const b=el(label,className,'button');b.type='button';b.addEventListener('click',handler);return b;
+}
+function settleConfirmDialog(confirmed,{fromHistory=false}={}){
+  const current=confirmDialog;
+  if(!current || current.settled)return false;
+  current.settled=true;
+  confirmDialog=null;
+  document.removeEventListener('keydown',current.onKeydown,true);
+  current.node.remove();
+  app.inert=current.previousInert;
+  if(current.previousAriaHidden===null)app.removeAttribute('aria-hidden');
+  else app.setAttribute('aria-hidden',current.previousAriaHidden);
+  if(confirmHistoryPushed){
+    confirmHistoryPushed=false;
+    if(!fromHistory)history.back();
+  }
+  if(current.returnFocus?.isConnected)current.returnFocus.focus({preventScroll:true});
+  if(confirmed)current.onConfirm();
+  return true;
+}
+function ConfirmDialog({title,message,onConfirm}){
+  const backdrop=el('','literary-confirm-backdrop');
+  const dialog=el('','literary-confirm-dialog','section');
+  const stamp=Date.now();
+  const titleId=`confirm-dialog-title-${stamp}`;
+  const messageId=`confirm-dialog-message-${stamp}`;
+  dialog.setAttribute('role','dialog');
+  dialog.setAttribute('aria-modal','true');
+  dialog.setAttribute('aria-labelledby',titleId);
+  dialog.setAttribute('aria-describedby',messageId);
+  dialog.tabIndex=-1;
+  const heading=el(title,'confirm-dialog-title','h2');heading.id=titleId;
+  const copy=el(message,'confirm-dialog-message','p');copy.id=messageId;
+  const actions=el('','confirm-dialog-actions');
+  const cancel=button(t('confirmDialogCancel'),()=>settleConfirmDialog(false),'confirm-dialog-cancel');
+  const confirm=button(t('confirmDialogConfirm'),()=>settleConfirmDialog(true),'confirm-dialog-confirm');
+  cancel.setAttribute('data-confirm-dialog-action','cancel');confirm.setAttribute('data-confirm-dialog-action','confirm');
+  actions.append(cancel,confirm);dialog.append(heading,copy,actions);backdrop.append(dialog);
+  for(const type of ['pointerdown','pointerup','click','touchstart']){
+    backdrop.addEventListener(type,event=>{event.stopPropagation()});
+  }
+  return {backdrop,dialog,cancel,onConfirm};
+}
+function openConfirmDialog({messageKey,messageValues={},onConfirm}){
+  if(confirmDialog)return false;
+  history.pushState({...((history.state && typeof history.state==='object')?history.state:{}),literaryConfirmDialog:true},document.title);
+  confirmHistoryPushed=true;
+  const previousFocus=document.activeElement instanceof HTMLElement?document.activeElement:null;
+  const previousAriaHidden=app.getAttribute('aria-hidden');
+  const built=ConfirmDialog({title:t('confirmDialogTitle'),message:t(messageKey,messageValues),onConfirm});
+  const onKeydown=event=>{
+    if(!confirmDialog)return;
+    if(event.key==='Escape'){
+      event.preventDefault();event.stopPropagation();settleConfirmDialog(false);
+      return;
+    }
+    if(event.key!=='Tab')return;
+    const focusable=[...built.dialog.querySelectorAll('button:not([disabled]),[href],input,select,textarea,[tabindex]:not([tabindex="-1"])')];
+    if(!focusable.length)return;
+    const first=focusable[0],last=focusable.at(-1);
+    if(event.shiftKey && document.activeElement===first){event.preventDefault();last.focus();}
+    else if(!event.shiftKey && document.activeElement===last){event.preventDefault();first.focus();}
+  };
+  confirmDialog={node:built.backdrop,returnFocus:previousFocus,previousInert:app.inert,previousAriaHidden,onKeydown,onConfirm,settled:false};
+  app.inert=true;app.setAttribute('aria-hidden','true');
+  document.body.append(built.backdrop);document.addEventListener('keydown',onKeydown,true);
+  built.cancel.focus({preventScroll:true});
+  return true;
 }
 const interactiveSelector='button,a,input,select,textarea,summary,[role="button"],[role="link"],[contenteditable="true"],[data-interactive]';
 const tapThreshold=10;
@@ -279,9 +379,12 @@ function bindStageTapTarget(node){
   });
 }
 function goHome(){menuOpen=true;modal=null;renderMenu()}
-function startNew(){
-  if(hasSave && !window.confirm(t('confirmNew')))return;
+function beginNewGame(){
   cloudLocked=true;dialogueHistory.clear();reader=blank();persist();menuOpen=false;modal=null;renderReader();
+}
+function startNew(){
+  if(hasSave){openConfirmDialog({messageKey:'confirmNew',onConfirm:beginNewGame});return;}
+  beginNewGame();
 }
 function continueGame(){menuOpen=false;modal=null;renderReader()}
 function panel(headingKey,children){
@@ -298,15 +401,16 @@ function episodeSelection(section){
     const unlocked=runtimeSeason.scenes.some(s=>s.episode===ep&&known.has(s.id));
     const item=button(t(unlocked?'episodeUnlocked':'episodeLocked',{episode:ep}),()=>{
       if(!unlocked)return;
-      if(!window.confirm(t('episodeReplayConfirm',{episode:ep})))return;
-      // A chapter replay from its first scene requires rebuilding later state;
-      // using only the original choices from before this episode is safe.
-      const epChoiceIds=literarySeason.scenes.filter(s=>s.episode>=ep).map(s=>s.id);
-      for(const id of Object.keys(reader.choices)){
-        if(epChoiceIds.some(prefix=>id.startsWith(prefix+'-')))delete reader.choices[id];
-      }
-      dialogueHistory.clear();reader.sceneId=first.id;reader.position=0;reader.finished=false;reader.migrationNotice=false;reader.visited=reader.visited.filter(id=>byId.get(id).episode<ep);reader.visited.push(first.id);
-      cloudLocked=true;persist();continueGame();
+      openConfirmDialog({messageKey:'episodeReplayConfirm',messageValues:{episode:ep},onConfirm:()=>{
+        // A chapter replay from its first scene requires rebuilding later state;
+        // using only the original choices from before this episode is safe.
+        const epChoiceIds=literarySeason.scenes.filter(s=>s.episode>=ep).map(s=>s.id);
+        for(const id of Object.keys(reader.choices)){
+          if(epChoiceIds.some(prefix=>id.startsWith(prefix+'-')))delete reader.choices[id];
+        }
+        dialogueHistory.clear();reader.sceneId=first.id;reader.position=0;reader.finished=false;reader.migrationNotice=false;reader.visited=reader.visited.filter(id=>byId.get(id).episode<ep);reader.visited.push(first.id);
+        cloudLocked=true;persist();continueGame();
+      }});
     },'episode-select');item.disabled=!unlocked;section.append(item);
   }
 }
@@ -321,7 +425,7 @@ function settingsPanel(section){
 }
 function renderMenu(){
   platform?.setGameplayActive(false);
-  audioDirector.pause();
+  audioDirector.setCue(menuAudioCue);
   menuOpen=true;app.className='literary-home';app.dataset.presentation=modal?`menu-${modal.toLowerCase()}`:'menu-home';app.style.setProperty('--cover',`url('${cover}')`);app.replaceChildren();
   const section=el('','literary-home-card');app.append(section);
   section.append(el(t('menuKicker'),'kicker'),el(t('gameTitle'),'home-title','h1'));
@@ -334,19 +438,24 @@ function renderMenu(){
   for(const [name,label] of [['episodes',t('episodes')],['settings',t('settings')]])secondary.append(button(label,()=>{modal=name;renderMenu()}));
   actions.append(secondary);
   section.append(actions);
-  if(cloudCandidate)section.append(button(t('restoreCloud'),()=>{if(!window.confirm(t('restoreCloudConfirm')))return;cloudLocked=true;dialogueHistory.clear();reader=cloudCandidate;cloudCandidate=null;persist();continueGame()}));
+  if(cloudCandidate){
+    const utility=el('','home-utility');
+    utility.append(button(t('restoreCloud'),()=>openConfirmDialog({messageKey:'restoreCloudConfirm',onConfirm:()=>{cloudLocked=true;dialogueHistory.clear();reader=cloudCandidate;cloudCandidate=null;persist();continueGame()}}),'cloud-restore'));
+    section.append(utility);
+  }
 }
 function renderStage(direction) {
   const stage=el('','scene-stage');
   stage.dataset.count=String(direction.cast.length);
   stage.dataset.mode=direction.mode;
   stage.dataset.mood=direction.mood;
+  if(direction.stageComposition)stage.dataset.layout=direction.stageComposition;
   direction.cast.forEach((person,index)=>{
     const figure=el('',`stage-character stage-${person}`);
     figure.dataset.mood=direction.mood;
     figure.style.setProperty('--stage-index',index);
     const image=el('','','img');
-    image.src=`./assets/characters/${stageAsset[person]}`;
+    image.src=runtimeAssetUrl(`characters/${stageAsset[person]}`);
     image.alt='';image.decoding='async';
     figure.append(image);stage.append(figure);
   });
@@ -370,16 +479,21 @@ function renderReader(){
   const flow=compileInteractivePlayback(scene,reader.choices,locale);reader.position=Math.min(reader.position,flow.at(-1)?.type==='choice'?Math.max(0,flow.length-1):flow.length);
   const isEnding=['S44','S45','S46','S47'].includes(scene.id);
   const mode=artMode(scene,flow[reader.position],reader.choices,isEnding);
-  app.className='literary-reader';app.dataset.presentation=mode;app.replaceChildren();
+  app.className='literary-reader';app.dataset.presentation=mode;app.dataset.scene=scene.id;app.replaceChildren();
   const current=flow[reader.position];
   const visualEntry=visualEntryForPosition(flow,reader.position);
   const direction=visualAt(scene.id,visualEntry,reader.choices,stageForScene(scene.id,reader.choices).cast);
   const art=direction.art;
   const picture=el('','literary-picture');picture.setAttribute('aria-hidden','true');picture.dataset.presentation=mode;picture.dataset.mode=art?.presentation??(art?.type==='cg'?'cinematic':'environment');
   picture.dataset.visualBeat=direction.beatId;picture.dataset.location=direction.location;picture.dataset.time=direction.time;
-  if(art){const file=assetFileForViewport(art);const img=el('','','img');img.src=`./assets/${art.type==='cg'?'cg':'backgrounds'}/${file}`;img.alt='';img.decoding='async';img.dataset.desktopAsset=art.file;img.dataset.asset=file;picture.append(img);picture.style.setProperty('--focus',focalPointByAsset[file]??focalPointByAsset[art.file]??'50% 50%');if(art.type==='cg'){picture.classList.add('is-cg');picture.style.setProperty('--cg-url',`url("${img.src}")`)}}
+  if(art){const file=assetFileForViewport(art,direction.beatId,locale);const img=el('','','img');img.src=runtimeAssetUrl(`${art.type==='cg'?'cg':'backgrounds'}/${file}`);img.alt='';img.decoding='async';img.dataset.desktopAsset=art.file;img.dataset.asset=file;picture.append(img);picture.style.setProperty('--focus',focalPointByAsset[file]??focalPointByAsset[art.file]??'50% 50%');if(art.type==='cg'){picture.classList.add('is-cg');picture.style.setProperty('--cg-url',`url("${img.src}")`)}}
   else picture.classList.add('no-art');
-  if(art?.presentation!=='cinematic') picture.append(renderStage({...direction,mode:direction.cast.length>2?'group':direction.cast.length===2?'pair':'solo',mood:stageForScene(scene.id,reader.choices).mood}));
+  if(art?.presentation!=='cinematic'){
+    // Ordinary background groups stay focal, but a visual beat may explicitly
+    // require three or four people for narrative continuity.
+    const presentationCast=visibleCastForDirection(direction);
+    picture.append(renderStage({...direction,cast:presentationCast,mode:presentationCast.length>2?'group':presentationCast.length===2?'pair':'solo',mood:stageForScene(scene.id,reader.choices).mood}));
+  }
   picture.append(el('','literary-vignette'));app.append(picture);bindStageNavigation(picture);
   const header=el('','reader-header');
   const back=button(locale==='ru'?'Назад':'Back',rollbackNarrative,'small-button dialogue-back');back.disabled=!dialogueHistory.canRollback();
@@ -422,8 +536,15 @@ window.addEventListener('keydown',event=>{
   if(menuOpen || !['Enter',' ','Spacebar','ArrowRight'].includes(event.key) || event.altKey || event.ctrlKey || event.metaKey || isInteractiveTarget(event.target) || isInteractiveTarget(document.activeElement) || document.activeElement?.closest?.('[data-stage-advance]'))return;
   if(advanceNarrative())event.preventDefault();
 });
-window.addEventListener('pointerdown',()=>{audioDirector.unlock().catch(()=>{})},{passive:true});
-window.addEventListener('keydown',()=>{audioDirector.unlock().catch(()=>{})},{passive:true});
+window.addEventListener('popstate',()=>{if(confirmDialog)settleConfirmDialog(false,{fromHistory:true})});
+let audioUnlockInFlight=false;
+function unlockAudioFromInteraction(){
+  if(audioUnlockInFlight || audioDirector.getState().unlocked)return;
+  audioUnlockInFlight=true;
+  audioDirector.unlock().catch(()=>{}).finally(()=>{audioUnlockInFlight=false});
+}
+window.addEventListener('pointerdown',unlockAudioFromInteraction,{passive:true});
+window.addEventListener('keydown',unlockAudioFromInteraction,{passive:true});
 document.addEventListener('visibilitychange',()=>{if(document.hidden)audioDirector.pause();else audioDirector.resume().catch(()=>{})});
 window.addEventListener('blur',()=>audioDirector.pause());
 window.addEventListener('focus',()=>audioDirector.resume().catch(()=>{}));
@@ -478,13 +599,17 @@ window.__LITERARY_QA__={
   getPlatformMode:()=>platform?.mode??'booting',
   getPersistenceKeys:()=>({local:literarySaveKey,cloud:literaryCloudKey}),
   getScreen:()=>({menuOpen,sceneId:reader.sceneId,position:reader.position}),
+  getAudioState:()=>audioDirector.getState(),
   getRuntimeTrace:()=>{
     const scene=byId.get(reader.sceneId),flow=compileInteractivePlayback(scene,reader.choices,locale),entry=flow[reader.position]??flow.at(-1)??null;
     const visualEntry=visualEntryForPosition(flow,reader.position);
-    const direction=visualAt(scene.id,visualEntry,reader.choices,stageForScene(scene.id,reader.choices).cast);
+    const authoredCast=stageForScene(scene.id,reader.choices).cast;
+    const direction=visualAt(scene.id,visualEntry,reader.choices,authoredCast);
+    const visibleCast=visibleCastForDirection(direction);
+    const castContract=visualCastContract(direction,{actualVisibleCast:visibleCast});
     const text=entry?.text??entry?.question??'';
     let hash=2166136261;for(const char of text)hash=Math.imul(hash^char.charCodeAt(0),16777619);
-    return {displayedPosition:`${reader.position+1}/${flow.length}`,sceneId:scene.id,entryId:entry?.id??null,entryType:entry?.type??null,sourceStartRef:entry?.sourceStartRef??null,sourceEndRef:entry?.sourceEndRef??null,dialogueHash:(hash>>>0).toString(16),speaker:null,platformMode:platform?.mode??'booting',revision:reader.revision,choiceState:structuredClone(reader.choices),location:direction.location,visualBeat:direction.beatId,background:direction.art?.file??null,cast:direction.cast,stage:stageForScene(scene.id,reader.choices)};
+    return {displayedPosition:`${reader.position+1}/${flow.length}`,sceneId:scene.id,entryId:entry?.id??null,entryType:entry?.type??null,sourceStartRef:entry?.sourceStartRef??null,sourceEndRef:entry?.sourceEndRef??null,dialogueHash:(hash>>>0).toString(16),speaker:null,platformMode:platform?.mode??'booting',revision:reader.revision,choiceState:structuredClone(reader.choices),location:direction.location,time:direction.time,visualBeat:direction.beatId,background:direction.art?.file??null,artType:direction.art?.type??null,authoredCast:castContract.authoredCast,physicallyPresentCast:castContract.physicallyPresentCast,requiredVisibleCast:castContract.requiredVisibleCast,actualVisibleCast:castContract.actualVisibleCast,offscreenAllowedCast:castContract.offscreenAllowedCast,visualEvidence:castContract.visualEvidence,requiredCast:direction.requiredCast??[],visibleCast,cast:direction.cast,stage:stageForScene(scene.id,reader.choices)};
   },
   // QA methods are strictly read-only; preview and the old game have separate state keys.
 };

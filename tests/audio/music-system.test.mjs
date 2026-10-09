@@ -23,6 +23,9 @@ test('runtime uses semantic cues and release assets contain no generator artifac
   const runtime = fs.readFileSync(path.join(root, 'src/literary-player.js'), 'utf8');
   assert.match(runtime, /musicCueForScene/);
   assert.match(runtime, /audioDirector\.setCue/);
+  const menu = runtime.match(/function renderMenu\(\)\{([\s\S]*?)\r?\n\}\r?\nfunction renderStage/)?.[1] ?? '';
+  assert.match(menu, /audioDirector\.setCue\(menuAudioCue\)/);
+  assert.doesNotMatch(menu, /audioDirector\.pause\(\)/);
   assert.doesNotMatch(runtime, /[A-Za-z]:\\|file:\/\//);
   const audioFiles = fs.readdirSync(path.join(root, 'assets/audio/music'));
   assert.ok(audioFiles.every(file => file.endsWith('.ogg')));
@@ -37,7 +40,7 @@ test('cue transition policy is semantic and does not restart A -> A', async () =
   const a = { cueId:'a', file:'a.ogg', loopable:true }; const b = { cueId:'b', file:'b.ogg', loopable:true };
   director.setCue(a); assert.equal(instances.length, 0); await director.unlock(); assert.equal(instances.length, 1);
   director.setCue(a); assert.equal(instances.length, 1); director.setCue(a); assert.equal(instances.length, 1);
-  director.setCue(b); assert.equal(instances.length, 2); assert.equal(instances[0].pauseCount, 1); assert.equal(director.getState().activeInstances, 1);
+  director.setCue(b); assert.equal(instances.length, 1); assert.equal(instances[0].pauseCount, 1); assert.equal(director.getState().activeInstances, 1);
 });
 
 test('audio settings persist and apply mute/volume', async () => {
@@ -62,5 +65,52 @@ test('browser AudioDirector does not assign readonly HTMLAudioElement.dataset', 
   const director = createAudioDirector({ AudioClass: BrowserLikeAudio, storage: { getItem: () => null, setItem: () => {} }, requestFrame: null });
   director.setCue({ cueId: 'browser-like', file: 'browser-like.ogg', loopable: true });
   await assert.doesNotReject(() => director.unlock());
+  assert.equal(director.getState().activeInstances, 1);
+});
+
+test('unlock is idempotent and lifecycle resume preserves the current position', async () => {
+  const { createAudioDirector } = await import('../../src/audio-director.js');
+  const instances = [];
+  class FakeAudio {
+    constructor() { this.playCount = 0; this.pauseCount = 0; this.currentTime = 0; this.paused = true; this.volume = 0; this.dataset = {}; instances.push(this); }
+    play() { this.playCount += 1; this.paused = false; return Promise.resolve(); }
+    pause() { this.pauseCount += 1; this.paused = true; }
+    setAttribute() {}
+  }
+  const director = createAudioDirector({ AudioClass: FakeAudio, storage: { getItem:()=>null, setItem:()=>{} }, requestFrame: null });
+  director.setCue({ cueId:'main-theme', file:'main-theme.ogg', loopable:true });
+  await Promise.all([director.unlock(), director.unlock(), director.unlock()]);
+  assert.equal(instances.length, 1);
+  assert.equal(instances[0].playCount, 1);
+  instances[0].currentTime = 17.25;
+  director.pause();
+  assert.equal(instances[0].currentTime, 17.25);
+  await director.resume();
+  assert.equal(instances[0].currentTime, 17.25);
+  assert.equal(instances[0].playCount, 2);
+});
+
+test('rapid cue replacement cancels the abandoned fade target', async () => {
+  const { createAudioDirector } = await import('../../src/audio-director.js');
+  const instances = [];
+  const frames = [];
+  class FakeAudio {
+    constructor() { this.playCount = 0; this.pauseCount = 0; this.currentTime = 0; this.paused = true; this.volume = 0; this.dataset = {}; instances.push(this); }
+    play() { this.playCount += 1; this.paused = false; return Promise.resolve(); }
+    pause() { this.pauseCount += 1; this.paused = true; }
+    setAttribute() {}
+  }
+  const director = createAudioDirector({ AudioClass: FakeAudio, storage: { getItem:()=>null, setItem:()=>{} }, requestFrame: callback => { frames.push(callback); return frames.length; } });
+  const cue = id => ({ cueId:id, file:`${id}.ogg`, loopable:true });
+  director.setCue(cue('a'));
+  await director.unlock();
+  director.setCue(cue('b'));
+  director.setCue(cue('c'));
+  await Promise.resolve();
+  await Promise.resolve();
+  for (const frame of frames.splice(0)) frame(performance.now() + 1000);
+  assert.equal(instances.length, 1);
+  assert.equal(instances[0].pauseCount, 1);
+  assert.equal(director.getState().cueId, 'c');
   assert.equal(director.getState().activeInstances, 1);
 });

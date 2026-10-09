@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "status": "BLOCKED_PROVENANCE",
+  "role": "ceos_bulk_checker_web",
+  "hostAgentId": "01a11f6a-b328-7642-b500-2d60fc4188f6",
+  "taskId": null,
+  "reviewTraceId": null,
+  "declaredModelRoute": "chatgpt-web/gpt-6-sol",
+  "attestedModelRoute": null,
+  "sourceHead": "724a3ec46a0b879e5fd34642ab9bc80f04b2a5aa",
+  "sourceHeadVerified": false,
+  "actualPixelsReceived": true,
+  "transportStatus": "OK_IMAGES_RECEIVED",
+  "provenanceStatus": "BLOCKED_MISSING_ATTESTATION",
+  "evidenceReceipt": [
+    { "scene": "S26", "dimensions": "1920x900", "hostBytes": 2499910, "hostSha256": "a2bc09ea79a638d444fad3a05f149ac7a2b7521b59cd5b4a52e34c9f9a663cd0", "localPath": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S26-scene-start-1920x900.png", "localBytes": 1644612, "localSha256": "6223591f1b6bca41270ee82ab182312f248938844600e2c7dc513506b2f84cf7" },
+    { "scene": "S38", "dimensions": "390x844", "hostBytes": 438763, "hostSha256": "dbff51bc4d12eb96532aa0cf11ca4137d97415491be23a9b21a9d8f6c5443141", "localPath": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S38-s38-ordinary-day-390x844.png", "localBytes": 438763, "localSha256": "dbff51bc4d12eb96532aa0cf11ca4137d97415491be23a9b21a9d8f6c5443141" }
+  ],
+  "semanticVerdict": "PASS",
+  "checkedSceneCues": ["S26/scene-start notebook", "S38/s38-ordinary-day"],
+  "findings": { "desktopReadability": "PASS", "mobileReadability": "PASS", "imageDialogueIntegration": "PASS", "criticalClipping": false, "uiOverflow": false, "visiblePlaceholders": false },
+  "missingFields": ["taskId", "reviewTraceId", "trusted modelRoute attestation", "verified sourceHead-to-screenshot binding", "verified manifest/runtime identity"]
+}

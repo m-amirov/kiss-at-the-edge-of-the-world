@@ -26,6 +26,22 @@ function indexOfSource(flow,chunk,paragraph){
  const i=flow.findIndex(e=>e.sourceStartRef?.chunk===chunk && e.sourceStartRef.paragraph===paragraph);
  assert.ok(i>=0,`Missing source ${chunk}:${paragraph}`);return i;
 }
+test('S01 physical placard is localized at the authored nick-arrives cue and stays separate from airport-outside',()=>{
+ const cue=visualCues.S01.find(item=>item.id==='nick-arrives');
+ assert.deepEqual(cue.at,[0,4]);
+ assert.deepEqual(cue.localizedArt,{ru:'cg/s01-nick-arrives-placard-ru.webp',en:'cg/s01-nick-arrives-placard-en.webp'});
+ assert.deepEqual(cue.localizedPortraitArt,{ru:'cg/s01-nick-arrives-placard-ru-portrait.webp',en:'cg/s01-nick-arrives-placard-en-portrait.webp'});
+ const {flow,choices}=complete('S01');
+ const position=indexOfSource(flow,0,4);
+ const direction=shot('S01',flow,position,choices);
+ assert.equal(direction.beatId,'nick-arrives');
+ assert.equal(direction.art?.file,'s01-nick-arrives-placard-ru.webp');
+ assert.deepEqual(direction.art?.localeFiles,{ru:'s01-nick-arrives-placard-ru.webp',en:'s01-nick-arrives-placard-en.webp'});
+ assert.deepEqual(direction.art?.localePortraitFiles,{ru:'s01-nick-arrives-placard-ru-portrait.webp',en:'s01-nick-arrives-placard-en-portrait.webp'});
+ const outside=shot('S01',flow,indexOfSource(flow,0,16),choices);
+ assert.equal(outside.beatId,'airport-outside');
+ assert.equal(outside.art?.file,'s01-airport-outside-batch2.webp');
+});
 test('all 66 scenes have a real authored place, time, cast and bounded image reference',()=>{
  assert.deepEqual(new Set(Object.keys(visualScenes)),new Set(scenes.keys()));
  for(const [id,scene] of scenes){
@@ -48,18 +64,91 @@ test('all 66 scenes have a real authored place, time, cast and bounded image ref
  }
 });
 
-test('S02 keeps the current production road background until the authored cafe cue',()=>{
+test('S02 uses the accepted integrated moving-van CG until the authored cafe cue',()=>{
  const {flow,choices}=complete('S02');
  assert.equal(shot('S02',flow,0,choices).location,'Автомобиль по дороге в Рейкьявик');
- // Baseline updated for cf0cb3d: the release mapping intentionally added the
- // integrated road-trip environment at scene start; the cafe cue remains exact.
- assert.equal(shot('S02',flow,0,choices).art?.file,'road-trip-van-interior-rain.webp');
+ assert.equal(shot('S02',flow,0,choices).beatId,'scene-start');
+ assert.equal(shot('S02',flow,0,choices).art?.file,'s02-van-group-batch2.webp');
+ assert.equal(shot('S02',flow,0,choices).art?.type,'cg');
+ assert.deepEqual(shot('S02',flow,0,choices).requiredCast,['alice','eric','nick','damir']);
  const cafe=indexOfSource(flow,0,31);
  assert.equal(shot('S02',flow,cafe,choices).beatId,'roadside-cafe');
- assert.equal(shot('S02',flow,cafe,choices).art?.file,'s02-roadside-cafe.webp');
- assert.equal(shot('S02',flow,cafe,choices).art?.type,'background');
- assert.equal(shot('S02',flow,cafe-1,choices).art?.file,'road-trip-van-interior-rain.webp');
- assert.ok(flow.every((e,i)=>shot('S02',flow,i,choices).art?.type!=='cg'));
+ assert.equal(shot('S02',flow,cafe,choices).art?.file,'s02-roadside-cafe-group.webp');
+ assert.equal(shot('S02',flow,cafe,choices).art?.type,'cg');
+ assert.deepEqual(shot('S02',flow,cafe,choices).cast,['alice','eric','nick','damir']);
+ assert.deepEqual(shot('S02',flow,cafe,choices).requiredCast,['alice','eric','nick','damir']);
+ assert.equal(shot('S02',flow,cafe-1,choices).art?.file,'s02-van-group-batch2.webp');
+});
+
+test('Batch 2 recovery maps the six accepted CGs to exact canonical cues and cast',()=>{
+ const expected={
+  'S01/airport-outside':{id:'S01',ref:[0,16],beat:'airport-outside',file:'s01-airport-outside-batch2.webp',cast:['alice','nick','eric']},
+  'S01/damir-arrives':{id:'S01',ref:[0,24],beat:'damir-arrives',file:'s01-damir-arrives-batch2.webp',cast:['alice','nick','eric','damir']},
+  'S48/scene-start':{id:'S48',ref:[0,0],file:'s48-last-breakfast-batch2.webp',cast:['alice','eric','nick','damir']},
+  'S26/scene-start':{id:'S26',ref:[0,0],file:'s26-power-outage-notebook.webp',cast:['alice'],requiredCast:[]},
+  'S02/scene-start':{id:'S02',ref:[0,0],file:'s02-van-group-batch2.webp',cast:['alice','eric','nick','damir']},
+  'S60/scene-start':{id:'S60',ref:[0,0],file:'s60-souvenir-kitchen-batch2.webp',cast:['alice','eric','nick','damir']}
+ };
+ for(const [cue,cfg] of Object.entries(expected)){
+  const {choices}=complete(cfg.id);
+  const direction=shot(cfg.id,[{sourceEndRef:{chunk:cfg.ref[0],paragraph:cfg.ref[1]}}],0,choices);
+  assert.equal(direction.beatId,cfg.beat ?? 'scene-start',cue);
+  assert.equal(direction.art?.type,'cg',cue);
+  assert.equal(direction.art?.file,cfg.file,cue);
+  assert.deepEqual(direction.cast,cfg.cast,cue);
+  assert.deepEqual(direction.requiredCast,cfg.requiredCast ?? cfg.cast,cue);
+  assert.ok(fs.existsSync(new URL(`../../assets/cg/${cfg.file}`,import.meta.url)),cue);
+  assert.ok(fs.existsSync(new URL(`../../assets/cg/${cfg.file.replace('.webp','-portrait.webp')}`,import.meta.url)),cue);
+ }
+});
+
+test('Batch 3 reframes bind only the eight selected authored cues',()=>{
+ const pairCues=[
+  ['S01','nick-arrives',{},'batch3-pair-depth-s01-nick-arrives'],
+  ['S18','scene-start',{},'batch3-pair-depth-s18-opening'],
+  ['S28','scene-start',{},'batch3-pair-depth-s28-opening'],
+  ['S30','scene-start',{},'batch3-pair-depth-s30-opening']
+ ];
+ for(const [id,beat,choices,layout] of pairCues){
+  const {flow}=complete(id,choices);
+  const position=flow.findIndex(entry=>shot(id,flow,flow.indexOf(entry),choices).beatId===beat);
+  const direction=shot(id,flow,position,choices);
+  assert.equal(direction.stageComposition,layout,`${id}/${beat} must own its Batch 3 layout`);
+  assert.deepEqual(direction.cast,['alice',id==='S01'?'nick':id==='S18'||id==='S28'?'eric':'damir']);
+ }
+ for(const route of ['A','B','C']){
+  const choices={'S26-C1':route};
+  const {flow}=complete('S42',choices);
+  const direction=shot('S42',flow,0,choices);
+  assert.equal(direction.beatId,'s42-harbour-cafe');
+  assert.equal(direction.art?.file,'s42-harbour-cafe.webp');
+ }
+ const {flow}=complete('S46');
+ const airport=shot('S46',flow,0,{});
+ assert.equal(airport.beatId,'airport-bus');
+ assert.equal(airport.art?.file,'s46-airport-bus.webp');
+});
+
+test('Final Batch 4 reframes bind only the ten selected authored cues',()=>{
+ const expected={
+  'S33/scene-start':'batch4-pair-depth-s33','S34/scene-start':'batch4-pair-depth-s34',
+  'S37/scene-start':'batch4-pair-depth-s37','S49/scene-start':'batch4-pair-depth-s49',
+  'S50/scene-start':'batch4-pair-depth-s50','S52/scene-start':'batch4-pair-depth-s52',
+  'S55/scene-start':'batch4-pair-depth-s55','S35/scene-start':'batch4-solo-depth-s35',
+  'S41/editor-cafe-call':'batch4-solo-depth-s41'
+ };
+ for(const [cue,layout] of Object.entries(expected)){
+  const [id,beat]=cue.split('/');
+  const {flow,choices}=complete(id);
+  const position=flow.findIndex((_,index)=>shot(id,flow,index,choices).beatId===beat);
+  assert.ok(position>=0,`${cue} must be reachable`);
+  assert.equal(shot(id,flow,position,choices).stageComposition,layout,cue);
+ }
+ const {flow,choices}=complete('S03');
+ const editor=shot('S03',flow,0,choices);
+ assert.equal(editor.beatId,'editor-call');
+ assert.equal(editor.art?.file,'s03-editor-call.webp');
+ assert.equal(editor.art?.type,'cg');
 });
 
 test('Episode 1 S02 never interleaves the roadside cafe and car across choice variants',()=>{
@@ -71,7 +160,7 @@ test('Episode 1 S02 never interleaves the roadside cafe and car across choice va
   assert.deepEqual(transitions,['Автомобиль по дороге в Рейкьявик','Придорожное кафе'],`${extraA}/${extraB}/${authored}`);
   const cafe=indexOfSource(flow,0,31);
   assert.ok(flow.slice(cafe).every(entry=>shot('S02',[entry],0,choices).location==='Придорожное кафе'));
-  assert.ok(flow.slice(cafe).every(entry=>shot('S02',[entry],0,choices).art?.file==='s02-roadside-cafe.webp'));
+  assert.ok(flow.slice(cafe).every(entry=>shot('S02',[entry],0,choices).art?.file==='s02-roadside-cafe-group.webp'));
  }
 });
 
@@ -86,13 +175,13 @@ test('S66 greenhouse uses the authored environment and its independent portrait 
  assert.ok(fs.existsSync(new URL('../../assets/backgrounds/hveragerdi-greenhouse-cafe.webp',import.meta.url)));
 });
 
-test('S05 Hveragerði road uses the authored desktop background and independent portrait mapping',()=>{
+test('S05 Hveragerði van warning uses the repaired cinematic asset',()=>{
  const {flow,choices}=complete('S05');
  const opening=shot('S05',flow,0,choices);
- // Baseline updated for cf0cb3d: S05 now reuses the integrated rain-road
- // environment shared with the later south-coast route.
- assert.equal(opening.art?.file,'south-coast-road-rain.webp');
- assert.ok(fs.existsSync(new URL('../../assets/backgrounds/south-coast-road-rain.webp',import.meta.url)));
+ assert.equal(opening.art?.file,'s05-hveragerdi-van-warning-rework.webp');
+ assert.equal(opening.art?.type,'cg');
+ assert.ok(fs.existsSync(new URL('../../assets/cg/s05-hveragerdi-van-warning-rework.webp',import.meta.url)));
+ assert.ok(fs.existsSync(new URL('../../assets/cg/s05-hveragerdi-van-warning-rework-portrait.webp',import.meta.url)));
 });
 
 test('S06-S08 pilot uses authored cinematic events with independent portrait assets',()=>{
@@ -121,7 +210,7 @@ test('S06-S08 pilot uses authored cinematic events with independent portrait ass
 test('S10 and S12 use bounded cinematic events and clear them at the location transition',()=>{
  const expected={
   S10:{beat:'s10-vik-road-song',file:'s10-vik-road-song.webp',cast:['alice','eric'],ref:[0,0],clear:[6,0]},
-  S12:{beat:'s12-vik-cafe-damir',file:'s12-vik-cafe-damir.webp',cast:['alice','damir'],ref:[0,0],clear:[11,0]}
+  S12:{beat:'s12-vik-cafe-damir',file:'s12-vik-cafe-damir-rework.webp',cast:['alice','damir'],ref:[0,0],clear:[11,0]}
  };
  for(const [id,cfg] of Object.entries(expected)){
   const {flow,choices}=complete(id);
@@ -138,10 +227,36 @@ test('S10 and S12 use bounded cinematic events and clear them at the location tr
  }
 });
 
+test('offline art repair recovery maps the seven repaired cues to exact CG and portrait assets',()=>{
+ const expected={
+  S04:['thingvellir-trail',[0,4],'s04-thingvellir-trail-rework.webp',['alice','eric','nick','damir']],
+  S05:['s05-hveragerdi-van-warning',[0,0],'s05-hveragerdi-van-warning-rework.webp',['alice','eric','nick','damir']],
+  S11:['s11-reynisfjara-information-board',[0,0],'s11-reynisfjara-information-board-rework.webp',['alice','damir','nick','eric']],
+  S12:['s12-vik-cafe-damir',[0,0],'s12-vik-cafe-damir-rework.webp',['alice','damir']],
+  S14:['s14-skaftafell-pace',[0,0],'s14-skaftafell-pace-rework.webp',['alice','eric']],
+  S19:['s19-hofn-pool-entrance',[0,0],'s19-hofn-pool-opening-rework.webp',['alice','nick']],
+  S22:['s22-eastfjords-van-road',[0,0],'s22-eastfjords-van-road-rework.webp',['alice','eric','nick','damir']]
+ };
+ const player=fs.readFileSync(new URL('../../src/literary-player.js',import.meta.url),'utf8');
+ for(const [id,[beat,ref,file,cast]] of Object.entries(expected)){
+  const {flow,choices}=complete(id);
+  const at=indexOfSource(flow,...ref);
+  const direction=shot(id,flow,at,choices);
+  assert.equal(direction.beatId,beat,id);
+  assert.equal(direction.art?.type,'cg',id);
+  assert.equal(direction.art?.file,file,id);
+  assert.deepEqual(direction.cast,cast,id);
+  const portrait=file.replace('.webp','-portrait.webp');
+  assert.ok(fs.existsSync(new URL(`../../assets/cg/${file}`,import.meta.url)),id);
+  assert.ok(fs.existsSync(new URL(`../../assets/cg/${portrait}`,import.meta.url)),id);
+  assert.match(player,new RegExp(`'${file}':'${portrait}'`),id);
+ }
+});
+
 test('S13-S16 preserve environment transitions and use only authored cinematic events',()=>{
  const expected={
   S13:[['skaftafell-parking',[0,7],null,'environment'],['skaftafell-notebook',[0,12],'s13-skaftafell-travelers.webp','cinematic']],
-  S14:[['s14-skaftafell-pace',[0,0],'s14-skaftafell-pace.webp','cinematic'],['s14-lagoon-road',[7,0],null,'environment']],
+  S14:[['s14-skaftafell-pace',[0,0],'s14-skaftafell-pace-rework.webp','cinematic'],['s14-lagoon-road',[7,0],null,'environment']],
   S15:[['jokulsarlon-lagoon',[0,5],'jokulsarlon-master.webp','environment']],
   S16:[['s16-guesthouse-help',[0,1],'s16-guesthouse-help.webp','cinematic'],['s16-kitchen-soup',[4,0],'s16-kitchen-soup.webp','cinematic']]
  };
@@ -181,7 +296,7 @@ test('S18 dance happens before the kiss choice on all options; walking back and 
   const dance=indexOfSource(flow,0,35),walk=indexOfSource(flow,0,39),morning=indexOfSource(flow,5,1),breakfast=indexOfSource(flow,5,3);
   assert.equal(shot('S18',flow,dance,choices).art?.file,'s18-hofn-dance-lights.webp');
   assert.equal(shot('S18',flow,walk,choices).art?.type,'background');
-  assert.equal(shot('S18',flow,morning,choices).art?.file,'s18-hofn-room-morning.webp');
+  assert.equal(shot('S18',flow,morning,choices).art?.file,'s18-hofn-day10-room.webp');
   assert.equal(shot('S18',flow,breakfast,choices).art?.file,'s18-hofn-breakfast-group.webp');
   assert.deepEqual(shot('S18',flow,breakfast,choices).cast,['alice','eric','nick','damir']);
   assert.ok(dance<walk&&walk<morning&&morning<breakfast);
@@ -194,10 +309,10 @@ test('finale location and art change at the literal month-later epilogue for all
   const {flow,choices}=complete(id);
   const first=shot(id,flow,0,choices);
   if(id==='S45')assert.equal(first.art?.file,'s45-reykjavik-warm-montage.webp');
-  if(id==='S46')assert.equal(first.art?.file,'s46-airport-bus-day.webp');
+  if(id==='S46')assert.equal(first.art?.file,'s46-airport-bus.webp');
   if(id==='S47')assert.equal(first.art?.file,'s47-reykjavik-harbour-alice.webp');
   if(id==='S46'){
-   assert.equal(first.art?.file,'s46-airport-bus-day.webp');
+   assert.equal(first.art?.file,'s46-airport-bus.webp');
    assert.equal(shot(id,flow,indexOfSource(flow,0,1),choices).art?.file,'s46-airport-goodbye.webp');
   }
   const month=indexOfSource(flow,chapter,0);
@@ -247,7 +362,7 @@ test('S02 and S26 visual state survives a save/load-shaped choice round trip',()
  const s02=complete('S02');
  const s02Saved=JSON.parse(JSON.stringify(s02.choices));
  const s02Cafe=indexOfSource(s02.flow,0,31);
- assert.equal(shot('S02',s02.flow,s02Cafe,s02Saved).art?.file,'s02-roadside-cafe.webp');
+ assert.equal(shot('S02',s02.flow,s02Cafe,s02Saved).art?.file,'s02-roadside-cafe-group.webp');
  const s26=complete('S26',{'S26-C90':'A','S26-C1':'A'});
  const s26Saved=JSON.parse(JSON.stringify(s26.choices));
  const s26Eric=indexOfSource(s26.flow,7,0);

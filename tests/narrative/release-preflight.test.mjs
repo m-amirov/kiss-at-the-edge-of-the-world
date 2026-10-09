@@ -15,8 +15,9 @@ test('ten-episode game and four endings exist, but publishing remains fail-close
  assert.deepEqual(result.localeContract.runtimeLocales,['ru','en']);
  assert.equal(result.blockers.some(x=>x.code==='LOCALE_REGISTRY_MISMATCH'),false);
  assert.equal(result.blockers.some(x=>x.code==='LOCALIZATION_NOT_VERIFIED'),false);
- assert.equal(result.artAcceptance.status,'PASS');
- assert.equal(result.blockers.some(x=>x.code==='ART_COVERAGE_NOT_ACCEPTED'),false);
+ assert.equal(result.artAcceptance.status,'BLOCKED');
+ assert.equal(result.artAcceptance.code,'ART_ACCEPTANCE_RECORD_MISSING');
+ assert.equal(result.blockers.some(x=>x.code==='ART_COVERAGE_NOT_ACCEPTED'),true);
  assert.ok(result.blockers.some(x=>x.code==='EXTERNAL_YANDEX_EVIDENCE'),'Missing required blocker EXTERNAL_YANDEX_EVIDENCE');
  for(const code of ['OLD_RUNTIME','UNWRITTEN_EPISODES','LITERARY_RUNTIME_INCOMPLETE','NEW_SEASON_NOT_DEFAULT']){
    assert.equal(result.blockers.some(x=>x.code===code),false,`Resolved blocker remains: ${code}`);

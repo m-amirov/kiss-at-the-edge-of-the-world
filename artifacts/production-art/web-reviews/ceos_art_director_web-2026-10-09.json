@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "status": "BLOCKED_PROVENANCE",
+  "role": "ceos_art_director_web",
+  "hostAgentId": "01a11f6b-1f9b-7970-9f3a-6b8feab2b0b9",
+  "taskId": null,
+  "reviewTraceId": null,
+  "declaredModelRoute": "chatgpt-web/gpt-6-sol",
+  "attestedModelRoute": null,
+  "sourceHead": null,
+  "sourceHeadVerified": false,
+  "actualPixelsReceived": true,
+  "transportStatus": "TWO_IMAGE_PAYLOADS_RECEIVED",
+  "provenanceStatus": "BLOCKED_UNATTESTED_SOURCE_AND_ROUTE",
+  "evidenceReceipt": [
+    { "scene": "S01", "dimensions": "1920x900", "hostBytes": 2801924, "hostSha256": "fbe36913e61dde0b889e28c477c5f4102de3438e5fcf0fd98ff67b2090763cdb", "localPath": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S01-nick-arrives-1920x900.png", "localBytes": 1836913, "localSha256": "3b7946db6178d1a48066600185389db9b3385c9d0a4616f4ae22341fd9c1da98" },
+    { "scene": "S63", "dimensions": "390x844", "hostBytes": 420922, "hostSha256": "3334af97b8a22560a71e4d5189e51e97931c25f0114092c59ed9a124c7f397d6", "localPath": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S63-s63-alice-solo-concert-390x844.png", "localBytes": 420922, "localSha256": "3334af97b8a22560a71e4d5189e51e97931c25f0114092c59ed9a124c7f397d6" }
+  ],
+  "semanticVerdict": "PASS_WITH_RESERVATIONS",
+  "checkedSceneCues": ["S01/nick-arrives", "S63/s63-alice-solo-concert"],
+  "findings": { "S01": "PASS", "S63": "PASS_WITH_RESERVATIONS", "assetRegeneration": "NOT_REQUIRED", "crossSceneIdentity": "PARTIAL" },
+  "missingFields": ["taskId", "reviewTraceId", "authenticated modelRoute", "sourceHead", "trusted screenshot-to-source binding", "canonical character/style references"]
+}

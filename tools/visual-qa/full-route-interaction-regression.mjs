@@ -56,6 +56,7 @@ try {
     const errors = []; const failed = []; const modes = viewport.name === 'mobile' ? ['touch', 'keyboard'] : ['click', 'keyboard'];
     page.on('pageerror', error => errors.push(String(error)));
     page.on('requestfailed', request => failed.push(request.url()));
+    await page.route('**/sdk.js', route => route.fulfill({ status: 200, contentType: 'text/javascript', body: 'window.YaGames = undefined;' }));
     await page.addInitScript(({ key, value }) => { if (!localStorage.getItem(key)) localStorage.setItem(key, JSON.stringify(value)); }, { key: literarySaveKey, value: { schemaVersion: 3, sceneId: 'S01', position: 0, choices: {}, finished: false, visited: ['S01'], runId: `interaction-${route}-${viewport.name}-${Date.now()}`, revision: 0 } });
     await page.goto(baseUrl, { waitUntil: 'domcontentloaded' });
     await page.getByRole('button', { name: /Продолжить/ }).click();

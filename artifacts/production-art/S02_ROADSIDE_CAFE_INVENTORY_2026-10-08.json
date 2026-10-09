@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "runId": "2026-10-08T11-26-36-655Z-production-art-6e0221",
+  "sourceHead": "c9041669ef5d1309db309791bfb014bf926218d8",
+  "scene": "S02",
+  "cue": "roadside-cafe",
+  "source": {
+    "file": "content/season-1-vertical-slice-episodes-01-02.md",
+    "chunk": 0,
+    "paragraph": 31,
+    "runtimePosition": "32/37",
+    "previousRuntimePosition": "31/37"
+  },
+  "location": "Придорожное кафе",
+  "time": "день 1, день",
+  "physicalCast": ["alice", "nick", "eric", "damir"],
+  "action": "The four travellers have left the car, entered the cafe, chosen pastries, and Alice calls Marina before returning to the table.",
+  "wardrobeAndContinuity": {
+    "alice": "yellow rain shell, muted wine scarf, short light-brown hair",
+    "nick": "dark travel layers, camera remains a meaningful prop",
+    "eric": "dark navy travel shell, practical road-trip layers",
+    "damir": "light beige travel coat, muted wine scarf, phone/coffee context"
+  },
+  "existingAssetsAudit": [
+    {
+      "path": "assets/backgrounds/s02-roadside-cafe.webp",
+      "result": "insufficient",
+      "reason": "empty environment; cannot prove four physically present characters"
+    },
+    {
+      "path": "assets/cg/s02-expedition-planning-iceland.webp",
+      "result": "reject",
+      "reason": "moving-van planning scene with wrong location and generated readable text"
+    },
+    {
+      "path": "assets/cg/s12-vik-cafe-damir.webp",
+      "result": "reject",
+      "reason": "two-person Vík cafe event; wrong scene, cast and authored action"
+    },
+    {
+      "path": "assets/cg/s37-eric-alice-cafe.webp",
+      "result": "reject",
+      "reason": "two-person later-route cafe event; wrong scene and cast"
+    }
+  ],
+  "decision": "GENERATE_ONE_INTEGRATED_FULL_SCENE_CG_WITH_DESKTOP_AND_PORTRAIT_SAFE_VARIANTS",
+  "prohibited": [
+    "four small cut-out stage figures over the empty background",
+    "moving-car or route-planning composition",
+    "generated readable signage, labels, menus or logos",
+    "identity, wardrobe or weather drift",
+    "romantic framing that removes Alice's agency"
+  ],
+  "requiredEvidence": [
+    "desktop 1920x900 runtime screenshot at 31/37 and 32/37",
+    "portrait 390x844 runtime screenshot at 31/37 and 32/37",
+    "portrait 360x640 runtime screenshot at 31/37 and 32/37",
+    "both S02 C90/C91 choice variants in cafe",
+    "zero console errors, game-owned 404s and overflow",
+    "asset checksums, dimensions and provenance"
+  ]
+}

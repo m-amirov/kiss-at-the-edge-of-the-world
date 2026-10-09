@@ -20,8 +20,8 @@ test('production literary UI bundles the approved Cinematic Romance fonts locall
   assert.match(css, /url\('\.\.\/assets\/fonts\/CormorantGaramond\[wght\]\.ttf'\)/);
   assert.match(css, /url\('\.\.\/assets\/fonts\/Manrope\[wght\]\.ttf'\)/);
   assert.doesNotMatch(css, /fonts\.googleapis\.com|fonts\.gstatic\.com/);
- assert.match(player, /const cover = '\.\.\/assets\/branding\/menu-hero\.webp'/);
-  assert.doesNotMatch(player, /const cover = '\.\/assets\/branding\/kiss-at-the-edge-cover\.png'/);
+  assert.match(player, /const cover = runtimeAssetUrl\('branding\/kiss-at-the-edge-cover\.png'\)/);
+  assert.match(css, /@media\(max-width:680px\)[\s\S]*?\.literary-home::before[\s\S]*?background-position:\s*18%\s*center/);
   assert.match(fs.readFileSync(fileURLToPath(new URL('../../literary.html', import.meta.url)), 'utf8'), /assets\/branding\/kiss-at-the-edge-icon\.png/);
 });
 
@@ -43,6 +43,24 @@ test('main menu keeps only the supported actions and has no retired panels or fo
   assert.doesNotMatch(css, /literary-gallery/);
   assert.match(css, /\.home-actions-secondary \{ display: grid; grid-template-columns: repeat\(2/);
   assert.match(css, /\.home-actions-secondary \{ grid-template-columns: 1fr; \}/);
+});
+
+test('cloud restore is an explicitly separated utility action, not a primary menu CTA', () => {
+  assert.match(player, /const utility=el\('','home-utility'\)/);
+  assert.match(player, /'cloud-restore'\)/);
+  assert.match(css, /\.home-utility\{[\s\S]*?border-top/);
+  assert.match(css, /\.cloud-restore\{[\s\S]*?font-size:\.86em/);
+});
+
+test('background staging prioritizes readable key speakers over a group lineup', () => {
+  assert.match(player, /stageCastForPresentation\(direction\)/);
+  assert.match(player, /stage\.dataset\.layout=direction\.stageComposition/);
+  assert.doesNotMatch(player, /direction\.cast\.length>2\?direction\.cast\.slice\(0,2\)/);
+  assert.match(player, /cast:presentationCast,mode:presentationCast\.length>2\?'group':presentationCast\.length===2\?'pair':'solo'/);
+  assert.match(player, /require three or four people/i);
+  assert.match(css, /\.scene-stage\[data-mode="solo"\]\{inset:4% 10% 23%/);
+  assert.match(css, /\.scene-stage\[data-mode="solo"\] \.stage-character\{width:72vw/);
+  assert.match(css, /\.scene-stage\[data-mode="group"\]\[data-count="4"\]/);
 });
 
 test('narrative navigation is stage-first and retired text controls are absent', () => {
@@ -114,7 +132,7 @@ test('mobile cinematic presentation fills the viewport without empty bands', () 
 });
 
 test('every active production CG has an explicit portrait derivative mapping', () => {
-  const active = ['s13-skaftafell-travelers','s18-hofn-dance-lights','s26-eric-choice','s44-eric-epilogue-month-later','s45-nick-home-epilogue-month-later','s45-reykjavik-warm-montage','s46-airport-goodbye','s46-damir-epilogue-month-later','s47-alice-home-epilogue-month-later','s47-reykjavik-harbour-alice'];
+  const active = ['s13-skaftafell-travelers','s18-hofn-dance-lights','s26-eric-choice','s44-eric-morning-harbour','s44-eric-epilogue-month-later','s45-nick-home-epilogue-month-later','s45-reykjavik-warm-montage','s46-airport-goodbye','s46-damir-epilogue-month-later','s47-alice-home-epilogue-month-later','s47-reykjavik-harbour-alice'];
   for (const id of active) {
     const asset = assetManifest.assets.find(entry => entry.id === id);
     assert.ok(asset?.portraitAsset, `${id} needs an explicit portraitAsset`);

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "phase": "analysis",
+  "pipeline": "production-art",
+  "agent": "ceos_art_director_web",
+  "reviewer": "GPT-6 Sol High",
+  "reviewTraceId": "S38-WEB-HIGH-20261009-01",
+  "taskId": "S38-repair",
+  "evidenceArtifact": "artifacts/production-art/s38-opening-web-review-2026-10-09.json",
+  "sourceHead": "a2308054c338b53ecf2310a1bee44e6f5e54f02a",
+  "actualPixelsReceived": true,
+  "actualPixelsCount": 2,
+  "candidateEvidence": [
+    {
+      "path": "E:/Work/YandexGames/Novells/kiss-at-the-edge-of-the-world-git/artifacts/production-art/candidates/S38-S54-2026-09-25/s38-nick-museum-window.png",
+      "role": "desktop candidate"
+    },
+    {
+      "path": "E:/Work/YandexGames/Novells/kiss-at-the-edge-of-the-world-git/artifacts/production-art/candidates/S38-S54-2026-09-25/s38-nick-museum-window-portrait.png",
+      "role": "portrait candidate"
+    }
+  ],
+  "status": "REWORK",
+  "findings": [
+    "Character identity PASS; portrait head/face crop PASS; museum location PASS.",
+    "Camera absent, but black shoulder straps remain ambiguous under strict acceptance.",
+    "Opening beat FAIL: two museum tickets are not visible, so the supplied candidate does not prove the authored instead-of-camera moment.",
+    "Portrait lower third is overly empty; candidate is not integrated."
+  ],
+  "requiredRework": "Generate a bounded S38 opening pair with two visible tickets, no camera or camera-like straps, and a quieter but purposeful portrait lower area."
+}

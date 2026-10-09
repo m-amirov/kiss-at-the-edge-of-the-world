@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "recordType": "four-scene-art-repair-web-review",
+  "sceneId": "S38",
+  "cue": "s38-ordinary-day",
+  "reviewer": "ceos_art_director_web / GPT-6 Sol High",
+  "transportAgentId": "01a11f25-0fac-77c3-aa00-86047b6b26d6",
+  "taskId": null,
+  "reviewTraceId": null,
+  "sourceHead": "a2308054c338b53ecf2310a1bee44e6f5e54f02a",
+  "actualPixelsReceived": true,
+  "actualPixelsCount": 2,
+  "reviewedEvidence": [
+    "artifacts/evidence/four-scene-art-repair-after-final7-2026-10-09/S38-s38-ordinary-day-ru-1920x900.png",
+    "artifacts/evidence/four-scene-art-repair-after-final7-2026-10-09/S38-s38-ordinary-day-ru-390x844.png"
+  ],
+  "strictVerdict": "PASS",
+  "observations": "Desktop and portrait show Alice and Nick with clear museum tickets, perforations and barcode details; the camera, strap and bag are absent and both heads remain visible.",
+  "metadataGap": "Final reviewer response did not expose taskId or reviewTraceId. transportAgentId is recorded and is not a substitute for either required ID."
+}

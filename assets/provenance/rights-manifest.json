@@ -1,6 +1,61 @@
 {
-  "generatedAt": "2026-10-01",
+  "generatedAt": "2026-10-07",
   "assets": [
+    {
+      "path": "assets/cg/s46-airport-bus.png",
+      "sha256": "528B613714652BD19F84284D440BB4BDED09D9AAA29697D6B6D3A7D540F9CD57",
+      "dimensions": "1832x859",
+      "method": "New integrated medium two-shot generated from approved Alice/Damir masters and airport-bus reference",
+      "source": "Generated in Codex imagegen during production-art run 2026-10-07T15-17-33-578Z-production-art-f7cb94",
+      "license": "generated for this project"
+    },
+    {"path":"assets/cg/s46-airport-bus-portrait.png","sha256":"3677442E937967BD7F96CE6A48EF72A5573700438DF700259ACCD0514AE0CCAB","dimensions":"982x1602","method":"Portrait-safe derivative of accepted CG-2","source":"Generated in Codex imagegen during production-art run 2026-10-07T15-17-33-578Z-production-art-f7cb94","license":"generated for this project"},
+    {"path":"assets/cg/s46-airport-bus.webp","sha256":"65708F08F70087B4963398F6BCD1A7A60AE818ECF24E1E1C75425FC1EB6774C0","dimensions":"1920x900","method":"Production WebP derivative","source":"Derived locally with ffmpeg from accepted CG-2 source","license":"generated for this project"},
+    {"path":"assets/cg/s46-airport-bus-portrait.webp","sha256":"850EBBCED8CB8A5CA2725A5B9A08D4BEE7142A4E5366227B04E3A9775197166A","dimensions":"941x1672","method":"Production WebP derivative","source":"Derived locally with ffmpeg from accepted CG-2 portrait","license":"generated for this project"},
+    {"path":"assets/cg/s42-harbour-cafe.png","sha256":"EBF7502A28EFF0B4E8ED9A28DC325EF6E1163F7F54E1069C3513E2EAAF088243","dimensions":"1832x859","method":"New integrated medium two-shot generated from approved Alice/Eric masters and cafe reference","source":"Generated in Codex imagegen during production-art run 2026-10-07T15-17-33-578Z-production-art-f7cb94","license":"generated for this project"},
+    {"path":"assets/cg/s42-harbour-cafe-portrait.png","sha256":"22B7792D040E55573BB1C297710BB0B609FD86F5673031774A38AA9C05C70CCF","dimensions":"940x1672","method":"Portrait-safe derivative of accepted CG-3","source":"Generated in Codex imagegen during production-art run 2026-10-07T15-17-33-578Z-production-art-f7cb94","license":"generated for this project"},
+    {"path":"assets/cg/s42-harbour-cafe.webp","sha256":"C9C2A67A5E1F49B7BAE6C1AF50821DCF1A4F495FC4B1247335D2E1268FCB3CB2","dimensions":"1920x900","method":"Production WebP derivative","source":"Derived locally with ffmpeg from accepted CG-3 source","license":"generated for this project"},
+    {"path":"assets/cg/s42-harbour-cafe-portrait.webp","sha256":"39A9D7A7E8183C3E28510FCCFDBF7C0CB61CF49550C8695194A9DA2C3240B2F5","dimensions":"941x1672","method":"Production WebP derivative","source":"Derived locally with ffmpeg from accepted CG-3 portrait","license":"generated for this project"},
+    {"path":"assets/cg/s18-hofn-day10-room.png","sha256":"07FA57785A8FDD64685A8A2F2B660BB1DC7905C846F0A201660B7B92D360BC11","dimensions":"1832x859","method":"New integrated medium solo generated from approved Alice and Höfn room references","source":"Generated in Codex imagegen during production-art run 2026-10-07T15-17-33-578Z-production-art-f7cb94","license":"generated for this project"},
+    {"path":"assets/cg/s18-hofn-day10-room-portrait.png","sha256":"12F88DAE5D47953A7B7C805EFB02CF22DED0929DA67E89CFDD81DAD94CD5E881","dimensions":"940x1672","method":"Portrait-safe derivative of accepted CG-4","source":"Generated in Codex imagegen during production-art run 2026-10-07T15-17-33-578Z-production-art-f7cb94","license":"generated for this project"},
+    {"path":"assets/cg/s18-hofn-day10-room.webp","sha256":"240AD5A5023FF8533F48328B53E254789E9A24EF4F1A3BFF561757AD667F6C81","dimensions":"1920x900","method":"Production WebP derivative","source":"Derived locally with ffmpeg from accepted CG-4 source","license":"generated for this project"},
+    {"path":"assets/cg/s18-hofn-day10-room-portrait.webp","sha256":"F77E6810F3DD3AF6049E9738BCA7808F6668B120CE2B0FEC24615B5AB8EC4218","dimensions":"941x1672","method":"Production WebP derivative","source":"Derived locally with ffmpeg from accepted CG-4 portrait","license":"generated for this project"},
+    {"path":"assets/cg/s03-editor-call.png","sha256":"EF8EF130D4ADDCEC3EF17BED3A971989639AFC65190357AAAB5D6149221A1383","dimensions":"1831x859","method":"New integrated medium solo generated from approved Alice and Reykjavik workspace references","source":"Generated in Codex imagegen during production-art run 2026-10-07T15-17-33-578Z-production-art-f7cb94","license":"generated for this project"},
+    {"path":"assets/cg/s03-editor-call-portrait.png","sha256":"0FE0531645E65D9FB4CF583AAAEF1A1BD3F6E57105E0A1693532A3456698EB8C","dimensions":"939x1675","method":"Portrait-safe derivative of accepted CG-5","source":"Generated in Codex imagegen during production-art run 2026-10-07T15-17-33-578Z-production-art-f7cb94","license":"generated for this project"},
+    {"path":"assets/cg/s03-editor-call.webp","sha256":"BD19FB2304371C91DE2DCF69CE58E22E64D6A2814B0B3A79CD4E620709F6189D","dimensions":"1920x900","method":"Production WebP derivative","source":"Derived locally with ffmpeg from accepted CG-5 source","license":"generated for this project"},
+    {"path":"assets/cg/s03-editor-call-portrait.webp","sha256":"45980C4D6930742EFF29FE0EDBF1228B811AD27D3B34526351B703C8FFB9B761","dimensions":"941x1672","method":"Production WebP derivative","source":"Derived locally with ffmpeg from accepted CG-5 portrait","license":"generated for this project"},
+    {
+      "path": "assets/cg/s44-eric-morning-harbour.png",
+      "sha256": "852DB6471BAB43E05576E38BCC6D6DB2275330F2EFF7987DDE521669487D38E5",
+      "dimensions": "1832x858",
+      "method": "New integrated medium two-shot generated from approved Alice/Eric character masters and Reykjavik harbour master; reviewed against S44 farewell brief",
+      "source": "Generated in Codex imagegen during production-art run 2026-10-07T15-17-33-578Z-production-art-f7cb94",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s44-eric-morning-harbour-portrait.png",
+      "sha256": "FAB95B8844E318CD68436B2C28680C80643E9BBF84B5BF8173402320D5CC205E",
+      "dimensions": "941x1672",
+      "method": "Portrait-safe re-composition of accepted CG-1 source using the same approved character/location references",
+      "source": "Generated in Codex imagegen during production-art run 2026-10-07T15-17-33-578Z-production-art-f7cb94; derivative of assets/cg/s44-eric-morning-harbour.png",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s44-eric-morning-harbour.webp",
+      "sha256": "1D23D8D6E10B567499A474B31D5FF86CC8F9DF2F797E417DAB4E271EBDF23EE5",
+      "dimensions": "1920x900",
+      "method": "Production WebP derivative of accepted CG-1 desktop source",
+      "source": "Derived locally with ffmpeg from assets/cg/s44-eric-morning-harbour.png",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s44-eric-morning-harbour-portrait.webp",
+      "sha256": "E399044851181144542C989A20DC21508EBCFCF2F594A27AB881847FB917DCE1",
+      "dimensions": "941x1672",
+      "method": "Production WebP derivative of accepted CG-1 portrait source",
+      "source": "Derived locally with ffmpeg from assets/cg/s44-eric-morning-harbour-portrait.png",
+      "license": "generated for this project"
+    },
     {
       "path": "assets/cg/s44-eric-epilogue-month-later-portrait.png",
       "sha256": "EF6869CE864369E5EE8384F2AED0CDE47AA7CCBCEBED1D0B645FAB350D4DCB9E",
@@ -179,18 +234,18 @@
     },
     {
       "path": "assets/cg/s07-kitchen-pasta.png",
-      "sha256": "452AB108A997FD6371DD338635DDFE94BDBCF7B85A39FB552AE00FBCDE3DD6DF",
+      "sha256": "ACDA492CC1CC2824550600F5BABFA8F6D5039D1879FBD3755C1D2EEBBB768487",
       "dimensions": "1672x941",
-      "method": "Cinematic group composition generated from four character masters; reviewed for authored S07 pasta event",
-      "source": "Generated in Codex imagegen, 2026-09-23",
+      "method": "Native S07 pasta-rescue re-composition after Web High runtime review; full pot, boiling foam, steam, spoon and Nick's stop gesture remain above dialogue occlusion",
+      "source": "Generated in Codex imagegen under CEOS run 2026-10-09",
       "license": "generated for this project"
     },
     {
       "path": "assets/cg/s07-kitchen-pasta-portrait.png",
-      "sha256": "552C38C03679EC662A94439FD33F6DC3C8DCB52215FC3DC6890F1135AF801C2A",
+      "sha256": "808CDA353AB023C75CCC68C50C29A0F2E7C32C27E52AB288EEF4CB957214D235",
       "dimensions": "941x1672",
-      "method": "Independent portrait composition generated from S07 pasta direction",
-      "source": "Generated in Codex imagegen, 2026-09-23",
+      "method": "Portrait re-composition generated in the current CEOS production-art run; pot, spoon and Nick's stop gesture remain above the dialogue-safe area",
+      "source": "Derived from the re-composed S07 desktop in Codex imagegen, 2026-10-09",
       "license": "generated for this project"
     },
     {
@@ -883,10 +938,10 @@
     },
     {
       "path": "assets/cg/s03-editor-call-damir-portrait.png",
-      "sha256": "C6933C24C457D53804CF284880DB8BF6668B38ABDDD3DA0ED7322487C9B764C1",
+      "sha256": "347900742DE900F01A2E0D5D1932E1B246F04E9CDE16276FC798994CAD3EE860",
       "dimensions": "941x1672",
-      "method": "Portrait derivative cropped from the accepted desktop CG for mobile runtime",
-      "source": "Derived from assets/cg/s03-editor-call-damir.png, 2026-10-01",
+      "method": "Codex imagegen portrait re-composition using the S03 setting plus canonical Alice and Damir references; both subjects retained within the mobile safe composition",
+      "source": "Generated in Codex imagegen, 2026-10-06; replaces the portrait derivative that cropped both subjects",
       "license": "generated for this project"
     },
     {
@@ -907,18 +962,18 @@
     },
     {
       "path": "assets/cg/s38-alice-nick-ordinary-day.png",
-      "sha256": "C67F933507FE2E560FE805B15105EACDDE757E419B0BDBDED50EB4B553E6B935",
-      "dimensions": "1920x900",
-      "method": "Codex imagegen current production-art run using canonical character references; exact authored cast/action; desktop CG",
-      "source": "Generated in Codex imagegen, 2026-10-01",
+      "sha256": "4B45F3163D15FA72B7F1001952502080BFEF216A7C0DF3FD15F670612F130612",
+      "dimensions": "1672x941",
+      "method": "Desktop re-composition generated in the current CEOS production-art run; exact authored two-ticket museum opening with no camera or camera straps",
+      "source": "Derived from the accepted S38 museum candidate in Codex imagegen, 2026-10-09",
       "license": "generated for this project"
     },
     {
       "path": "assets/cg/s38-alice-nick-ordinary-day-portrait.png",
-      "sha256": "DE68C959CC20D3777B31D2245ABFBB00ED1E894D3FC5877B23D3063DBB5B2A76",
+      "sha256": "9F084549A62A98877CBD6BE05B0EB357C20C73EAFC1023BF8EEB5F9F841DBE3F",
       "dimensions": "941x1672",
-      "method": "Portrait derivative cropped from the accepted desktop CG for mobile runtime",
-      "source": "Derived from assets/cg/s38-alice-nick-ordinary-day.png, 2026-10-01",
+      "method": "Independent portrait re-composition generated in the current CEOS production-art run; both heads, tickets and museum family photograph kept mobile-safe",
+      "source": "Derived from assets/cg/s38-alice-nick-ordinary-day.png, 2026-10-09",
       "license": "generated for this project"
     },
     {
@@ -1011,10 +1066,122 @@
     },
     {
       "path": "assets/cg/s48-guesthouse-exit-group-portrait.png",
-      "sha256": "C41E6549A0587D676CA3F3EF1136BA4B07C1AF9D3EDE90E923EC8F98D30FF03C",
+      "sha256": "DF679FE75CB874D5BDA9097F3692BEF65EBC8B85FC3B51FB80881BA5CCFDEC5A",
       "dimensions": "941x1672",
-      "method": "Portrait derivative cropped from the accepted desktop CG for mobile runtime",
-      "source": "Derived from assets/cg/s48-guesthouse-exit-group.png, 2026-10-01",
+      "method": "Portrait-safe derivative recomposed from the accepted desktop CG; complete four-person cast retained in a readable central band over a blurred same-image background",
+      "source": "Derived from assets/cg/s48-guesthouse-exit-group.png, 2026-10-08; desktop CG unchanged",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s01-airport-outside-batch2.png",
+      "sha256": "9ED6076F0252FE4A37CBC6D5EDC3121C9379ED90159A2E030D3611F7720E5A23",
+      "dimensions": "1672x941",
+      "method": "Immutable accepted integrated full-scene CG; no regeneration during canonical recovery",
+      "source": "Prior Batch 2 generation run 2026-10-08; recovered from the dirty checkout as an immutable input",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s01-airport-outside-batch2-portrait.png",
+      "sha256": "6D0B8E44EFAA8B85C854C8913D967CD9D8C50CA82D269BE11152C0D556295C3C",
+      "dimensions": "853x1844",
+      "method": "Immutable accepted portrait derivative; no regeneration during canonical recovery",
+      "source": "Prior Batch 2 generation run 2026-10-08; paired with s01-airport-outside-batch2.png",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s01-damir-arrives-batch2.png",
+      "sha256": "1B8BBE70C35837D70AA364D439BEB4A44EB7B0F12A7F35EDF6838D9172ED0A41",
+      "dimensions": "1672x941",
+      "method": "Immutable accepted integrated full-scene CG; no regeneration during canonical recovery",
+      "source": "Prior Batch 2 generation run 2026-10-08; recovered from the dirty checkout as an immutable input",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s01-damir-arrives-batch2-portrait.png",
+      "sha256": "9A0562920502AD313190D3547887D81F5E0134F6AEA96136ED1748FC249A3A8B",
+      "dimensions": "853x1844",
+      "method": "Immutable accepted portrait derivative; no regeneration during canonical recovery",
+      "source": "Prior Batch 2 generation run 2026-10-08; paired with s01-damir-arrives-batch2.png",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s48-last-breakfast-batch2.png",
+      "sha256": "A8364039B1C5A5C38BE7528E65BC22341A0FA4519A713EFA936FF9A512B566A6",
+      "dimensions": "1672x941",
+      "method": "Immutable accepted integrated full-scene CG; no regeneration during canonical recovery",
+      "source": "Prior Batch 2 generation run 2026-10-08; recovered from the dirty checkout as an immutable input",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s48-last-breakfast-batch2-portrait.png",
+      "sha256": "7362F0C38CE4DF98E265C64B1026FA421039DB6785B0B9075A3BAE6AEC8582DE",
+      "dimensions": "1024x1536",
+      "method": "Immutable accepted portrait derivative; no regeneration during canonical recovery",
+      "source": "Prior Batch 2 generation run 2026-10-08; paired with s48-last-breakfast-batch2.png",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s26-route-choice-courtyard-batch2.png",
+      "sha256": "D9483ABE612515734F52B0A1EDD3522DCB2B0F190F4C0C8F2EEB0DFFC0649FA6",
+      "dimensions": "1672x941",
+      "method": "Immutable accepted integrated full-scene CG; no regeneration during canonical recovery",
+      "source": "Prior Batch 2 generation run 2026-10-08; recovered from the dirty checkout as an immutable input",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s26-route-choice-courtyard-batch2-portrait.png",
+      "sha256": "2325AB9EA01FADA35D3FEF79C5CD2A749AAC44D8B0CD86336D1F3C6FE75E9FE2",
+      "dimensions": "853x1844",
+      "method": "Immutable accepted portrait derivative; no regeneration during canonical recovery",
+      "source": "Prior Batch 2 generation run 2026-10-08; paired with s26-route-choice-courtyard-batch2.png",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s26-power-outage-notebook.png",
+      "sha256": "BA487D55AA654204C8F5EF2978793FAD68C559A5E675A40CC9B091BD9D232840",
+      "dimensions": "1672x941",
+      "method": "Native guesthouse power-outage interior re-composition after Web High runtime review; single entry lamp, notebook on windowsill, map and butter stain raised above desktop dialogue occlusion",
+      "source": "Generated in Codex imagegen under CEOS run 2026-10-09T04-54-44-516Z-production-art-d4d9f8",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s26-power-outage-notebook-portrait.png",
+      "sha256": "B30E4BB44EF102D9F2E7104F746BD5D25C094BF171EB698B1AAB656702AC0F1C",
+      "dimensions": "941x1672",
+      "method": "Portrait re-composition of the S26 power-outage interior; notebook, map and butter stain moved above the dialogue-safe area",
+      "source": "Derived from assets/cg/s26-power-outage-notebook.png in Codex imagegen, 2026-10-09",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s02-van-group-batch2.png",
+      "sha256": "B7B01C7A9F13FF73474DDD0BEC17F7F76374A4B7503EB31230D968F3CC274B3E",
+      "dimensions": "1672x940",
+      "method": "Immutable accepted integrated full-scene CG; no regeneration during canonical recovery",
+      "source": "Prior Batch 2 generation run 2026-10-08; recovered from the dirty checkout as an immutable input",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s02-van-group-batch2-portrait.png",
+      "sha256": "714CEE2BAD29F8073316C400D8CBE83BE890236DA825EB4C80F36A36F85E4FA5",
+      "dimensions": "853x1844",
+      "method": "Immutable accepted portrait derivative; no regeneration during canonical recovery",
+      "source": "Prior Batch 2 generation run 2026-10-08; paired with s02-van-group-batch2.png",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s60-souvenir-kitchen-batch2.png",
+      "sha256": "DBE0A40BE91701EE4C9537D88A614BA6E91F918C6F84382790D139F4C0B8876B",
+      "dimensions": "1672x941",
+      "method": "Immutable accepted integrated full-scene CG; no regeneration during canonical recovery",
+      "source": "Prior Batch 2 generation run 2026-10-08; recovered from the dirty checkout as an immutable input",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s60-souvenir-kitchen-batch2-portrait.png",
+      "sha256": "F7654ED2A16ED3A8F999DA79466719590A99E987E8ADCA4BF24FCE9A17EB0297",
+      "dimensions": "853x1844",
+      "method": "Immutable accepted portrait derivative; no regeneration during canonical recovery",
+      "source": "Prior Batch 2 generation run 2026-10-08; paired with s60-souvenir-kitchen-batch2.png",
       "license": "generated for this project"
     },
     {
@@ -1104,6 +1271,222 @@
       "license": "ACE-Step code and model MIT; generated output permitted for commercial use per official model card",
       "cueId": "ending",
       "loopable": false
+    },
+    {
+      "path": "assets/cg/s02-roadside-cafe-group.png",
+      "sha256": "DFF2AAE7D2375B4AF67DCE628110EEDD04246A7ECDFE6B547CFAEA0259970771",
+      "dimensions": "1831x859",
+      "method": "Integrated desktop full-scene CG generated with canonical Alice, Eric, Nick, Damir and roadside-cafe references",
+      "source": "Generated in Codex imagegen during production-art run 2026-10-08T11-26-36-655Z-production-art-6e0221",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s02-roadside-cafe-group-portrait.png",
+      "sha256": "B2259FB52452E9D531A41D4469DFC5D0969F059A6BF627A6965863ECBA70BA6D",
+      "dimensions": "941x1672",
+      "method": "Portrait-safe integrated full-scene CG generated with the same canonical cast and location references",
+      "source": "Generated in Codex imagegen during production-art run 2026-10-08T11-26-36-655Z-production-art-6e0221",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s02-roadside-cafe-group.webp",
+      "sha256": "EB7848A8EDBA79BB36B2F0E88620F4131BA0103883729BB96A1773074AC78092",
+      "dimensions": "1831x859",
+      "method": "Lossless runtime WebP derivative of the integrated desktop CG",
+      "source": "Derived locally from assets/cg/s02-roadside-cafe-group.png",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s02-roadside-cafe-group-portrait.webp",
+      "sha256": "E93ADBC77C25FD23A7BE2796044B471BAE878198B12A3E0A61A5239786CF72DA",
+      "dimensions": "941x1672",
+      "method": "Lossless runtime WebP derivative of the portrait-safe integrated CG",
+      "source": "Derived locally from assets/cg/s02-roadside-cafe-group-portrait.png",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s01-nick-arrives-placard-ru.png",
+      "sha256": "106CBA1DB10083037E2A3C06EB3051EB5FF2133D30DF4ED8D5F6520EB0ECDD68",
+      "dimensions": "1672x941",
+      "method": "Integrated desktop CG generated with canonical Alice, Nick and Keflavik arrivals references; exact Russian marker lettering composited onto the physical wet cardboard",
+      "source": "Generated in Codex imagegen during production-art run 2026-10-08T17-21-04-993Z-production-art-c6e9de; lettering composited locally from the authored S01.C000.P004 text",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s01-nick-arrives-placard-ru-portrait.png",
+      "sha256": "1A457EBBEA221FF36FA9E8CFA6A9E1897DDAA12A183D6AB7D26C2A6DB7DCE5A7",
+      "dimensions": "940x1672",
+      "method": "Portrait-safe integrated CG generated with the same canonical cast and location references; exact Russian marker lettering composited onto the physical wet cardboard",
+      "source": "Generated in Codex imagegen during production-art run 2026-10-08T17-21-04-993Z-production-art-c6e9de; lettering composited locally from the authored S01.C000.P004 text",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s01-nick-arrives-placard-ru.webp",
+      "sha256": "25910C3C449B71162F1F44924347478502748513917A506F2EAE95E955CB69F7",
+      "dimensions": "1672x941",
+      "method": "Runtime WebP derivative of the integrated Russian desktop CG",
+      "source": "Derived locally from assets/cg/s01-nick-arrives-placard-ru.png",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s01-nick-arrives-placard-ru-portrait.webp",
+      "sha256": "A86F7F376015D2A6D100A661F0C81F55ADEDB62A23DA2D228117C5DA246B0666",
+      "dimensions": "940x1672",
+      "method": "Runtime WebP derivative of the integrated Russian portrait-safe CG",
+      "source": "Derived locally from assets/cg/s01-nick-arrives-placard-ru-portrait.png",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s01-nick-arrives-placard-en.png",
+      "sha256": "C61F5A9485F5EAC8B7F59B8AB232031710E635DA98AE1DAF233940B4878D8BCD",
+      "dimensions": "1672x941",
+      "method": "Integrated desktop CG generated with canonical Alice, Nick and Keflavik arrivals references; exact English marker lettering composited onto the physical wet cardboard",
+      "source": "Generated in Codex imagegen during production-art run 2026-10-08T17-21-04-993Z-production-art-c6e9de; lettering composited locally from the authored S01.C000.P004 text",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s01-nick-arrives-placard-en-portrait.png",
+      "sha256": "B9E914D403A87A3A7E974B34853C36531565AF555D8A1D19D99D518289FF748F",
+      "dimensions": "940x1672",
+      "method": "Portrait-safe integrated CG generated with the same canonical cast and location references; exact English marker lettering composited onto the physical wet cardboard",
+      "source": "Generated in Codex imagegen during production-art run 2026-10-08T17-21-04-993Z-production-art-c6e9de; lettering composited locally from the authored S01.C000.P004 text",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s01-nick-arrives-placard-en.webp",
+      "sha256": "324E10760EFF6D24D7D9174E14A6D10FF94479B76BBEF68316BC19BC3CF544C5",
+      "dimensions": "1672x941",
+      "method": "Runtime WebP derivative of the integrated English desktop CG",
+      "source": "Derived locally from assets/cg/s01-nick-arrives-placard-en.png",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s01-nick-arrives-placard-en-portrait.webp",
+      "sha256": "818B4F8FE29CAAF771104E3AA78796993B51F4ECCBD2C2DC86CBBDD98B7FD1B4",
+      "dimensions": "940x1672",
+      "method": "Runtime WebP derivative of the integrated English portrait-safe CG",
+      "source": "Derived locally from assets/cg/s01-nick-arrives-placard-en-portrait.png",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/backgrounds/s18-hofn-harbour-portrait.png",
+      "sha256": "9731E0AE421FB1DD306685942DD340E1F392111AFEDC6BA086DB3EE09703E348",
+      "dimensions": "941x1672",
+      "method": "Scene-specific portrait background re-composition; lighthouse, harbour pier, boats and mountain context retained for S18 mobile runtime",
+      "source": "Derived from assets/backgrounds/s18-hofn-harbour.png in Codex imagegen, 2026-10-09",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s04-thingvellir-trail-rework.png",
+      "sha256": "DF00A69FA75292A60E664D7687D7D14B5B1E1A8655BFC9A12BB639CAD2C25263",
+      "dimensions": "1672x941",
+      "method": "Native Image Gen after fresh CEOS run-scoped capability challenge; canonical cast/location references; authored S04 repair",
+      "source": "Generated in current CEOS production-art run 2026-10-09; Web High review pending",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s04-thingvellir-trail-rework-portrait.png",
+      "sha256": "5A53C7737E47BB1F6D21198CACB375F780B21FB8088F5CC26637A03C8E6ED4E4",
+      "dimensions": "941x1672",
+      "method": "Native Image Gen portrait composition derived from S04 authored repair",
+      "source": "Generated in current CEOS production-art run 2026-10-09; Web High review pending",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s11-reynisfjara-information-board-rework.png",
+      "sha256": "617905AAC7966197E771D11F433C788AB26FED8797EF33851924B8E6A9EAE924",
+      "dimensions": "1672x941",
+      "method": "Native Image Gen after fresh CEOS run-scoped capability challenge; canonical cast/location references; authored S11 repair",
+      "source": "Generated in current CEOS production-art run 2026-10-09; Web High review pending",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s11-reynisfjara-information-board-rework-portrait.png",
+      "sha256": "463E771A26A2775980675970A2A63D861D6DBD194B5C0D85A3115BDB87F153F9",
+      "dimensions": "941x1672",
+      "method": "Native Image Gen portrait composition derived from S11 authored repair",
+      "source": "Generated in current CEOS production-art run 2026-10-09; Web High review pending",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s12-vik-cafe-damir-rework.png",
+      "sha256": "41AB56B3A73A0752D31A8AA397FF9E57E34C5BAADECF13C8111E2FFB9F7EC138",
+      "dimensions": "1672x941",
+      "method": "Native Image Gen after fresh CEOS run-scoped capability challenge; canonical Alice/Damir/cafe references; authored S12 repair",
+      "source": "Generated in current CEOS production-art run 2026-10-09; Web High review pending",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s12-vik-cafe-damir-rework-portrait.png",
+      "sha256": "3B92FE765CEB63707B9315267CF28DDC50C978A6243CC798B897652576F90337",
+      "dimensions": "941x1672",
+      "method": "Native Image Gen portrait composition derived from S12 authored repair",
+      "source": "Generated in current CEOS production-art run 2026-10-09; Web High review pending",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s14-skaftafell-pace-rework.png",
+      "sha256": "ED6F1EDE94B207166EFD76E0B59C9F31528B7A8A976687FC7B488E07CF8FC5B4",
+      "dimensions": "1672x941",
+      "method": "Native Image Gen after fresh CEOS run-scoped capability challenge; canonical Alice/Eric/trail references; authored S14 repair",
+      "source": "Generated in current CEOS production-art run 2026-10-09; Web High review pending",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s14-skaftafell-pace-rework-portrait.png",
+      "sha256": "4339088044023C85D67A1538FB8DFDE85A4B05EE476871E41FC1079879AEB502",
+      "dimensions": "941x1672",
+      "method": "Native Image Gen portrait composition derived from S14 authored repair",
+      "source": "Generated in current CEOS production-art run 2026-10-09; Web High review pending",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s19-hofn-pool-opening-rework.png",
+      "sha256": "CC940F5F532833A42DE5D8B01D3935B80C10A1E13AD05D082EE9EE6D7F969D09",
+      "dimensions": "1672x941",
+      "method": "Native Image Gen after fresh CEOS run-scoped capability challenge; canonical Alice/Nick/pool-entrance references; authored S19 repair",
+      "source": "Generated in current CEOS production-art run 2026-10-09; Web High review pending",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s19-hofn-pool-opening-rework-portrait.png",
+      "sha256": "18FB08A2E8091CE28C2E103856E123DD2A8BCF10C5A85C1858B72A8D53EAE90F",
+      "dimensions": "940x1672",
+      "method": "Native Image Gen portrait composition derived from S19 authored repair",
+      "source": "Generated in current CEOS production-art run 2026-10-09; Web High review pending",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s05-hveragerdi-van-warning-rework.png",
+      "sha256": "F322E3F3E66FAD3A9734B9E1FE4A9DFB7F3E12F8EA494F7907D75D2F902CDB69",
+      "dimensions": "1672x941",
+      "method": "Native Image Gen after fresh CEOS run-scoped capability challenge; authored S05 seated-van repair",
+      "source": "Generated in current CEOS production-art run 2026-10-09; Web High review pending",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s05-hveragerdi-van-warning-rework-portrait.png",
+      "sha256": "7694BA4A0AE588D21969A61366A61C77462E3BFD77F06710CED6F4F4764359C2",
+      "dimensions": "941x1672",
+      "method": "Native Image Gen portrait composition derived from S05 authored repair",
+      "source": "Generated in current CEOS production-art run 2026-10-09; Web High review pending",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s22-eastfjords-van-road-rework.png",
+      "sha256": "6FAC9A029012C86DBBE6608C25E827DB31C41C96844ED1C2F7E954D2EAA75CB7",
+      "dimensions": "1672x941",
+      "method": "Native Image Gen after fresh CEOS run-scoped capability challenge; authored S22 seated-van repair",
+      "source": "Generated in current CEOS production-art run 2026-10-09; Web High review pending",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s22-eastfjords-van-road-rework-portrait.png",
+      "sha256": "E465222067521654CF7BE3CBE449CB3D319F02263A3734BA2F9F4BD3655A8514",
+      "dimensions": "941x1672",
+      "method": "Native Image Gen portrait composition derived from S22 authored repair",
+      "source": "Generated in current CEOS production-art run 2026-10-09; Web High review pending",
+      "license": "generated for this project"
     }
   ]
 }

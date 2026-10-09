@@ -1,0 +1,105 @@
+import fs from 'node:fs/promises';
+import crypto from 'node:crypto';
+import path from 'node:path';
+import { fileURLToPath, pathToFileURL } from 'node:url';
+import { literarySeason } from '../../src/literary-season-data.js';
+import { compileInteractivePlayback } from '../../src/literary-pacing.js';
+import { literarySaveKey } from '../../src/literary-engine.js';
+import { visualAt } from '../../src/literary-visual-directions.js';
+import { stageForScene } from '../../src/literary-stage.js';
+
+const root = path.resolve(fileURLToPath(new URL('../..', import.meta.url)));
+const output = path.resolve(process.env.REFRAME_BATCH1_OUTPUT ?? path.join(root, 'artifacts/evidence/reframe-batch1-2026-10-08'));
+const phase = process.env.REFRAME_BATCH1_PHASE ?? 'before';
+const baseUrl = process.env.LITERARY_QA_URL ?? 'http://127.0.0.1:4174/literary.html';
+const { chromium } = await import(pathToFileURL('C:/Users/user/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs').href);
+const views = [{ name: 'desktop', width: 1920, height: 900 }, { name: 'mobile', width: 390, height: 844 }];
+const targets = [
+  { id: 'S04-scene-start', sceneId: 'S04', beatId: 'scene-start' },
+  { id: 'S04-thingvellir-trail', sceneId: 'S04', beatId: 'thingvellir-trail' },
+  { id: 'S09-scene-start', sceneId: 'S09', beatId: 'scene-start' },
+  { id: 'S09-skogafoss-trail', sceneId: 'S09', beatId: 'skogafoss-trail' },
+  { id: 'S13-scene-start', sceneId: 'S13', beatId: 'scene-start' },
+  { id: 'S13-skaftafell-parking', sceneId: 'S13', beatId: 'skaftafell-parking' },
+  { id: 'S36-scene-start', sceneId: 'S36', beatId: 'scene-start' },
+  { id: 'S36-snaefellsnes-drive', sceneId: 'S36', beatId: 'snaefellsnes-drive' }
+];
+const sdkStub = `window.YaGames={init:async()=>({environment:{i18n:{lang:'ru'}},features:{LoadingAPI:{ready(){}},GameplayAPI:{start(){},stop(){}}},adv:{showFullscreenAdv({callbacks}){callbacks?.onClose?.();}},getPlayer:async()=>({getData:async()=>({}),setData:async()=>{}}),on(){},off(){}})};`;
+const choices = Object.fromEntries(literarySeason.scenes.flatMap(scene => scene.chunks.map(chunk => chunk.title.match(/(S\d{2}-C\d+)/)?.[1]).filter(Boolean)).map(id => [id, 'A']));
+const sceneById = id => literarySeason.scenes.find(scene => scene.id === id);
+const flowFor = (sceneId, route) => compileInteractivePlayback(sceneById(sceneId), { ...choices, ...(route ? { 'S26-C1': route } : {}) });
+function targetPosition(target) {
+  const flow = flowFor(target.sceneId, target.route);
+  const first = flow.findIndex(entry => visualAt(target.sceneId, entry, { ...choices, ...(target.route ? { 'S26-C1': target.route } : {}) }, stageForScene(target.sceneId, { ...choices, ...(target.route ? { 'S26-C1': target.route } : {}) }).cast).beatId === target.beatId);
+  if (first < 0) throw new Error(`Missing visual beat ${target.sceneId}/${target.beatId}`);
+  return { flow, position: first };
+}
+function stateFor(target, position) {
+  return { schemaVersion: 3, sceneId: target.sceneId, position, choices: { ...choices, ...(target.route ? { 'S26-C1': target.route } : {}) }, finished: false, visited: ['S01', target.sceneId], runId: `reframe-batch1-${phase}-${target.id}-${Date.now()}`, revision: 0 };
+}
+function digest(bytes) { return crypto.createHash('sha256').update(bytes).digest('hex'); }
+function safeId(value) { return value.replaceAll('/', '_'); }
+function targetReadback() {
+  const picture = document.querySelector('.literary-picture');
+  const image = picture?.querySelector('img');
+  const app = document.querySelector('.literary-reader');
+  const sheet = document.querySelector('.reader-sheet');
+  const stage = [...document.querySelectorAll('.stage-character')];
+  const allImages = [...document.images];
+  const rect = node => { const box = node?.getBoundingClientRect(); return box && { left: box.left, top: box.top, right: box.right, bottom: box.bottom, width: box.width, height: box.height }; };
+  return {
+    sceneId: window.__LITERARY_QA__?.getScreen?.().sceneId ?? document.querySelector('.chapter-index')?.textContent?.match(/S\d+/)?.[0] ?? null,
+    cue: picture?.dataset.visualBeat ?? null,
+    asset: image?.dataset.asset ?? null,
+    desktopAsset: image?.dataset.desktopAsset ?? null,
+    natural: [image?.naturalWidth ?? 0, image?.naturalHeight ?? 0],
+    presentation: document.querySelector('#literary-app')?.dataset.presentation ?? null,
+    stageCount: stage.length,
+    stageCharacters: stage.map(node => ({ className: node.className, rect: rect(node), imageRect: rect(node.querySelector('img')) })),
+    pictureRect: rect(picture),
+    sheetRect: rect(sheet),
+    appRect: rect(app),
+    viewport: [innerWidth, innerHeight],
+    overflow: document.documentElement.scrollWidth > innerWidth || document.documentElement.scrollHeight > innerHeight,
+    internalScroll: Boolean(document.querySelector('.reader-content')?.scrollHeight > document.querySelector('.reader-content')?.clientHeight + 1),
+    imagesReady: allImages.every(item => item.complete && item.naturalWidth > 0),
+    requiredCastText: document.querySelector('.reader-content')?.innerText ?? ''
+  };
+}
+await fs.mkdir(output, { recursive: true });
+const browser = await chromium.launch({ executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: true });
+const evidence = { generatedAt: new Date().toISOString(), phase, currentHead: process.env.GIT_HEAD ?? null, baseUrl, targets: [] };
+try {
+  for (const target of targets) {
+    const { flow, position } = targetPosition(target);
+    const capturePositions = [{ label: 'previous', position: Math.max(0, position - 1) }, { label: 'target', position }, { label: 'next', position: Math.min(flow.length - 1, position + 1) }];
+    const targetEvidence = { ...target, targetPosition: position, flowLength: flow.length, captures: [] };
+    for (const view of views) for (const capture of capturePositions) {
+      const context = await browser.newContext({ viewport: { width: view.width, height: view.height } });
+      const page = await context.newPage();
+      const consoleErrors = [], failedRequests = [], notFound = [];
+      page.on('pageerror', error => consoleErrors.push(String(error)));
+      page.on('console', message => { if (message.type() === 'error') consoleErrors.push(message.text()); });
+      page.on('requestfailed', request => failedRequests.push(request.url()));
+      page.on('response', response => { if (response.status() === 404) notFound.push(response.url()); });
+      await page.addInitScript({ content: sdkStub });
+      await page.route('**/sdk.js', route => route.fulfill({ contentType: 'text/javascript', body: sdkStub }));
+      await page.addInitScript(({ key, value }) => localStorage.setItem(key, JSON.stringify(value)), { key: literarySaveKey, value: stateFor(target, capture.position) });
+      await page.goto(baseUrl, { waitUntil: 'networkidle' });
+      await page.getByRole('button', { name: /Продолжить/ }).click();
+      await page.locator('.reader-sheet').waitFor();
+      await page.waitForFunction(() => [...document.images].every(image => image.complete && image.naturalWidth > 0));
+      await page.evaluate(async () => { await Promise.all([...document.images].map(image => image.decode?.().catch(() => {}))); await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))); });
+      const readback = await page.evaluate(targetReadback);
+      const file = path.join(output, `${phase}-${safeId(target.id)}-${capture.label}-${view.name}-${view.width}x${view.height}.png`);
+      await page.screenshot({ path: file });
+      const bytes = await fs.readFile(file);
+      targetEvidence.captures.push({ label: capture.label, position: capture.position, view, file, sha256: digest(bytes), bytes: bytes.length, readback, consoleErrors, failedRequests, notFound });
+      await context.close();
+    }
+    evidence.targets.push(targetEvidence);
+  }
+} finally { await browser.close(); }
+await fs.writeFile(path.join(output, `evidence-${phase}.json`), JSON.stringify(evidence, null, 2));
+const failures = evidence.targets.flatMap(target => target.captures.filter(capture => capture.consoleErrors.length || capture.failedRequests.length || capture.notFound.length || capture.readback.overflow || capture.readback.internalScroll || !capture.readback.imagesReady));
+console.log(JSON.stringify({ status: failures.length ? 'FAIL' : 'PASS', phase, targets: evidence.targets.length, captures: evidence.targets.reduce((sum, target) => sum + target.captures.length, 0), failures: failures.length, output }, null, 2));

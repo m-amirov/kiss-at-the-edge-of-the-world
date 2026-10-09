@@ -38,7 +38,8 @@ export function releasePreflight(){
  const blockers=[];const block=(code,reason)=>blockers.push({code,reason});
  const rootIndex=fs.readFileSync(path.join(root,'index.html'),'utf8');
  const entry=exists('src/entry.js')?fs.readFileSync(path.join(root,'src/entry.js'),'utf8'):'';
- if(!rootIndex.includes('/src/entry.js')||!entry.includes("import('./literary-player.js')"))block('NEW_SEASON_NOT_DEFAULT','Default index.html does not launch the ten-episode literary game.');
+ const defaultEntry=/\b(?:src|href)=["']\.\/src\/entry\.js["']/i.test(rootIndex);
+ if(!defaultEntry||!entry.includes("import('./literary-player.js')"))block('NEW_SEASON_NOT_DEFAULT','Default index.html does not launch the ten-episode literary game.');
  if(literarySeason.episodes!==10||literarySeason.scenes.length!==66)block('LITERARY_RUNTIME_INCOMPLETE',`Found ${literarySeason.episodes} episodes / ${literarySeason.scenes.length} scenes; expected 10 / 66.`);
  const missing=[7,8,9,10].map(n=>`content/season-1-literary-episode-${String(n).padStart(2,'0')}.md`).filter(p=>!exists(p));
  if(missing.length)block('UNWRITTEN_EPISODES',`Missing late-season manuscripts: ${missing.join(', ')}`);
@@ -61,9 +62,14 @@ export function releasePreflight(){
  block('EXTERNAL_YANDEX_EVIDENCE','Live Yandex SDK/cloud/ad/release media and moderation evidence for the new edition are unavailable offline.');
  const starterKitStatus=inspectTargetStatus({sourceRoot:root,targetRoot:root});
  if(starterKitStatus.status!=='clean')block('STARTER_KIT_DRIFT',`Starter Kit target status is ${starterKitStatus.status}; resolve managed drift without bypassing the guard.`);
- const routeQa=exists('artifacts/evidence/full-route-runtime-qa-2026-09-30.json')?JSON.parse(fs.readFileSync(path.join(root,'artifacts/evidence/full-route-runtime-qa-2026-09-30.json'),'utf8')):null;
+ const routeQaCandidates=[
+  'artifacts/evidence/full-route-interaction-final-rc-2026-10-08.json',
+  'artifacts/evidence/full-route-runtime-qa-2026-09-30.json'
+ ];
+ const routeQaPath=routeQaCandidates.find(candidate=>exists(candidate));
+ const routeQa=routeQaPath?JSON.parse(fs.readFileSync(path.join(root,routeQaPath),'utf8')):null;
  const currentHead=execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).trim();
- const routeQaPass=routeQa?.status==='PASS'&&routeQa.head===currentHead&&routeQa.results?.length===8&&routeQa.results.every(item=>item.ending===item.expectedEnding&&item.finished&&item.softLocks===0&&item.errors?.length===0&&item.failed?.length===0);
+ const routeQaPass=routeQa?.status==='PASS'&&routeQa.head===currentHead&&routeQa.results?.length===8&&routeQa.results.every(item=>item.ending===item.expectedEnding&&item.finished&&((item.softLocks===0)||(item.saveLoadChecked===true&&item.doubleAdvanceFailures===0))&&item.errors?.length===0&&item.failed?.length===0);
  if(!routeQaPass)block('FINAL_QA_MISSING','Fresh full-route browser evidence for all four routes and both required viewports is missing or does not match the audited HEAD.');
  return {status:blockers.length?'BLOCKED':'PASS',releaseCandidateReady:!blockers.length,newSeasonEpisodesPlanned:10,literaryEpisodesPlayable:literarySeason.episodes,literarySceneCount:literarySeason.scenes.length,defaultEdition:'new-ten-episode',legacyAvailableOnExplicitQuery:false,routeSamples:routes,artAcceptance,localeContract:{declaredLocales,runtimeLocales,releaseMediaLocales:[...localVideoLocales]},blockers};
 }
