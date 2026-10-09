@@ -4,6 +4,10 @@
   "batchPlan": "artifacts/production-art/WEB_HIGH_BATCH_1_2026-10-09.json",
   "verificationHead": "a608493e259570f3040f76c94d2b9d3b3d0c65d7",
   "runtimeSourceHead": "e106c59695a5092b0ad13fa0515e83989bc47837",
+  "productSnapshot": {
+    "repositoryId": "677b4c6e9426bcf9167f30ebae020fab254a1b7270639f5bbe810b2156ce491c",
+    "sha256": "08bb7fe97e6bc83f248a42c33a2e96d7c8c906bf7c79a98e9db7f2d259e30228"
+  },
   "scenes": ["S03", "S18", "S42", "S44", "S46"],
   "roles": ["ceos_reasoner_web", "ceos_bulk_checker_web", "ceos_art_director_web"],
   "viewports": ["1920x900", "390x844", "360x640"],
