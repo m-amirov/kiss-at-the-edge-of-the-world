@@ -39,7 +39,11 @@ const readback = () => {
   const picture = document.querySelector('.literary-picture');
   const image = picture?.querySelector('img');
   const stage = [...document.querySelectorAll('.stage-character')];
+  const stageNode = document.querySelector('.scene-stage');
   const sheet = document.querySelector('.reader-sheet');
+  const paragraph = document.querySelector('.reader-paragraph');
+  const stageStyle = stageNode ? getComputedStyle(stageNode) : null;
+  const actorStyle = stage[0]?.querySelector('img') ? getComputedStyle(stage[0].querySelector('img')) : null;
   return {
     cue: picture?.dataset.visualBeat ?? null,
     asset: image?.dataset.asset ?? null,
@@ -48,8 +52,12 @@ const readback = () => {
     stageCount: stage.length,
     stageMode: document.querySelector('.scene-stage')?.dataset.mode ?? null,
     stageLayout: document.querySelector('.scene-stage')?.dataset.layout ?? null,
+    stageTransform: stageStyle?.transform ?? null,
+    actorMaskImage: actorStyle?.maskImage ?? null,
+    actorWebkitMaskImage: actorStyle?.webkitMaskImage ?? null,
     stageCharacters: stage.map(node => ({ className: node.className, rect: box(node), imageRect: box(node.querySelector('img')) })),
     sheetRect: box(sheet),
+    paragraphRect: box(paragraph),
     viewport: [innerWidth, innerHeight],
     overflow: document.documentElement.scrollWidth > innerWidth || document.documentElement.scrollHeight > innerHeight,
     internalScroll: Boolean(document.querySelector('.reader-content')?.scrollHeight > document.querySelector('.reader-content')?.clientHeight + 1),

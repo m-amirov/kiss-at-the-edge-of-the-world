@@ -820,6 +820,9 @@ button.primary:hover{background:linear-gradient(135deg,#d19b76,#a36d51);filter:n
     display:block;
     overflow:visible;
   }
+  .literary-reader[data-scene="S18"] .scene-stage[data-layout="s18-hofn-lighthouse-short-mobile"]{
+    transform:translateY(var(--mobile-hud-safe-shift));
+  }
   .scene-stage[data-layout="s18-hofn-lighthouse-short-mobile"] .stage-character{
     position:absolute;
     bottom:0;
@@ -833,6 +836,8 @@ button.primary:hover{background:linear-gradient(135deg,#d19b76,#a36d51);filter:n
     width:100%;
     height:100%;
     object-position:center bottom;
+    -webkit-mask-image:linear-gradient(to bottom,rgba(0,0,0,1) 0%,rgba(0,0,0,1) 26%,rgba(0,0,0,.82) 34%,rgba(0,0,0,0) 50%);
+    mask-image:linear-gradient(to bottom,rgba(0,0,0,1) 0%,rgba(0,0,0,1) 26%,rgba(0,0,0,.82) 34%,rgba(0,0,0,0) 50%);
   }
   .scene-stage[data-layout="s18-hofn-lighthouse-short-mobile"] .stage-character:nth-child(1){left:7%;transform:scale(1.03);z-index:3}
   .scene-stage[data-layout="s18-hofn-lighthouse-short-mobile"] .stage-character:nth-child(2){left:39%;transform:scale(.94) translateY(-3%);z-index:2}
