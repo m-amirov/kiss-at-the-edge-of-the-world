@@ -21,4 +21,4 @@ jobs:
       - name: Validate types
         run: bun run typecheck
       - name: Receipt and writer regression
-        run: bun test tests/evidence-writer.test.ts tests/host-observed-receipt.test.ts
+        run: bun test tests/evidence-writer.test.ts tests/host-observed-receipt.test.ts tests/dev-host-observed-batch-preflight.test.ts
