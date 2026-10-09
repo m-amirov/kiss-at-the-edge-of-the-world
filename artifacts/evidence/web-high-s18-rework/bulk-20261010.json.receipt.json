@@ -1,0 +1,78 @@
+{
+  "checkpoint": "browser-receipt-persisted",
+  "sourceHead": "2901605e000445776891467740994e15bf63299c",
+  "scene": "s18-rework-ceos_bulk_checker_web-20261010",
+  "role": "ceos_bulk_checker_web",
+  "turnId": "s18-rework-ceos_bulk_checker_web-20261010",
+  "planPath": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-s18-rework-2026-10-10\\artifacts\\production-art\\WEB_HIGH_S18_REWORK_2026-10-10.json",
+  "attachments": [
+    {
+      "ref": "codex-input-image-1",
+      "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-s18-rework-2026-10-10\\artifacts\\evidence\\s18-rework-2026-10-10\\runtime\\target-desktop-1920x900.png",
+      "sha256": "de4c891f489bd2c5fb5b0658cde66d2161921d48ce3a037f4192c363c9d99bd3",
+      "bytes": 1844787
+    },
+    {
+      "ref": "codex-input-image-2",
+      "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-s18-rework-2026-10-10\\artifacts\\evidence\\s18-rework-2026-10-10\\runtime\\target-portrait390-390x844.png",
+      "sha256": "0ddcb1ad76d9c89bd3ab6c78b0fa2804fabd293d7f330db8a4e3a7b60cd6e5f2",
+      "bytes": 429520
+    },
+    {
+      "ref": "codex-input-image-3",
+      "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-s18-rework-2026-10-10\\artifacts\\evidence\\s18-rework-2026-10-10\\runtime\\target-portrait360-360x640.png",
+      "sha256": "cd6e962a921d7d1dd392d65217d748ea5c19b12749c33a21eb79e769e63efe5e",
+      "bytes": 301496
+    }
+  ],
+  "receipt": {
+    "schema": "codex.web.host-observed-receipt.v1",
+    "assurance": "host-observed",
+    "providerAttested": false,
+    "provider": {
+      "taskId": null,
+      "responseId": null,
+      "reviewTraceId": null
+    },
+    "source": {
+      "sourceHead": "2901605e000445776891467740994e15bf63299c",
+      "scene": "s18-rework-ceos_bulk_checker_web-20261010",
+      "viewport": "multi",
+      "attachments": [
+        {
+          "ref": "codex-input-image-1",
+          "sha256": "de4c891f489bd2c5fb5b0658cde66d2161921d48ce3a037f4192c363c9d99bd3",
+          "bytes": 1844787
+        },
+        {
+          "ref": "codex-input-image-2",
+          "sha256": "0ddcb1ad76d9c89bd3ab6c78b0fa2804fabd293d7f330db8a4e3a7b60cd6e5f2",
+          "bytes": 429520
+        },
+        {
+          "ref": "codex-input-image-3",
+          "sha256": "cd6e962a921d7d1dd392d65217d748ea5c19b12749c33a21eb79e769e63efe5e",
+          "bytes": 301496
+        }
+      ]
+    },
+    "browser": {
+      "bridgeTraceId": "210a7ea72f84",
+      "assistantTurnIdentity": "group:assistant:e85ab4c2-b7c9-4339-a80b-9663a92b12fe",
+      "userTurnIdentity": "group:user:e85ab4c2-b7c9-4339-a80b-9663a92b12fe",
+      "submission": "tile-visible-and-send-enabled",
+      "submissionEvidence": "user_turn",
+      "completion": "stable-dom-completion-action"
+    },
+    "route": {
+      "requestedModel": "chatgpt-web/gpt-6-sol",
+      "selectedModel": "chatgpt-web/gpt-6-sol",
+      "reasoning": "high",
+      "selectedReasoning": "high"
+    },
+    "answer": {
+      "sha256": "e1b5ea0198a3e9822c9e14cf16d1e27725da42e969cbb85efdab218c172ecc4e",
+      "text": "```\n{\n  \"verdict\": \"PASS\",\n  \"observations\": [\n    {\n      \"ref\": \"codex-input-image-1\",\n      \"sceneId\": \"S18\",\n      \"viewport\": \"desktop\",\n      \"verdict\": \"PASS\",\n      \"observation\": \"1920×900. Композиция сбалансирована: оба персонажа полностью видны, гавань, горы и маяк сохраняют визуальную целостность. Персонажи корректно интегрированы в окружение. Текст расположен в нижней затемнённой области, контраст достаточный. Навигация, заголовок эпизода, счётчик 4/12 и индикатор продолжения видимы. Обрезки персонажей, перекрытия интерфейса и критических композиционных дефектов нет.\"\n    },\n    {\n      \"ref\": \"codex-input-image-2\",\n      \"sceneId\": \"S18\",\n      \"viewport\": \"portrait390\",\n      \"verdict\": \"PASS\",\n      \"observation\": \"390×844. Мобильная композиция сохраняет обоих персонажей, маяк, гавань и горный пейзаж. Персонажи размещены выше текстовой области; нижние части фигур частично скрываются затемнением повествовательного блока. Лица и верхняя часть силуэтов видны. Весь текст помещается без обрезки, читаемость хорошая. Заголовок игры переносится на две строки без выхода за границы. Навигационные элементы и счётчик 4/12 доступны визуально.\"\n    },\n    {\n      \"ref\": \"codex-input-image-3\",\n      \"sceneId\": \"S18\",\n      \"viewport\": \"portrait360\",\n      \"verdict\": \"PASS\",\n      \"observation\": \"360×640. Композиция адаптирована к меньшей высоте экрана: персонажи расположены выше, чем в portrait390. Оба лица хорошо различимы, маяк и основные элементы гавани сохранены. Нижние части персонажей перекрываются областью повествования, но текст остаётся читаемым. Все строки повествования, включая финальную, помещаются на экран. Счётчик 4/12, индикатор продолжения и верхняя навигация видимы. Критической обрезки текста или выхода элементов за границы viewport не обнаружено.\"\n    }\n  ],\n  \"findings\": [\n    {\n      \"severity\": \"INFO\",\n      \"description\": \"Все три скриншота демонстрируют согласованную сцену S18 с фоном hofn-lighthouse, двумя персонажами и одинаковым содержанием повествовательного блока.\"\n    },\n    {\n      \"severity\": \"INFO\",\n      \"description\": \"На мобильных экранах нижние части персонажей скрываются повествовательной областью. Это визуальный компромисс адаптивной компоновки, а не подтверждённый дефект: лица сохраняются, текст читается.\"\n    },\n    {\n      \"severity\": \"INFO\",\n      \"description\": \"Между portrait390 и portrait360 заметно меняется вертикальная композиция вследствие различия высоты viewport (844 и 640 пикселей). На обоих скриншотах результат остаётся функционально и визуально приемлемым.\"\n    },\n    {\n      \"severity\": \"INFO\",\n      \"description\": \"Критических проблем с контрастностью текста, расположением навигации, масштабированием персонажей или видимостью ключевых элементов окружения не обнаружено.\"\n    }\n  ],\n  \"unresolved\": [],\n  \"summary\": \"PASS. Все 3 фактически представленных скриншота проверены независимо. Блокирующих визуальных дефектов не выявлено. Сцена S18 с окружением hofn-lighthouse проходит визуальную проверку для desktop, portrait390 и portrait360. Вердикт относится исключительно к представленным скриншотам и не подтверждает интерактивное поведение интерфейса.\"\n}\n```"
+    }
+  }
+}

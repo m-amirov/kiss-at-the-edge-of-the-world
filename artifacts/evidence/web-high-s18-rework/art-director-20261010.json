@@ -1,0 +1,220 @@
+{
+  "assurance": "host-observed",
+  "role": "ceos_art_director_web",
+  "images": [
+    {
+      "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-s18-rework-2026-10-10\\artifacts\\evidence\\s18-rework-2026-10-10\\runtime\\target-desktop-1920x900.png",
+      "ref": "codex-input-image-1",
+      "sha256": "de4c891f489bd2c5fb5b0658cde66d2161921d48ce3a037f4192c363c9d99bd3",
+      "bytes": 1844787,
+      "fileBytes": 1844787
+    },
+    {
+      "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-s18-rework-2026-10-10\\artifacts\\evidence\\s18-rework-2026-10-10\\runtime\\target-portrait390-390x844.png",
+      "ref": "codex-input-image-2",
+      "sha256": "0ddcb1ad76d9c89bd3ab6c78b0fa2804fabd293d7f330db8a4e3a7b60cd6e5f2",
+      "bytes": 429520,
+      "fileBytes": 429520
+    },
+    {
+      "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-s18-rework-2026-10-10\\artifacts\\evidence\\s18-rework-2026-10-10\\runtime\\target-portrait360-360x640.png",
+      "ref": "codex-input-image-3",
+      "sha256": "cd6e962a921d7d1dd392d65217d748ea5c19b12749c33a21eb79e769e63efe5e",
+      "bytes": 301496,
+      "fileBytes": 301496
+    }
+  ],
+  "request": {
+    "requestedModel": "chatgpt-web/gpt-6-sol",
+    "backendModel": "gpt-5.6-sol",
+    "selectedModel": "chatgpt-web/gpt-6-sol",
+    "requestedReasoning": "high",
+    "selectedReasoning": "high",
+    "scene": "s18-rework-ceos_art_director_web-20261010",
+    "viewports": [
+      "desktop",
+      "portrait390",
+      "portrait360"
+    ],
+    "sourceHead": "2901605e000445776891467740994e15bf63299c"
+  },
+  "stages": [
+    {
+      "type": "heartbeat"
+    },
+    {
+      "type": "assistant_boundary"
+    },
+    {
+      "type": "text_delta"
+    },
+    {
+      "type": "assistant_boundary"
+    },
+    {
+      "type": "heartbeat"
+    },
+    {
+      "type": "heartbeat"
+    },
+    {
+      "type": "assistant_boundary"
+    },
+    {
+      "type": "thinking_delta"
+    },
+    {
+      "type": "heartbeat"
+    },
+    {
+      "type": "assistant_boundary"
+    },
+    {
+      "type": "thinking_delta"
+    },
+    {
+      "type": "heartbeat"
+    },
+    {
+      "type": "assistant_boundary"
+    },
+    {
+      "type": "thinking_delta"
+    },
+    {
+      "type": "heartbeat"
+    },
+    {
+      "type": "assistant_boundary"
+    },
+    {
+      "type": "thinking_delta"
+    },
+    {
+      "type": "heartbeat"
+    },
+    {
+      "type": "assistant_boundary"
+    },
+    {
+      "type": "thinking_delta"
+    },
+    {
+      "type": "heartbeat"
+    },
+    {
+      "type": "assistant_boundary"
+    },
+    {
+      "type": "thinking_delta"
+    },
+    {
+      "type": "heartbeat"
+    },
+    {
+      "type": "heartbeat"
+    },
+    {
+      "type": "text_delta"
+    },
+    {
+      "type": "heartbeat"
+    },
+    {
+      "type": "text_delta"
+    },
+    {
+      "type": "text_delta"
+    },
+    {
+      "type": "done"
+    }
+  ],
+  "response": {
+    "text": "```\n{\n  \"verdict\": \"REWORK\",\n  \"observations\": [\n    {\n      \"ref\": \"codex-input-image-1\",\n      \"sceneId\": \"S18\",\n      \"viewport\": \"desktop\",\n      \"verdict\": \"PASS\",\n      \"observation\": \"Композиция сбалансирована. Оба персонажа полностью видны, их силуэты не пересекаются с текстовым блоком. Гавань, пришвартованные суда, горы и маяк хорошо различимы. Вечернее освещение соответствует повествованию. Текст расположен на затемнённом фоне, читается полностью. Заголовок, навигация, индикатор 4/12 и стрелка продолжения видимы. Существенных дефектов композиции, масштабирования или обрезки не обнаружено.\"\n    },\n    {\n      \"ref\": \"codex-input-image-2\",\n      \"sceneId\": \"S18\",\n      \"viewport\": \"portrait390\",\n      \"verdict\": \"PASS\",\n      \"observation\": \"Вертикальная адаптация сохраняет обоих персонажей, горный пейзаж, гавань и маяк. Лица персонажей не перекрыты интерфейсом. Текстовый блок начинается практически у нижней границы видимых силуэтов; текст остаётся читаемым и полностью помещается на экране. Все элементы навигации доступны визуально. Значительную часть верхней половины экрана занимает небо, однако это не создаёт критического композиционного дефекта. Блокирующих замечаний нет.\"\n    },\n    {\n      \"ref\": \"codex-input-image-3\",\n      \"sceneId\": \"S18\",\n      \"viewport\": \"portrait360\",\n      \"verdict\": \"REWORK\",\n      \"observation\": \"При уменьшении высоты viewport до 640 px персонажи располагаются существенно ближе к текстовой области. Первая строка повествования пересекает нижние части их силуэтов. Возникает визуальная конкуренция между персонажами и текстом, особенно в области одежды. При этом лица остаются видимыми, текст полностью читается, маяк присутствует в кадре, а элементы навигации не обрезаны. Проблема относится к композиции и разделению визуальных слоёв, а не к потере содержимого.\"\n    }\n  ],\n  \"findings\": [\n    {\n      \"severity\": \"MODERATE\",\n      \"ref\": \"codex-input-image-3\",\n      \"issue\": \"Недостаточное визуальное разделение персонажей и текстовой области на компактном portrait360.\",\n      \"evidence\": \"В portrait390 повествование начинается у нижней границы фигур. В portrait360 первая строка уже проходит поверх нижней части персонажей, нарушая композиционную иерархию.\",\n      \"recommended_action\": \"Скорректировать адаптивное позиционирование персонажей или границу текстовой области для низких вертикальных viewport. Сохранить видимость лиц, читаемость полного текста и доступность нижней навигации.\"\n    }\n  ],\n  \"unresolved\": [\n    \"Требуется повторный runtime screenshot portrait360 после исправления композиционного пересечения.\",\n    \"Необходимо проверить, что исправление portrait360 не ухудшает отображение portrait390 и desktop.\",\n    \"Других подтверждённых блокирующих дефектов на представленных изображениях не обнаружено.\"\n  ]\n}\n```\n\n**Итог:** desktop — PASS, portrait390 — PASS, portrait360 — REWORK.\n\nСцена S18 визуально соответствует повествованию. Единственное замечание, требующее исправления перед окончательной приёмкой, — пересечение текстовой области с персонажами на экране 360 × 640.",
+    "emittedText": "> **Local tools unavailable**\n>\n> `ChatGPT Web High` cannot access the local Codex computer in this turn. The accumulated context does not contain local tool results yet: it will see instructions and attachments, but not workspace contents. ChatGPT-native capabilities such as web search remain available when the product provides them.\n>\n> **Action:** Open `MCP` in `Codex Web GPT` and connect the `Full` harness to give the selected ChatGPT Web model access to local tools.```\n{\n  \"verdict\": \"REWORK\",\n  \"observations\": [\n    {\n      \"ref\": \"codex-input-image-1\",\n      \"sceneId\": \"S18\",\n      \"viewport\": \"desktop\",\n      \"verdict\": \"PASS\",\n      \"observation\": \"Композиция сбалансирована. Оба персонажа полностью видны, их силуэты не пересекаются с текстовым блоком. Гавань, пришвартованные суда, горы и маяк хорошо различимы. Вечернее освещение соответствует повествованию. Текст расположен на затемнённом фоне, читается полностью. Заголовок, навигация, индикатор 4/12 и стрелка продолжения видимы. Существенных дефектов композиции, масштабирования или обрезки не обнаружено.\"\n    },\n    {\n      \"ref\": \"codex-input-image-2\",\n      \"sceneId\": \"S18\",\n      \"viewport\": \"portrait390\",\n      \"verdict\": \"PASS\",\n      \"observation\": \"Вертикальная адаптация сохраняет обоих персонажей, горный пейзаж, гавань и маяк. Лица персонажей не перекрыты интерфейсом. Текстовый блок начинается практически у нижней границы видимых силуэтов; текст остаётся читаемым и полностью помещается на экране. Все элементы навигации доступны визуально. Значительную часть верхней половины экрана занимает небо, однако это не создаёт критического композиционного дефекта. Блокирующих замечаний нет.\"\n    },\n    {\n      \"ref\": \"codex-input-image-3\",\n      \"sceneId\": \"S18\",\n      \"viewport\": \"portrait360\",\n      \"verdict\": \"REWORK\",\n      \"observation\": \"При уменьшении высоты viewport до 640 px персонажи располагаются существенно ближе к текстовой области. Первая строка повествования пересекает нижние части их силуэтов. Возникает визуальная конкуренция между персонажами и текстом, особенно в области одежды. При этом лица остаются видимыми, текст полностью читается, маяк присутствует в кадре, а элементы навигации не обрезаны. Проблема относится к композиции и разделению визуальных слоёв, а не к потере содержимого.\"\n    }\n  ],\n  \"findings\": [\n    {\n      \"severity\": \"MODERATE\",\n      \"ref\": \"codex-input-image-3\",\n      \"issue\": \"Недостаточное визуальное разделение персонажей и текстовой области на компактном portrait360.\",\n      \"evidence\": \"В portrait390 повествование начинается у нижней границы фигур. В portrait360 первая строка уже проходит поверх нижней части персонажей, нарушая композиционную иерархию.\",\n      \"recommended_action\": \"Скорректировать адаптивное позиционирование персонажей или границу текстовой области для низких вертикальных viewport. Сохранить видимость лиц, читаемость полного текста и доступность нижней навигации.\"\n    }\n  ],\n  \"unresolved\": [\n    \"Требуется повторный runtime screenshot portrait360 после исправления композиционного пересечения.\",\n    \"Необходимо проверить, что исправление portrait360 не ухудшает отображение portrait390 и desktop.\",\n    \"Других подтверждённых блокирующих дефектов на представленных изображениях не обнаружено.\"\n  ]\n}\n```\n\n**Итог:** desktop — PASS, portrait390 — PASS, portrait360 — REWORK.\n\nСцена S18 визуально соответствует повествованию. Единственное замечание, требующее исправления перед окончательной приёмкой, — пересечение текстовой области с персонажами на экране 360 × 640.",
+    "textSha256": "8f51aefdadbd4ab843ee96e0736570db7df856f0655d1fbc276af7f1e30a3798",
+    "eventTypes": [
+      "heartbeat",
+      "assistant_boundary",
+      "text_delta",
+      "assistant_boundary",
+      "heartbeat",
+      "heartbeat",
+      "assistant_boundary",
+      "thinking_delta",
+      "heartbeat",
+      "assistant_boundary",
+      "thinking_delta",
+      "heartbeat",
+      "assistant_boundary",
+      "thinking_delta",
+      "heartbeat",
+      "assistant_boundary",
+      "thinking_delta",
+      "heartbeat",
+      "assistant_boundary",
+      "thinking_delta",
+      "heartbeat",
+      "assistant_boundary",
+      "thinking_delta",
+      "heartbeat",
+      "heartbeat",
+      "text_delta",
+      "heartbeat",
+      "text_delta",
+      "text_delta",
+      "done"
+    ]
+  },
+  "receipt": {
+    "schema": "codex.web.host-observed-receipt.v1",
+    "assurance": "host-observed",
+    "providerAttested": false,
+    "provider": {
+      "taskId": null,
+      "responseId": null,
+      "reviewTraceId": null
+    },
+    "source": {
+      "sourceHead": "2901605e000445776891467740994e15bf63299c",
+      "scene": "s18-rework-ceos_art_director_web-20261010",
+      "viewport": "multi",
+      "attachments": [
+        {
+          "ref": "codex-input-image-1",
+          "sha256": "de4c891f489bd2c5fb5b0658cde66d2161921d48ce3a037f4192c363c9d99bd3",
+          "bytes": 1844787
+        },
+        {
+          "ref": "codex-input-image-2",
+          "sha256": "0ddcb1ad76d9c89bd3ab6c78b0fa2804fabd293d7f330db8a4e3a7b60cd6e5f2",
+          "bytes": 429520
+        },
+        {
+          "ref": "codex-input-image-3",
+          "sha256": "cd6e962a921d7d1dd392d65217d748ea5c19b12749c33a21eb79e769e63efe5e",
+          "bytes": 301496
+        }
+      ]
+    },
+    "browser": {
+      "bridgeTraceId": "32bf2cea4607",
+      "assistantTurnIdentity": "group:assistant:b28513da-fd4d-488a-b289-3c8aa3647ad7",
+      "userTurnIdentity": "group:user:b28513da-fd4d-488a-b289-3c8aa3647ad7",
+      "submission": "tile-visible-and-send-enabled",
+      "submissionEvidence": "user_turn",
+      "completion": "stable-dom-completion-action"
+    },
+    "route": {
+      "requestedModel": "chatgpt-web/gpt-6-sol",
+      "selectedModel": "chatgpt-web/gpt-6-sol",
+      "reasoning": "high",
+      "selectedReasoning": "high"
+    },
+    "answer": {
+      "sha256": "8f51aefdadbd4ab843ee96e0736570db7df856f0655d1fbc276af7f1e30a3798",
+      "text": "```\n{\n  \"verdict\": \"REWORK\",\n  \"observations\": [\n    {\n      \"ref\": \"codex-input-image-1\",\n      \"sceneId\": \"S18\",\n      \"viewport\": \"desktop\",\n      \"verdict\": \"PASS\",\n      \"observation\": \"Композиция сбалансирована. Оба персонажа полностью видны, их силуэты не пересекаются с текстовым блоком. Гавань, пришвартованные суда, горы и маяк хорошо различимы. Вечернее освещение соответствует повествованию. Текст расположен на затемнённом фоне, читается полностью. Заголовок, навигация, индикатор 4/12 и стрелка продолжения видимы. Существенных дефектов композиции, масштабирования или обрезки не обнаружено.\"\n    },\n    {\n      \"ref\": \"codex-input-image-2\",\n      \"sceneId\": \"S18\",\n      \"viewport\": \"portrait390\",\n      \"verdict\": \"PASS\",\n      \"observation\": \"Вертикальная адаптация сохраняет обоих персонажей, горный пейзаж, гавань и маяк. Лица персонажей не перекрыты интерфейсом. Текстовый блок начинается практически у нижней границы видимых силуэтов; текст остаётся читаемым и полностью помещается на экране. Все элементы навигации доступны визуально. Значительную часть верхней половины экрана занимает небо, однако это не создаёт критического композиционного дефекта. Блокирующих замечаний нет.\"\n    },\n    {\n      \"ref\": \"codex-input-image-3\",\n      \"sceneId\": \"S18\",\n      \"viewport\": \"portrait360\",\n      \"verdict\": \"REWORK\",\n      \"observation\": \"При уменьшении высоты viewport до 640 px персонажи располагаются существенно ближе к текстовой области. Первая строка повествования пересекает нижние части их силуэтов. Возникает визуальная конкуренция между персонажами и текстом, особенно в области одежды. При этом лица остаются видимыми, текст полностью читается, маяк присутствует в кадре, а элементы навигации не обрезаны. Проблема относится к композиции и разделению визуальных слоёв, а не к потере содержимого.\"\n    }\n  ],\n  \"findings\": [\n    {\n      \"severity\": \"MODERATE\",\n      \"ref\": \"codex-input-image-3\",\n      \"issue\": \"Недостаточное визуальное разделение персонажей и текстовой области на компактном portrait360.\",\n      \"evidence\": \"В portrait390 повествование начинается у нижней границы фигур. В portrait360 первая строка уже проходит поверх нижней части персонажей, нарушая композиционную иерархию.\",\n      \"recommended_action\": \"Скорректировать адаптивное позиционирование персонажей или границу текстовой области для низких вертикальных viewport. Сохранить видимость лиц, читаемость полного текста и доступность нижней навигации.\"\n    }\n  ],\n  \"unresolved\": [\n    \"Требуется повторный runtime screenshot portrait360 после исправления композиционного пересечения.\",\n    \"Необходимо проверить, что исправление portrait360 не ухудшает отображение portrait390 и desktop.\",\n    \"Других подтверждённых блокирующих дефектов на представленных изображениях не обнаружено.\"\n  ]\n}\n```\n\n**Итог:** desktop — PASS, portrait390 — PASS, portrait360 — REWORK.\n\nСцена S18 визуально соответствует повествованию. Единственное замечание, требующее исправления перед окончательной приёмкой, — пересечение текстовой области с персонажами на экране 360 × 640."
+    }
+  }
+}

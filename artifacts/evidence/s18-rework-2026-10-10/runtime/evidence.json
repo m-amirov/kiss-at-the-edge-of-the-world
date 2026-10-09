@@ -1,0 +1,761 @@
+{
+  "generatedAt": "2026-10-09T22:32:12.129Z",
+  "currentHead": "2901605e000445776891467740994e15bf63299c",
+  "baseUrl": "http://127.0.0.1:4173/literary.html",
+  "target": {
+    "sceneId": "S18",
+    "beatId": "hofn-lighthouse",
+    "id": "S18-hofn-lighthouse"
+  },
+  "targetPosition": 3,
+  "flowLength": 12,
+  "captures": [
+    {
+      "label": "previous",
+      "position": 2,
+      "view": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "file": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-s18-rework-2026-10-10\\artifacts\\evidence\\s18-rework-2026-10-10\\runtime\\previous-desktop-1920x900.png",
+      "sha256": "49f344e74d34f03e0592b61d38eef0f675b8c0505b12519b673cb498f6619897",
+      "bytes": 1925636,
+      "readback": {
+        "cue": "scene-start",
+        "asset": "s18-hofn-harbour.webp",
+        "desktopAsset": "s18-hofn-harbour.webp",
+        "natural": [
+          1672,
+          941
+        ],
+        "stageCount": 2,
+        "stageMode": "pair",
+        "stageLayout": "batch3-pair-depth-s18-opening",
+        "stageCharacters": [
+          {
+            "className": "stage-character stage-alice",
+            "rect": {
+              "left": 211.19061279296875,
+              "top": 0.719970703125,
+              "right": 729.5906372070312,
+              "bottom": 720,
+              "width": 518.4000244140625,
+              "height": 719.280029296875
+            },
+            "imageRect": {
+              "left": 211.19061279296875,
+              "top": 0.719970703125,
+              "right": 729.5906372070312,
+              "bottom": 720,
+              "width": 518.4000244140625,
+              "height": 719.280029296875
+            }
+          },
+          {
+            "className": "stage-character stage-eric",
+            "rect": {
+              "left": 849.5968627929688,
+              "top": 41.21282958984375,
+              "right": 1319.996826171875,
+              "bottom": 693.892822265625,
+              "width": 470.39996337890625,
+              "height": 652.6799926757812
+            },
+            "imageRect": {
+              "left": 849.5968627929688,
+              "top": 41.21282958984375,
+              "right": 1319.996826171875,
+              "bottom": 693.892822265625,
+              "width": 470.39996337890625,
+              "height": 652.6799926757812
+            }
+          }
+        ],
+        "sheetRect": {
+          "left": 0,
+          "top": 756.375,
+          "right": 1920,
+          "bottom": 900,
+          "width": 1920,
+          "height": 143.625
+        },
+        "viewport": [
+          1920,
+          900
+        ],
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true,
+        "readable": true
+      },
+      "consoleErrors": [],
+      "failedRequests": [],
+      "notFound": []
+    },
+    {
+      "label": "target",
+      "position": 3,
+      "view": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "file": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-s18-rework-2026-10-10\\artifacts\\evidence\\s18-rework-2026-10-10\\runtime\\target-desktop-1920x900.png",
+      "sha256": "de4c891f489bd2c5fb5b0658cde66d2161921d48ce3a037f4192c363c9d99bd3",
+      "bytes": 1844787,
+      "readback": {
+        "cue": "hofn-lighthouse",
+        "asset": "s18-hofn-harbour.webp",
+        "desktopAsset": "s18-hofn-harbour.webp",
+        "natural": [
+          1672,
+          941
+        ],
+        "stageCount": 2,
+        "stageMode": "pair",
+        "stageLayout": "s18-hofn-lighthouse-short-mobile",
+        "stageCharacters": [
+          {
+            "className": "stage-character stage-alice",
+            "rect": {
+              "left": 579,
+              "top": 45,
+              "right": 939,
+              "bottom": 684,
+              "width": 360,
+              "height": 639
+            },
+            "imageRect": {
+              "left": 579,
+              "top": 45,
+              "right": 939,
+              "bottom": 684,
+              "width": 360,
+              "height": 639
+            }
+          },
+          {
+            "className": "stage-character stage-eric",
+            "rect": {
+              "left": 981,
+              "top": 45,
+              "right": 1341,
+              "bottom": 684,
+              "width": 360,
+              "height": 639
+            },
+            "imageRect": {
+              "left": 981,
+              "top": 45,
+              "right": 1341,
+              "bottom": 684,
+              "width": 360,
+              "height": 639
+            }
+          }
+        ],
+        "sheetRect": {
+          "left": 0,
+          "top": 613.875,
+          "right": 1920,
+          "bottom": 900,
+          "width": 1920,
+          "height": 286.125
+        },
+        "viewport": [
+          1920,
+          900
+        ],
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true,
+        "readable": true
+      },
+      "consoleErrors": [],
+      "failedRequests": [],
+      "notFound": []
+    },
+    {
+      "label": "next",
+      "position": 4,
+      "view": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "file": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-s18-rework-2026-10-10\\artifacts\\evidence\\s18-rework-2026-10-10\\runtime\\next-desktop-1920x900.png",
+      "sha256": "4eee4e24c526217456ac16409aced91be5c4bf32bdd5665852a1c682ee19b90b",
+      "bytes": 1889257,
+      "readback": {
+        "cue": "hofn-lighthouse",
+        "asset": "s18-hofn-harbour.webp",
+        "desktopAsset": "s18-hofn-harbour.webp",
+        "natural": [
+          1672,
+          941
+        ],
+        "stageCount": 2,
+        "stageMode": "pair",
+        "stageLayout": "s18-hofn-lighthouse-short-mobile",
+        "stageCharacters": [
+          {
+            "className": "stage-character stage-alice",
+            "rect": {
+              "left": 579,
+              "top": 45,
+              "right": 939,
+              "bottom": 684,
+              "width": 360,
+              "height": 639
+            },
+            "imageRect": {
+              "left": 579,
+              "top": 45,
+              "right": 939,
+              "bottom": 684,
+              "width": 360,
+              "height": 639
+            }
+          },
+          {
+            "className": "stage-character stage-eric",
+            "rect": {
+              "left": 981,
+              "top": 45,
+              "right": 1341,
+              "bottom": 684,
+              "width": 360,
+              "height": 639
+            },
+            "imageRect": {
+              "left": 981,
+              "top": 45,
+              "right": 1341,
+              "bottom": 684,
+              "width": 360,
+              "height": 639
+            }
+          }
+        ],
+        "sheetRect": {
+          "left": 0,
+          "top": 709.75,
+          "right": 1920,
+          "bottom": 900,
+          "width": 1920,
+          "height": 190.25
+        },
+        "viewport": [
+          1920,
+          900
+        ],
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true,
+        "readable": true
+      },
+      "consoleErrors": [],
+      "failedRequests": [],
+      "notFound": []
+    },
+    {
+      "label": "previous",
+      "position": 2,
+      "view": {
+        "name": "portrait390",
+        "width": 390,
+        "height": 844
+      },
+      "file": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-s18-rework-2026-10-10\\artifacts\\evidence\\s18-rework-2026-10-10\\runtime\\previous-portrait390-390x844.png",
+      "sha256": "58dcb427ed59580b6177c71214941f60187ae8c27dc6359db888ca77c64af1df",
+      "bytes": 458319,
+      "readback": {
+        "cue": "scene-start",
+        "asset": "s18-hofn-harbour-portrait.webp",
+        "desktopAsset": "s18-hofn-harbour.webp",
+        "natural": [
+          941,
+          1672
+        ],
+        "stageCount": 2,
+        "stageMode": "pair",
+        "stageLayout": "batch3-pair-depth-s18-opening",
+        "stageCharacters": [
+          {
+            "className": "stage-character stage-alice",
+            "rect": {
+              "left": -15.127487182617188,
+              "top": 90.87973022460938,
+              "right": 265.9712677001953,
+              "bottom": 692.0818786621094,
+              "width": 281.0987548828125,
+              "height": 601.2021484375
+            },
+            "imageRect": {
+              "left": -15.127487182617188,
+              "top": 90.87973022460938,
+              "right": 265.9712677001953,
+              "bottom": 692.0818786621094,
+              "width": 281.0987548828125,
+              "height": 601.2021484375
+            }
+          },
+          {
+            "className": "stage-character stage-eric",
+            "rect": {
+              "left": 140.00906372070312,
+              "top": 114.41732788085938,
+              "right": 397.2409362792969,
+              "bottom": 664.5740661621094,
+              "width": 257.23187255859375,
+              "height": 550.15673828125
+            },
+            "imageRect": {
+              "left": 140.00906372070312,
+              "top": 114.41732788085938,
+              "right": 397.2409362792969,
+              "bottom": 664.5740661621094,
+              "width": 257.23187255859375,
+              "height": 550.15673828125
+            }
+          }
+        ],
+        "sheetRect": {
+          "left": 0,
+          "top": 730.5,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 113.5
+        },
+        "viewport": [
+          390,
+          844
+        ],
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true,
+        "readable": true
+      },
+      "consoleErrors": [],
+      "failedRequests": [],
+      "notFound": []
+    },
+    {
+      "label": "target",
+      "position": 3,
+      "view": {
+        "name": "portrait390",
+        "width": 390,
+        "height": 844
+      },
+      "file": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-s18-rework-2026-10-10\\artifacts\\evidence\\s18-rework-2026-10-10\\runtime\\target-portrait390-390x844.png",
+      "sha256": "0ddcb1ad76d9c89bd3ab6c78b0fa2804fabd293d7f330db8a4e3a7b60cd6e5f2",
+      "bytes": 429520,
+      "readback": {
+        "cue": "hofn-lighthouse",
+        "asset": "s18-hofn-harbour-portrait.webp",
+        "desktopAsset": "s18-hofn-harbour.webp",
+        "natural": [
+          941,
+          1672
+        ],
+        "stageCount": 2,
+        "stageMode": "pair",
+        "stageLayout": "s18-hofn-lighthouse-short-mobile",
+        "stageCharacters": [
+          {
+            "className": "stage-character stage-alice",
+            "rect": {
+              "left": -7.796875,
+              "top": 177.23812866210938,
+              "right": 218.390625,
+              "bottom": 700.5350036621094,
+              "width": 226.1875,
+              "height": 523.296875
+            },
+            "imageRect": {
+              "left": -7.796875,
+              "top": 177.23812866210938,
+              "right": 218.390625,
+              "bottom": 700.5350036621094,
+              "width": 226.1875,
+              "height": 523.296875
+            }
+          },
+          {
+            "className": "stage-character stage-eric",
+            "rect": {
+              "left": 171.609375,
+              "top": 177.23812866210938,
+              "right": 397.796875,
+              "bottom": 700.5350036621094,
+              "width": 226.1875,
+              "height": 523.296875
+            },
+            "imageRect": {
+              "left": 171.609375,
+              "top": 177.23812866210938,
+              "right": 397.796875,
+              "bottom": 700.5350036621094,
+              "width": 226.1875,
+              "height": 523.296875
+            }
+          }
+        ],
+        "sheetRect": {
+          "left": 0,
+          "top": 501,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 343
+        },
+        "viewport": [
+          390,
+          844
+        ],
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true,
+        "readable": true
+      },
+      "consoleErrors": [],
+      "failedRequests": [],
+      "notFound": []
+    },
+    {
+      "label": "next",
+      "position": 4,
+      "view": {
+        "name": "portrait390",
+        "width": 390,
+        "height": 844
+      },
+      "file": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-s18-rework-2026-10-10\\artifacts\\evidence\\s18-rework-2026-10-10\\runtime\\next-portrait390-390x844.png",
+      "sha256": "916651752b8c13f610ecb403f76ccf0dd550642b3d2e644820edc25bfba4c902",
+      "bytes": 441344,
+      "readback": {
+        "cue": "hofn-lighthouse",
+        "asset": "s18-hofn-harbour-portrait.webp",
+        "desktopAsset": "s18-hofn-harbour.webp",
+        "natural": [
+          941,
+          1672
+        ],
+        "stageCount": 2,
+        "stageMode": "pair",
+        "stageLayout": "s18-hofn-lighthouse-short-mobile",
+        "stageCharacters": [
+          {
+            "className": "stage-character stage-alice",
+            "rect": {
+              "left": -7.796875,
+              "top": 177.23812866210938,
+              "right": 218.390625,
+              "bottom": 700.5350036621094,
+              "width": 226.1875,
+              "height": 523.296875
+            },
+            "imageRect": {
+              "left": -7.796875,
+              "top": 177.23812866210938,
+              "right": 218.390625,
+              "bottom": 700.5350036621094,
+              "width": 226.1875,
+              "height": 523.296875
+            }
+          },
+          {
+            "className": "stage-character stage-eric",
+            "rect": {
+              "left": 171.609375,
+              "top": 177.23812866210938,
+              "right": 397.796875,
+              "bottom": 700.5350036621094,
+              "width": 226.1875,
+              "height": 523.296875
+            },
+            "imageRect": {
+              "left": 171.609375,
+              "top": 177.23812866210938,
+              "right": 397.796875,
+              "bottom": 700.5350036621094,
+              "width": 226.1875,
+              "height": 523.296875
+            }
+          }
+        ],
+        "sheetRect": {
+          "left": 0,
+          "top": 644,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 200
+        },
+        "viewport": [
+          390,
+          844
+        ],
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true,
+        "readable": true
+      },
+      "consoleErrors": [],
+      "failedRequests": [],
+      "notFound": []
+    },
+    {
+      "label": "previous",
+      "position": 2,
+      "view": {
+        "name": "portrait360",
+        "width": 360,
+        "height": 640
+      },
+      "file": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-s18-rework-2026-10-10\\artifacts\\evidence\\s18-rework-2026-10-10\\runtime\\previous-portrait360-360x640.png",
+      "sha256": "9ce97b6cb4e8eaee30ce9c6dc4968938e7f4c9aa25804fba6e321f22f1d50f07",
+      "bytes": 327636,
+      "readback": {
+        "cue": "scene-start",
+        "asset": "s18-hofn-harbour-portrait.webp",
+        "desktopAsset": "s18-hofn-harbour.webp",
+        "natural": [
+          941,
+          1672
+        ],
+        "stageCount": 2,
+        "stageMode": "pair",
+        "stageLayout": "batch3-pair-depth-s18-opening",
+        "stageCharacters": [
+          {
+            "className": "stage-character stage-alice",
+            "rect": {
+              "left": -13.968902587890625,
+              "top": 83.30377197265625,
+              "right": 245.51577758789062,
+              "bottom": 539.203125,
+              "width": 259.48468017578125,
+              "height": 455.89935302734375
+            },
+            "imageRect": {
+              "left": -13.968902587890625,
+              "top": 83.30377197265625,
+              "right": 245.51577758789062,
+              "bottom": 539.203125,
+              "width": 259.48468017578125,
+              "height": 455.89935302734375
+            }
+          },
+          {
+            "className": "stage-character stage-eric",
+            "rect": {
+              "left": 129.2344512939453,
+              "top": 101.15261840820312,
+              "right": 366.68743896484375,
+              "bottom": 518.3435668945312,
+              "width": 237.45298767089844,
+              "height": 417.1909484863281
+            },
+            "imageRect": {
+              "left": 129.2344512939453,
+              "top": 101.15261840820312,
+              "right": 366.68743896484375,
+              "bottom": 518.3435668945312,
+              "width": 237.45298767089844,
+              "height": 417.1909484863281
+            }
+          }
+        ],
+        "sheetRect": {
+          "left": 0,
+          "top": 526.5,
+          "right": 360,
+          "bottom": 640,
+          "width": 360,
+          "height": 113.5
+        },
+        "viewport": [
+          360,
+          640
+        ],
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true,
+        "readable": true
+      },
+      "consoleErrors": [],
+      "failedRequests": [],
+      "notFound": []
+    },
+    {
+      "label": "target",
+      "position": 3,
+      "view": {
+        "name": "portrait360",
+        "width": 360,
+        "height": 640
+      },
+      "file": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-s18-rework-2026-10-10\\artifacts\\evidence\\s18-rework-2026-10-10\\runtime\\target-portrait360-360x640.png",
+      "sha256": "cd6e962a921d7d1dd392d65217d748ea5c19b12749c33a21eb79e769e63efe5e",
+      "bytes": 301496,
+      "readback": {
+        "cue": "hofn-lighthouse",
+        "asset": "s18-hofn-harbour-portrait.webp",
+        "desktopAsset": "s18-hofn-harbour.webp",
+        "natural": [
+          941,
+          1672
+        ],
+        "stageCount": 2,
+        "stageMode": "pair",
+        "stageLayout": "s18-hofn-lighthouse-short-mobile",
+        "stageCharacters": [
+          {
+            "className": "stage-character stage-alice",
+            "rect": {
+              "left": 21.839691162109375,
+              "top": 160.7611083984375,
+              "right": 251.72280883789062,
+              "bottom": 462.40625,
+              "width": 229.88311767578125,
+              "height": 301.6451416015625
+            },
+            "imageRect": {
+              "left": 21.839691162109375,
+              "top": 160.7611083984375,
+              "right": 251.72280883789062,
+              "bottom": 462.40625,
+              "width": 229.88311767578125,
+              "height": 301.6451416015625
+            }
+          },
+          {
+            "className": "stage-character stage-eric",
+            "rect": {
+              "left": 147.08624267578125,
+              "top": 178.85980224609375,
+              "right": 356.88250732421875,
+              "bottom": 454.1476135253906,
+              "width": 209.7962646484375,
+              "height": 275.2878112792969
+            },
+            "imageRect": {
+              "left": 147.08624267578125,
+              "top": 178.85980224609375,
+              "right": 356.88250732421875,
+              "bottom": 454.1476135253906,
+              "width": 209.7962646484375,
+              "height": 275.2878112792969
+            }
+          }
+        ],
+        "sheetRect": {
+          "left": 0,
+          "top": 271.5,
+          "right": 360,
+          "bottom": 640,
+          "width": 360,
+          "height": 368.5
+        },
+        "viewport": [
+          360,
+          640
+        ],
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true,
+        "readable": true
+      },
+      "consoleErrors": [],
+      "failedRequests": [],
+      "notFound": []
+    },
+    {
+      "label": "next",
+      "position": 4,
+      "view": {
+        "name": "portrait360",
+        "width": 360,
+        "height": 640
+      },
+      "file": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-s18-rework-2026-10-10\\artifacts\\evidence\\s18-rework-2026-10-10\\runtime\\next-portrait360-360x640.png",
+      "sha256": "7282dc1ece6b6617acb3c6fee13542952c252e977fcb4735c82d0d06b7642d54",
+      "bytes": 318318,
+      "readback": {
+        "cue": "hofn-lighthouse",
+        "asset": "s18-hofn-harbour-portrait.webp",
+        "desktopAsset": "s18-hofn-harbour.webp",
+        "natural": [
+          941,
+          1672
+        ],
+        "stageCount": 2,
+        "stageMode": "pair",
+        "stageLayout": "s18-hofn-lighthouse-short-mobile",
+        "stageCharacters": [
+          {
+            "className": "stage-character stage-alice",
+            "rect": {
+              "left": 21.839691162109375,
+              "top": 160.7611083984375,
+              "right": 251.72280883789062,
+              "bottom": 462.40625,
+              "width": 229.88311767578125,
+              "height": 301.6451416015625
+            },
+            "imageRect": {
+              "left": 21.839691162109375,
+              "top": 160.7611083984375,
+              "right": 251.72280883789062,
+              "bottom": 462.40625,
+              "width": 229.88311767578125,
+              "height": 301.6451416015625
+            }
+          },
+          {
+            "className": "stage-character stage-eric",
+            "rect": {
+              "left": 147.08624267578125,
+              "top": 178.85980224609375,
+              "right": 356.88250732421875,
+              "bottom": 454.1476135253906,
+              "width": 209.7962646484375,
+              "height": 275.2878112792969
+            },
+            "imageRect": {
+              "left": 147.08624267578125,
+              "top": 178.85980224609375,
+              "right": 356.88250732421875,
+              "bottom": 454.1476135253906,
+              "width": 209.7962646484375,
+              "height": 275.2878112792969
+            }
+          }
+        ],
+        "sheetRect": {
+          "left": 0,
+          "top": 440,
+          "right": 360,
+          "bottom": 640,
+          "width": 360,
+          "height": 200
+        },
+        "viewport": [
+          360,
+          640
+        ],
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true,
+        "readable": true
+      },
+      "consoleErrors": [],
+      "failedRequests": [],
+      "notFound": []
+    }
+  ]
+}
