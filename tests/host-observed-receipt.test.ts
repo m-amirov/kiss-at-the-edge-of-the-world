@@ -17,7 +17,9 @@ test("host-observed receipt binds declared scene evidence to local bytes and a b
     traceId: "trace_s38_01",
     assistantTurnIdentity: "group:assistant:browser-turn-1",
     requestedModel: "chatgpt-web/gpt-6-sol",
+    selectedModel: "chatgpt-web/gpt-6-sol",
     reasoning: "high",
+    selectedReasoning: "high",
     attachments: [{ ref: "codex-input-image-1", buffer: image }],
     answer: "Visual-only review complete.",
   });
@@ -27,6 +29,12 @@ test("host-observed receipt binds declared scene evidence to local bytes and a b
   expect(receipt.provider).toEqual({ taskId: null, responseId: null, reviewTraceId: null });
   expect(receipt.source).toEqual(context);
   expect(receipt.browser.assistantTurnIdentity).toBe("group:assistant:browser-turn-1");
+  expect(receipt.route).toEqual({
+    requestedModel: "chatgpt-web/gpt-6-sol",
+    selectedModel: "chatgpt-web/gpt-6-sol",
+    reasoning: "high",
+    selectedReasoning: "high",
+  });
   expect(receipt.answer.sha256).toBe(createHash("sha256").update("Visual-only review complete.").digest("hex"));
 });
 

@@ -16,11 +16,18 @@ export interface HostObservedReceipt {
   browser: {
     bridgeTraceId: string;
     assistantTurnIdentity: string;
+    userTurnIdentity: string | null;
     submission: "tile-visible-and-send-enabled";
+    submissionEvidence: string | null;
     completion: "stable-dom-completion-action";
   };
-  route: { requestedModel: string; reasoning: string | null };
-  answer: { sha256: string };
+  route: {
+    requestedModel: string;
+    selectedModel: string | null;
+    reasoning: string | null;
+    selectedReasoning: string | null;
+  };
+  answer: { sha256: string; text?: string };
 }
 
 export interface ObservedBrowserAttachment {
@@ -31,7 +38,7 @@ export interface ObservedBrowserAttachment {
 const SHA256 = /^[a-f0-9]{64}$/i;
 const SOURCE_HEAD = /^[a-f0-9]{40}$/i;
 const ID = /^[A-Za-z0-9_.:-]{1,128}$/;
-const VIEWPORT = /^\d{2,5}x\d{2,5}$/;
+const VIEWPORT = /^(?:\d{2,5}x\d{2,5}|multi)$/;
 
 function requireContext(context: HostObservedReceiptContext): void {
   if (!SOURCE_HEAD.test(context.sourceHead) || !ID.test(context.scene) || !VIEWPORT.test(context.viewport)) {
@@ -75,7 +82,13 @@ export function parseHostObservedReceipt(value: unknown): HostObservedReceipt {
     || receipt.provider?.reviewTraceId !== null || !receipt.browser || !ID.test(receipt.browser.bridgeTraceId)
     || !receipt.browser.assistantTurnIdentity || receipt.browser.submission !== "tile-visible-and-send-enabled"
     || receipt.browser.completion !== "stable-dom-completion-action" || !receipt.route?.requestedModel
-    || (receipt.route.reasoning !== null && typeof receipt.route.reasoning !== "string") || !receipt.answer || !SHA256.test(receipt.answer.sha256)) {
+    || (receipt.route.selectedModel !== null && typeof receipt.route.selectedModel !== "string")
+    || (receipt.route.reasoning !== null && typeof receipt.route.reasoning !== "string")
+    || (receipt.route.selectedReasoning !== null && typeof receipt.route.selectedReasoning !== "string")
+    || !receipt.answer || !SHA256.test(receipt.answer.sha256)
+    || (receipt.answer.text !== undefined && typeof receipt.answer.text !== "string")
+    || (typeof receipt.answer.text === "string"
+      && createHash("sha256").update(receipt.answer.text).digest("hex") !== receipt.answer.sha256)) {
     throw new Error("Host-observed receipt payload is invalid");
   }
   return {
@@ -98,16 +111,24 @@ export function createHostObservedReceipt({
   context,
   traceId,
   assistantTurnIdentity,
+  userTurnIdentity,
   requestedModel,
+  selectedModel,
   reasoning,
+  selectedReasoning,
+  submissionEvidence,
   attachments,
   answer,
 }: {
   context: HostObservedReceiptContext;
   traceId: string;
   assistantTurnIdentity: string;
+  userTurnIdentity?: string | null;
   requestedModel: string;
+  selectedModel?: string;
   reasoning?: string;
+  selectedReasoning?: string;
+  submissionEvidence?: string;
   attachments: readonly ObservedBrowserAttachment[];
   answer: string;
 }): HostObservedReceipt {
@@ -134,10 +155,17 @@ export function createHostObservedReceipt({
     browser: {
       bridgeTraceId: traceId,
       assistantTurnIdentity,
+      userTurnIdentity: userTurnIdentity ?? null,
       submission: "tile-visible-and-send-enabled",
+      submissionEvidence: submissionEvidence ?? null,
       completion: "stable-dom-completion-action",
     },
-    route: { requestedModel, reasoning: reasoning ?? null },
-    answer: { sha256: createHash("sha256").update(answer).digest("hex") },
+    route: {
+      requestedModel,
+      selectedModel: selectedModel ?? null,
+      reasoning: reasoning ?? null,
+      selectedReasoning: selectedReasoning ?? null,
+    },
+    answer: { sha256: createHash("sha256").update(answer).digest("hex"), text: answer },
   };
 }

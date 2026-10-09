@@ -713,6 +713,7 @@ export function createChatGptWebAdapter(
       const browserTurn = cancellableBrowserTurn(finalizeCheckpoint(worker.run({
         traceId,
         modelId: parsed.modelId,
+        requestedModel: parsed._chatgptRequestedModel,
         reasoning: parsed.options.reasoning,
         ...(parsed._chatgptModelFamily ? { modelFamily: parsed._chatgptModelFamily } : {}),
         capabilities: turnCapabilities,
@@ -781,6 +782,7 @@ export function createChatGptWebAdapter(
     const browserTurn = cancellableBrowserTurn(trackBrowserOwner(finalizeCheckpoint(worker.run({
       traceId,
       modelId: parsed.modelId,
+      requestedModel: parsed._chatgptRequestedModel,
       reasoning: parsed.options.reasoning,
       ...(parsed._chatgptModelFamily ? { modelFamily: parsed._chatgptModelFamily } : {}),
       capabilities: turnCapabilities,

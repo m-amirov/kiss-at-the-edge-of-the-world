@@ -302,6 +302,7 @@ export class LauncherBrowserHelperClient {
           turn: {
             traceId: turn.traceId,
             modelId: turn.modelId,
+            ...(turn.requestedModel ? { requestedModel: turn.requestedModel } : {}),
             reasoning: turn.reasoning,
             ...(turn.modelFamily ? { modelFamily: turn.modelFamily } : {}),
             capabilities: turn.capabilities,

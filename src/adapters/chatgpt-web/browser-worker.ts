@@ -937,6 +937,21 @@ type SelectedChatGptWebModelMode = ChatGptWebModelMode & {
   usageModel?: ChatGptUsageModel;
 };
 
+function observedChatGptModelSlug(
+  modelFamily: SelectedChatGptWebModelMode["modelFamily"],
+  effort: SelectedChatGptWebModelMode["effort"],
+): string | undefined {
+  if (!modelFamily) return undefined;
+  if (modelFamily === "6") {
+    if (effort === "low") return "chatgpt-web/gpt-6-sol-instant";
+    if (effort === "max") return "chatgpt-web/gpt-6-pro";
+    return "chatgpt-web/gpt-6-sol";
+  }
+  if (effort === "low") return "chatgpt-web/gpt-5.6-sol-instant";
+  if (effort === "max") return "chatgpt-web/gpt-5.6-pro";
+  return "chatgpt-web/gpt-5.6-sol";
+}
+
 export async function throwIfChatGptTerminalErrorAlert(scope: ChatGptTextScope): Promise<void> {
   if (await scope.getByTestId("regenerate-thread-error-button").last().isVisible().catch(() => false)) {
     throw new ChatGptWebAdapterError(
@@ -1343,6 +1358,8 @@ function withBrowserTurnAbort<T>(promise: Promise<T>, signal?: AbortSignal): Pro
 export interface BrowserTurn {
   traceId: string;
   modelId: string;
+  /** Original catalog slug, before the route's backend model normalization. */
+  requestedModel?: string;
   reasoning?: string;
   modelFamily?: "5.6" | "6";
   capabilities: ChatGptWebCapabilities;
@@ -5838,8 +5855,12 @@ export class ChatGptBrowserWorker {
           context: turn.hostObservedReceipt.context,
           traceId: turn.traceId,
           assistantTurnIdentity: responseTurn.identity,
-          requestedModel: turn.modelId,
+          userTurnIdentity: submissionBaseline.acceptedUserIdentity ?? null,
+          requestedModel: turn.requestedModel ?? turn.modelId,
+          selectedModel: observedChatGptModelSlug(mode.modelFamily, mode.effort),
           reasoning: turn.reasoning,
+          selectedReasoning: mode.effort,
+          submissionEvidence: finalSubmissionEvidence,
           attachments,
           answer: finalText,
         }));

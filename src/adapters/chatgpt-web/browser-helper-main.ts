@@ -26,6 +26,7 @@ interface RunMessage {
   turn: {
     traceId: string;
     modelId: string;
+    requestedModel?: string;
     reasoning?: string;
     modelFamily?: "5.6" | "6";
     capabilities: ChatGptWebCapabilities;
@@ -224,6 +225,7 @@ async function run(message: RunMessage): Promise<void> {
   const turn: BrowserTurn = {
     traceId: message.turn.traceId,
     modelId: message.turn.modelId,
+    ...(message.turn.requestedModel ? { requestedModel: message.turn.requestedModel } : {}),
     reasoning: message.turn.reasoning,
     ...(message.turn.modelFamily ? { modelFamily: message.turn.modelFamily } : {}),
     capabilities: message.turn.capabilities,

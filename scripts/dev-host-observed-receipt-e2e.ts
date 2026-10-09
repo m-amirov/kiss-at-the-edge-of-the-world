@@ -4,6 +4,7 @@ import { dirname, resolve } from "node:path";
 import { loadConfig } from "../src/config";
 import { createLauncherDevAdapter } from "../src/dev-chat/driver";
 import { activateDevProfileEnvironment, resolveDevProfilePaths } from "../src/dev-chat/profile";
+import { routeChatGptWebRequest } from "../src/server";
 import { closeChatGptBrowserWorkers } from "../src/adapters/chatgpt-web/browser-worker";
 import type { HostObservedReceipt, HostObservedReceiptContext } from "../src/adapters/chatgpt-web/host-observed-receipt";
 import type { AdapterEvent, CodexParsedRequest, CodexProviderConfig } from "../src/types";
@@ -15,21 +16,46 @@ function option(name: string): string {
   return value;
 }
 
-const imagePath = resolve(option("--image"));
+function options(name: string): string[] {
+  const values: string[] = [];
+  for (let index = 0; index < process.argv.length; index += 1) {
+    if (process.argv[index] === name) {
+      const value = process.argv[index + 1];
+      if (!value || value.startsWith("--")) throw new Error(`${name} requires a value`);
+      values.push(value);
+      index += 1;
+    }
+  }
+  return values;
+}
+
+const imagePaths = options("--image").map(imagePath => resolve(imagePath));
+const refs = options("--ref");
+const role = option("--role");
 const sourceHead = option("--source-head").toLowerCase();
 const scene = option("--scene");
-const viewport = option("--viewport");
-const ref = option("--ref");
 const outputPath = resolve(option("--output"));
 const visualReview = process.argv.includes("--visual-review");
-const image = readFileSync(imagePath);
-const imageSha256 = createHash("sha256").update(image).digest("hex");
-const imageStat = statSync(imagePath);
+if (imagePaths.length !== 3 || refs.length !== 3) throw new Error("Exactly three --image and three --ref values are required");
+const images = imagePaths.map((path, index) => {
+  const buffer = readFileSync(path);
+  return {
+    path,
+    ref: refs[index]!,
+    buffer,
+    sha256: createHash("sha256").update(buffer).digest("hex"),
+    fileBytes: statSync(path).size,
+  };
+});
+const viewports = ["1920x900", "390x844", "360x640"];
+if (images.some((image, index) => image.ref !== `codex-input-image-${index + 1}`)) {
+  throw new Error("Attachment refs must match the browser compiler order codex-input-image-1..3");
+}
 const receiptContext: HostObservedReceiptContext = {
   sourceHead,
   scene,
-  viewport,
-  attachments: [{ ref, sha256: imageSha256, bytes: image.length }],
+  viewport: "multi",
+  attachments: images.map(image => ({ ref: image.ref, sha256: image.sha256, bytes: image.buffer.length })),
 };
 let receipt: HostObservedReceipt | undefined;
 const events: Array<{ type: AdapterEvent["type"] }> = [];
@@ -64,7 +90,7 @@ const provider: CodexProviderConfig = {
 };
 const nativeTurnId = `dev-host-observed-receipt-${Date.now()}`;
 const request: CodexParsedRequest = {
-  modelId: "gpt-5.6-sol",
+  modelId: "chatgpt-web/gpt-6-sol",
   stream: true,
   context: {
     messages: [{
@@ -72,9 +98,9 @@ const request: CodexParsedRequest = {
       timestamp: Date.now(),
       content: [
         { type: "text", text: visualReview
-          ? `Perform a concise visual control review of the supplied runtime evidence for ${scene} at ${viewport}. State whether the image is readable and whether any obvious crop, clipping, or composition defect is visible. Do not invent metadata.`
-          : `Review the supplied runtime evidence for ${scene} at ${viewport}. Reply with exactly E2E RECEIVED.` },
-        { type: "image", imageUrl: `data:image/png;base64,${image.toString("base64")}`, detail: "high" },
+          ? `You are the independent ${role} visual-review role. Review all three supplied current-runtime PNGs for ${scene} in desktop, portrait390, and portrait360 order. State whether each image is readable and whether any obvious crop, clipping, or composition defect is visible. Return a concise PASS decision with one observation per viewport. Do not invent metadata.`
+          : `Review the supplied runtime evidence for ${scene} in all three viewports. Reply with exactly E2E RECEIVED.` },
+        ...images.map(image => ({ type: "image" as const, imageUrl: `data:image/png;base64,${image.buffer.toString("base64")}`, detail: "high" as const })),
       ],
     }],
   },
@@ -97,6 +123,13 @@ const request: CodexParsedRequest = {
   },
 };
 
+const requestedRoute = routeChatGptWebRequest(request, config);
+if (requestedRoute.slug !== "chatgpt-web/gpt-6-sol" || request.modelId !== "gpt-5.6-sol"
+  || request._chatgptModelFamily !== "6" || request.options.reasoning !== "high"
+  || request._chatgptRequestedModel !== "chatgpt-web/gpt-6-sol") {
+  throw new Error("DEV E2E route normalization did not preserve the GPT-6 Sol High request");
+}
+
 try {
   const adapter = runtime.adapterFactory(provider);
   const emittedText: string[] = [];
@@ -109,22 +142,28 @@ try {
     || receipt.provider.responseId !== null || receipt.provider.reviewTraceId !== null) {
     throw new Error("DEV E2E produced provider fields in a host-observed receipt");
   }
-  if (receipt.source.sourceHead !== sourceHead || receipt.source.scene !== scene || receipt.source.viewport !== viewport) {
+  if (receipt.source.sourceHead !== sourceHead || receipt.source.scene !== scene || receipt.source.viewport !== "multi") {
     throw new Error("DEV E2E receipt source binding mismatch");
   }
-  if (receipt.source.attachments[0]?.sha256 !== imageSha256 || receipt.source.attachments[0]?.bytes !== image.length) {
+  if (receipt.source.attachments.length !== images.length || receipt.source.attachments.some((item, index) => (
+    item.ref !== images[index]!.ref || item.sha256 !== images[index]!.sha256 || item.bytes !== images[index]!.buffer.length
+  ))) {
     throw new Error("DEV E2E receipt image binding mismatch");
   }
-  if (receipt.route.requestedModel !== request.modelId || receipt.route.reasoning !== "high") {
-    throw new Error("DEV E2E receipt route binding mismatch");
+  if (receipt.route.requestedModel !== "chatgpt-web/gpt-6-sol"
+    || receipt.route.selectedModel !== "chatgpt-web/gpt-6-sol"
+    || receipt.route.reasoning !== "high"
+    || receipt.route.selectedReasoning !== "high") {
+    throw new Error("DEV E2E receipt route binding or selected GPT-6 High observation is missing");
   }
   mkdirSync(dirname(outputPath), { recursive: true });
   writeFileSync(outputPath, `${JSON.stringify({
     assurance: "host-observed",
-    image: { path: imagePath, ref, sha256: imageSha256, bytes: image.length, fileBytes: imageStat.size },
-    request: { model: request.modelId, reasoning: request.options.reasoning, scene, viewport, sourceHead },
+    role,
+    images: images.map(image => ({ path: image.path, ref: image.ref, sha256: image.sha256, bytes: image.buffer.length, fileBytes: image.fileBytes })),
+    request: { requestedModel: request._chatgptRequestedModel, backendModel: request.modelId, selectedModel: receipt.route.selectedModel, requestedReasoning: request.options.reasoning, selectedReasoning: receipt.route.selectedReasoning, scene, viewports, sourceHead },
     stages: events,
-    response: { text: emittedText.join(""), textSha256: createHash("sha256").update(emittedText.join(""), "utf8").digest("hex"), eventTypes: events.map(event => event.type) },
+    response: { text: receipt.answer.text, emittedText: emittedText.join(""), textSha256: createHash("sha256").update(receipt.answer.text ?? "", "utf8").digest("hex"), eventTypes: events.map(event => event.type) },
     receipt,
   }, null, 2)}\n`);
   console.log(JSON.stringify({ outputPath, traceId: receipt.browser.bridgeTraceId, assistantTurnIdentity: receipt.browser.assistantTurnIdentity, eventTypes: events.map(event => event.type) }));
