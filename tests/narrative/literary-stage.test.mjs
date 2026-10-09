@@ -81,10 +81,20 @@ test('second bounded reframe batch keeps the selected cast in per-cue compositio
   const flow=compileInteractivePlayback(byId.get(id),choices,'ru');
   const position=flow.findIndex(entry => visualAt(id,entry,choices,stageForScene(id,choices).cast).beatId===beatId);
   const direction=visualAt(id,flow[position],choices,stageForScene(id,choices).cast);
-  assert.match(direction.stageComposition,/^batch2-pair-depth-s15-/);
+  assert.match(direction.stageComposition,/^batch2-pair-depth-s15-opening$|^batch5-pair-grounded-s15-lagoon$/);
   assert.deepEqual(direction.requiredCast,['alice','nick']);
   assert.deepEqual(stageCastForPresentation(direction),direction.cast);
  }
+});
+test('S15 lagoon grounding is isolated to the exact authored lagoon cue',()=>{
+ const choices={'S15-C1':'A'};
+ const flow=compileInteractivePlayback(byId.get('S15'),choices,'ru');
+ const opening=visualAt('S15',flow.find(entry=>visualAt('S15',entry,choices,stageForScene('S15',choices).cast).beatId==='scene-start'),choices,stageForScene('S15',choices).cast);
+ const lagoon=visualAt('S15',flow.find(entry=>visualAt('S15',entry,choices,stageForScene('S15',choices).cast).beatId==='jokulsarlon-lagoon'),choices,stageForScene('S15',choices).cast);
+ assert.equal(opening.stageComposition,'batch2-pair-depth-s15-opening');
+ assert.equal(lagoon.stageComposition,'batch5-pair-grounded-s15-lagoon');
+ assert.equal(lagoon.art.file,'jokulsarlon-master.webp');
+ assert.deepEqual(lagoon.requiredCast,['alice','nick']);
 });
 test('every non-cinematic authored 3-4-person cue declares its required presence',()=>{
  const affected=Object.values(visualCues).flat().filter(cue=>cue.cast?.length>2 && !String(cue.art??'').startsWith('cg/') && cue.presentation!=='cinematic');

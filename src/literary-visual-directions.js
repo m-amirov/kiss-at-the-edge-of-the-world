@@ -90,7 +90,7 @@ const reframeStageCompositionByBeat = new Map([
   ['S22:scene-start','batch2-four-person-depth-s22'],
   ['S58:scene-start','batch2-four-person-depth-s58'],
   ['S15:scene-start','batch2-pair-depth-s15-opening'],
-  ['S15:jokulsarlon-lagoon','batch2-pair-depth-s15-lagoon'],
+  ['S15:jokulsarlon-lagoon','batch5-pair-grounded-s15-lagoon'],
   ['S01:nick-arrives','batch3-pair-depth-s01-nick-arrives'],
   ['S18:scene-start','batch3-pair-depth-s18-opening'],
   ['S28:scene-start','batch3-pair-depth-s28-opening'],

@@ -758,6 +758,21 @@ button.primary:hover{background:linear-gradient(135deg,#d19b76,#a36d51);filter:n
   .scene-stage[data-layout^="batch2-pair-depth-s15-"] .stage-character:nth-child(2){left:40%;transform:scale(.96) translateY(-5%)}
 }
 
+/* S15 lagoon rework: keep the authored two-shot, but lower only this cue so
+   both boots meet the visible black-shore foreground instead of the water. */
+.scene-stage[data-layout="batch5-pair-grounded-s15-lagoon"]{inset:4% 8% 18%;display:block;overflow:visible}
+.scene-stage[data-layout="batch5-pair-grounded-s15-lagoon"]::after{content:'';position:absolute;left:18%;right:18%;bottom:0;height:7%;border-radius:50%;background:radial-gradient(ellipse,rgba(4,12,16,.52),rgba(4,12,16,0) 72%);filter:blur(7px);pointer-events:none;z-index:0}
+.scene-stage[data-layout="batch5-pair-grounded-s15-lagoon"] .stage-character{position:absolute;bottom:0;width:min(31vw,400px);height:100%;min-width:0;margin:0;transform-origin:center bottom}
+.scene-stage[data-layout="batch5-pair-grounded-s15-lagoon"] .stage-character img{width:100%;height:100%;object-position:center bottom}
+.scene-stage[data-layout="batch5-pair-grounded-s15-lagoon"] .stage-character:nth-child(1){left:20%;transform:scale(1.02);z-index:3}
+.scene-stage[data-layout="batch5-pair-grounded-s15-lagoon"] .stage-character:nth-child(2){left:47%;transform:scale(.96) translateY(-2%);z-index:2}
+@media(max-width:680px){
+  .scene-stage[data-layout="batch5-pair-grounded-s15-lagoon"]{inset:10% -6% 34%}
+  .scene-stage[data-layout="batch5-pair-grounded-s15-lagoon"] .stage-character{width:68vw;height:108%}
+  .scene-stage[data-layout="batch5-pair-grounded-s15-lagoon"] .stage-character:nth-child(1){left:2%;transform:scale(1.03)}
+  .scene-stage[data-layout="batch5-pair-grounded-s15-lagoon"] .stage-character:nth-child(2){left:40%;transform:scale(.96) translateY(-5%)}
+}
+
 /* Third bounded REFRAME_STAGE batch: four exact pair openings receive a
    closer foreground arc. The selectors are cue-owned and leave ordinary
    pair staging and previously accepted batches unchanged. */
