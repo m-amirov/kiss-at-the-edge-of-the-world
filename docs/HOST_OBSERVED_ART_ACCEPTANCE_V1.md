@@ -38,6 +38,10 @@ Requested model/effort values are **host-side routing observations**, not an att
 
 Never convert a legacy S38 diagnostic summary into a passing receipt by guessing missing fields. New browser captures and real three-role turn evidence are necessary.
 
+## Scoped E2E control before batch review
+
+Call `verifyHostObservedArtControl({ projectRoot, matrix, sourceHead, reviewEntries, sceneId:'S38' })` with the actual current source-bound runtime matrix and exactly three independently observed S38 reviewer turns, each containing desktop, portrait390 and portrait360. It requires nine role/frame observations, authentic user-turn acknowledgement or identity and full PNG hash/size checks. Its result is diagnostic `PASS_HOST_OBSERVED_SCOPED_CONTROL_NOT_FULL_ACCEPTANCE`, and it cannot create or satisfy the 66-scene acceptance record.
+
 ## Refresh
 
 From the Final RC worktree, after a current-HEAD 66x3 runtime matrix and all 198 three-viewport role-turn records exist:
