@@ -1,6 +1,8 @@
 name: Art Acceptance Contract
 
 on:
+  push:
+    branches: [feature/host-observed-art-acceptance-v1]
   pull_request:
     branches: [release/final-rc-2026-10-08]
   workflow_dispatch:
@@ -21,8 +23,10 @@ jobs:
         run: |
           node --check tools/release/art-acceptance.mjs
           node --check tools/release/visual-content-review.mjs
+          node --check tools/release/host-observed-art-review.mjs
           node --check tools/release/refresh-production-art-acceptance.mjs
           node --check tests/narrative/art-acceptance.test.mjs
           node --check tests/narrative/art-acceptance-visual-content.test.mjs
+          node --check tests/narrative/art-acceptance-host-observed.test.mjs
       - name: Art acceptance regression tests
         run: npm run test:art-acceptance
