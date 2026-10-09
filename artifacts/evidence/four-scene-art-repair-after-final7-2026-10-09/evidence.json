@@ -1,0 +1,1752 @@
+{
+  "schemaVersion": 1,
+  "recordType": "four-scene-art-repair-runtime",
+  "status": "PASS",
+  "phase": "after-final7",
+  "generatedAt": "2026-10-09T06:08:14.595Z",
+  "sourceHead": "a2308054c338b53ecf2310a1bee44e6f5e54f02a",
+  "baseUrl": "http://127.0.0.1:4173/literary.html",
+  "locales": [
+    "ru",
+    "en"
+  ],
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1920,
+      "height": 900
+    },
+    {
+      "name": "portrait360",
+      "width": 360,
+      "height": 640
+    },
+    {
+      "name": "portrait390",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "name": "portrait412",
+      "width": 412,
+      "height": 915
+    }
+  ],
+  "targets": [
+    {
+      "sceneId": "S07",
+      "cue": "s07-kitchen-pasta"
+    },
+    {
+      "sceneId": "S18",
+      "cue": "hofn-lighthouse"
+    },
+    {
+      "sceneId": "S26",
+      "cue": "scene-start"
+    },
+    {
+      "sceneId": "S38",
+      "cue": "s38-ordinary-day"
+    }
+  ],
+  "captures": [
+    {
+      "phase": "after-final7",
+      "locale": "ru",
+      "target": {
+        "sceneId": "S07",
+        "cue": "s07-kitchen-pasta"
+      },
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "sourceHead": "a2308054c338b53ecf2310a1bee44e6f5e54f02a",
+      "screenshot": "artifacts/evidence/four-scene-art-repair-after-final7-2026-10-09/S07-s07-kitchen-pasta-ru-1920x900.png",
+      "screenshotSha256": "9278cc939df7c9488787330f38b13f666e418714d931b9165108d8f2a721426b",
+      "screenshotBytes": 2040607,
+      "readback": {
+        "sceneId": "S07",
+        "cue": "s07-kitchen-pasta",
+        "asset": "s07-kitchen-pasta.webp",
+        "desktopAsset": "s07-kitchen-pasta.webp",
+        "natural": [
+          1672,
+          941
+        ],
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 900,
+          "width": 1920,
+          "height": 900
+        },
+        "pictureRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 900,
+          "width": 1920,
+          "height": 900
+        },
+        "viewport": [
+          1920,
+          900
+        ],
+        "text": "Через десять минут вода убежала на плиту, соус оказался слишком острым, а дуршлаг — декоративной миской с отверстиями размером с монету.\n\n— Не трогай, — сказал Ник Алисе, когда она потянулась к кастрюле. — У блюда есть замысел.",
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true
+      },
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "phase": "after-final7",
+      "locale": "ru",
+      "target": {
+        "sceneId": "S07",
+        "cue": "s07-kitchen-pasta"
+      },
+      "viewport": {
+        "name": "portrait360",
+        "width": 360,
+        "height": 640
+      },
+      "sourceHead": "a2308054c338b53ecf2310a1bee44e6f5e54f02a",
+      "screenshot": "artifacts/evidence/four-scene-art-repair-after-final7-2026-10-09/S07-s07-kitchen-pasta-ru-360x640.png",
+      "screenshotSha256": "deb0c628df89691949b606156cc3707d87394a2071d38fdfc07914898a1f0596",
+      "screenshotBytes": 323064,
+      "readback": {
+        "sceneId": "S07",
+        "cue": "s07-kitchen-pasta",
+        "asset": "s07-kitchen-pasta-portrait.webp",
+        "desktopAsset": "s07-kitchen-pasta.webp",
+        "natural": [
+          941,
+          1672
+        ],
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 360,
+          "bottom": 640,
+          "width": 360,
+          "height": 640
+        },
+        "pictureRect": {
+          "left": 0,
+          "top": 0,
+          "right": 360,
+          "bottom": 640,
+          "width": 360,
+          "height": 640
+        },
+        "viewport": [
+          360,
+          640
+        ],
+        "text": "Через десять минут вода убежала на плиту, соус оказался слишком острым, а дуршлаг — декоративной миской с отверстиями размером с монету.\n\n— Не трогай, — сказал Ник Алисе, когда она потянулась к кастрюле. — У блюда есть замысел.",
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true
+      },
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "phase": "after-final7",
+      "locale": "ru",
+      "target": {
+        "sceneId": "S07",
+        "cue": "s07-kitchen-pasta"
+      },
+      "viewport": {
+        "name": "portrait390",
+        "width": 390,
+        "height": 844
+      },
+      "sourceHead": "a2308054c338b53ecf2310a1bee44e6f5e54f02a",
+      "screenshot": "artifacts/evidence/four-scene-art-repair-after-final7-2026-10-09/S07-s07-kitchen-pasta-ru-390x844.png",
+      "screenshotSha256": "ba07b34481822279de168dcba5c53501ff3c7fd0faabdcb7f9529168bd232761",
+      "screenshotBytes": 450232,
+      "readback": {
+        "sceneId": "S07",
+        "cue": "s07-kitchen-pasta",
+        "asset": "s07-kitchen-pasta-portrait.webp",
+        "desktopAsset": "s07-kitchen-pasta.webp",
+        "natural": [
+          941,
+          1672
+        ],
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "pictureRect": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "viewport": [
+          390,
+          844
+        ],
+        "text": "Через десять минут вода убежала на плиту, соус оказался слишком острым, а дуршлаг — декоративной миской с отверстиями размером с монету.\n\n— Не трогай, — сказал Ник Алисе, когда она потянулась к кастрюле. — У блюда есть замысел.",
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true
+      },
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "phase": "after-final7",
+      "locale": "ru",
+      "target": {
+        "sceneId": "S07",
+        "cue": "s07-kitchen-pasta"
+      },
+      "viewport": {
+        "name": "portrait412",
+        "width": 412,
+        "height": 915
+      },
+      "sourceHead": "a2308054c338b53ecf2310a1bee44e6f5e54f02a",
+      "screenshot": "artifacts/evidence/four-scene-art-repair-after-final7-2026-10-09/S07-s07-kitchen-pasta-ru-412x915.png",
+      "screenshotSha256": "ada6b9e91299b30931901e12b458c9252a4991b9c18617c19d4bb486cbdfeec3",
+      "screenshotBytes": 504549,
+      "readback": {
+        "sceneId": "S07",
+        "cue": "s07-kitchen-pasta",
+        "asset": "s07-kitchen-pasta-portrait.webp",
+        "desktopAsset": "s07-kitchen-pasta.webp",
+        "natural": [
+          941,
+          1672
+        ],
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 412,
+          "bottom": 915,
+          "width": 412,
+          "height": 915
+        },
+        "pictureRect": {
+          "left": 0,
+          "top": 0,
+          "right": 412,
+          "bottom": 915,
+          "width": 412,
+          "height": 915
+        },
+        "viewport": [
+          412,
+          915
+        ],
+        "text": "Через десять минут вода убежала на плиту, соус оказался слишком острым, а дуршлаг — декоративной миской с отверстиями размером с монету.\n\n— Не трогай, — сказал Ник Алисе, когда она потянулась к кастрюле. — У блюда есть замысел.",
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true
+      },
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "phase": "after-final7",
+      "locale": "ru",
+      "target": {
+        "sceneId": "S18",
+        "cue": "hofn-lighthouse"
+      },
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "sourceHead": "a2308054c338b53ecf2310a1bee44e6f5e54f02a",
+      "screenshot": "artifacts/evidence/four-scene-art-repair-after-final7-2026-10-09/S18-hofn-lighthouse-ru-1920x900.png",
+      "screenshotSha256": "e1828f47f1f2b4edaf75b685dde57f7126a9d3dd53dc21032359ef9fbbdb5af2",
+      "screenshotBytes": 1844685,
+      "readback": {
+        "sceneId": "S18",
+        "cue": "hofn-lighthouse",
+        "asset": "s18-hofn-harbour.webp",
+        "desktopAsset": "s18-hofn-harbour.webp",
+        "natural": [
+          1672,
+          941
+        ],
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 900,
+          "width": 1920,
+          "height": 900
+        },
+        "pictureRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 900,
+          "width": 1920,
+          "height": 900
+        },
+        "viewport": [
+          1920,
+          900
+        ],
+        "text": "За домами ветер был слабее, чем у лагуны, но на открытом участке холод сразу нашёл щель между шарфом и воротником. Они дошли по городской дорожке к гавани. Свет на берегу мерцал за пришвартованными судами; дальше темнота воды делала расстояние обманчивым. Эрик предложил остановиться у ограждения, не идти по мокрым камням.",
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true
+      },
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "phase": "after-final7",
+      "locale": "ru",
+      "target": {
+        "sceneId": "S18",
+        "cue": "hofn-lighthouse"
+      },
+      "viewport": {
+        "name": "portrait360",
+        "width": 360,
+        "height": 640
+      },
+      "sourceHead": "a2308054c338b53ecf2310a1bee44e6f5e54f02a",
+      "screenshot": "artifacts/evidence/four-scene-art-repair-after-final7-2026-10-09/S18-hofn-lighthouse-ru-360x640.png",
+      "screenshotSha256": "8da53cbfda1b55804a6d2cb5ced896e57474b77ec4e03f5f026a32a89204ab78",
+      "screenshotBytes": 297080,
+      "readback": {
+        "sceneId": "S18",
+        "cue": "hofn-lighthouse",
+        "asset": "s18-hofn-harbour-portrait.webp",
+        "desktopAsset": "s18-hofn-harbour.webp",
+        "natural": [
+          941,
+          1672
+        ],
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 360,
+          "bottom": 640,
+          "width": 360,
+          "height": 640
+        },
+        "pictureRect": {
+          "left": 0,
+          "top": 0,
+          "right": 360,
+          "bottom": 640,
+          "width": 360,
+          "height": 640
+        },
+        "viewport": [
+          360,
+          640
+        ],
+        "text": "За домами ветер был слабее, чем у лагуны, но на открытом участке холод сразу нашёл щель между шарфом и воротником. Они дошли по городской дорожке к гавани. Свет на берегу мерцал за пришвартованными судами; дальше темнота воды делала расстояние обманчивым. Эрик предложил остановиться у ограждения, не идти по мокрым камням.",
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true
+      },
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "phase": "after-final7",
+      "locale": "ru",
+      "target": {
+        "sceneId": "S18",
+        "cue": "hofn-lighthouse"
+      },
+      "viewport": {
+        "name": "portrait390",
+        "width": 390,
+        "height": 844
+      },
+      "sourceHead": "a2308054c338b53ecf2310a1bee44e6f5e54f02a",
+      "screenshot": "artifacts/evidence/four-scene-art-repair-after-final7-2026-10-09/S18-hofn-lighthouse-ru-390x844.png",
+      "screenshotSha256": "5c6f793b0b9225226fe8ccba5d957ece96c7e8e3adc6bc2111db05f30ac76759",
+      "screenshotBytes": 429510,
+      "readback": {
+        "sceneId": "S18",
+        "cue": "hofn-lighthouse",
+        "asset": "s18-hofn-harbour-portrait.webp",
+        "desktopAsset": "s18-hofn-harbour.webp",
+        "natural": [
+          941,
+          1672
+        ],
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "pictureRect": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "viewport": [
+          390,
+          844
+        ],
+        "text": "За домами ветер был слабее, чем у лагуны, но на открытом участке холод сразу нашёл щель между шарфом и воротником. Они дошли по городской дорожке к гавани. Свет на берегу мерцал за пришвартованными судами; дальше темнота воды делала расстояние обманчивым. Эрик предложил остановиться у ограждения, не идти по мокрым камням.",
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true
+      },
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "phase": "after-final7",
+      "locale": "ru",
+      "target": {
+        "sceneId": "S18",
+        "cue": "hofn-lighthouse"
+      },
+      "viewport": {
+        "name": "portrait412",
+        "width": 412,
+        "height": 915
+      },
+      "sourceHead": "a2308054c338b53ecf2310a1bee44e6f5e54f02a",
+      "screenshot": "artifacts/evidence/four-scene-art-repair-after-final7-2026-10-09/S18-hofn-lighthouse-ru-412x915.png",
+      "screenshotSha256": "462bc2cf465c1a24d3aba238bf56f2cc7706f0ccb43c644074127083522d2810",
+      "screenshotBytes": 486082,
+      "readback": {
+        "sceneId": "S18",
+        "cue": "hofn-lighthouse",
+        "asset": "s18-hofn-harbour-portrait.webp",
+        "desktopAsset": "s18-hofn-harbour.webp",
+        "natural": [
+          941,
+          1672
+        ],
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 412,
+          "bottom": 915,
+          "width": 412,
+          "height": 915
+        },
+        "pictureRect": {
+          "left": 0,
+          "top": 0,
+          "right": 412,
+          "bottom": 915,
+          "width": 412,
+          "height": 915
+        },
+        "viewport": [
+          412,
+          915
+        ],
+        "text": "За домами ветер был слабее, чем у лагуны, но на открытом участке холод сразу нашёл щель между шарфом и воротником. Они дошли по городской дорожке к гавани. Свет на берегу мерцал за пришвартованными судами; дальше темнота воды делала расстояние обманчивым. Эрик предложил остановиться у ограждения, не идти по мокрым камням.",
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true
+      },
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "phase": "after-final7",
+      "locale": "ru",
+      "target": {
+        "sceneId": "S26",
+        "cue": "scene-start"
+      },
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "sourceHead": "a2308054c338b53ecf2310a1bee44e6f5e54f02a",
+      "screenshot": "artifacts/evidence/four-scene-art-repair-after-final7-2026-10-09/S26-scene-start-ru-1920x900.png",
+      "screenshotSha256": "bbd4cbea786f77d9815e31e59d72275c67c833e3dd065d286e88f2d5c2b223ee",
+      "screenshotBytes": 1644610,
+      "readback": {
+        "sceneId": "S26",
+        "cue": "scene-start",
+        "asset": "s26-power-outage-notebook.webp",
+        "desktopAsset": "s26-power-outage-notebook.webp",
+        "natural": [
+          1672,
+          941
+        ],
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 900,
+          "width": 1920,
+          "height": 900
+        },
+        "pictureRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 900,
+          "width": 1920,
+          "height": 900
+        },
+        "viewport": [
+          1920,
+          900
+        ],
+        "text": "Они собирались уехать утром к Egilsstaðir. В гостевом доме погас свет на кухне; в коридоре горела только лампа над входом. Алиса вернулась за блокнотом и нашла его на подоконнике, рядом с бумажной картой, на которой высохло сливочное пятно.",
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true
+      },
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "phase": "after-final7",
+      "locale": "ru",
+      "target": {
+        "sceneId": "S26",
+        "cue": "scene-start"
+      },
+      "viewport": {
+        "name": "portrait360",
+        "width": 360,
+        "height": 640
+      },
+      "sourceHead": "a2308054c338b53ecf2310a1bee44e6f5e54f02a",
+      "screenshot": "artifacts/evidence/four-scene-art-repair-after-final7-2026-10-09/S26-scene-start-ru-360x640.png",
+      "screenshotSha256": "7cf7fd115466a15df7c9b78a7bed899de0930bc2cfcfd8a8190a50d7184843c4",
+      "screenshotBytes": 293470,
+      "readback": {
+        "sceneId": "S26",
+        "cue": "scene-start",
+        "asset": "s26-power-outage-notebook-portrait.webp",
+        "desktopAsset": "s26-power-outage-notebook.webp",
+        "natural": [
+          941,
+          1672
+        ],
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 360,
+          "bottom": 640,
+          "width": 360,
+          "height": 640
+        },
+        "pictureRect": {
+          "left": 0,
+          "top": 0,
+          "right": 360,
+          "bottom": 640,
+          "width": 360,
+          "height": 640
+        },
+        "viewport": [
+          360,
+          640
+        ],
+        "text": "Они собирались уехать утром к Egilsstaðir. В гостевом доме погас свет на кухне; в коридоре горела только лампа над входом. Алиса вернулась за блокнотом и нашла его на подоконнике, рядом с бумажной картой, на которой высохло сливочное пятно.",
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true
+      },
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "phase": "after-final7",
+      "locale": "ru",
+      "target": {
+        "sceneId": "S26",
+        "cue": "scene-start"
+      },
+      "viewport": {
+        "name": "portrait390",
+        "width": 390,
+        "height": 844
+      },
+      "sourceHead": "a2308054c338b53ecf2310a1bee44e6f5e54f02a",
+      "screenshot": "artifacts/evidence/four-scene-art-repair-after-final7-2026-10-09/S26-scene-start-ru-390x844.png",
+      "screenshotSha256": "4184362497cea0fdac419915df8a2a1f2fa5c343c3beb9da9bd9320a576c0c44",
+      "screenshotBytes": 400880,
+      "readback": {
+        "sceneId": "S26",
+        "cue": "scene-start",
+        "asset": "s26-power-outage-notebook-portrait.webp",
+        "desktopAsset": "s26-power-outage-notebook.webp",
+        "natural": [
+          941,
+          1672
+        ],
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "pictureRect": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "viewport": [
+          390,
+          844
+        ],
+        "text": "Они собирались уехать утром к Egilsstaðir. В гостевом доме погас свет на кухне; в коридоре горела только лампа над входом. Алиса вернулась за блокнотом и нашла его на подоконнике, рядом с бумажной картой, на которой высохло сливочное пятно.",
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true
+      },
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "phase": "after-final7",
+      "locale": "ru",
+      "target": {
+        "sceneId": "S26",
+        "cue": "scene-start"
+      },
+      "viewport": {
+        "name": "portrait412",
+        "width": 412,
+        "height": 915
+      },
+      "sourceHead": "a2308054c338b53ecf2310a1bee44e6f5e54f02a",
+      "screenshot": "artifacts/evidence/four-scene-art-repair-after-final7-2026-10-09/S26-scene-start-ru-412x915.png",
+      "screenshotSha256": "eeedbd0e4a5e51c40c1ae40fb1adf06258e2b4d4df40dfb24d8dff20bbffb094",
+      "screenshotBytes": 444805,
+      "readback": {
+        "sceneId": "S26",
+        "cue": "scene-start",
+        "asset": "s26-power-outage-notebook-portrait.webp",
+        "desktopAsset": "s26-power-outage-notebook.webp",
+        "natural": [
+          941,
+          1672
+        ],
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 412,
+          "bottom": 915,
+          "width": 412,
+          "height": 915
+        },
+        "pictureRect": {
+          "left": 0,
+          "top": 0,
+          "right": 412,
+          "bottom": 915,
+          "width": 412,
+          "height": 915
+        },
+        "viewport": [
+          412,
+          915
+        ],
+        "text": "Они собирались уехать утром к Egilsstaðir. В гостевом доме погас свет на кухне; в коридоре горела только лампа над входом. Алиса вернулась за блокнотом и нашла его на подоконнике, рядом с бумажной картой, на которой высохло сливочное пятно.",
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true
+      },
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "phase": "after-final7",
+      "locale": "ru",
+      "target": {
+        "sceneId": "S38",
+        "cue": "s38-ordinary-day"
+      },
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "sourceHead": "a2308054c338b53ecf2310a1bee44e6f5e54f02a",
+      "screenshot": "artifacts/evidence/four-scene-art-repair-after-final7-2026-10-09/S38-s38-ordinary-day-ru-1920x900.png",
+      "screenshotSha256": "b082e1063f91f358ddff7123c5672cc0c144d78c89b97ee408833eef96c6edea",
+      "screenshotBytes": 1872950,
+      "readback": {
+        "sceneId": "S38",
+        "cue": "s38-ordinary-day",
+        "asset": "s38-alice-nick-ordinary-day.webp",
+        "desktopAsset": "s38-alice-nick-ordinary-day.webp",
+        "natural": [
+          1672,
+          941
+        ],
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 900,
+          "width": 1920,
+          "height": 900
+        },
+        "pictureRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 900,
+          "width": 1920,
+          "height": 900
+        },
+        "viewport": [
+          1920,
+          900
+        ],
+        "text": "Ник проснулся раньше Алисы и вместо камеры принёс к её двери два билета в небольшой местный музей. Она удивилась: прежде Ник редко планировал что-то, где нельзя ничего снять. Он сказал, что билеты можно вернуть, если она предпочитает пройтись просто так. Алиса выбрала музей, а потом захотела зайти в магазин за кофе.",
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true
+      },
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "phase": "after-final7",
+      "locale": "ru",
+      "target": {
+        "sceneId": "S38",
+        "cue": "s38-ordinary-day"
+      },
+      "viewport": {
+        "name": "portrait360",
+        "width": 360,
+        "height": 640
+      },
+      "sourceHead": "a2308054c338b53ecf2310a1bee44e6f5e54f02a",
+      "screenshot": "artifacts/evidence/four-scene-art-repair-after-final7-2026-10-09/S38-s38-ordinary-day-ru-360x640.png",
+      "screenshotSha256": "ee89cc4097fbf6b98bfff5f26aea76a9b36a536feab09f1842f2d311220096d2",
+      "screenshotBytes": 304011,
+      "readback": {
+        "sceneId": "S38",
+        "cue": "s38-ordinary-day",
+        "asset": "s38-alice-nick-ordinary-day-portrait.webp",
+        "desktopAsset": "s38-alice-nick-ordinary-day.webp",
+        "natural": [
+          941,
+          1672
+        ],
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 360,
+          "bottom": 640,
+          "width": 360,
+          "height": 640
+        },
+        "pictureRect": {
+          "left": 0,
+          "top": 0,
+          "right": 360,
+          "bottom": 640,
+          "width": 360,
+          "height": 640
+        },
+        "viewport": [
+          360,
+          640
+        ],
+        "text": "Ник проснулся раньше Алисы и вместо камеры принёс к её двери два билета в небольшой местный музей. Она удивилась: прежде Ник редко планировал что-то, где нельзя ничего снять. Он сказал, что билеты можно вернуть, если она предпочитает пройтись просто так. Алиса выбрала музей, а потом захотела зайти в магазин за кофе.",
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true
+      },
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "phase": "after-final7",
+      "locale": "ru",
+      "target": {
+        "sceneId": "S38",
+        "cue": "s38-ordinary-day"
+      },
+      "viewport": {
+        "name": "portrait390",
+        "width": 390,
+        "height": 844
+      },
+      "sourceHead": "a2308054c338b53ecf2310a1bee44e6f5e54f02a",
+      "screenshot": "artifacts/evidence/four-scene-art-repair-after-final7-2026-10-09/S38-s38-ordinary-day-ru-390x844.png",
+      "screenshotSha256": "0efadae01fbaabbb21bb2aa1716ec62d76992473e20944b33f161600026204b1",
+      "screenshotBytes": 438761,
+      "readback": {
+        "sceneId": "S38",
+        "cue": "s38-ordinary-day",
+        "asset": "s38-alice-nick-ordinary-day-portrait.webp",
+        "desktopAsset": "s38-alice-nick-ordinary-day.webp",
+        "natural": [
+          941,
+          1672
+        ],
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "pictureRect": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "viewport": [
+          390,
+          844
+        ],
+        "text": "Ник проснулся раньше Алисы и вместо камеры принёс к её двери два билета в небольшой местный музей. Она удивилась: прежде Ник редко планировал что-то, где нельзя ничего снять. Он сказал, что билеты можно вернуть, если она предпочитает пройтись просто так. Алиса выбрала музей, а потом захотела зайти в магазин за кофе.",
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true
+      },
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "phase": "after-final7",
+      "locale": "ru",
+      "target": {
+        "sceneId": "S38",
+        "cue": "s38-ordinary-day"
+      },
+      "viewport": {
+        "name": "portrait412",
+        "width": 412,
+        "height": 915
+      },
+      "sourceHead": "a2308054c338b53ecf2310a1bee44e6f5e54f02a",
+      "screenshot": "artifacts/evidence/four-scene-art-repair-after-final7-2026-10-09/S38-s38-ordinary-day-ru-412x915.png",
+      "screenshotSha256": "a07391464b43d9537a932aa32c857aa7095b054523f05a1519f482e8df27809b",
+      "screenshotBytes": 489379,
+      "readback": {
+        "sceneId": "S38",
+        "cue": "s38-ordinary-day",
+        "asset": "s38-alice-nick-ordinary-day-portrait.webp",
+        "desktopAsset": "s38-alice-nick-ordinary-day.webp",
+        "natural": [
+          941,
+          1672
+        ],
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 412,
+          "bottom": 915,
+          "width": 412,
+          "height": 915
+        },
+        "pictureRect": {
+          "left": 0,
+          "top": 0,
+          "right": 412,
+          "bottom": 915,
+          "width": 412,
+          "height": 915
+        },
+        "viewport": [
+          412,
+          915
+        ],
+        "text": "Ник проснулся раньше Алисы и вместо камеры принёс к её двери два билета в небольшой местный музей. Она удивилась: прежде Ник редко планировал что-то, где нельзя ничего снять. Он сказал, что билеты можно вернуть, если она предпочитает пройтись просто так. Алиса выбрала музей, а потом захотела зайти в магазин за кофе.",
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true
+      },
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "phase": "after-final7",
+      "locale": "en",
+      "target": {
+        "sceneId": "S07",
+        "cue": "s07-kitchen-pasta"
+      },
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "sourceHead": "a2308054c338b53ecf2310a1bee44e6f5e54f02a",
+      "screenshot": "artifacts/evidence/four-scene-art-repair-after-final7-2026-10-09/S07-s07-kitchen-pasta-en-1920x900.png",
+      "screenshotSha256": "349d2abd5c8decba229b8b3f23296eee0bf05023e0814c9e3d67399ce3487a6b",
+      "screenshotBytes": 2065896,
+      "readback": {
+        "sceneId": "S07",
+        "cue": "s07-kitchen-pasta",
+        "asset": "s07-kitchen-pasta.webp",
+        "desktopAsset": "s07-kitchen-pasta.webp",
+        "natural": [
+          1672,
+          941
+        ],
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 900,
+          "width": 1920,
+          "height": 900
+        },
+        "pictureRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 900,
+          "width": 1920,
+          "height": 900
+        },
+        "viewport": [
+          1920,
+          900
+        ],
+        "text": "Ten minutes later, the water had boiled over onto the stove, the sauce was too spicy, and the colander was a decorative bowl with coin-sized holes.\n\n“Don't touch it,” Nick said when Alice reached for the pot. “The dish has a vision.”",
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true
+      },
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "phase": "after-final7",
+      "locale": "en",
+      "target": {
+        "sceneId": "S07",
+        "cue": "s07-kitchen-pasta"
+      },
+      "viewport": {
+        "name": "portrait360",
+        "width": 360,
+        "height": 640
+      },
+      "sourceHead": "a2308054c338b53ecf2310a1bee44e6f5e54f02a",
+      "screenshot": "artifacts/evidence/four-scene-art-repair-after-final7-2026-10-09/S07-s07-kitchen-pasta-en-360x640.png",
+      "screenshotSha256": "cfeafd6e6229caee0ed576e4cbf69735edf001066d8cc26d05cf0ae5431a8dec",
+      "screenshotBytes": 321638,
+      "readback": {
+        "sceneId": "S07",
+        "cue": "s07-kitchen-pasta",
+        "asset": "s07-kitchen-pasta-portrait.webp",
+        "desktopAsset": "s07-kitchen-pasta.webp",
+        "natural": [
+          941,
+          1672
+        ],
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 360,
+          "bottom": 640,
+          "width": 360,
+          "height": 640
+        },
+        "pictureRect": {
+          "left": 0,
+          "top": 0,
+          "right": 360,
+          "bottom": 640,
+          "width": 360,
+          "height": 640
+        },
+        "viewport": [
+          360,
+          640
+        ],
+        "text": "Ten minutes later, the water had boiled over onto the stove, the sauce was too spicy, and the colander was a decorative bowl with coin-sized holes.\n\n“Don't touch it,” Nick said when Alice reached for the pot. “The dish has a vision.”",
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true
+      },
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "phase": "after-final7",
+      "locale": "en",
+      "target": {
+        "sceneId": "S07",
+        "cue": "s07-kitchen-pasta"
+      },
+      "viewport": {
+        "name": "portrait390",
+        "width": 390,
+        "height": 844
+      },
+      "sourceHead": "a2308054c338b53ecf2310a1bee44e6f5e54f02a",
+      "screenshot": "artifacts/evidence/four-scene-art-repair-after-final7-2026-10-09/S07-s07-kitchen-pasta-en-390x844.png",
+      "screenshotSha256": "80c2e47a361b8c53c5162bd50f45925f912a020bb3dd0e8d99451d5f05876d7e",
+      "screenshotBytes": 454387,
+      "readback": {
+        "sceneId": "S07",
+        "cue": "s07-kitchen-pasta",
+        "asset": "s07-kitchen-pasta-portrait.webp",
+        "desktopAsset": "s07-kitchen-pasta.webp",
+        "natural": [
+          941,
+          1672
+        ],
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "pictureRect": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "viewport": [
+          390,
+          844
+        ],
+        "text": "Ten minutes later, the water had boiled over onto the stove, the sauce was too spicy, and the colander was a decorative bowl with coin-sized holes.\n\n“Don't touch it,” Nick said when Alice reached for the pot. “The dish has a vision.”",
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true
+      },
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "phase": "after-final7",
+      "locale": "en",
+      "target": {
+        "sceneId": "S07",
+        "cue": "s07-kitchen-pasta"
+      },
+      "viewport": {
+        "name": "portrait412",
+        "width": 412,
+        "height": 915
+      },
+      "sourceHead": "a2308054c338b53ecf2310a1bee44e6f5e54f02a",
+      "screenshot": "artifacts/evidence/four-scene-art-repair-after-final7-2026-10-09/S07-s07-kitchen-pasta-en-412x915.png",
+      "screenshotSha256": "5cabff55fc3426d05ebf012338d951f87fcc425440bdcdaee0af1e5369add671",
+      "screenshotBytes": 507267,
+      "readback": {
+        "sceneId": "S07",
+        "cue": "s07-kitchen-pasta",
+        "asset": "s07-kitchen-pasta-portrait.webp",
+        "desktopAsset": "s07-kitchen-pasta.webp",
+        "natural": [
+          941,
+          1672
+        ],
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 412,
+          "bottom": 915,
+          "width": 412,
+          "height": 915
+        },
+        "pictureRect": {
+          "left": 0,
+          "top": 0,
+          "right": 412,
+          "bottom": 915,
+          "width": 412,
+          "height": 915
+        },
+        "viewport": [
+          412,
+          915
+        ],
+        "text": "Ten minutes later, the water had boiled over onto the stove, the sauce was too spicy, and the colander was a decorative bowl with coin-sized holes.\n\n“Don't touch it,” Nick said when Alice reached for the pot. “The dish has a vision.”",
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true
+      },
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "phase": "after-final7",
+      "locale": "en",
+      "target": {
+        "sceneId": "S18",
+        "cue": "hofn-lighthouse"
+      },
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "sourceHead": "a2308054c338b53ecf2310a1bee44e6f5e54f02a",
+      "screenshot": "artifacts/evidence/four-scene-art-repair-after-final7-2026-10-09/S18-hofn-lighthouse-en-1920x900.png",
+      "screenshotSha256": "2306b5bf26c3848138142016ed6f35186ed76b47ff98346c2161824316ad3cf8",
+      "screenshotBytes": 1872088,
+      "readback": {
+        "sceneId": "S18",
+        "cue": "hofn-lighthouse",
+        "asset": "s18-hofn-harbour.webp",
+        "desktopAsset": "s18-hofn-harbour.webp",
+        "natural": [
+          1672,
+          941
+        ],
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 900,
+          "width": 1920,
+          "height": 900
+        },
+        "pictureRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 900,
+          "width": 1920,
+          "height": 900
+        },
+        "viewport": [
+          1920,
+          900
+        ],
+        "text": "The wind was weaker behind the houses than at the lagoon, but on the open stretch the cold immediately found the gap between her scarf and collar. They followed the town path to the harbour. Light along the shore flickered behind moored boats; farther out, the dark water made the distance deceptive.",
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true
+      },
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "phase": "after-final7",
+      "locale": "en",
+      "target": {
+        "sceneId": "S18",
+        "cue": "hofn-lighthouse"
+      },
+      "viewport": {
+        "name": "portrait360",
+        "width": 360,
+        "height": 640
+      },
+      "sourceHead": "a2308054c338b53ecf2310a1bee44e6f5e54f02a",
+      "screenshot": "artifacts/evidence/four-scene-art-repair-after-final7-2026-10-09/S18-hofn-lighthouse-en-360x640.png",
+      "screenshotSha256": "933f0fd797823c71713170272cdb68e89d4b4e8bbb4d56c4be20a414ca67dd1d",
+      "screenshotBytes": 313299,
+      "readback": {
+        "sceneId": "S18",
+        "cue": "hofn-lighthouse",
+        "asset": "s18-hofn-harbour-portrait.webp",
+        "desktopAsset": "s18-hofn-harbour.webp",
+        "natural": [
+          941,
+          1672
+        ],
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 360,
+          "bottom": 640,
+          "width": 360,
+          "height": 640
+        },
+        "pictureRect": {
+          "left": 0,
+          "top": 0,
+          "right": 360,
+          "bottom": 640,
+          "width": 360,
+          "height": 640
+        },
+        "viewport": [
+          360,
+          640
+        ],
+        "text": "The wind was weaker behind the houses than at the lagoon, but on the open stretch the cold immediately found the gap between her scarf and collar. They followed the town path to the harbour. Light along the shore flickered behind moored boats; farther out, the dark water made the distance deceptive.",
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true
+      },
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "phase": "after-final7",
+      "locale": "en",
+      "target": {
+        "sceneId": "S18",
+        "cue": "hofn-lighthouse"
+      },
+      "viewport": {
+        "name": "portrait390",
+        "width": 390,
+        "height": 844
+      },
+      "sourceHead": "a2308054c338b53ecf2310a1bee44e6f5e54f02a",
+      "screenshot": "artifacts/evidence/four-scene-art-repair-after-final7-2026-10-09/S18-hofn-lighthouse-en-390x844.png",
+      "screenshotSha256": "e6d7408c810852abde2e706a4769c5cc86b5b13169cba02a18e2de20c67a8f2c",
+      "screenshotBytes": 436185,
+      "readback": {
+        "sceneId": "S18",
+        "cue": "hofn-lighthouse",
+        "asset": "s18-hofn-harbour-portrait.webp",
+        "desktopAsset": "s18-hofn-harbour.webp",
+        "natural": [
+          941,
+          1672
+        ],
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "pictureRect": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "viewport": [
+          390,
+          844
+        ],
+        "text": "The wind was weaker behind the houses than at the lagoon, but on the open stretch the cold immediately found the gap between her scarf and collar. They followed the town path to the harbour. Light along the shore flickered behind moored boats; farther out, the dark water made the distance deceptive.",
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true
+      },
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "phase": "after-final7",
+      "locale": "en",
+      "target": {
+        "sceneId": "S18",
+        "cue": "hofn-lighthouse"
+      },
+      "viewport": {
+        "name": "portrait412",
+        "width": 412,
+        "height": 915
+      },
+      "sourceHead": "a2308054c338b53ecf2310a1bee44e6f5e54f02a",
+      "screenshot": "artifacts/evidence/four-scene-art-repair-after-final7-2026-10-09/S18-hofn-lighthouse-en-412x915.png",
+      "screenshotSha256": "2c6f38cefb212154e5d54389de7e507706db2316e7c9d9e3d7823e00d0ecb86b",
+      "screenshotBytes": 494718,
+      "readback": {
+        "sceneId": "S18",
+        "cue": "hofn-lighthouse",
+        "asset": "s18-hofn-harbour-portrait.webp",
+        "desktopAsset": "s18-hofn-harbour.webp",
+        "natural": [
+          941,
+          1672
+        ],
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 412,
+          "bottom": 915,
+          "width": 412,
+          "height": 915
+        },
+        "pictureRect": {
+          "left": 0,
+          "top": 0,
+          "right": 412,
+          "bottom": 915,
+          "width": 412,
+          "height": 915
+        },
+        "viewport": [
+          412,
+          915
+        ],
+        "text": "The wind was weaker behind the houses than at the lagoon, but on the open stretch the cold immediately found the gap between her scarf and collar. They followed the town path to the harbour. Light along the shore flickered behind moored boats; farther out, the dark water made the distance deceptive.",
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true
+      },
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "phase": "after-final7",
+      "locale": "en",
+      "target": {
+        "sceneId": "S26",
+        "cue": "scene-start"
+      },
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "sourceHead": "a2308054c338b53ecf2310a1bee44e6f5e54f02a",
+      "screenshot": "artifacts/evidence/four-scene-art-repair-after-final7-2026-10-09/S26-scene-start-en-1920x900.png",
+      "screenshotSha256": "6c5ce2eea245d26185409c5bc535b62a90936380f15e05e416549cd23f255b1f",
+      "screenshotBytes": 1626498,
+      "readback": {
+        "sceneId": "S26",
+        "cue": "scene-start",
+        "asset": "s26-power-outage-notebook.webp",
+        "desktopAsset": "s26-power-outage-notebook.webp",
+        "natural": [
+          1672,
+          941
+        ],
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 900,
+          "width": 1920,
+          "height": 900
+        },
+        "pictureRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 900,
+          "width": 1920,
+          "height": 900
+        },
+        "viewport": [
+          1920,
+          900
+        ],
+        "text": "They were due to leave for Egilsstaðir in the morning. The kitchen light went out in the guesthouse; only the lamp above the entrance remained on in the hall. Alice went back for her notebook and found it on the sill beside the paper map, where a smear of cream had dried.",
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true
+      },
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "phase": "after-final7",
+      "locale": "en",
+      "target": {
+        "sceneId": "S26",
+        "cue": "scene-start"
+      },
+      "viewport": {
+        "name": "portrait360",
+        "width": 360,
+        "height": 640
+      },
+      "sourceHead": "a2308054c338b53ecf2310a1bee44e6f5e54f02a",
+      "screenshot": "artifacts/evidence/four-scene-art-repair-after-final7-2026-10-09/S26-scene-start-en-360x640.png",
+      "screenshotSha256": "36eeec67d46bd77cf63b99e01322d39ade48e59ed7574aee01d72a1fbfbfe794",
+      "screenshotBytes": 294287,
+      "readback": {
+        "sceneId": "S26",
+        "cue": "scene-start",
+        "asset": "s26-power-outage-notebook-portrait.webp",
+        "desktopAsset": "s26-power-outage-notebook.webp",
+        "natural": [
+          941,
+          1672
+        ],
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 360,
+          "bottom": 640,
+          "width": 360,
+          "height": 640
+        },
+        "pictureRect": {
+          "left": 0,
+          "top": 0,
+          "right": 360,
+          "bottom": 640,
+          "width": 360,
+          "height": 640
+        },
+        "viewport": [
+          360,
+          640
+        ],
+        "text": "They were due to leave for Egilsstaðir in the morning. The kitchen light went out in the guesthouse; only the lamp above the entrance remained on in the hall. Alice went back for her notebook and found it on the sill beside the paper map, where a smear of cream had dried.",
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true
+      },
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "phase": "after-final7",
+      "locale": "en",
+      "target": {
+        "sceneId": "S26",
+        "cue": "scene-start"
+      },
+      "viewport": {
+        "name": "portrait390",
+        "width": 390,
+        "height": 844
+      },
+      "sourceHead": "a2308054c338b53ecf2310a1bee44e6f5e54f02a",
+      "screenshot": "artifacts/evidence/four-scene-art-repair-after-final7-2026-10-09/S26-scene-start-en-390x844.png",
+      "screenshotSha256": "8d12571c80e3c326954483c409b37f3ab912e9a284b8775edf19c8a5a0436e1e",
+      "screenshotBytes": 402276,
+      "readback": {
+        "sceneId": "S26",
+        "cue": "scene-start",
+        "asset": "s26-power-outage-notebook-portrait.webp",
+        "desktopAsset": "s26-power-outage-notebook.webp",
+        "natural": [
+          941,
+          1672
+        ],
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "pictureRect": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "viewport": [
+          390,
+          844
+        ],
+        "text": "They were due to leave for Egilsstaðir in the morning. The kitchen light went out in the guesthouse; only the lamp above the entrance remained on in the hall. Alice went back for her notebook and found it on the sill beside the paper map, where a smear of cream had dried.",
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true
+      },
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "phase": "after-final7",
+      "locale": "en",
+      "target": {
+        "sceneId": "S26",
+        "cue": "scene-start"
+      },
+      "viewport": {
+        "name": "portrait412",
+        "width": 412,
+        "height": 915
+      },
+      "sourceHead": "a2308054c338b53ecf2310a1bee44e6f5e54f02a",
+      "screenshot": "artifacts/evidence/four-scene-art-repair-after-final7-2026-10-09/S26-scene-start-en-412x915.png",
+      "screenshotSha256": "4799749f15a5e3747748d31098b788613f9384f76e5d1d69b8a14221f26df871",
+      "screenshotBytes": 446211,
+      "readback": {
+        "sceneId": "S26",
+        "cue": "scene-start",
+        "asset": "s26-power-outage-notebook-portrait.webp",
+        "desktopAsset": "s26-power-outage-notebook.webp",
+        "natural": [
+          941,
+          1672
+        ],
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 412,
+          "bottom": 915,
+          "width": 412,
+          "height": 915
+        },
+        "pictureRect": {
+          "left": 0,
+          "top": 0,
+          "right": 412,
+          "bottom": 915,
+          "width": 412,
+          "height": 915
+        },
+        "viewport": [
+          412,
+          915
+        ],
+        "text": "They were due to leave for Egilsstaðir in the morning. The kitchen light went out in the guesthouse; only the lamp above the entrance remained on in the hall. Alice went back for her notebook and found it on the sill beside the paper map, where a smear of cream had dried.",
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true
+      },
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "phase": "after-final7",
+      "locale": "en",
+      "target": {
+        "sceneId": "S38",
+        "cue": "s38-ordinary-day"
+      },
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "sourceHead": "a2308054c338b53ecf2310a1bee44e6f5e54f02a",
+      "screenshot": "artifacts/evidence/four-scene-art-repair-after-final7-2026-10-09/S38-s38-ordinary-day-en-1920x900.png",
+      "screenshotSha256": "4714f95c090210f4a853798c8d23f01932c08d0b5a05cdc82cab0aba3d40305b",
+      "screenshotBytes": 1885105,
+      "readback": {
+        "sceneId": "S38",
+        "cue": "s38-ordinary-day",
+        "asset": "s38-alice-nick-ordinary-day.webp",
+        "desktopAsset": "s38-alice-nick-ordinary-day.webp",
+        "natural": [
+          1672,
+          941
+        ],
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 900,
+          "width": 1920,
+          "height": 900
+        },
+        "pictureRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 900,
+          "width": 1920,
+          "height": 900
+        },
+        "viewport": [
+          1920,
+          900
+        ],
+        "text": "Nick woke before Alice and brought two tickets to a small local museum to her door instead of a camera. She was surprised: Nick had rarely planned anything that could not be filmed. He said the tickets could be returned if she would rather just walk.",
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true
+      },
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "phase": "after-final7",
+      "locale": "en",
+      "target": {
+        "sceneId": "S38",
+        "cue": "s38-ordinary-day"
+      },
+      "viewport": {
+        "name": "portrait360",
+        "width": 360,
+        "height": 640
+      },
+      "sourceHead": "a2308054c338b53ecf2310a1bee44e6f5e54f02a",
+      "screenshot": "artifacts/evidence/four-scene-art-repair-after-final7-2026-10-09/S38-s38-ordinary-day-en-360x640.png",
+      "screenshotSha256": "39df20d5f3a65b594ef6acadc02266483f444af5503afa03f7a42592773ce3d4",
+      "screenshotBytes": 309845,
+      "readback": {
+        "sceneId": "S38",
+        "cue": "s38-ordinary-day",
+        "asset": "s38-alice-nick-ordinary-day-portrait.webp",
+        "desktopAsset": "s38-alice-nick-ordinary-day.webp",
+        "natural": [
+          941,
+          1672
+        ],
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 360,
+          "bottom": 640,
+          "width": 360,
+          "height": 640
+        },
+        "pictureRect": {
+          "left": 0,
+          "top": 0,
+          "right": 360,
+          "bottom": 640,
+          "width": 360,
+          "height": 640
+        },
+        "viewport": [
+          360,
+          640
+        ],
+        "text": "Nick woke before Alice and brought two tickets to a small local museum to her door instead of a camera. She was surprised: Nick had rarely planned anything that could not be filmed. He said the tickets could be returned if she would rather just walk.",
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true
+      },
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "phase": "after-final7",
+      "locale": "en",
+      "target": {
+        "sceneId": "S38",
+        "cue": "s38-ordinary-day"
+      },
+      "viewport": {
+        "name": "portrait390",
+        "width": 390,
+        "height": 844
+      },
+      "sourceHead": "a2308054c338b53ecf2310a1bee44e6f5e54f02a",
+      "screenshot": "artifacts/evidence/four-scene-art-repair-after-final7-2026-10-09/S38-s38-ordinary-day-en-390x844.png",
+      "screenshotSha256": "1fdf6cf4d1641a5143833e0fe1fed60a68b3d4823dff289cced2bc4f11417d02",
+      "screenshotBytes": 432963,
+      "readback": {
+        "sceneId": "S38",
+        "cue": "s38-ordinary-day",
+        "asset": "s38-alice-nick-ordinary-day-portrait.webp",
+        "desktopAsset": "s38-alice-nick-ordinary-day.webp",
+        "natural": [
+          941,
+          1672
+        ],
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "pictureRect": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "viewport": [
+          390,
+          844
+        ],
+        "text": "Nick woke before Alice and brought two tickets to a small local museum to her door instead of a camera. She was surprised: Nick had rarely planned anything that could not be filmed. He said the tickets could be returned if she would rather just walk.",
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true
+      },
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "phase": "after-final7",
+      "locale": "en",
+      "target": {
+        "sceneId": "S38",
+        "cue": "s38-ordinary-day"
+      },
+      "viewport": {
+        "name": "portrait412",
+        "width": 412,
+        "height": 915
+      },
+      "sourceHead": "a2308054c338b53ecf2310a1bee44e6f5e54f02a",
+      "screenshot": "artifacts/evidence/four-scene-art-repair-after-final7-2026-10-09/S38-s38-ordinary-day-en-412x915.png",
+      "screenshotSha256": "5d6d951105b4fb8e2e39194df773bb77c20947087c3a7f8443a8450b7d083072",
+      "screenshotBytes": 482917,
+      "readback": {
+        "sceneId": "S38",
+        "cue": "s38-ordinary-day",
+        "asset": "s38-alice-nick-ordinary-day-portrait.webp",
+        "desktopAsset": "s38-alice-nick-ordinary-day.webp",
+        "natural": [
+          941,
+          1672
+        ],
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 412,
+          "bottom": 915,
+          "width": 412,
+          "height": 915
+        },
+        "pictureRect": {
+          "left": 0,
+          "top": 0,
+          "right": 412,
+          "bottom": 915,
+          "width": 412,
+          "height": 915
+        },
+        "viewport": [
+          412,
+          915
+        ],
+        "text": "Nick woke before Alice and brought two tickets to a small local museum to her door instead of a camera. She was surprised: Nick had rarely planned anything that could not be filmed. He said the tickets could be returned if she would rather just walk.",
+        "overflow": false,
+        "internalScroll": false,
+        "imagesReady": true
+      },
+      "errors": [],
+      "failedRequests": []
+    }
+  ],
+  "failures": []
+}

@@ -85,7 +85,7 @@ test('Batch 2 recovery maps the six accepted CGs to exact canonical cues and cas
   'S01/airport-outside':{id:'S01',ref:[0,16],beat:'airport-outside',file:'s01-airport-outside-batch2.webp',cast:['alice','nick','eric']},
   'S01/damir-arrives':{id:'S01',ref:[0,24],beat:'damir-arrives',file:'s01-damir-arrives-batch2.webp',cast:['alice','nick','eric','damir']},
   'S48/scene-start':{id:'S48',ref:[0,0],file:'s48-last-breakfast-batch2.webp',cast:['alice','eric','nick','damir']},
-  'S26/scene-start':{id:'S26',ref:[0,0],file:'s26-route-choice-courtyard-batch2.webp',cast:['alice','eric','nick','damir']},
+  'S26/scene-start':{id:'S26',ref:[0,0],file:'s26-power-outage-notebook.webp',cast:['alice'],requiredCast:[]},
   'S02/scene-start':{id:'S02',ref:[0,0],file:'s02-van-group-batch2.webp',cast:['alice','eric','nick','damir']},
   'S60/scene-start':{id:'S60',ref:[0,0],file:'s60-souvenir-kitchen-batch2.webp',cast:['alice','eric','nick','damir']}
  };
@@ -96,7 +96,7 @@ test('Batch 2 recovery maps the six accepted CGs to exact canonical cues and cas
   assert.equal(direction.art?.type,'cg',cue);
   assert.equal(direction.art?.file,cfg.file,cue);
   assert.deepEqual(direction.cast,cfg.cast,cue);
-  assert.deepEqual(direction.requiredCast,cfg.cast,cue);
+  assert.deepEqual(direction.requiredCast,cfg.requiredCast ?? cfg.cast,cue);
   assert.ok(fs.existsSync(new URL(`../../assets/cg/${cfg.file}`,import.meta.url)),cue);
   assert.ok(fs.existsSync(new URL(`../../assets/cg/${cfg.file.replace('.webp','-portrait.webp')}`,import.meta.url)),cue);
  }

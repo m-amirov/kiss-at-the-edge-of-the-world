@@ -234,18 +234,18 @@
     },
     {
       "path": "assets/cg/s07-kitchen-pasta.png",
-      "sha256": "452AB108A997FD6371DD338635DDFE94BDBCF7B85A39FB552AE00FBCDE3DD6DF",
+      "sha256": "ACDA492CC1CC2824550600F5BABFA8F6D5039D1879FBD3755C1D2EEBBB768487",
       "dimensions": "1672x941",
-      "method": "Cinematic group composition generated from four character masters; reviewed for authored S07 pasta event",
-      "source": "Generated in Codex imagegen, 2026-09-23",
+      "method": "Native S07 pasta-rescue re-composition after Web High runtime review; full pot, boiling foam, steam, spoon and Nick's stop gesture remain above dialogue occlusion",
+      "source": "Generated in Codex imagegen under CEOS run 2026-10-09",
       "license": "generated for this project"
     },
     {
       "path": "assets/cg/s07-kitchen-pasta-portrait.png",
-      "sha256": "552C38C03679EC662A94439FD33F6DC3C8DCB52215FC3DC6890F1135AF801C2A",
+      "sha256": "808CDA353AB023C75CCC68C50C29A0F2E7C32C27E52AB288EEF4CB957214D235",
       "dimensions": "941x1672",
-      "method": "Independent portrait composition generated from S07 pasta direction",
-      "source": "Generated in Codex imagegen, 2026-09-23",
+      "method": "Portrait re-composition generated in the current CEOS production-art run; pot, spoon and Nick's stop gesture remain above the dialogue-safe area",
+      "source": "Derived from the re-composed S07 desktop in Codex imagegen, 2026-10-09",
       "license": "generated for this project"
     },
     {
@@ -962,18 +962,18 @@
     },
     {
       "path": "assets/cg/s38-alice-nick-ordinary-day.png",
-      "sha256": "C67F933507FE2E560FE805B15105EACDDE757E419B0BDBDED50EB4B553E6B935",
-      "dimensions": "1920x900",
-      "method": "Codex imagegen current production-art run using canonical character references; exact authored cast/action; desktop CG",
-      "source": "Generated in Codex imagegen, 2026-10-01",
+      "sha256": "4B45F3163D15FA72B7F1001952502080BFEF216A7C0DF3FD15F670612F130612",
+      "dimensions": "1672x941",
+      "method": "Desktop re-composition generated in the current CEOS production-art run; exact authored two-ticket museum opening with no camera or camera straps",
+      "source": "Derived from the accepted S38 museum candidate in Codex imagegen, 2026-10-09",
       "license": "generated for this project"
     },
     {
       "path": "assets/cg/s38-alice-nick-ordinary-day-portrait.png",
-      "sha256": "DE68C959CC20D3777B31D2245ABFBB00ED1E894D3FC5877B23D3063DBB5B2A76",
+      "sha256": "9F084549A62A98877CBD6BE05B0EB357C20C73EAFC1023BF8EEB5F9F841DBE3F",
       "dimensions": "941x1672",
-      "method": "Portrait derivative cropped from the accepted desktop CG for mobile runtime",
-      "source": "Derived from assets/cg/s38-alice-nick-ordinary-day.png, 2026-10-01",
+      "method": "Independent portrait re-composition generated in the current CEOS production-art run; both heads, tickets and museum family photograph kept mobile-safe",
+      "source": "Derived from assets/cg/s38-alice-nick-ordinary-day.png, 2026-10-09",
       "license": "generated for this project"
     },
     {
@@ -1134,6 +1134,22 @@
       "dimensions": "853x1844",
       "method": "Immutable accepted portrait derivative; no regeneration during canonical recovery",
       "source": "Prior Batch 2 generation run 2026-10-08; paired with s26-route-choice-courtyard-batch2.png",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s26-power-outage-notebook.png",
+      "sha256": "BA487D55AA654204C8F5EF2978793FAD68C559A5E675A40CC9B091BD9D232840",
+      "dimensions": "1672x941",
+      "method": "Native guesthouse power-outage interior re-composition after Web High runtime review; single entry lamp, notebook on windowsill, map and butter stain raised above desktop dialogue occlusion",
+      "source": "Generated in Codex imagegen under CEOS run 2026-10-09T04-54-44-516Z-production-art-d4d9f8",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s26-power-outage-notebook-portrait.png",
+      "sha256": "B30E4BB44EF102D9F2E7104F746BD5D25C094BF171EB698B1AAB656702AC0F1C",
+      "dimensions": "941x1672",
+      "method": "Portrait re-composition of the S26 power-outage interior; notebook, map and butter stain moved above the dialogue-safe area",
+      "source": "Derived from assets/cg/s26-power-outage-notebook.png in Codex imagegen, 2026-10-09",
       "license": "generated for this project"
     },
     {
@@ -1350,6 +1366,14 @@
       "dimensions": "940x1672",
       "method": "Runtime WebP derivative of the integrated English portrait-safe CG",
       "source": "Derived locally from assets/cg/s01-nick-arrives-placard-en-portrait.png",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/backgrounds/s18-hofn-harbour-portrait.png",
+      "sha256": "9731E0AE421FB1DD306685942DD340E1F392111AFEDC6BA086DB3EE09703E348",
+      "dimensions": "941x1672",
+      "method": "Scene-specific portrait background re-composition; lighthouse, harbour pier, boats and mountain context retained for S18 mobile runtime",
+      "source": "Derived from assets/backgrounds/s18-hofn-harbour.png in Codex imagegen, 2026-10-09",
       "license": "generated for this project"
     }
   ]

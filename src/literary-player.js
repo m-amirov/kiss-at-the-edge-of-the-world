@@ -33,6 +33,7 @@ const focalPointByAsset = {
   's02-roadside-cafe.webp': '50% 48%',
   's13-skaftafell-travelers.webp': '50% 42%',
   's18-hofn-dance-lights.webp': '50% 44%',
+  's18-hofn-harbour.webp': '90% 50%',
   's26-eric-choice.webp': '50% 40%',
   's23-eric-harbor-plan.webp': '50% 42%',
   's24-nick-pier-consent.webp': '50% 42%',
@@ -54,6 +55,7 @@ const focalPointByAsset = {
 const portraitAssetByDesktopAsset = {
   's06-hveragerdi-eric-alice.webp':'s06-hveragerdi-eric-alice-portrait.webp',
   's07-kitchen-pasta.webp':'s07-kitchen-pasta-portrait.webp',
+  's18-hofn-harbour.webp':'s18-hofn-harbour-portrait.webp',
   's07-kitchen-cards.webp':'s07-kitchen-cards-portrait.webp',
   's08-guesthouse-strap.webp':'s08-guesthouse-strap-portrait.webp',
   's05-hveragerdi-road.webp':'s05-hveragerdi-road-portrait.webp',
@@ -67,6 +69,7 @@ const portraitAssetByDesktopAsset = {
   's26-nick-choice.webp':'s26-nick-choice-portrait.webp',
   's26-damir-choice.webp':'s26-damir-choice-portrait.webp',
   's26-alice-choice.webp':'s26-alice-choice-portrait.webp',
+  's26-power-outage-notebook.webp':'s26-power-outage-notebook-portrait.webp',
   's45-reykjavik-warm-montage.webp':'s45-reykjavik-warm-montage-portrait.webp',
   's46-airport-goodbye.webp':'s46-airport-goodbye-portrait.webp',
   's47-reykjavik-harbour-alice.webp':'s47-reykjavik-harbour-alice-portrait.webp',

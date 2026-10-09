@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "phase": "analysis",
+  "pipeline": "production-art",
+  "agent": "ceos_art_director_web",
+  "reviewer": "ceos_art_director_web",
+  "reviewTraceId": "01a11f0c-039c-77c2-811d-a229d9c11a81",
+  "taskId": "S26-ARTDIR-2026-10-09-R1",
+  "evidenceArtifact": "artifacts/production-art/four-scene-art-repair-analysis-2026-10-09.json",
+  "sourceHead": "a2308054c338b53ecf2310a1bee44e6f5e54f02a",
+  "status": "FINDINGS",
+  "actualPixelsReceived": true,
+  "reviewedItems": [
+    "S26/[0,0]/cg/s26-route-choice-courtyard-batch2.png",
+    "S26/canonical/guesthouse-common-kitchen-evening.png"
+  ],
+  "evidenceRefs": [
+    "assets/cg/s26-route-choice-courtyard-batch2.png",
+    "assets/backgrounds/guesthouse-common-kitchen-evening.png"
+  ],
+  "receivedEvidenceRefs": [
+    "assets/cg/s26-route-choice-courtyard-batch2.png",
+    "assets/backgrounds/guesthouse-common-kitchen-evening.png"
+  ],
+  "pixelEvidence": [
+    { "ref": "assets/cg/s26-route-choice-courtyard-batch2.png", "sha256": "D9483ABE612515734F52B0A1EDD3522DCB2B0F190F4C0C8F2EEB0DFFC0649FA6", "bytes": 2617157, "dimensions": "1672x941" },
+    { "ref": "assets/backgrounds/guesthouse-common-kitchen-evening.png", "sha256": "F6C3E566BAF906961A9540D927F73477DCD1734CD8850051A1ABCE31AF9E2FB8", "bytes": 2219028, "dimensions": "1672x941" }
+  ],
+  "decision": "Replace the S26 scene-start CG with an interior guesthouse power-outage discovery composition.",
+  "findings": [
+    { "id": "S26-OUTDOOR-MISMATCH", "severity": "HIGH", "summary": "Current four-person courtyard/fjord composition contradicts the authored indoor blackout and notebook beat." },
+    { "id": "S26-PROP-FOCUS", "severity": "HIGH", "summary": "Alice, notebook, paper map and visible butter stain must be the readable focal cluster above the dialogue area." }
+  ],
+  "unresolved": [
+    "S26 replacement pixels must be generated or admitted from an existing evidenced candidate and then independently reviewed at midpoint and acceptance."
+  ],
+  "brief": {
+    "location": "rustic guesthouse kitchen and entry corridor",
+    "lighting": "kitchen lights off; warm entrance-lamp spill plus weak blue dusk from the window",
+    "focalSubject": "Alice in canonical yellow rain jacket, burgundy scarf and grey knit layer",
+    "mandatoryProps": ["notebook", "paper map", "readable dried butter stain"],
+    "cast": "Alice primary; other characters absent or only minor truthful doorway context",
+    "portraitSafe": "Alice and notebook/map cluster central and above dialogue occlusion zone",
+    "reject": ["outdoor courtyard/fjord", "four-person tableau", "bright overhead lighting", "camera hero prop", "invented route outcome", "unreadable props", "overcrowded cast"]
+  }
+}
