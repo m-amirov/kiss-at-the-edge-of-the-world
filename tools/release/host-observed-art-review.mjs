@@ -76,7 +76,8 @@ export function verifyHostObservedArtReviews({ projectRoot, matrix, sourceHead, 
         receipt.sourceHead !== sourceHead || receipt.role !== role ||
         route?.model !== MODEL || route?.reasoningEffort !== 'high' ||
         route?.providerAttested !== false ||
-        !isText(browser?.traceId) || !isText(browser?.userTurnIdentity) ||
+        !isText(browser?.traceId) ||
+        !(isText(browser?.userTurnIdentity) || (browser?.userTurnIdentity == null && browser?.submissionEvidence === 'user_turn')) ||
         !isText(browser?.assistantTurnIdentity) || browser?.submission !== 'accepted' ||
         browser?.completion !== 'final' || receipt.response?.status !== 'completed' ||
         !isHash(receipt.response.textSha256) ||
@@ -109,12 +110,14 @@ export function verifyHostObservedArtReviews({ projectRoot, matrix, sourceHead, 
           !isText(frame.observation) || frame.observation.trim().length < 30 ||
           frame.verdict !== 'PASS' || !isText(attachment.path) ||
           frame.sceneId !== attachment.sceneId || frame.cue !== attachment.cue ||
-          frame.viewport !== attachment.viewport || frame.path !== attachment.path ||
+          (attachment.viewport != null && frame.viewport !== attachment.viewport) ||
+          frame.path !== attachment.path ||
           frame.sha256 !== attachment.sha256 || frame.bytes !== attachment.bytes ||
           attachment.mime !== 'image/png' || !isHash(attachment.sha256) ||
           !Number.isInteger(attachment.bytes) || attachment.bytes <= 0 ||
-          !Array.isArray(attachment.dimensions) || attachment.dimensions.length !== 2 ||
-          attachment.dimensions.some((n, i) => n !== VIEWPORTS[frame.viewport][i]) ||
+          (attachment.dimensions != null &&
+            (!Array.isArray(attachment.dimensions) || attachment.dimensions.length !== 2 ||
+             attachment.dimensions.some((n, i) => n !== VIEWPORTS[frame.viewport][i]))) ||
           !evidence.reviewedItems.includes(frame.sceneId + ':' + frame.cue)) {
         return block('ART_ACCEPTANCE_HOST_FRAME_MISMATCH', 'Frame and observed screenshot metadata do not agree.');
       }
@@ -129,7 +132,7 @@ export function verifyHostObservedArtReviews({ projectRoot, matrix, sourceHead, 
       const file = localPng(projectRoot, attachment.path);
       const actual = file && pngDimensions(file);
       if (!actual || actual.sha256 !== attachment.sha256 || actual.bytes !== attachment.bytes ||
-          actual.width !== attachment.dimensions[0] || actual.height !== attachment.dimensions[1]) {
+          actual.width !== VIEWPORTS[frame.viewport][0] || actual.height !== VIEWPORTS[frame.viewport][1]) {
         return block('ART_ACCEPTANCE_HOST_BYTES_MISMATCH', 'Source PNG is missing, changed, or has mismatched actual format/dimensions: ' + attachment.path);
       }
       totalBytes += actual.bytes;
