@@ -1,0 +1,160 @@
+{
+  "schema": "codex.web.host-observed.s38-control.v1",
+  "status": "BLOCKED",
+  "verdict": "BLOCKED",
+  "policy": "HOST_OBSERVED_ART_ACCEPTANCE_V1",
+  "scope": {
+    "scene": "S38",
+    "cue": "s38-ordinary-day",
+    "viewports": [
+      "1920x900",
+      "390x844",
+      "360x640"
+    ],
+    "roles": [
+      "ceos_art_director_web",
+      "ceos_bulk_checker_web",
+      "ceos_reasoner_web"
+    ],
+    "fullSeasonAcceptance": "NOT_IN_SCOPE"
+  },
+  "sourceIdentity": {
+    "productHead": "5a43fbd51bcd54db472c89956ad085b20b4e5c45",
+    "currentGitHead": "22b7155736b9d7e51cac45700c5bf0dbe0ed8d50",
+    "productHeadIsAncestor": true,
+    "headDelta": "validator/evidence/CI changes only; old runtime PNGs remain stale and were not rewritten"
+  },
+  "sourceHead": "22b7155736b9d7e51cac45700c5bf0dbe0ed8d50",
+  "runtime": {
+    "status": "PASS_SCOPED_S38",
+    "evidencePath": "artifacts/evidence/s38-host-observed-control-2026-10-09/evidence.json",
+    "captures": [
+      {
+        "viewport": "1920x900",
+        "path": "artifacts/evidence/s38-host-observed-control-2026-10-09/S38-s38-ordinary-day-1920x900.png",
+        "sha256": "f6a1a52c4024528b753c0e94d6734745a70ed26a7081a04dadb6ae41a1604215",
+        "bytes": 1872945,
+        "readback": {
+          "sceneId": "S38",
+          "cue": "s38-ordinary-day",
+          "asset": "s38-alice-nick-ordinary-day.webp",
+          "assetMatches": true,
+          "overflow": false,
+          "internalScroll": false
+        },
+        "errors": [],
+        "failed": []
+      },
+      {
+        "viewport": "390x844",
+        "path": "artifacts/evidence/s38-host-observed-control-2026-10-09/S38-s38-ordinary-day-390x844.png",
+        "sha256": "b4bdb1a5ab1f4961a76df204c54095ec80c26d323ffc8d993689bdbc3792b80f",
+        "bytes": 438762,
+        "readback": {
+          "sceneId": "S38",
+          "cue": "s38-ordinary-day",
+          "asset": "s38-alice-nick-ordinary-day-portrait.webp",
+          "assetMatches": true,
+          "overflow": false,
+          "internalScroll": false
+        },
+        "errors": [],
+        "failed": []
+      },
+      {
+        "viewport": "360x640",
+        "path": "artifacts/evidence/s38-host-observed-control-2026-10-09/S38-s38-ordinary-day-360x640.png",
+        "sha256": "b90c29b7eb7de01c029a5c8df5878469c6e28b1b5ab6683d4d754972ddf93df5",
+        "bytes": 304020,
+        "readback": {
+          "sceneId": "S38",
+          "cue": "s38-ordinary-day",
+          "asset": "s38-alice-nick-ordinary-day-portrait.webp",
+          "assetMatches": true,
+          "overflow": false,
+          "internalScroll": false
+        },
+        "errors": [],
+        "failed": []
+      }
+    ],
+    "failures": []
+  },
+  "oldEvidenceNotReused": {
+    "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/evidence.json",
+    "sourceHead": "5a43fbd51bcd54db472c89956ad085b20b4e5c45",
+    "s38": [
+      {
+        "viewport": "1920x900",
+        "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S38-s38-ordinary-day-1920x900.png",
+        "sha256": "3217d3ceb8df4597731216b1a4ce385102c14f6f89e4c9c2e08538fbe13341b5",
+        "bytes": 1872946
+      },
+      {
+        "viewport": "390x844",
+        "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S38-s38-ordinary-day-390x844.png",
+        "sha256": "dbff51bc4d12eb96532aa0cf11ca4137d97415491be23a9b21a9d8f6c5443141",
+        "bytes": 438763
+      },
+      {
+        "viewport": "360x640",
+        "path": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S38-s38-ordinary-day-360x640.png",
+        "sha256": "b90c29b7eb7de01c029a5c8df5878469c6e28b1b5ab6683d4d754972ddf93df5",
+        "bytes": 304020
+      }
+    ],
+    "reason": "old product-head evidence was not rewritten or promoted; current Git HEAD validator changes do not make old runtime pixels current"
+  },
+  "reviews": [
+    {
+      "role": "ceos_art_director_web",
+      "path": "artifacts/production-art/web-reviews/s38-host-observed-control-2026-10-09-ceos_art_director_web.json",
+      "traceId": "36ee5d93570e",
+      "diagnosticPath": "C:\\Users\\user\\.codex-chatgpt-web-dev\\runtime\\dev-chat\\diagnostics\\browser-turns\\36ee5d93570e-08b3b17d",
+      "assistantTurnIdentity": "group:assistant:46667d79-7516-48ac-8dce-b5ce7c47c494",
+      "userTurnIdentity": null,
+      "responseTextSha256": "3cbefcf5672a06b5b1918ba85d18cdbbf9ca234da988f663fe71109b3e0fe294"
+    },
+    {
+      "role": "ceos_bulk_checker_web",
+      "path": "artifacts/production-art/web-reviews/s38-host-observed-control-2026-10-09-ceos_bulk_checker_web.json",
+      "traceId": "6033130c3e84",
+      "diagnosticPath": "C:\\Users\\user\\.codex-chatgpt-web-dev\\runtime\\dev-chat\\diagnostics\\browser-turns\\6033130c3e84-ca844c5d",
+      "assistantTurnIdentity": "group:assistant:642a7604-5b39-41ce-8f53-cbed709ba6fa",
+      "userTurnIdentity": null,
+      "responseTextSha256": "db24d380ed8e120658568749ede4d7c060dbea1b041123d39de6e027f0036f21"
+    },
+    {
+      "role": "ceos_reasoner_web",
+      "path": "artifacts/production-art/web-reviews/s38-host-observed-control-2026-10-09-ceos_reasoner_web.json",
+      "traceId": "c663743fc93f",
+      "diagnosticPath": "C:\\Users\\user\\.codex-chatgpt-web-dev\\runtime\\dev-chat\\diagnostics\\browser-turns\\c663743fc93f-20c733e4",
+      "assistantTurnIdentity": "group:assistant:adea5329-7dc9-475a-b0fa-ecab248d4c4c",
+      "userTurnIdentity": null,
+      "responseTextSha256": "0c995eafcca311c22d139051f426abd2af3e9632fea1c1e32978c0f6ba8e5d24"
+    }
+  ],
+  "semantic": {
+    "allRoles": "PASS",
+    "desktopComposition": {
+      "status": "NON_BLOCKING_OBSERVATION",
+      "reproduced": true,
+      "note": "Nick's upper curls touch/crop at the desktop top edge and the foreground frame is partly covered by the dialogue gradient; faces, tickets, and authored emotional action remain readable, so no REWORK finding was raised."
+    }
+  },
+  "receiptContract": {
+    "status": "BLOCKED",
+    "providerAttested": false,
+    "missingOrUnavailable": [
+      "browser.userTurnIdentity",
+      "attested selected chatgpt-web/gpt-6-sol route/model field",
+      "per-attachment viewport in upstream receipt"
+    ],
+    "rule": "Missing fields remain null; no provider IDs, task IDs, reviewTraceIds, or user identity were synthesized."
+  },
+  "negativeChecks": {
+    "targetValidator": "PASS: npm run test:art-acceptance (56/56)",
+    "bridgeReceiptTests": "PASS: bun test tests/host-observed-receipt.test.ts (3/3)",
+    "bridgeTypecheck": "PASS"
+  }
+}

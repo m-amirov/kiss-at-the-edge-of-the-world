@@ -1,0 +1,148 @@
+{
+  "schema": "codex.web.host-observed.review.raw.v1",
+  "bridgeCommit": "539de61b8fd132159c6fdc1b9cbcae7e2e1431b1",
+  "role": "ceos_art_director_web",
+  "phase": "acceptance",
+  "scene": "S38",
+  "cue": "s38-ordinary-day",
+  "sourceHead": "22b7155736b9d7e51cac45700c5bf0dbe0ed8d50",
+  "request": {
+    "modelId": "gpt-5.6-sol",
+    "modelFamily": "6",
+    "reasoning": "high",
+    "turnId": "s38-host-observed-ceos_art_director_web-1791561870760",
+    "prompt": "You are the independent Art Director Web High reviewer for ceos_art_director_web. Review all three supplied current-runtime S38 images as one bounded visual control: 1920x900 desktop, 390x844 portrait, and 360x640 portrait. Judge only visible pixels and the authored S38 cue: Alice and Nick in the museum, two tickets, readable emotional action, crop/grounding, desktop hierarchy and responsive composition. Explicitly state whether any desktop-composition defect is actually reproduced. Return a concise PASS or REWORK decision with one observation per viewport. Do not invent source metadata, receipts, or facts not visible in the pixels."
+  },
+  "attachments": [
+    {
+      "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-final-rc-2026-10-09\\artifacts\\evidence\\s38-host-observed-control-2026-10-09\\S38-s38-ordinary-day-1920x900.png",
+      "ref": "codex-input-image-1",
+      "viewport": "1920x900",
+      "sha256": "f6a1a52c4024528b753c0e94d6734745a70ed26a7081a04dadb6ae41a1604215",
+      "bytes": 1872945,
+      "dimensions": [
+        1920,
+        900
+      ],
+      "fileBytes": 1872945
+    },
+    {
+      "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-final-rc-2026-10-09\\artifacts\\evidence\\s38-host-observed-control-2026-10-09\\S38-s38-ordinary-day-390x844.png",
+      "ref": "codex-input-image-2",
+      "viewport": "390x844",
+      "sha256": "b4bdb1a5ab1f4961a76df204c54095ec80c26d323ffc8d993689bdbc3792b80f",
+      "bytes": 438762,
+      "dimensions": [
+        390,
+        844
+      ],
+      "fileBytes": 438762
+    },
+    {
+      "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-final-rc-2026-10-09\\artifacts\\evidence\\s38-host-observed-control-2026-10-09\\S38-s38-ordinary-day-360x640.png",
+      "ref": "codex-input-image-3",
+      "viewport": "360x640",
+      "sha256": "b90c29b7eb7de01c029a5c8df5878469c6e28b1b5ab6683d4d754972ddf93df5",
+      "bytes": 304020,
+      "dimensions": [
+        360,
+        640
+      ],
+      "fileBytes": 304020
+    }
+  ],
+  "response": {
+    "text": "> **Local tools unavailable**\n>\n> `ChatGPT Web High` cannot access the local Codex computer in this turn. The accumulated context does not contain local tool results yet: it will see instructions and attachments, but not workspace contents. ChatGPT-native capabilities such as web search remain available when the product provides them.\n>\n> **Action:** Open `MCP` in `Codex Web GPT` and connect the `Full` harness to give the selected ChatGPT Web model access to local tools.## Art Director Web High — S38\n\n**Вердикт: PASS**\n\n**1\\. Desktop — 1920×900: PASS**\n\n- Алиса и Ник хорошо различимы, оба персонажа находятся в кадре.\n- Два музейных билета отчётливо видны.\n- Эмоциональное взаимодействие читается через взгляды и выражения лиц.\n- Композиция сбалансирована, музейное окружение узнаваемо.\n- Текст расположен на затемнённой подложке, читаемость хорошая.\n- Нарушений визуальной иерархии или критического кадрирования не обнаружено.\n\n**2\\. Portrait — 390×844: PASS**\n\n- Лица персонажей и оба билета полностью видны.\n- Центральное действие сохраняется при вертикальном кадрировании.\n- Фотография на переднем плане усиливает музейный контекст.\n- Текст читается, интерфейсные элементы не перекрывают значимые детали.\n\n**3\\. Portrait — 360×640: PASS**\n\n- Оба персонажа и билеты остаются в зоне видимости.\n- Более плотное кадрирование не нарушает эмоциональную композицию.\n- Текстовая область занимает значительную часть экрана, но сохраняет читаемость.\n- Критических пересечений изображения, текста и навигации нет.\n\n### Desktop-composition defect\n\n**NOT REPRODUCED.**\n\nНа представленном desktop-скриншоте дефект композиции не воспроизводится. Персонажи визуально связаны, билеты находятся между ними, музейный фон сохраняет контекст, а текстовый блок не нарушает основную композицию.\n\n### Final decision\n\n**S38: PASS — 3/3 viewports.**\n\nВизуальных оснований для REWORK нет. Сцена соответствует заданному художественному замыслу и сохраняет необходимую композицию на всех трёх представленных разрешениях.\n\n**Scope:** только визуальная оценка предоставленных скриншотов; runtime- и технические проверки не выполнялись.",
+    "textSha256": "3cbefcf5672a06b5b1918ba85d18cdbbf9ca234da988f663fe71109b3e0fe294",
+    "eventTypes": [
+      "heartbeat",
+      "assistant_boundary",
+      "text_delta",
+      "assistant_boundary",
+      "heartbeat",
+      "heartbeat",
+      "assistant_boundary",
+      "thinking_delta",
+      "text_delta",
+      "text_delta",
+      "text_delta",
+      "text_delta",
+      "heartbeat",
+      "text_delta",
+      "text_delta",
+      "text_delta",
+      "text_delta",
+      "text_delta",
+      "text_delta",
+      "text_delta",
+      "text_delta",
+      "text_delta",
+      "text_delta",
+      "text_delta",
+      "text_delta",
+      "text_delta",
+      "heartbeat",
+      "text_delta",
+      "done"
+    ]
+  },
+  "receipt": {
+    "schema": "codex.web.host-observed-receipt.v1",
+    "assurance": "host-observed",
+    "providerAttested": false,
+    "provider": {
+      "taskId": null,
+      "responseId": null,
+      "reviewTraceId": null
+    },
+    "source": {
+      "sourceHead": "22b7155736b9d7e51cac45700c5bf0dbe0ed8d50",
+      "scene": "S38",
+      "viewport": "1920x900",
+      "attachments": [
+        {
+          "ref": "codex-input-image-1",
+          "sha256": "f6a1a52c4024528b753c0e94d6734745a70ed26a7081a04dadb6ae41a1604215",
+          "bytes": 1872945
+        },
+        {
+          "ref": "codex-input-image-2",
+          "sha256": "b4bdb1a5ab1f4961a76df204c54095ec80c26d323ffc8d993689bdbc3792b80f",
+          "bytes": 438762
+        },
+        {
+          "ref": "codex-input-image-3",
+          "sha256": "b90c29b7eb7de01c029a5c8df5878469c6e28b1b5ab6683d4d754972ddf93df5",
+          "bytes": 304020
+        }
+      ]
+    },
+    "browser": {
+      "bridgeTraceId": "36ee5d93570e",
+      "assistantTurnIdentity": "group:assistant:46667d79-7516-48ac-8dce-b5ce7c47c494",
+      "submission": "tile-visible-and-send-enabled",
+      "completion": "stable-dom-completion-action"
+    },
+    "route": {
+      "requestedModel": "gpt-5.6-sol",
+      "reasoning": "high"
+    },
+    "answer": {
+      "sha256": "d441a8f52d9664ee29ec515ea76489287377ee84c42daac2fd92aa8f5aa7c376"
+    }
+  },
+  "contractGaps": {
+    "userTurnIdentity": {
+      "value": null,
+      "unavailableReason": "upstream-539de61-receipt-does-not-expose-accepted-user-identity"
+    },
+    "perAttachmentViewportInReceipt": {
+      "value": null,
+      "unavailableReason": "upstream-539de61-receipt-has-one-turn-level-viewport"
+    },
+    "attestedModelRoute": {
+      "value": null,
+      "unavailableReason": "upstream-539de61-receipt-exposes-requested-backend-model-only"
+    }
+  }
+}

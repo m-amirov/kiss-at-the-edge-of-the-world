@@ -144,6 +144,29 @@ test('S38 scoped control verifies three real-role contracts for three viewports,
   f.record.webHigh.reviews=entries.map(x=>x.reference);
   assert.equal(check(f).code,'ART_ACCEPTANCE_HOST_COVERAGE_INCOMPLETE');
 });
+test('S38 scoped control accepts a one-scene runtime matrix without promoting it to full season',()=>{
+  const f=makeFixture();
+  const scopedMatrix={...f.matrix,status:'BLOCKED',scope:{expectedScenes:66,coveredScenes:1,expectedCaptures:3,captures:3},scenes:[f.matrix.scenes[37]]};
+  const entries=f.reviewRecords.filter(x=>x.review.reviewedItems.includes('S38:opening'))
+    .map(x=>({reference:x.reference,evidence:x.review}));
+  const result=verifyHostObservedArtControl({
+    projectRoot:f.root,matrix:scopedMatrix,sourceHead:f.record.sourceProductHead,
+    sceneId:'S38',reviewEntries:entries
+  });
+  assert.equal(result.status,'PASS',JSON.stringify(result));
+  assert.equal(result.imageReviews,9);
+  assert.equal(result.controlSceneId,'S38');
+});
+test('S38 scoped control blocks a host-observed GPT-5.6 route under the GPT-6 Sol policy',()=>{
+  const f=makeFixture();
+  const entries=f.reviewRecords.filter(x=>x.review.reviewedItems.includes('S38:opening'))
+    .map(x=>({reference:x.reference,evidence:{...x.review,hostObservedReceipt:{...x.review.hostObservedReceipt,route:{...x.review.hostObservedReceipt.route,model:'gpt-5.6-sol'}}}}));
+  const result=verifyHostObservedArtControl({
+    projectRoot:f.root,matrix:f.matrix,sourceHead:f.record.sourceProductHead,
+    sceneId:'S38',reviewEntries:entries
+  });
+  assert.equal(result.code,'BLOCKED_MODEL_ROUTE_POLICY_MISMATCH',JSON.stringify(result));
+});
 test('S38 scoped control rejects any extra scene or missing viewport',()=>{
   const f=makeFixture();
   const entries=f.reviewRecords.filter(x=>x.review.reviewedItems.includes('S38:opening'))

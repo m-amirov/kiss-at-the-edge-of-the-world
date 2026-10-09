@@ -1,0 +1,126 @@
+{
+  "schema": "codex.web.host-observed.s38-control.verification.v1",
+  "status": "BLOCKED_MODEL_ROUTE_POLICY_MISMATCH",
+  "audit": {
+    "policyModel": "chatgpt-web/gpt-6-sol",
+    "policyReasoning": "high",
+    "historicalHostRoute": "gpt-5.6-sol",
+    "historicalHostRouteSource": "actual host-side raw request logs",
+    "historicalVerifierResult": "PASS was admitted because scoped validation only required a non-empty route.model",
+    "currentVerifierResult": "BLOCKED_MODEL_ROUTE_POLICY_MISMATCH",
+    "currentVerifierReason": "The preserved S38 host-observed receipts do not prove the policy route; GPT-5.6 is not equivalent to GPT-6.",
+    "gpt6RouteProbe": {
+      "status": "PASS_HOST_ROUTE_PROBE",
+      "selectedModel": "chatgpt-web/gpt-6-sol",
+      "reasoning": "high",
+      "responseModel": "chatgpt-web/gpt-6-sol",
+      "note": "A bounded DEV bridge probe and three direct scoped visual turns succeeded, but direct turns did not emit the trusted browser receipt required to replace the preserved S38 records."
+    },
+    "gpt6ScopedVisualRepeat": {
+      "status": "PASS_VISUAL_ONLY_9_OF_9",
+      "roles": 3,
+      "viewports": 3,
+      "responseIds": [
+        "resp_03cceebb492e4af3879d7a17a21008b5",
+        "resp_01322c1a834f4b399aa0005de922ffab",
+        "resp_07ce38d88b6048d092047d84d8b24a3a"
+      ],
+      "answerSha256": [
+        "0a4efef153ec863f183422ad7de690ed70b662c47a4c2e200b0ec747f3471e2d",
+        "0698ff1876d264028fb3646e527c9080f2cc1c8eb2ee46ae97a4acaa0f056af5",
+        "d38407075465950320dc87f92a71716d722bb948b52a6c5f37daa122f3a5b698"
+      ],
+      "hostReceipt": "NOT_EMITTED",
+      "fullSeasonAcceptance": "NOT_IN_SCOPE"
+    }
+  },
+  "scope": {
+    "scene": "S38",
+    "cue": "s38-ordinary-day",
+    "roles": [
+      "ceos_art_director_web",
+      "ceos_bulk_checker_web",
+      "ceos_reasoner_web"
+    ],
+    "viewports": [
+      "1920x900",
+      "390x844",
+      "360x640"
+    ],
+    "imageReviews": 9,
+    "fullSeasonAcceptance": "NOT_IN_SCOPE"
+  },
+  "sourceIdentity": {
+    "runtimeSourceHead": "22b7155736b9d7e51cac45700c5bf0dbe0ed8d50",
+    "verifierBaseHead": "5ae33f5801f7f6b8895445714da411a313234abc",
+    "runtimeMatrix": "artifacts/evidence/s38-host-observed-control-2026-10-09/evidence.json"
+  },
+  "runtimePngs": [
+    {
+      "viewport": "1920x900",
+      "path": "artifacts/evidence/s38-host-observed-control-2026-10-09/S38-s38-ordinary-day-1920x900.png",
+      "sha256": "f6a1a52c4024528b753c0e94d6734745a70ed26a7081a04dadb6ae41a1604215",
+      "bytes": 1872945
+    },
+    {
+      "viewport": "390x844",
+      "path": "artifacts/evidence/s38-host-observed-control-2026-10-09/S38-s38-ordinary-day-390x844.png",
+      "sha256": "b4bdb1a5ab1f4961a76df204c54095ec80c26d323ffc8d993689bdbc3792b80f",
+      "bytes": 438762
+    },
+    {
+      "viewport": "360x640",
+      "path": "artifacts/evidence/s38-host-observed-control-2026-10-09/S38-s38-ordinary-day-360x640.png",
+      "sha256": "b90c29b7eb7de01c029a5c8df5878469c6e28b1b5ab6683d4d754972ddf93df5",
+      "bytes": 304020
+    }
+  ],
+  "hostChecks": {
+    "submissionEvidence": "user_turn",
+    "browserDiagnostics": "PASS: send-accepted user=1, response-visible, turn-completed final response for all three traces",
+    "model": "gpt-5.6-sol",
+    "policyModel": "chatgpt-web/gpt-6-sol",
+    "reasoning": "high",
+    "modelSource": "actual host-side raw request logs",
+    "providerAttested": false,
+    "missingUserTurnIdentity": null,
+    "missingReceiptViewport": null
+  },
+  "reviews": [
+    {
+      "role": "ceos_art_director_web",
+      "traceId": "36ee5d93570e",
+      "diagnosticPath": "C:\\Users\\user\\.codex-chatgpt-web-dev\\runtime\\dev-chat\\diagnostics\\browser-turns\\36ee5d93570e-08b3b17d",
+      "responseFile": "artifacts/production-art/web-reviews/s38-host-observed-control-2026-10-09-ceos_art_director_web.json",
+      "responseTextSha256": "3cbefcf5672a06b5b1918ba85d18cdbbf9ca234da988f663fe71109b3e0fe294"
+    },
+    {
+      "role": "ceos_bulk_checker_web",
+      "traceId": "6033130c3e84",
+      "diagnosticPath": "C:\\Users\\user\\.codex-chatgpt-web-dev\\runtime\\dev-chat\\diagnostics\\browser-turns\\6033130c3e84-ca844c5d",
+      "responseFile": "artifacts/production-art/web-reviews/s38-host-observed-control-2026-10-09-ceos_bulk_checker_web.json",
+      "responseTextSha256": "db24d380ed8e120658568749ede4d7c060dbea1b041123d39de6e027f0036f21"
+    },
+    {
+      "role": "ceos_reasoner_web",
+      "traceId": "c663743fc93f",
+      "diagnosticPath": "C:\\Users\\user\\.codex-chatgpt-web-dev\\runtime\\dev-chat\\diagnostics\\browser-turns\\c663743fc93f-20c733e4",
+      "responseFile": "artifacts/production-art/web-reviews/s38-host-observed-control-2026-10-09-ceos_reasoner_web.json",
+      "responseTextSha256": "0c995eafcca311c22d139051f426abd2af3e9632fea1c1e32978c0f6ba8e5d24"
+    }
+  ],
+  "verifierResult": {
+    "status": "BLOCKED",
+    "code": "BLOCKED_MODEL_ROUTE_POLICY_MISMATCH",
+    "assurance": "host-observed-art-v1",
+    "policy": "HOST_OBSERVED_ART_ACCEPTANCE_V1",
+    "scenes": 1,
+    "roles": 3,
+    "viewports": 3,
+    "providerAttested": false,
+    "verdict": "BLOCKED_MODEL_ROUTE_POLICY_MISMATCH",
+    "reason": "Preserved host-observed S38 receipts report gpt-5.6-sol; the scoped validator now requires the exact policy route chatgpt-web/gpt-6-sol at High."
+  },
+  "originalEvidencePreserved": true,
+  "massWebHighLaunched": false
+}

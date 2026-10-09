@@ -1,0 +1,142 @@
+{
+  "schema": "codex.web.host-observed.review.raw.v1",
+  "bridgeCommit": "539de61b8fd132159c6fdc1b9cbcae7e2e1431b1",
+  "role": "ceos_bulk_checker_web",
+  "phase": "acceptance",
+  "scene": "S38",
+  "cue": "s38-ordinary-day",
+  "sourceHead": "22b7155736b9d7e51cac45700c5bf0dbe0ed8d50",
+  "request": {
+    "modelId": "gpt-5.6-sol",
+    "modelFamily": "6",
+    "reasoning": "high",
+    "turnId": "s38-host-observed-ceos_bulk_checker_web-1791561929592",
+    "prompt": "You are the independent Bulk Checker Web High reviewer for ceos_bulk_checker_web. Inspect all three supplied current-runtime S38 images: 1920x900, 390x844, and 360x640. Perform only a bounded S38 pixel checklist: image received/readable, Alice and Nick present, two tickets visible, crop/clipping/overlap, dialogue readability, edge-to-edge composition, responsive consistency, and whether any desktop-composition defect is reproduced. Return a concise PASS or REWORK decision and one factual observation per viewport. Do not invent metadata, receipts, or facts not visible in the pixels."
+  },
+  "attachments": [
+    {
+      "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-final-rc-2026-10-09\\artifacts\\evidence\\s38-host-observed-control-2026-10-09\\S38-s38-ordinary-day-1920x900.png",
+      "ref": "codex-input-image-1",
+      "viewport": "1920x900",
+      "sha256": "f6a1a52c4024528b753c0e94d6734745a70ed26a7081a04dadb6ae41a1604215",
+      "bytes": 1872945,
+      "dimensions": [
+        1920,
+        900
+      ],
+      "fileBytes": 1872945
+    },
+    {
+      "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-final-rc-2026-10-09\\artifacts\\evidence\\s38-host-observed-control-2026-10-09\\S38-s38-ordinary-day-390x844.png",
+      "ref": "codex-input-image-2",
+      "viewport": "390x844",
+      "sha256": "b4bdb1a5ab1f4961a76df204c54095ec80c26d323ffc8d993689bdbc3792b80f",
+      "bytes": 438762,
+      "dimensions": [
+        390,
+        844
+      ],
+      "fileBytes": 438762
+    },
+    {
+      "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-final-rc-2026-10-09\\artifacts\\evidence\\s38-host-observed-control-2026-10-09\\S38-s38-ordinary-day-360x640.png",
+      "ref": "codex-input-image-3",
+      "viewport": "360x640",
+      "sha256": "b90c29b7eb7de01c029a5c8df5878469c6e28b1b5ab6683d4d754972ddf93df5",
+      "bytes": 304020,
+      "dimensions": [
+        360,
+        640
+      ],
+      "fileBytes": 304020
+    }
+  ],
+  "response": {
+    "text": "> **Local tools unavailable**\n>\n> `ChatGPT Web High` cannot access the local Codex computer in this turn. The accumulated context does not contain local tool results yet: it will see instructions and attachments, but not workspace contents. ChatGPT-native capabilities such as web search remain available when the product provides them.\n>\n> **Action:** Open `MCP` in `Codex Web GPT` and connect the `Full` harness to give the selected ChatGPT Web model access to local tools.**Verdict: PASS — S38**\n\nВсе три изображения получены и читаемы. Алиса и Ник присутствуют, два билета различимы. Диалог читается, изображение заполняет экран до краёв. Критических обрезаний, перекрытий или нарушений адаптивности не обнаружено.\n\n**Наблюдения по viewport:**\n\n- **1920×900 — PASS.** Оба персонажа и два билета полностью различимы; нижний градиент обеспечивает читаемость диалога, хотя частично затемняет фотографию в рамке.\n- **390×844 — PASS.** Лица персонажей, билеты и фотография в рамке сохранены в вертикальной композиции; текст полностью читается, элементы интерфейса не перекрываются.\n- **360×640 — PASS.** Более плотное кадрирование сохраняет лица и оба билета; текстовая область частично закрывает рамку с фотографией, но диалог и навигация остаются читаемыми.\n\n**Desktop-composition defect:** явного дефекта композиции на десктопе не обнаружено; критические нарушения также не воспроизводятся на мобильных разрешениях.\n\n**Итог: PASS. REWORK не требуется.**",
+    "textSha256": "db24d380ed8e120658568749ede4d7c060dbea1b041123d39de6e027f0036f21",
+    "eventTypes": [
+      "heartbeat",
+      "assistant_boundary",
+      "text_delta",
+      "assistant_boundary",
+      "heartbeat",
+      "heartbeat",
+      "heartbeat",
+      "heartbeat",
+      "assistant_boundary",
+      "thinking_delta",
+      "heartbeat",
+      "assistant_boundary",
+      "thinking_delta",
+      "text_delta",
+      "heartbeat",
+      "text_delta",
+      "text_delta",
+      "text_delta",
+      "text_delta",
+      "text_delta",
+      "text_delta",
+      "text_delta",
+      "done"
+    ]
+  },
+  "receipt": {
+    "schema": "codex.web.host-observed-receipt.v1",
+    "assurance": "host-observed",
+    "providerAttested": false,
+    "provider": {
+      "taskId": null,
+      "responseId": null,
+      "reviewTraceId": null
+    },
+    "source": {
+      "sourceHead": "22b7155736b9d7e51cac45700c5bf0dbe0ed8d50",
+      "scene": "S38",
+      "viewport": "1920x900",
+      "attachments": [
+        {
+          "ref": "codex-input-image-1",
+          "sha256": "f6a1a52c4024528b753c0e94d6734745a70ed26a7081a04dadb6ae41a1604215",
+          "bytes": 1872945
+        },
+        {
+          "ref": "codex-input-image-2",
+          "sha256": "b4bdb1a5ab1f4961a76df204c54095ec80c26d323ffc8d993689bdbc3792b80f",
+          "bytes": 438762
+        },
+        {
+          "ref": "codex-input-image-3",
+          "sha256": "b90c29b7eb7de01c029a5c8df5878469c6e28b1b5ab6683d4d754972ddf93df5",
+          "bytes": 304020
+        }
+      ]
+    },
+    "browser": {
+      "bridgeTraceId": "6033130c3e84",
+      "assistantTurnIdentity": "group:assistant:642a7604-5b39-41ce-8f53-cbed709ba6fa",
+      "submission": "tile-visible-and-send-enabled",
+      "completion": "stable-dom-completion-action"
+    },
+    "route": {
+      "requestedModel": "gpt-5.6-sol",
+      "reasoning": "high"
+    },
+    "answer": {
+      "sha256": "81ee6cd983fc2050ae8f0fcc47c2d2808152d3b9aa19bfe046ed9980a2070947"
+    }
+  },
+  "contractGaps": {
+    "userTurnIdentity": {
+      "value": null,
+      "unavailableReason": "upstream-539de61-receipt-does-not-expose-accepted-user-identity"
+    },
+    "perAttachmentViewportInReceipt": {
+      "value": null,
+      "unavailableReason": "upstream-539de61-receipt-has-one-turn-level-viewport"
+    },
+    "attestedModelRoute": {
+      "value": null,
+      "unavailableReason": "upstream-539de61-receipt-exposes-requested-backend-model-only"
+    }
+  }
+}

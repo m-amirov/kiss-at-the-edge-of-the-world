@@ -87,6 +87,52 @@ export function verifyVisualContentMatrix({ projectRoot, matrix, sourceHead }) {
   return { status: 'PASS', index, sceneIds };
 }
 
+/**
+ * Scoped runtime coverage for a bounded host-observed control. This deliberately
+ * does not promote a partial matrix to the 66-scene release matrix contract.
+ */
+export function verifyScopedVisualContentMatrix({ projectRoot, matrix, sourceHead, sceneId }) {
+  if (!/^S(0[1-9]|[1-5][0-9]|6[0-6])$/.test(sceneId ?? '') ||
+      !['PASS', 'BLOCKED'].includes(matrix?.status) || matrix?.sourceHead !== sourceHead ||
+      matrix?.scope?.coveredScenes !== 1 || matrix?.scope?.expectedCaptures !== 3 || matrix?.scope?.captures !== 3 ||
+      !Array.isArray(matrix.scenes) || matrix.scenes.length !== 1 ||
+      !Array.isArray(matrix.failures) || matrix.failures.length) {
+    return block('ART_ACCEPTANCE_SCOPED_MATRIX_INVALID', 'Expected one current-source scene with three clean runtime captures.');
+  }
+  const scene = matrix.scenes[0];
+  if (scene?.sceneId !== sceneId || !Array.isArray(scene.captures) || scene.captures.length !== 3) {
+    return block('ART_ACCEPTANCE_SCOPED_MATRIX_INVALID', 'Scoped scene identity or viewport coverage is incomplete.');
+  }
+  const index = new Map();
+  const seen = new Set();
+  for (const capture of scene.captures) {
+    const viewport = capture?.viewport;
+    const name = viewport?.name;
+    if (!viewportNames.has(name) || seen.has(name) || capture.sceneId !== sceneId ||
+        capture.currentHead !== sourceHead || !isText(capture.cue) ||
+        !isText(capture.screenshot) || !isSha(capture.screenshotSha256) ||
+        !Number.isInteger(capture.screenshotBytes) || capture.screenshotBytes < 1 ||
+        !capture.readback || capture.readback.sceneId !== sceneId ||
+        capture.readback.assetMatches !== true || capture.readback.overflow !== false ||
+        capture.readback.internalScroll !== false || capture.runError ||
+        capture.errors?.length || capture.failed?.length) {
+      return block('ART_ACCEPTANCE_SCOPED_MATRIX_INVALID', 'Scoped runtime capture has invalid source, readback, viewport or error state.');
+    }
+    const expected = name === 'desktop' ? [1920, 900] : name === 'portrait390' ? [390, 844] : [360, 640];
+    if (viewport.width !== expected[0] || viewport.height !== expected[1]) {
+      return block('ART_ACCEPTANCE_SCOPED_MATRIX_INVALID', 'Scoped viewport dimensions do not match the declared review viewport.');
+    }
+    const file = physicalFile(projectRoot, capture.screenshot);
+    if (!file) return block('ART_ACCEPTANCE_SCREENSHOT_EVIDENCE_MISSING', 'Scoped screenshot missing or outside the repository: ' + capture.screenshot);
+    if (fs.statSync(file).size !== capture.screenshotBytes || sha256(file) !== capture.screenshotSha256) {
+      return block('ART_ACCEPTANCE_SCREENSHOT_EVIDENCE_HASH_MISMATCH', 'Scoped screenshot changed: ' + capture.screenshot);
+    }
+    seen.add(name);
+    index.set(sceneId + ':' + name, capture);
+  }
+  return { status: 'PASS', index, sceneIds: new Set([sceneId]) };
+}
+
 export function verifyVisualContentReviews({ projectRoot, matrix, sourceHead, reviewEntries }) {
   const checked = verifyVisualContentMatrix({ projectRoot, matrix, sourceHead });
   if (checked.status !== 'PASS') return checked;

@@ -6,7 +6,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
-import { verifyVisualContentMatrix, VISUAL_REVIEW_ROLES } from './visual-content-review.mjs';
+import { verifyScopedVisualContentMatrix, verifyVisualContentMatrix, VISUAL_REVIEW_ROLES } from './visual-content-review.mjs';
 
 export const HOST_OBSERVED_ART_POLICY = 'HOST_OBSERVED_ART_ACCEPTANCE_V1';
 export const HOST_OBSERVED_ART_ASSURANCE = 'host-observed-art-v1';
@@ -42,7 +42,10 @@ function pngDimensions(file) {
  * Missing/duplicate/mismatched turns, findings and unverifiable frames fail closed.
  */
 function verifyReviews({ projectRoot, matrix, sourceHead, reviewEntries, controlSceneId = null }) {
-  const checked = verifyVisualContentMatrix({ projectRoot, matrix, sourceHead });
+  const isScopedRuntimeMatrix = Boolean(controlSceneId && matrix?.scenes?.length === 1 && matrix?.scope?.captures === 3);
+  const checked = isScopedRuntimeMatrix
+    ? verifyScopedVisualContentMatrix({ projectRoot, matrix, sourceHead, sceneId: controlSceneId })
+    : verifyVisualContentMatrix({ projectRoot, matrix, sourceHead });
   if (checked.status !== 'PASS') return checked;
   if (!Array.isArray(reviewEntries) || reviewEntries.length < 3)
     return block('ART_ACCEPTANCE_HOST_REVIEW_MISSING', 'Host-observed reviews from all three roles are required.');
@@ -71,6 +74,12 @@ function verifyReviews({ projectRoot, matrix, sourceHead, reviewEntries, control
       return block('ART_ACCEPTANCE_HOST_REVIEW_INVALID', 'Missing independent clean PASS or review identity: ' + (reference?.path ?? '?'));
     }
     reviewFiles.add(reference.path);
+    if (controlSceneId && (route?.model !== MODEL || route?.reasoningEffort !== 'high' || route?.providerAttested !== false)) {
+      return block(
+        'BLOCKED_MODEL_ROUTE_POLICY_MISMATCH',
+        `Host route ${route?.model ?? 'missing'} ${route?.reasoningEffort ?? 'missing'} does not match policy ${MODEL} high.`,
+      );
+    }
     if (receipt?.schema !== 'codex.web.host-observed.receipt.v1' ||
         receipt.policy !== HOST_OBSERVED_ART_POLICY ||
         receipt.providerAttested !== false || receipt.providerTaskId !== null ||

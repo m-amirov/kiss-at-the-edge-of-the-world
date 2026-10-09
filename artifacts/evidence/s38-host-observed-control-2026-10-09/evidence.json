@@ -1,0 +1,384 @@
+{
+  "schemaVersion": 1,
+  "recordType": "production-art-coverage-matrix",
+  "status": "BLOCKED",
+  "visualAcceptance": "PENDING_WEB_HIGH",
+  "generatedAt": "2026-10-09T16:02:33.846Z",
+  "sourceHead": "22b7155736b9d7e51cac45700c5bf0dbe0ed8d50",
+  "baseUrl": "http://127.0.0.1:4182/literary.html?qa=s38-host-observed-control&lang=ru",
+  "scope": {
+    "expectedScenes": 66,
+    "coveredScenes": 1,
+    "expectedCaptures": 3,
+    "captures": 3,
+    "viewports": [
+      "1920x900",
+      "390x844",
+      "360x640"
+    ]
+  },
+  "failures": [],
+  "scenes": [
+    {
+      "sceneId": "S38",
+      "title": "День 18. Скучный день, который удался",
+      "cue": "s38-ordinary-day",
+      "source": {
+        "chunk": 0,
+        "paragraph": 0
+      },
+      "authoredCues": [
+        {
+          "id": "s38-ordinary-day",
+          "at": [
+            0,
+            0
+          ],
+          "art": "cg/s38-alice-nick-ordinary-day.webp",
+          "cast": [
+            "alice",
+            "nick"
+          ],
+          "presentation": null
+        }
+      ],
+      "expected": {
+        "file": "s38-alice-nick-ordinary-day.webp",
+        "runtimePath": "assets/cg/s38-alice-nick-ordinary-day.webp",
+        "type": "cg"
+      },
+      "captures": [
+        {
+          "sceneId": "S38",
+          "title": "День 18. Скучный день, который удался",
+          "cue": "s38-ordinary-day",
+          "source": {
+            "chunk": 0,
+            "paragraph": 0
+          },
+          "expected": {
+            "file": "s38-alice-nick-ordinary-day.webp",
+            "runtimePath": "assets/cg/s38-alice-nick-ordinary-day.webp",
+            "type": "cg",
+            "runtime": "assets/cg/s38-alice-nick-ordinary-day.webp"
+          },
+          "authoredCues": [
+            {
+              "id": "s38-ordinary-day",
+              "at": [
+                0,
+                0
+              ],
+              "art": "cg/s38-alice-nick-ordinary-day.webp",
+              "cast": [
+                "alice",
+                "nick"
+              ],
+              "presentation": null
+            }
+          ],
+          "viewport": {
+            "name": "desktop",
+            "width": 1920,
+            "height": 900
+          },
+          "currentHead": "22b7155736b9d7e51cac45700c5bf0dbe0ed8d50",
+          "screenshot": "artifacts/evidence/s38-host-observed-control-2026-10-09/S38-s38-ordinary-day-1920x900.png",
+          "screenshotSha256": "f6a1a52c4024528b753c0e94d6734745a70ed26a7081a04dadb6ae41a1604215",
+          "screenshotBytes": 1872945,
+          "readback": {
+            "sceneId": "S38",
+            "position": 0,
+            "sourceRef": {
+              "chunk": 1,
+              "paragraph": 0
+            },
+            "cue": "s38-ordinary-day",
+            "asset": "s38-alice-nick-ordinary-day.webp",
+            "desktopAsset": "s38-alice-nick-ordinary-day.webp",
+            "natural": [
+              1672,
+              941
+            ],
+            "stageCount": 0,
+            "overflow": false,
+            "internalScroll": false,
+            "imageRect": {
+              "left": 0,
+              "top": 0,
+              "right": 1920,
+              "bottom": 900,
+              "width": 1920,
+              "height": 900
+            },
+            "viewport": [
+              1920,
+              900
+            ],
+            "runtimeAsset": "assets/s38-alice-nick-ordinary-day.webp",
+            "expectedRuntime": "assets/cg/s38-alice-nick-ordinary-day.webp",
+            "assetMatches": true
+          },
+          "manifest": {
+            "id": "s38-alice-nick-ordinary-day",
+            "path": "assets/cg/s38-alice-nick-ordinary-day.png",
+            "runtimePath": "assets/cg/s38-alice-nick-ordinary-day.webp",
+            "runtimePortraitAsset": "assets/cg/s38-alice-nick-ordinary-day-portrait.webp",
+            "dimensions": "1672x941"
+          },
+          "physicalFiles": [
+            {
+              "path": "assets/cg/s38-alice-nick-ordinary-day.png",
+              "exists": true,
+              "sha256": "4b45f3163d15fa72b7f1001952502080bfef216a7c0df3fd15f670612f130612"
+            },
+            {
+              "path": "assets/cg/s38-alice-nick-ordinary-day-portrait.png",
+              "exists": true,
+              "sha256": "9f084549a62a98877cbd6be05b0eb357c20c73eafc1023bf8eeb5f9f841dbe3f"
+            },
+            {
+              "path": "assets/cg/s38-alice-nick-ordinary-day.webp",
+              "exists": true,
+              "sha256": "97bfd453dfa83a55b199b10994ecd773337ca6c18ef56a174d5dd37dfa4d8acd"
+            },
+            {
+              "path": "assets/cg/s38-alice-nick-ordinary-day-portrait.webp",
+              "exists": true,
+              "sha256": "833a6d48f788d02c25a2a700cf24701e5163da73d44d379edf1b11c13e9e83bf"
+            }
+          ],
+          "audioEvidence": {
+            "cueId": "romantic",
+            "readyState": 4,
+            "duration": 35.58575
+          },
+          "errors": [],
+          "failed": [],
+          "ignoredFailedRequests": [],
+          "runError": null
+        },
+        {
+          "sceneId": "S38",
+          "title": "День 18. Скучный день, который удался",
+          "cue": "s38-ordinary-day",
+          "source": {
+            "chunk": 0,
+            "paragraph": 0
+          },
+          "expected": {
+            "file": "s38-alice-nick-ordinary-day.webp",
+            "runtimePath": "assets/cg/s38-alice-nick-ordinary-day.webp",
+            "type": "cg",
+            "runtime": "assets/cg/s38-alice-nick-ordinary-day.webp"
+          },
+          "authoredCues": [
+            {
+              "id": "s38-ordinary-day",
+              "at": [
+                0,
+                0
+              ],
+              "art": "cg/s38-alice-nick-ordinary-day.webp",
+              "cast": [
+                "alice",
+                "nick"
+              ],
+              "presentation": null
+            }
+          ],
+          "viewport": {
+            "name": "portrait390",
+            "width": 390,
+            "height": 844
+          },
+          "currentHead": "22b7155736b9d7e51cac45700c5bf0dbe0ed8d50",
+          "screenshot": "artifacts/evidence/s38-host-observed-control-2026-10-09/S38-s38-ordinary-day-390x844.png",
+          "screenshotSha256": "b4bdb1a5ab1f4961a76df204c54095ec80c26d323ffc8d993689bdbc3792b80f",
+          "screenshotBytes": 438762,
+          "readback": {
+            "sceneId": "S38",
+            "position": 0,
+            "sourceRef": {
+              "chunk": 1,
+              "paragraph": 0
+            },
+            "cue": "s38-ordinary-day",
+            "asset": "s38-alice-nick-ordinary-day-portrait.webp",
+            "desktopAsset": "s38-alice-nick-ordinary-day.webp",
+            "natural": [
+              941,
+              1672
+            ],
+            "stageCount": 0,
+            "overflow": false,
+            "internalScroll": false,
+            "imageRect": {
+              "left": 0,
+              "top": 0,
+              "right": 390,
+              "bottom": 844,
+              "width": 390,
+              "height": 844
+            },
+            "viewport": [
+              390,
+              844
+            ],
+            "runtimeAsset": "assets/s38-alice-nick-ordinary-day-portrait.webp",
+            "expectedRuntime": "assets/cg/s38-alice-nick-ordinary-day.webp",
+            "assetMatches": true
+          },
+          "manifest": {
+            "id": "s38-alice-nick-ordinary-day",
+            "path": "assets/cg/s38-alice-nick-ordinary-day.png",
+            "runtimePath": "assets/cg/s38-alice-nick-ordinary-day.webp",
+            "runtimePortraitAsset": "assets/cg/s38-alice-nick-ordinary-day-portrait.webp",
+            "dimensions": "1672x941"
+          },
+          "physicalFiles": [
+            {
+              "path": "assets/cg/s38-alice-nick-ordinary-day.png",
+              "exists": true,
+              "sha256": "4b45f3163d15fa72b7f1001952502080bfef216a7c0df3fd15f670612f130612"
+            },
+            {
+              "path": "assets/cg/s38-alice-nick-ordinary-day-portrait.png",
+              "exists": true,
+              "sha256": "9f084549a62a98877cbd6be05b0eb357c20c73eafc1023bf8eeb5f9f841dbe3f"
+            },
+            {
+              "path": "assets/cg/s38-alice-nick-ordinary-day.webp",
+              "exists": true,
+              "sha256": "97bfd453dfa83a55b199b10994ecd773337ca6c18ef56a174d5dd37dfa4d8acd"
+            },
+            {
+              "path": "assets/cg/s38-alice-nick-ordinary-day-portrait.webp",
+              "exists": true,
+              "sha256": "833a6d48f788d02c25a2a700cf24701e5163da73d44d379edf1b11c13e9e83bf"
+            }
+          ],
+          "audioEvidence": {
+            "cueId": "romantic",
+            "readyState": 4,
+            "duration": 35.58575
+          },
+          "errors": [],
+          "failed": [],
+          "ignoredFailedRequests": [],
+          "runError": null
+        },
+        {
+          "sceneId": "S38",
+          "title": "День 18. Скучный день, который удался",
+          "cue": "s38-ordinary-day",
+          "source": {
+            "chunk": 0,
+            "paragraph": 0
+          },
+          "expected": {
+            "file": "s38-alice-nick-ordinary-day.webp",
+            "runtimePath": "assets/cg/s38-alice-nick-ordinary-day.webp",
+            "type": "cg",
+            "runtime": "assets/cg/s38-alice-nick-ordinary-day.webp"
+          },
+          "authoredCues": [
+            {
+              "id": "s38-ordinary-day",
+              "at": [
+                0,
+                0
+              ],
+              "art": "cg/s38-alice-nick-ordinary-day.webp",
+              "cast": [
+                "alice",
+                "nick"
+              ],
+              "presentation": null
+            }
+          ],
+          "viewport": {
+            "name": "portrait360",
+            "width": 360,
+            "height": 640
+          },
+          "currentHead": "22b7155736b9d7e51cac45700c5bf0dbe0ed8d50",
+          "screenshot": "artifacts/evidence/s38-host-observed-control-2026-10-09/S38-s38-ordinary-day-360x640.png",
+          "screenshotSha256": "b90c29b7eb7de01c029a5c8df5878469c6e28b1b5ab6683d4d754972ddf93df5",
+          "screenshotBytes": 304020,
+          "readback": {
+            "sceneId": "S38",
+            "position": 0,
+            "sourceRef": {
+              "chunk": 1,
+              "paragraph": 0
+            },
+            "cue": "s38-ordinary-day",
+            "asset": "s38-alice-nick-ordinary-day-portrait.webp",
+            "desktopAsset": "s38-alice-nick-ordinary-day.webp",
+            "natural": [
+              941,
+              1672
+            ],
+            "stageCount": 0,
+            "overflow": false,
+            "internalScroll": false,
+            "imageRect": {
+              "left": 0,
+              "top": 0,
+              "right": 360,
+              "bottom": 640,
+              "width": 360,
+              "height": 640
+            },
+            "viewport": [
+              360,
+              640
+            ],
+            "runtimeAsset": "assets/s38-alice-nick-ordinary-day-portrait.webp",
+            "expectedRuntime": "assets/cg/s38-alice-nick-ordinary-day.webp",
+            "assetMatches": true
+          },
+          "manifest": {
+            "id": "s38-alice-nick-ordinary-day",
+            "path": "assets/cg/s38-alice-nick-ordinary-day.png",
+            "runtimePath": "assets/cg/s38-alice-nick-ordinary-day.webp",
+            "runtimePortraitAsset": "assets/cg/s38-alice-nick-ordinary-day-portrait.webp",
+            "dimensions": "1672x941"
+          },
+          "physicalFiles": [
+            {
+              "path": "assets/cg/s38-alice-nick-ordinary-day.png",
+              "exists": true,
+              "sha256": "4b45f3163d15fa72b7f1001952502080bfef216a7c0df3fd15f670612f130612"
+            },
+            {
+              "path": "assets/cg/s38-alice-nick-ordinary-day-portrait.png",
+              "exists": true,
+              "sha256": "9f084549a62a98877cbd6be05b0eb357c20c73eafc1023bf8eeb5f9f841dbe3f"
+            },
+            {
+              "path": "assets/cg/s38-alice-nick-ordinary-day.webp",
+              "exists": true,
+              "sha256": "97bfd453dfa83a55b199b10994ecd773337ca6c18ef56a174d5dd37dfa4d8acd"
+            },
+            {
+              "path": "assets/cg/s38-alice-nick-ordinary-day-portrait.webp",
+              "exists": true,
+              "sha256": "833a6d48f788d02c25a2a700cf24701e5163da73d44d379edf1b11c13e9e83bf"
+            }
+          ],
+          "audioEvidence": {
+            "cueId": "romantic",
+            "readyState": 0,
+            "duration": null
+          },
+          "errors": [],
+          "failed": [],
+          "ignoredFailedRequests": [],
+          "runError": null
+        }
+      ]
+    }
+  ]
+}

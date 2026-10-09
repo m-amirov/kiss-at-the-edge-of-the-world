@@ -1,0 +1,199 @@
+{
+  "schema": "codex.web.host-observed.review.v1",
+  "assurance": "host-observed-art-v1",
+  "policy": "HOST_OBSERVED_ART_ACCEPTANCE_V1",
+  "role": "ceos_bulk_checker_web",
+  "phase": "acceptance",
+  "status": "PASS",
+  "semanticVerdict": "PASS",
+  "sourceHead": "22b7155736b9d7e51cac45700c5bf0dbe0ed8d50",
+  "scene": "S38",
+  "cue": "s38-ordinary-day",
+  "actualPixelsReceived": true,
+  "reviewedItems": [
+    "S38:s38-ordinary-day"
+  ],
+  "evidenceRefs": [
+    "codex-input-image-1",
+    "codex-input-image-2",
+    "codex-input-image-3"
+  ],
+  "receivedEvidenceRefs": [
+    "codex-input-image-1",
+    "codex-input-image-2",
+    "codex-input-image-3"
+  ],
+  "responseText": "> **Local tools unavailable**\n>\n> `ChatGPT Web High` cannot access the local Codex computer in this turn. The accumulated context does not contain local tool results yet: it will see instructions and attachments, but not workspace contents. ChatGPT-native capabilities such as web search remain available when the product provides them.\n>\n> **Action:** Open `MCP` in `Codex Web GPT` and connect the `Full` harness to give the selected ChatGPT Web model access to local tools.**Verdict: PASS — S38**\n\nВсе три изображения получены и читаемы. Алиса и Ник присутствуют, два билета различимы. Диалог читается, изображение заполняет экран до краёв. Критических обрезаний, перекрытий или нарушений адаптивности не обнаружено.\n\n**Наблюдения по viewport:**\n\n- **1920×900 — PASS.** Оба персонажа и два билета полностью различимы; нижний градиент обеспечивает читаемость диалога, хотя частично затемняет фотографию в рамке.\n- **390×844 — PASS.** Лица персонажей, билеты и фотография в рамке сохранены в вертикальной композиции; текст полностью читается, элементы интерфейса не перекрываются.\n- **360×640 — PASS.** Более плотное кадрирование сохраняет лица и оба билета; текстовая область частично закрывает рамку с фотографией, но диалог и навигация остаются читаемыми.\n\n**Desktop-composition defect:** явного дефекта композиции на десктопе не обнаружено; критические нарушения также не воспроизводятся на мобильных разрешениях.\n\n**Итог: PASS. REWORK не требуется.**",
+  "responseTextSha256": "db24d380ed8e120658568749ede4d7c060dbea1b041123d39de6e027f0036f21",
+  "decision": "PASS: the independent Web High response reviewed all three supplied current-runtime S38 images and found no visual basis for REWORK.",
+  "findings": [],
+  "unresolved": [],
+  "visualEvidence": [
+    {
+      "ref": "codex-input-image-1",
+      "sceneId": "S38",
+      "cue": "s38-ordinary-day",
+      "viewport": "desktop",
+      "path": "artifacts/evidence/s38-host-observed-control-2026-10-09/S38-s38-ordinary-day-1920x900.png",
+      "sha256": "f6a1a52c4024528b753c0e94d6734745a70ed26a7081a04dadb6ae41a1604215",
+      "bytes": 1872945,
+      "observation": "The desktop image is readable edge to edge; Alice, Nick, both tickets, dialogue, and the museum context are visible without critical clipping.",
+      "verdict": "PASS"
+    },
+    {
+      "ref": "codex-input-image-2",
+      "sceneId": "S38",
+      "cue": "s38-ordinary-day",
+      "viewport": "portrait390",
+      "path": "artifacts/evidence/s38-host-observed-control-2026-10-09/S38-s38-ordinary-day-390x844.png",
+      "sha256": "b4bdb1a5ab1f4961a76df204c54095ec80c26d323ffc8d993689bdbc3792b80f",
+      "bytes": 438762,
+      "observation": "The portrait crop preserves faces, tickets, and the foreground frame; the dialogue is readable and interface controls do not overlap the action.",
+      "verdict": "PASS"
+    },
+    {
+      "ref": "codex-input-image-3",
+      "sceneId": "S38",
+      "cue": "s38-ordinary-day",
+      "viewport": "portrait360",
+      "path": "artifacts/evidence/s38-host-observed-control-2026-10-09/S38-s38-ordinary-day-360x640.png",
+      "sha256": "b90c29b7eb7de01c029a5c8df5878469c6e28b1b5ab6683d4d754972ddf93df5",
+      "bytes": 304020,
+      "observation": "The tighter portrait crop preserves faces and tickets; the dialogue remains readable while the lower frame is partly covered by the text gradient.",
+      "verdict": "PASS"
+    }
+  ],
+  "hostObservedReceipt": {
+    "schema": "codex.web.host-observed.receipt.v1",
+    "policy": "HOST_OBSERVED_ART_ACCEPTANCE_V1",
+    "providerAttested": false,
+    "providerTaskId": null,
+    "providerResponseId": null,
+    "reviewTraceId": null,
+    "sourceHead": "22b7155736b9d7e51cac45700c5bf0dbe0ed8d50",
+    "role": "ceos_bulk_checker_web",
+    "route": {
+      "model": null,
+      "requestedModel": "gpt-5.6-sol",
+      "reasoningEffort": "high",
+      "providerAttested": false,
+      "unavailableReason": "upstream-539de61-receipt-does-not-attest-selected-model-route"
+    },
+    "browser": {
+      "traceId": "6033130c3e84",
+      "diagnosticPath": "C:\\Users\\user\\.codex-chatgpt-web-dev\\runtime\\dev-chat\\diagnostics\\browser-turns\\6033130c3e84-ca844c5d",
+      "userTurnIdentity": null,
+      "userTurnIdentityUnavailableReason": "upstream-539de61-receipt-does-not-expose-accepted-user-identity",
+      "assistantTurnIdentity": "group:assistant:642a7604-5b39-41ce-8f53-cbed709ba6fa",
+      "submission": "accepted",
+      "completion": "final"
+    },
+    "response": {
+      "status": "completed",
+      "textSha256": "db24d380ed8e120658568749ede4d7c060dbea1b041123d39de6e027f0036f21"
+    },
+    "attachments": [
+      {
+        "ref": "codex-input-image-1",
+        "sceneId": "S38",
+        "cue": "s38-ordinary-day",
+        "viewport": "desktop",
+        "path": "artifacts/evidence/s38-host-observed-control-2026-10-09/S38-s38-ordinary-day-1920x900.png",
+        "sha256": "f6a1a52c4024528b753c0e94d6734745a70ed26a7081a04dadb6ae41a1604215",
+        "bytes": 1872945,
+        "mime": "image/png",
+        "dimensions": [
+          1920,
+          900
+        ]
+      },
+      {
+        "ref": "codex-input-image-2",
+        "sceneId": "S38",
+        "cue": "s38-ordinary-day",
+        "viewport": "portrait390",
+        "path": "artifacts/evidence/s38-host-observed-control-2026-10-09/S38-s38-ordinary-day-390x844.png",
+        "sha256": "b4bdb1a5ab1f4961a76df204c54095ec80c26d323ffc8d993689bdbc3792b80f",
+        "bytes": 438762,
+        "mime": "image/png",
+        "dimensions": [
+          390,
+          844
+        ]
+      },
+      {
+        "ref": "codex-input-image-3",
+        "sceneId": "S38",
+        "cue": "s38-ordinary-day",
+        "viewport": "portrait360",
+        "path": "artifacts/evidence/s38-host-observed-control-2026-10-09/S38-s38-ordinary-day-360x640.png",
+        "sha256": "b90c29b7eb7de01c029a5c8df5878469c6e28b1b5ab6683d4d754972ddf93df5",
+        "bytes": 304020,
+        "mime": "image/png",
+        "dimensions": [
+          360,
+          640
+        ]
+      }
+    ]
+  },
+  "contractGaps": {
+    "userTurnIdentity": {
+      "value": null,
+      "unavailableReason": "upstream-539de61-receipt-does-not-expose-accepted-user-identity"
+    },
+    "perAttachmentViewportInReceipt": {
+      "value": null,
+      "unavailableReason": "upstream-539de61-receipt-has-one-turn-level-viewport"
+    },
+    "attestedModelRoute": {
+      "value": null,
+      "unavailableReason": "upstream-539de61-receipt-exposes-requested-backend-model-only"
+    }
+  },
+  "rawReceipt": {
+    "schema": "codex.web.host-observed-receipt.v1",
+    "assurance": "host-observed",
+    "providerAttested": false,
+    "provider": {
+      "taskId": null,
+      "responseId": null,
+      "reviewTraceId": null
+    },
+    "source": {
+      "sourceHead": "22b7155736b9d7e51cac45700c5bf0dbe0ed8d50",
+      "scene": "S38",
+      "viewport": "1920x900",
+      "attachments": [
+        {
+          "ref": "codex-input-image-1",
+          "sha256": "f6a1a52c4024528b753c0e94d6734745a70ed26a7081a04dadb6ae41a1604215",
+          "bytes": 1872945
+        },
+        {
+          "ref": "codex-input-image-2",
+          "sha256": "b4bdb1a5ab1f4961a76df204c54095ec80c26d323ffc8d993689bdbc3792b80f",
+          "bytes": 438762
+        },
+        {
+          "ref": "codex-input-image-3",
+          "sha256": "b90c29b7eb7de01c029a5c8df5878469c6e28b1b5ab6683d4d754972ddf93df5",
+          "bytes": 304020
+        }
+      ]
+    },
+    "browser": {
+      "bridgeTraceId": "6033130c3e84",
+      "assistantTurnIdentity": "group:assistant:642a7604-5b39-41ce-8f53-cbed709ba6fa",
+      "submission": "tile-visible-and-send-enabled",
+      "completion": "stable-dom-completion-action"
+    },
+    "route": {
+      "requestedModel": "gpt-5.6-sol",
+      "reasoning": "high"
+    },
+    "answer": {
+      "sha256": "81ee6cd983fc2050ae8f0fcc47c2d2808152d3b9aa19bfe046ed9980a2070947"
+    }
+  }
+}
