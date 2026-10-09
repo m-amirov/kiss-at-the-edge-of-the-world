@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { execFileSync } from 'node:child_process';
+import { verifyVisualContentMatrix, verifyVisualContentReviews } from './visual-content-review.mjs';
 
 const DEFAULT_RECORD = 'artifacts/evidence/production-art-acceptance.json';
 const sha256 = file => crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
@@ -84,7 +85,10 @@ export function verifyArtAcceptance({ root, recordPath = DEFAULT_RECORD, recordO
   try { record = recordOverride ?? JSON.parse(fs.readFileSync(recordFile, 'utf8')); }
   catch (error) { return block('ART_ACCEPTANCE_RECORD_INVALID', `Acceptance record is not valid JSON: ${error.message}`); }
   if (record.schemaVersion === 1 || record.schemaVersion === 2) return block('ART_ACCEPTANCE_LEGACY_REATTESTATION_REQUIRED', 'Path-based or self-invalidating acceptance schema requires current re-attestation.');
-  if (record.schemaVersion !== 3 || record.recordType !== 'production-art-acceptance') return block('ART_ACCEPTANCE_RECORD_INVALID', 'Unsupported acceptance record schema or record type.');
+  if (![3, 4].includes(record.schemaVersion) || record.recordType !== 'production-art-acceptance') return block('ART_ACCEPTANCE_RECORD_INVALID', 'Unsupported acceptance record schema or record type.');
+  const visualContent = record.schemaVersion === 4;
+  if (visualContent && (record.assurance !== 'visual-content' || record.webHigh?.assurance !== 'visual-content'))
+    return block('ART_ACCEPTANCE_ASSURANCE_INVALID', 'Schema v4 requires explicit visual-content assurance on record and Web reviews.');
   if (record.status !== 'PASS' || record.verdict !== 'PASS_PRODUCTION_ART_66_66') return block('ART_ACCEPTANCE_PROVENANCE_INVALID', 'Acceptance record is not a formal PASS_PRODUCTION_ART_66_66 record.');
   if (record.verifier?.type !== 'source-bound-production-art-verifier' || !record.verifier?.source) return block('ART_ACCEPTANCE_PROVENANCE_INVALID', 'Acceptance record lacks source-bound verifier provenance.');
 
@@ -127,16 +131,32 @@ export function verifyArtAcceptance({ root, recordPath = DEFAULT_RECORD, recordO
   if (matrixResult.status !== 'PASS') return matrixResult;
   const matrix = matrixResult.evidence;
   if (matrix.scope?.expectedScenes !== 66 || matrix.scope?.coveredScenes !== 66 || matrix.scope?.captures !== 198 || matrix.failures?.length) return block('ART_ACCEPTANCE_COVERAGE_EVIDENCE_INVALID', 'Current matrix does not prove 66 scenes x 3 viewports with zero failures.');
-  const screenshotResult = verifyMatrixScreenshots({ projectRoot, matrix });
+  const screenshotResult = visualContent
+    ? verifyVisualContentMatrix({ projectRoot, matrix, sourceHead: binding.sourceHead })
+    : verifyMatrixScreenshots({ projectRoot, matrix });
   if (screenshotResult.status !== 'PASS') return screenshotResult;
   const roles = new Set();
+  const reviewEntries = [];
   for (const review of record.webHigh.reviews ?? []) {
     const result = verifyJsonEvidence({ projectRoot, reference: review, sourceHead: binding.sourceHead, requirePixels: true });
     if (result.status !== 'PASS') return result;
+    if (!visualContent && (!review.taskId || !review.reviewTraceId ||
+        !result.evidence.taskId || !result.evidence.reviewTraceId ||
+        review.taskId !== result.evidence.taskId || review.reviewTraceId !== result.evidence.reviewTraceId))
+      return block('ART_ACCEPTANCE_WEB_PROVENANCE_MISSING', 'Strict Web review requires matching real task and trace IDs.');
     roles.add(result.evidence.role ?? result.evidence.agent);
+    reviewEntries.push({ reference: review, evidence: result.evidence });
   }
-  for (const role of ['ceos_reasoner_web', 'ceos_bulk_checker_web', 'ceos_art_director_web']) if (!roles.has(role)) return block('ART_ACCEPTANCE_WEB_REVIEW_MISSING', `Required Web High role is missing: ${role}`);
-  return { status: 'PASS', code: null, reason: 'Current product files, manifests, runtime matrix, hashes and Web High reviews match source-bound production-art acceptance.', recordPath, sourceProductHead: binding.sourceHead };
+  for (const role of ['ceos_reasoner_web', 'ceos_bulk_checker_web', 'ceos_art_director_web']) if (!roles.has(role))
+    return block('ART_ACCEPTANCE_WEB_REVIEW_MISSING', `Required Web High role is missing: ${role}`);
+  if (visualContent) {
+    const contentResult = verifyVisualContentReviews({ projectRoot, matrix, sourceHead: binding.sourceHead, reviewEntries });
+    if (contentResult.status !== 'PASS') return contentResult;
+  }
+  return { status: 'PASS', code: null,
+    reason: visualContent ? '66 scenes reviewed at the image-content assurance level with source-bound local screenshot hashes (not provider-attested delivery).' :
+      'Current product files, manifests, runtime matrix, hashes and strict Web High reviews match source-bound production-art acceptance.',
+    assurance: visualContent ? 'visual-content' : 'strict', recordPath, sourceProductHead: binding.sourceHead };
 }
 
 export function persistVerifiedArtAcceptance({ root, record, recordPath = DEFAULT_RECORD } = {}) {
