@@ -8,7 +8,7 @@
 - Исходный Final RC HEAD: `5a43fbd51bcd54db472c89956ad085b20b4e5c45`
 - Ветка передачи: `feature/host-observed-art-acceptance-v1`
 - Исходное состояние: detached HEAD; изменения сохранены без reset/stash/force push.
-- Подготовительный коммит: `522ef893c5ecf43a7ec1b0d0691705b28c88278f` (`chore(transfer): preserve host-observed art acceptance groundwork`).
+- Подготовительный коммит: `522ef8926e7add074396567f3254cceda124a3c1` (`chore(transfer): preserve host-observed art acceptance groundwork`).
 - Реализация `HOST_OBSERVED_ART_ACCEPTANCE_V1` в этой передаче не выполнялась.
 - Acceptance v4 не формировался.
 
