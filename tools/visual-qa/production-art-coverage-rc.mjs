@@ -101,6 +101,15 @@ try {
     page.on('console', message => { if (message.type() === 'error') errors.push(`console:${message.text()}`); });
     page.on('requestfailed', request => { if (!/\/sdk\.js(?:$|\?)/u.test(request.url())) failed.push(request.url()); });
     await page.route('**/sdk.js', route => route.fulfill({ status: 200, contentType: 'application/javascript', body: 'window.YaGames = undefined;' }));
+    await page.addInitScript(() => {
+      const NativeAudio = window.Audio;
+      window.__PRODUCTION_ART_QA__ = { audio: null };
+      window.Audio = function ProductionArtQaAudio(...args) {
+        const audio = new NativeAudio(...args);
+        window.__PRODUCTION_ART_QA__.audio = audio;
+        return audio;
+      };
+    });
     await page.addInitScript(({ key, value }) => localStorage.setItem(key, JSON.stringify(value)), {
       key: literarySaveKey,
       value: { schemaVersion: 3, sceneId: target.sceneId, position: target.position, choices: target.choices, finished: false, visited: ['S01', target.sceneId], runId: `production-art-coverage-${target.sceneId}-${viewport.width}`, revision: 0 },
@@ -113,6 +122,10 @@ try {
       const continueButton = page.getByRole('button', { name: /Продолжить|Continue|New Game|Новая игра/ }).first();
       if (await continueButton.count()) await continueButton.click();
       await page.locator('.reader-sheet').waitFor();
+      await page.waitForFunction(() => {
+        const audio = window.__PRODUCTION_ART_QA__?.audio;
+        return !audio || (audio.readyState > 0 && Number.isFinite(audio.duration) && audio.duration > 0);
+      }, null, { timeout: 5000 });
       await page.waitForTimeout(120);
       readback = await page.evaluate(() => {
         const image = document.querySelector('.literary-picture img');
