@@ -1375,6 +1375,118 @@
       "method": "Scene-specific portrait background re-composition; lighthouse, harbour pier, boats and mountain context retained for S18 mobile runtime",
       "source": "Derived from assets/backgrounds/s18-hofn-harbour.png in Codex imagegen, 2026-10-09",
       "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s04-thingvellir-trail-rework.png",
+      "sha256": "DF00A69FA75292A60E664D7687D7D14B5B1E1A8655BFC9A12BB639CAD2C25263",
+      "dimensions": "1672x941",
+      "method": "Native Image Gen after fresh CEOS run-scoped capability challenge; canonical cast/location references; authored S04 repair",
+      "source": "Generated in current CEOS production-art run 2026-10-09; Web High review pending",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s04-thingvellir-trail-rework-portrait.png",
+      "sha256": "5A53C7737E47BB1F6D21198CACB375F780B21FB8088F5CC26637A03C8E6ED4E4",
+      "dimensions": "941x1672",
+      "method": "Native Image Gen portrait composition derived from S04 authored repair",
+      "source": "Generated in current CEOS production-art run 2026-10-09; Web High review pending",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s11-reynisfjara-information-board-rework.png",
+      "sha256": "617905AAC7966197E771D11F433C788AB26FED8797EF33851924B8E6A9EAE924",
+      "dimensions": "1672x941",
+      "method": "Native Image Gen after fresh CEOS run-scoped capability challenge; canonical cast/location references; authored S11 repair",
+      "source": "Generated in current CEOS production-art run 2026-10-09; Web High review pending",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s11-reynisfjara-information-board-rework-portrait.png",
+      "sha256": "463E771A26A2775980675970A2A63D861D6DBD194B5C0D85A3115BDB87F153F9",
+      "dimensions": "941x1672",
+      "method": "Native Image Gen portrait composition derived from S11 authored repair",
+      "source": "Generated in current CEOS production-art run 2026-10-09; Web High review pending",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s12-vik-cafe-damir-rework.png",
+      "sha256": "41AB56B3A73A0752D31A8AA397FF9E57E34C5BAADECF13C8111E2FFB9F7EC138",
+      "dimensions": "1672x941",
+      "method": "Native Image Gen after fresh CEOS run-scoped capability challenge; canonical Alice/Damir/cafe references; authored S12 repair",
+      "source": "Generated in current CEOS production-art run 2026-10-09; Web High review pending",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s12-vik-cafe-damir-rework-portrait.png",
+      "sha256": "3B92FE765CEB63707B9315267CF28DDC50C978A6243CC798B897652576F90337",
+      "dimensions": "941x1672",
+      "method": "Native Image Gen portrait composition derived from S12 authored repair",
+      "source": "Generated in current CEOS production-art run 2026-10-09; Web High review pending",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s14-skaftafell-pace-rework.png",
+      "sha256": "ED6F1EDE94B207166EFD76E0B59C9F31528B7A8A976687FC7B488E07CF8FC5B4",
+      "dimensions": "1672x941",
+      "method": "Native Image Gen after fresh CEOS run-scoped capability challenge; canonical Alice/Eric/trail references; authored S14 repair",
+      "source": "Generated in current CEOS production-art run 2026-10-09; Web High review pending",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s14-skaftafell-pace-rework-portrait.png",
+      "sha256": "4339088044023C85D67A1538FB8DFDE85A4B05EE476871E41FC1079879AEB502",
+      "dimensions": "941x1672",
+      "method": "Native Image Gen portrait composition derived from S14 authored repair",
+      "source": "Generated in current CEOS production-art run 2026-10-09; Web High review pending",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s19-hofn-pool-opening-rework.png",
+      "sha256": "CC940F5F532833A42DE5D8B01D3935B80C10A1E13AD05D082EE9EE6D7F969D09",
+      "dimensions": "1672x941",
+      "method": "Native Image Gen after fresh CEOS run-scoped capability challenge; canonical Alice/Nick/pool-entrance references; authored S19 repair",
+      "source": "Generated in current CEOS production-art run 2026-10-09; Web High review pending",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s19-hofn-pool-opening-rework-portrait.png",
+      "sha256": "18FB08A2E8091CE28C2E103856E123DD2A8BCF10C5A85C1858B72A8D53EAE90F",
+      "dimensions": "940x1672",
+      "method": "Native Image Gen portrait composition derived from S19 authored repair",
+      "source": "Generated in current CEOS production-art run 2026-10-09; Web High review pending",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s05-hveragerdi-van-warning-rework.png",
+      "sha256": "F322E3F3E66FAD3A9734B9E1FE4A9DFB7F3E12F8EA494F7907D75D2F902CDB69",
+      "dimensions": "1672x941",
+      "method": "Native Image Gen after fresh CEOS run-scoped capability challenge; authored S05 seated-van repair",
+      "source": "Generated in current CEOS production-art run 2026-10-09; Web High review pending",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s05-hveragerdi-van-warning-rework-portrait.png",
+      "sha256": "7694BA4A0AE588D21969A61366A61C77462E3BFD77F06710CED6F4F4764359C2",
+      "dimensions": "941x1672",
+      "method": "Native Image Gen portrait composition derived from S05 authored repair",
+      "source": "Generated in current CEOS production-art run 2026-10-09; Web High review pending",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s22-eastfjords-van-road-rework.png",
+      "sha256": "6FAC9A029012C86DBBE6608C25E827DB31C41C96844ED1C2F7E954D2EAA75CB7",
+      "dimensions": "1672x941",
+      "method": "Native Image Gen after fresh CEOS run-scoped capability challenge; authored S22 seated-van repair",
+      "source": "Generated in current CEOS production-art run 2026-10-09; Web High review pending",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s22-eastfjords-van-road-rework-portrait.png",
+      "sha256": "E465222067521654CF7BE3CBE449CB3D319F02263A3734BA2F9F4BD3655A8514",
+      "dimensions": "941x1672",
+      "method": "Native Image Gen portrait composition derived from S22 authored repair",
+      "source": "Generated in current CEOS production-art run 2026-10-09; Web High review pending",
+      "license": "generated for this project"
     }
   ]
 }
