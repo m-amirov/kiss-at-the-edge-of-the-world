@@ -4,7 +4,7 @@
 
 ## Trust boundary
 
-- Host-observed proves browser-side image tile visibility, submission, turn identity and completed assistant reply. It does **not** cryptographically attest byte-identical delivery or provider processing.
+- Host-observed captures browser-side visible-attachment validation, accepted user-turn acknowledgement (or observed user identity), assistant turn identity and completed response. It does **not** cryptographically attest byte-identical delivery or provider processing.
 - Always record providerAttested=false. Provider task/response/trace IDs must be null; never synthesize from DOM or host agent IDs.
 - Verify all local PNG files against their matrix SHA-256, bytes and PNG header dimensions, with source HEAD and product-snapshot binding.
 - Preserve original reviewer responseText, its SHA-256 and image-specific observations. Unknowns and unresolved REWORK must remain blocked.
@@ -29,9 +29,12 @@ Every **actual completed host browser turn** must supply its own JSON review fil
 - responseText (verbatim real response), decision, findings=[], unresolved=[], visualEvidence with per-image ref, sceneId, cue, viewport, path, sha256, bytes, observation and verdict=PASS;
 - hostObservedReceipt.schema=codex.web.host-observed.receipt.v1; policy=HOST_OBSERVED_ART_ACCEPTANCE_V1; providerAttested=false; providerTaskId=null; providerResponseId=null; reviewTraceId=null; sourceHead, role;
 - hostObservedReceipt.route.model=chatgpt-web/gpt-6-sol, reasoningEffort=high, providerAttested=false;
-- hostObservedReceipt.browser.traceId, userTurnIdentity, assistantTurnIdentity, submission=accepted, completion=final;
+- hostObservedReceipt.browser.traceId and assistantTurnIdentity, submission=accepted, completion=final; either an actually observed userTurnIdentity, OR userTurnIdentity=null with submissionEvidence=user_turn from the real browser-worker accepted-submission acknowledgement. A click/timeout/logical guess alone is not equivalent;
 - hostObservedReceipt.response.status=completed and textSha256=SHA-256 of verbatim responseText;
-- hostObservedReceipt.attachments array with unique compiled ref, sceneId, cue, viewport, relative PNG path, local sha256, bytes, mime=image/png, dimensions=[width,height].
+- hostObservedReceipt.attachments array with unique compiled ref, sceneId, cue, relative PNG path, local sha256, bytes and mime=image/png. If upstream cannot emit per-attachment viewport or dimensions, preserve them as null: the validator derives the viewport strictly from visualEvidence and the current runtime matrix, then checks actual local PNG IHDR. Present non-null viewport/dimensions must match; never invent them as host facts.
+
+
+Requested model/effort values are **host-side routing observations**, not an attested provider-selected route. The adapter must obtain them from the actual DEV request/selection logs; it must not label them provider-attested or fill missing values from a preferred default.
 
 Never convert a legacy S38 diagnostic summary into a passing receipt by guessing missing fields. New browser captures and real three-role turn evidence are necessary.
 
