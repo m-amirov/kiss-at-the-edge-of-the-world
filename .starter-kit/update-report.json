@@ -1,12 +1,12 @@
 {
   "schemaVersion": 2,
   "updaterSchemaVersion": 2,
-  "updaterVersion": "0.5.9",
+  "updaterVersion": "0.5.10",
   "mode": "update",
   "dryRun": false,
   "fromVersion": "0.5.9",
-  "toVersion": "0.5.9",
-  "sourceManifestHash": "153f4fbc9a30db452f94a02b09260893dee1e7b0fbfc7b2b868ed228f046df9c",
+  "toVersion": "0.5.10",
+  "sourceManifestHash": "bc6ff65f2df079a8b540b270120153886b6fce2744533d54ffdde0d1b0a65abb",
   "targetProfile": "new-project",
   "projectType": "new",
   "skillRoot": ".codex/skills",
@@ -69,11 +69,6 @@
       "ownership": "target-mapped"
     },
     {
-      "logicalId": "skill:mobile-game-ux:SKILL.md",
-      "target": ".codex/skills/mobile-game-ux/SKILL.md",
-      "ownership": "target-mapped"
-    },
-    {
       "logicalId": "skill:product-quality-review:ORIGIN.md",
       "target": ".codex/skills/product-quality-review/ORIGIN.md",
       "ownership": "target-mapped"
@@ -91,11 +86,6 @@
     {
       "logicalId": "skill:visual-quality-gate:ORIGIN.md",
       "target": ".codex/skills/visual-quality-gate/ORIGIN.md",
-      "ownership": "target-mapped"
-    },
-    {
-      "logicalId": "skill:visual-quality-gate:SKILL.md",
-      "target": ".codex/skills/visual-quality-gate/SKILL.md",
       "ownership": "target-mapped"
     },
     {
@@ -171,6 +161,11 @@
     {
       "logicalId": "managed:game-spec-schema",
       "target": "config/game-spec.schema.json"
+    },
+    {
+      "logicalId": "managed:final-gameplay-videos-schema",
+      "target": "config/final-gameplay-videos.schema.json",
+      "ownership": "semantic-merge"
     },
     {
       "logicalId": "contract:skill-precedence",
@@ -349,6 +344,11 @@
       "target": "tools/yandex/docs-watch.mjs"
     },
     {
+      "logicalId": "managed:tool-yandex-media-validation",
+      "target": "tools/yandex/media-validation.mjs",
+      "ownership": "semantic-merge"
+    },
+    {
       "logicalId": "managed:yandex-external-evidence-providers",
       "target": "config/yandex-external-evidence-providers.yaml"
     },
@@ -428,18 +428,18 @@
   "merged": [],
   "resolved": [
     {
+      "logicalId": "skill:mobile-game-ux:SKILL.md",
+      "target": ".codex/skills/mobile-game-ux/SKILL.md",
+      "resolution": "accept-incoming"
+    },
+    {
+      "logicalId": "skill:visual-quality-gate:SKILL.md",
+      "target": ".codex/skills/visual-quality-gate/SKILL.md",
+      "resolution": "accept-incoming"
+    },
+    {
       "logicalId": "managed:yandex-doc-snapshot",
       "target": "config/yandex-doc-snapshot.json",
-      "resolution": "accept-current"
-    },
-    {
-      "logicalId": "managed:final-gameplay-videos-schema",
-      "target": "config/final-gameplay-videos.schema.json",
-      "resolution": "accept-current"
-    },
-    {
-      "logicalId": "managed:tool-yandex-media-validation",
-      "target": "tools/yandex/media-validation.mjs",
       "resolution": "accept-current"
     }
   ],
