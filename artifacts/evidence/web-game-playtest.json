@@ -1,15 +1,54 @@
 {
+  "schemaVersion": 1,
   "status": "PASS",
-  "scope": "local literary runtime UI regression",
-  "head": "3d1b94ce76c3b913832d721c9c90cea8f6b0529a",
-  "runtime": "http://127.0.0.1:4173/literary.html?qa=final-ui",
-  "browser": "bundled Playwright Chromium",
-  "scenarios": [
-    { "name": "cold load", "result": "PASS", "consoleErrors": 0 },
-    { "name": "new game to first reader page", "result": "PASS" },
-    { "name": "stage mouse/touch advance", "result": "PASS", "transition": "1 / 9 -> 2 / 9" },
-    { "name": "responsive menu and reader", "result": "PASS", "viewports": ["1920x900", "390x844", "360x640", "844x390"] },
-    { "name": "retired text controls", "result": "PASS", "absent": ["Далее", "К выбору"] }
+  "source": "menu-audio-continuity",
+  "browsers": [
+    "Chromium"
   ],
-  "releaseBoundary": "not evaluated; Draft upload, moderation, publication and package creation intentionally excluded"
+  "viewports": [
+    "1920x900",
+    "390x844",
+    "360x640"
+  ],
+  "scenarios": [
+    "menu initial cue",
+    "first-interaction unlock",
+    "menu/settings/episodes continuity",
+    "mute and volume state",
+    "episode cue crossfade",
+    "blur/focus resume",
+    "menu return cue transition"
+  ],
+  "results": [
+    {
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "status": "PASS",
+      "consoleErrors": [],
+      "requestFailures": []
+    },
+    {
+      "viewport": {
+        "name": "mobile-390x844",
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "consoleErrors": [],
+      "requestFailures": []
+    },
+    {
+      "viewport": {
+        "name": "mobile-360x640",
+        "width": 360,
+        "height": 640
+      },
+      "status": "PASS",
+      "consoleErrors": [],
+      "requestFailures": []
+    }
+  ]
 }
