@@ -80,7 +80,8 @@ const images = imagePaths.map((filePath, index) => {
     throw new Error("Batch PNG hash/size mismatch before Web transport: " + meta.path);
   }
   if (meta) {
-    if (buffer.length < 24 || buffer.toString("ascii", 12, 16) !== "IHDR" ||
+    if (buffer.length < 24 || !buffer.subarray(0, 8).equals(Buffer.from([137,80,78,71,13,10,26,10])) ||
+        buffer.toString("ascii", 12, 16) !== "IHDR" ||
         buffer.readUInt32BE(16) !== meta.dimensions[0] || buffer.readUInt32BE(20) !== meta.dimensions[1])
       throw new Error("Batch PNG dimensions/format mismatch: " + meta.path);
   }
