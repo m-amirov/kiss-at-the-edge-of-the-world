@@ -86,6 +86,7 @@
       "userTurnIdentityUnavailableReason": "upstream-539de61-receipt-does-not-expose-accepted-user-identity",
       "assistantTurnIdentity": "group:assistant:642a7604-5b39-41ce-8f53-cbed709ba6fa",
       "submission": "accepted",
+      "submissionEvidence": "user_turn",
       "completion": "final"
     },
     "response": {
