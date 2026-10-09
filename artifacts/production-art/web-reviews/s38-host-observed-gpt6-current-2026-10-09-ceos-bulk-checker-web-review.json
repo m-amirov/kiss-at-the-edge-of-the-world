@@ -1,0 +1,133 @@
+{
+  "role": "ceos_bulk_checker_web",
+  "phase": "acceptance",
+  "status": "PASS",
+  "semanticVerdict": "PASS",
+  "sourceHead": "e106c59695a5092b0ad13fa0515e83989bc47837",
+  "actualPixelsReceived": true,
+  "decision": "**Overall verdict: PASS — S38 (3/3 viewports).**\n\n1. **Desktop — PASS:** Text and navigation controls are readable. Both characters and the museum setting are well composed. No visible clipping, unintended cropping, or layout defects.\n2. **Portrait390 — PASS:** Narrative text remains readable with sufficient contrast. Both characters' faces and the tickets are visible. Responsive cropping is appropriate; no obvious composition or clipping defects.\n3. **Portrait360 — PASS:** Text remains readable over the dark gradient. Both characters and the tickets remain visible despite the tighter framing. No obvious clipping, unintended cropping, or overlapping UI elements.\n\n**Final decision: PASS.** No blocking visual defects identified in the three supplied screenshots.",
+  "findings": [],
+  "unresolved": [],
+  "responseText": "**Overall verdict: PASS — S38 (3/3 viewports).**\n\n1. **Desktop — PASS:** Text and navigation controls are readable. Both characters and the museum setting are well composed. No visible clipping, unintended cropping, or layout defects.\n2. **Portrait390 — PASS:** Narrative text remains readable with sufficient contrast. Both characters' faces and the tickets are visible. Responsive cropping is appropriate; no obvious composition or clipping defects.\n3. **Portrait360 — PASS:** Text remains readable over the dark gradient. Both characters and the tickets remain visible despite the tighter framing. No obvious clipping, unintended cropping, or overlapping UI elements.\n\n**Final decision: PASS.** No blocking visual defects identified in the three supplied screenshots.",
+  "reviewedItems": [
+    "S38:s38-ordinary-day"
+  ],
+  "evidenceRefs": [
+    "codex-input-image-1",
+    "codex-input-image-2",
+    "codex-input-image-3"
+  ],
+  "receivedEvidenceRefs": [
+    "codex-input-image-1",
+    "codex-input-image-2",
+    "codex-input-image-3"
+  ],
+  "visualEvidence": [
+    {
+      "ref": "codex-input-image-1",
+      "sceneId": "S38",
+      "cue": "s38-ordinary-day",
+      "viewport": "desktop",
+      "path": "artifacts/evidence/s38-host-observed-control-current-2026-10-09/S38-s38-ordinary-day-1920x900.png",
+      "sha256": "3217d3ceb8df4597731216b1a4ce385102c14f6f89e4c9c2e08538fbe13341b5",
+      "bytes": 1872946,
+      "observation": "**Overall verdict: PASS — S38 (3/3 viewports).**\n\n1. **Desktop — PASS:** Text and navigation controls are readable. Both characters and the museum setting are well composed. No visible clipping, unintended cropping, or layout defects.\n2. **Portrait390 — PASS:** Narrative text remains readable with sufficient contrast. Both characters' faces and the tickets are visible. Responsive cropping is appropriate; no obvious composition or clipping defects.\n3. **Portrait360 — PASS:** Text remains readable over the dark gradient. Both characters and the tickets remain visible despite the tighter framing. No obvious clipping, unintended cropping, or overlapping UI elements.\n\n**Final decision: PASS.** No blocking visual defects identified in the three supplied screenshots.",
+      "verdict": "PASS"
+    },
+    {
+      "ref": "codex-input-image-2",
+      "sceneId": "S38",
+      "cue": "s38-ordinary-day",
+      "viewport": "portrait390",
+      "path": "artifacts/evidence/s38-host-observed-control-current-2026-10-09/S38-s38-ordinary-day-390x844.png",
+      "sha256": "a476a0c72e8e990ab47dc239f58e1ed2faf8c3ec49968596c6b1a31b35cb8e32",
+      "bytes": 438765,
+      "observation": "**Overall verdict: PASS — S38 (3/3 viewports).**\n\n1. **Desktop — PASS:** Text and navigation controls are readable. Both characters and the museum setting are well composed. No visible clipping, unintended cropping, or layout defects.\n2. **Portrait390 — PASS:** Narrative text remains readable with sufficient contrast. Both characters' faces and the tickets are visible. Responsive cropping is appropriate; no obvious composition or clipping defects.\n3. **Portrait360 — PASS:** Text remains readable over the dark gradient. Both characters and the tickets remain visible despite the tighter framing. No obvious clipping, unintended cropping, or overlapping UI elements.\n\n**Final decision: PASS.** No blocking visual defects identified in the three supplied screenshots.",
+      "verdict": "PASS"
+    },
+    {
+      "ref": "codex-input-image-3",
+      "sceneId": "S38",
+      "cue": "s38-ordinary-day",
+      "viewport": "portrait360",
+      "path": "artifacts/evidence/s38-host-observed-control-current-2026-10-09/S38-s38-ordinary-day-360x640.png",
+      "sha256": "934b21f9843e6fd9c18f8eb7235e2093de4f6bca524c9373a231fe56ee7a25cc",
+      "bytes": 304016,
+      "observation": "**Overall verdict: PASS — S38 (3/3 viewports).**\n\n1. **Desktop — PASS:** Text and navigation controls are readable. Both characters and the museum setting are well composed. No visible clipping, unintended cropping, or layout defects.\n2. **Portrait390 — PASS:** Narrative text remains readable with sufficient contrast. Both characters' faces and the tickets are visible. Responsive cropping is appropriate; no obvious composition or clipping defects.\n3. **Portrait360 — PASS:** Text remains readable over the dark gradient. Both characters and the tickets remain visible despite the tighter framing. No obvious clipping, unintended cropping, or overlapping UI elements.\n\n**Final decision: PASS.** No blocking visual defects identified in the three supplied screenshots.",
+      "verdict": "PASS"
+    }
+  ],
+  "hostObservedReceipt": {
+    "schema": "codex.web.host-observed.receipt.v1",
+    "policy": "HOST_OBSERVED_ART_ACCEPTANCE_V1",
+    "providerAttested": false,
+    "providerTaskId": null,
+    "providerResponseId": null,
+    "reviewTraceId": null,
+    "sourceHead": "e106c59695a5092b0ad13fa0515e83989bc47837",
+    "role": "ceos_bulk_checker_web",
+    "route": {
+      "model": "chatgpt-web/gpt-6-sol",
+      "reasoningEffort": "high",
+      "providerAttested": false,
+      "requestedModel": "chatgpt-web/gpt-6-sol",
+      "selectedModel": "chatgpt-web/gpt-6-sol"
+    },
+    "browser": {
+      "traceId": "480fb03de60e",
+      "userTurnIdentity": "group:user:17166c90-1dc4-45a0-8d88-ccfe21e8d982",
+      "assistantTurnIdentity": "group:assistant:17166c90-1dc4-45a0-8d88-ccfe21e8d982",
+      "submission": "accepted",
+      "completion": "final",
+      "submissionEvidence": "user_turn"
+    },
+    "response": {
+      "status": "completed",
+      "textSha256": "104014b3252f37fdbee002050f71d8378cbde81d0dccb5d52d666c3aff63f0fa"
+    },
+    "attachments": [
+      {
+        "ref": "codex-input-image-1",
+        "sceneId": "S38",
+        "cue": "s38-ordinary-day",
+        "path": "artifacts/evidence/s38-host-observed-control-current-2026-10-09/S38-s38-ordinary-day-1920x900.png",
+        "sha256": "3217d3ceb8df4597731216b1a4ce385102c14f6f89e4c9c2e08538fbe13341b5",
+        "bytes": 1872946,
+        "mime": "image/png",
+        "dimensions": [
+          1920,
+          900
+        ],
+        "viewport": "desktop"
+      },
+      {
+        "ref": "codex-input-image-2",
+        "sceneId": "S38",
+        "cue": "s38-ordinary-day",
+        "path": "artifacts/evidence/s38-host-observed-control-current-2026-10-09/S38-s38-ordinary-day-390x844.png",
+        "sha256": "a476a0c72e8e990ab47dc239f58e1ed2faf8c3ec49968596c6b1a31b35cb8e32",
+        "bytes": 438765,
+        "mime": "image/png",
+        "dimensions": [
+          390,
+          844
+        ],
+        "viewport": "portrait390"
+      },
+      {
+        "ref": "codex-input-image-3",
+        "sceneId": "S38",
+        "cue": "s38-ordinary-day",
+        "path": "artifacts/evidence/s38-host-observed-control-current-2026-10-09/S38-s38-ordinary-day-360x640.png",
+        "sha256": "934b21f9843e6fd9c18f8eb7235e2093de4f6bca524c9373a231fe56ee7a25cc",
+        "bytes": 304016,
+        "mime": "image/png",
+        "dimensions": [
+          360,
+          640
+        ],
+        "viewport": "portrait360"
+      }
+    ]
+  }
+}
