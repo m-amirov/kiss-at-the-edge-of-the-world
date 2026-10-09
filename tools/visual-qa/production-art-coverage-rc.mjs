@@ -28,6 +28,12 @@ const manifestByRuntime = new Map(manifestEntries.flatMap(entry => [
   [entry.runtimePortraitAsset, entry],
 ].filter(([key]) => key)));
 const manifestByPath = new Map(manifestEntries.map(entry => [entry.path, entry]));
+const manifestByBasename = new Map(manifestEntries.flatMap(entry => [
+  [entry.path, entry],
+  [entry.portraitAsset, entry],
+  [entry.runtimePath, entry],
+  [entry.runtimePortraitAsset, entry],
+].filter(([key]) => key).map(([key, value]) => [path.basename(key), value])));
 
 function choicesFor(scene) {
   const choices = Object.fromEntries(literarySeason.scenes
@@ -138,8 +144,8 @@ try {
     const screenshotBytes = runError ? null : await fs.readFile(screenshot);
     const expectedRuntime = target.expected.runtimePath ?? null;
     const runtimeAsset = readback?.asset ? `assets/${readback.asset}` : null;
-    const mapping = expectedRuntime ? manifestByRuntime.get(expectedRuntime) ?? manifestByPath.get(expectedRuntime) ?? null : null;
-    const physical = mapping ? [mapping.path, mapping.runtimePath, mapping.runtimePortraitAsset].filter(Boolean) : [];
+    const mapping = expectedRuntime ? manifestByRuntime.get(expectedRuntime) ?? manifestByPath.get(expectedRuntime) ?? manifestByBasename.get(path.basename(expectedRuntime)) ?? null : null;
+    const physical = mapping ? [mapping.path, mapping.portraitAsset, mapping.runtimePath, mapping.runtimePortraitAsset].filter(Boolean) : [];
     const physicalFiles = [];
     for (const item of physical) {
       const file = path.join(root, item);
