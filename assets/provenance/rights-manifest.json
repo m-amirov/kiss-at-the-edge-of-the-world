@@ -1488,5 +1488,37 @@
       "source": "Generated in current CEOS production-art run 2026-10-09; Web High review pending",
       "license": "generated for this project"
     }
+    ,{
+      "path": "assets/cg/s18-hofn-lighthouse.png",
+      "sha256": "4DA1055C8DA11E5261148A6BBD8752D1033500138E33C5D1EA3D369E6E524AAE",
+      "dimensions": "1672x941",
+      "method": "Native Image Gen localized foreground composition repair for authored S18:hofn-lighthouse; canonical Alice/Eric identities, gaze, clothing, Höfn harbour event and mobile-safe lower band preserved; water moved clearly below a solid quay with a low natural edge",
+      "source": "Generated in Codex imagegen after fresh CEOS capability challenge during production-art run 2026-10-09T23-38-07-504Z-production-art-dee0e9",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s18-hofn-lighthouse-portrait.png",
+      "sha256": "CA0F42D550751123E132B1299D102136C93ADDF66448591BC073367722E8F247",
+      "dimensions": "941x1672",
+      "method": "Recovered exact native Image Gen portrait composition from persisted image_gen.generation receipt; canonical Alice/Eric identities, interaction, harbour context and dialogue-safe lower band preserved; water separated below a low quay edge",
+      "source": "Generated in Codex imagegen during recovery run 2026-10-10T06-37-32-206Z-production-art-569a43; receipt exec-c75c58dc-987b-447a-93e2-23b0ded0cfcb; recovered byte match verified",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s18-hofn-lighthouse.webp",
+      "sha256": "53ED1339A486FE743A9E9CA105CA358F71C0840849C4A71324648719259E9562",
+      "dimensions": "1672x941",
+      "method": "Production WebP derivative",
+      "source": "Derived locally with Pillow from accepted S18 lighthouse desktop PNG",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s18-hofn-lighthouse-portrait.webp",
+      "sha256": "11EA6B07CC302E91F80B0AB3EB0D3DE20A7151EB4F9D4AAFDF69AEBF421DBFCB",
+      "dimensions": "941x1672",
+      "method": "Production WebP derivative",
+      "source": "Derived locally with Pillow quality=90 method=6 from recovered exact S18 lighthouse portrait PNG",
+      "license": "generated for this project"
+    }
   ]
 }

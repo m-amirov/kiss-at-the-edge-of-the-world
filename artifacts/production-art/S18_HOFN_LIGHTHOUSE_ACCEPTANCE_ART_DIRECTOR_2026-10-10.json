@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "phase": "acceptance",
+  "runId": "2026-10-10T07-13-02-116Z-production-art-630841",
+  "reviewTraceId": "01a124b1-8d83-7092-afad-f8f45eca840b",
+  "taskId": "01a124b1-8d83-7092-afad-f8f45eca840b",
+  "agent": "ceos_art_director_web",
+  "status": "PASS",
+  "decision": "PASS: current source CG and runtime pixels satisfy the approved S18:[0,5] composition contract on all three viewports; no objective defect requires REWORK.",
+  "actualPixelsReceived": true,
+  "sourceHead": "ca9b4e2ba637824bc8503414bdec4854a63f2c5f",
+  "reviewedItems": [
+    "S18:[0,5] hofn-lighthouse",
+    "desktop source CG",
+    "portrait source CG",
+    "runtime dialogue-open target at 1920x900",
+    "runtime dialogue-open target at 390x844",
+    "runtime dialogue-open target at 360x640",
+    "approved redefined acceptance criteria"
+  ],
+  "evidenceRefs": [
+    "assets/cg/s18-hofn-lighthouse.png",
+    "assets/cg/s18-hofn-lighthouse-portrait.png",
+    "artifacts/evidence/s18-acceptance-2026-10-10/runtime-final/target-desktop-1920x900.png",
+    "artifacts/evidence/s18-acceptance-2026-10-10/runtime-final/target-portrait390-390x844.png",
+    "artifacts/evidence/s18-acceptance-2026-10-10/runtime-final/target-portrait360-360x640.png"
+  ],
+  "receivedEvidenceRefs": [
+    "assets/cg/s18-hofn-lighthouse.png",
+    "assets/cg/s18-hofn-lighthouse-portrait.png",
+    "artifacts/evidence/s18-acceptance-2026-10-10/runtime-final/target-desktop-1920x900.png",
+    "artifacts/evidence/s18-acceptance-2026-10-10/runtime-final/target-portrait390-390x844.png",
+    "artifacts/evidence/s18-acceptance-2026-10-10/runtime-final/target-portrait360-360x640.png"
+  ],
+  "evidenceArtifact": "artifacts/production-art/S18_HOFN_LIGHTHOUSE_ACCEPTANCE_ART_DIRECTOR_2026-10-10.json",
+  "findings": [],
+  "unresolved": [],
+  "scopeNotes": [
+    "Direct prop interactions [0,9], [0,34], [0,38], [0,44] are outside this [0,5] acceptance scope and were not used as blockers.",
+    "No new CG, CSS, gradient, dialogue or runtime change is recommended."
+  ],
+  "viewportVerdicts": {
+    "1920x900": "PASS",
+    "390x844": "PASS",
+    "360x640": "PASS"
+  },
+  "visualEvidence": [
+    {"ref":"source-desktop","path":"assets/cg/s18-hofn-lighthouse.png","sha256":"4da1055c8da11e5261148a6bbd8752d1033500138e33c5d1ea3d369e6e524aae","observation":"Desktop source shows coherent anatomy, reciprocal gaze, natural hands, readable vessels, quay and water separation."},
+    {"ref":"source-portrait","path":"assets/cg/s18-hofn-lighthouse-portrait.png","sha256":"ca0f42d550751123e132b1299d102136c93addf66448591bc073367722e8f247","observation":"Portrait source preserves faces, emotional interaction, natural gestures and harbour context."},
+    {"ref":"runtime-desktop","path":"artifacts/evidence/s18-acceptance-2026-10-10/runtime-final/target-desktop-1920x900.png","sha256":"398241171f6d8598714a2b5a4fb7053badc03c3df974a1bf2f3a217099f45f98","observation":"Desktop runtime keeps faces, mutual gaze, hands, vessels, quay infrastructure and dialogue readable."},
+    {"ref":"runtime-390","path":"artifacts/evidence/s18-acceptance-2026-10-10/runtime-final/target-portrait390-390x844.png","sha256":"475d3ca36312e7add3aadd8edc3ac58226aaaa6eb159cdb57fa6aad7229d198e","observation":"390x844 runtime keeps faces, interaction and harbour context readable; lower vessel detail is not required by [0,5]."},
+    {"ref":"runtime-360","path":"artifacts/evidence/s18-acceptance-2026-10-10/runtime-final/target-portrait360-360x640.png","sha256":"cd964183dfe20ec34dcbec8f4d17a5178c638105697cfe8355aef1dca9595fef","observation":"360x640 runtime keeps faces, gaze, gestures and harbour identity readable without a standing-in-water impression."}
+  ],
+  "finalAcceptance": "PASS"
+}

@@ -1710,6 +1710,24 @@
       "runtimePortraitAsset": "assets/cg/s22-eastfjords-van-road-rework-portrait.webp",
       "sha256": "6FAC9A029012C86DBBE6608C25E827DB31C41C96844ED1C2F7E954D2EAA75CB7",
       "portraitSha256": "E465222067521654CF7BE3CBE449CB3D319F02263A3734BA2F9F4BD3655A8514"
+    },
+    {
+      "id": "s18-hofn-lighthouse",
+      "family": "cg",
+      "path": "assets/cg/s18-hofn-lighthouse.png",
+      "status": "integrated",
+      "runtime": "S18 authored cue [0,5], Höfn lighthouse walk with Alice and Eric on a readable quay",
+      "creationMethod": "Native Image Gen after fresh CEOS run-scoped capability challenge; localized foreground composition repair using canonical Alice/Eric references and the accepted Höfn harbour event",
+      "createdAt": "2026-10-10",
+      "dimensions": "1672x941",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s18-hofn-lighthouse-portrait.png",
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s18-hofn-lighthouse.webp",
+      "runtimePortraitAsset": "assets/cg/s18-hofn-lighthouse-portrait.webp",
+      "sha256": "4DA1055C8DA11E5261148A6BBD8752D1033500138E33C5D1EA3D369E6E524AAE",
+      "portraitSha256": "CA0F42D550751123E132B1299D102136C93ADDF66448591BC073367722E8F247",
+      "generationRun": "2026-10-10T06-37-32-206Z-production-art-569a43"
     }
   ],
   "routingTrace": {

@@ -144,7 +144,7 @@ S15:[{at:[0,5],id:'jokulsarlon-lagoon',location:'Jökulsárlón: лагуна',a
  S16:[{at:[0,1],id:'s16-guesthouse-help',location:'Придорожный гостевой дом: вход и скамья',cast:['alice','damir','eric','nick'],requiredCast:['alice','damir','eric','nick'],art:'cg/s16-guesthouse-help.webp'},
       {at:[4,0],id:'s16-kitchen-soup',location:'Придорожный гостевой дом: общая кухня',cast:['alice','damir','eric','nick'],requiredCast:['alice','damir','eric','nick'],art:'cg/s16-kitchen-soup.webp'}],
  S17:[{at:[0,0],id:'s17-hofn-guesthouse',location:'Гостевой дом Höfn: общая кухня',art:'cg/s17-hofn-guesthouse.webp',cast:['alice','eric','nick','damir'],requiredCast:['alice','eric','nick','damir']}],
- S18:[{at:[0,5],id:'hofn-lighthouse',location:'Höfn: прогулка к маяку',art:'s18-hofn-harbour.webp',cast:['alice','eric']},
+ S18:[{at:[0,5],id:'hofn-lighthouse',location:'Höfn: прогулка к маяку',art:'cg/s18-hofn-lighthouse.webp',presentation:'cinematic',cast:['alice','eric'],requiredCast:['alice','eric']},
       {at:[0,35],id:'hofn-dance',location:'Höfn: танец у гавани',art:'cg/s18-hofn-dance-lights.webp',cast:['alice','eric']},
       {at:[0,39],id:'hofn-walk-back',location:'Höfn: обратная дорога',art:'s18-hofn-harbour.webp'},
       {at:[5,1],id:'hofn-day10-room',location:'Höfn: комната на следующее утро',time:'день 10, утро',art:'cg/s18-hofn-day10-room.webp',presentation:'cinematic',cast:['alice']},

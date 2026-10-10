@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "phase": "acceptance",
+  "runId": "2026-10-10T07-13-02-116Z-production-art-630841",
+  "reviewTraceId": "01a124b3-15a1-76d0-acf3-bcf110b0e600",
+  "taskId": "01a124b3-15a1-76d0-acf3-bcf110b0e600",
+  "agent": "ceos_reasoner_web",
+  "status": "PASS",
+  "decision": "PASS: the current pixels communicate the S18:[0,5] harbour walk, reciprocal emotional attention and quay/water spatial relationship under the approved criteria on all three viewports.",
+  "actualPixelsReceived": true,
+  "sourceHead": "ca9b4e2ba637824bc8503414bdec4854a63f2c5f",
+  "reviewedItems": [
+    "S18:[0,5] hofn-lighthouse",
+    "desktop source CG",
+    "portrait source CG",
+    "runtime dialogue-open target at 1920x900",
+    "runtime dialogue-open target at 390x844",
+    "runtime dialogue-open target at 360x640",
+    "narrative action and approved prop criterion"
+  ],
+  "evidenceRefs": [
+    "assets/cg/s18-hofn-lighthouse.png",
+    "assets/cg/s18-hofn-lighthouse-portrait.png",
+    "artifacts/evidence/s18-acceptance-2026-10-10/runtime-final/target-desktop-1920x900.png",
+    "artifacts/evidence/s18-acceptance-2026-10-10/runtime-final/target-portrait390-390x844.png",
+    "artifacts/evidence/s18-acceptance-2026-10-10/runtime-final/target-portrait360-360x640.png"
+  ],
+  "receivedEvidenceRefs": [
+    "assets/cg/s18-hofn-lighthouse.png",
+    "assets/cg/s18-hofn-lighthouse-portrait.png",
+    "artifacts/evidence/s18-acceptance-2026-10-10/runtime-final/target-desktop-1920x900.png",
+    "artifacts/evidence/s18-acceptance-2026-10-10/runtime-final/target-portrait390-390x844.png",
+    "artifacts/evidence/s18-acceptance-2026-10-10/runtime-final/target-portrait360-360x640.png"
+  ],
+  "evidenceArtifact": "artifacts/production-art/S18_HOFN_LIGHTHOUSE_ACCEPTANCE_REASONER_2026-10-10.json",
+  "findings": [],
+  "unresolved": [],
+  "scopeNotes": [
+    "Direct prop interactions [0,9], [0,34], [0,38], [0,44] are outside this [0,5] acceptance scope and were not used as blockers.",
+    "Transition behavior and full-scene release acceptance are outside this static pixel acceptance scope."
+  ],
+  "viewportVerdicts": {
+    "1920x900": "PASS",
+    "390x844": "PASS",
+    "360x640": "PASS"
+  },
+  "visualEvidence": [
+    {"ref":"source-desktop","path":"assets/cg/s18-hofn-lighthouse.png","sha256":"4da1055c8da11e5261148a6bbd8752d1033500138e33c5d1ea3d369e6e524aae","observation":"Desktop source supports the narrated harbour walk with reciprocal gaze, natural gestures and visible quay/water separation."},
+    {"ref":"source-portrait","path":"assets/cg/s18-hofn-lighthouse-portrait.png","sha256":"ca0f42d550751123e132b1299d102136c93addf66448591bc073367722e8f247","observation":"Portrait source preserves the emotional beat and recognizable harbour context above the dialogue band."},
+    {"ref":"runtime-desktop","path":"artifacts/evidence/s18-acceptance-2026-10-10/runtime-final/target-desktop-1920x900.png","sha256":"398241171f6d8598714a2b5a4fb7053badc03c3df974a1bf2f3a217099f45f98","observation":"Desktop target shows the pair on the waterfront promenade with readable dialogue and no spatial contradiction."},
+    {"ref":"runtime-390","path":"artifacts/evidence/s18-acceptance-2026-10-10/runtime-final/target-portrait390-390x844.png","sha256":"475d3ca36312e7add3aadd8edc3ac58226aaaa6eb159cdb57fa6aad7229d198e","observation":"390x844 target preserves faces, eye contact, gestures and harbour identity while retaining dialogue contrast."},
+    {"ref":"runtime-360","path":"artifacts/evidence/s18-acceptance-2026-10-10/runtime-final/target-portrait360-360x640.png","sha256":"cd964183dfe20ec34dcbec8f4d17a5178c638105697cfe8355aef1dca9595fef","observation":"360x640 target preserves facial interaction and readable dialogue; covered vessels are not required for the active [0,5] action."}
+  ],
+  "finalAcceptance": "PASS"
+}
