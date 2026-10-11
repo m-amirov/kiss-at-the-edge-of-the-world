@@ -1728,6 +1728,23 @@
       "sha256": "4DA1055C8DA11E5261148A6BBD8752D1033500138E33C5D1EA3D369E6E524AAE",
       "portraitSha256": "CA0F42D550751123E132B1299D102136C93ADDF66448591BC073367722E8F247",
       "generationRun": "2026-10-10T06-37-32-206Z-production-art-569a43"
+    },
+    {
+      "id": "s26-route-choice-courtyard-final",
+      "family": "cg",
+      "path": "assets/cg/s26-route-choice-courtyard-final.png",
+      "status": "integrated",
+      "runtime": "S26 authored cue [0,2] guesthouse-courtyard; final four-person route-choice cinematic CG; [0,0] scene-start remains the power-outage cue",
+      "creationMethod": "User-supplied finalized CG imported without pixel transformation; desktop and portrait compositions",
+      "createdAt": "2026-10-11",
+      "dimensions": "1672x941",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s26-route-choice-courtyard-final-portrait.png",
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s26-route-choice-courtyard-final.png",
+      "runtimePortraitAsset": "assets/cg/s26-route-choice-courtyard-final-portrait.png",
+      "sha256": "cf572e5003f062e6f089c6636c39c324ba936d6b1d6b7c3fbcb92b2368ce5ffd",
+      "portraitSha256": "1080ed4e1ba9b724a438cb8885c8e6191d2bf2050f2deb6b1ee5d20e708b7123"
     }
   ],
   "routingTrace": {

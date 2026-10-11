@@ -37,6 +37,8 @@ const focalPointByAsset = {
   's18-hofn-lighthouse-portrait.webp': '50% 54%',
   's18-hofn-harbour.webp': '90% 50%',
   's26-eric-choice.webp': '50% 40%',
+  's26-route-choice-courtyard-final.png': '50% 42%',
+  's26-route-choice-courtyard-final-portrait.png': '50% 50%',
   's23-eric-harbor-plan.webp': '50% 42%',
   's24-nick-pier-consent.webp': '50% 42%',
   's25-damir-clarity-talk.webp': '50% 42%',
@@ -121,6 +123,7 @@ const portraitAssetByDesktopAsset = {
   ,'s01-damir-arrives-batch2.webp':'s01-damir-arrives-batch2-portrait.webp'
   ,'s48-last-breakfast-batch2.webp':'s48-last-breakfast-batch2-portrait.webp'
   ,'s26-route-choice-courtyard-batch2.webp':'s26-route-choice-courtyard-batch2-portrait.webp'
+  ,'s26-route-choice-courtyard-final.png':'s26-route-choice-courtyard-final-portrait.png'
   ,'s02-van-group-batch2.webp':'s02-van-group-batch2-portrait.webp'
   ,'s60-souvenir-kitchen-batch2.webp':'s60-souvenir-kitchen-batch2-portrait.webp'
   ,'s02-roadside-cafe-group.webp':'s02-roadside-cafe-group-portrait.webp'

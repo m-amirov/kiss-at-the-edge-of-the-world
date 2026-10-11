@@ -159,7 +159,7 @@ S15:[{at:[0,5],id:'jokulsarlon-lagoon',location:'Jökulsárlón: лагуна',a
  S24:[{at:[0,0],id:'s24-nick-pier-consent',location:'Причал Seyðisfjörður: кофе и тизер',cast:['alice','nick'],art:'cg/s24-nick-pier-consent.webp'}],
  S25:[{at:[0,0],id:'s25-damir-clarity-talk',location:'Гостевой дом Seyðisfjörður: разговор о вакансии',cast:['alice','damir'],art:'cg/s25-damir-clarity-talk.webp'}],
 S26:[{at:[0,0],id:'scene-start',location:'Гостевой дом восточных фьордов: кухня и коридор при отключённом свете',cast:['alice'],art:'cg/s26-power-outage-notebook.webp'},
-      {at:[0,2],id:'guesthouse-courtyard',location:'Двор у гостевого дома',art:'cg/s26-eastfjords-courtyard-group.webp',cast:['alice','eric','nick','damir'],requiredCast:['alice','eric','nick','damir']},
+      {at:[0,2],id:'guesthouse-courtyard',location:'Двор у гостевого дома',art:'cg/s26-route-choice-courtyard-final.png',cast:['alice','eric','nick','damir'],requiredCast:['alice','eric','nick','damir']},
       {at:[2,0],id:'route-eric',cast:['alice','eric'],art:'cg/s26-eric-choice.webp',when:{'S26-C1':'A'}},
       {at:[7,0],id:'eric-consensual-embrace',cast:['alice','eric'],art:'cg/s26-eric-choice.webp',when:{'S26-C1':'A'}},
       {at:[8,0],id:'route-nick',cast:['alice','nick'],art:'cg/s26-nick-choice.webp',when:{'S26-C1':'B'}},

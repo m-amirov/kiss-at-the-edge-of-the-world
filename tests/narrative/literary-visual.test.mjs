@@ -358,6 +358,26 @@ test('S26 Eric CG appears only at the authored consensual embrace and stays isol
  }
 });
 
+test('S26 route choice uses the final four-person CG before and at the choice',()=>{
+ const {flow,choices}=complete('S26',{'S26-C90':'A','S26-C1':'A'});
+ const expected='s26-route-choice-courtyard-final.png';
+ const opening=shot('S26',flow,0,choices);
+ const courtyard=shot('S26',flow,indexOfSource(flow,0,2),choices);
+ assert.equal(opening.beatId,'scene-start');
+ assert.equal(opening.art?.type,'cg');
+ assert.equal(opening.art?.presentation,'cinematic');
+ assert.equal(opening.art?.file,'s26-power-outage-notebook.webp');
+ assert.deepEqual(opening.cast,['alice']);
+ assert.equal(courtyard.beatId,'guesthouse-courtyard');
+ assert.equal(courtyard.art?.type,'cg');
+ assert.equal(courtyard.art?.presentation,'cinematic');
+ assert.equal(courtyard.art?.file,expected);
+ assert.deepEqual(courtyard.cast,['alice','eric','nick','damir']);
+ assert.deepEqual(courtyard.requiredCast,['alice','eric','nick','damir']);
+ assert.ok(fs.existsSync(new URL(`../../assets/cg/${expected}`,import.meta.url)));
+ assert.ok(fs.existsSync(new URL(`../../assets/cg/${expected.replace('.png','-portrait.png')}`,import.meta.url)));
+});
+
 test('S26 non-Eric route CGs appear only after their own route lock',()=>{
  const expected={B:['route-nick','s26-nick-choice.webp',8],C:['route-damir','s26-damir-choice.webp',14],D:['route-independent','s26-alice-choice.webp',20]};
  for(const [route,[beat,file,chunk]] of Object.entries(expected)){
