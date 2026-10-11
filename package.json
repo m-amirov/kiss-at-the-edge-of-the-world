@@ -15,7 +15,7 @@
     "test:art-acceptance": "node --test tests/narrative/art-acceptance.test.mjs tests/narrative/art-acceptance-visual-content.test.mjs",
     "release:evidence:transcode": "node tools/release/refresh-runtime-transcode-acceptance.mjs",
     "release:production:allowlist": "python tools/release/production-size-audit.py --write-allowlist artifacts/evidence/production-asset-allowlist.json",
-    "release:production:package": "python release-artifacts/build-rc-package.py --allowlist artifacts/evidence/production-asset-allowlist.json --output release-artifacts/kiss-at-the-edge-of-the-world-production.zip",
+    "release:production:package": "npm run literary:compile && python release-artifacts/build-rc-package.py --allowlist artifacts/evidence/production-asset-allowlist.json --output release-artifacts/kiss-at-the-edge-of-the-world-production.zip",
     "release:production:audit": "python tools/release/production-size-audit.py --allowlist artifacts/evidence/production-asset-allowlist.json --zip release-artifacts/kiss-at-the-edge-of-the-world-production.zip --output artifacts/evidence/production-size-audit.json",
     "yandex:external:verify": "node tools/yandex/external-evidence.mjs verify",
     "yandex:external:run": "node tools/yandex/external-evidence.mjs run",
