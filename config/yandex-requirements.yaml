@@ -2,8 +2,8 @@ schemaVersion: 1
 source:
   title: Требования к игре — Яндекс Игры
   url: https://yandex.ru/dev/games/doc/ru/concepts/requirements
-  lastModified: '2026-09-29'
-  reviewedAt: '2026-09-30'
+  lastModified: '2026-10-09'
+  reviewedAt: '2026-10-11'
 statuses:
   required: blocks release candidate when applicable and not PASS
   recommended: must be reviewed; unresolved failure is recorded as WARN unless elevated by project rules
