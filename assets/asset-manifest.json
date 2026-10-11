@@ -1307,6 +1307,23 @@
       "createdAt": "2026-10-01",
       "dimensions": "512x512",
       "runtimePath": "assets/branding/kiss-at-the-edge-icon.png"
+    },
+    {
+      "id": "s26-route-choice-courtyard-final",
+      "family": "cg",
+      "path": "assets/cg/s26-route-choice-courtyard-final.png",
+      "status": "integrated",
+      "runtime": "S26 authored cues [0,0] scene-start and [0,2] guesthouse-courtyard; exact four-person route-choice cinematic CG",
+      "creationMethod": "User-supplied finalized CG imported without pixel transformation; desktop and portrait compositions",
+      "createdAt": "2026-10-11",
+      "dimensions": "1672x941",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s26-route-choice-courtyard-final-portrait.png",
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s26-route-choice-courtyard-final.png",
+      "runtimePortraitAsset": "assets/cg/s26-route-choice-courtyard-final-portrait.png",
+      "sha256": "cf572e5003f062e6f089c6636c39c324ba936d6b1d6b7c3fbcb92b2368ce5ffd",
+      "portraitSha256": "1080ed4e1ba9b724a438cb8885c8e6191d2bf2050f2deb6b1ee5d20e708b7123"
     }
   ],
   "routingTrace": {

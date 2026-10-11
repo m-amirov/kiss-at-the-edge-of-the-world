@@ -1136,6 +1136,22 @@
       "method": "Portrait derivative generated from the accepted S60 kitchen composition; mobile-safe cast retained",
       "source": "Generated in current CEOS production-art run 2026-10-08",
       "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s26-route-choice-courtyard-final.png",
+      "sha256": "CF572E5003F062E6F089C6636C39C324BA936D6B1D6B7C3FBCB92B2368CE5FFD",
+      "dimensions": "1672x941",
+      "method": "User-supplied finalized S26 desktop CG imported without pixel transformation; exact authored four-person route-choice composition",
+      "source": "User-provided file supplied in the integration task on 2026-10-11",
+      "license": "user-provided; project integration authorized by task request"
+    },
+    {
+      "path": "assets/cg/s26-route-choice-courtyard-final-portrait.png",
+      "sha256": "1080ED4E1BA9B724A438CB8885C8E6191D2BF2050F2DEB6B1EE5D20E708B7123",
+      "dimensions": "941x1672",
+      "method": "User-supplied finalized S26 portrait CG imported without pixel transformation; mobile-safe four-person composition",
+      "source": "User-provided file supplied in the integration task on 2026-10-11",
+      "license": "user-provided; project integration authorized by task request"
     }
   ]
 }
