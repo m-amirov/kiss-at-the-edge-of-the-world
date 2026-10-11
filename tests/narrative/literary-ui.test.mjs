@@ -56,7 +56,8 @@ test('background staging prioritizes readable key speakers over a group lineup',
   assert.match(player, /stageCastForPresentation\(direction\)/);
   assert.match(player, /stage\.dataset\.layout=direction\.stageComposition/);
   assert.doesNotMatch(player, /direction\.cast\.length>2\?direction\.cast\.slice\(0,2\)/);
-  assert.match(player, /cast:presentationCast,mode:presentationCast\.length>2\?'group':presentationCast\.length===2\?'pair':'solo'/);
+  assert.match(player, /const presentationCast=visibleCastForDirection\(direction\)/);
+  assert.match(player, /direction:\{\.\.\.direction,cast:presentationCast,mode:presentationCast\.length>2\?'group':presentationCast\.length===2\?'pair':'solo'/);
   assert.match(player, /require three or four people/i);
   assert.match(css, /\.scene-stage\[data-mode="solo"\]\{inset:4% 10% 23%/);
   assert.match(css, /\.scene-stage\[data-mode="solo"\] \.stage-character\{width:72vw/);

@@ -14,6 +14,7 @@ import { createAudioDirector } from './audio-director.js';
 import { runtimeAssetUrl } from './runtime-assets.js';
 import { musicCues, musicCueForScene } from './music-cues.js';
 import { createEpisodeTransitionController, normalizePendingEpisodeTransition } from './episode-interstitial.js';
+import { createImageAssetCache, createImageTransition } from './literary-image-transition.js';
 
 const canonicalById = new Map(literarySeason.scenes.map(scene => [scene.id, scene]));
 let runtimeSeason = literarySeason;
@@ -151,6 +152,29 @@ function visibleCastForDirection(direction){
 const stageAsset = { alice:'alice-stage.webp', eric:'eric-stage.webp', nick:'nick-stage.webp', damir:'damir-stage.webp' };
 // Resolve the menu cover through the same module-aware archive asset contract.
 const cover = runtimeAssetUrl('branding/kiss-at-the-edge-cover.png');
+const imageCache=createImageAssetCache({
+  maxEntries:18,
+  timeoutMs:45000,
+  onError:(path,error)=>{
+    const detail={path,reason:error?.message??'unknown image load failure'};
+    window.dispatchEvent(new CustomEvent('literary:image-error',{detail}));
+    console.warn('[literary-image]',detail);
+  }
+});
+let picture=null;
+let vignette=null;
+let artTransition=null;
+let currentStageNode=null;
+let currentStageKey='';
+let currentStagePaths=[];
+let stageRequestId=0;
+let lastViewportArtKey='';
+let viewportRefreshPending=false;
+const preloadQueue=[];
+const preloadQueued=new Set();
+let activePreloads=0;
+const maxConcurrentPreloads=2;
+const maxQueuedPreloads=10;
 const blank = () => ({ schemaVersion:3,sceneId:'S01',position:0,choices:{},finished:false, visited:['S01'],runId:`literary-${Date.now()}-${crypto.randomUUID?.() ?? Math.random().toString(36).slice(2)}`, revision:0 });
 function parseSaved(raw) {
   try {
@@ -438,6 +462,8 @@ function settingsPanel(section){
   draw();section.append(size,contrast,motion,audioMute,audioVolume);
 }
 function renderMenu(){
+  artTransition?.cancel();
+  stageRequestId+=1;
   platform?.setGameplayActive(false);
   audioDirector.setCue(menuAudioCue);
   menuOpen=true;app.className='literary-home';app.dataset.presentation=modal?`menu-${modal.toLowerCase()}`:'menu-home';app.style.setProperty('--cover',`url('${cover}')`);app.replaceChildren();
@@ -458,7 +484,7 @@ function renderMenu(){
     section.append(utility);
   }
 }
-function renderStage(direction) {
+function renderStage(direction, prepared=new Map()) {
   const stage=el('','scene-stage');
   stage.dataset.count=String(direction.cast.length);
   stage.dataset.mode=direction.mode;
@@ -468,12 +494,144 @@ function renderStage(direction) {
     const figure=el('',`stage-character stage-${person}`);
     figure.dataset.mood=direction.mood;
     figure.style.setProperty('--stage-index',index);
-    const image=el('','','img');
-    image.src=runtimeAssetUrl(`characters/${stageAsset[person]}`);
+    const path=runtimeAssetUrl(`characters/${stageAsset[person]}`);
+    const image=prepared.get(path)??el('','','img');
+    if(!prepared.has(path))image.src=path;
     image.alt='';image.decoding='async';
     figure.append(image);stage.append(figure);
   });
   return stage;
+}
+function prefersReducedMotion(){
+  return Boolean(settings.motion||window.matchMedia?.('(prefers-reduced-motion: reduce)').matches);
+}
+function ensurePicture(){
+  if(picture)return picture;
+  picture=el('','literary-picture');
+  picture.setAttribute('aria-hidden','true');
+  vignette=el('','literary-vignette');
+  picture.append(vignette);
+  artTransition=createImageTransition({
+    container:picture,
+    cache:imageCache,
+    durationMs:180,
+    reducedMotion:prefersReducedMotion,
+    onCommit:({image,path,metadata})=>{
+      const art=metadata.art;
+      picture.classList.toggle('is-cg',art?.type==='cg');
+      picture.classList.toggle('no-art',!art);
+      if(art){
+        picture.style.setProperty('--focus',metadata.focus);
+        if(art.type==='cg')picture.style.setProperty('--cg-url',`url("${path}")`);
+        else picture.style.removeProperty('--cg-url');
+        image.dataset.desktopAsset=art.file;
+        image.dataset.asset=metadata.file;
+        image.dataset.artType=art.type;
+      }
+    }
+  });
+  bindStageNavigation(picture);
+  return picture;
+}
+function releaseStage(){
+  currentStagePaths.forEach(path=>imageCache.release(path));
+  currentStagePaths=[];
+  currentStageNode?.remove();
+  currentStageNode=null;
+  currentStageKey='';
+}
+function updateStage(direction,art){
+  // Ordinary background groups stay focal, but a visual beat may explicitly
+  // require three or four people for narrative continuity.
+  const presentationCast=visibleCastForDirection(direction);
+  const target=art?.presentation==='cinematic'?null:{
+    key:`${presentationCast.join(',')}|${direction.mood}|${direction.location}|${direction.time}`,
+    direction:{...direction,cast:presentationCast,mode:presentationCast.length>2?'group':presentationCast.length===2?'pair':'solo',mood:direction.mood}
+  };
+  stageRequestId+=1;
+  const token=stageRequestId;
+  if(!target){releaseStage();return}
+  if(target.key===currentStageKey&&currentStageNode?.parentNode===picture)return;
+  releaseStage();
+  const paths=target.direction.cast.map(person=>runtimeAssetUrl(`characters/${stageAsset[person]}`));
+  Promise.all(paths.map(path=>imageCache.preload(path).then(image=>[path,image])))
+    .then(entries=>{
+      if(token!==stageRequestId)return;
+      const prepared=new Map(entries);
+      const stage=renderStage(target.direction,prepared);
+      entries.forEach(([path])=>imageCache.retain(path));
+      currentStagePaths=paths;
+      currentStageNode=stage;
+      currentStageKey=target.key;
+      picture.insertBefore(stage,vignette);
+    })
+    .catch(()=>{});
+}
+function visualSnapshot(scene,flow,position,choices){
+  const visualEntry=visualEntryForPosition(flow,position);
+  const stage=stageForScene(scene.id,choices);
+  const direction=visualAt(scene.id,visualEntry,choices,stage.cast);
+  const art=direction.art;
+  const file=art?assetFileForViewport(art,direction.beatId,locale):null;
+  const path=art?runtimeAssetUrl(`${art.type==='cg'?'cg':'backgrounds'}/${file}`):null;
+  return {scene,flow,position,visualEntry,direction,art,file,path};
+}
+function collectPreloadPaths(scene,flow,position,choices,current){
+  const paths=[];
+  const seen=new Set();
+  const addPath=path=>{if(path&&!seen.has(path)){seen.add(path);paths.push(path)}};
+  const addSnapshot=snapshot=>{
+    addPath(snapshot.path);
+    if(snapshot.art?.presentation!=='cinematic')visibleCastForDirection(snapshot.direction).forEach(person=>addPath(runtimeAssetUrl(`characters/${stageAsset[person]}`)));
+  };
+  addSnapshot(current);
+  const addFlowAhead=(branchFlow,branchChoices)=>{
+    for(let offset=1;offset<=2;offset++){
+      if(position+offset<=branchFlow.length)addSnapshot(visualSnapshot(scene,branchFlow,position+offset,branchChoices));
+    }
+  };
+  if(flow[position]?.type==='choice'){
+    for(const option of flow[position].options.slice(0,4)){
+      const branchChoices={...choices,[flow[position].id]:option.code};
+      const branchFlow=compileInteractivePlayback(scene,branchChoices,locale);
+      addSnapshot(visualSnapshot(scene,branchFlow,position,branchChoices));
+      addFlowAhead(branchFlow,branchChoices);
+      const next=nextLiteraryScene(scene.id,branchChoices);
+      const nextScene=next?byId.get(next):null;
+      if(nextScene)addSnapshot(visualSnapshot(nextScene,compileInteractivePlayback(nextScene,branchChoices,locale),0,branchChoices));
+    }
+  }else{
+    addFlowAhead(flow,choices);
+  }
+  if(position>=flow.length-1){
+    const next=nextLiteraryScene(scene.id,choices);
+    const nextScene=next?byId.get(next):null;
+    if(nextScene)addSnapshot(visualSnapshot(nextScene,compileInteractivePlayback(nextScene,choices,locale),0,choices));
+  }
+  return paths.slice(0,12);
+}
+function pumpPreloadQueue(){
+  while(activePreloads<maxConcurrentPreloads&&preloadQueue.length){
+    const path=preloadQueue.shift();preloadQueued.delete(path);
+    if(imageCache.stats().paths.includes(path))continue;
+    activePreloads+=1;
+    imageCache.preload(path).catch(()=>{}).finally(()=>{activePreloads-=1;pumpPreloadQueue()});
+  }
+}
+function schedulePreload(paths,currentPath){
+  const desired=paths.filter(path=>path&&path!==currentPath).slice(0,maxQueuedPreloads);
+  const desiredSet=new Set(desired);
+  for(let index=preloadQueue.length-1;index>=0;index--){
+    if(!desiredSet.has(preloadQueue[index])){
+      preloadQueued.delete(preloadQueue[index]);
+      preloadQueue.splice(index,1);
+    }
+  }
+  for(const path of desired){
+    if(preloadQueued.has(path)||imageCache.stats().paths.includes(path))continue;
+    preloadQueued.add(path);preloadQueue.push(path);
+  }
+  pumpPreloadQueue();
 }
 function artMode(scene, entry, choices, isEnding) {
   const direction=visualAt(scene.id,entry,choices,stageForScene(scene.id,choices).cast);
@@ -493,22 +651,25 @@ function renderReader(){
   const flow=compileInteractivePlayback(scene,reader.choices,locale);reader.position=Math.min(reader.position,flow.at(-1)?.type==='choice'?Math.max(0,flow.length-1):flow.length);
   const isEnding=['S44','S45','S46','S47'].includes(scene.id);
   const mode=artMode(scene,flow[reader.position],reader.choices,isEnding);
-  app.className='literary-reader';app.dataset.presentation=mode;app.dataset.scene=scene.id;app.replaceChildren();
+  app.className='literary-reader';app.dataset.presentation=mode;app.dataset.scene=scene.id;
   const current=flow[reader.position];
-  const visualEntry=visualEntryForPosition(flow,reader.position);
-  const direction=visualAt(scene.id,visualEntry,reader.choices,stageForScene(scene.id,reader.choices).cast);
-  const art=direction.art;
-  const picture=el('','literary-picture');picture.setAttribute('aria-hidden','true');picture.dataset.presentation=mode;picture.dataset.mode=art?.presentation??(art?.type==='cg'?'cinematic':'environment');
-  picture.dataset.visualBeat=direction.beatId;picture.dataset.location=direction.location;picture.dataset.time=direction.time;
-  if(art){const file=assetFileForViewport(art,direction.beatId,locale);const img=el('','','img');img.src=runtimeAssetUrl(`${art.type==='cg'?'cg':'backgrounds'}/${file}`);img.alt='';img.decoding='async';img.dataset.desktopAsset=art.file;img.dataset.asset=file;picture.append(img);picture.style.setProperty('--focus',focalPointByAsset[file]??focalPointByAsset[art.file]??'50% 50%');if(art.type==='cg'){picture.classList.add('is-cg');picture.style.setProperty('--cg-url',`url("${img.src}")`)}}
-  else picture.classList.add('no-art');
-  if(art?.presentation!=='cinematic'){
-    // Ordinary background groups stay focal, but a visual beat may explicitly
-    // require three or four people for narrative continuity.
-    const presentationCast=visibleCastForDirection(direction);
-    picture.append(renderStage({...direction,cast:presentationCast,mode:presentationCast.length>2?'group':presentationCast.length===2?'pair':'solo',mood:stageForScene(scene.id,reader.choices).mood}));
-  }
-  picture.append(el('','literary-vignette'));app.append(picture);bindStageNavigation(picture);
+  const snapshot=visualSnapshot(scene,flow,reader.position,reader.choices);
+  const {direction,art,file,path}=snapshot;
+  const scenePicture=ensurePicture();
+  scenePicture.dataset.presentation=mode;scenePicture.dataset.mode=art?.presentation??(art?.type==='cg'?'cinematic':'environment');
+  scenePicture.dataset.visualBeat=direction.beatId;scenePicture.dataset.location=direction.location;scenePicture.dataset.time=direction.time;
+  lastViewportArtKey=path?`${art.type}:${path}`:'fallback';
+  if(art){
+    void artTransition.show({
+      path,
+      key:`${art.type}:${path}`,
+      attributes:{desktopAsset:art.file,asset:file},
+      metadata:{art,file,focus:focalPointByAsset[file]??focalPointByAsset[art.file]??'50% 50%'}
+    });
+  }else artTransition.cancel();
+  updateStage(direction,art);
+  schedulePreload(collectPreloadPaths(scene,flow,reader.position,reader.choices,snapshot),path);
+  app.replaceChildren(scenePicture);
   const header=el('','reader-header');
   const back=button(locale==='ru'?'Назад':'Back',rollbackNarrative,'small-button dialogue-back');back.disabled=!dialogueHistory.canRollback();
   header.append(button('☰ '+t('menu'),goHome,'small-button'),back,el(t('episode')+` ${scene.episode} / 10`,'chapter-index'),el(t('readerHeaderTitle'),'draft-indicator'));
@@ -574,6 +735,22 @@ function resumeAudioIfAllowed(){if(!platform?.isFullscreenAdActive?.())audioDire
 document.addEventListener('visibilitychange',()=>{if(document.hidden)audioDirector.pause();else resumeAudioIfAllowed()});
 window.addEventListener('blur',()=>audioDirector.pause());
 window.addEventListener('focus',resumeAudioIfAllowed);
+function scheduleViewportRefresh(){
+  if(menuOpen||viewportRefreshPending)return;
+  viewportRefreshPending=true;
+  const schedule=window.requestAnimationFrame??(callback=>setTimeout(callback,0));
+  schedule(()=>{
+    viewportRefreshPending=false;
+    if(menuOpen)return;
+    const scene=byId.get(reader.sceneId);if(!scene)return;
+    const flow=compileInteractivePlayback(scene,reader.choices,locale);
+    const snapshot=visualSnapshot(scene,flow,reader.position,reader.choices);
+    const key=snapshot.path?`${snapshot.art.type}:${snapshot.path}`:'fallback';
+    if(key!==lastViewportArtKey)renderReader();
+  });
+}
+window.addEventListener('resize',scheduleViewportRefresh,{passive:true});
+window.addEventListener('orientationchange',scheduleViewportRefresh,{passive:true});
 function renderBootFailure(error){
   platform?.setGameplayActive(false);
   app.className='literary-home';
@@ -628,6 +805,7 @@ window.__LITERARY_QA__={
   getPersistenceKeys:()=>({local:literarySaveKey,cloud:literaryCloudKey}),
   getScreen:()=>({menuOpen,sceneId:reader.sceneId,position:reader.position}),
   getAudioState:()=>audioDirector.getState(),
+  getImagePreloadStats:()=>imageCache.stats(),
   getRuntimeTrace:()=>{
     const scene=byId.get(reader.sceneId),flow=compileInteractivePlayback(scene,reader.choices,locale),entry=flow[reader.position]??flow.at(-1)??null;
     const visualEntry=visualEntryForPosition(flow,reader.position);

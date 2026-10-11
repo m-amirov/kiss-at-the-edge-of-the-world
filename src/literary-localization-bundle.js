@@ -3630,7 +3630,7 @@ export const literaryLocaleBundles = {
             }
           },
           "S26.C020": {
-            "title": "D. Choose Alice (`routeIntent=alice`)",
+            "title": "D. Choose yourself (`routeIntent=alice`)",
             "paragraphs": {
               "S26.C020.P000": "Alice did not wait for someone to ask first. She gathered the three men in the kitchen, where the smell of soup still lingered, and said:",
               "S26.C020.P001": "“It mattered to me to be with each of you on this trip. I want to continue it as a journalist and as your friend. I am not choosing a romantic relationship now. This is my decision, not a request for anyone to prove that I am wrong.”",
