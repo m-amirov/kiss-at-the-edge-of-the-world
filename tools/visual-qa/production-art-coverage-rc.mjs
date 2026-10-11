@@ -68,6 +68,11 @@ function expectedArt(sceneId, cue, choices) {
   return state;
 }
 
+async function waitForCommittedArt(page) {
+  await page.waitForFunction((file) => [...document.querySelectorAll('.literary-picture > img.literary-art-layer')]
+    .some(image => image.dataset.asset && image.complete && image.naturalWidth > 0), null, { timeout: 15000 });
+}
+
 const allTargets = literarySeason.scenes.map(scene => {
   const cues = visualCues[scene.id] ?? [];
   const cue = cues[0] ?? null;
@@ -132,15 +137,19 @@ try {
       const continueButton = page.getByRole('button', { name: /Продолжить|Continue|New Game|Новая игра/ }).first();
       if (await continueButton.count()) await continueButton.click();
       await page.locator('.reader-sheet').waitFor();
+      await waitForCommittedArt(page);
       await page.waitForFunction(() => {
         const audio = window.__PRODUCTION_ART_QA__?.audio;
         return !audio || (audio.readyState > 0 && Number.isFinite(audio.duration) && audio.duration > 0);
       }, null, { timeout: 5000 });
       audioReady = true;
       await page.waitForTimeout(120);
-      readback = await page.evaluate(() => {
-        const image = document.querySelector('.literary-picture img');
+      readback = await page.evaluate((expectedFile) => {
         const picture = document.querySelector('.literary-picture');
+        const layers = [...document.querySelectorAll('.literary-picture > img.literary-art-layer')];
+        const image = layers.find(candidate => candidate.dataset.asset === expectedFile && candidate.style.opacity !== '0')
+          ?? layers.find(candidate => candidate.style.opacity !== '0')
+          ?? layers.at(-1);
         const content = document.querySelector('.reader-content');
         const state = window.__LITERARY_QA__?.getState?.();
         const flow = window.__LITERARY_QA__?.getFlow?.() ?? [];
@@ -160,7 +169,7 @@ try {
           imageRect: rect && { left: rect.left, top: rect.top, right: rect.right, bottom: rect.bottom, width: rect.width, height: rect.height },
           viewport: [innerWidth, innerHeight],
         };
-      });
+      }, target.expected.file);
       await page.screenshot({ path: screenshot, fullPage: false });
     } catch (error) {
       runError = String(error?.stack ?? error);
