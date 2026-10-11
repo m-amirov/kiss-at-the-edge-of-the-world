@@ -106,7 +106,10 @@ def load_allowlist(root: Path, allowlist_path: Path) -> dict:
 def production_asset_bytes(root: Path, relative: str, allowlist_mode: bool) -> tuple[bytes, bool]:
     source = root / relative
     if not allowlist_mode or source.suffix.lower() != ".webp":
-        return source.read_bytes(), False
+        data = source.read_bytes()
+        if source.suffix.lower() in TEXT_EXTENSIONS:
+            data = data.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+        return data, False
     source_png = source.with_suffix(".png")
     if not source_png.is_file():
         return source.read_bytes(), False
