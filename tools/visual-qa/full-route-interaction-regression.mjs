@@ -9,6 +9,10 @@ const { chromium } = await import(pathToFileURL('C:/Users/user/.cache/codex-runt
 const baseUrl = process.env.LITERARY_QA_URL ?? 'http://127.0.0.1:4173/literary.html?qa=full-route-interaction';
 const output = process.env.LITERARY_QA_OUTPUT ?? 'artifacts/evidence/full-route-interaction-regression-2026-10-01';
 const outputDir = output.endsWith('.json') ? path.dirname(output) : output;
+const locale = new URL(baseUrl).searchParams.get('lang') === 'en' ? 'en' : 'ru';
+const labels = locale === 'en'
+  ? { menu: '☰ Menu', settings: 'Settings', episodes: 'Episodes', back: /← Menu/, continue: /Continue/ }
+  : { menu: '☰ Меню', settings: 'Настройки', episodes: 'Эпизоды', back: /К меню/, continue: /Продолжить/ };
 const evidenceFile = output.endsWith('.json') ? output : path.join(output, 'evidence.json');
 const routes = { eric: { code: 'A', ending: 'S44' }, nick: { code: 'B', ending: 'S45' }, damir: { code: 'C', ending: 'S46' }, alice: { code: 'D', ending: 'S47' } };
 const viewports = [
@@ -30,16 +34,16 @@ const results = [];
 async function state(page) { return page.evaluate(() => ({ saved: window.__LITERARY_QA__.getState(), screen: window.__LITERARY_QA__.getScreen(), flow: window.__LITERARY_QA__.getFlow() })); }
 async function menuGuard(page) {
   const before = (await state(page)).saved;
-  await page.getByRole('button', { name: '☰ Меню', exact: true }).click();
+  await page.getByRole('button', { name: labels.menu, exact: true }).click();
   const opened = (await state(page)).saved;
   if (!sameProgress(before, opened)) throw new Error('menu open advanced narrative');
-  await page.getByRole('button', { name: 'Настройки', exact: true }).click();
+  await page.getByRole('button', { name: labels.settings, exact: true }).click();
   if (!sameProgress(before, (await state(page)).saved)) throw new Error('settings advanced narrative');
-  await page.getByRole('button', { name: /К меню/ }).click();
-  await page.getByRole('button', { name: 'Эпизоды', exact: true }).click();
+  await page.getByRole('button', { name: labels.back }).click();
+  await page.getByRole('button', { name: labels.episodes, exact: true }).click();
   if (!sameProgress(before, (await state(page)).saved)) throw new Error('episodes advanced narrative');
-  await page.getByRole('button', { name: /К меню/ }).click();
-  await page.getByRole('button', { name: /Продолжить/ }).click();
+  await page.getByRole('button', { name: labels.back }).click();
+  await page.getByRole('button', { name: labels.continue }).click();
   if (!sameProgress(before, (await state(page)).saved)) throw new Error('continue from menu changed narrative');
 }
 async function stageAction(page, viewport, mode) {
@@ -76,7 +80,7 @@ try {
     await page.route('**/sdk.js', route => route.fulfill({ status: 200, contentType: 'text/javascript', body: 'window.YaGames = undefined;' }));
     await page.addInitScript(({ key, value }) => { if (!localStorage.getItem(key)) localStorage.setItem(key, JSON.stringify(value)); }, { key: literarySaveKey, value: { schemaVersion: 3, sceneId: 'S01', position: 0, choices: {}, finished: false, visited: ['S01'], runId: `interaction-${route}-${viewport.name}-${Date.now()}`, revision: 0 } });
     await page.goto(baseUrl, { waitUntil: 'domcontentloaded' });
-    await page.getByRole('button', { name: /Продолжить/ }).click();
+    await page.getByRole('button', { name: labels.continue }).click();
     await menuGuard(page);
     let steps = 0; let choiceBoundaries = 0; let saveLoadChecked = false; let doubleAdvanceFailures = 0; let terminal = null;
     while (steps < 1800) {
@@ -132,7 +136,7 @@ try {
         if (!saveLoadChecked && steps > 12) {
           const snapshot = clone(after);
           await page.reload({ waitUntil: 'domcontentloaded' });
-          await page.getByRole('button', { name: /Продолжить/ }).click();
+          await page.getByRole('button', { name: labels.continue }).click();
           const restored = (await state(page)).saved;
           if (!sameProgress(snapshot, restored)) throw new Error(`save/load mismatch at ${snapshot.sceneId}:${snapshot.position}; expected=${JSON.stringify({ sceneId: snapshot.sceneId, position: snapshot.position, choices: snapshot.choices, visited: snapshot.visited })}; actual=${JSON.stringify({ sceneId: restored.sceneId, position: restored.position, choices: restored.choices, visited: restored.visited })}`);
           saveLoadChecked = true;

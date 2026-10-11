@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "test": "npm run literary:compile && npm run test:narrative && npm run test:yandex-sdk && npm run test:localization && npm run test:audio && npm run test:art-acceptance && node --test tests/release/local-freeze.test.mjs tests/release/rc-package-assets.test.mjs tests/starter-kit/yandex-docs-watch.test.mjs tests/starter-kit/yandex-release-validation.test.mjs tests/visual/mobile-hud-overlap.test.mjs",
+    "test": "npm run literary:compile && npm run test:narrative && npm run test:yandex-sdk && npm run test:localization && npm run test:audio && npm run test:art-acceptance && node --test tests/release/local-freeze.test.mjs tests/release/rc-package-assets.test.mjs tests/release/production-package.test.mjs tests/starter-kit/yandex-docs-watch.test.mjs tests/starter-kit/yandex-release-validation.test.mjs tests/visual/mobile-hud-overlap.test.mjs",
     "test:narrative": "node tests/narrative/season-state.test.mjs && node tests/narrative/save-state.test.mjs && node tests/narrative/s18-preview.test.mjs && node tests/narrative/literary-reader.test.mjs && node tests/narrative/literary-ui.test.mjs && node tests/narrative/confirm-dialog.test.mjs && node tests/narrative/literary-stage.test.mjs && node tests/narrative/literary-interactivity.test.mjs && node tests/narrative/release-preflight.test.mjs && node tests/narrative/literary-pacing.test.mjs && node tests/narrative/literary-visual.test.mjs && node tests/narrative/literary-qa-isolation.test.mjs",
     "test:yandex-sdk": "node --test tests/yandex/sdk-runtime.test.mjs tests/yandex/runtime-assets.test.mjs tests/yandex/episode-interstitial.test.mjs",
     "test:localization": "node --test tests/narrative/localization-contract.test.mjs tests/narrative/localization-runtime.test.mjs",
@@ -14,6 +14,9 @@
     "release:evidence:art": "node tools/release/refresh-production-art-acceptance.mjs",
     "test:art-acceptance": "node --test tests/narrative/art-acceptance.test.mjs tests/narrative/art-acceptance-visual-content.test.mjs",
     "release:evidence:transcode": "node tools/release/refresh-runtime-transcode-acceptance.mjs",
+    "release:production:allowlist": "python tools/release/production-size-audit.py --write-allowlist artifacts/evidence/production-asset-allowlist.json",
+    "release:production:package": "python release-artifacts/build-rc-package.py --allowlist artifacts/evidence/production-asset-allowlist.json --output release-artifacts/kiss-at-the-edge-of-the-world-production.zip",
+    "release:production:audit": "python tools/release/production-size-audit.py --allowlist artifacts/evidence/production-asset-allowlist.json --zip release-artifacts/kiss-at-the-edge-of-the-world-production.zip --output artifacts/evidence/production-size-audit.json",
     "yandex:external:verify": "node tools/yandex/external-evidence.mjs verify",
     "yandex:external:run": "node tools/yandex/external-evidence.mjs run",
     "yandex:external:normalize": "node tools/yandex/external-evidence.mjs normalize",
