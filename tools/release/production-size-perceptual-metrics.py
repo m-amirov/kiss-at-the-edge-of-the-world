@@ -148,7 +148,7 @@ def main():
         "retainedImages": retained_images,
         "imageByteSummary": {
             "changedCount": sum(item["changedBytes"] for item in results),
-            "retainedCount": sum(item["changedBytes"] for item in retained_images if not item["changedBytes"]),
+            "retainedCount": sum(not item["changedBytes"] for item in retained_images),
             "changedByteDelta": sum(item["byteDelta"] for item in results),
             "allProductionImageCount": len(results) + len(retained_images),
         },
