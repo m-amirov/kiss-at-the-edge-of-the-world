@@ -106,6 +106,8 @@ def source_asset_files(root: Path) -> list[Path]:
 def discover_allowlist(root: Path) -> dict:
     source = runtime_text(root)
     source_files = source_asset_files(root)
+    manifest = json.loads((root / "assets" / "asset-manifest.json").read_text(encoding="utf-8"))
+    manifest_entries = [*manifest.get("assets", []), *manifest.get("previewAssets", [])]
     by_name: dict[str, list[Path]] = defaultdict(list)
     for path in source_files:
         by_name[path.name].append(path)
@@ -133,6 +135,13 @@ def discover_allowlist(root: Path) -> dict:
     missing = sorted(name for name in referenced_names if name not in by_name)
     if missing:
         raise RuntimeError("runtime asset references do not exist: " + ", ".join(missing))
+    # A runtime entry may select its portrait derivative dynamically from the
+    # manifest; the portrait basename therefore need not occur in source text.
+    # Once any manifest variant is referenced, retain both runtime variants.
+    for entry in manifest_entries:
+        variants = [entry.get("path"), entry.get("portraitAsset"), entry.get("runtimePath"), entry.get("runtimePortraitAsset")]
+        if any(candidate and Path(candidate).name in referenced_names for candidate in variants):
+            included.update(candidate for candidate in (entry.get("runtimePath"), entry.get("runtimePortraitAsset")) if candidate)
     invalid_pngs = sorted(path for path in included if path.lower().endswith(".png") and path not in ALLOWED_RUNTIME_PNGS)
     if invalid_pngs:
         raise RuntimeError("source PNG would ship without an approved runtime exception: " + ", ".join(invalid_pngs))
