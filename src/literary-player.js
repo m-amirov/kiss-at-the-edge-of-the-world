@@ -13,6 +13,7 @@ import { createDialogueHistory } from './literary-history.js';
 import { createAudioDirector } from './audio-director.js';
 import { runtimeAssetUrl } from './runtime-assets.js';
 import { musicCues, musicCueForScene } from './music-cues.js';
+import { createEpisodeTransitionController, normalizePendingEpisodeTransition } from './episode-interstitial.js';
 
 const canonicalById = new Map(literarySeason.scenes.map(scene => [scene.id, scene]));
 let runtimeSeason = literarySeason;
@@ -158,7 +159,8 @@ function parseSaved(raw) {
        !s.choices || typeof s.choices!=='object' || Array.isArray(s.choices))return null;
     if(Object.entries(s.choices).some(([id,code])=> !/^S\d{2}-C\d+$/.test(id)|| !/^[A-D]$/.test(code)))return null;
     return { ...s, schemaVersion:3, position:s.schemaVersion<3?0:s.position,
-      migrationNotice:s.schemaVersion<3, visited:Array.isArray(s.visited)?s.visited.filter(id=>canonicalById.has(id)):[s.sceneId],revision:s.revision??0 };
+      migrationNotice:s.schemaVersion<3, visited:Array.isArray(s.visited)?s.visited.filter(id=>canonicalById.has(id)):[s.sceneId],
+      pendingEpisodeTransition:normalizePendingEpisodeTransition(s.pendingEpisodeTransition,canonicalById),revision:s.revision??0 };
   } catch { return null; }
 }
 function loadLocal(){try{const saved=localStorage.getItem(literarySaveKey);const parsed=parseSaved(saved);
@@ -177,6 +179,7 @@ let platform=null;
 let locale='ru';
 let t=createTranslator(locale);
 let cloudQueue=null;
+let episodeTransitionController=null;
 const audioDirector=createAudioDirector();
 const audioCueById=new Map(musicCues.map(cue=>[cue.cueId,{...cue,file:`${cue.cueId}.ogg`} ]));
 const menuAudioCue=audioCueById.get('main-theme');
@@ -393,6 +396,11 @@ function startNew(){
   beginNewGame();
 }
 function continueGame(){menuOpen=false;modal=null;renderReader()}
+function restoreCloudCandidate(){
+  cloudLocked=true;dialogueHistory.clear();reader=cloudCandidate;cloudCandidate=null;
+  if(!episodeTransitionController?.resumePending({render:false}))persist();
+  continueGame();
+}
 function panel(headingKey,children){
   modal=headingKey;const section=el('','home-panel');section.append(el(t(headingKey),'section-title','h2'));
   children(section);section.append(button(t('backMenu'),()=>{modal=null;renderMenu()},'small-button'));
@@ -414,7 +422,7 @@ function episodeSelection(section){
         for(const id of Object.keys(reader.choices)){
           if(epChoiceIds.some(prefix=>id.startsWith(prefix+'-')))delete reader.choices[id];
         }
-        dialogueHistory.clear();reader.sceneId=first.id;reader.position=0;reader.finished=false;reader.migrationNotice=false;reader.visited=reader.visited.filter(id=>byId.get(id).episode<ep);reader.visited.push(first.id);
+        dialogueHistory.clear();reader.sceneId=first.id;reader.position=0;reader.finished=false;reader.migrationNotice=false;reader.pendingEpisodeTransition=null;reader.visited=reader.visited.filter(id=>byId.get(id).episode<ep);reader.visited.push(first.id);
         cloudLocked=true;persist();continueGame();
       }});
     },'episode-select');item.disabled=!unlocked;section.append(item);
@@ -446,7 +454,7 @@ function renderMenu(){
   section.append(actions);
   if(cloudCandidate){
     const utility=el('','home-utility');
-    utility.append(button(t('restoreCloud'),()=>openConfirmDialog({messageKey:'restoreCloudConfirm',onConfirm:()=>{cloudLocked=true;dialogueHistory.clear();reader=cloudCandidate;cloudCandidate=null;persist();continueGame()}}),'cloud-restore'));
+    utility.append(button(t('restoreCloud'),()=>openConfirmDialog({messageKey:'restoreCloudConfirm',onConfirm:restoreCloudCandidate}),'cloud-restore'));
     section.append(utility);
   }
 }
@@ -527,7 +535,18 @@ function renderReader(){
     sheet.append(content);
   }else{
     const next=nextLiteraryScene(reader.sceneId,reader.choices);
-    if(next && byId.has(next))sheet.append(button(t('nextScene',{scene:next}),()=>{lastStageInput='none';lastPointerActivationAt=0;advanceNarrative()},'primary'));
+    if(next && byId.has(next)){
+      const nextEpisode=byId.get(next).episode>scene.episode;
+      const action=button(nextEpisode?t('nextEpisode',{episode:byId.get(next).episode}):t('nextScene',{scene:next}),()=>{
+        lastStageInput='none';lastPointerActivationAt=0;
+        if(nextEpisode){
+          action.disabled=true;action.setAttribute('aria-busy','true');
+          episodeTransitionController?.start(next);
+        }else advanceNarrative();
+      },nextEpisode?'primary episode-transition':'primary');
+      if(nextEpisode)action.dataset.episodeTransition='true';
+      sheet.append(action);
+    }
     else if(isEnding){
       if(!reader.finished){reader.finished=true;persist()}
       sheet.classList.add('terminal-sheet');
@@ -551,9 +570,10 @@ function unlockAudioFromInteraction(){
 }
 window.addEventListener('pointerdown',unlockAudioFromInteraction,{passive:true});
 window.addEventListener('keydown',unlockAudioFromInteraction,{passive:true});
-document.addEventListener('visibilitychange',()=>{if(document.hidden)audioDirector.pause();else audioDirector.resume().catch(()=>{})});
+function resumeAudioIfAllowed(){if(!platform?.isFullscreenAdActive?.())audioDirector.resume().catch(()=>{})}
+document.addEventListener('visibilitychange',()=>{if(document.hidden)audioDirector.pause();else resumeAudioIfAllowed()});
 window.addEventListener('blur',()=>audioDirector.pause());
-window.addEventListener('focus',()=>audioDirector.resume().catch(()=>{}));
+window.addEventListener('focus',resumeAudioIfAllowed);
 function renderBootFailure(error){
   platform?.setGameplayActive(false);
   app.className='literary-home';
@@ -567,7 +587,7 @@ applySettings();
 const bootHadLocal=hasSave;
 async function boot(){
  try{
-  const result=await initYandexPlatform({cloudKey:literaryCloudKey,onCloudState:raw=>{
+  const result=await initYandexPlatform({cloudKey:literaryCloudKey,onPause:()=>{app.dataset.platformPaused='true';audioDirector.pause()},onResume:()=>{delete app.dataset.platformPaused;resumeAudioIfAllowed()},onCloudState:raw=>{
    const candidate=parseSaved(raw);
    if(!candidate || cloudLocked)return;
    if(bootHadLocal || hasSave){cloudCandidate=candidate; if(menuOpen)renderMenu();return}
@@ -584,6 +604,8 @@ async function boot(){
   runtimeSeason=loadRuntimeSeason(locale,platform.qaLocaleOverride);
   byId=new Map(runtimeSeason.scenes.map(scene=>[scene.id,scene]));
   if(!byId.has(reader.sceneId))throw Error(`BLOCKED_EN_CORPUS_INCOMPLETE: missing scene ${reader.sceneId}`);
+  episodeTransitionController=createEpisodeTransitionController({getState:()=>reader,setState:next=>{reader=next},byId,persist,render:renderReader,showFullscreenAd:()=>platform?.showFullscreenAd?.()??false});
+  episodeTransitionController.resumePending({render:false});
   renderMenu();
   platform.setGameplayActive(!menuOpen);
   platform.markInteractiveReady();
@@ -620,3 +642,4 @@ window.__LITERARY_QA__={
   // QA methods are strictly read-only; preview and the old game have separate state keys.
 };
 boot();
+window.addEventListener('beforeunload',()=>{if(!reader.finished||hasSave)persist();platform?.dispose?.()});
