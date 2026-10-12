@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "runId": "2026-10-12T07:42:18-590Z-production-art-4043b3",
+  "sourceHead": "257d3f87a5803c95763ff4e0b35af2624e2cfbc5",
+  "sceneId": "S65",
+  "cue": "s65-locked-kitchen-hallway",
+  "candidateOrdinal": 2,
+  "tool": "image_gen.imagegen",
+  "desktop": {"toolCallOutput":"C:/Users/user/.codex/generated_images/01a12ec0-d36b-7252-86c7-acfc6756e664/exec-048604af-c1ed-4b41-bedf-b02f72c388d1.png","path":"assets/cg/s65-locked-kitchen-hallway.png","sha256":"0cf54652ca2da9ba64109d974002028043fea012bd31be7711df94e0df57d4c7","dimensions":"1672x941","outputGate":"artifacts/production-art/S65_REPAIR_CANDIDATE2_DESKTOP_OUTPUT_GATE_2026-10-12.json","outputGateStatus":"PASS_ART_OUTPUT_MECHANICAL"},
+  "portrait": {"toolCallOutput":"C:/Users/user/.codex/generated_images/01a12ec0-d36b-7252-86c7-acfc6756e664/exec-acd77616-e15c-4961-b170-32ea2599313b.png","path":"assets/cg/s65-locked-kitchen-hallway-portrait.png","sha256":"73e613678051897bbfd52373d7c013a27a62a459581dff02efe2c7b2d7faeae1","dimensions":"941x1672","outputGate":"artifacts/production-art/S65_REPAIR_CANDIDATE2_PORTRAIT_OUTPUT_GATE_2026-10-12.json","outputGateStatus":"PASS_ART_OUTPUT_MECHANICAL"},
+  "changeFromCandidate1": ["closed service hatch makes the kitchen door unmistakable","Nick actively arranges bread, cheese and containers","Damir alone slices tomatoes","suitcase and floor grounding retained"],
+  "sourceReferences": ["assets/characters/alice-master.png","assets/characters/eric-master.png","assets/characters/nick-master.png","assets/characters/damir-master.png"],
+  "independentMidpointBasis": "artifacts/production-art/S65_REPAIR_WEB_HIGH_MIDPOINT_CANDIDATE1_2026-10-12.json",
+  "acceptedForRuntimeIntegrationPendingFinalWebAcceptance": true
+}

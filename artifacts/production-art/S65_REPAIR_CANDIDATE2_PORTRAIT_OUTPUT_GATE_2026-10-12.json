@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-s65-repair-20261012\\artifacts\\production-art\\candidates\\S65-repair-candidate2-portrait.png",
+  "kind": "background",
+  "status": "PASS_ART_OUTPUT_MECHANICAL",
+  "issues": [],
+  "sha256": "73e613678051897bbfd52373d7c013a27a62a459581dff02efe2c7b2d7faeae1",
+  "bytes": 2465335,
+  "dimensions": {
+    "width": 941,
+    "height": 1672
+  },
+  "alpha": {
+    "opaque": 1573352,
+    "transparent": 0,
+    "partial": 0,
+    "nonzero": 1573352,
+    "cornerAlpha": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "bounds": {
+    "x": 0,
+    "y": 0,
+    "width": 941,
+    "height": 1672
+  },
+  "checkerboard": {
+    "detected": false
+  },
+  "visualAcceptance": "NOT_VERIFIED",
+  "recordedAt": "2026-10-12T07:51:47.531Z"
+}

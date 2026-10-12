@@ -195,6 +195,7 @@ S26:[{at:[0,0],id:'scene-start',location:'Гостевой дом восточн
  S47:[{at:[0,0],id:'alice-morning-harbour',location:'Рейкьявик: утренняя городская гавань',art:'cg/s47-reykjavik-harbour-alice.webp',cast:['alice']},
       {at:[4,0],id:'alice-month-later',location:'Дом Алисы: новый маршрут',time:'спустя месяц',art:'cg/s47-alice-home-epilogue-month-later.webp',cast:['alice']}],
  S06:[{at:[6,6],id:'s06-eric-alice-stream',location:'Геотермальная долина Hveragerði: площадка над ручьём',art:'cg/s06-hveragerdi-eric-alice.webp',cast:['alice','eric']}],
+ S65:[{at:[0,0],id:'s65-locked-kitchen-hallway',location:'Гостевой дом Рейкьявика: коридор у закрытой общей кухни',time:'день 1, вечер',art:'cg/s65-locked-kitchen-hallway.webp',cast:['alice','eric','nick','damir'],requiredCast:['alice','eric','nick','damir']}],
  S07:[{at:[3,0],id:'s07-kitchen-pasta',location:'Общая кухня Hveragerði: плита и стол',art:'cg/s07-kitchen-pasta.webp',cast:['alice','nick','eric','damir']},
       {at:[3,42],id:'s07-kitchen-cards',location:'Общая кухня Hveragerði: карточная игра',art:'cg/s07-kitchen-cards.webp',cast:['alice','nick','eric','damir']}],
  S08:[{at:[2,0],id:'s08-guesthouse-strap',location:'Гостевой дом Hveragerði: лестница и коридор',art:'cg/s08-guesthouse-strap.webp',cast:['alice','damir']}],

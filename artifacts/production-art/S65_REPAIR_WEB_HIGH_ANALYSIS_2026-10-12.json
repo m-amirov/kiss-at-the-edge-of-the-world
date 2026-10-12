@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "recordType": "web-high-art-review",
+  "phase": "analysis",
+  "standard": "HOST_OBSERVED_ART_ACCEPTANCE_V1",
+  "hostAgentId": "01a12f0a-d8ce-7982-a147-35e0e279ad7a",
+  "sourceHead": "257d3f87a5803c95763ff4e0b35af2624e2cfbc5",
+  "scene": "S65",
+  "actualPixelsReceived": true,
+  "sourceBinding": "USER_DECLARED_NOT_INDEPENDENTLY_VERIFIED",
+  "reviewedViewports": ["1920x900", "390x844", "360x640"],
+  "evidence": [
+    {"path": "artifacts/evidence/s65-baseline-2026-10-12/S65-scene-start-1920x900.png", "sha256": "dd9f1839ccec7a73960bd0371c788fcce8abe98b1025305086b9967377a9c731"},
+    {"path": "artifacts/evidence/s65-baseline-2026-10-12/S65-scene-start-390x844.png", "sha256": "0363379f39d138eaad11ceb2431930d3473618f78c318a5d4010660e8b5f71a3"},
+    {"path": "artifacts/evidence/s65-baseline-2026-10-12/S65-scene-start-360x640.png", "sha256": "385b749477ae3556ee59938f7f56f66cda782fa047ad8114a86ca5aaf5dca0f0"}
+  ],
+  "overallVerdict": "REWORK_P1",
+  "perViewportVerdict": {
+    "1920x900": {"verdict": "REWORK_P1", "findings": ["Оба персонажа визуально стоят на поверхности большого обеденного стола.", "Ступни совпадают с плоскостью столешницы; связь с полом отсутствует.", "Показана открытая оборудованная кухня вместо пространства у закрытой общей кухни.", "Масштаб персонажей относительно мебели нарушает пространственную достоверность."]},
+    "390x844": {"verdict": "REWORK_P1", "findings": ["Сохраняется интерьер действующей кухни.", "Персонажи визуально размещены поверх зоны кухонного стола.", "Диалоговая область ограничивает оценку контакта ступней.", "Положение и глубина сцены недостаточно согласованы."]},
+    "360x640": {"verdict": "REWORK_P1", "findings": ["Неправильная локация сохраняется.", "Персонажи выглядят наложенными на передний план кухонной композиции.", "Диалоговая область перекрывает значительную часть фигур.", "Пространственная привязка к полу отсутствует."]}
+  },
+  "findings": [
+    {"id": "S65-ART-P1-01", "severity": "P1", "category": "CHARACTER_GROUNDING", "status": "CONFIRMED_VISUALLY", "description": "На desktop персонажи выглядят стоящими непосредственно на столешнице.", "probableCause": "Stage sprites размещены относительно экранных координат без корректной привязки к физической плоскости пола и без необходимой окклюзии.", "requiredCorrection": "Либо привязать stage к реальному полу, либо использовать cue-specific integrated CG; согласовать масштаб, перспективу, контактные тени и окклюзию."},
+    {"id": "S65-ART-P1-02", "severity": "P1", "category": "LOCATION_AND_NARRATIVE_CONTINUITY", "status": "CONFIRMED_SCENE_START_MISMATCH", "description": "Runtime показывает оборудованную кухню, тогда как текст строится вокруг отсутствующего ключа и размещения снаружи закрытой кухни.", "narrativeEvidence": {"S65.C000.P000": "Отсутствует ключ от общей кухни.", "S65.C000.P029": "Герои располагаются в коридоре у закрытой кухни; Ник раскладывает продукты на перевёрнутом чемодане.", "S65.C000.P033": "Дамир режет помидоры на крышке контейнера."}, "requiredCorrection": "Использовать визуально согласованную локацию коридора у закрытой кухни; cue-specific props/actions must be inside the scene image."},
+    {"id": "S65-ART-P2-01", "severity": "P2", "category": "MOBILE_COMPOSITION", "status": "CONFIRMED", "description": "На портретных экранах фигуры теряют читаемость нижней части тела и пространственную связь с окружением."}
+  ],
+  "minimumFix": {"scope": "S65 only", "background": "Добавить cue-specific hallway/closed-kitchen composition вместо shared kitchen background.", "characterStaging": "Ground all four canonical characters on one hallway floor plane with contact shadows and correct perspective.", "requiredRevalidation": ["1920x900 dialogue-open", "390x844 dialogue-open", "360x640 dialogue-open", "P000/P029/P033 runtime states"]},
+  "confidence": {"tabletopGrounding": "HIGH", "wrongLocationAtP000": "HIGH", "narrativeContinuityConflict": "HIGH", "specificSpritePositioningRootCause": "MEDIUM_INFERRED", "P029AndP033RuntimeState": "NOT_OBSERVED", "characterIdentityContinuity": "NOT_VERIFIABLE_WITHOUT_CANON_REFERENCES", "sourceHEADIndependentVerification": "NOT_PERFORMED"},
+  "finalDecision": "REWORK_REQUIRED",
+  "acceptance": "BLOCKED_BY_CONFIRMED_P1_ART_DEFECTS"
+}

@@ -628,6 +628,21 @@
       "runtimePortraitAsset": "assets/cg/s07-kitchen-cards-portrait.webp"
     },
     {
+      "id": "s65-locked-kitchen-hallway",
+      "family": "cg",
+      "path": "assets/cg/s65-locked-kitchen-hallway.png",
+      "status": "integrated",
+      "runtime": "S65 authored scene-start cue [0,0], hallway outside locked shared kitchen; Nick organizes food on overturned suitcase and Damir slices tomatoes",
+      "creationMethod": "Codex imagegen current production-art run 2026-10-12 using canonical Alice, Eric, Nick and Damir master references; independent desktop and portrait compositions",
+      "createdAt": "2026-10-12",
+      "dimensions": "1672x941",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s65-locked-kitchen-hallway-portrait.png",
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s65-locked-kitchen-hallway.webp",
+      "runtimePortraitAsset": "assets/cg/s65-locked-kitchen-hallway-portrait.webp"
+    },
+    {
       "id": "s08-guesthouse-strap",
       "family": "cg",
       "path": "assets/cg/s08-guesthouse-strap.png",

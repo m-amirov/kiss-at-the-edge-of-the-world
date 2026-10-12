@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "runId": "2026-10-12T07:42:18-590Z-production-art-4043b3",
+  "sourceHead": "257d3f87a5803c95763ff4e0b35af2624e2cfbc5",
+  "sceneId": "S65",
+  "cue": "s65-locked-kitchen-hallway",
+  "candidateOrdinal": 1,
+  "variant": "desktop",
+  "tool": "image_gen.imagegen",
+  "toolCallOutput": "C:/Users/user/.codex/generated_images/01a12ec0-d36b-7252-86c7-acfc6756e664/exec-6ae8b374-512e-4bec-8919-5afa1d072f3b.png",
+  "outputPath": "artifacts/production-art/candidates/S65-repair-candidate1-desktop.png",
+  "outputSha256": "c11840a8776c809c447a631171dd5101442f0f751e542c5070114e12b9db894d",
+  "dimensions": "1672x941",
+  "outputGate": "artifacts/production-art/S65_REPAIR_CANDIDATE1_DESKTOP_OUTPUT_GATE_2026-10-12.json",
+  "outputGateStatus": "PASS_ART_OUTPUT_MECHANICAL",
+  "inputReferences": [
+    {"character":"alice","path":"assets/characters/alice-master.png","sha256":"d261c464d1d40913e3bd377b206b9d59e86310ecfbedc0357d6fe4def1179d5d"},
+    {"character":"eric","path":"assets/characters/eric-master.png","sha256":"aa66cc7e0a58bd409b1066dbc07cd5780796245fd79a7eb5c8e0fb98f0322f14"},
+    {"character":"nick","path":"assets/characters/nick-master.png","sha256":"a1c4aae9230b21a7ce9eaf4605a62ed54e225e35ab1b2470049902a63fe44fdd"},
+    {"character":"damir","path":"assets/characters/damir-master.png","sha256":"221df2cdd61880de169b500fa56095c99c9784595d156201ee65f15f76c69ef3"}
+  ],
+  "visualIntent": "Closed locked kitchen door behind four grounded travelers; Nick owns suitcase food setup; Damir slices tomatoes on container lid; no equipped kitchen interior.",
+  "semanticReviewPending": true
+}

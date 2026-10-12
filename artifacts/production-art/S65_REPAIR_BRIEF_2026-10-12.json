@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "recordType": "source-bound-art-brief",
+  "sourceHead": "257d3f87a5803c95763ff4e0b35af2624e2cfbc5",
+  "sceneId": "S65",
+  "cue": {"id": "s65-locked-kitchen-hallway", "at": [0, 0]},
+  "sourceRef": {"chunk": 0, "paragraph": 29},
+  "location": "Рейкьявик, старый гостевой дом, коридор у закрытой общей кухни, вечер",
+  "purpose": "Targeted repair of the S65 scene-start composition; preserve authored text, character identity, and the locked-kitchen situation.",
+  "authoredAction": "The group improvises dinner in the hallway outside the locked kitchen. Nick arranges food on an overturned suitcase; Damir slices tomatoes on a container lid; Alice and Eric remain part of the conversation.",
+  "requiredCast": ["alice", "eric", "nick", "damir"],
+  "narrativeActions": [
+    {"character": "alice", "action": "Sits or crouches naturally in the hallway conversation, canonical yellow jacket and burgundy scarf, not standing on a table."},
+    {"character": "nick", "action": "Hosts the improvised food setup around the overturned suitcase; camera may remain a restrained identity prop, not a hero prop."},
+    {"character": "eric", "action": "Remains a distinct blond supporting figure in the hallway, grounded on the floor and not the action owner."},
+    {"character": "damir", "action": "Uses a travel knife on tomatoes on a container lid, with the action clearly grounded on the hallway floor and visually distinct from Eric and Nick."}
+  ],
+  "sceneContinuity": "S06 precedes S65; S65 opens with the missing kitchen key and later explicitly places the group in the hallway outside the locked kitchen. The owner opens the kitchen only at paragraph 47, so the scene-start image must not show an equipped usable kitchen interior.",
+  "characterReferences": [
+    {"character": "alice", "path": "assets/characters/alice-master.png", "sha256": "d261c464d1d40913e3bd377b206b9d59e86310ecfbedc0357d6fe4def1179d5d"},
+    {"character": "eric", "path": "assets/characters/eric-master.png", "sha256": "aa66cc7e0a58bd409b1066dbc07cd5780796245fd79a7eb5c8e0fb98f0322f14"},
+    {"character": "nick", "path": "assets/characters/nick-master.png", "sha256": "a1c4aae9230b21a7ce9eaf4605a62ed54e225e35ab1b2470049902a63fe44fdd"},
+    {"character": "damir", "path": "assets/characters/damir-master.png", "sha256": "221df2cdd61880de169b500fa56095c99c9784595d156201ee65f15f76c69ef3"}
+  ],
+  "locationReferences": [
+    {"character": "existing-kitchen-context-for-rejection-only", "path": "assets/backgrounds/guesthouse-common-kitchen-evening.png", "sha256": "f6c3e566baf906961a9540d927f73477dcd1734cd8850051a1abce31af9e2fb8"}
+  ],
+  "forbiddenProps": ["open or usable kitchen interior", "new readable text", "logos", "watermarks", "unrelated props", "standing characters on a tabletop", "extra dark-haired male duplicates"],
+  "desktop": {"composition": "A cinematic landscape hallway outside a visibly closed kitchen door. The four canonical travelers occupy the floor plane around a low overturned suitcase and container lid; faces and the food action sit in the central upper area above the dialogue-safe zone. The closed kitchen door and keyless entry must read behind them.", "framing": "1672x941 landscape CG; grounded feet/knees, believable contact shadows and perspective; no usable kitchen counters or stove visible as the active setting.", "requiredVisibleCast": ["alice", "eric", "nick", "damir"]},
+  "portrait": {"composition": "A purpose-built vertical crop of the same hallway scene. The locked kitchen door remains legible in the upper background, while Nick, Damir's tomato action, Alice and the blond Eric remain distinct around the overturned suitcase/container lid without tabletop ambiguity.", "framing": "941x1672 portrait CG; preserve faces, hands, food setup and floor contact above the dialogue-safe area; do not turn the hallway into a kitchen interior.", "requiredVisibleCast": ["alice", "eric", "nick", "damir"]},
+  "style": "cinematic semi-realistic visual-novel CG; restrained brush texture, warm entry lamp against cool evening hallway, Icelandic guesthouse architecture, coherent scale and depth; no interface text baked into pixels",
+  "qualityAcceptance": [
+    "The scene is unmistakably the hallway outside a closed locked kitchen, not an equipped kitchen interior.",
+    "All four characters are identifiable and grounded on the same floor plane; no character appears to stand on a tabletop or countertop.",
+    "Nick owns the overturned-suitcase food setup and Damir's tomato-slicing action is visibly attributable to Damir.",
+    "Alice, Eric, Nick and Damir retain canonical identity anchors and wardrobe family; no duplicate dark-haired male figure is introduced.",
+    "Desktop and portrait preserve the same authored S65 situation, readable faces/hands/props, mobile-safe composition, and no anatomy, lighting, crop or baked-text defects."
+  ],
+  "candidateNumber": 1,
+  "priorRejection": null,
+  "priorReviewFindings": "Web High S65 P1 at source 1eb41c69495326b86f699570ec8c6efeab2558e9: stage sprites were anchored to the kitchen table plane and the shared kitchen background contradicted the locked-kitchen hallway beat."
+}

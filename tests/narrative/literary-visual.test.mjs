@@ -219,6 +219,18 @@ test('S06-S08 pilot uses authored cinematic events with independent portrait ass
  assert.equal(shot('S07',flow,cards,choices).art?.presentation,'cinematic');
 });
 
+test('S65 scene start uses the locked-kitchen hallway repair on desktop and portrait',()=>{
+ const {flow,choices}=complete('S65');
+ const opening=shot('S65',flow,0,choices);
+ assert.equal(opening.beatId,'s65-locked-kitchen-hallway');
+ assert.equal(opening.art?.presentation,'cinematic');
+ assert.equal(opening.art?.file,'s65-locked-kitchen-hallway.webp');
+ assert.deepEqual(opening.cast,['alice','eric','nick','damir']);
+ assert.deepEqual(opening.requiredCast,['alice','eric','nick','damir']);
+ assert.ok(fs.existsSync(new URL('../../assets/cg/s65-locked-kitchen-hallway.webp',import.meta.url)));
+ assert.ok(fs.existsSync(new URL('../../assets/cg/s65-locked-kitchen-hallway-portrait.webp',import.meta.url)));
+});
+
 test('S10 and S12 use bounded cinematic events and clear them at the location transition',()=>{
  const expected={
   S10:{beat:'s10-vik-road-song',file:'s10-vik-road-song.webp',cast:['alice','eric'],ref:[0,0],clear:[6,0]},

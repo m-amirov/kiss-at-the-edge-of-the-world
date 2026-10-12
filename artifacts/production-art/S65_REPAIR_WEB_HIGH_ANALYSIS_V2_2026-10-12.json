@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "phase": "analysis",
+  "agent": "ceos_art_director_web",
+  "reviewer": "ceos_art_director_web",
+  "evidenceArtifact": "artifacts/production-art/S65_REPAIR_WEB_HIGH_ANALYSIS_V2_2026-10-12.json",
+  "standard": "HOST_OBSERVED_ART_ACCEPTANCE_V1",
+  "hostAgentId": "01a12f0a-d8ce-7982-a147-35e0e279ad7a",
+  "sourceHead": "257d3f87a5803c95763ff4e0b35af2624e2cfbc5",
+  "scene": "S65",
+  "actualPixelsReceived": true,
+  "sourceBinding": "USER_DECLARED_NOT_INDEPENDENTLY_VERIFIED",
+  "reviewedItems": ["S65-scene-start-1920x900", "S65-scene-start-390x844", "S65-scene-start-360x640"],
+  "evidenceRefs": [
+    "artifacts/evidence/s65-baseline-2026-10-12/S65-scene-start-1920x900.png",
+    "artifacts/evidence/s65-baseline-2026-10-12/S65-scene-start-390x844.png",
+    "artifacts/evidence/s65-baseline-2026-10-12/S65-scene-start-360x640.png"
+  ],
+  "receivedEvidenceRefs": [
+    "artifacts/evidence/s65-baseline-2026-10-12/S65-scene-start-1920x900.png",
+    "artifacts/evidence/s65-baseline-2026-10-12/S65-scene-start-390x844.png",
+    "artifacts/evidence/s65-baseline-2026-10-12/S65-scene-start-360x640.png"
+  ],
+  "status": "FINDINGS",
+  "decision": "REWORK_P1: shared kitchen interior contradicts the locked-kitchen hallway beat, and bottom-anchored stage sprites read as standing on the table.",
+  "findings": [
+    {"id": "S65-ART-P1-01", "severity": "P1", "category": "CHARACTER_GROUNDING", "detail": "Feet align with the visible table surface; the floor plane and contact shadows are not believable."},
+    {"id": "S65-ART-P1-02", "severity": "P1", "category": "LOCATION_AND_NARRATIVE_CONTINUITY", "detail": "Shelves, sink, stove and a full dining table show an open equipped kitchen, while the text establishes no kitchen key and a hallway outside the locked kitchen."},
+    {"id": "S65-ART-P2-01", "severity": "P2", "category": "MOBILE_COMPOSITION", "detail": "Portrait crops preserve the wrong location and weaken lower-body spatial grounding."}
+  ],
+  "unresolved": ["P029 and P033 runtime states were not provided in this analysis turn; acceptance must verify the authored action after the cue-specific repair."],
+  "minimumFix": "Use S65-only cue-specific hallway/closed-kitchen art with all four canonical characters grounded on one floor plane; do not change text or shared kitchen assets.",
+  "perViewportVerdict": {"1920x900": "REWORK_P1", "390x844": "REWORK_P1", "360x640": "REWORK_P1"}
+}

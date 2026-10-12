@@ -2,6 +2,22 @@
   "generatedAt": "2026-10-07",
   "assets": [
     {
+      "path": "assets/cg/s65-locked-kitchen-hallway.png",
+      "sha256": "0CF54652CA2DA9BA64109D974002028043FEA012BD31BE7711DF94E0DF57D4C7",
+      "dimensions": "1672x941",
+      "method": "Candidate 2 accepted for integration after source-bound S65 P1 repair brief and Web High midpoint rework; generated with canonical Alice, Eric, Nick and Damir master references",
+      "source": "Generated in Codex imagegen during run 2026-10-12T07:42:18-590Z-production-art-4043b3",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s65-locked-kitchen-hallway-portrait.png",
+      "sha256": "73E613678051897BBFD52373D7C013A27A62A459581DFF02EFE2C7B2D7FAEAE1",
+      "dimensions": "941x1672",
+      "method": "Candidate 2 purpose-built portrait composition accepted for integration after source-bound S65 P1 repair brief and Web High midpoint rework; generated with canonical character references",
+      "source": "Generated in Codex imagegen during run 2026-10-12T07:42:18-590Z-production-art-4043b3",
+      "license": "generated for this project"
+    },
+    {
       "path": "assets/cg/s46-airport-bus.png",
       "sha256": "528B613714652BD19F84284D440BB4BDED09D9AAA29697D6B6D3A7D540F9CD57",
       "dimensions": "1832x859",

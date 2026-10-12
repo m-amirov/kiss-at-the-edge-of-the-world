@@ -136,6 +136,7 @@ const portraitAssetByDesktopAsset = {
   ,'s14-skaftafell-pace-rework.webp':'s14-skaftafell-pace-rework-portrait.webp'
   ,'s19-hofn-pool-opening-rework.webp':'s19-hofn-pool-opening-rework-portrait.webp'
   ,'s22-eastfjords-van-road-rework.webp':'s22-eastfjords-van-road-rework-portrait.webp'
+  ,'s65-locked-kitchen-hallway.webp':'s65-locked-kitchen-hallway-portrait.webp'
 };
 const portraitAssetByBeat = {
   'airport-bus': 's46-airport-bus-portrait.webp',
