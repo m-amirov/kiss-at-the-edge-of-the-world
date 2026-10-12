@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "recordType": "host-observed-web-high-art-acceptance",
+  "standard": "HOST_OBSERVED_ART_ACCEPTANCE_V1",
+  "phase": "acceptance",
+  "agent": "ceos_art_director_web",
+  "reviewer": "ceos_art_director_web",
+  "status": "REWORK",
+  "evidenceArtifact": "artifacts/production-art/S65_REPAIR_WEB_HIGH_ACCEPTANCE_2026-10-12.json",
+  "sourceHead": "bdfce614dda323a1ad69f7b893cce61017a1e747",
+  "sceneId": "S65",
+  "cue": "s65-locked-kitchen-hallway",
+  "transportAgentId": "01a12f1e-2d26-7d20-a15d-8cc8f14a3682",
+  "actualPixelsReceived": true,
+  "reviewedItems": ["S65-s65-locked-kitchen-hallway-1920x900", "S65-s65-locked-kitchen-hallway-390x844", "S65-s65-locked-kitchen-hallway-360x640"],
+  "evidenceRefs": ["S65-s65-locked-kitchen-hallway-1920x900.png", "S65-s65-locked-kitchen-hallway-390x844.png", "S65-s65-locked-kitchen-hallway-360x640.png"],
+  "receivedEvidenceRefs": ["S65-s65-locked-kitchen-hallway-1920x900.png", "S65-s65-locked-kitchen-hallway-390x844.png", "S65-s65-locked-kitchen-hallway-360x640.png"],
+  "visualEvidence": [
+    {"ref": "S65-s65-locked-kitchen-hallway-1920x900.png", "sceneId": "S65", "viewport": "1920x900", "path": "artifacts/evidence/s65-repair-runtime-commit-en-2026-10-12/S65-s65-locked-kitchen-hallway-1920x900.png", "sha256": "d8cc45857abbd9b7de53aefeea22a8ff46b567127c5be10521765a411f0fa432", "observation": "Grounded four-person hallway composition and closed door read, but the opening key-discovery text is paired with the later prepared-food action."},
+    {"ref": "S65-s65-locked-kitchen-hallway-390x844.png", "sceneId": "S65", "viewport": "390x844", "path": "artifacts/evidence/s65-repair-runtime-commit-en-2026-10-12/S65-s65-locked-kitchen-hallway-390x844.png", "sha256": "ab30cbc82824b99a6e6364ea7c89f8c6f9680847a4b0bc846b2c32331940916a", "observation": "Characters remain identifiable and grounded with readable dialogue, but the missing-key paragraphs still show the later suitcase meal and tomato action."},
+    {"ref": "S65-s65-locked-kitchen-hallway-360x640.png", "sceneId": "S65", "viewport": "360x640", "path": "artifacts/evidence/s65-repair-runtime-commit-en-2026-10-12/S65-s65-locked-kitchen-hallway-360x640.png", "sha256": "3a54c33ad57866b20cd050a042f311ad9d7de8057fb5453e3fccbf6ed0dce725", "observation": "Portrait crop is coherent and text is readable, but dialogue-safe dimming hides much of the later food action while the early key text remains active."}
+  ],
+  "overallVerdict": "REWORK_PRODUCTION_ART",
+  "viewportVerdicts": {"1920x900": "REWORK", "390x844": "REWORK", "360x640": "REWORK"},
+  "decision": "REWORK. Все три viewport получили P1 из-за показа более поздней трапезы во время раннего текста о пропавшем ключе; 360x640 дополнительно теряет видимость действий под dialogue-safe затемнением.",
+  "findings": [
+    {"id": "S65-WH-P1-01", "severity": "P1", "scope": "all-viewports", "defect": "The visual cue at S65.C000.P000 shows the later improvised dinner although the visible text is still about Eric checking room keys and the missing kitchen key.", "impact": "The player receives a temporally contradictory visual signal and cannot trust the current visual beat."},
+    {"id": "S65-WH-P1-02", "severity": "P1", "scope": "360x640", "defect": "Dialogue-safe dimming covers much of the food setup and hands in the later dinner composition.", "impact": "The intended Nick/Damir actions are only partially legible at the narrowest viewport."},
+    {"id": "S65-WH-P2-01", "severity": "P2", "scope": "1920x900;390x844", "defect": "The overturned suitcase and closed-kitchen context are present but the suitcase orientation and keyless situation are not explicit enough for the opening cue.", "impact": "Minor reduction in prop and beat clarity."}
+  ],
+  "confirmedPasses": ["grounding", "character-identification", "style-consistency", "absence-of-major-anatomy-artifacts", "dialogue-readability", "mobile-crop-integrity"],
+  "unresolved": ["S65-WH-P1-01", "S65-WH-P1-02", "S65-WH-P2-01"],
+  "findingsSummary": "P1 cue timing mismatch across all viewports; P1 action visibility issue at 360x640; P2 prop/context ambiguity on desktop and 390x844.",
+  "reviewBasis": "Independent Web High review of the three attached runtime screenshots; no provider-attested receipt claimed.",
+  "requiredCorrection": "Add a separate early S65 key-discovery visual beat at [0,0] and retain the accepted dinner CG only from [0,29]; do not change authored prose."
+}

@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "phase": "midpoint",
+  "agent": "ceos_art_director_web",
+  "standard": "HOST_OBSERVED_ART_ACCEPTANCE_V1",
+  "status": "PASS",
+  "decision": "PASS_S65_HOST_OBSERVED_ART_MIDPOINT_V1",
+  "reviewer": "ceos_art_director_web",
+  "evidenceArtifact": "artifacts/production-art/S65_KEYS_REPAIR_MIDPOINT_WEB_HIGH_2026-10-12.json",
+  "transportAgentId": "01a12f1e-2d26-7d20-a15d-8cc8f14a3682",
+  "sourceHead": "bdfce614dda323a1ad69f7b893cce61017a1e747",
+  "scene": "S65",
+  "locale": "EN",
+  "actualPixelsReceived": true,
+  "actualPixels": "6/6",
+  "sourceBinding": "EXACT_HEAD_RUNTIME_SCREENSHOTS_SUPPLIED_BY_PARENT",
+  "actualPixelsCount": 6,
+  "requiredPixelsCount": 6,
+  "reviewBasis": "Independent Web High midpoint review of all six attached EN runtime screenshots; provider-attested receipt not required by HOST_OBSERVED_ART_ACCEPTANCE_V1.",
+  "reviewedItems": [
+    "S65-s65-locked-kitchen-keys-1920x900",
+    "S65-s65-locked-kitchen-keys-390x844",
+    "S65-s65-locked-kitchen-keys-360x640",
+    "S65-s65-locked-kitchen-hallway-1920x900",
+    "S65-s65-locked-kitchen-hallway-390x844",
+    "S65-s65-locked-kitchen-hallway-360x640"
+  ],
+  "evidenceRefs": [
+    "en-s65-locked-kitchen-keys-1920x900.png",
+    "en-s65-locked-kitchen-keys-390x844.png",
+    "en-s65-locked-kitchen-keys-360x640.png",
+    "en-s65-locked-kitchen-hallway-1920x900.png",
+    "en-s65-locked-kitchen-hallway-390x844.png",
+    "en-s65-locked-kitchen-hallway-360x640.png"
+  ],
+  "receivedEvidenceRefs": [
+    "en-s65-locked-kitchen-keys-1920x900.png",
+    "en-s65-locked-kitchen-keys-390x844.png",
+    "en-s65-locked-kitchen-keys-360x640.png",
+    "en-s65-locked-kitchen-hallway-1920x900.png",
+    "en-s65-locked-kitchen-hallway-390x844.png",
+    "en-s65-locked-kitchen-hallway-360x640.png"
+  ],
+  "visualEvidence": [
+    {
+      "ref": "en-s65-locked-kitchen-keys-1920x900.png",
+      "path": "artifacts/evidence/s65-repair-runtime-postrepair-2026-10-12/en-s65-locked-kitchen-keys-1920x900.png",
+      "sha256": "759e93ffc830e3e31570334905f942889acf3cc95392f170c49583007305214f",
+      "sceneId": "S65",
+      "visualBeat": "keys",
+      "viewport": "1920x900",
+      "verdict": "PASS",
+      "observation": "Eric's key ring and Nick's pointing gesture are central and legible; no dinner props are present, all four characters are grounded in the corridor, and the dialogue area remains readable."
+    },
+    {
+      "ref": "en-s65-locked-kitchen-keys-390x844.png",
+      "path": "artifacts/evidence/s65-repair-runtime-postrepair-2026-10-12/en-s65-locked-kitchen-keys-390x844.png",
+      "sha256": "b3e3c0789d7bacfadbc6648467834325f15fa786ca657177110205507395b40a",
+      "sceneId": "S65",
+      "visualBeat": "keys",
+      "viewport": "390x844",
+      "verdict": "PASS",
+      "observation": "The key action, character identities and floor grounding survive portrait crop; side figures remain recognizable and the dialogue-safe area does not cover the action."
+    },
+    {
+      "ref": "en-s65-locked-kitchen-keys-360x640.png",
+      "path": "artifacts/evidence/s65-repair-runtime-postrepair-2026-10-12/en-s65-locked-kitchen-keys-360x640.png",
+      "sha256": "4b786eae8cc8fdd33c70be5313ec4ae07d400d954c274fab338617f636991fbd",
+      "sceneId": "S65",
+      "visualBeat": "keys",
+      "viewport": "360x640",
+      "verdict": "PASS",
+      "observation": "The blue fob and Eric/Nick action remain visible above readable dialogue; all faces remain identifiable and no later dinner props or P0/P1 artifact appears."
+    },
+    {
+      "ref": "en-s65-locked-kitchen-hallway-1920x900.png",
+      "path": "artifacts/evidence/s65-repair-runtime-postrepair-2026-10-12/en-s65-locked-kitchen-hallway-1920x900.png",
+      "sha256": "f5830c56901ed1fb12f600f159c37f6bd9b4eafd7dda86a85dcf7662ae30c071",
+      "sceneId": "S65",
+      "visualBeat": "hallway-dinner",
+      "viewport": "1920x900",
+      "verdict": "PASS",
+      "observation": "Nick's suitcase food setup and Damir's tomato action match the later hallway paragraph; four characters are grounded, the kitchen door is closed, and the composition is coherent."
+    },
+    {
+      "ref": "en-s65-locked-kitchen-hallway-390x844.png",
+      "path": "artifacts/evidence/s65-repair-runtime-postrepair-2026-10-12/en-s65-locked-kitchen-hallway-390x844.png",
+      "sha256": "922db7cfb8ce56704bd85113b18170378043537acec7cfd949ddb328ea1dd576",
+      "sceneId": "S65",
+      "visualBeat": "hallway-dinner",
+      "viewport": "390x844",
+      "verdict": "PASS",
+      "observation": "The suitcase, food and Damir's tomato action remain legible with four recognizable characters and readable dialogue; the right crop is limited to non-blocking P2."
+    },
+    {
+      "ref": "en-s65-locked-kitchen-hallway-360x640.png",
+      "path": "artifacts/evidence/s65-repair-runtime-postrepair-2026-10-12/en-s65-locked-kitchen-hallway-360x640.png",
+      "sha256": "b767efbc16536b41cbe0085bf5309a22c77f3d9bfd90ba765d180d4b2e1f50eb",
+      "sceneId": "S65",
+      "visualBeat": "hallway-dinner",
+      "viewport": "360x640",
+      "verdict": "PASS",
+      "observation": "Nick's food setup and Damir's tomato action remain understandable despite narrow crop and dimming; grounding, identities and dialogue readability hold without P0/P1 defects."
+    }
+  ],
+  "perViewportVerdict": {
+    "keys/1920x900": "PASS",
+    "keys/390x844": "PASS",
+    "keys/360x640": "PASS",
+    "hallway-dinner/1920x900": "PASS",
+    "hallway-dinner/390x844": "PASS",
+    "hallway-dinner/360x640": "PASS"
+  },
+  "counts": {
+    "p0": 0,
+    "p1": 0,
+    "p2": 2,
+    "temporalContinuity": "PASS"
+  },
+  "findings": [
+    {
+      "id": "S65-MID-P2-01",
+      "severity": "P2",
+      "beat": "keys",
+      "viewports": ["1920x900", "390x844", "360x640"],
+      "detail": "The closed door is visible, but its identity as the common kitchen and the missing-key state rely partly on text.",
+      "blocking": false
+    },
+    {
+      "id": "S65-MID-P2-02",
+      "severity": "P2",
+      "beat": "hallway-dinner",
+      "viewports": ["390x844", "360x640"],
+      "detail": "Damir is partially cropped at the right edge and the narrow frame dims some props, while the tomato action remains legible.",
+      "blocking": false
+    }
+  ],
+  "unresolved": [],
+  "recordedAt": "2026-10-12T08:30:00Z"
+}

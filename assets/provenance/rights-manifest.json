@@ -2,6 +2,22 @@
   "generatedAt": "2026-10-07",
   "assets": [
     {
+      "path": "assets/cg/s65-locked-kitchen-keys.png",
+      "sha256": "1E9BCF836913975202B111142E4246B5AE0E55E734176DB1909C137A1CD93D4A",
+      "dimensions": "1672x941",
+      "method": "Candidate 2 desktop key-discovery composition after Web High P1 cue-timing finding; canonical Alice, Eric, Nick and Damir references",
+      "source": "Generated in Codex imagegen during run 2026-10-12T08:05:38-446Z-production-art-48a3c3",
+      "license": "generated for this project"
+    },
+    {
+      "path": "assets/cg/s65-locked-kitchen-keys-portrait.png",
+      "sha256": "52717BF67CCF92A0DB3C6EDDAA8B7C257AAC293ADAA0BA35CBCF2A9DE01D5526",
+      "dimensions": "941x1672",
+      "method": "Candidate 1 purpose-built portrait key-discovery composition after Web High P1 cue-timing finding; canonical character references",
+      "source": "Generated in Codex imagegen during run 2026-10-12T08:05:38-446Z-production-art-48a3c3",
+      "license": "generated for this project"
+    },
+    {
       "path": "assets/cg/s65-locked-kitchen-hallway.png",
       "sha256": "0CF54652CA2DA9BA64109D974002028043FEA012BD31BE7711DF94E0DF57D4C7",
       "dimensions": "1672x941",

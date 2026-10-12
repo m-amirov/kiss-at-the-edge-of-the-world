@@ -219,14 +219,22 @@ test('S06-S08 pilot uses authored cinematic events with independent portrait ass
  assert.equal(shot('S07',flow,cards,choices).art?.presentation,'cinematic');
 });
 
-test('S65 scene start uses the locked-kitchen hallway repair on desktop and portrait',()=>{
+test('S65 separates the missing-key beat from the later locked-kitchen dinner repair',()=>{
  const {flow,choices}=complete('S65');
  const opening=shot('S65',flow,0,choices);
- assert.equal(opening.beatId,'s65-locked-kitchen-hallway');
+ assert.equal(opening.beatId,'s65-locked-kitchen-keys');
  assert.equal(opening.art?.presentation,'cinematic');
- assert.equal(opening.art?.file,'s65-locked-kitchen-hallway.webp');
+ assert.equal(opening.art?.file,'s65-locked-kitchen-keys.webp');
  assert.deepEqual(opening.cast,['alice','eric','nick','damir']);
  assert.deepEqual(opening.requiredCast,['alice','eric','nick','damir']);
+ assert.ok(fs.existsSync(new URL('../../assets/cg/s65-locked-kitchen-keys.webp',import.meta.url)));
+ assert.ok(fs.existsSync(new URL('../../assets/cg/s65-locked-kitchen-keys-portrait.webp',import.meta.url)));
+ const dinnerAt=indexOfSource(flow,0,29);
+ const dinner=shot('S65',flow,dinnerAt,choices);
+ assert.equal(dinner.beatId,'s65-locked-kitchen-hallway');
+ assert.equal(dinner.art?.presentation,'cinematic');
+ assert.equal(dinner.art?.file,'s65-locked-kitchen-hallway.webp');
+ assert.deepEqual(dinner.cast,['alice','eric','nick','damir']);
  assert.ok(fs.existsSync(new URL('../../assets/cg/s65-locked-kitchen-hallway.webp',import.meta.url)));
  assert.ok(fs.existsSync(new URL('../../assets/cg/s65-locked-kitchen-hallway-portrait.webp',import.meta.url)));
 });

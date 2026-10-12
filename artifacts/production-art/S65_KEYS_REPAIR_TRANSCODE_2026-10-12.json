@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "recordType": "scoped-runtime-transcode",
+  "status": "PASS_SCOPED_TRANSCODE",
+  "sourceHead": "bdfce614dda323a1ad69f7b893cce61017a1e747",
+  "encoder": {"format":"WEBP","quality":90,"method":6,"lossless":false,"dimensionsChanged":false},
+  "assets": [
+    {"sourcePath":"assets/cg/s65-locked-kitchen-keys.png","sourceSha256":"1e9bcf836913975202b111142e4246b5ae0e55e734176db1909c137a1cd93d4a","sourceBytes":2347710,"runtimePath":"assets/cg/s65-locked-kitchen-keys.webp","runtimeSha256":"49c1079fab64454b9cf977f6ab3f7a321210bd38625327e295c0fa6d22b21aa","runtimeBytes":283696,"dimensions":"1672x941","alpha":false},
+    {"sourcePath":"assets/cg/s65-locked-kitchen-keys-portrait.png","sourceSha256":"52717bf67ccf92a0db3c6eddaa8b7c257aac293adaa0ba35cbcf2a9de01d5526","sourceBytes":2544564,"runtimePath":"assets/cg/s65-locked-kitchen-keys-portrait.webp","runtimeSha256":"9eefa198cd56e64231dc851d588a39d66159f70b512920017918adf2bbbe712","runtimeBytes":339764,"dimensions":"941x1672","alpha":false}
+  ],
+  "formalGlobalTranscodeDeferred": true,
+  "note": "Scoped pair verified independently; formal global runtime-transcode acceptance remains a release-stage artifact and was not fabricated."
+}

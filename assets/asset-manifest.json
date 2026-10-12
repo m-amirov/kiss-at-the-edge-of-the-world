@@ -628,11 +628,26 @@
       "runtimePortraitAsset": "assets/cg/s07-kitchen-cards-portrait.webp"
     },
     {
+      "id": "s65-locked-kitchen-keys",
+      "family": "cg",
+      "path": "assets/cg/s65-locked-kitchen-keys.png",
+      "status": "integrated",
+      "runtime": "S65 authored cue [0,0], Eric checks the missing kitchen key while Nick points to the blue fob",
+      "creationMethod": "Candidate 2 desktop and candidate 1 portrait native image edit in current CEOS production-art run after independent Web High P1 cue-timing finding",
+      "createdAt": "2026-10-12",
+      "dimensions": "1672x941",
+      "mobileSafe": true,
+      "portraitAsset": "assets/cg/s65-locked-kitchen-keys-portrait.png",
+      "portraitDimensions": "941x1672",
+      "runtimePath": "assets/cg/s65-locked-kitchen-keys.webp",
+      "runtimePortraitAsset": "assets/cg/s65-locked-kitchen-keys-portrait.webp"
+    },
+    {
       "id": "s65-locked-kitchen-hallway",
       "family": "cg",
       "path": "assets/cg/s65-locked-kitchen-hallway.png",
       "status": "integrated",
-      "runtime": "S65 authored scene-start cue [0,0], hallway outside locked shared kitchen; Nick organizes food on overturned suitcase and Damir slices tomatoes",
+      "runtime": "S65 authored cue [0,29], hallway outside locked shared kitchen; Nick organizes food on overturned suitcase and Damir slices tomatoes",
       "creationMethod": "Codex imagegen current production-art run 2026-10-12 using canonical Alice, Eric, Nick and Damir master references; independent desktop and portrait compositions",
       "createdAt": "2026-10-12",
       "dimensions": "1672x941",
