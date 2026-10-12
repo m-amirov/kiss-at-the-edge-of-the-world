@@ -353,7 +353,7 @@
         "mature"
       ],
       "conflictPolicy": "structural-merge",
-      "sha256": "87b4876baffb1e117150b44006bc3cfce522ea7738c3f9770297b28343c75612"
+      "sha256": "859a38d84ec08fbe9745a3ff240112eb1e002f235bc5e7601e9cd5f9cfa2b2c3"
     },
     {
       "source": "index.html",
@@ -547,7 +547,7 @@
         "mature"
       ],
       "conflictPolicy": "replace-if-baseline",
-      "sha256": "eec9d6ec477975bd6d082a9c400e8aaef4c59e440cea59dc9fea817973901b64"
+      "sha256": "fe06e6f7bc8673c569aadfbfa3a9641a622f8056bfdafc61009e797fee8d5905"
     },
     {
       "source": "README.md",
@@ -595,7 +595,7 @@
         "mature"
       ],
       "conflictPolicy": "semantic-merge",
-      "sha256": "97bd79057de121a53fcf2f41dfa4c75c4a2d81d25f01b1f53e380e5e5b5d47fd"
+      "sha256": "c2767387141290afc68a250749c37cc4637d335315eb625cbd65e4d14ac8b8c1"
     },
     {
       "source": "config/yandex-console-requirements.yaml",
@@ -632,7 +632,7 @@
     {
       "source": "config/yandex-doc-snapshot.json",
       "logicalId": "managed:yandex-doc-snapshot",
-      "ownership": "managed",
+      "ownership": "semantic-merge",
       "target": "config/yandex-doc-snapshot.json",
       "modes": [
         "init",
@@ -642,8 +642,8 @@
         "new",
         "mature"
       ],
-      "conflictPolicy": "replace-if-baseline",
-      "sha256": "7d2605723ba7439abeb30d12c7fb6b54776f12ac45f1b1e7f4bec4244d02fb68"
+      "conflictPolicy": "semantic-merge",
+      "sha256": "16f49b39be3ad3a315ccdf5a4a5ba7b163c947ed451923cb7d6557aa837bc1b4"
     },
     {
       "source": "config/game-spec.schema.json",
@@ -804,7 +804,7 @@
         "mature"
       ],
       "conflictPolicy": "replace-if-baseline",
-      "sha256": "362daadd9fcd8639f01d90e0737fa536843fc55aade12794ec53cf5b3b1e851f"
+      "sha256": "a9b01daae6e0e338cb4624b75450234ca503d617719455351b83b85531dc8afa"
     },
     {
       "source": "migrations/0.3.0-yandex-requirements.md",
@@ -1060,7 +1060,7 @@
         "mature"
       ],
       "conflictPolicy": "semantic-merge",
-      "sha256": "a165f3baacabc64255fbd3bd94045977e9b8fe18754880d53f083797bc9be544"
+      "sha256": "fc04b675ef130e3ed4338faf5b05b512809eb304d237e34321d4d493ffdd4e6d"
     },
     {
       "source": "config/starter-kit-manifest.schema.json",
@@ -1268,7 +1268,7 @@
         "mature"
       ],
       "conflictPolicy": "replace-if-baseline",
-      "sha256": "867d1ced24cf328c222458b61895a63d7dc289340add1ff313bdb9280e7be34e"
+      "sha256": "0d86218cdec4bac2a2ef286cd87a32b4bc3d327011c6431c1cc11ea93d9d35d4"
     },
     {
       "source": "tools/starter-kit/status.mjs",
@@ -1348,7 +1348,7 @@
         "mature"
       ],
       "conflictPolicy": "replace-if-baseline",
-      "sha256": "6fc65ef1014b6d363e9607db4454e3ae7ad9a37da54abb5b426f57f23f76adb3"
+      "sha256": "06c6ae4c0bc9b24b1448f2f00a05592e638bd8581fdc95ebef3fbc36f4b98e9b"
     },
     {
       "source": "tools/yandex/docs-watch.mjs",
@@ -1652,7 +1652,7 @@
         "mature"
       ],
       "conflictPolicy": "replace-if-baseline",
-      "sha256": "5f84ad1c0f40184c7e1f01f17c2ab77cc646289be1b40cb401c9955ef53eacf8"
+      "sha256": "8858177460a0cd4231d7852c4acf2e85531aab12d66b078ab1ff875391e67ffb"
     },
     {
       "source": "tools/yandex/release-evidence-gate.mjs",
@@ -1668,7 +1668,7 @@
         "mature"
       ],
       "conflictPolicy": "replace-if-baseline",
-      "sha256": "fb64996a5df243f7f434b9016d25100311c0103f57004926346264d49ba256e0"
+      "sha256": "57ab698e2379f175292283dec0233f6e7ce7dd45fb20198ae90552c7eb1c7438"
     },
     {
       "source": "docs/PRODUCTION_INCIDENT_HARDENING.md",
@@ -1684,7 +1684,7 @@
         "mature"
       ],
       "conflictPolicy": "replace-if-baseline",
-      "sha256": "a93431216676e6bd68034b673f35d620815d5de57f37a9cf6cecbc40a8a74ec7"
+      "sha256": "aa914cec4d104f2cfc924881700d6a6be8ae1eb6279dfb6ac1323ab341c5941f"
     }
   ]
 }

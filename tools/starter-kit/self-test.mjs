@@ -110,7 +110,7 @@ function validatePolicy(root, skillRoot, errors) {
 
 function validateYandexContracts(root, skillRoot, errors, sourceMode) {
   const numbered = fs.readFileSync(path.join(root, 'config', 'yandex-requirements.yaml'), 'utf8');
-  const numberedAudit = auditRequirementRegistryText(numbered, sourceMode ? { reviewedAt: '2026-09-30' } : {});
+  const numberedAudit = auditRequirementRegistryText(numbered, sourceMode ? { reviewedAt: '2026-10-11' } : {});
   errors.push(...numberedAudit.errors.map((error) => `Yandex numbered registry: ${error}`));
 
   const consoleRegistry = fs.readFileSync(path.join(root, 'config', 'yandex-console-requirements.yaml'), 'utf8');
@@ -140,13 +140,13 @@ function validateYandexContracts(root, skillRoot, errors, sourceMode) {
   if (!packageJson.scripts?.['yandex:docs:accept-snapshot']) errors.push('yandex:docs:accept-snapshot script is missing');
   if (!packageJson.scripts?.['yandex:media:validate']) errors.push('yandex:media:validate script is missing');
   if (!packageJson.scripts?.['yandex:release:evidence']) errors.push('yandex:release:evidence script is missing');
+  for (const relative of ['tools/yandex/release-evidence-gate.mjs', 'docs/PRODUCTION_INCIDENT_HARDENING.md']) {
+    if (!fs.existsSync(path.join(root, relative))) errors.push(`Yandex release hardening file is missing: ${relative}`);
+  }
   for (const command of ['verify', 'run', 'normalize', 'audit']) {
     if (!packageJson.scripts?.[`yandex:external:${command}`]) errors.push(`yandex:external:${command} script is missing`);
   }
 
-  for (const relative of ['tools/yandex/release-evidence-gate.mjs', 'docs/PRODUCTION_INCIDENT_HARDENING.md']) {
-    if (!fs.existsSync(path.join(root, relative))) errors.push(`Yandex release hardening file is missing: ${relative}`);
-  }
   const providerRegistryFile = path.join(root, 'config', 'yandex-external-evidence-providers.yaml');
   const providerToolFile = path.join(root, 'tools', 'yandex', 'external-evidence.mjs');
   const providerRoot = path.join(root, 'tools', 'yandex', 'external-runtime-provider');
