@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "recordType": "host-observed-art-review",
+  "phase": "HOST_OBSERVED_ART_ACCEPTANCE_V1",
+  "pipeline": "production-art",
+  "agent": "ceos_art_director_web",
+  "model": "chatgpt-web/gpt-6-sol",
+  "sourceHead": "1eb41c69495326b86f699570ec8c6efeab2558e9",
+  "status": "FINDINGS",
+  "actualPixelsReceived": true,
+  "reviewedItems": {
+    "requestedScenes": 4,
+    "requestedViewports": 12,
+    "receivedScreenshots": 10,
+    "visuallyReviewedScreenshots": 10,
+    "missingScreenshots": [
+      "S01:1920x900",
+      "S01:390x844"
+    ],
+    "scenes": ["S01", "S02", "S65", "S03"]
+  },
+  "evidenceRefs": {
+    "matrix": "artifacts/evidence/final-exact-head-qa-2026-10-12/production-art-coverage-66x3/evidence.json",
+    "matrixSourceHead": "1eb41c69495326b86f699570ec8c6efeab2558e9",
+    "screenshots": [
+      {"scene": "S01", "viewport": "360x640", "path": "artifacts/evidence/final-exact-head-qa-2026-10-12/production-art-coverage-66x3/S01-nick-arrives-360x640.png", "sha256": "5caee9479b932473b85f0d10f7f21b5f2361f7e6029fc0787512ac0a84eaf0ef"},
+      {"scene": "S02", "viewport": "1920x900", "path": "artifacts/evidence/final-exact-head-qa-2026-10-12/production-art-coverage-66x3/S02-scene-start-1920x900.png", "sha256": "e50755465b38d4e943f0dbc8eba7bc8366cebb127b765b96646e66b4224a5f9b"},
+      {"scene": "S02", "viewport": "390x844", "path": "artifacts/evidence/final-exact-head-qa-2026-10-12/production-art-coverage-66x3/S02-scene-start-390x844.png", "sha256": "df4bba6957561758d11a94faca0f67bdb49f5c3123756b3ccf294559e3284588"},
+      {"scene": "S02", "viewport": "360x640", "path": "artifacts/evidence/final-exact-head-qa-2026-10-12/production-art-coverage-66x3/S02-scene-start-360x640.png", "sha256": "db60f95fff7a019d0581f9c5308b457f7109b79efb3672ca8ff93a1dc6603a82"},
+      {"scene": "S65", "viewport": "1920x900", "path": "artifacts/evidence/final-exact-head-qa-2026-10-12/production-art-coverage-66x3/S65-scene-start-1920x900.png", "sha256": "dd9f1839ccec7a73960bd0371c788fcce8abe98b1025305086b9967377a9c731"},
+      {"scene": "S65", "viewport": "390x844", "path": "artifacts/evidence/final-exact-head-qa-2026-10-12/production-art-coverage-66x3/S65-scene-start-390x844.png", "sha256": "0363379f39d138eaad11ceb2431930d3473618f78c318a5d4010660e8b5f71a3"},
+      {"scene": "S65", "viewport": "360x640", "path": "artifacts/evidence/final-exact-head-qa-2026-10-12/production-art-coverage-66x3/S65-scene-start-360x640.png", "sha256": "385b749477ae3556ee59938f7f56f66cda782fa047ad8114a86ca5aaf5dca0f0"},
+      {"scene": "S03", "viewport": "1920x900", "path": "artifacts/evidence/final-exact-head-qa-2026-10-12/production-art-coverage-66x3/S03-editor-call-1920x900.png", "sha256": "f512268af366b769251a48c40bcb580b0bfe7f043016fb68eeac4ed8cb559f9a"},
+      {"scene": "S03", "viewport": "390x844", "path": "artifacts/evidence/final-exact-head-qa-2026-10-12/production-art-coverage-66x3/S03-editor-call-390x844.png", "sha256": "9c7cc92c4dfc34bfcdecb17b6483a27b2622f90598840dca6afbf3cad51d9c76"},
+      {"scene": "S03", "viewport": "360x640", "path": "artifacts/evidence/final-exact-head-qa-2026-10-12/production-art-coverage-66x3/S03-editor-call-360x640.png", "sha256": "46df77bef2960f68b5349a841f383aa286ded57ee4fb032fa82a3957fd0fd64d"}
+    ]
+  },
+  "viewportVerdicts": [
+    {"scene": "S01", "viewport": "1920x900", "verdict": "BLOCKED", "detail": "Скриншот отсутствует в переданных визуальных доказательствах."},
+    {"scene": "S01", "viewport": "390x844", "verdict": "BLOCKED", "detail": "Скриншот отсутствует в переданных визуальных доказательствах."},
+    {"scene": "S01", "viewport": "360x640", "verdict": "PASS", "detail": "Алиса и Ник узнаваемы; физическая табличка соответствует повествованию; лица, руки, реквизит и текст читаемы."},
+    {"scene": "S02", "viewport": "1920x900", "verdict": "PASS", "detail": "Четыре персонажа убедительно размещены в салоне; идентичность, дождь, свет и диалог согласованы."},
+    {"scene": "S02", "viewport": "390x844", "verdict": "PASS", "detail": "Все четыре лица различимы, вертикальная география салона и текст сохраняются."},
+    {"scene": "S02", "viewport": "360x640", "verdict": "PASS", "detail": "Узкая композиция сохраняет лица и эмоциональные реакции; текст читаем."},
+    {"scene": "S65", "viewport": "1920x900", "verdict": "REWORK", "detail": "P1: персонажи выглядят стоящими на поверхности большого обеденного стола; масштаб и пространственная интеграция неубедительны, а кухня противоречит beat об отсутствующем ключе."},
+    {"scene": "S65", "viewport": "390x844", "verdict": "REWORK", "detail": "P1: непропорциональный масштаб и отсутствие убедительной опоры сохраняются; текст технически читаем."},
+    {"scene": "S65", "viewport": "360x640", "verdict": "REWORK", "detail": "P1: эффект маленьких cut-out фигур и отсутствие физической опоры сохраняются."},
+    {"scene": "S03", "viewport": "1920x900", "verdict": "PASS", "detail": "Алиса, телефон, интерьер и свет работают; есть только некритичное несоответствие части реквизита тексту."},
+    {"scene": "S03", "viewport": "390x844", "verdict": "PASS", "detail": "Лицо, телефон, эмоциональный акцент и диалог читаемы."},
+    {"scene": "S03", "viewport": "360x640", "verdict": "PASS", "detail": "Лицо и действие с телефоном сохранены; текст помещается, критических артефактов нет."}
+  ],
+  "findings": [
+    {
+      "id": "ART-B1-001",
+      "severity": "P1",
+      "scene": "S65",
+      "viewport": ["1920x900", "390x844", "360x640"],
+      "detail": "Персонажи визуально стоят на столешнице вместо пола. Ступни, масштаб, перспектива и контактные тени не согласованы, создавая выраженный cut-out эффект.",
+      "playerImpact": "Разрушается пространственная достоверность; изображение воспринимается как неудачная композиция отдельных ассетов.",
+      "minimalFix": "Исправить только композицию S65: разместить персонажей на правдоподобной поверхности пола, согласовать масштаб, перспективу, свет и контактные тени; повторно проверить три viewport."
+    },
+    {
+      "id": "ART-B1-002",
+      "severity": "P1",
+      "scene": "S65",
+      "viewport": ["1920x900", "390x844", "360x640"],
+      "detail": "Текст описывает отсутствие ключа от кухни, но кадр уже показывает персонажей внутри оборудованной кухни без визуального объяснения доступа.",
+      "playerImpact": "Игрок получает противоречащие версии места и действия.",
+      "minimalFix": "Поставить S65 в текущий сюжетный момент: перед закрытой кухней или в доступной общей зоне гостевого дома; текст не менять."
+    },
+    {
+      "id": "ART-B1-003",
+      "severity": "P2",
+      "scene": "S65",
+      "viewport": ["1920x900", "390x844", "360x640"],
+      "detail": "Видимый седоволосый бородатый мужчина может не соответствовать канонической внешности Эрика; identity continuity не подтверждена.",
+      "playerImpact": "Риск потери узнаваемости персонажа между сценами.",
+      "minimalFix": "Проверить cast mapping и при необходимости использовать утверждённую внешность Эрика, меняя только допустимую одежду."
+    },
+    {
+      "id": "ART-B1-004",
+      "severity": "P2",
+      "scene": "S65",
+      "viewport": ["1920x900", "390x844", "360x640"],
+      "detail": "Просторная светлая кухня с панорамным окном слабо соответствует описанию общей кухни в полуподвале старого гостевого дома.",
+      "playerImpact": "Ослабляется визуальная идентичность места действия.",
+      "minimalFix": "При отдельном ремонте S65 уточнить архитектуру помещения, не меняя текст и общую исландскую световую стилистику."
+    },
+    {
+      "id": "ART-B1-005",
+      "severity": "P2",
+      "scene": "S03",
+      "viewport": ["1920x900", "390x844", "360x640"],
+      "detail": "Карта с запиской Эрика и банка растворимого кофе из текста не идентифицируются уверенно, хотя основное действие Алисы с телефоном работает.",
+      "playerImpact": "Теряются вторичные визуальные детали без разрушения основного действия.",
+      "minimalFix": "Только при отдельной точечной коррекции добавить эти предметы как физические объекты интерьера, не как UI-overlay."
+    }
+  ],
+  "unresolved": [
+    {"id": "EVIDENCE-S01-01", "detail": "Два из двенадцати запрошенных attachment не были получены Web High: S01 1920x900 и 390x844."},
+    {"id": "CAST-S65", "detail": "Нужно подтвердить соответствие видимого мужчины в S65 каноническому персонажу."},
+    {"id": "CHOICE-UI", "detail": "Открытые варианты выбора в этой партии не проверялись."},
+    {"id": "SOURCE-PROVENANCE", "detail": "Web High принял заявленный sourceHead; сам по себе визуальный payload не доказывает происхождение commit."}
+  ],
+  "decision": {
+    "verdict": "REWORK_PRODUCTION_ART",
+    "batchAccepted": false,
+    "reason": "Подтверждены два P1-дефекта постановки S65; общий batch остановлен. S01 дополнительно имеет два неполученных viewport.",
+    "confirmedPassViewports": 7,
+    "reworkViewports": 3,
+    "blockedViewports": 2,
+    "priority": "P1",
+    "requiredAction": "Остановить batch; не объявлять остальные сцены принятыми; отдельный ремонт S65 должен включать новую постановку и повторную Web High-проверку."
+  }
+}

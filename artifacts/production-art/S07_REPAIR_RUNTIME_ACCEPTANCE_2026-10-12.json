@@ -1,0 +1,405 @@
+{
+  "schemaVersion": 1,
+  "recordType": "s07-targeted-art-repair-acceptance-runtime",
+  "status": "PASS",
+  "sourceHead": "1eb41c69495326b86f699570ec8c6efeab2558e9",
+  "baseUrl": "http://127.0.0.1:4182/literary.html?qa=s07-repair-acceptance",
+  "scope": {
+    "scene": "S07",
+    "cue": "s07-kitchen-pasta",
+    "viewports": [
+      "1920x900",
+      "390x844",
+      "360x640"
+    ],
+    "captures": 3,
+    "complete": true
+  },
+  "allAssetMatches": true,
+  "allRuntimeAssetsReady": true,
+  "noBrowserFailures": true,
+  "captures": [
+    {
+      "sceneId": "S07",
+      "title": "Общая кухня. Ник и катастрофа с макаронами",
+      "cue": "s07-kitchen-pasta",
+      "source": {
+        "chunk": 3,
+        "paragraph": 0
+      },
+      "expected": {
+        "file": "s07-kitchen-pasta.webp",
+        "runtimePath": "assets/cg/s07-kitchen-pasta.webp",
+        "type": "cg",
+        "runtime": "assets/cg/s07-kitchen-pasta.webp"
+      },
+      "authoredCues": [
+        {
+          "id": "s07-kitchen-pasta",
+          "at": [
+            3,
+            0
+          ],
+          "art": "cg/s07-kitchen-pasta.webp",
+          "cast": [
+            "alice",
+            "nick",
+            "eric",
+            "damir"
+          ],
+          "presentation": null
+        },
+        {
+          "id": "s07-kitchen-cards",
+          "at": [
+            3,
+            42
+          ],
+          "art": "cg/s07-kitchen-cards.webp",
+          "cast": [
+            "alice",
+            "nick",
+            "eric",
+            "damir"
+          ],
+          "presentation": null
+        }
+      ],
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "currentHead": "1eb41c69495326b86f699570ec8c6efeab2558e9",
+      "screenshot": "artifacts/evidence/s07-repair-acceptance-runtime-2026-10-12/S07-s07-kitchen-pasta-1920x900.png",
+      "screenshotSha256": "b1925c033ea37423779cb015592590512083a0a027b2876a68a767c84b7f07b1",
+      "screenshotBytes": 2159765,
+      "readback": {
+        "sceneId": "S07",
+        "position": 3,
+        "sourceRef": {
+          "chunk": 3,
+          "paragraph": 0
+        },
+        "cue": "s07-kitchen-pasta",
+        "asset": "s07-kitchen-pasta.webp",
+        "desktopAsset": "s07-kitchen-pasta.webp",
+        "natural": [
+          1672,
+          941
+        ],
+        "stageCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 900,
+          "width": 1920,
+          "height": 900
+        },
+        "viewport": [
+          1920,
+          900
+        ],
+        "runtimeAsset": "assets/s07-kitchen-pasta.webp",
+        "expectedRuntime": "assets/cg/s07-kitchen-pasta.webp",
+        "assetMatches": true
+      },
+      "manifest": {
+        "id": "s07-kitchen-pasta",
+        "path": "assets/cg/s07-kitchen-pasta.png",
+        "runtimePath": "assets/cg/s07-kitchen-pasta.webp",
+        "runtimePortraitAsset": "assets/cg/s07-kitchen-pasta-portrait.webp",
+        "dimensions": "1672x941"
+      },
+      "physicalFiles": [
+        {
+          "path": "assets/cg/s07-kitchen-pasta.png",
+          "exists": true,
+          "sha256": "2411f80a3cef842cfd6dc3911f4eae091f4cc32d363e6f001456bb4a390f12c4"
+        },
+        {
+          "path": "assets/cg/s07-kitchen-pasta-portrait.png",
+          "exists": true,
+          "sha256": "7fcb46ffc37d769bdd4c9848b448da918cee3bdf0eb60ef5899e9b34cd857d81"
+        },
+        {
+          "path": "assets/cg/s07-kitchen-pasta.webp",
+          "exists": true,
+          "sha256": "69b73a9c7e425974f83d55edf2a57b18de79bb76a425fe470f67ce595918103c"
+        },
+        {
+          "path": "assets/cg/s07-kitchen-pasta-portrait.webp",
+          "exists": true,
+          "sha256": "817277c545fb46f4e4718e8aa2631a65d449b38ac84238629a531a01a0a35722"
+        }
+      ],
+      "audioEvidence": {
+        "cueId": "cafe",
+        "readyState": 4,
+        "duration": 33.9205
+      },
+      "errors": [],
+      "failed": [],
+      "ignoredFailedRequests": [],
+      "runError": null
+    },
+    {
+      "sceneId": "S07",
+      "title": "Общая кухня. Ник и катастрофа с макаронами",
+      "cue": "s07-kitchen-pasta",
+      "source": {
+        "chunk": 3,
+        "paragraph": 0
+      },
+      "expected": {
+        "file": "s07-kitchen-pasta.webp",
+        "runtimePath": "assets/cg/s07-kitchen-pasta.webp",
+        "type": "cg",
+        "runtime": "assets/cg/s07-kitchen-pasta.webp"
+      },
+      "authoredCues": [
+        {
+          "id": "s07-kitchen-pasta",
+          "at": [
+            3,
+            0
+          ],
+          "art": "cg/s07-kitchen-pasta.webp",
+          "cast": [
+            "alice",
+            "nick",
+            "eric",
+            "damir"
+          ],
+          "presentation": null
+        },
+        {
+          "id": "s07-kitchen-cards",
+          "at": [
+            3,
+            42
+          ],
+          "art": "cg/s07-kitchen-cards.webp",
+          "cast": [
+            "alice",
+            "nick",
+            "eric",
+            "damir"
+          ],
+          "presentation": null
+        }
+      ],
+      "viewport": {
+        "name": "portrait390",
+        "width": 390,
+        "height": 844
+      },
+      "currentHead": "1eb41c69495326b86f699570ec8c6efeab2558e9",
+      "screenshot": "artifacts/evidence/s07-repair-acceptance-runtime-2026-10-12/S07-s07-kitchen-pasta-390x844.png",
+      "screenshotSha256": "6d63928b98da42544ba110dd3d1b793c5637900583c7ff168511f609527b5619",
+      "screenshotBytes": 498598,
+      "readback": {
+        "sceneId": "S07",
+        "position": 3,
+        "sourceRef": {
+          "chunk": 3,
+          "paragraph": 0
+        },
+        "cue": "s07-kitchen-pasta",
+        "asset": "s07-kitchen-pasta-portrait.webp",
+        "desktopAsset": "s07-kitchen-pasta.webp",
+        "natural": [
+          941,
+          1672
+        ],
+        "stageCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "viewport": [
+          390,
+          844
+        ],
+        "runtimeAsset": "assets/s07-kitchen-pasta-portrait.webp",
+        "expectedRuntime": "assets/cg/s07-kitchen-pasta.webp",
+        "assetMatches": true
+      },
+      "manifest": {
+        "id": "s07-kitchen-pasta",
+        "path": "assets/cg/s07-kitchen-pasta.png",
+        "runtimePath": "assets/cg/s07-kitchen-pasta.webp",
+        "runtimePortraitAsset": "assets/cg/s07-kitchen-pasta-portrait.webp",
+        "dimensions": "1672x941"
+      },
+      "physicalFiles": [
+        {
+          "path": "assets/cg/s07-kitchen-pasta.png",
+          "exists": true,
+          "sha256": "2411f80a3cef842cfd6dc3911f4eae091f4cc32d363e6f001456bb4a390f12c4"
+        },
+        {
+          "path": "assets/cg/s07-kitchen-pasta-portrait.png",
+          "exists": true,
+          "sha256": "7fcb46ffc37d769bdd4c9848b448da918cee3bdf0eb60ef5899e9b34cd857d81"
+        },
+        {
+          "path": "assets/cg/s07-kitchen-pasta.webp",
+          "exists": true,
+          "sha256": "69b73a9c7e425974f83d55edf2a57b18de79bb76a425fe470f67ce595918103c"
+        },
+        {
+          "path": "assets/cg/s07-kitchen-pasta-portrait.webp",
+          "exists": true,
+          "sha256": "817277c545fb46f4e4718e8aa2631a65d449b38ac84238629a531a01a0a35722"
+        }
+      ],
+      "audioEvidence": {
+        "cueId": "cafe",
+        "readyState": 4,
+        "duration": 33.9205
+      },
+      "errors": [],
+      "failed": [],
+      "ignoredFailedRequests": [],
+      "runError": null
+    },
+    {
+      "sceneId": "S07",
+      "title": "Общая кухня. Ник и катастрофа с макаронами",
+      "cue": "s07-kitchen-pasta",
+      "source": {
+        "chunk": 3,
+        "paragraph": 0
+      },
+      "expected": {
+        "file": "s07-kitchen-pasta.webp",
+        "runtimePath": "assets/cg/s07-kitchen-pasta.webp",
+        "type": "cg",
+        "runtime": "assets/cg/s07-kitchen-pasta.webp"
+      },
+      "authoredCues": [
+        {
+          "id": "s07-kitchen-pasta",
+          "at": [
+            3,
+            0
+          ],
+          "art": "cg/s07-kitchen-pasta.webp",
+          "cast": [
+            "alice",
+            "nick",
+            "eric",
+            "damir"
+          ],
+          "presentation": null
+        },
+        {
+          "id": "s07-kitchen-cards",
+          "at": [
+            3,
+            42
+          ],
+          "art": "cg/s07-kitchen-cards.webp",
+          "cast": [
+            "alice",
+            "nick",
+            "eric",
+            "damir"
+          ],
+          "presentation": null
+        }
+      ],
+      "viewport": {
+        "name": "portrait360",
+        "width": 360,
+        "height": 640
+      },
+      "currentHead": "1eb41c69495326b86f699570ec8c6efeab2558e9",
+      "screenshot": "artifacts/evidence/s07-repair-acceptance-runtime-2026-10-12/S07-s07-kitchen-pasta-360x640.png",
+      "screenshotSha256": "561d893d00fb348d5633c798a64bbc1cc80282238e48d4fe1b73212922c9e768",
+      "screenshotBytes": 354976,
+      "readback": {
+        "sceneId": "S07",
+        "position": 3,
+        "sourceRef": {
+          "chunk": 3,
+          "paragraph": 0
+        },
+        "cue": "s07-kitchen-pasta",
+        "asset": "s07-kitchen-pasta-portrait.webp",
+        "desktopAsset": "s07-kitchen-pasta.webp",
+        "natural": [
+          941,
+          1672
+        ],
+        "stageCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 360,
+          "bottom": 640,
+          "width": 360,
+          "height": 640
+        },
+        "viewport": [
+          360,
+          640
+        ],
+        "runtimeAsset": "assets/s07-kitchen-pasta-portrait.webp",
+        "expectedRuntime": "assets/cg/s07-kitchen-pasta.webp",
+        "assetMatches": true
+      },
+      "manifest": {
+        "id": "s07-kitchen-pasta",
+        "path": "assets/cg/s07-kitchen-pasta.png",
+        "runtimePath": "assets/cg/s07-kitchen-pasta.webp",
+        "runtimePortraitAsset": "assets/cg/s07-kitchen-pasta-portrait.webp",
+        "dimensions": "1672x941"
+      },
+      "physicalFiles": [
+        {
+          "path": "assets/cg/s07-kitchen-pasta.png",
+          "exists": true,
+          "sha256": "2411f80a3cef842cfd6dc3911f4eae091f4cc32d363e6f001456bb4a390f12c4"
+        },
+        {
+          "path": "assets/cg/s07-kitchen-pasta-portrait.png",
+          "exists": true,
+          "sha256": "7fcb46ffc37d769bdd4c9848b448da918cee3bdf0eb60ef5899e9b34cd857d81"
+        },
+        {
+          "path": "assets/cg/s07-kitchen-pasta.webp",
+          "exists": true,
+          "sha256": "69b73a9c7e425974f83d55edf2a57b18de79bb76a425fe470f67ce595918103c"
+        },
+        {
+          "path": "assets/cg/s07-kitchen-pasta-portrait.webp",
+          "exists": true,
+          "sha256": "817277c545fb46f4e4718e8aa2631a65d449b38ac84238629a531a01a0a35722"
+        }
+      ],
+      "audioEvidence": {
+        "cueId": "cafe",
+        "readyState": 4,
+        "duration": 33.9205
+      },
+      "errors": [],
+      "failed": [],
+      "ignoredFailedRequests": [],
+      "runError": null
+    }
+  ],
+  "failures": []
+}

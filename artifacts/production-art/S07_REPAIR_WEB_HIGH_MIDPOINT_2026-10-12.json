@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "phase": "midpoint",
+  "agent": "ceos_art_director_web",
+  "reviewer": "ceos_art_director_web",
+  "status": "PASS",
+  "evidenceArtifact": "artifacts/production-art/S07_REPAIR_WEB_HIGH_MIDPOINT_2026-10-12.json",
+  "sourceHead": "1eb41c69495326b86f699570ec8c6efeab2558e9",
+  "actualPixelsReceived": true,
+  "transportAgentId": "01a12ef3-a97d-7212-b31e-8bd0a7fa5744",
+  "reviewedItems": ["S07-s07-kitchen-pasta-1920x900","S07-s07-kitchen-pasta-390x844","S07-s07-kitchen-pasta-360x640"],
+  "evidenceRefs": ["codex-input-image-1","codex-input-image-2","codex-input-image-3"],
+  "receivedEvidenceRefs": ["codex-input-image-1","codex-input-image-2","codex-input-image-3"],
+  "decision": "PASS. Across all three supplied runtime screenshots, Nick is the clear owner of the stop gesture and the beat reads correctly: Alice remains at the pot, Eric reads as the blond supporting presence, and Damir remains visually distinct with the burgundy scarf. Composition, crop, dialogue readability, lower dialogue-safe area, portrait framing, and overall visual-novel style continuity are acceptable in the transmitted pixels.",
+  "findings": [],
+  "unresolved": [],
+  "visualEvidence": [
+    {"ref":"codex-input-image-1","sceneId":"S07","viewport":"1920x900","path":"artifacts/evidence/s07-repair-runtime-2026-10-12/S07-s07-kitchen-pasta-1920x900.png","sha256":"41ebe38ceedd1275552b3ccf2090755b772e5702cf7e3f3f01ccbb5edf40987d","observation":"Wide frame reads cleanly: Nick occupies the central foreground and unambiguously owns the raised stop hand toward Alice at the pot; Eric supports from rear center-right and Damir is distinct at far right with burgundy scarf. Text remains readable over the dark lower overlay."},
+    {"ref":"codex-input-image-2","sceneId":"S07","viewport":"390x844","path":"artifacts/evidence/s07-repair-runtime-2026-10-12/S07-s07-kitchen-pasta-390x844.png","sha256":"e8e9f91179a9892349c00b78fb8fb773dd5315017ca14ed232a2f80c220646e5","observation":"Portrait crop preserves the action hierarchy well: Alice stays anchored at the pot, Nick remains the clear stopping actor in the foreground, Eric stays visible as blond support behind them, and Damir remains legible on the right edge. Dialogue sits in a safe lower area without obscuring the key beat."},
+    {"ref":"codex-input-image-3","sceneId":"S07","viewport":"360x640","path":"artifacts/evidence/s07-repair-runtime-2026-10-12/S07-s07-kitchen-pasta-360x640.png","sha256":"561d893d00fb348d5633c798a64bbc1cc80282238e48d4fe1b73212922c9e768","observation":"Smaller portrait frame still keeps the authored beat intact: Nick's stop gesture is visually dominant, Alice remains engaged with the pot, Eric reads correctly in the upper background, and Damir stays differentiated by dark hair and burgundy scarf. Readability and style continuity hold at this viewport."}
+  ]
+}

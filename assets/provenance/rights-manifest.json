@@ -234,18 +234,18 @@
     },
     {
       "path": "assets/cg/s07-kitchen-pasta.png",
-      "sha256": "ACDA492CC1CC2824550600F5BABFA8F6D5039D1879FBD3755C1D2EEBBB768487",
+      "sha256": "2411F80A3CEF842CFD6DC3911F4EAE091F4CC32D363E6F001456BB4A390F12C4",
       "dimensions": "1672x941",
       "method": "Native S07 pasta-rescue re-composition after Web High runtime review; full pot, boiling foam, steam, spoon and Nick's stop gesture remain above dialogue occlusion",
-      "source": "Generated in Codex imagegen under CEOS run 2026-10-09",
+      "source": "Generated in Codex imagegen under CEOS run 2026-10-12T07-05-14-445Z-production-art-cdc283",
       "license": "generated for this project"
     },
     {
       "path": "assets/cg/s07-kitchen-pasta-portrait.png",
-      "sha256": "808CDA353AB023C75CCC68C50C29A0F2E7C32C27E52AB288EEF4CB957214D235",
+      "sha256": "7FCB46FFC37D769BDD4C9848B448DA918CEE3BDF0EB60EF5899E9B34CD857D81",
       "dimensions": "941x1672",
       "method": "Portrait re-composition generated in the current CEOS production-art run; pot, spoon and Nick's stop gesture remain above the dialogue-safe area",
-      "source": "Derived from the re-composed S07 desktop in Codex imagegen, 2026-10-09",
+      "source": "Derived from the repaired S07 desktop in Codex imagegen, 2026-10-12, under CEOS run 2026-10-12T07-05-14-445Z-production-art-cdc283",
       "license": "generated for this project"
     },
     {

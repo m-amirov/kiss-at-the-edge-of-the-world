@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "phase": "acceptance",
+  "agent": "ceos_art_director_web",
+  "reviewer": "ceos_art_director_web",
+  "status": "PASS",
+  "evidenceArtifact": "artifacts/production-art/S07_REPAIR_WEB_HIGH_ACCEPTANCE_2026-10-12.json",
+  "sourceHead": "1eb41c69495326b86f699570ec8c6efeab2558e9",
+  "actualPixelsReceived": true,
+  "transportAgentId": "01a12ef7-7f99-7482-abf0-fd265028cfa8",
+  "reviewedItems": ["S07-s07-kitchen-pasta-1920x900","S07-s07-kitchen-pasta-390x844","S07-s07-kitchen-pasta-360x640"],
+  "evidenceRefs": ["S07-s07-kitchen-pasta-1920x900.png","S07-s07-kitchen-pasta-390x844.png","S07-s07-kitchen-pasta-360x640.png"],
+  "receivedEvidenceRefs": ["S07-s07-kitchen-pasta-1920x900.png","S07-s07-kitchen-pasta-390x844.png","S07-s07-kitchen-pasta-360x640.png"],
+  "decision": "PASS. Во всех трех viewport Ник однозначно владеет стоп-жестом и сценическим фокусом реплики «Не трогай»; композиция, crop, читабельность диалога, dialogue-safe area, портретная и стилевая непрерывность сохранены, значимых артефактов и P1/P0-дефектов не выявлено.",
+  "findings": [],
+  "unresolved": [],
+  "visualEvidence": [
+    {"ref":"S07-s07-kitchen-pasta-1920x900.png","sceneId":"S07","viewport":"1920x900","path":"artifacts/evidence/s07-repair-acceptance-runtime-2026-10-12/S07-s07-kitchen-pasta-1920x900.png","sha256":"b1925c033ea37423779cb015592590512083a0a027b2876a68a767c84b7f07b1","observation":"Широкий кадр читается уверенно: Ник в центре и на переднем плане, его поднятая ладонь ясно адресована Алисе у кастрюли; identity attribution однозначный, диалог хорошо читается на затемненной подложке."},
+    {"ref":"S07-s07-kitchen-pasta-390x844.png","sceneId":"S07","viewport":"390x844","path":"artifacts/evidence/s07-repair-acceptance-runtime-2026-10-12/S07-s07-kitchen-pasta-390x844.png","sha256":"6d63928b98da42544ba110dd3d1b793c5637900583c7ff168511f609527b5619","observation":"Мобильный portrait crop сохраняет ключевой beat без потерь: Алиса, кастрюля и жест Ника полностью в кадре, реплика читаема, безопасная зона диалога соблюдена, визуальный стиль и лица консистентны."},
+    {"ref":"S07-s07-kitchen-pasta-360x640.png","sceneId":"S07","viewport":"360x640","path":"artifacts/evidence/s07-repair-acceptance-runtime-2026-10-12/S07-s07-kitchen-pasta-360x640.png","sha256":"561d893d00fb348d5633c798a64bbc1cc80282238e48d4fe1b73212922c9e768","observation":"На более тесном viewport сцена остается понятной и чистой: жест Ника по-прежнему доминирует, второстепенные персонажи не перехватывают действие, руки и анатомия выглядят приемлемо, явных генеративных артефактов нет."}
+  ]
+}
