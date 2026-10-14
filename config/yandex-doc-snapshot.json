@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "reviewedAt": "2026-10-11",
-  "fetchedAt": "2026-10-11T19:28:41.231Z",
+  "reviewedAt": "2026-10-14",
+  "fetchedAt": "2026-10-14T07:22:38.676Z",
   "documents": {
     "requirements": {
       "canonicalUrl": "https://yandex.ru/dev/games/doc/ru/concepts/requirements",
@@ -981,8 +981,8 @@
         "https://yandex.ru/dev/games/doc/ru/requirements/8/4/1"
       ],
       "parseErrors": [],
-      "fetchedAt": "2026-10-11T19:28:41.231Z",
-      "reviewedAt": "2026-10-06"
+      "fetchedAt": "2026-10-14T07:22:38.676Z",
+      "reviewedAt": "2026-10-11"
     },
     "draft": {
       "canonicalUrl": "https://yandex.ru/dev/games/doc/ru/console/add-new-game/draft",
@@ -1296,8 +1296,8 @@
         }
       },
       "parseErrors": [],
-      "fetchedAt": "2026-10-11T19:28:41.231Z",
-      "reviewedAt": "2026-10-06"
+      "fetchedAt": "2026-10-14T07:22:38.676Z",
+      "reviewedAt": "2026-10-11"
     },
     "moderation": {
       "canonicalUrl": "https://yandex.ru/dev/games/doc/ru/concepts/moderation",
@@ -1317,8 +1317,8 @@
         "Что влияет на очередность"
       ],
       "parseErrors": [],
-      "fetchedAt": "2026-10-11T19:28:41.231Z",
-      "reviewedAt": "2026-10-06"
+      "fetchedAt": "2026-10-14T07:22:38.676Z",
+      "reviewedAt": "2026-10-11"
     }
   },
   "detailPages": [
@@ -1328,8 +1328,8 @@
       "metadataHash": "45b8eeaf1ed7e082fb95983f5c9580d5ad9aead239f3179db69f97766e2ced43",
       "normalizedSemanticSha256": "23ce7ae79538e002efbf0dcd7a21deb4cae8b5e61bf7473a80cfd68091cdfa65",
       "parseErrors": [],
-      "fetchedAt": "2026-10-11T19:28:41.231Z",
-      "reviewedAt": "2026-10-06"
+      "fetchedAt": "2026-10-14T07:22:38.676Z",
+      "reviewedAt": "2026-10-11"
     },
     {
       "canonicalUrl": "https://yandex.ru/dev/games/doc/ru/requirements/1/12",
@@ -1337,8 +1337,8 @@
       "metadataHash": "c7d7bdb5e369036363cd131344bb12be633e8157d6e1b042a03f1e3f6a3e4c14",
       "normalizedSemanticSha256": "1fc981e108438cc232ed19085062e7f7e236c7d396aae46c8558e2e17e854bcd",
       "parseErrors": [],
-      "fetchedAt": "2026-10-11T19:28:41.231Z",
-      "reviewedAt": "2026-10-06"
+      "fetchedAt": "2026-10-14T07:22:38.676Z",
+      "reviewedAt": "2026-10-11"
     },
     {
       "canonicalUrl": "https://yandex.ru/dev/games/doc/ru/requirements/1/13",
@@ -1346,8 +1346,8 @@
       "metadataHash": "20c4a8606aeff08f783b7f78083346282b27adee6c7c3e946dc398875dc80b03",
       "normalizedSemanticSha256": "1d963f59679347bbb3527b3b378578777dbb0eb2021bb930855ce0beb09ced6a",
       "parseErrors": [],
-      "fetchedAt": "2026-10-11T19:28:41.231Z",
-      "reviewedAt": "2026-10-06"
+      "fetchedAt": "2026-10-14T07:22:38.676Z",
+      "reviewedAt": "2026-10-11"
     },
     {
       "canonicalUrl": "https://yandex.ru/dev/games/doc/ru/requirements/1/14",
@@ -1355,8 +1355,8 @@
       "metadataHash": "0a8d7ea4ab253829d1ca6935a89c83181da670ff1bd69a573599942eb8b9180f",
       "normalizedSemanticSha256": "083f16261e29bfa1e22b42aa87d2e4f0a10c987cee52097a17dfd3fcc35cecd3",
       "parseErrors": [],
-      "fetchedAt": "2026-10-11T19:28:41.231Z",
-      "reviewedAt": "2026-10-06"
+      "fetchedAt": "2026-10-14T07:22:38.676Z",
+      "reviewedAt": "2026-10-11"
     },
     {
       "canonicalUrl": "https://yandex.ru/dev/games/doc/ru/requirements/1/15",
@@ -1364,8 +1364,8 @@
       "metadataHash": "95fe37cf8d24c7181c98db7576c883d4c9271edd0f33856cbec9964b7880b354",
       "normalizedSemanticSha256": "7d26c3f75a55f958986dde10c0a604befed0be0c4cb04def043ee11fb9f9463a",
       "parseErrors": [],
-      "fetchedAt": "2026-10-11T19:28:41.231Z",
-      "reviewedAt": "2026-10-06"
+      "fetchedAt": "2026-10-14T07:22:38.676Z",
+      "reviewedAt": "2026-10-11"
     },
     {
       "canonicalUrl": "https://yandex.ru/dev/games/doc/ru/requirements/1/19",
@@ -1373,8 +1373,8 @@
       "metadataHash": "3418138f30f257cf36850fd41c63bdb2375ae334a16ce931fd1c91d6075ff38f",
       "normalizedSemanticSha256": "671d8cd8f90b5d962ffc199d5376986b185b1bd38c0de050a600b908490c29ed",
       "parseErrors": [],
-      "fetchedAt": "2026-10-11T19:28:41.231Z",
-      "reviewedAt": "2026-10-06"
+      "fetchedAt": "2026-10-14T07:22:38.676Z",
+      "reviewedAt": "2026-10-11"
     },
     {
       "canonicalUrl": "https://yandex.ru/dev/games/doc/ru/requirements/1/2",
@@ -1382,8 +1382,8 @@
       "metadataHash": "3b54f64433a2e71f5ff071f2e65f3fa596d68c053a94909875c8f4d43768a526",
       "normalizedSemanticSha256": "f45cc2d424ab051ead16bfe8e6ea41f292eb3013d0aec319264f36b67007b1df",
       "parseErrors": [],
-      "fetchedAt": "2026-10-11T19:28:41.231Z",
-      "reviewedAt": "2026-10-06"
+      "fetchedAt": "2026-10-14T07:22:38.676Z",
+      "reviewedAt": "2026-10-11"
     },
     {
       "canonicalUrl": "https://yandex.ru/dev/games/doc/ru/requirements/1/3",
@@ -1391,8 +1391,8 @@
       "metadataHash": "2fcd4f110b4fc6e0cceb1080001a99a7c11913e81dfab4d0b49f9cccfe15266a",
       "normalizedSemanticSha256": "f53deefc5037648605278aceed3528b301da956c5e9a103ff5cc944b93043af5",
       "parseErrors": [],
-      "fetchedAt": "2026-10-11T19:28:41.231Z",
-      "reviewedAt": "2026-10-06"
+      "fetchedAt": "2026-10-14T07:22:38.676Z",
+      "reviewedAt": "2026-10-11"
     },
     {
       "canonicalUrl": "https://yandex.ru/dev/games/doc/ru/requirements/1/6",
@@ -1400,8 +1400,8 @@
       "metadataHash": "16d62338de833fa027279f9e5a69b850d10a02abb4a262137c586422c4279acb",
       "normalizedSemanticSha256": "dab48ace24618e2cdab9f6d86a0bdedece94da6074752501f3a7de09c619ad9e",
       "parseErrors": [],
-      "fetchedAt": "2026-10-11T19:28:41.231Z",
-      "reviewedAt": "2026-10-06"
+      "fetchedAt": "2026-10-14T07:22:38.676Z",
+      "reviewedAt": "2026-10-11"
     },
     {
       "canonicalUrl": "https://yandex.ru/dev/games/doc/ru/requirements/1/6/3",
@@ -1409,8 +1409,8 @@
       "metadataHash": "474d876c32c6470acefe49cecb7371679aa715d97722320a62411f2435dd4d2f",
       "normalizedSemanticSha256": "1b84b6e3ca961ac71625a8ced835b38ec22e128d5003e16663145d5c4fadfc9e",
       "parseErrors": [],
-      "fetchedAt": "2026-10-11T19:28:41.231Z",
-      "reviewedAt": "2026-10-06"
+      "fetchedAt": "2026-10-14T07:22:38.676Z",
+      "reviewedAt": "2026-10-11"
     },
     {
       "canonicalUrl": "https://yandex.ru/dev/games/doc/ru/requirements/1/9",
@@ -1418,8 +1418,8 @@
       "metadataHash": "7bf5bc14e6ee8f718ec1566bc90f264379b0b904acd035359e80e8ee6ab7201e",
       "normalizedSemanticSha256": "2378e55026d0ea3ee3e7cf06339fc87dc6b76e3a53d263bdc0ad30226ec01e59",
       "parseErrors": [],
-      "fetchedAt": "2026-10-11T19:28:41.231Z",
-      "reviewedAt": "2026-10-06"
+      "fetchedAt": "2026-10-14T07:22:38.676Z",
+      "reviewedAt": "2026-10-11"
     },
     {
       "canonicalUrl": "https://yandex.ru/dev/games/doc/ru/requirements/2/14",
@@ -1427,8 +1427,8 @@
       "metadataHash": "2de931a005840461a744c6e2d59b8869b2a15391d4b0338658fed28347dcd883",
       "normalizedSemanticSha256": "e52b929521d2efa45c5c7a55592f23267f8670c510682199df144575ad84a5c5",
       "parseErrors": [],
-      "fetchedAt": "2026-10-11T19:28:41.231Z",
-      "reviewedAt": "2026-10-06"
+      "fetchedAt": "2026-10-14T07:22:38.676Z",
+      "reviewedAt": "2026-10-11"
     },
     {
       "canonicalUrl": "https://yandex.ru/dev/games/doc/ru/requirements/2/4",
@@ -1436,8 +1436,8 @@
       "metadataHash": "95c55a5dd0b6aeda1f16e80d5915637ddcbb6a75f9cf9d051fd7724e024e2fa0",
       "normalizedSemanticSha256": "0e542dad38b5dd3d79798b11ebba68c7c1640dcc8c9ee65565adeba360e7598f",
       "parseErrors": [],
-      "fetchedAt": "2026-10-11T19:28:41.231Z",
-      "reviewedAt": "2026-10-06"
+      "fetchedAt": "2026-10-14T07:22:38.676Z",
+      "reviewedAt": "2026-10-11"
     },
     {
       "canonicalUrl": "https://yandex.ru/dev/games/doc/ru/requirements/2/7",
@@ -1445,8 +1445,8 @@
       "metadataHash": "845f7c0e317f8da54046da42af6de9d81447c50963de6658d18189a748626543",
       "normalizedSemanticSha256": "2686d012df503aadecd1b0be83484c3973308f344fa93939c8061997c66990e0",
       "parseErrors": [],
-      "fetchedAt": "2026-10-11T19:28:41.231Z",
-      "reviewedAt": "2026-10-06"
+      "fetchedAt": "2026-10-14T07:22:38.676Z",
+      "reviewedAt": "2026-10-11"
     },
     {
       "canonicalUrl": "https://yandex.ru/dev/games/doc/ru/requirements/2/9",
@@ -1454,8 +1454,8 @@
       "metadataHash": "01809fbd413dcbaf6ff4f37a693814710c57287c499bc91ce8941235612ef370",
       "normalizedSemanticSha256": "44d2c3acda1f7293ce4f691f7b46865b8c3a691f259b3d76d8bf71afa141385d",
       "parseErrors": [],
-      "fetchedAt": "2026-10-11T19:28:41.231Z",
-      "reviewedAt": "2026-10-06"
+      "fetchedAt": "2026-10-14T07:22:38.676Z",
+      "reviewedAt": "2026-10-11"
     },
     {
       "canonicalUrl": "https://yandex.ru/dev/games/doc/ru/requirements/3/6",
@@ -1463,8 +1463,8 @@
       "metadataHash": "2f219cbce8161e7aebd9102d0fa0b814b15d2b33afe26b5df3244590cee6b868",
       "normalizedSemanticSha256": "d999814b5097e28ced4a78c4aa9f4422c45c65898ef6001b1b986e8ffc1342cb",
       "parseErrors": [],
-      "fetchedAt": "2026-10-11T19:28:41.231Z",
-      "reviewedAt": "2026-10-06"
+      "fetchedAt": "2026-10-14T07:22:38.676Z",
+      "reviewedAt": "2026-10-11"
     },
     {
       "canonicalUrl": "https://yandex.ru/dev/games/doc/ru/requirements/4/4",
@@ -1472,8 +1472,8 @@
       "metadataHash": "0e8707d47ba2ed491a7944e7eaea7b1bf2849ac8f186c4c7131cf5096b07c35a",
       "normalizedSemanticSha256": "5fca98ae38191d59926ab7a5b10d9457eaf45f844452592992958e93272f8787",
       "parseErrors": [],
-      "fetchedAt": "2026-10-11T19:28:41.231Z",
-      "reviewedAt": "2026-10-06"
+      "fetchedAt": "2026-10-14T07:22:38.676Z",
+      "reviewedAt": "2026-10-11"
     },
     {
       "canonicalUrl": "https://yandex.ru/dev/games/doc/ru/requirements/5/1/1/2",
@@ -1481,8 +1481,8 @@
       "metadataHash": "e7b0c754671155f5f17057ed1b1c766fae938a6bad6f5a9478f0e5e986b2b16e",
       "normalizedSemanticSha256": "67f53afedfdcadc1069a47364d891b0b4810879029c09affb6d4e098f51f8fe2",
       "parseErrors": [],
-      "fetchedAt": "2026-10-11T19:28:41.231Z",
-      "reviewedAt": "2026-10-06"
+      "fetchedAt": "2026-10-14T07:22:38.676Z",
+      "reviewedAt": "2026-10-11"
     },
     {
       "canonicalUrl": "https://yandex.ru/dev/games/doc/ru/requirements/5/1/3",
@@ -1490,8 +1490,8 @@
       "metadataHash": "d95a787f5a82fda84d14d14e19fd0f6b98784eb8dcdd694b4c2d7f9015a82d81",
       "normalizedSemanticSha256": "f53d4162234702bab3f506fa87dc66671a73aea5358ea39da0ad79bdda5e652c",
       "parseErrors": [],
-      "fetchedAt": "2026-10-11T19:28:41.231Z",
-      "reviewedAt": "2026-10-06"
+      "fetchedAt": "2026-10-14T07:22:38.676Z",
+      "reviewedAt": "2026-10-11"
     },
     {
       "canonicalUrl": "https://yandex.ru/dev/games/doc/ru/requirements/8/2/3",
@@ -1499,8 +1499,8 @@
       "metadataHash": "7dbb492943c907fab02e0273d6eb723a8caadf9b56dc8e93441a509923d077a1",
       "normalizedSemanticSha256": "b1c8532e0d6405a11e3b2974c3ced5898f95bfa10ae40cd2e92ed26cbe9a0ced",
       "parseErrors": [],
-      "fetchedAt": "2026-10-11T19:28:41.231Z",
-      "reviewedAt": "2026-10-06"
+      "fetchedAt": "2026-10-14T07:22:38.676Z",
+      "reviewedAt": "2026-10-11"
     },
     {
       "canonicalUrl": "https://yandex.ru/dev/games/doc/ru/requirements/8/3/4",
@@ -1508,8 +1508,8 @@
       "metadataHash": "243a639430b67e395cba5a0f37d20aa03228f3b7520ebc23b84d975419bf8d70",
       "normalizedSemanticSha256": "6568733ffa0184dc6f199d8f5f66a01ecf6c8fa374d1808d51dea9cd82ce6ccb",
       "parseErrors": [],
-      "fetchedAt": "2026-10-11T19:28:41.231Z",
-      "reviewedAt": "2026-10-06"
+      "fetchedAt": "2026-10-14T07:22:38.676Z",
+      "reviewedAt": "2026-10-11"
     },
     {
       "canonicalUrl": "https://yandex.ru/dev/games/doc/ru/requirements/8/3/5",
@@ -1517,8 +1517,8 @@
       "metadataHash": "938d1062cfbbe8eaa0f5c9fb8bd6f88105e7a24eb2fecad788d464b182075b11",
       "normalizedSemanticSha256": "089760f3c1286cc1d2dca23e4b66a4b5be71ac358af31c1ba6facc528b82722d",
       "parseErrors": [],
-      "fetchedAt": "2026-10-11T19:28:41.231Z",
-      "reviewedAt": "2026-10-06"
+      "fetchedAt": "2026-10-14T07:22:38.676Z",
+      "reviewedAt": "2026-10-11"
     },
     {
       "canonicalUrl": "https://yandex.ru/dev/games/doc/ru/requirements/8/3/6",
@@ -1526,8 +1526,8 @@
       "metadataHash": "c0b41a7ee513b9c2f1cee1dbd47a69cc042705144dcddf829ccff12f7fb04de7",
       "normalizedSemanticSha256": "7483985e684ed987a0ceb9612a7f579b2c8c9eb4cf6dc7358a17e3a04245b722",
       "parseErrors": [],
-      "fetchedAt": "2026-10-11T19:28:41.231Z",
-      "reviewedAt": "2026-10-06"
+      "fetchedAt": "2026-10-14T07:22:38.676Z",
+      "reviewedAt": "2026-10-11"
     },
     {
       "canonicalUrl": "https://yandex.ru/dev/games/doc/ru/requirements/8/4/1",
@@ -1535,12 +1535,12 @@
       "metadataHash": "14c978749f64106ade6800d5b7149ed9962834251b111265638072a2bb0f0002",
       "normalizedSemanticSha256": "4e60e6ddf028fc9a847778a50660dbd624df31414150c658389366f0de582b22",
       "parseErrors": [],
-      "fetchedAt": "2026-10-11T19:28:41.231Z",
-      "reviewedAt": "2026-10-06"
+      "fetchedAt": "2026-10-14T07:22:38.676Z",
+      "reviewedAt": "2026-10-11"
     }
   ],
   "registryAlignment": {
-    "requirementsRegistrySha256": "a6322d60b01f604fb7a6b922d5026673dec8fc378369a53e20601a014c711f8f",
+    "requirementsRegistrySha256": "f606cd41fd17b05e3f6189422d58cb830a40a5683e85c017ddd0ba2d4bacbc74",
     "consoleRegistrySha256": "3cec7f9a89e2045e386998914a654c27b240df5c0f4fb6d4485982abfd3510c2"
   }
 }
