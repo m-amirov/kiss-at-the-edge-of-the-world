@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "recordType": "scoped-production-art-inventory",
+  "sourceHead": "1eb41c69495326b86f699570ec8c6efeab2558e9",
+  "sceneId": "S07",
+  "cue": "s07-kitchen-pasta",
+  "sourceRef": {"chunk": 3, "paragraph": 0},
+  "location": "Общая кухня Hveragerði: плита и стол",
+  "time": "день 3, вечер",
+  "authoredCast": ["alice", "nick", "eric", "damir"],
+  "authoredAction": "Ник говорит Алисе «Не трогай», когда она тянется к кастрюле; Ник является визуальным исполнителем действия.",
+  "runtimeMapping": {
+    "sourceFile": "src/literary-visual-directions.js",
+    "cue": "S07/[3,0]/s07-kitchen-pasta",
+    "desktopAsset": "assets/cg/s07-kitchen-pasta.webp",
+    "portraitAsset": "assets/cg/s07-kitchen-pasta-portrait.webp",
+    "manifestId": "s07-kitchen-pasta",
+    "presentation": "cinematic"
+  },
+  "currentAssets": [
+    {"path":"assets/cg/s07-kitchen-pasta.png","sha256":"acda492cc1cc2824550600f5babfa8f6d5039d1879fbd3755c1d2eebbb768487","bytes":2445347,"dimensions":"1672x941","mode":"RGB","alpha":false},
+    {"path":"assets/cg/s07-kitchen-pasta-portrait.png","sha256":"808cda353ab023c75ccc68c50c29a0f2e7c32c27e52ab288eef4cb957214d235","bytes":2353073,"dimensions":"941x1672","mode":"RGB","alpha":false},
+    {"path":"assets/cg/s07-kitchen-pasta.webp","sha256":"552b5e340a81c2106148d079eb3412e54464a00317b8a5a8673dd30e212e8749","bytes":300740,"dimensions":"1672x941","mode":"RGB","alpha":false},
+    {"path":"assets/cg/s07-kitchen-pasta-portrait.webp","sha256":"cff6ac51ca1d5f60cc9910b39b63ce341f643a21b285b95a3eaaff63613dcff7","bytes":261944,"dimensions":"941x1672","mode":"RGB","alpha":false}
+  ],
+  "references": [
+    {"role":"alice","path":"assets/characters/alice-master.png","sha256":"d261c464d1d40913e3bd377b206b9d59e86310ecfbedc0357d6fe4def1179d5d","dimensions":"1024x1536"},
+    {"role":"nick","path":"assets/characters/nick-master.png","sha256":"a1c4aae9230b21a7ce9eaf4605a62ed54e225e35ab1b2470049902a63fe44fdd","dimensions":"1024x1536"},
+    {"role":"eric","path":"assets/characters/eric-master.png","sha256":"aa66cc7e0a58bd409b1066dbc07cd5780796245fd79a7eb5c8e0fb98f0322f14","dimensions":"1024x1536"},
+    {"role":"damir","path":"assets/characters/damir-master.png","sha256":"221df2cdd61880de169b500fa56095c99c9784595d156201ee65f15f76c69ef3","dimensions":"1024x1536"},
+    {"role":"location","path":"assets/backgrounds/guesthouse-common-kitchen-evening.png","sha256":"f6c3e566baf906961a9540d927f73477dcd1734cd8850051a1abce31af9e2fb8","dimensions":"1672x941"}
+  ],
+  "rootCause": {
+    "classification": "SOURCE_COMPOSITION_DEFECT",
+    "mappingCorrect": true,
+    "stageCorrect": true,
+    "detail": "Current desktop and portrait source compositions place Eric at the interaction center performing Nick's stop gesture; Nick is a background plate-holder and Damir is a second dark-haired male at right. The source image, not prose, mapping, or runtime selection, creates the identity ambiguity."
+  },
+  "scopeLock": {
+    "repairFiles": ["assets/cg/s07-kitchen-pasta.png","assets/cg/s07-kitchen-pasta-portrait.png","assets/cg/s07-kitchen-pasta.webp","assets/cg/s07-kitchen-pasta-portrait.webp"],
+    "protected": ["src/literary-visual-directions.js","content/season-1-vertical-slice-episodes-01-02.md","assets/asset-manifest.json","assets/provenance/rights-manifest.json","all other scenes and runtime systems"]
+  }
+}

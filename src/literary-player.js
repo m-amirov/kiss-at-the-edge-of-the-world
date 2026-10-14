@@ -2,15 +2,19 @@ import { literarySeason } from './literary-season-data.js';
 import { compileScenePlayback, nextLiteraryScene, literarySaveKey, cleanLiteraryText } from './literary-engine.js';
 import { initYandexPlatform } from './yandex-sdk.js';
 import { createCloudSaveQueue } from './save-state.js';
-import { stageForScene } from './literary-stage.js';
+import { stageForScene, stageCastForPresentation } from './literary-stage.js';
 import { visualAt, visualEntryForPosition } from './literary-visual-directions.js';
+import { visualCastContract } from './literary-visual-contract.js';
 import { compileInteractivePlayback } from './literary-pacing.js';
 import { applyLiteraryLocale, createTranslator, validateLiteraryInteractionLocale } from './localization.js';
 import { literaryLocaleBundles } from './literary-localization-bundle.js';
 import { interactionBeats } from './literary-interactive-beats.js';
 import { createDialogueHistory } from './literary-history.js';
 import { createAudioDirector } from './audio-director.js';
+import { runtimeAssetUrl } from './runtime-assets.js';
 import { musicCues, musicCueForScene } from './music-cues.js';
+import { createEpisodeTransitionController, normalizePendingEpisodeTransition } from './episode-interstitial.js';
+import { createImageAssetCache, createImageTransition } from './literary-image-transition.js';
 
 const canonicalById = new Map(literarySeason.scenes.map(scene => [scene.id, scene]));
 let runtimeSeason = literarySeason;
@@ -31,7 +35,12 @@ const focalPointByAsset = {
   's02-roadside-cafe.webp': '50% 48%',
   's13-skaftafell-travelers.webp': '50% 42%',
   's18-hofn-dance-lights.webp': '50% 44%',
+  's18-hofn-lighthouse.webp': '50% 42%',
+  's18-hofn-lighthouse-portrait.webp': '50% 54%',
+  's18-hofn-harbour.webp': '90% 50%',
   's26-eric-choice.webp': '50% 40%',
+  's26-route-choice-courtyard-final.png': '50% 42%',
+  's26-route-choice-courtyard-final-portrait.png': '50% 50%',
   's23-eric-harbor-plan.webp': '50% 42%',
   's24-nick-pier-consent.webp': '50% 42%',
   's25-damir-clarity-talk.webp': '50% 42%',
@@ -45,11 +54,15 @@ const focalPointByAsset = {
   's44-eric-epilogue-month-later.webp': '50% 48%',
   's45-nick-home-epilogue-month-later.webp': '50% 45%',
   's46-damir-epilogue-month-later.webp': '50% 44%',
-  's47-alice-home-epilogue-month-later.webp': '67% 44%'
+  's47-alice-home-epilogue-month-later.webp': '67% 44%',
+  's03-editor-call.webp': '50% 34%',
+  's03-editor-call-portrait.webp': '50% 31%'
 };
 const portraitAssetByDesktopAsset = {
   's06-hveragerdi-eric-alice.webp':'s06-hveragerdi-eric-alice-portrait.webp',
   's07-kitchen-pasta.webp':'s07-kitchen-pasta-portrait.webp',
+  's18-hofn-harbour.webp':'s18-hofn-harbour-portrait.webp',
+  's18-hofn-lighthouse.webp':'s18-hofn-lighthouse-portrait.webp',
   's07-kitchen-cards.webp':'s07-kitchen-cards-portrait.webp',
   's08-guesthouse-strap.webp':'s08-guesthouse-strap-portrait.webp',
   's05-hveragerdi-road.webp':'s05-hveragerdi-road-portrait.webp',
@@ -63,9 +76,11 @@ const portraitAssetByDesktopAsset = {
   's26-nick-choice.webp':'s26-nick-choice-portrait.webp',
   's26-damir-choice.webp':'s26-damir-choice-portrait.webp',
   's26-alice-choice.webp':'s26-alice-choice-portrait.webp',
+  's26-power-outage-notebook.webp':'s26-power-outage-notebook-portrait.webp',
   's45-reykjavik-warm-montage.webp':'s45-reykjavik-warm-montage-portrait.webp',
   's46-airport-goodbye.webp':'s46-airport-goodbye-portrait.webp',
   's47-reykjavik-harbour-alice.webp':'s47-reykjavik-harbour-alice-portrait.webp',
+  's44-eric-morning-harbour.webp':'s44-eric-morning-harbour-portrait.webp',
   's44-eric-epilogue-month-later.webp':'s44-eric-epilogue-month-later-portrait.webp',
   's45-nick-home-epilogue-month-later.webp':'s45-nick-home-epilogue-month-later-portrait.webp',
   's46-damir-epilogue-month-later.webp':'s46-damir-epilogue-month-later-portrait.webp',
@@ -97,6 +112,7 @@ const portraitAssetByDesktopAsset = {
   ,'s63-alice-solo-concert.webp':'s63-alice-solo-concert-portrait.webp'
   ,'s37-eric-alice-cafe.webp':'s37-eric-alice-cafe-portrait.webp'
   ,'s03-editor-call-damir.webp':'s03-editor-call-damir-portrait.webp'
+  ,'s03-editor-call.webp':'s03-editor-call-portrait.webp'
   ,'s18-hofn-breakfast-group.webp':'s18-hofn-breakfast-group-portrait.webp'
   ,'s38-alice-nick-ordinary-day.webp':'s38-alice-nick-ordinary-day-portrait.webp'
   ,'s54-alice-nick-karaoke.webp':'s54-alice-nick-karaoke-portrait.webp'
@@ -105,15 +121,62 @@ const portraitAssetByDesktopAsset = {
   ,'s64-alice-snaefellsnes-trail.webp':'s64-alice-snaefellsnes-trail-portrait.webp'
   ,'s26-eastfjords-courtyard-group.webp':'s26-eastfjords-courtyard-group-portrait.webp'
   ,'s48-guesthouse-exit-group.webp':'s48-guesthouse-exit-group-portrait.webp'
+  ,'s01-airport-outside-batch2.webp':'s01-airport-outside-batch2-portrait.webp'
+  ,'s01-damir-arrives-batch2.webp':'s01-damir-arrives-batch2-portrait.webp'
+  ,'s48-last-breakfast-batch2.webp':'s48-last-breakfast-batch2-portrait.webp'
+  ,'s26-route-choice-courtyard-batch2.webp':'s26-route-choice-courtyard-batch2-portrait.webp'
+  ,'s26-route-choice-courtyard-final.png':'s26-route-choice-courtyard-final-portrait.png'
+  ,'s02-van-group-batch2.webp':'s02-van-group-batch2-portrait.webp'
+  ,'s60-souvenir-kitchen-batch2.webp':'s60-souvenir-kitchen-batch2-portrait.webp'
+  ,'s02-roadside-cafe-group.webp':'s02-roadside-cafe-group-portrait.webp'
+  ,'s04-thingvellir-trail-rework.webp':'s04-thingvellir-trail-rework-portrait.webp'
+  ,'s05-hveragerdi-van-warning-rework.webp':'s05-hveragerdi-van-warning-rework-portrait.webp'
+  ,'s11-reynisfjara-information-board-rework.webp':'s11-reynisfjara-information-board-rework-portrait.webp'
+  ,'s12-vik-cafe-damir-rework.webp':'s12-vik-cafe-damir-rework-portrait.webp'
+  ,'s14-skaftafell-pace-rework.webp':'s14-skaftafell-pace-rework-portrait.webp'
+  ,'s19-hofn-pool-opening-rework.webp':'s19-hofn-pool-opening-rework-portrait.webp'
+  ,'s22-eastfjords-van-road-rework.webp':'s22-eastfjords-van-road-rework-portrait.webp'
+  ,'s65-locked-kitchen-hallway.webp':'s65-locked-kitchen-hallway-portrait.webp'
+  ,'s65-locked-kitchen-keys.webp':'s65-locked-kitchen-keys-portrait.webp'
 };
-function assetFileForViewport(art){
+const portraitAssetByBeat = {
+  'airport-bus': 's46-airport-bus-portrait.webp',
+  's42-harbour-cafe': 's42-harbour-cafe-portrait.webp'
+};
+function assetFileForViewport(art, beatId, locale){
   const portrait=window.matchMedia?.('(max-width: 680px) and (orientation: portrait)').matches;
-  return portrait ? (portraitAssetByDesktopAsset[art.file]??art.file) : art.file;
+  return portrait ? (art.localePortraitFiles?.[locale] ?? portraitAssetByBeat[beatId] ?? portraitAssetByDesktopAsset[art.file] ?? art.file) : (art.localeFiles?.[locale] ?? art.file);
+}
+function visibleCastForDirection(direction){
+  if(direction?.art?.presentation==='cinematic')return [...(direction.requiredCast?.length?direction.requiredCast:direction.cast??[])];
+  return stageCastForPresentation(direction);
 }
 const stageAsset = { alice:'alice-stage.webp', eric:'eric-stage.webp', nick:'nick-stage.webp', damir:'damir-stage.webp' };
-// This value is consumed by a url() inside src/literary.css; resolve from the
-// stylesheet directory so the cover never becomes /src/assets/... at runtime.
-const cover = '../assets/branding/menu-hero.webp';
+// Resolve the menu cover through the same module-aware archive asset contract.
+const cover = runtimeAssetUrl('branding/kiss-at-the-edge-cover.png');
+const imageCache=createImageAssetCache({
+  maxEntries:18,
+  timeoutMs:45000,
+  onError:(path,error)=>{
+    const detail={path,reason:error?.message??'unknown image load failure'};
+    window.dispatchEvent(new CustomEvent('literary:image-error',{detail}));
+    console.warn('[literary-image]',detail);
+  }
+});
+let picture=null;
+let vignette=null;
+let artTransition=null;
+let currentStageNode=null;
+let currentStageKey='';
+let currentStagePaths=[];
+let stageRequestId=0;
+let lastViewportArtKey='';
+let viewportRefreshPending=false;
+const preloadQueue=[];
+const preloadQueued=new Set();
+let activePreloads=0;
+const maxConcurrentPreloads=2;
+const maxQueuedPreloads=10;
 const blank = () => ({ schemaVersion:3,sceneId:'S01',position:0,choices:{},finished:false, visited:['S01'],runId:`literary-${Date.now()}-${crypto.randomUUID?.() ?? Math.random().toString(36).slice(2)}`, revision:0 });
 function parseSaved(raw) {
   try {
@@ -122,7 +185,8 @@ function parseSaved(raw) {
        !s.choices || typeof s.choices!=='object' || Array.isArray(s.choices))return null;
     if(Object.entries(s.choices).some(([id,code])=> !/^S\d{2}-C\d+$/.test(id)|| !/^[A-D]$/.test(code)))return null;
     return { ...s, schemaVersion:3, position:s.schemaVersion<3?0:s.position,
-      migrationNotice:s.schemaVersion<3, visited:Array.isArray(s.visited)?s.visited.filter(id=>canonicalById.has(id)):[s.sceneId],revision:s.revision??0 };
+      migrationNotice:s.schemaVersion<3, visited:Array.isArray(s.visited)?s.visited.filter(id=>canonicalById.has(id)):[s.sceneId],
+      pendingEpisodeTransition:normalizePendingEpisodeTransition(s.pendingEpisodeTransition,canonicalById),revision:s.revision??0 };
   } catch { return null; }
 }
 function loadLocal(){try{const saved=localStorage.getItem(literarySaveKey);const parsed=parseSaved(saved);
@@ -135,12 +199,16 @@ let cloudLocked=false;
 let cloudCandidate=null;
 let menuOpen=true;
 let modal=null;
+let confirmDialog=null;
+let confirmHistoryPushed=false;
 let platform=null;
 let locale='ru';
 let t=createTranslator(locale);
 let cloudQueue=null;
+let episodeTransitionController=null;
 const audioDirector=createAudioDirector();
 const audioCueById=new Map(musicCues.map(cue=>[cue.cueId,{...cue,file:`${cue.cueId}.ogg`} ]));
+const menuAudioCue=audioCueById.get('main-theme');
 let settings=(()=>{try{return{scale:1,contrast:false,motion:false,...JSON.parse(localStorage.getItem(textSettingsKey)||'{}')}}catch{return{scale:1,contrast:false,motion:false}}})();
 function loadRuntimeSeason(selectedLocale,qaLocaleOverride){
   if(selectedLocale==='ru')return literarySeason;
@@ -185,6 +253,73 @@ function el(value='',className='',tag='div'){
 }
 function button(label,handler,className=''){
   const b=el(label,className,'button');b.type='button';b.addEventListener('click',handler);return b;
+}
+function settleConfirmDialog(confirmed,{fromHistory=false}={}){
+  const current=confirmDialog;
+  if(!current || current.settled)return false;
+  current.settled=true;
+  confirmDialog=null;
+  document.removeEventListener('keydown',current.onKeydown,true);
+  current.node.remove();
+  app.inert=current.previousInert;
+  if(current.previousAriaHidden===null)app.removeAttribute('aria-hidden');
+  else app.setAttribute('aria-hidden',current.previousAriaHidden);
+  if(confirmHistoryPushed){
+    confirmHistoryPushed=false;
+    if(!fromHistory)history.back();
+  }
+  if(current.returnFocus?.isConnected)current.returnFocus.focus({preventScroll:true});
+  if(confirmed)current.onConfirm();
+  return true;
+}
+function ConfirmDialog({title,message,onConfirm}){
+  const backdrop=el('','literary-confirm-backdrop');
+  const dialog=el('','literary-confirm-dialog','section');
+  const stamp=Date.now();
+  const titleId=`confirm-dialog-title-${stamp}`;
+  const messageId=`confirm-dialog-message-${stamp}`;
+  dialog.setAttribute('role','dialog');
+  dialog.setAttribute('aria-modal','true');
+  dialog.setAttribute('aria-labelledby',titleId);
+  dialog.setAttribute('aria-describedby',messageId);
+  dialog.tabIndex=-1;
+  const heading=el(title,'confirm-dialog-title','h2');heading.id=titleId;
+  const copy=el(message,'confirm-dialog-message','p');copy.id=messageId;
+  const actions=el('','confirm-dialog-actions');
+  const cancel=button(t('confirmDialogCancel'),()=>settleConfirmDialog(false),'confirm-dialog-cancel');
+  const confirm=button(t('confirmDialogConfirm'),()=>settleConfirmDialog(true),'confirm-dialog-confirm');
+  cancel.setAttribute('data-confirm-dialog-action','cancel');confirm.setAttribute('data-confirm-dialog-action','confirm');
+  actions.append(cancel,confirm);dialog.append(heading,copy,actions);backdrop.append(dialog);
+  for(const type of ['pointerdown','pointerup','click','touchstart']){
+    backdrop.addEventListener(type,event=>{event.stopPropagation()});
+  }
+  return {backdrop,dialog,cancel,onConfirm};
+}
+function openConfirmDialog({messageKey,messageValues={},onConfirm}){
+  if(confirmDialog)return false;
+  history.pushState({...((history.state && typeof history.state==='object')?history.state:{}),literaryConfirmDialog:true},document.title);
+  confirmHistoryPushed=true;
+  const previousFocus=document.activeElement instanceof HTMLElement?document.activeElement:null;
+  const previousAriaHidden=app.getAttribute('aria-hidden');
+  const built=ConfirmDialog({title:t('confirmDialogTitle'),message:t(messageKey,messageValues),onConfirm});
+  const onKeydown=event=>{
+    if(!confirmDialog)return;
+    if(event.key==='Escape'){
+      event.preventDefault();event.stopPropagation();settleConfirmDialog(false);
+      return;
+    }
+    if(event.key!=='Tab')return;
+    const focusable=[...built.dialog.querySelectorAll('button:not([disabled]),[href],input,select,textarea,[tabindex]:not([tabindex="-1"])')];
+    if(!focusable.length)return;
+    const first=focusable[0],last=focusable.at(-1);
+    if(event.shiftKey && document.activeElement===first){event.preventDefault();last.focus();}
+    else if(!event.shiftKey && document.activeElement===last){event.preventDefault();first.focus();}
+  };
+  confirmDialog={node:built.backdrop,returnFocus:previousFocus,previousInert:app.inert,previousAriaHidden,onKeydown,onConfirm,settled:false};
+  app.inert=true;app.setAttribute('aria-hidden','true');
+  document.body.append(built.backdrop);document.addEventListener('keydown',onKeydown,true);
+  built.cancel.focus({preventScroll:true});
+  return true;
 }
 const interactiveSelector='button,a,input,select,textarea,summary,[role="button"],[role="link"],[contenteditable="true"],[data-interactive]';
 const tapThreshold=10;
@@ -279,11 +414,19 @@ function bindStageTapTarget(node){
   });
 }
 function goHome(){menuOpen=true;modal=null;renderMenu()}
-function startNew(){
-  if(hasSave && !window.confirm(t('confirmNew')))return;
+function beginNewGame(){
   cloudLocked=true;dialogueHistory.clear();reader=blank();persist();menuOpen=false;modal=null;renderReader();
 }
+function startNew(){
+  if(hasSave){openConfirmDialog({messageKey:'confirmNew',onConfirm:beginNewGame});return;}
+  beginNewGame();
+}
 function continueGame(){menuOpen=false;modal=null;renderReader()}
+function restoreCloudCandidate(){
+  cloudLocked=true;dialogueHistory.clear();reader=cloudCandidate;cloudCandidate=null;
+  if(!episodeTransitionController?.resumePending({render:false}))persist();
+  continueGame();
+}
 function panel(headingKey,children){
   modal=headingKey;const section=el('','home-panel');section.append(el(t(headingKey),'section-title','h2'));
   children(section);section.append(button(t('backMenu'),()=>{modal=null;renderMenu()},'small-button'));
@@ -298,15 +441,16 @@ function episodeSelection(section){
     const unlocked=runtimeSeason.scenes.some(s=>s.episode===ep&&known.has(s.id));
     const item=button(t(unlocked?'episodeUnlocked':'episodeLocked',{episode:ep}),()=>{
       if(!unlocked)return;
-      if(!window.confirm(t('episodeReplayConfirm',{episode:ep})))return;
-      // A chapter replay from its first scene requires rebuilding later state;
-      // using only the original choices from before this episode is safe.
-      const epChoiceIds=literarySeason.scenes.filter(s=>s.episode>=ep).map(s=>s.id);
-      for(const id of Object.keys(reader.choices)){
-        if(epChoiceIds.some(prefix=>id.startsWith(prefix+'-')))delete reader.choices[id];
-      }
-      dialogueHistory.clear();reader.sceneId=first.id;reader.position=0;reader.finished=false;reader.migrationNotice=false;reader.visited=reader.visited.filter(id=>byId.get(id).episode<ep);reader.visited.push(first.id);
-      cloudLocked=true;persist();continueGame();
+      openConfirmDialog({messageKey:'episodeReplayConfirm',messageValues:{episode:ep},onConfirm:()=>{
+        // A chapter replay from its first scene requires rebuilding later state;
+        // using only the original choices from before this episode is safe.
+        const epChoiceIds=literarySeason.scenes.filter(s=>s.episode>=ep).map(s=>s.id);
+        for(const id of Object.keys(reader.choices)){
+          if(epChoiceIds.some(prefix=>id.startsWith(prefix+'-')))delete reader.choices[id];
+        }
+        dialogueHistory.clear();reader.sceneId=first.id;reader.position=0;reader.finished=false;reader.migrationNotice=false;reader.pendingEpisodeTransition=null;reader.visited=reader.visited.filter(id=>byId.get(id).episode<ep);reader.visited.push(first.id);
+        cloudLocked=true;persist();continueGame();
+      }});
     },'episode-select');item.disabled=!unlocked;section.append(item);
   }
 }
@@ -320,8 +464,10 @@ function settingsPanel(section){
   draw();section.append(size,contrast,motion,audioMute,audioVolume);
 }
 function renderMenu(){
+  artTransition?.cancel();
+  stageRequestId+=1;
   platform?.setGameplayActive(false);
-  audioDirector.pause();
+  audioDirector.setCue(menuAudioCue);
   menuOpen=true;app.className='literary-home';app.dataset.presentation=modal?`menu-${modal.toLowerCase()}`:'menu-home';app.style.setProperty('--cover',`url('${cover}')`);app.replaceChildren();
   const section=el('','literary-home-card');app.append(section);
   section.append(el(t('menuKicker'),'kicker'),el(t('gameTitle'),'home-title','h1'));
@@ -334,23 +480,160 @@ function renderMenu(){
   for(const [name,label] of [['episodes',t('episodes')],['settings',t('settings')]])secondary.append(button(label,()=>{modal=name;renderMenu()}));
   actions.append(secondary);
   section.append(actions);
-  if(cloudCandidate)section.append(button(t('restoreCloud'),()=>{if(!window.confirm(t('restoreCloudConfirm')))return;cloudLocked=true;dialogueHistory.clear();reader=cloudCandidate;cloudCandidate=null;persist();continueGame()}));
+  if(cloudCandidate){
+    const utility=el('','home-utility');
+    utility.append(button(t('restoreCloud'),()=>openConfirmDialog({messageKey:'restoreCloudConfirm',onConfirm:restoreCloudCandidate}),'cloud-restore'));
+    section.append(utility);
+  }
 }
-function renderStage(direction) {
+function renderStage(direction, prepared=new Map()) {
   const stage=el('','scene-stage');
   stage.dataset.count=String(direction.cast.length);
   stage.dataset.mode=direction.mode;
   stage.dataset.mood=direction.mood;
+  if(direction.stageComposition)stage.dataset.layout=direction.stageComposition;
   direction.cast.forEach((person,index)=>{
     const figure=el('',`stage-character stage-${person}`);
     figure.dataset.mood=direction.mood;
     figure.style.setProperty('--stage-index',index);
-    const image=el('','','img');
-    image.src=`./assets/characters/${stageAsset[person]}`;
+    const path=runtimeAssetUrl(`characters/${stageAsset[person]}`);
+    const image=prepared.get(path)??el('','','img');
+    if(!prepared.has(path))image.src=path;
     image.alt='';image.decoding='async';
     figure.append(image);stage.append(figure);
   });
   return stage;
+}
+function prefersReducedMotion(){
+  return Boolean(settings.motion||window.matchMedia?.('(prefers-reduced-motion: reduce)').matches);
+}
+function ensurePicture(){
+  if(picture)return picture;
+  picture=el('','literary-picture');
+  picture.setAttribute('aria-hidden','true');
+  vignette=el('','literary-vignette');
+  picture.append(vignette);
+  artTransition=createImageTransition({
+    container:picture,
+    cache:imageCache,
+    durationMs:180,
+    reducedMotion:prefersReducedMotion,
+    onCommit:({image,path,metadata})=>{
+      const art=metadata.art;
+      picture.classList.toggle('is-cg',art?.type==='cg');
+      picture.classList.toggle('no-art',!art);
+      if(art){
+        picture.style.setProperty('--focus',metadata.focus);
+        if(art.type==='cg')picture.style.setProperty('--cg-url',`url("${path}")`);
+        else picture.style.removeProperty('--cg-url');
+        image.dataset.desktopAsset=art.file;
+        image.dataset.asset=metadata.file;
+        image.dataset.artType=art.type;
+      }
+    }
+  });
+  bindStageNavigation(picture);
+  return picture;
+}
+function releaseStage(){
+  currentStagePaths.forEach(path=>imageCache.release(path));
+  currentStagePaths=[];
+  currentStageNode?.remove();
+  currentStageNode=null;
+  currentStageKey='';
+}
+function updateStage(direction,art){
+  // Ordinary background groups stay focal, but a visual beat may explicitly
+  // require three or four people for narrative continuity.
+  const presentationCast=visibleCastForDirection(direction);
+  const target=art?.presentation==='cinematic'?null:{
+    key:`${presentationCast.join(',')}|${direction.mood}|${direction.location}|${direction.time}`,
+    direction:{...direction,cast:presentationCast,mode:presentationCast.length>2?'group':presentationCast.length===2?'pair':'solo',mood:direction.mood}
+  };
+  stageRequestId+=1;
+  const token=stageRequestId;
+  if(!target){releaseStage();return}
+  if(target.key===currentStageKey&&currentStageNode?.parentNode===picture)return;
+  releaseStage();
+  const paths=target.direction.cast.map(person=>runtimeAssetUrl(`characters/${stageAsset[person]}`));
+  Promise.all(paths.map(path=>imageCache.preload(path).then(image=>[path,image])))
+    .then(entries=>{
+      if(token!==stageRequestId)return;
+      const prepared=new Map(entries);
+      const stage=renderStage(target.direction,prepared);
+      entries.forEach(([path])=>imageCache.retain(path));
+      currentStagePaths=paths;
+      currentStageNode=stage;
+      currentStageKey=target.key;
+      picture.insertBefore(stage,vignette);
+    })
+    .catch(()=>{});
+}
+function visualSnapshot(scene,flow,position,choices){
+  const visualEntry=visualEntryForPosition(flow,position);
+  const stage=stageForScene(scene.id,choices);
+  const direction=visualAt(scene.id,visualEntry,choices,stage.cast);
+  const art=direction.art;
+  const file=art?assetFileForViewport(art,direction.beatId,locale):null;
+  const path=art?runtimeAssetUrl(`${art.type==='cg'?'cg':'backgrounds'}/${file}`):null;
+  return {scene,flow,position,visualEntry,direction,art,file,path};
+}
+function collectPreloadPaths(scene,flow,position,choices,current){
+  const paths=[];
+  const seen=new Set();
+  const addPath=path=>{if(path&&!seen.has(path)){seen.add(path);paths.push(path)}};
+  const addSnapshot=snapshot=>{
+    addPath(snapshot.path);
+    if(snapshot.art?.presentation!=='cinematic')visibleCastForDirection(snapshot.direction).forEach(person=>addPath(runtimeAssetUrl(`characters/${stageAsset[person]}`)));
+  };
+  addSnapshot(current);
+  const addFlowAhead=(branchFlow,branchChoices)=>{
+    for(let offset=1;offset<=2;offset++){
+      if(position+offset<=branchFlow.length)addSnapshot(visualSnapshot(scene,branchFlow,position+offset,branchChoices));
+    }
+  };
+  if(flow[position]?.type==='choice'){
+    for(const option of flow[position].options.slice(0,4)){
+      const branchChoices={...choices,[flow[position].id]:option.code};
+      const branchFlow=compileInteractivePlayback(scene,branchChoices,locale);
+      addSnapshot(visualSnapshot(scene,branchFlow,position,branchChoices));
+      addFlowAhead(branchFlow,branchChoices);
+      const next=nextLiteraryScene(scene.id,branchChoices);
+      const nextScene=next?byId.get(next):null;
+      if(nextScene)addSnapshot(visualSnapshot(nextScene,compileInteractivePlayback(nextScene,branchChoices,locale),0,branchChoices));
+    }
+  }else{
+    addFlowAhead(flow,choices);
+  }
+  if(position>=flow.length-1){
+    const next=nextLiteraryScene(scene.id,choices);
+    const nextScene=next?byId.get(next):null;
+    if(nextScene)addSnapshot(visualSnapshot(nextScene,compileInteractivePlayback(nextScene,choices,locale),0,choices));
+  }
+  return paths.slice(0,12);
+}
+function pumpPreloadQueue(){
+  while(activePreloads<maxConcurrentPreloads&&preloadQueue.length){
+    const path=preloadQueue.shift();preloadQueued.delete(path);
+    if(imageCache.stats().paths.includes(path))continue;
+    activePreloads+=1;
+    imageCache.preload(path).catch(()=>{}).finally(()=>{activePreloads-=1;pumpPreloadQueue()});
+  }
+}
+function schedulePreload(paths,currentPath){
+  const desired=paths.filter(path=>path&&path!==currentPath).slice(0,maxQueuedPreloads);
+  const desiredSet=new Set(desired);
+  for(let index=preloadQueue.length-1;index>=0;index--){
+    if(!desiredSet.has(preloadQueue[index])){
+      preloadQueued.delete(preloadQueue[index]);
+      preloadQueue.splice(index,1);
+    }
+  }
+  for(const path of desired){
+    if(preloadQueued.has(path)||imageCache.stats().paths.includes(path))continue;
+    preloadQueued.add(path);preloadQueue.push(path);
+  }
+  pumpPreloadQueue();
 }
 function artMode(scene, entry, choices, isEnding) {
   const direction=visualAt(scene.id,entry,choices,stageForScene(scene.id,choices).cast);
@@ -370,17 +653,25 @@ function renderReader(){
   const flow=compileInteractivePlayback(scene,reader.choices,locale);reader.position=Math.min(reader.position,flow.at(-1)?.type==='choice'?Math.max(0,flow.length-1):flow.length);
   const isEnding=['S44','S45','S46','S47'].includes(scene.id);
   const mode=artMode(scene,flow[reader.position],reader.choices,isEnding);
-  app.className='literary-reader';app.dataset.presentation=mode;app.replaceChildren();
+  app.className='literary-reader';app.dataset.presentation=mode;app.dataset.scene=scene.id;
   const current=flow[reader.position];
-  const visualEntry=visualEntryForPosition(flow,reader.position);
-  const direction=visualAt(scene.id,visualEntry,reader.choices,stageForScene(scene.id,reader.choices).cast);
-  const art=direction.art;
-  const picture=el('','literary-picture');picture.setAttribute('aria-hidden','true');picture.dataset.presentation=mode;picture.dataset.mode=art?.presentation??(art?.type==='cg'?'cinematic':'environment');
-  picture.dataset.visualBeat=direction.beatId;picture.dataset.location=direction.location;picture.dataset.time=direction.time;
-  if(art){const file=assetFileForViewport(art);const img=el('','','img');img.src=`./assets/${art.type==='cg'?'cg':'backgrounds'}/${file}`;img.alt='';img.decoding='async';img.dataset.desktopAsset=art.file;img.dataset.asset=file;picture.append(img);picture.style.setProperty('--focus',focalPointByAsset[file]??focalPointByAsset[art.file]??'50% 50%');if(art.type==='cg'){picture.classList.add('is-cg');picture.style.setProperty('--cg-url',`url("${img.src}")`)}}
-  else picture.classList.add('no-art');
-  if(art?.presentation!=='cinematic') picture.append(renderStage({...direction,mode:direction.cast.length>2?'group':direction.cast.length===2?'pair':'solo',mood:stageForScene(scene.id,reader.choices).mood}));
-  picture.append(el('','literary-vignette'));app.append(picture);bindStageNavigation(picture);
+  const snapshot=visualSnapshot(scene,flow,reader.position,reader.choices);
+  const {direction,art,file,path}=snapshot;
+  const scenePicture=ensurePicture();
+  scenePicture.dataset.presentation=mode;scenePicture.dataset.mode=art?.presentation??(art?.type==='cg'?'cinematic':'environment');
+  scenePicture.dataset.visualBeat=direction.beatId;scenePicture.dataset.location=direction.location;scenePicture.dataset.time=direction.time;
+  lastViewportArtKey=path?`${art.type}:${path}`:'fallback';
+  if(art){
+    void artTransition.show({
+      path,
+      key:`${art.type}:${path}`,
+      attributes:{desktopAsset:art.file,asset:file},
+      metadata:{art,file,focus:focalPointByAsset[file]??focalPointByAsset[art.file]??'50% 50%'}
+    });
+  }else artTransition.cancel();
+  updateStage(direction,art);
+  schedulePreload(collectPreloadPaths(scene,flow,reader.position,reader.choices,snapshot),path);
+  app.replaceChildren(scenePicture);
   const header=el('','reader-header');
   const back=button(locale==='ru'?'Назад':'Back',rollbackNarrative,'small-button dialogue-back');back.disabled=!dialogueHistory.canRollback();
   header.append(button('☰ '+t('menu'),goHome,'small-button'),back,el(t('episode')+` ${scene.episode} / 10`,'chapter-index'),el(t('readerHeaderTitle'),'draft-indicator'));
@@ -407,7 +698,18 @@ function renderReader(){
     sheet.append(content);
   }else{
     const next=nextLiteraryScene(reader.sceneId,reader.choices);
-    if(next && byId.has(next))sheet.append(button(t('nextScene',{scene:next}),()=>{lastStageInput='none';lastPointerActivationAt=0;advanceNarrative()},'primary'));
+    if(next && byId.has(next)){
+      const nextEpisode=byId.get(next).episode>scene.episode;
+      const action=button(nextEpisode?t('nextEpisode',{episode:byId.get(next).episode}):t('nextScene',{scene:next}),()=>{
+        lastStageInput='none';lastPointerActivationAt=0;
+        if(nextEpisode){
+          action.disabled=true;action.setAttribute('aria-busy','true');
+          episodeTransitionController?.start(next);
+        }else advanceNarrative();
+      },nextEpisode?'primary episode-transition':'primary');
+      if(nextEpisode)action.dataset.episodeTransition='true';
+      sheet.append(action);
+    }
     else if(isEnding){
       if(!reader.finished){reader.finished=true;persist()}
       sheet.classList.add('terminal-sheet');
@@ -422,11 +724,35 @@ window.addEventListener('keydown',event=>{
   if(menuOpen || !['Enter',' ','Spacebar','ArrowRight'].includes(event.key) || event.altKey || event.ctrlKey || event.metaKey || isInteractiveTarget(event.target) || isInteractiveTarget(document.activeElement) || document.activeElement?.closest?.('[data-stage-advance]'))return;
   if(advanceNarrative())event.preventDefault();
 });
-window.addEventListener('pointerdown',()=>{audioDirector.unlock().catch(()=>{})},{passive:true});
-window.addEventListener('keydown',()=>{audioDirector.unlock().catch(()=>{})},{passive:true});
-document.addEventListener('visibilitychange',()=>{if(document.hidden)audioDirector.pause();else audioDirector.resume().catch(()=>{})});
+window.addEventListener('popstate',()=>{if(confirmDialog)settleConfirmDialog(false,{fromHistory:true})});
+let audioUnlockInFlight=false;
+function unlockAudioFromInteraction(){
+  if(audioUnlockInFlight || audioDirector.getState().unlocked)return;
+  audioUnlockInFlight=true;
+  audioDirector.unlock().catch(()=>{}).finally(()=>{audioUnlockInFlight=false});
+}
+window.addEventListener('pointerdown',unlockAudioFromInteraction,{passive:true});
+window.addEventListener('keydown',unlockAudioFromInteraction,{passive:true});
+function resumeAudioIfAllowed(){if(!platform?.isFullscreenAdActive?.())audioDirector.resume().catch(()=>{})}
+document.addEventListener('visibilitychange',()=>{if(document.hidden)audioDirector.pause();else resumeAudioIfAllowed()});
 window.addEventListener('blur',()=>audioDirector.pause());
-window.addEventListener('focus',()=>audioDirector.resume().catch(()=>{}));
+window.addEventListener('focus',resumeAudioIfAllowed);
+function scheduleViewportRefresh(){
+  if(menuOpen||viewportRefreshPending)return;
+  viewportRefreshPending=true;
+  const schedule=window.requestAnimationFrame??(callback=>setTimeout(callback,0));
+  schedule(()=>{
+    viewportRefreshPending=false;
+    if(menuOpen)return;
+    const scene=byId.get(reader.sceneId);if(!scene)return;
+    const flow=compileInteractivePlayback(scene,reader.choices,locale);
+    const snapshot=visualSnapshot(scene,flow,reader.position,reader.choices);
+    const key=snapshot.path?`${snapshot.art.type}:${snapshot.path}`:'fallback';
+    if(key!==lastViewportArtKey)renderReader();
+  });
+}
+window.addEventListener('resize',scheduleViewportRefresh,{passive:true});
+window.addEventListener('orientationchange',scheduleViewportRefresh,{passive:true});
 function renderBootFailure(error){
   platform?.setGameplayActive(false);
   app.className='literary-home';
@@ -440,7 +766,7 @@ applySettings();
 const bootHadLocal=hasSave;
 async function boot(){
  try{
-  const result=await initYandexPlatform({cloudKey:literaryCloudKey,onCloudState:raw=>{
+  const result=await initYandexPlatform({cloudKey:literaryCloudKey,onPause:()=>{app.dataset.platformPaused='true';audioDirector.pause()},onResume:()=>{delete app.dataset.platformPaused;resumeAudioIfAllowed()},onCloudState:raw=>{
    const candidate=parseSaved(raw);
    if(!candidate || cloudLocked)return;
    if(bootHadLocal || hasSave){cloudCandidate=candidate; if(menuOpen)renderMenu();return}
@@ -457,6 +783,8 @@ async function boot(){
   runtimeSeason=loadRuntimeSeason(locale,platform.qaLocaleOverride);
   byId=new Map(runtimeSeason.scenes.map(scene=>[scene.id,scene]));
   if(!byId.has(reader.sceneId))throw Error(`BLOCKED_EN_CORPUS_INCOMPLETE: missing scene ${reader.sceneId}`);
+  episodeTransitionController=createEpisodeTransitionController({getState:()=>reader,setState:next=>{reader=next},byId,persist,render:renderReader,showFullscreenAd:()=>platform?.showFullscreenAd?.()??false});
+  episodeTransitionController.resumePending({render:false});
   renderMenu();
   platform.setGameplayActive(!menuOpen);
   platform.markInteractiveReady();
@@ -478,14 +806,20 @@ window.__LITERARY_QA__={
   getPlatformMode:()=>platform?.mode??'booting',
   getPersistenceKeys:()=>({local:literarySaveKey,cloud:literaryCloudKey}),
   getScreen:()=>({menuOpen,sceneId:reader.sceneId,position:reader.position}),
+  getAudioState:()=>audioDirector.getState(),
+  getImagePreloadStats:()=>imageCache.stats(),
   getRuntimeTrace:()=>{
     const scene=byId.get(reader.sceneId),flow=compileInteractivePlayback(scene,reader.choices,locale),entry=flow[reader.position]??flow.at(-1)??null;
     const visualEntry=visualEntryForPosition(flow,reader.position);
-    const direction=visualAt(scene.id,visualEntry,reader.choices,stageForScene(scene.id,reader.choices).cast);
+    const authoredCast=stageForScene(scene.id,reader.choices).cast;
+    const direction=visualAt(scene.id,visualEntry,reader.choices,authoredCast);
+    const visibleCast=visibleCastForDirection(direction);
+    const castContract=visualCastContract(direction,{actualVisibleCast:visibleCast});
     const text=entry?.text??entry?.question??'';
     let hash=2166136261;for(const char of text)hash=Math.imul(hash^char.charCodeAt(0),16777619);
-    return {displayedPosition:`${reader.position+1}/${flow.length}`,sceneId:scene.id,entryId:entry?.id??null,entryType:entry?.type??null,sourceStartRef:entry?.sourceStartRef??null,sourceEndRef:entry?.sourceEndRef??null,dialogueHash:(hash>>>0).toString(16),speaker:null,platformMode:platform?.mode??'booting',revision:reader.revision,choiceState:structuredClone(reader.choices),location:direction.location,visualBeat:direction.beatId,background:direction.art?.file??null,cast:direction.cast,stage:stageForScene(scene.id,reader.choices)};
+    return {displayedPosition:`${reader.position+1}/${flow.length}`,sceneId:scene.id,entryId:entry?.id??null,entryType:entry?.type??null,sourceStartRef:entry?.sourceStartRef??null,sourceEndRef:entry?.sourceEndRef??null,dialogueHash:(hash>>>0).toString(16),speaker:null,platformMode:platform?.mode??'booting',revision:reader.revision,choiceState:structuredClone(reader.choices),location:direction.location,time:direction.time,visualBeat:direction.beatId,background:direction.art?.file??null,artType:direction.art?.type??null,authoredCast:castContract.authoredCast,physicallyPresentCast:castContract.physicallyPresentCast,requiredVisibleCast:castContract.requiredVisibleCast,actualVisibleCast:castContract.actualVisibleCast,offscreenAllowedCast:castContract.offscreenAllowedCast,visualEvidence:castContract.visualEvidence,requiredCast:direction.requiredCast??[],visibleCast,cast:direction.cast,stage:stageForScene(scene.id,reader.choices)};
   },
   // QA methods are strictly read-only; preview and the old game have separate state keys.
 };
 boot();
+window.addEventListener('beforeunload',()=>{if(!reader.finished||hasSave)persist();platform?.dispose?.()});

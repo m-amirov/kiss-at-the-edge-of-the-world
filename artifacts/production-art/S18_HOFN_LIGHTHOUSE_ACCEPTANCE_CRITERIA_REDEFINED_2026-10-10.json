@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "recordType": "s18-narrative-visual-acceptance-criteria-redefinition",
+  "status": "OWNER_APPROVED",
+  "date": "2026-10-10",
+  "sceneId": "S18",
+  "cue": "hofn-lighthouse",
+  "sourceAddress": "[0,5]",
+  "acceptanceRunId": "2026-10-10T07-13-02-116Z-production-art-630841",
+  "sourceHeadBeforeAcceptance": "ca9b4e2ba637824bc8503414bdec4854a63f2c5f",
+  "ownerDecision": "REDEFINE_ACCEPTANCE_CRITERIA",
+  "historicalVerdictsPreserved": [
+    "2026-10-09T23-38-07-504Z-production-art-dee0e9: FAIL/MAX_CYCLES_REACHED",
+    "2026-10-10T06-37-32-206Z-production-art-569a43: BLOCKED generation-output recovery",
+    "2026-10-10T06-53-15-295Z-production-art-91ddab: BLOCKED_REWORK at VISUAL_VERIFIED"
+  ],
+  "historicalFindingsPreserved": [
+    "S18-360-props: previous midpoint Web High finding that simultaneous cup/thermos readability was insufficient at 360x640",
+    "S18-MOBILE-GROUNDING-001: previous grounding finding remains historical evidence, not silently reclassified"
+  ],
+  "narrativeBasis": {
+    "requiredAtCue": [
+      "Alice and Eric are the only active pair",
+      "quiet mutual gaze and emotionally readable interaction",
+      "natural adult anatomy and non-coercive posture",
+      "Höfn harbour/lighthouse setting with understandable dry quay or waterfront edge",
+      "no visual impression that either character stands in the water"
+    ],
+    "propSemantics": "Thermoses establish the walk and tea context in S18 paragraphs [0,0]-[0,2]. Direct prop actions are separately authored at [0,9], [0,34], [0,38] and [0,44]. Simultaneous individual recognition of both vessels is therefore not a universal 360x640 blocker when the active line does not require it.",
+    "protectedLaterPropCues": ["S18:[0,9]", "S18:[0,34]", "S18:[0,38]", "S18:[0,44]", "S18:[4,1]", "S18:[6,0]"]
+  },
+  "viewportCriteria": {
+    "1920x900": [
+      "Preserve the existing desktop CG and its current asset identity",
+      "Faces, mutual gaze, hands and natural interaction are readable",
+      "Both characters are visibly grounded on a quay/promenade; water is beyond or below the edge",
+      "Dialogue remains readable with unchanged contrast"
+    ],
+    "390x844": [
+      "Faces, mutual gaze, hands and emotional interaction remain readable",
+      "Waterfront/quay logic is understandable without requiring the full floor",
+      "Cup and thermos should remain consistent when visible, but simultaneous recognition is not mandatory unless the active cue directly depends on it",
+      "Dialogue remains readable with unchanged contrast"
+    ],
+    "360x640": [
+      "Faces, mutual gaze, natural gestures and emotional interaction remain readable above dialogue",
+      "Visible harbour/quay/edge cues prevent an impression of standing in water",
+      "Cup and thermos may be partially hidden by the dialogue overlay when the active line does not directly require a prop action",
+      "A prop becomes mandatory for cues where the authored text directly shows interaction with it",
+      "Dialogue contrast and readability remain unchanged"
+    ]
+  },
+  "nonGoals": [
+    "no CG replacement",
+    "no CSS or gradient changes",
+    "no runtime or dialogue changes",
+    "no new generation",
+    "no reinterpretation of prior FAIL/BLOCKED/REWORK as PASS"
+  ],
+  "passRule": "PASS only if all viewport criteria pass on fresh current-HEAD runtime pixels and three independent Web High roles; any objective visual defect, missing pixels, or unresolved reviewer finding remains BLOCKED."
+}

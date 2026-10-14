@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "phase": "midpoint",
+  "recordType": "web-high-art-review",
+  "standard": "HOST_OBSERVED_ART_ACCEPTANCE_V1",
+  "hostAgentId": "01a12f12-e11a-7550-9077-6e1eee5ab2b0",
+  "sourceHead": "257d3f87a5803c95763ff4e0b35af2624e2cfbc5",
+  "scene": "S65",
+  "candidate": 1,
+  "actualPixelsReceived": true,
+  "reviewedItems": ["S65-repair-candidate1-desktop"],
+  "visualEvidence": [{"ref":"S65-repair-candidate1-desktop.png","sceneId":"S65","viewport":"1672x941 source CG","path":"artifacts/production-art/candidates/S65-repair-candidate1-desktop.png","sha256":"c11840a8776c809c447a631171dd5101442f0f751e542c5070114e12b9db894d","observation":"Коридор и напольная группа видны; Дамир в зелёной куртке режет помидоры, а Ник справа в основном держит кружку; закрытая дверь не читается однозначно как дверь кухни."}],
+  "status": "REWORK",
+  "findings": [
+    {"id":"S65-C1-P1-LOCATION","severity":"P1","category":"location_continuity","detail":"Коридор убедителен, но принадлежность закрытой двери кухне визуально не установлена."},
+    {"id":"S65-C1-P1-ACTION","severity":"P1","category":"action_attribution","detail":"Дамир режет помидоры, но роль Ника как организатора ужина не выражена; он наблюдает с кружкой."},
+    {"id":"S65-C1-P2-SUITCASE","severity":"P2","category":"prop_continuity","detail":"Перевёрнутое положение чемодана недостаточно очевидно."},
+    {"id":"S65-C1-P2-MOBILE","severity":"P2","category":"mobile_safe_composition","detail":"Широкая desktop-группа потребует отдельной компактной portrait-композиции."}
+  ],
+  "preservedPasses":["character identity cues","grounding and anatomy","lighting and style","emotion","no baked text or obvious generative artifacts"],
+  "secondCandidateJustified": true,
+  "preciseCorrection": ["Make the closed door unmistakably part of a kitchen service zone without readable text.","Have Nick actively arrange bread/cheese/containers on the suitcase; keep tomato slicing solely with Damir.","Clarify the overturned suitcase while preserving floor grounding and four-person identity."],
+  "acceptance": {"desktop":"REWORK","mobileRuntime":"NOT_VERIFIED","fullProductionAcceptance":"NOT_VERIFIED"}
+}

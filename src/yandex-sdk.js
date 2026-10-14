@@ -27,7 +27,7 @@ function loadSdkScript({ document = globalThis.document, window = globalThis.win
 export function resetYandexSdkForTests() { sdkLoadPromise = null; }
 function localPlatform(locale, diagnostic, qaLocaleOverride = null) {
   diagnostic('sdk', 'local-fallback');
-  return { mode:'local-fallback', locale, language:locale, qaLocaleOverride, markInteractiveReady(){}, setGameplayActive(){}, save:async()=>false, showFullscreenAd:async()=>false, dispose(){} };
+  return { mode:'local-fallback', locale, language:locale, qaLocaleOverride, markInteractiveReady(){}, setGameplayActive(){}, save:async()=>false, showFullscreenAd:async()=>false, isFullscreenAdActive:()=>false, dispose(){} };
 }
 export async function initYandexPlatform({ onCloudState, onLanguage, onPause, onResume, onDiagnostic, cloudKey=CLOUD_KEY, location=globalThis.location, document=globalThis.document, window=globalThis.window }={}) {
   const events=[];
@@ -44,14 +44,16 @@ export async function initYandexPlatform({ onCloudState, onLanguage, onPause, on
   let player=null;
   try { player=await ysdk.getPlayer();diagnostic('player','ready');const cloud=await player.getData?.([cloudKey]);diagnostic('cloud-read','success');if(cloud?.[cloudKey]!==undefined)onCloudState?.(cloud[cloudKey]); }
   catch(error){diagnostic('cloud-read','failed',error?.message||String(error));}
-  let readySent=false,gameplayWanted=false,platformPaused=false,gameplayReported=false;
-  const syncGameplay=()=>{const active=gameplayWanted&&!platformPaused;if(active===gameplayReported)return;gameplayReported=active;ysdk.features?.GameplayAPI?.[active?'start':'stop']?.();diagnostic('gameplay',active?'started':'stopped');};
-  const pause=()=>{platformPaused=true;syncGameplay();onPause?.();};const resume=()=>{platformPaused=false;syncGameplay();onResume?.();};ysdk.on?.('game_api_pause',pause);ysdk.on?.('game_api_resume',resume);
+  let readySent=false,gameplayWanted=false,platformPaused=false,adActive=false,gameplayReported=false,pauseReported=false;
+  const safeHook=(hook,area)=>{try{hook?.();}catch(error){diagnostic(area,'callback-failed',error?.message||String(error));}};
+  const syncLifecycle=()=>{const paused=platformPaused||adActive;if(paused!==pauseReported){pauseReported=paused;safeHook(paused?onPause:onResume,'lifecycle');}const active=gameplayWanted&&!paused;if(active===gameplayReported)return;gameplayReported=active;ysdk.features?.GameplayAPI?.[active?'start':'stop']?.();diagnostic('gameplay',active?'started':'stopped');};
+  const pause=()=>{platformPaused=true;syncLifecycle();};const resume=()=>{platformPaused=false;syncLifecycle();};ysdk.on?.('game_api_pause',pause);ysdk.on?.('game_api_resume',resume);
   return {mode:'yandex',locale,language:locale,qaLocaleOverride:null,diagnostics:events,
     markInteractiveReady(){if(readySent)return false;readySent=true;ysdk.features?.LoadingAPI?.ready?.();diagnostic('loading','ready');return true;},
-    setGameplayActive(active){gameplayWanted=Boolean(active);syncGameplay();},
+    setGameplayActive(active){gameplayWanted=Boolean(active);syncLifecycle();},
     async save(state){if(!player?.setData){diagnostic('cloud-write','unavailable');return false;}try{await player.setData({[cloudKey]:state},false);diagnostic('cloud-write','success');return true;}catch(error){diagnostic('cloud-write','failed',error?.message||String(error));return false;}},
-    showFullscreenAd:()=>new Promise(resolve=>{const show=ysdk.adv?.showFullscreenAdv;if(!show){resolve(false);return;}const resumeAfter=gameplayWanted;platformPaused=true;syncGameplay();show.call(ysdk.adv,{callbacks:{onClose:()=>{platformPaused=false;gameplayWanted=resumeAfter;syncGameplay();resolve(true);},onError:()=>{platformPaused=false;gameplayWanted=resumeAfter;syncGameplay();resolve(false);}}});}),
+    showFullscreenAd:()=>new Promise(resolve=>{const show=ysdk.adv?.showFullscreenAdv;if(typeof show!=='function'){diagnostic('ad','unavailable');resolve(false);return;}let settled=false;const finish=result=>{if(settled)return;settled=true;adActive=false;syncLifecycle();resolve(Boolean(result));};adActive=true;syncLifecycle();try{const returned=show.call(ysdk.adv,{callbacks:{onOpen:()=>diagnostic('ad','opened'),onClose:wasShown=>finish(wasShown),onError:error=>{diagnostic('ad','failed',error?.message||String(error));finish(false);}}});if(returned?.then)returned.catch(error=>{diagnostic('ad','failed',error?.message||String(error));finish(false);});}catch(error){diagnostic('ad','failed',error?.message||String(error));finish(false);}}),
+    isFullscreenAdActive:()=>adActive,
     dispose(){ysdk.off?.('game_api_pause',pause);ysdk.off?.('game_api_resume',resume);}
   };
 }

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "phase": "generation",
+  "sourceHead": "1eb41c69495326b86f699570ec8c6efeab2558e9",
+  "runId": "2026-10-12T07-05-14-445Z-production-art-cdc283",
+  "capabilityAttestation": {
+    "capability": "image-generation",
+    "presence": "PRESENT",
+    "serviceAvailability": "UNKNOWN",
+    "observedTool": "image_gen.imagegen",
+    "trustScope": "run-session-turn",
+    "attestationFile": ".ceos-runs/2026-10-12T07-05-14-445Z-production-art-cdc283/capability-attestation/image-generation.json"
+  },
+  "producerContext": "parent-native-current-turn",
+  "repairScope": "S07 only; desktop and portrait CG variants",
+  "outputs": [
+    {"cue":"S07","variant":"desktop","path":"assets/cg/s07-kitchen-pasta.png","sha256":"2411f80a3cef842cfd6dc3911f4eae091f4cc32d363e6f001456bb4a390f12c4","dimensions":"1672x941","kind":"background","alpha":"opaque","outputVerification":"PASS_ART_OUTPUT_MECHANICAL","generatorOutput":"C:/Users/user/.codex/generated_images/01a12ec0-d36b-7252-86c7-acfc6756e664/exec-d889cc91-0db3-4664-8d3d-c8bc56c030e9.png"},
+    {"cue":"S07","variant":"portrait","path":"assets/cg/s07-kitchen-pasta-portrait.png","sha256":"7fcb46ffc37d769bdd4c9848b448da918cee3bdf0eb60ef5899e9b34cd857d81","dimensions":"941x1672","kind":"background","alpha":"opaque","outputVerification":"PASS_ART_OUTPUT_MECHANICAL","generatorOutput":"C:/Users/user/.codex/generated_images/01a12ec0-d36b-7252-86c7-acfc6756e664/exec-ad6d8684-d79c-46da-bf1c-706558e43f96.png"}
+  ],
+  "compositionAssertions": ["Alice remains at the pot and is the addressed participant.","Nick is immediately beside Alice with visible face and sole stop gesture owner.","Eric is blond and supporting; Damir is separated with dark hair and burgundy scarf.","No prose, stage mapping, route, SDK, save, advertisement, or unrelated scene was changed."]
+}

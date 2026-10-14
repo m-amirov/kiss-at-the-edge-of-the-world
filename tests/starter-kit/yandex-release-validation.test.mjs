@@ -69,9 +69,9 @@ function validate(videos, options = {}) {
   });
 }
 
-test('official numbered registry matches the reviewed 29 September 2026 revision and preserves repealed clauses', () => {
+test('official numbered registry matches the reviewed 9 October 2026 revision and preserves repealed clauses', () => {
   const registry = fs.readFileSync(path.join(ROOT, 'config', 'yandex-requirements.yaml'), 'utf8');
-  const result = auditRequirementRegistryText(registry, { reviewedAt: '2026-09-30' });
+  const result = auditRequirementRegistryText(registry, { reviewedAt: '2026-10-11' });
   assert.deepEqual(result.errors, []);
   assert.equal(result.requirementCount, 149);
   assert.deepEqual(result.repealedIds, [

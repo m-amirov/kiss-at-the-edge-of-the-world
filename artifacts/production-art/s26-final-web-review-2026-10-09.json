@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "recordType": "four-scene-art-repair-web-review",
+  "sceneId": "S26",
+  "cue": "scene-start",
+  "reviewer": "ceos_art_director_web / GPT-6 Sol High",
+  "transportAgentId": "01a11f37-02a7-76d1-be4b-f1c543ab1da1",
+  "taskId": null,
+  "reviewTraceId": null,
+  "sourceHead": "a2308054c338b53ecf2310a1bee44e6f5e54f02a",
+  "actualPixelsReceived": true,
+  "actualPixelsCount": 2,
+  "reviewedEvidence": [
+    "artifacts/evidence/four-scene-art-repair-after-final7-2026-10-09/S26-scene-start-ru-1920x900.png",
+    "artifacts/evidence/four-scene-art-repair-after-final7-2026-10-09/S26-scene-start-ru-390x844.png"
+  ],
+  "strictVerdict": "PASS",
+  "observations": "Desktop and portrait match the blackout beat: one entry lamp, notebook on the sill and the map/butter-stain detail above the dialogue-safe area; the later courtyard cue remains separately mapped.",
+  "metadataGap": "Final reviewer response did not expose taskId or reviewTraceId. transportAgentId is recorded and is not a substitute for either required ID."
+}

@@ -29,7 +29,8 @@ async function exerciseChoiceBoundary(page,first,second){
  assert.equal(before.entryType,'choice',scenario);
  assert.equal(before.choiceState['S02-C91'],undefined,scenario);
  assert.equal(before.location,'Придорожное кафе',scenario);
- assert.equal(before.background,'s02-roadside-cafe.webp',scenario);
+ assert.equal(before.background,'s02-roadside-cafe-group.webp',scenario);
+ assert.deepEqual(before.visibleCast,['alice','eric','nick','damir'],scenario);
  assert.notEqual(before.platformMode,'yandex',scenario);
  await page.evaluate(key=>{
    const original=Storage.prototype.setItem;
@@ -41,7 +42,8 @@ async function exerciseChoiceBoundary(page,first,second){
  assert.equal(afterFirst.choiceState['S02-C91'],first,scenario);
  assert.match(afterFirst.displayedPosition,/^25\/37$/,scenario);
  assert.equal(afterFirst.location,'Придорожное кафе',scenario);
- assert.equal(afterFirst.background,'s02-roadside-cafe.webp',scenario);
+ assert.equal(afterFirst.background,'s02-roadside-cafe-group.webp',scenario);
+ assert.deepEqual(afterFirst.visibleCast,['alice','eric','nick','damir'],scenario);
  assert.equal(await page.evaluate(()=>window.__EP1_SAVE_WRITES__.count),1,scenario);
  await page.getByRole('button',{name:/Назад/}).click();
  const rolledBack=await rawTrace(page,scenario,'rolled-back');
@@ -57,13 +59,15 @@ async function exerciseChoiceBoundary(page,first,second){
  assert.notEqual(afterSecond.choiceState['S02-C91'],first,scenario);
  assert.notEqual(afterSecond.dialogueHash,afterFirst.dialogueHash,scenario);
  assert.equal(afterSecond.location,'Придорожное кафе',scenario);
- assert.equal(afterSecond.background,'s02-roadside-cafe.webp',scenario);
+ assert.equal(afterSecond.background,'s02-roadside-cafe-group.webp',scenario);
+ assert.deepEqual(afterSecond.visibleCast,['alice','eric','nick','damir'],scenario);
  assert.equal(await page.evaluate(()=>window.__EP1_SAVE_WRITES__.count),2,scenario);
  await page.locator('[data-stage-advance]').click();
  const continued=await rawTrace(page,scenario,'continued-once');
  assert.equal(continued.displayedPosition,'26/37',scenario);
  assert.equal(continued.location,'Придорожное кафе',scenario);
- assert.equal(continued.background,'s02-roadside-cafe.webp',scenario);
+ assert.equal(continued.background,'s02-roadside-cafe-group.webp',scenario);
+ assert.deepEqual(continued.visibleCast,['alice','eric','nick','damir'],scenario);
 }
 const browser=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true});
 try{

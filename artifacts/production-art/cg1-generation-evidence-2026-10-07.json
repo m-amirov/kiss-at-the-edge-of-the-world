@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "runId": "2026-10-07T15-17-33-578Z-production-art-f7cb94",
+  "baseline": "7899a736750baea4b83f6abee951d219a35dbbee",
+  "item": "CG-1",
+  "scene": "S44",
+  "cue": "eric-morning-harbour",
+  "occurrences": ["O070", "O071"],
+  "visualReview": {
+    "result": "PASS",
+    "basis": "actual generated desktop and portrait pixels inspected in current turn",
+    "checks": ["integrated two-shot", "both faces readable", "farewell proximity reads", "harbour present but subordinate", "no stage overlay", "no readable generated text", "portrait-safe framing"]
+  },
+  "assets": [
+    {"path":"assets/cg/s44-eric-morning-harbour.png","dimensions":"1832x858","sha256":"852DB6471BAB43E05576E38BCC6D6DB2275330F2EFF7987DDE521669487D38E5","role":"generated source"},
+    {"path":"assets/cg/s44-eric-morning-harbour-portrait.png","dimensions":"941x1672","sha256":"FAB95B8844E318CD68436B2C28680C80643E9BBF84B5BF8173402320D5CC205E","role":"generated portrait derivative"},
+    {"path":"assets/cg/s44-eric-morning-harbour.webp","dimensions":"1920x900","sha256":"1D23D8D6E10B567499A474B31D5FF86CC8F9DF2F797E417DAB4E271EBDF23EE5","role":"production desktop derivative"},
+    {"path":"assets/cg/s44-eric-morning-harbour-portrait.webp","dimensions":"941x1672","sha256":"E399044851181144542C989A20DC21508EBCFCF2F594A27AB881847FB917DCE1","role":"production portrait derivative"}
+  ],
+  "mapping": "src/literary-visual-directions.js S44/eric-morning-harbour -> cg/s44-eric-morning-harbour.webp"
+}

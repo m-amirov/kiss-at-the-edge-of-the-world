@@ -1,0 +1,368 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "generatedAt": "2026-10-08T11:10:53.165Z",
+  "currentHead": "f6c2d06ab42beee9c5db98d2da71b6f2be69623a",
+  "baseUrl": "http://127.0.0.1:4174/literary.html",
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1920,
+      "height": 900
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "name": "mobile-small",
+      "width": 360,
+      "height": 640
+    }
+  ],
+  "captures": [
+    {
+      "scenario": "new-game-confirm",
+      "locale": "ru",
+      "view": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\artifacts\\evidence\\confirm-dialog-runtime\\new-game-ru-desktop.png",
+      "screenshotSha256": "a5f390be6e671dacb4ee6aa404d0e39e5fdbcb6374c72053ba6bb6a8e771ee53",
+      "screenshotBytes": 412015,
+      "opened": {
+        "open": true,
+        "ariaModal": "true",
+        "labelledBy": "confirm-dialog-title-1791457853615",
+        "describedBy": "confirm-dialog-message-1791457853615",
+        "appInert": true,
+        "appAriaHidden": "true",
+        "activeAction": "cancel",
+        "buttonCount": 2,
+        "overflow": false,
+        "dialogRect": {
+          "left": 700,
+          "top": 308.546875,
+          "right": 1220,
+          "bottom": 591.453125,
+          "width": 520,
+          "height": 282.90625
+        }
+      },
+      "errors": [],
+      "missing": []
+    },
+    {
+      "scenario": "new-game-confirm",
+      "locale": "ru",
+      "view": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\artifacts\\evidence\\confirm-dialog-runtime\\new-game-ru-mobile.png",
+      "screenshotSha256": "577a71c9bfa767dc64ad2e0c1ae0a31cc3a80acc6de1a96f48a0da5616616782",
+      "screenshotBytes": 97223,
+      "opened": {
+        "open": true,
+        "ariaModal": "true",
+        "labelledBy": "confirm-dialog-title-1791457854766",
+        "describedBy": "confirm-dialog-message-1791457854766",
+        "appInert": true,
+        "appAriaHidden": "true",
+        "activeAction": "cancel",
+        "buttonCount": 2,
+        "overflow": false,
+        "dialogRect": {
+          "left": 16,
+          "top": 256.234375,
+          "right": 374,
+          "bottom": 587.765625,
+          "width": 358,
+          "height": 331.53125
+        }
+      },
+      "errors": [],
+      "missing": []
+    },
+    {
+      "scenario": "new-game-confirm",
+      "locale": "ru",
+      "view": {
+        "name": "mobile-small",
+        "width": 360,
+        "height": 640
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\artifacts\\evidence\\confirm-dialog-runtime\\new-game-ru-mobile-small.png",
+      "screenshotSha256": "32998e2c2034fe669abd38548a4b5d0722ca5bd94e75991c8b05ad6833733586",
+      "screenshotBytes": 81297,
+      "opened": {
+        "open": true,
+        "ariaModal": "true",
+        "labelledBy": "confirm-dialog-title-1791457855655",
+        "describedBy": "confirm-dialog-message-1791457855655",
+        "appInert": true,
+        "appAriaHidden": "true",
+        "activeAction": "cancel",
+        "buttonCount": 2,
+        "overflow": false,
+        "dialogRect": {
+          "left": 16,
+          "top": 157.28125,
+          "right": 344,
+          "bottom": 482.71875,
+          "width": 328,
+          "height": 325.4375
+        }
+      },
+      "errors": [],
+      "missing": []
+    },
+    {
+      "scenario": "new-game-confirm",
+      "locale": "en",
+      "view": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\artifacts\\evidence\\confirm-dialog-runtime\\new-game-en-desktop.png",
+      "screenshotSha256": "7cd6e8479be21b0799cdf790bd48421a7c8a2f1be70d98340263d4f7d6f3369e",
+      "screenshotBytes": 419041,
+      "opened": {
+        "open": true,
+        "ariaModal": "true",
+        "labelledBy": "confirm-dialog-title-1791457856521",
+        "describedBy": "confirm-dialog-message-1791457856521",
+        "appInert": true,
+        "appAriaHidden": "true",
+        "activeAction": "cancel",
+        "buttonCount": 2,
+        "overflow": false,
+        "dialogRect": {
+          "left": 700,
+          "top": 308.546875,
+          "right": 1220,
+          "bottom": 591.453125,
+          "width": 520,
+          "height": 282.90625
+        }
+      },
+      "errors": [],
+      "missing": []
+    },
+    {
+      "scenario": "new-game-confirm",
+      "locale": "en",
+      "view": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\artifacts\\evidence\\confirm-dialog-runtime\\new-game-en-mobile.png",
+      "screenshotSha256": "1400fede4ca9cbbf89fbe5f4301e97f0d7c1732d5141d21e84b834295c40828f",
+      "screenshotBytes": 95233,
+      "opened": {
+        "open": true,
+        "ariaModal": "true",
+        "labelledBy": "confirm-dialog-title-1791457857622",
+        "describedBy": "confirm-dialog-message-1791457857622",
+        "appInert": true,
+        "appAriaHidden": "true",
+        "activeAction": "cancel",
+        "buttonCount": 2,
+        "overflow": false,
+        "dialogRect": {
+          "left": 16,
+          "top": 276.109375,
+          "right": 374,
+          "bottom": 567.875,
+          "width": 358,
+          "height": 291.765625
+        }
+      },
+      "errors": [],
+      "missing": []
+    },
+    {
+      "scenario": "new-game-confirm",
+      "locale": "en",
+      "view": {
+        "name": "mobile-small",
+        "width": 360,
+        "height": 640
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\artifacts\\evidence\\confirm-dialog-runtime\\new-game-en-mobile-small.png",
+      "screenshotSha256": "8ed73b8115fae8726daf0b0ec57868a8a92eae125c22229ec74af45cc8e3adfa",
+      "screenshotBytes": 79488,
+      "opened": {
+        "open": true,
+        "ariaModal": "true",
+        "labelledBy": "confirm-dialog-title-1791457858494",
+        "describedBy": "confirm-dialog-message-1791457858494",
+        "appInert": true,
+        "appAriaHidden": "true",
+        "activeAction": "cancel",
+        "buttonCount": 2,
+        "overflow": false,
+        "dialogRect": {
+          "left": 16,
+          "top": 175.640625,
+          "right": 344,
+          "bottom": 464.359375,
+          "width": 328,
+          "height": 288.71875
+        }
+      },
+      "errors": [],
+      "missing": []
+    },
+    {
+      "scenario": "cloud-restore-confirm",
+      "locale": "en",
+      "view": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-release-final-rc-2026-10-08\\artifacts\\evidence\\confirm-dialog-runtime\\cloud-restore-en-mobile.png",
+      "screenshotSha256": "9b27ee002a160c019328d13c9b7abd2f5dfdfdc4b0dd3ea63249a34697212409",
+      "screenshotBytes": 96068,
+      "opened": {
+        "open": true,
+        "ariaModal": "true",
+        "labelledBy": "confirm-dialog-title-1791457859782",
+        "describedBy": "confirm-dialog-message-1791457859782",
+        "appInert": true,
+        "appAriaHidden": "true",
+        "activeAction": "cancel",
+        "buttonCount": 2,
+        "overflow": false,
+        "dialogRect": {
+          "left": 16,
+          "top": 276.109375,
+          "right": 374,
+          "bottom": 567.875,
+          "width": 358,
+          "height": 291.765625
+        }
+      },
+      "errors": [],
+      "missing": []
+    }
+  ],
+  "scenarios": [
+    {
+      "scenario": "new-game",
+      "locale": "ru",
+      "view": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "cancel": true,
+      "escape": true,
+      "back": true,
+      "touchConfirmOnce": true,
+      "saveLoad": true
+    },
+    {
+      "scenario": "new-game",
+      "locale": "ru",
+      "view": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "cancel": true,
+      "escape": true,
+      "back": true,
+      "touchConfirmOnce": true,
+      "saveLoad": true
+    },
+    {
+      "scenario": "new-game",
+      "locale": "ru",
+      "view": {
+        "name": "mobile-small",
+        "width": 360,
+        "height": 640
+      },
+      "cancel": true,
+      "escape": true,
+      "back": true,
+      "touchConfirmOnce": true,
+      "saveLoad": true
+    },
+    {
+      "scenario": "new-game",
+      "locale": "en",
+      "view": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "cancel": true,
+      "escape": true,
+      "back": true,
+      "touchConfirmOnce": true,
+      "saveLoad": true
+    },
+    {
+      "scenario": "new-game",
+      "locale": "en",
+      "view": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "cancel": true,
+      "escape": true,
+      "back": true,
+      "touchConfirmOnce": true,
+      "saveLoad": true
+    },
+    {
+      "scenario": "new-game",
+      "locale": "en",
+      "view": {
+        "name": "mobile-small",
+        "width": 360,
+        "height": 640
+      },
+      "cancel": true,
+      "escape": true,
+      "back": true,
+      "touchConfirmOnce": true,
+      "saveLoad": true
+    },
+    {
+      "scenario": "episode-replay",
+      "locale": "ru",
+      "view": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "cancel": true,
+      "confirm": true,
+      "semantics": "episode-start-and-later-choice-reset"
+    },
+    {
+      "scenario": "cloud-restore",
+      "locale": "en",
+      "view": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "cancel": true,
+      "confirm": true,
+      "saveLoad": true
+    }
+  ],
+  "failures": []
+}

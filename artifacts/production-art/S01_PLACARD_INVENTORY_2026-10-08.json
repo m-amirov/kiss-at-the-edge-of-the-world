@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "status": "INVENTORIED",
+  "runId": "2026-10-08T17-21-04-993Z-production-art-c6e9de",
+  "sourceHead": "6e9a546c187ca6fec9bf4a413bdd1a6139756c91",
+  "scope": {
+    "scene": "S01",
+    "cue": "nick-arrives",
+    "authoredAddress": { "chunk": 0, "paragraph": 4 },
+    "sourceRefs": {
+      "ru": "content/season-1-vertical-slice-episodes-01-02.md:17",
+      "en": "src/literary-localization-bundle.js:S01.C000.P004"
+    },
+    "requiredCast": ["alice", "nick"],
+    "requiredAction": "Nick physically holds the wet cardboard placard in one hand; camera remains on his neck; Alice remains in the airport arrival composition.",
+    "localizedText": {
+      "ru": "АЛИСА, ЖУРНАЛИСТ",
+      "en": "ALICE, JOURNALIST"
+    },
+    "excludedNeighbor": {
+      "cue": "airport-outside",
+      "authoredAddress": { "chunk": 0, "paragraph": 16 },
+      "contract": "Nick is explicitly without a sign and camera; existing airport-outside CG must remain unchanged."
+    }
+  },
+  "baselineFinding": {
+    "visualMapping": "No art mapping on nick-arrives; runtime uses keflavik-airport-arrivals-v1.webp plus Alice/Nick stage cut-outs.",
+    "runtimeEvidence": "artifacts/evidence/s01-placard-2026-10-08/before/evidence.json",
+    "requiredViewportMatrix": ["1920x900", "360x640", "390x844", "412x915"],
+    "locales": ["ru", "en"],
+    "captures": 24,
+    "visualDefect": "The authored paragraph describes a physical placard, but the current pixels show Nick without one."
+  },
+  "referenceInputs": [
+    { "path": "assets/characters/nick-master.png", "role": "Nick identity, wardrobe and camera reference" },
+    { "path": "assets/characters/alice-stage.png", "role": "Alice identity, wardrobe and composition reference" },
+    { "path": "assets/backgrounds/keflavik-airport-arrivals-v1.png", "role": "Airport arrival environment and lighting reference" },
+    { "path": "assets/cg/s01-airport-outside-batch2.png", "role": "Adjacent S01 weather, airport and character continuity reference only; do not replace or remap" }
+  ],
+  "plannedDeliverables": [
+    { "locale": "ru", "desktop": "assets/cg/s01-nick-arrives-placard-ru.png", "portrait": "assets/cg/s01-nick-arrives-placard-ru-portrait.png", "text": "АЛИСА, ЖУРНАЛИСТ" },
+    { "locale": "en", "desktop": "assets/cg/s01-nick-arrives-placard-en.png", "portrait": "assets/cg/s01-nick-arrives-placard-en-portrait.png", "text": "ALICE, JOURNALIST" }
+  ],
+  "mutationBoundary": "Only the localized S01 placard asset family, its exact cue mapping, manifest/provenance/readback evidence, focused QA harness and scoped tests may change."
+}

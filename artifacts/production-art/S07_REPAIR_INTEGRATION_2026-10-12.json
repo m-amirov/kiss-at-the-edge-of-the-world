@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "phase": "integration",
+  "sourceHead": "1eb41c69495326b86f699570ec8c6efeab2558e9",
+  "runId": "2026-10-12T07-05-14-445Z-production-art-cdc283",
+  "buildTimeTranscodeContract": {"format":"WEBP","quality":90,"method":6,"lossless":false,"dimensionsChanged":false},
+  "mapping": {
+    "manifest": "assets/asset-manifest.json",
+    "desktopRuntimePath": "assets/cg/s07-kitchen-pasta.webp",
+    "portraitRuntimePath": "assets/cg/s07-kitchen-pasta-portrait.webp",
+    "sourceMappingChanged": false,
+    "stagePresentationChanged": false
+  },
+  "assets": [
+    {"sourcePath":"assets/cg/s07-kitchen-pasta.png","sourceSha256":"2411f80a3cef842cfd6dc3911f4eae091f4cc32d363e6f001456bb4a390f12c4","sourceDimensions":"1672x941","sourceAlpha":false,"runtimePath":"assets/cg/s07-kitchen-pasta.webp","runtimeSha256":"69b73a9c7e425974f83d55edf2a57b18de79bb76a425fe470f67ce595918103c","runtimeDimensions":"1672x941","runtimeAlpha":false},
+    {"sourcePath":"assets/cg/s07-kitchen-pasta-portrait.png","sourceSha256":"7fcb46ffc37d769bdd4c9848b448da918cee3bdf0eb60ef5899e9b34cd857d81","sourceDimensions":"941x1672","sourceAlpha":false,"runtimePath":"assets/cg/s07-kitchen-pasta-portrait.webp","runtimeSha256":"817277c545fb46f4e4718e8aa2631a65d449b38ac84238629a531a01a0a35722","runtimeDimensions":"941x1672","runtimeAlpha":false}
+  ],
+  "rightsManifest": "assets/provenance/rights-manifest.json",
+  "rightsManifestUpdatedFor": ["assets/cg/s07-kitchen-pasta.png","assets/cg/s07-kitchen-pasta-portrait.png"],
+  "protectedSurfacesUnchanged": ["src/literary-visual-directions.js","content/season-1-vertical-slice-episodes-01-02.md","SDK","ads","save schema","routes","monetization","all non-S07 assets"]
+}

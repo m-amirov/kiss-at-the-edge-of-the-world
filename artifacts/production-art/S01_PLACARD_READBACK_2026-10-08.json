@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "recordType": "s01-placard-readback",
+  "status": "PASS_S01_PLACARD_REPAIR",
+  "sourceHead": "f5c865f244c8826dd67616a8602a4bebe5b84795",
+  "scope": {
+    "scene": "S01",
+    "targetCue": [0, 4],
+    "targetBeat": "nick-arrives",
+    "excludedCue": [0, 16],
+    "excludedBeat": "airport-outside"
+  },
+  "assets": [
+    {"path":"assets/cg/s01-nick-arrives-placard-ru.png","manifestId":"s01-nick-arrives-placard-ru","width":1672,"height":941,"sha256":"106CBA1DB10083037E2A3C06EB3051EB5FF2133D30DF4ED8D5F6520EB0ECDD68","rightsManifest":true},
+    {"path":"assets/cg/s01-nick-arrives-placard-ru.webp","manifestId":"s01-nick-arrives-placard-ru","width":1672,"height":941,"sha256":"25910C3C449B71162F1F44924347478502748513917A506F2EAE95E955CB69F7","rightsManifest":true},
+    {"path":"assets/cg/s01-nick-arrives-placard-en.png","manifestId":"s01-nick-arrives-placard-en","width":1672,"height":941,"sha256":"C61F5A9485F5EAC8B7F59B8AB232031710E635DA98AE1DAF233940B4878D8BCD","rightsManifest":true},
+    {"path":"assets/cg/s01-nick-arrives-placard-en.webp","manifestId":"s01-nick-arrives-placard-en","width":1672,"height":941,"sha256":"324E10760EFF6D24D7D9174E14A6D10FF94479B76BBEF68316BC19BC3CF544C5","rightsManifest":true},
+    {"path":"assets/cg/s01-nick-arrives-placard-ru-portrait.png","manifestId":"s01-nick-arrives-placard-ru","width":940,"height":1672,"sha256":"1A457EBBEA221FF36FA9E8CFA6A9E1897DDAA12A183D6AB7D26C2A6DB7DCE5A7","rightsManifest":true},
+    {"path":"assets/cg/s01-nick-arrives-placard-ru-portrait.webp","manifestId":"s01-nick-arrives-placard-ru","width":940,"height":1672,"sha256":"A86F7F376015D2A6D100A661F0C81F55ADEDB62A23DA2D228117C5DA246B0666","rightsManifest":true},
+    {"path":"assets/cg/s01-nick-arrives-placard-en-portrait.png","manifestId":"s01-nick-arrives-placard-en","width":940,"height":1672,"sha256":"B9E914D403A87A3A7E974B34853C36531565AF555D8A1D19D99D518289FF748F","rightsManifest":true},
+    {"path":"assets/cg/s01-nick-arrives-placard-en-portrait.webp","manifestId":"s01-nick-arrives-placard-en","width":940,"height":1672,"sha256":"818B4F8FE29CAAF771104E3AA78796993B51F4ECCBD2C2DC86CBBDD98B7FD1B4","rightsManifest":true}
+  ],
+  "runtimeReadback": {
+    "evidence": "artifacts/evidence/s01-placard-2026-10-08/after-commit/evidence.json",
+    "beforeEvidence": "artifacts/evidence/s01-placard-2026-10-08/before/evidence.json",
+    "captures": 32,
+    "failures": 0,
+    "locales": ["ru", "en"],
+    "viewports": ["1920x900", "360x640", "390x844", "412x915"],
+    "positions": ["previous", "target", "next", "excluded-airport-outside"]
+  },
+  "mappingReadback": {
+    "target": "S01.C000.P004",
+    "targetAssetRu": "cg/s01-nick-arrives-placard-ru.webp",
+    "targetAssetEn": "cg/s01-nick-arrives-placard-en.webp",
+    "excluded": "S01.C000.P016",
+    "excludedAsset": "cg/s01-airport-outside-batch2.webp",
+    "excludedUnchanged": true
+  },
+  "productionArt66Coverage": {
+    "status": "NOT_VERIFIED",
+    "sceneCount": 66,
+    "repairedScene": "S01",
+    "reason": "This bounded repair does not re-attest other scenes; artifacts/evidence/production-art-acceptance.json is absent."
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "recordType": "source-bound-art-brief",
+  "sourceHead": "1eb41c69495326b86f699570ec8c6efeab2558e9",
+  "sceneId": "S07",
+  "cue": {"id":"s07-kitchen-pasta","at":[3,0]},
+  "sourceRef": {"chunk": 3, "paragraph": 0},
+  "location": "Общая кухня Hveragerði, вечер",
+  "purpose": "Targeted repair of identity continuity and action attribution; preserve the authored text, cue mapping, style and four-person cast.",
+  "authoredAction": "Alice reaches toward the pot. Nick says «Не трогай» and visibly stops her. Alice and Nick are the primary interaction focus.",
+  "requiredCast": ["alice","nick","eric","damir"],
+  "narrativeActions": [
+    {"character":"alice","action":"Stirs the pasta and reaches toward the pot as the water and sauce run out of control."},
+    {"character":"nick","action":"Says «Не трогай» and places a visible stopping hand between Alice and the pot; remains beside Alice as the action owner."},
+    {"character":"eric","action":"Remains a blond supporting observer outside the Alice-Nick interaction center."},
+    {"character":"damir","action":"Remains a visually distinct supporting background figure with the burgundy scarf, not a competing action owner."}
+  ],
+  "sceneContinuity": "S06 ends with the group returning from the trail; S07 begins in the guesthouse kitchen at dinner preparation and transitions after the pasta rescue into the shared meal and rainy evening. S08 follows the next morning with Damir and Alice in the guesthouse corridor.",
+  "characterReferences": [
+    {"character":"alice","path":"assets/characters/alice-master.png","sha256":"d261c464d1d40913e3bd377b206b9d59e86310ecfbedc0357d6fe4def1179d5d"},
+    {"character":"nick","path":"assets/characters/nick-master.png","sha256":"a1c4aae9230b21a7ce9eaf4605a62ed54e225e35ab1b2470049902a63fe44fdd"},
+    {"character":"eric","path":"assets/characters/eric-master.png","sha256":"aa66cc7e0a58bd409b1066dbc07cd5780796245fd79a7eb5c8e0fb98f0322f14"},
+    {"character":"damir","path":"assets/characters/damir-master.png","sha256":"221df2cdd61880de169b500fa56095c99c9784595d156201ee65f15f76c69ef3"}
+  ],
+  "forbiddenProps": ["new readable text","logos","watermarks","unrelated props","route-specific objects not in S07","camera as a hero prop"],
+  "desktop": {"composition":"Alice center-left at the pot; canonical Nick immediately beside her as the nearest male and primary interaction partner; Nick's face and stopping hand are visible between Alice and the pot; Eric and Damir are supporting figures separated from the action center.","framing":"1672x941 landscape CG with Alice, Nick, pot and the stop hand above the lower dialogue-safe area; no competing male figure at the pot.","requiredVisibleCast":["alice","nick","eric","damir"]},
+  "portrait": {"composition":"Tighter vertical crop preserving Alice, canonical Nick, the pot and Nick's stopping hand as the central action pair; Eric and Damir may remain distant or crop out only if the remaining cast cannot be mistaken for the speaker.","framing":"941x1672 portrait CG with faces and the stopping hand readable above the dialogue-safe area and the same S07 action mapping as desktop.","requiredVisibleCast":["alice","nick","eric","damir"]},
+  "targets": {
+    "desktop": {"path":"assets/cg/s07-kitchen-pasta.png","dimensions":"1672x941","composition":"Alice center-left at the pot; canonical Nick immediately beside her as the nearest male and primary interaction partner; Nick's face and stopping hand are visible between Alice and the pot; Eric and Damir are supporting figures separated from the action center.","framing":"1672x941 landscape CG with Alice, Nick, pot and the stop hand above the lower dialogue-safe area; no competing male figure at the pot.","requiredVisibleCast":["alice","nick","eric","damir"]},
+    "portrait": {"path":"assets/cg/s07-kitchen-pasta-portrait.png","dimensions":"941x1672","composition":"Tighter vertical crop preserving Alice, canonical Nick, the pot and Nick's stopping hand as the central action pair; Eric and Damir may remain distant or crop out only if the remaining cast cannot be mistaken for the speaker.","framing":"941x1672 portrait CG with faces and the stopping hand readable above the dialogue-safe area and the same S07 action mapping as desktop.","requiredVisibleCast":["alice","nick","eric","damir"]}
+  },
+  "style": "cinematic photorealistic visual-novel CG; warm kitchen practicals, rainy blue window light, coherent scale and depth; no interface text baked into pixels",
+  "qualityAcceptance": [
+    "In both output compositions, Nick's dark curls, recognizable face and green outerwear family are visible and he is the only male adjacent to Alice and the pot.",
+    "Nick's stopping hand is unobstructed, visibly addressed to Alice, and remains above the dialogue-safe area at desktop and portrait framing.",
+    "Eric remains blond and supporting; Damir remains visually distinct with burgundy scarf; neither can be read as the speaker or as a duplicate Nick.",
+    "The pot, Alice's reaching/stirring action and the rainy warm kitchen context remain legible without baked interface text or new story props.",
+    "Desktop and portrait preserve the same authored S07 beat and do not introduce crop, anatomy, lighting or integration defects."
+  ],
+  "candidateNumber": 1,
+  "priorRejection": null
+}

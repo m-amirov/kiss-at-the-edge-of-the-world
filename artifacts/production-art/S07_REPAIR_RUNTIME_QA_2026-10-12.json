@@ -1,0 +1,1081 @@
+{
+  "schemaVersion": 1,
+  "recordType": "s07-targeted-art-repair-runtime-acceptance",
+  "status": "PASS",
+  "sourceHead": "1eb41c69495326b86f699570ec8c6efeab2558e9",
+  "baseUrl": "http://127.0.0.1:4182/literary.html?qa=s07-repair",
+  "scope": {
+    "scenes": [
+      "S06",
+      "S07",
+      "S08"
+    ],
+    "viewports": [
+      "1920x900",
+      "390x844",
+      "360x640"
+    ],
+    "captures": 9,
+    "complete": true
+  },
+  "neighborStates": {
+    "ordered": [
+      "S06",
+      "S07",
+      "S08"
+    ],
+    "allAssetMatches": true,
+    "allRuntimeAssetsReady": true,
+    "noBrowserFailures": true
+  },
+  "preloadCrossfade": {
+    "runtimeAssetsCommitted": true,
+    "transitionUnitTest": "PASS",
+    "test": "tests/narrative/literary-image-transition.test.mjs",
+    "note": "Scoped browser captures confirm committed S06/S07/S08 assets; native transition tests confirm decoded-cache deduplication, latest-target-wins and stale-completion protection."
+  },
+  "captures": [
+    {
+      "sceneId": "S06",
+      "title": "Короткая тропа. Эрик без инструкции",
+      "cue": "s06-eric-alice-stream",
+      "source": {
+        "chunk": 6,
+        "paragraph": 6
+      },
+      "expected": {
+        "file": "s06-hveragerdi-eric-alice.webp",
+        "runtimePath": "assets/cg/s06-hveragerdi-eric-alice.webp",
+        "type": "cg",
+        "runtime": "assets/cg/s06-hveragerdi-eric-alice.webp"
+      },
+      "authoredCues": [
+        {
+          "id": "s06-eric-alice-stream",
+          "at": [
+            6,
+            6
+          ],
+          "art": "cg/s06-hveragerdi-eric-alice.webp",
+          "cast": [
+            "alice",
+            "eric"
+          ],
+          "presentation": null
+        }
+      ],
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "currentHead": "1eb41c69495326b86f699570ec8c6efeab2558e9",
+      "screenshot": "artifacts/evidence/s07-repair-runtime-2026-10-12/S06-s06-eric-alice-stream-1920x900.png",
+      "screenshotSha256": "0d2fae78b5842412c46ed8cd67613366abcdfb22aac06814ea29a3068b6b74d7",
+      "screenshotBytes": 2232107,
+      "readback": {
+        "sceneId": "S06",
+        "position": 9,
+        "sourceRef": {
+          "chunk": 6,
+          "paragraph": 6
+        },
+        "cue": "s06-eric-alice-stream",
+        "asset": "s06-hveragerdi-eric-alice.webp",
+        "desktopAsset": "s06-hveragerdi-eric-alice.webp",
+        "natural": [
+          1672,
+          941
+        ],
+        "stageCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 900,
+          "width": 1920,
+          "height": 900
+        },
+        "viewport": [
+          1920,
+          900
+        ],
+        "runtimeAsset": "assets/s06-hveragerdi-eric-alice.webp",
+        "expectedRuntime": "assets/cg/s06-hveragerdi-eric-alice.webp",
+        "assetMatches": true
+      },
+      "manifest": {
+        "id": "s06-hveragerdi-eric-alice",
+        "path": "assets/cg/s06-hveragerdi-eric-alice.png",
+        "runtimePath": "assets/cg/s06-hveragerdi-eric-alice.webp",
+        "runtimePortraitAsset": "assets/cg/s06-hveragerdi-eric-alice-portrait.webp",
+        "dimensions": "1672x941"
+      },
+      "physicalFiles": [
+        {
+          "path": "assets/cg/s06-hveragerdi-eric-alice.png",
+          "exists": true,
+          "sha256": "03541d251c355d14f35b2e6efc813a83a2a304b0729ef413d78b34553c21e8f9"
+        },
+        {
+          "path": "assets/cg/s06-hveragerdi-eric-alice-portrait.png",
+          "exists": true,
+          "sha256": "7e7f017c10bcc5f86621bc80991f9d2767733e471451c0d4ac330b3b642000ca"
+        },
+        {
+          "path": "assets/cg/s06-hveragerdi-eric-alice.webp",
+          "exists": true,
+          "sha256": "51e7e313e71203ab28132ab12f08aac0d8f9bf906bfe6588ca4b7831b98ec8f3"
+        },
+        {
+          "path": "assets/cg/s06-hveragerdi-eric-alice-portrait.webp",
+          "exists": true,
+          "sha256": "35ed73d5458f0c19738a2055bf98f5c486f47529654a16374d285083d0c28d30"
+        }
+      ],
+      "audioEvidence": {
+        "cueId": "iceland-calm",
+        "readyState": 4,
+        "duration": 39.498
+      },
+      "errors": [],
+      "failed": [],
+      "ignoredFailedRequests": [],
+      "runError": null
+    },
+    {
+      "sceneId": "S06",
+      "title": "Короткая тропа. Эрик без инструкции",
+      "cue": "s06-eric-alice-stream",
+      "source": {
+        "chunk": 6,
+        "paragraph": 6
+      },
+      "expected": {
+        "file": "s06-hveragerdi-eric-alice.webp",
+        "runtimePath": "assets/cg/s06-hveragerdi-eric-alice.webp",
+        "type": "cg",
+        "runtime": "assets/cg/s06-hveragerdi-eric-alice.webp"
+      },
+      "authoredCues": [
+        {
+          "id": "s06-eric-alice-stream",
+          "at": [
+            6,
+            6
+          ],
+          "art": "cg/s06-hveragerdi-eric-alice.webp",
+          "cast": [
+            "alice",
+            "eric"
+          ],
+          "presentation": null
+        }
+      ],
+      "viewport": {
+        "name": "portrait390",
+        "width": 390,
+        "height": 844
+      },
+      "currentHead": "1eb41c69495326b86f699570ec8c6efeab2558e9",
+      "screenshot": "artifacts/evidence/s07-repair-runtime-2026-10-12/S06-s06-eric-alice-stream-390x844.png",
+      "screenshotSha256": "44c6e957484f4fc32a4cac212394f89f61eecc3257eb88676e6a9dc852ccdbc5",
+      "screenshotBytes": 539042,
+      "readback": {
+        "sceneId": "S06",
+        "position": 9,
+        "sourceRef": {
+          "chunk": 6,
+          "paragraph": 6
+        },
+        "cue": "s06-eric-alice-stream",
+        "asset": "s06-hveragerdi-eric-alice-portrait.webp",
+        "desktopAsset": "s06-hveragerdi-eric-alice.webp",
+        "natural": [
+          941,
+          1672
+        ],
+        "stageCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "viewport": [
+          390,
+          844
+        ],
+        "runtimeAsset": "assets/s06-hveragerdi-eric-alice-portrait.webp",
+        "expectedRuntime": "assets/cg/s06-hveragerdi-eric-alice.webp",
+        "assetMatches": true
+      },
+      "manifest": {
+        "id": "s06-hveragerdi-eric-alice",
+        "path": "assets/cg/s06-hveragerdi-eric-alice.png",
+        "runtimePath": "assets/cg/s06-hveragerdi-eric-alice.webp",
+        "runtimePortraitAsset": "assets/cg/s06-hveragerdi-eric-alice-portrait.webp",
+        "dimensions": "1672x941"
+      },
+      "physicalFiles": [
+        {
+          "path": "assets/cg/s06-hveragerdi-eric-alice.png",
+          "exists": true,
+          "sha256": "03541d251c355d14f35b2e6efc813a83a2a304b0729ef413d78b34553c21e8f9"
+        },
+        {
+          "path": "assets/cg/s06-hveragerdi-eric-alice-portrait.png",
+          "exists": true,
+          "sha256": "7e7f017c10bcc5f86621bc80991f9d2767733e471451c0d4ac330b3b642000ca"
+        },
+        {
+          "path": "assets/cg/s06-hveragerdi-eric-alice.webp",
+          "exists": true,
+          "sha256": "51e7e313e71203ab28132ab12f08aac0d8f9bf906bfe6588ca4b7831b98ec8f3"
+        },
+        {
+          "path": "assets/cg/s06-hveragerdi-eric-alice-portrait.webp",
+          "exists": true,
+          "sha256": "35ed73d5458f0c19738a2055bf98f5c486f47529654a16374d285083d0c28d30"
+        }
+      ],
+      "audioEvidence": {
+        "cueId": "iceland-calm",
+        "readyState": 1,
+        "duration": 39.498
+      },
+      "errors": [],
+      "failed": [],
+      "ignoredFailedRequests": [],
+      "runError": null
+    },
+    {
+      "sceneId": "S06",
+      "title": "Короткая тропа. Эрик без инструкции",
+      "cue": "s06-eric-alice-stream",
+      "source": {
+        "chunk": 6,
+        "paragraph": 6
+      },
+      "expected": {
+        "file": "s06-hveragerdi-eric-alice.webp",
+        "runtimePath": "assets/cg/s06-hveragerdi-eric-alice.webp",
+        "type": "cg",
+        "runtime": "assets/cg/s06-hveragerdi-eric-alice.webp"
+      },
+      "authoredCues": [
+        {
+          "id": "s06-eric-alice-stream",
+          "at": [
+            6,
+            6
+          ],
+          "art": "cg/s06-hveragerdi-eric-alice.webp",
+          "cast": [
+            "alice",
+            "eric"
+          ],
+          "presentation": null
+        }
+      ],
+      "viewport": {
+        "name": "portrait360",
+        "width": 360,
+        "height": 640
+      },
+      "currentHead": "1eb41c69495326b86f699570ec8c6efeab2558e9",
+      "screenshot": "artifacts/evidence/s07-repair-runtime-2026-10-12/S06-s06-eric-alice-stream-360x640.png",
+      "screenshotSha256": "c3ff75268a5f19bb7b48628c81fc6dd324e7b3b283efdd1f8fc5456824b557e6",
+      "screenshotBytes": 371873,
+      "readback": {
+        "sceneId": "S06",
+        "position": 9,
+        "sourceRef": {
+          "chunk": 6,
+          "paragraph": 6
+        },
+        "cue": "s06-eric-alice-stream",
+        "asset": "s06-hveragerdi-eric-alice-portrait.webp",
+        "desktopAsset": "s06-hveragerdi-eric-alice.webp",
+        "natural": [
+          941,
+          1672
+        ],
+        "stageCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 360,
+          "bottom": 640,
+          "width": 360,
+          "height": 640
+        },
+        "viewport": [
+          360,
+          640
+        ],
+        "runtimeAsset": "assets/s06-hveragerdi-eric-alice-portrait.webp",
+        "expectedRuntime": "assets/cg/s06-hveragerdi-eric-alice.webp",
+        "assetMatches": true
+      },
+      "manifest": {
+        "id": "s06-hveragerdi-eric-alice",
+        "path": "assets/cg/s06-hveragerdi-eric-alice.png",
+        "runtimePath": "assets/cg/s06-hveragerdi-eric-alice.webp",
+        "runtimePortraitAsset": "assets/cg/s06-hveragerdi-eric-alice-portrait.webp",
+        "dimensions": "1672x941"
+      },
+      "physicalFiles": [
+        {
+          "path": "assets/cg/s06-hveragerdi-eric-alice.png",
+          "exists": true,
+          "sha256": "03541d251c355d14f35b2e6efc813a83a2a304b0729ef413d78b34553c21e8f9"
+        },
+        {
+          "path": "assets/cg/s06-hveragerdi-eric-alice-portrait.png",
+          "exists": true,
+          "sha256": "7e7f017c10bcc5f86621bc80991f9d2767733e471451c0d4ac330b3b642000ca"
+        },
+        {
+          "path": "assets/cg/s06-hveragerdi-eric-alice.webp",
+          "exists": true,
+          "sha256": "51e7e313e71203ab28132ab12f08aac0d8f9bf906bfe6588ca4b7831b98ec8f3"
+        },
+        {
+          "path": "assets/cg/s06-hveragerdi-eric-alice-portrait.webp",
+          "exists": true,
+          "sha256": "35ed73d5458f0c19738a2055bf98f5c486f47529654a16374d285083d0c28d30"
+        }
+      ],
+      "audioEvidence": {
+        "cueId": "iceland-calm",
+        "readyState": 4,
+        "duration": 39.498
+      },
+      "errors": [],
+      "failed": [],
+      "ignoredFailedRequests": [],
+      "runError": null
+    },
+    {
+      "sceneId": "S07",
+      "title": "Общая кухня. Ник и катастрофа с макаронами",
+      "cue": "s07-kitchen-pasta",
+      "source": {
+        "chunk": 3,
+        "paragraph": 0
+      },
+      "expected": {
+        "file": "s07-kitchen-pasta.webp",
+        "runtimePath": "assets/cg/s07-kitchen-pasta.webp",
+        "type": "cg",
+        "runtime": "assets/cg/s07-kitchen-pasta.webp"
+      },
+      "authoredCues": [
+        {
+          "id": "s07-kitchen-pasta",
+          "at": [
+            3,
+            0
+          ],
+          "art": "cg/s07-kitchen-pasta.webp",
+          "cast": [
+            "alice",
+            "nick",
+            "eric",
+            "damir"
+          ],
+          "presentation": null
+        },
+        {
+          "id": "s07-kitchen-cards",
+          "at": [
+            3,
+            42
+          ],
+          "art": "cg/s07-kitchen-cards.webp",
+          "cast": [
+            "alice",
+            "nick",
+            "eric",
+            "damir"
+          ],
+          "presentation": null
+        }
+      ],
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "currentHead": "1eb41c69495326b86f699570ec8c6efeab2558e9",
+      "screenshot": "artifacts/evidence/s07-repair-runtime-2026-10-12/S07-s07-kitchen-pasta-1920x900.png",
+      "screenshotSha256": "41ebe38ceedd1275552b3ccf2090755b772e5702cf7e3f3f01ccbb5edf40987d",
+      "screenshotBytes": 2159769,
+      "readback": {
+        "sceneId": "S07",
+        "position": 3,
+        "sourceRef": {
+          "chunk": 3,
+          "paragraph": 0
+        },
+        "cue": "s07-kitchen-pasta",
+        "asset": "s07-kitchen-pasta.webp",
+        "desktopAsset": "s07-kitchen-pasta.webp",
+        "natural": [
+          1672,
+          941
+        ],
+        "stageCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 900,
+          "width": 1920,
+          "height": 900
+        },
+        "viewport": [
+          1920,
+          900
+        ],
+        "runtimeAsset": "assets/s07-kitchen-pasta.webp",
+        "expectedRuntime": "assets/cg/s07-kitchen-pasta.webp",
+        "assetMatches": true
+      },
+      "manifest": {
+        "id": "s07-kitchen-pasta",
+        "path": "assets/cg/s07-kitchen-pasta.png",
+        "runtimePath": "assets/cg/s07-kitchen-pasta.webp",
+        "runtimePortraitAsset": "assets/cg/s07-kitchen-pasta-portrait.webp",
+        "dimensions": "1672x941"
+      },
+      "physicalFiles": [
+        {
+          "path": "assets/cg/s07-kitchen-pasta.png",
+          "exists": true,
+          "sha256": "2411f80a3cef842cfd6dc3911f4eae091f4cc32d363e6f001456bb4a390f12c4"
+        },
+        {
+          "path": "assets/cg/s07-kitchen-pasta-portrait.png",
+          "exists": true,
+          "sha256": "7fcb46ffc37d769bdd4c9848b448da918cee3bdf0eb60ef5899e9b34cd857d81"
+        },
+        {
+          "path": "assets/cg/s07-kitchen-pasta.webp",
+          "exists": true,
+          "sha256": "69b73a9c7e425974f83d55edf2a57b18de79bb76a425fe470f67ce595918103c"
+        },
+        {
+          "path": "assets/cg/s07-kitchen-pasta-portrait.webp",
+          "exists": true,
+          "sha256": "817277c545fb46f4e4718e8aa2631a65d449b38ac84238629a531a01a0a35722"
+        }
+      ],
+      "audioEvidence": {
+        "cueId": "cafe",
+        "readyState": 4,
+        "duration": 33.9205
+      },
+      "errors": [],
+      "failed": [],
+      "ignoredFailedRequests": [],
+      "runError": null
+    },
+    {
+      "sceneId": "S07",
+      "title": "Общая кухня. Ник и катастрофа с макаронами",
+      "cue": "s07-kitchen-pasta",
+      "source": {
+        "chunk": 3,
+        "paragraph": 0
+      },
+      "expected": {
+        "file": "s07-kitchen-pasta.webp",
+        "runtimePath": "assets/cg/s07-kitchen-pasta.webp",
+        "type": "cg",
+        "runtime": "assets/cg/s07-kitchen-pasta.webp"
+      },
+      "authoredCues": [
+        {
+          "id": "s07-kitchen-pasta",
+          "at": [
+            3,
+            0
+          ],
+          "art": "cg/s07-kitchen-pasta.webp",
+          "cast": [
+            "alice",
+            "nick",
+            "eric",
+            "damir"
+          ],
+          "presentation": null
+        },
+        {
+          "id": "s07-kitchen-cards",
+          "at": [
+            3,
+            42
+          ],
+          "art": "cg/s07-kitchen-cards.webp",
+          "cast": [
+            "alice",
+            "nick",
+            "eric",
+            "damir"
+          ],
+          "presentation": null
+        }
+      ],
+      "viewport": {
+        "name": "portrait390",
+        "width": 390,
+        "height": 844
+      },
+      "currentHead": "1eb41c69495326b86f699570ec8c6efeab2558e9",
+      "screenshot": "artifacts/evidence/s07-repair-runtime-2026-10-12/S07-s07-kitchen-pasta-390x844.png",
+      "screenshotSha256": "e8e9f91179a9892349c00b78fb8fb773dd5315017ca14ed232a2f80c220646e5",
+      "screenshotBytes": 498575,
+      "readback": {
+        "sceneId": "S07",
+        "position": 3,
+        "sourceRef": {
+          "chunk": 3,
+          "paragraph": 0
+        },
+        "cue": "s07-kitchen-pasta",
+        "asset": "s07-kitchen-pasta-portrait.webp",
+        "desktopAsset": "s07-kitchen-pasta.webp",
+        "natural": [
+          941,
+          1672
+        ],
+        "stageCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "viewport": [
+          390,
+          844
+        ],
+        "runtimeAsset": "assets/s07-kitchen-pasta-portrait.webp",
+        "expectedRuntime": "assets/cg/s07-kitchen-pasta.webp",
+        "assetMatches": true
+      },
+      "manifest": {
+        "id": "s07-kitchen-pasta",
+        "path": "assets/cg/s07-kitchen-pasta.png",
+        "runtimePath": "assets/cg/s07-kitchen-pasta.webp",
+        "runtimePortraitAsset": "assets/cg/s07-kitchen-pasta-portrait.webp",
+        "dimensions": "1672x941"
+      },
+      "physicalFiles": [
+        {
+          "path": "assets/cg/s07-kitchen-pasta.png",
+          "exists": true,
+          "sha256": "2411f80a3cef842cfd6dc3911f4eae091f4cc32d363e6f001456bb4a390f12c4"
+        },
+        {
+          "path": "assets/cg/s07-kitchen-pasta-portrait.png",
+          "exists": true,
+          "sha256": "7fcb46ffc37d769bdd4c9848b448da918cee3bdf0eb60ef5899e9b34cd857d81"
+        },
+        {
+          "path": "assets/cg/s07-kitchen-pasta.webp",
+          "exists": true,
+          "sha256": "69b73a9c7e425974f83d55edf2a57b18de79bb76a425fe470f67ce595918103c"
+        },
+        {
+          "path": "assets/cg/s07-kitchen-pasta-portrait.webp",
+          "exists": true,
+          "sha256": "817277c545fb46f4e4718e8aa2631a65d449b38ac84238629a531a01a0a35722"
+        }
+      ],
+      "audioEvidence": {
+        "cueId": "cafe",
+        "readyState": 4,
+        "duration": 33.9205
+      },
+      "errors": [],
+      "failed": [],
+      "ignoredFailedRequests": [],
+      "runError": null
+    },
+    {
+      "sceneId": "S07",
+      "title": "Общая кухня. Ник и катастрофа с макаронами",
+      "cue": "s07-kitchen-pasta",
+      "source": {
+        "chunk": 3,
+        "paragraph": 0
+      },
+      "expected": {
+        "file": "s07-kitchen-pasta.webp",
+        "runtimePath": "assets/cg/s07-kitchen-pasta.webp",
+        "type": "cg",
+        "runtime": "assets/cg/s07-kitchen-pasta.webp"
+      },
+      "authoredCues": [
+        {
+          "id": "s07-kitchen-pasta",
+          "at": [
+            3,
+            0
+          ],
+          "art": "cg/s07-kitchen-pasta.webp",
+          "cast": [
+            "alice",
+            "nick",
+            "eric",
+            "damir"
+          ],
+          "presentation": null
+        },
+        {
+          "id": "s07-kitchen-cards",
+          "at": [
+            3,
+            42
+          ],
+          "art": "cg/s07-kitchen-cards.webp",
+          "cast": [
+            "alice",
+            "nick",
+            "eric",
+            "damir"
+          ],
+          "presentation": null
+        }
+      ],
+      "viewport": {
+        "name": "portrait360",
+        "width": 360,
+        "height": 640
+      },
+      "currentHead": "1eb41c69495326b86f699570ec8c6efeab2558e9",
+      "screenshot": "artifacts/evidence/s07-repair-runtime-2026-10-12/S07-s07-kitchen-pasta-360x640.png",
+      "screenshotSha256": "561d893d00fb348d5633c798a64bbc1cc80282238e48d4fe1b73212922c9e768",
+      "screenshotBytes": 354976,
+      "readback": {
+        "sceneId": "S07",
+        "position": 3,
+        "sourceRef": {
+          "chunk": 3,
+          "paragraph": 0
+        },
+        "cue": "s07-kitchen-pasta",
+        "asset": "s07-kitchen-pasta-portrait.webp",
+        "desktopAsset": "s07-kitchen-pasta.webp",
+        "natural": [
+          941,
+          1672
+        ],
+        "stageCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 360,
+          "bottom": 640,
+          "width": 360,
+          "height": 640
+        },
+        "viewport": [
+          360,
+          640
+        ],
+        "runtimeAsset": "assets/s07-kitchen-pasta-portrait.webp",
+        "expectedRuntime": "assets/cg/s07-kitchen-pasta.webp",
+        "assetMatches": true
+      },
+      "manifest": {
+        "id": "s07-kitchen-pasta",
+        "path": "assets/cg/s07-kitchen-pasta.png",
+        "runtimePath": "assets/cg/s07-kitchen-pasta.webp",
+        "runtimePortraitAsset": "assets/cg/s07-kitchen-pasta-portrait.webp",
+        "dimensions": "1672x941"
+      },
+      "physicalFiles": [
+        {
+          "path": "assets/cg/s07-kitchen-pasta.png",
+          "exists": true,
+          "sha256": "2411f80a3cef842cfd6dc3911f4eae091f4cc32d363e6f001456bb4a390f12c4"
+        },
+        {
+          "path": "assets/cg/s07-kitchen-pasta-portrait.png",
+          "exists": true,
+          "sha256": "7fcb46ffc37d769bdd4c9848b448da918cee3bdf0eb60ef5899e9b34cd857d81"
+        },
+        {
+          "path": "assets/cg/s07-kitchen-pasta.webp",
+          "exists": true,
+          "sha256": "69b73a9c7e425974f83d55edf2a57b18de79bb76a425fe470f67ce595918103c"
+        },
+        {
+          "path": "assets/cg/s07-kitchen-pasta-portrait.webp",
+          "exists": true,
+          "sha256": "817277c545fb46f4e4718e8aa2631a65d449b38ac84238629a531a01a0a35722"
+        }
+      ],
+      "audioEvidence": {
+        "cueId": "cafe",
+        "readyState": 4,
+        "duration": 33.9205
+      },
+      "errors": [],
+      "failed": [],
+      "ignoredFailedRequests": [],
+      "runError": null
+    },
+    {
+      "sceneId": "S08",
+      "title": "Гостевой дом. Лямка",
+      "cue": "s08-guesthouse-strap",
+      "source": {
+        "chunk": 2,
+        "paragraph": 0
+      },
+      "expected": {
+        "file": "s08-guesthouse-strap.webp",
+        "runtimePath": "assets/cg/s08-guesthouse-strap.webp",
+        "type": "cg",
+        "runtime": "assets/cg/s08-guesthouse-strap.webp"
+      },
+      "authoredCues": [
+        {
+          "id": "s08-guesthouse-strap",
+          "at": [
+            2,
+            0
+          ],
+          "art": "cg/s08-guesthouse-strap.webp",
+          "cast": [
+            "alice",
+            "damir"
+          ],
+          "presentation": null
+        }
+      ],
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 900
+      },
+      "currentHead": "1eb41c69495326b86f699570ec8c6efeab2558e9",
+      "screenshot": "artifacts/evidence/s07-repair-runtime-2026-10-12/S08-s08-guesthouse-strap-1920x900.png",
+      "screenshotSha256": "fcf7ea308a5e4b85101e422fb2ae94ac7f8babef8dd0d2b2405e9249498ae4c6",
+      "screenshotBytes": 1822613,
+      "readback": {
+        "sceneId": "S08",
+        "position": 2,
+        "sourceRef": {
+          "chunk": 2,
+          "paragraph": 0
+        },
+        "cue": "s08-guesthouse-strap",
+        "asset": "s08-guesthouse-strap.webp",
+        "desktopAsset": "s08-guesthouse-strap.webp",
+        "natural": [
+          1672,
+          941
+        ],
+        "stageCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 900,
+          "width": 1920,
+          "height": 900
+        },
+        "viewport": [
+          1920,
+          900
+        ],
+        "runtimeAsset": "assets/s08-guesthouse-strap.webp",
+        "expectedRuntime": "assets/cg/s08-guesthouse-strap.webp",
+        "assetMatches": true
+      },
+      "manifest": {
+        "id": "s08-guesthouse-strap",
+        "path": "assets/cg/s08-guesthouse-strap.png",
+        "runtimePath": "assets/cg/s08-guesthouse-strap.webp",
+        "runtimePortraitAsset": "assets/cg/s08-guesthouse-strap-portrait.webp",
+        "dimensions": "1672x941"
+      },
+      "physicalFiles": [
+        {
+          "path": "assets/cg/s08-guesthouse-strap.png",
+          "exists": true,
+          "sha256": "cd8e44eb13dcbec7a8d5ccd1612cdbda1a0c92edad3b93a77e3118e8cca990d6"
+        },
+        {
+          "path": "assets/cg/s08-guesthouse-strap-portrait.png",
+          "exists": true,
+          "sha256": "9533065cef3a31780e71b4f4de8c7325cc3a6dd48bb14f34079a02d03154abdf"
+        },
+        {
+          "path": "assets/cg/s08-guesthouse-strap.webp",
+          "exists": true,
+          "sha256": "6e4527e5995b941327d073040299fcfbb443089bbcfe7ef3f7e2a7271936305a"
+        },
+        {
+          "path": "assets/cg/s08-guesthouse-strap-portrait.webp",
+          "exists": true,
+          "sha256": "d9dc2e0e8c189de47c45ba9223fd677003dcedfa38a1e75dd834271e672f5c3a"
+        }
+      ],
+      "audioEvidence": {
+        "cueId": "main-theme",
+        "readyState": 4,
+        "duration": 36.438188
+      },
+      "errors": [],
+      "failed": [],
+      "ignoredFailedRequests": [],
+      "runError": null
+    },
+    {
+      "sceneId": "S08",
+      "title": "Гостевой дом. Лямка",
+      "cue": "s08-guesthouse-strap",
+      "source": {
+        "chunk": 2,
+        "paragraph": 0
+      },
+      "expected": {
+        "file": "s08-guesthouse-strap.webp",
+        "runtimePath": "assets/cg/s08-guesthouse-strap.webp",
+        "type": "cg",
+        "runtime": "assets/cg/s08-guesthouse-strap.webp"
+      },
+      "authoredCues": [
+        {
+          "id": "s08-guesthouse-strap",
+          "at": [
+            2,
+            0
+          ],
+          "art": "cg/s08-guesthouse-strap.webp",
+          "cast": [
+            "alice",
+            "damir"
+          ],
+          "presentation": null
+        }
+      ],
+      "viewport": {
+        "name": "portrait390",
+        "width": 390,
+        "height": 844
+      },
+      "currentHead": "1eb41c69495326b86f699570ec8c6efeab2558e9",
+      "screenshot": "artifacts/evidence/s07-repair-runtime-2026-10-12/S08-s08-guesthouse-strap-390x844.png",
+      "screenshotSha256": "efeb734084a2344d55dadf6ffbf1ca2c0454e68f3ca15e05eb07639c10d8abf4",
+      "screenshotBytes": 505512,
+      "readback": {
+        "sceneId": "S08",
+        "position": 2,
+        "sourceRef": {
+          "chunk": 2,
+          "paragraph": 0
+        },
+        "cue": "s08-guesthouse-strap",
+        "asset": "s08-guesthouse-strap-portrait.webp",
+        "desktopAsset": "s08-guesthouse-strap.webp",
+        "natural": [
+          941,
+          1672
+        ],
+        "stageCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "viewport": [
+          390,
+          844
+        ],
+        "runtimeAsset": "assets/s08-guesthouse-strap-portrait.webp",
+        "expectedRuntime": "assets/cg/s08-guesthouse-strap.webp",
+        "assetMatches": true
+      },
+      "manifest": {
+        "id": "s08-guesthouse-strap",
+        "path": "assets/cg/s08-guesthouse-strap.png",
+        "runtimePath": "assets/cg/s08-guesthouse-strap.webp",
+        "runtimePortraitAsset": "assets/cg/s08-guesthouse-strap-portrait.webp",
+        "dimensions": "1672x941"
+      },
+      "physicalFiles": [
+        {
+          "path": "assets/cg/s08-guesthouse-strap.png",
+          "exists": true,
+          "sha256": "cd8e44eb13dcbec7a8d5ccd1612cdbda1a0c92edad3b93a77e3118e8cca990d6"
+        },
+        {
+          "path": "assets/cg/s08-guesthouse-strap-portrait.png",
+          "exists": true,
+          "sha256": "9533065cef3a31780e71b4f4de8c7325cc3a6dd48bb14f34079a02d03154abdf"
+        },
+        {
+          "path": "assets/cg/s08-guesthouse-strap.webp",
+          "exists": true,
+          "sha256": "6e4527e5995b941327d073040299fcfbb443089bbcfe7ef3f7e2a7271936305a"
+        },
+        {
+          "path": "assets/cg/s08-guesthouse-strap-portrait.webp",
+          "exists": true,
+          "sha256": "d9dc2e0e8c189de47c45ba9223fd677003dcedfa38a1e75dd834271e672f5c3a"
+        }
+      ],
+      "audioEvidence": {
+        "cueId": "main-theme",
+        "readyState": 4,
+        "duration": 36.438188
+      },
+      "errors": [],
+      "failed": [],
+      "ignoredFailedRequests": [],
+      "runError": null
+    },
+    {
+      "sceneId": "S08",
+      "title": "Гостевой дом. Лямка",
+      "cue": "s08-guesthouse-strap",
+      "source": {
+        "chunk": 2,
+        "paragraph": 0
+      },
+      "expected": {
+        "file": "s08-guesthouse-strap.webp",
+        "runtimePath": "assets/cg/s08-guesthouse-strap.webp",
+        "type": "cg",
+        "runtime": "assets/cg/s08-guesthouse-strap.webp"
+      },
+      "authoredCues": [
+        {
+          "id": "s08-guesthouse-strap",
+          "at": [
+            2,
+            0
+          ],
+          "art": "cg/s08-guesthouse-strap.webp",
+          "cast": [
+            "alice",
+            "damir"
+          ],
+          "presentation": null
+        }
+      ],
+      "viewport": {
+        "name": "portrait360",
+        "width": 360,
+        "height": 640
+      },
+      "currentHead": "1eb41c69495326b86f699570ec8c6efeab2558e9",
+      "screenshot": "artifacts/evidence/s07-repair-runtime-2026-10-12/S08-s08-guesthouse-strap-360x640.png",
+      "screenshotSha256": "84f886bbb23372634565115e9caed920559aa265e9e814b2425c6847ba37abcf",
+      "screenshotBytes": 342886,
+      "readback": {
+        "sceneId": "S08",
+        "position": 2,
+        "sourceRef": {
+          "chunk": 2,
+          "paragraph": 0
+        },
+        "cue": "s08-guesthouse-strap",
+        "asset": "s08-guesthouse-strap-portrait.webp",
+        "desktopAsset": "s08-guesthouse-strap.webp",
+        "natural": [
+          941,
+          1672
+        ],
+        "stageCount": 0,
+        "overflow": false,
+        "internalScroll": false,
+        "imageRect": {
+          "left": 0,
+          "top": 0,
+          "right": 360,
+          "bottom": 640,
+          "width": 360,
+          "height": 640
+        },
+        "viewport": [
+          360,
+          640
+        ],
+        "runtimeAsset": "assets/s08-guesthouse-strap-portrait.webp",
+        "expectedRuntime": "assets/cg/s08-guesthouse-strap.webp",
+        "assetMatches": true
+      },
+      "manifest": {
+        "id": "s08-guesthouse-strap",
+        "path": "assets/cg/s08-guesthouse-strap.png",
+        "runtimePath": "assets/cg/s08-guesthouse-strap.webp",
+        "runtimePortraitAsset": "assets/cg/s08-guesthouse-strap-portrait.webp",
+        "dimensions": "1672x941"
+      },
+      "physicalFiles": [
+        {
+          "path": "assets/cg/s08-guesthouse-strap.png",
+          "exists": true,
+          "sha256": "cd8e44eb13dcbec7a8d5ccd1612cdbda1a0c92edad3b93a77e3118e8cca990d6"
+        },
+        {
+          "path": "assets/cg/s08-guesthouse-strap-portrait.png",
+          "exists": true,
+          "sha256": "9533065cef3a31780e71b4f4de8c7325cc3a6dd48bb14f34079a02d03154abdf"
+        },
+        {
+          "path": "assets/cg/s08-guesthouse-strap.webp",
+          "exists": true,
+          "sha256": "6e4527e5995b941327d073040299fcfbb443089bbcfe7ef3f7e2a7271936305a"
+        },
+        {
+          "path": "assets/cg/s08-guesthouse-strap-portrait.webp",
+          "exists": true,
+          "sha256": "d9dc2e0e8c189de47c45ba9223fd677003dcedfa38a1e75dd834271e672f5c3a"
+        }
+      ],
+      "audioEvidence": {
+        "cueId": "main-theme",
+        "readyState": 4,
+        "duration": 36.438188
+      },
+      "errors": [],
+      "failed": [],
+      "ignoredFailedRequests": [],
+      "runError": null
+    }
+  ],
+  "failures": []
+}

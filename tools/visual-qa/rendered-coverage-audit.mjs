@@ -44,13 +44,22 @@ try {
       const errors = [];
       const responses = [];
       page.on('pageerror', error => errors.push(`pageerror:${error.message}`));
-      page.on('requestfailed', request => errors.push(`requestfailed:${request.url()}:${request.failure()?.errorText ?? 'unknown'}`));
+      page.on('requestfailed', request => {
+        if (!/\/sdk\.js(?:$|\?)/u.test(request.url())) errors.push(`requestfailed:${request.url()}:${request.failure()?.errorText ?? 'unknown'}`);
+      });
       page.on('response', response => { if (response.url().includes('/assets/')) responses.push({ url: response.url(), status: response.status() }); });
       await page.addInitScript(({ key, value }) => localStorage.setItem(key, JSON.stringify(value)), { key: literarySaveKey, value: stateFor(scene, target.index) });
       await page.goto(baseUrl, { waitUntil: 'networkidle' });
       await page.getByRole('button', { name: /Продолжить|Новая игра/ }).first().click();
       await page.locator('.literary-picture').waitFor();
-      await page.waitForTimeout(50);
+      await page.waitForFunction(() => {
+        const image = document.querySelector('.literary-picture img');
+        if (!image) return true;
+        const style = getComputedStyle(image);
+        return image.complete && image.naturalWidth > 0 && style.opacity !== '0' && style.visibility !== 'hidden' && style.display !== 'none';
+      });
+      await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+      await page.waitForTimeout(420);
       const readback = await page.evaluate(() => {
         const picture = document.querySelector('.literary-picture');
         const image = picture?.querySelector('img');

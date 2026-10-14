@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "status": "BLOCKED_PROVENANCE",
+  "role": "ceos_reasoner_web",
+  "hostAgentId": "01a11f69-0a3d-78c2-87e0-c72c0f3a2d69",
+  "taskId": null,
+  "reviewTraceId": null,
+  "declaredModelRoute": "chatgpt-web/gpt-6-sol",
+  "attestedModelRoute": null,
+  "sourceHead": "724a3ec46a0b879e5fd34642ab9bc80f04b2a5aa",
+  "sourceHeadVerified": false,
+  "actualPixelsReceived": false,
+  "transportStatus": "PARTIAL_ATTACHMENT",
+  "provenanceStatus": "BLOCKED_PROVENANCE",
+  "evidenceReceipt": {
+    "S07": { "received": true, "format": "PNG", "dimensions": "1920x900", "hostBytes": 3000693, "hostSha256": "5931e666090aaefcad8cf9328cc4bebb763a77fb9e5f004899b9c95e8dafa1af", "localPath": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S07-s07-kitchen-pasta-1920x900.png", "localBytes": 2040599, "localSha256": "b2983b921bd8a213019fb99f940938ba31513f008060d47a5ee9a9dda7f5d908" },
+    "S18": { "received": false, "error": "Second screenshot attachment failed with os error 3", "localPath": "artifacts/evidence/production-art-coverage-rc-2026-10-09/S18-hofn-lighthouse-390x844.png", "localBytes": 427698, "localSha256": "54c590b95b1e5e9cb4f1b343dc72efc1ce245697142f05814a0c980614224c75" }
+  },
+  "semanticVerdict": "REWORK",
+  "checkedSceneCues": ["S07/s07-kitchen-pasta", "S18/hofn-lighthouse"],
+  "findings": ["S07 pixel payload was not byte-identical to the local current-source screenshot; S18 was not received.", "S07 semantic review reported action-to-prose mismatch, but cannot promote to a source-bound art defect while the received bytes differ."],
+  "missingFields": ["taskId", "reviewTraceId", "attested modelRoute", "S18 pixel receipt", "verified sourceHead binding"]
+}

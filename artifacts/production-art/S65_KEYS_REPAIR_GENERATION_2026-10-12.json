@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "runId": "2026-10-12T08-05-38-446Z-production-art-48a3c3",
+  "sourceHead": "bdfce614dda323a1ad69f7b893cce61017a1e747",
+  "sceneId": "S65",
+  "cue": "s65-locked-kitchen-keys",
+  "candidateLimit": 2,
+  "tool": "image_gen.imagegen",
+  "candidate1": {
+    "desktop": {"toolCallOutput":"C:/Users/user/.codex/generated_images/01a12ec0-d36b-7252-86c7-acfc6756e664/exec-5855e185-446a-4270-9b36-2cf96064fc0d.png","path":"artifacts/production-art/candidates/S65-keys-candidate1-desktop.png","sha256":"6f9e1d66392dacb9c6298dd391fa968c7e358138d257829b498850aef8cde710","dimensions":"1672x941","outputGate":"artifacts/production-art/S65_KEYS_CANDIDATE1_DESKTOP_OUTPUT_GATE_2026-10-12.json","outputGateStatus":"PASS_ART_OUTPUT_MECHANICAL"},
+    "portrait": {"toolCallOutput":"C:/Users/user/.codex/generated_images/01a12ec0-d36b-7252-86c7-acfc6756e664/exec-fceef5f5-8892-4bce-9cd9-5bdf9448a862.png","path":"artifacts/production-art/candidates/S65-keys-candidate1-portrait.png","sha256":"52717bf67ccf92a0db3c6eddaa8b7c257aac293adaa0ba35cbcf2a9de01d5526","dimensions":"941x1672","outputGate":"artifacts/production-art/S65_KEYS_CANDIDATE1_PORTRAIT_OUTPUT_GATE_2026-10-12.json","outputGateStatus":"PASS_ART_OUTPUT_MECHANICAL"}
+  },
+  "candidate2": {
+    "desktop": {"toolCallOutput":"C:/Users/user/.codex/generated_images/01a12ec0-d36b-7252-86c7-acfc6756e664/exec-cc46fd64-7965-4a8d-b546-2a5d2e187187.png","path":"artifacts/production-art/candidates/S65-keys-candidate2-desktop.png","sha256":"1e9bcf836913975202b111142e4246b5ae0e55e734176db1909c137a1cd93d4a","dimensions":"1672x941","outputGate":"artifacts/production-art/S65_KEYS_CANDIDATE2_DESKTOP_OUTPUT_GATE_2026-10-12.json","outputGateStatus":"PASS_ART_OUTPUT_MECHANICAL"}
+  },
+  "finalIntegration": {
+    "desktop": {"path":"assets/cg/s65-locked-kitchen-keys.png","sha256":"1e9bcf836913975202b111142e4246b5ae0e55e734176db1909c137a1cd93d4a","dimensions":"1672x941","outputGate":"artifacts/production-art/S65_KEYS_FINAL_DESKTOP_OUTPUT_GATE_2026-10-12.json"},
+    "portrait": {"path":"assets/cg/s65-locked-kitchen-keys-portrait.png","sha256":"52717bf67ccf92a0db3c6eddaa8b7c257aac293adaa0ba35cbcf2a9de01d5526","dimensions":"941x1672","outputGate":"artifacts/production-art/S65_KEYS_FINAL_PORTRAIT_OUTPUT_GATE_2026-10-12.json"}
+  },
+  "changeFromPriorRepair": ["new early key-discovery cue at [0,0]", "Eric owns key-ring inspection", "Nick points to the blue fob", "no food, suitcase, knife or tomatoes before P029", "accepted dinner CG retained at [0,29]"],
+  "sourceReferences": ["assets/characters/alice-master.png","assets/characters/eric-master.png","assets/characters/nick-master.png","assets/characters/damir-master.png","assets/cg/s65-locked-kitchen-hallway.png"],
+  "analysisBasis": "artifacts/production-art/S65_KEYS_REPAIR_WEB_HIGH_ANALYSIS_2026-10-12.json",
+  "independentAcceptance": "artifacts/production-art/S65_KEYS_REPAIR_POSTREPAIR_WEB_HIGH_ACCEPTANCE_2026-10-12.json"
+}

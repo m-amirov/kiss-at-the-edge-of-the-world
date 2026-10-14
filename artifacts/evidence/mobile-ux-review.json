@@ -1,29 +1,15 @@
 {
+  "schemaVersion": 1,
   "status": "PASS",
-  "scope": "final literary UI, button redesign, stage-first tap/click navigation",
-  "head": "3d1b94ce76c3b913832d721c9c90cea8f6b0529a",
-  "runtime": "http://127.0.0.1:4173/literary.html?qa=final-ui",
-  "workingTreeChanges": true,
-  "screenshotEvidence": [
-    { "path": "release-artifacts/final-ui-menu-1920x900.png", "width": 1920, "height": 900, "bytes": 1614130, "sha256": "98a0bd11544f42a7a2ecf730fa41b727d98c8ea6c1529472e435ae7c61c82196" },
-    { "path": "release-artifacts/final-ui-reader-1920x900.png", "width": 1920, "height": 900, "bytes": 1785685, "sha256": "295e0f355f9e05c428413210b1eb9cadfc8885697406f192b29c03b7b3586137" },
-    { "path": "release-artifacts/final-ui-menu-390x844.png", "width": 390, "height": 844, "bytes": 315855, "sha256": "c07fb700b3aeb5534b36508d369ef198f5512dfeab8fe11f8c15c7ee1bfc8733" },
-    { "path": "release-artifacts/final-ui-reader-390x844.png", "width": 390, "height": 844, "bytes": 365450, "sha256": "2054ba725872d9d38668e74ee03dc18a612f8add08889ad0847e13e820a73028" },
-    { "path": "release-artifacts/final-ui-menu-360x640.png", "width": 360, "height": 640, "bytes": 238601, "sha256": "2777c3d7f2e6b5e728e0be55ac0e7cded24bc00374fec301a5f3eba0da82da8d" },
-    { "path": "release-artifacts/final-ui-reader-360x640.png", "width": 360, "height": 640, "bytes": 273201, "sha256": "1ca508eef1318cdfa45b294036d015d4fce64c1e310c639f24c8d5afb175f872" },
-    { "path": "release-artifacts/final-ui-menu-844x390.png", "width": 844, "height": 390, "bytes": 394739, "sha256": "d4b9d6af2b76288dfe64e1f6b18386b52bb93ec8992405f805c990ef85d42a35" },
-    { "path": "release-artifacts/final-ui-reader-844x390.png", "width": 844, "height": 390, "bytes": 423269, "sha256": "0cf6699a7531ac3108346ab48f3c8fd06567b7ddcc1f4f5d78ac3f37a9b0b206" }
-  ],
+  "source": "menu-audio-continuity",
   "viewports": [
-    { "width": 390, "height": 844, "menuScreenshot": "release-artifacts/final-ui-menu-390x844.png", "readerScreenshot": "release-artifacts/final-ui-reader-390x844.png", "before": "1 / 9", "after": "2 / 9", "bodyScroll": false, "rootScroll": false, "retiredControls": [] },
-    { "width": 360, "height": 640, "menuScreenshot": "release-artifacts/final-ui-menu-360x640.png", "readerScreenshot": "release-artifacts/final-ui-reader-360x640.png", "before": "1 / 9", "after": "2 / 9", "bodyScroll": false, "rootScroll": false, "retiredControls": [] },
-    { "width": 844, "height": 390, "menuScreenshot": "release-artifacts/final-ui-menu-844x390.png", "readerScreenshot": "release-artifacts/final-ui-reader-844x390.png", "before": "1 / 9", "after": "2 / 9", "bodyScroll": false, "rootScroll": false, "retiredControls": [] }
+    "390x844",
+    "360x640"
   ],
-  "assertions": [
-    "tap/click on the scene advances exactly one page",
-    "stage advance target is keyboard-focusable",
-    "no Далее or К выбору controls are rendered",
-    "no document overflow at mobile or landscape viewports",
-    "no browser console or page errors"
+  "checks": [
+    "touch menu/settings/episode transitions",
+    "no audio duplicate instances",
+    "no console errors",
+    "no request failures"
   ]
 }

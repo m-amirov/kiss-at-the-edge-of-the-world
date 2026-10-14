@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "phase": "acceptance",
+  "pipeline": "production-art",
+  "agent": "ceos_art_director_web",
+  "model": "chatgpt-web/gpt-6-sol",
+  "reasoning": "high",
+  "taskId": "01a11cb1-f5a9-7a53-b616-042e43ccc841",
+  "reviewTraceId": "01a11cb1-f5a9-7a53-b616-042e43ccc841-acceptance",
+  "sourceHead": "f5c865f244c8826dd67616a8602a4bebe5b84795",
+  "status": "PASS",
+  "actualPixelsReceived": true,
+  "reviewedItems": [
+    "S01.C000.P004:nick-arrives",
+    "S01.C000.P016:airport-outside-exclusion",
+    "localized-desktop-and-portrait-CGs",
+    "runtime-RU-EN-32-capture-matrix"
+  ],
+  "evidenceRefs": [
+    "assets/cg/s01-nick-arrives-placard-ru.png",
+    "assets/cg/s01-nick-arrives-placard-en.png",
+    "assets/cg/s01-nick-arrives-placard-ru-portrait.png",
+    "assets/cg/s01-nick-arrives-placard-en-portrait.png",
+    "artifacts/evidence/s01-placard-2026-10-08/after-commit/evidence.json",
+    "artifacts/evidence/s01-placard-2026-10-08/before/evidence.json"
+  ],
+  "receivedEvidenceRefs": [
+    "assets/cg/s01-nick-arrives-placard-ru.png",
+    "assets/cg/s01-nick-arrives-placard-en.png",
+    "assets/cg/s01-nick-arrives-placard-ru-portrait.png",
+    "assets/cg/s01-nick-arrives-placard-en-portrait.png",
+    "artifacts/evidence/s01-placard-2026-10-08/after-commit/evidence.json",
+    "artifacts/evidence/s01-placard-2026-10-08/before/evidence.json"
+  ],
+  "machineEvidence": {
+    "status": "PASS",
+    "captures": 32,
+    "locales": ["ru", "en"],
+    "viewports": ["1920x900", "360x640", "390x844", "412x915"],
+    "labels": ["previous", "target", "next", "excluded-airport-outside"],
+    "failures": 0,
+    "excludedAirportOutside": {
+      "cue": "airport-outside",
+      "asset": "s01-airport-outside-batch2.webp",
+      "authoredAddress": [0, 16]
+    }
+  },
+  "decision": "PASS",
+  "findings": [
+    {"id": "S01-ART-001", "severity": "PASS", "detail": "Physical wet cardboard placard is held by Nick's hand in the Keflavik arrivals hall."},
+    {"id": "S01-ART-002", "severity": "PASS", "detail": "Exact localized lettering is readable: АЛИСА, ЖУРНАЛИСТ / ALICE, JOURNALIST."},
+    {"id": "S01-ART-003", "severity": "PASS", "detail": "Gray ink cloud affects the final 2-4 letters while preserving recognition."},
+    {"id": "S01-ART-004", "severity": "PASS", "detail": "Nick's camera remains on the neck with the lens visibly directed downward."},
+    {"id": "S01-ART-005", "severity": "PASS", "detail": "Desktop and portrait compositions keep the placard above the dialogue sheet."}
+  ],
+  "unresolved": [],
+  "evidenceArtifact": "artifacts/production-art/S01_PLACARD_WEB_ACCEPTANCE_REVIEW.json",
+  "priorReviews": [
+    {"taskId": "01a11c8b-4fe7-7472-a962-adaa682249f7", "reviewTraceId": "01a11c8b-4fe7-7472-a962-adaa682249f7-analysis", "status": "FINDINGS"},
+    {"taskId": "01a11ca3-0daa-7352-a0e5-5d26da430c91", "reviewTraceId": "01a11ca3-0daa-7352-a0e5-5d26da430c91-rework", "status": "REWORK"}
+  ],
+  "recordedAt": "2026-10-08"
+}

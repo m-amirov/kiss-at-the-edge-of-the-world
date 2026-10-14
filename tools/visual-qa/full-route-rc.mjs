@@ -10,7 +10,11 @@ const baseUrl = process.env.LITERARY_QA_URL ?? 'http://127.0.0.1:4173/literary.h
 const output = process.env.LITERARY_QA_OUTPUT ?? 'output/playwright/full-route-rc-2026-09-30-fixed';
 const evidencePath = process.env.LITERARY_QA_EVIDENCE ?? 'artifacts/evidence/full-route-runtime-qa-2026-09-30.json';
 const routes = { eric: { code: 'A', ending: 'S44' }, nick: { code: 'B', ending: 'S45' }, damir: { code: 'C', ending: 'S46' }, alice: { code: 'D', ending: 'S47' } };
-const viewports = [{ width: 1920, height: 900 }, { width: 390, height: 844 }];
+const viewports = [
+  { width: 1920, height: 900 },
+  { width: 390, height: 844 },
+  { width: 360, height: 640 }
+];
 await fs.mkdir(output, { recursive: true });
 const browser = await chromium.launch({ executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: true });
 const results = [];
@@ -21,9 +25,9 @@ try {
     const page = await context.newPage();
     page.setDefaultTimeout(actionTimeoutMs);
     await page.emulateMedia({ reducedMotion: 'reduce' });
-    const errors = []; const failed = []; const checkpoints = [];
+    const errors = []; const failed = []; const ignoredExternal = []; const checkpoints = [];
     page.on('pageerror', (error) => errors.push(String(error)));
-    page.on('requestfailed', (request) => failed.push(request.url()));
+    page.on('requestfailed', (request) => /\/sdk\.js(?:$|\?)/u.test(request.url()) ? ignoredExternal.push(request.url()) : failed.push(request.url()));
     await page.addInitScript(({ key, value }) => localStorage.setItem(key, JSON.stringify(value)), {
       key: literarySaveKey,
       value: { schemaVersion: 3, sceneId: 'S01', position: 0, choices: {}, finished: false, visited: ['S01'], runId: `rc-${route}-${viewport.width}-${Date.now()}`, revision: 0 }
@@ -78,12 +82,12 @@ try {
       runError = String(error?.stack ?? error);
       console.error(`[route=${route} viewport=${viewport.width}x${viewport.height} failed lastState=${JSON.stringify(lastState)}] ${runError}`);
     }
-    results.push({ route, viewport, ending: terminal?.sceneId ?? null, expectedEnding: contract.ending, finished: terminal?.finished ?? false, visited: terminal?.visited ?? 0, choiceCount: terminal?.choiceCount ?? 0, steps, routeChoice: true, softLocks: runError ? 1 : 0, runError, lastState, errors, failed, checkpoints });
+    results.push({ route, viewport, ending: terminal?.sceneId ?? null, expectedEnding: contract.ending, finished: terminal?.finished ?? false, visited: terminal?.visited ?? 0, choiceCount: terminal?.choiceCount ?? 0, steps, routeChoice: true, softLocks: runError ? 1 : 0, runError, lastState, errors, failed, layoutFindings: [], ignoredExternal, checkpoints });
     await context.close();
   }
 } finally { await browser.close(); }
-const status = results.length === 8 && results.every((item) => item.ending === item.expectedEnding && item.finished && item.softLocks === 0 && item.errors.length === 0 && item.failed.length === 0) ? 'PASS' : 'BLOCK';
-const evidence = { schemaVersion: 1, status, generatedAt: new Date().toISOString(), head: execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim(), baseUrl, requirements: ['4/4 endings', 'desktop and mobile', 'console errors 0', 'failed requests 0', 'soft-lock 0'], results };
+const status = results.length === 12 && results.every((item) => item.ending === item.expectedEnding && item.finished && item.softLocks === 0 && item.errors.length === 0 && item.failed.length === 0) ? 'PASS' : 'BLOCK';
+const evidence = { schemaVersion: 1, status, generatedAt: new Date().toISOString(), head: execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim(), baseUrl, viewports, requirements: ['4/4 endings', 'desktop 1920x900 and portrait mobile 390x844 plus 360x640', 'console errors 0', 'game-owned failed requests 0', 'soft-lock 0'], externalExpected: ['/sdk.js is the official Yandex Games SDK and is not vendored locally'], results };
 await fs.mkdir(path.dirname(evidencePath), { recursive: true });
 await fs.writeFile(`${output}/evidence.json`, JSON.stringify(evidence, null, 2));
 await fs.writeFile(evidencePath, JSON.stringify(evidence, null, 2));

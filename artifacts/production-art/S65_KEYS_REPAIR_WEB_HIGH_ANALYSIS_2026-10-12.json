@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "phase": "analysis",
+  "agent": "ceos_art_director_web",
+  "reviewer": "ceos_art_director_web",
+  "evidenceArtifact": "artifacts/production-art/S65_KEYS_REPAIR_WEB_HIGH_ANALYSIS_2026-10-12.json",
+  "standard": "HOST_OBSERVED_ART_ACCEPTANCE_V1",
+  "hostAgentId": "01a12f1e-2d26-7d20-a15d-8cc8f14a3682",
+  "sourceHead": "bdfce614dda323a1ad69f7b893cce61017a1e747",
+  "scene": "S65",
+  "actualPixelsReceived": true,
+  "sourceBinding": "EXACT_HEAD_RUNTIME_SCREENSHOTS_SUPPLIED_BY_PARENT",
+  "derivedFromAcceptanceObservation": "S65_REPAIR_WEB_HIGH_ACCEPTANCE_2026-10-12.json",
+  "reviewedItems": ["S65-s65-locked-kitchen-hallway-1920x900", "S65-s65-locked-kitchen-hallway-390x844", "S65-s65-locked-kitchen-hallway-360x640"],
+  "evidenceRefs": ["S65-s65-locked-kitchen-hallway-1920x900.png", "S65-s65-locked-kitchen-hallway-390x844.png", "S65-s65-locked-kitchen-hallway-360x640.png"],
+  "receivedEvidenceRefs": ["S65-s65-locked-kitchen-hallway-1920x900.png", "S65-s65-locked-kitchen-hallway-390x844.png", "S65-s65-locked-kitchen-hallway-360x640.png"],
+  "visualEvidence": [
+    {"ref":"S65-s65-locked-kitchen-hallway-1920x900.png","sceneId":"S65","viewport":"1920x900","path":"artifacts/evidence/s65-repair-runtime-commit-en-2026-10-12/S65-s65-locked-kitchen-hallway-1920x900.png","sha256":"d8cc45857abbd9b7de53aefeea22a8ff46b567127c5be10521765a411f0fa432","observation":"На фактическом runtime кадре видны grounded четыре персонажа и закрытая дверь, но текущий текст ещё описывает раздачу ключей, а изображение уже показывает раскладку еды и нарезку помидоров."},
+    {"ref":"S65-s65-locked-kitchen-hallway-390x844.png","sceneId":"S65","viewport":"390x844","path":"artifacts/evidence/s65-repair-runtime-commit-en-2026-10-12/S65-s65-locked-kitchen-hallway-390x844.png","sha256":"ab30cbc82824b99a6e6364ea7c89f8c6f9680847a4b0bc846b2c32331940916a","observation":"Мобильный кадр сохраняет identity и пол, но ранние реплики о ключе сопровождаются более поздним чемоданом с едой и действием Дамира."},
+    {"ref":"S65-s65-locked-kitchen-hallway-360x640.png","sceneId":"S65","viewport":"360x640","path":"artifacts/evidence/s65-repair-runtime-commit-en-2026-10-12/S65-s65-locked-kitchen-hallway-360x640.png","sha256":"3a54c33ad57866b20cd050a042f311ad9d7de8057fb5453e3fccbf6ed0dce725","observation":"В узком portrait текст читается, но затемнение закрывает позднее действие с продуктами; ранний cue о пропавшем ключе всё ещё получает трапезный кадр."}
+  ],
+  "status": "FINDINGS",
+  "decision": "REWORK_P1",
+  "findings": [
+    {"id":"S65-KEYS-ART-P1-01","severity":"P1","category":"CUE_TIMING_AND_NARRATIVE_CONTINUITY","detail":"The later dinner CG is bound at [0,0], while S65.C000.P000-P028 describe room-key distribution and the missing common-kitchen key."},
+    {"id":"S65-KEYS-ART-P1-02","severity":"P1","category":"MOBILE_ACTION_VISIBILITY","detail":"At 360x640 the dialogue-safe dimming obscures much of the later food action; the current opening cue should not ask the frame to carry that action yet."}
+  ],
+  "unresolved": ["A separate early key-discovery desktop/portrait CG is required before the accepted dinner CG at [0,29]."],
+  "minimumFix": "Add S65-only key-discovery art at [0,0] with Eric owning the key ring and Nick indicating the blue fob; move s65-locked-kitchen-hallway to [0,29]. Do not change text or shared kitchen assets.",
+  "perViewportVerdict": {"1920x900":"REWORK_P1","390x844":"REWORK_P1","360x640":"REWORK_P1"}
+}

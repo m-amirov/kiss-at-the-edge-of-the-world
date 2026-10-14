@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "runId": "2026-10-12T07:42:18-590Z-production-art-4043b3",
+  "sourceHead": "257d3f87a5803c95763ff4e0b35af2624e2cfbc5",
+  "sceneId": "S65",
+  "cue": "s65-locked-kitchen-hallway",
+  "candidateOrdinal": 1,
+  "variant": "portrait",
+  "tool": "image_gen.imagegen",
+  "toolCallOutput": "C:/Users/user/.codex/generated_images/01a12ec0-d36b-7252-86c7-acfc6756e664/exec-5a9e330d-6ac7-42a9-92a1-a005b443a03e.png",
+  "outputPath": "artifacts/production-art/candidates/S65-repair-candidate1-portrait.png",
+  "outputSha256": "3af6ecac439e532ba2791a8b0f2e17032eebbac362db89322549275e3ef7519a",
+  "dimensions": "941x1672",
+  "outputGate": "artifacts/production-art/S65_REPAIR_CANDIDATE1_PORTRAIT_OUTPUT_GATE_2026-10-12.json",
+  "outputGateStatus": "PASS_ART_OUTPUT_MECHANICAL",
+  "semanticReviewPending": true
+}

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "recordType": "four-scene-art-repair-web-review",
+  "sceneId": "S07",
+  "cue": "s07-kitchen-pasta",
+  "reviewer": "ceos_art_director_web / GPT-6 Sol High",
+  "transportAgentId": "01a11f3f-31ec-7720-a828-0ab37f070618",
+  "taskId": null,
+  "reviewTraceId": null,
+  "sourceHead": "a2308054c338b53ecf2310a1bee44e6f5e54f02a",
+  "actualPixelsReceived": true,
+  "actualPixelsCount": 2,
+  "reviewedEvidence": [
+    "artifacts/evidence/four-scene-art-repair-after-final7-2026-10-09/S07-s07-kitchen-pasta-ru-1920x900.png",
+    "artifacts/evidence/four-scene-art-repair-after-final7-2026-10-09/S07-s07-kitchen-pasta-ru-390x844.png"
+  ],
+  "strictVerdict": "PASS",
+  "observations": "Desktop and portrait show the authored cooking interaction: full pot, boiling foam, steam, spoon and stop gesture; wardrobe is consistent.",
+  "metadataGap": "Final reviewer response did not expose taskId or reviewTraceId. transportAgentId is recorded and is not a substitute for either required ID."
+}

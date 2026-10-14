@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "recordType": "production-art-canon-readback",
+  "status": "PASS",
+  "sourceHead": "0bcc70eb04111d72ccc1da71bc35f69347b26631",
+  "canon": {
+    "artBible": "artifacts/art-direction/ART_BIBLE.md",
+    "artBibleSha256": "272335cc2daee9f9a85c2c4e3e8e8b0636b8d5876a504f0a3fd2ecbf27b0978d",
+    "visualLanguage": "artifacts/art-direction/VISUAL_LANGUAGE.json",
+    "visualLanguageSha256": "8b3fbf0d6f8c003c0f9315adc9c2a832c7d98010f2c455dac30e2be2b0df4829",
+    "characterMasters": [
+      "assets/characters/alice-stage.webp",
+      "assets/characters/nick-master.webp",
+      "assets/characters/eric-master.webp",
+      "assets/characters/damir-master.webp"
+    ]
+  },
+  "generation": "NOT_PERFORMED",
+  "reason": "Final RC acceptance reuses existing integrated assets; no confirmed defect required generation.",
+  "matrix": "artifacts/evidence/production-art-coverage-rc-2026-10-09/evidence.json"
+}

@@ -1,9 +1,10 @@
 # Changelog
 
-## 0.5.9 — 2026-09-30
+## 0.5.9 — 2026-10-11
 
-- Updated the official Yandex Games requirements snapshot and registries after the 29 September 2026 documentation revision.
+- Updated the official Yandex Games requirements snapshot and registries after the 9 October 2026 documentation revision.
 - Preserved repealed requirements 3.7.1 and 3.7.2 for traceability and updated the requirements audit to derive its source revision from the authoritative registry.
+- Added the aggregated Yandex release-evidence contract and regression coverage for clean repeated Starter Kit updates.
 
 ## 0.5.8 — 2026-09-24
 

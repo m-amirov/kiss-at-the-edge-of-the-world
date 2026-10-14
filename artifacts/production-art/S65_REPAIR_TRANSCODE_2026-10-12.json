@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "recordType": "scoped-production-art-transcode",
+  "sourceHead": "257d3f87a5803c95763ff4e0b35af2624e2cfbc5",
+  "contract": {"format":"WEBP","quality":90,"method":6,"lossless":false,"dimensionsChanged":false,"sourcePngsRetained":true},
+  "assets": [
+    {"sourcePath":"assets/cg/s65-locked-kitchen-hallway.png","sourceSha256":"0cf54652ca2da9ba64109d974002028043fea012bd31be7711df94e0df57d4c7","sourceBytes":2473139,"runtimePath":"assets/cg/s65-locked-kitchen-hallway.webp","runtimeSha256":"210b6e4adf7b05174327b42a5b186a502c22cd1aa1e586f77fae4849eaebda3","runtimeBytes":300930,"dimensions":[1672,941],"sourceMode":"RGB","alpha":false},
+    {"sourcePath":"assets/cg/s65-locked-kitchen-hallway-portrait.png","sourceSha256":"73e613678051897bbfd52373d7c013a27a62a459581dff02efe2c7b2d7faeae1","sourceBytes":2465335,"runtimePath":"assets/cg/s65-locked-kitchen-hallway-portrait.webp","runtimeSha256":"337e1a102fe9a474af675bbf208c08826c7a5d3d5d6bc6370f65e89a5128441d","runtimeBytes":312018,"dimensions":[941,1672],"sourceMode":"RGB","alpha":false}
+  ],
+  "status":"PASS_SCOPED_TRANSCODE",
+  "formalRuntimeTranscodeAcceptance":"DEFERRED_UNTIL_GLOBAL_PRODUCTION_ART_ACCEPTANCE_EXISTS"
+}

@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url';
 import { literarySeason } from '../../src/literary-season-data.js';
 import { literaryLocaleBundles } from '../../src/literary-localization-bundle.js';
 import { interactionBeats } from '../../src/literary-interactive-beats.js';
+import { compileScenePlayback } from '../../src/literary-engine.js';
 import { applyLiteraryLocale, validateLiteraryInteractionLocale, validateLiteraryLocale } from '../../src/localization.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
@@ -63,4 +64,13 @@ test('locale switching keeps structural save data locale-independent', () => {
   assert.equal(en, ru);
   assert.equal('locale' in state, false);
   assert.equal('sceneId' in state && 'position' in state && 'choices' in state, true);
+});
+
+test('S26-C1 option D displays the independent-route copy in RU and EN', () => {
+  const sourceScene = literarySeason.scenes.find(scene => scene.id === 'S26');
+  const englishScene = applyLiteraryLocale(literarySeason, literaryLocaleBundles.en).scenes.find(scene => scene.id === 'S26');
+  const displayedOption = scene => compileScenePlayback(scene).find(entry => entry.type === 'choice' && entry.id === 'S26-C1').options.find(option => option.code === 'D').label;
+
+  assert.equal(displayedOption(sourceScene), 'Выбрать себя');
+  assert.equal(displayedOption(englishScene), 'Choose yourself');
 });

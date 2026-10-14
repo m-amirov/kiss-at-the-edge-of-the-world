@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "runId": "2026-10-08T11-26-36-655Z-production-art-6e0221",
+  "sourceHead": "c9041669ef5d1309db309791bfb014bf926218d8",
+  "styleSource": "artifacts/art-direction/ART_BIBLE.md",
+  "scene": "S02",
+  "cue": "roadside-cafe",
+  "locationReference": "assets/backgrounds/s02-roadside-cafe.png",
+  "characterReferences": {
+    "alice": "assets/characters/alice-master.png",
+    "nick": "assets/characters/nick-master.png",
+    "eric": "assets/characters/eric-master.png",
+    "damir": "assets/characters/damir-master.png"
+  },
+  "visualDirection": {
+    "useCase": "illustration-story",
+    "assetType": "integrated visual-novel full-scene CG",
+    "composition": "wide, natural four-person roadside cafe interior; Alice remains an active subject at the table while calling Marina; Nick, Eric and Damir are physically present in the same space, not isolated cut-outs",
+    "desktop": "1832x859 landscape-safe composition with faces and meaningful hands/props above the lower dialogue region",
+    "portrait": "940x1672 portrait-safe re-composition of the same authored moment; all four people remain readable above the dialogue region",
+    "lighting": "cold rainy daylight through cafe windows balanced by restrained warm practical lights",
+    "palette": "basalt charcoal, Atlantic blue, moss green, cloud grey, warm amber, muted wine scarf accent",
+    "props": ["coffee", "pastries", "Alice's phone", "Nick's camera or camera bag", "notebook or table context"],
+    "identityAndWardrobe": "preserve the four approved master faces, hair, age, silhouette and travel layers; no invented logos",
+    "aliceAgency": "Alice is visibly engaged in the phone call or returning to the shared table, never reduced to a passive romantic prop"
+  },
+  "avoid": [
+    "four small transparent stage figures placed over the background",
+    "vehicle interior, route map or moving-car framing",
+    "generated readable text, menu copy, signage or logos",
+    "watermark, signature, malformed hands, duplicate body, identity drift",
+    "romantic pair crop that hides the other two travellers"
+  ],
+  "acceptance": [
+    "one integrated scene family with desktop and portrait-safe variants",
+    "all four authored characters are visibly present in the pixels",
+    "cafe environment is unmistakable and agrees with the S02 prose",
+    "no sprite stage is rendered while the CG is active",
+    "current-runtime screenshots prove the entry from car to cafe"
+  ]
+}

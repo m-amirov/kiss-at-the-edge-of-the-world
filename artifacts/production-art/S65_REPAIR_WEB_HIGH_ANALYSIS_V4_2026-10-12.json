@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "phase": "analysis",
+  "agent": "ceos_art_director_web",
+  "reviewer": "ceos_art_director_web",
+  "evidenceArtifact": "artifacts/production-art/S65_REPAIR_WEB_HIGH_ANALYSIS_V4_2026-10-12.json",
+  "standard": "HOST_OBSERVED_ART_ACCEPTANCE_V1",
+  "hostAgentId": "01a12f0a-d8ce-7982-a147-35e0e279ad7a",
+  "sourceHead": "257d3f87a5803c95763ff4e0b35af2624e2cfbc5",
+  "scene": "S65",
+  "actualPixelsReceived": true,
+  "sourceBinding": "USER_DECLARED_NOT_INDEPENDENTLY_VERIFIED",
+  "reviewedItems": ["S65-scene-start-1920x900", "S65-scene-start-390x844", "S65-scene-start-360x640"],
+  "evidenceRefs": ["S65-scene-start-1920x900.png", "S65-scene-start-390x844.png", "S65-scene-start-360x640.png"],
+  "receivedEvidenceRefs": ["S65-scene-start-1920x900.png", "S65-scene-start-390x844.png", "S65-scene-start-360x640.png"],
+  "visualEvidence": [
+    {"ref":"S65-scene-start-1920x900.png","sceneId":"S65","viewport":"1920x900","path":"artifacts/evidence/s65-baseline-2026-10-12/S65-scene-start-1920x900.png","sha256":"dd9f1839ccec7a73960bd0371c788fcce8abe98b1025305086b9967377a9c731","observation":"Оба stage-персонажа стоят в плоскости большой столешницы; открытая оборудованная кухня занимает весь фон."},
+    {"ref":"S65-scene-start-390x844.png","sceneId":"S65","viewport":"390x844","path":"artifacts/evidence/s65-baseline-2026-10-12/S65-scene-start-390x844.png","sha256":"0363379f39d138eaad11ceb2431930d3473618f78c318a5d4010660e8b5f71a3","observation":"Portrait сохраняет действующую кухню и наложение фигур на столовую зону; диалог закрывает нижнюю часть фигур."},
+    {"ref":"S65-scene-start-360x640.png","sceneId":"S65","viewport":"360x640","path":"artifacts/evidence/s65-baseline-2026-10-12/S65-scene-start-360x640.png","sha256":"385b749477ae3556ee59938f7f56f66cda782fa047ad8114a86ca5aaf5dca0f0","observation":"На узком portrait фигуры выглядят наложенными на кухонный foreground, а связь с полом не читается."}
+  ],
+  "status":"FINDINGS",
+  "decision":"REWORK_P1",
+  "findings":[
+    {"id":"S65-ART-P1-01","severity":"P1","category":"CHARACTER_GROUNDING","detail":"Feet align with the visible table surface; no believable floor plane or contact shadow."},
+    {"id":"S65-ART-P1-02","severity":"P1","category":"LOCATION_AND_NARRATIVE_CONTINUITY","detail":"Shelves, sink, stove and full dining table show an open equipped kitchen, contradicting no kitchen key and hallway outside locked kitchen."},
+    {"id":"S65-ART-P2-01","severity":"P2","category":"MOBILE_COMPOSITION","detail":"Portrait crops preserve the wrong location and weaken lower-body spatial grounding."}
+  ],
+  "unresolved":["P029 and P033 runtime states were not supplied in this analysis turn; acceptance must verify those authored actions after the cue-specific repair."],
+  "minimumFix":"Use S65-only cue-specific hallway/closed-kitchen art with all four canonical characters grounded on one floor plane; do not change text or shared kitchen assets.",
+  "perViewportVerdict":{"1920x900":"REWORK_P1","390x844":"REWORK_P1","360x640":"REWORK_P1"}
+}

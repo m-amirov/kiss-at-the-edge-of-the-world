@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "phase": "acceptance",
+  "agent": "ceos_art_director_web",
+  "reviewer": "ceos_art_director_web",
+  "status": "PASS",
+  "evidenceArtifact": "artifacts/production-art/S65_KEYS_REPAIR_POSTREPAIR_WEB_HIGH_ACCEPTANCE_2026-10-12.json",
+  "standard": "HOST_OBSERVED_ART_ACCEPTANCE_V1",
+  "sourceHead": "bdfce614dda323a1ad69f7b893cce61017a1e747",
+  "scene": "S65",
+  "actualPixelsReceived": true,
+  "transportAgentId": "01a12f1e-2d26-7d20-a15d-8cc8f14a3682",
+  "localeReviewed": "en",
+  "reviewedItems": [
+    "S65-s65-locked-kitchen-keys-1920x900",
+    "S65-s65-locked-kitchen-keys-390x844",
+    "S65-s65-locked-kitchen-keys-360x640",
+    "S65-s65-locked-kitchen-hallway-1920x900",
+    "S65-s65-locked-kitchen-hallway-390x844",
+    "S65-s65-locked-kitchen-hallway-360x640"
+  ],
+  "evidenceRefs": [
+    "en-s65-locked-kitchen-keys-1920x900.png",
+    "en-s65-locked-kitchen-keys-390x844.png",
+    "en-s65-locked-kitchen-keys-360x640.png",
+    "en-s65-locked-kitchen-hallway-1920x900.png",
+    "en-s65-locked-kitchen-hallway-390x844.png",
+    "en-s65-locked-kitchen-hallway-360x640.png"
+  ],
+  "receivedEvidenceRefs": [
+    "en-s65-locked-kitchen-keys-1920x900.png",
+    "en-s65-locked-kitchen-keys-390x844.png",
+    "en-s65-locked-kitchen-keys-360x640.png",
+    "en-s65-locked-kitchen-hallway-1920x900.png",
+    "en-s65-locked-kitchen-hallway-390x844.png",
+    "en-s65-locked-kitchen-hallway-360x640.png"
+  ],
+  "visualEvidence": [
+    {"ref":"en-s65-locked-kitchen-keys-1920x900.png","sceneId":"S65","beat":"s65-locked-kitchen-keys","viewport":"1920x900","path":"artifacts/evidence/s65-repair-runtime-postrepair-2026-10-12/en-s65-locked-kitchen-keys-1920x900.png","sha256":"759e93ffc830e3e31570334905f942889acf3cc95392f170c49583007305214f","observation":"Opening key-discovery cue matches the text: Eric checks the ring, Nick points to the blue fob, no food is present, four characters are grounded and dialogue remains readable."},
+    {"ref":"en-s65-locked-kitchen-keys-390x844.png","sceneId":"S65","beat":"s65-locked-kitchen-keys","viewport":"390x844","path":"artifacts/evidence/s65-repair-runtime-postrepair-2026-10-12/en-s65-locked-kitchen-keys-390x844.png","sha256":"b3e3c0789d7bacfadbc6648467834325f15fa786ca657177110205507395b40a","observation":"Portrait opening preserves the key action, character identities, floor grounding, crop and dialogue-safe area; side characters remain recognizable."},
+    {"ref":"en-s65-locked-kitchen-keys-360x640.png","sceneId":"S65","beat":"s65-locked-kitchen-keys","viewport":"360x640","path":"artifacts/evidence/s65-repair-runtime-postrepair-2026-10-12/en-s65-locked-kitchen-keys-360x640.png","sha256":"4b786eae8cc8fdd33c70be5313ec4ae07d400d954c274fab338617f636991fbd","observation":"Narrow portrait keeps Eric's key ring and Nick's pointing gesture visible above the readable dialogue; no later dinner props or technical artifacts appear."},
+    {"ref":"en-s65-locked-kitchen-hallway-1920x900.png","sceneId":"S65","beat":"s65-locked-kitchen-hallway","viewport":"1920x900","path":"artifacts/evidence/s65-repair-runtime-postrepair-2026-10-12/en-s65-locked-kitchen-hallway-1920x900.png","sha256":"f5830c56901ed1fb12f600f159c37f6bd9b4eafd7dda86a85dcf7662ae30c071","observation":"Dinner cue at P029 matches the authored hallway action: Nick arranges food on the overturned suitcase and Damir cuts tomatoes on the lid; grounding and style remain coherent."},
+    {"ref":"en-s65-locked-kitchen-hallway-390x844.png","sceneId":"S65","beat":"s65-locked-kitchen-hallway","viewport":"390x844","path":"artifacts/evidence/s65-repair-runtime-postrepair-2026-10-12/en-s65-locked-kitchen-hallway-390x844.png","sha256":"922db7cfb8ce56704bd85113b18170378043537acec7cfd949ddb328ea1dd576","observation":"Mobile dinner crop preserves the suitcase, food and Damir's tomato action with four recognizable characters and readable dialogue; the right crop is a tolerable P2."},
+    {"ref":"en-s65-locked-kitchen-hallway-360x640.png","sceneId":"S65","beat":"s65-locked-kitchen-hallway","viewport":"360x640","path":"artifacts/evidence/s65-repair-runtime-postrepair-2026-10-12/en-s65-locked-kitchen-hallway-360x640.png","sha256":"b767efbc16536b41cbe0085bf5309a22c77f3d9bfd90ba765d180d4b2e1f50eb","observation":"Narrow dinner crop still clearly shows Nick's suitcase food setup and Damir's tomatoes; text remains readable and no P0/P1 composition or artifact defect is present."}
+  ],
+  "decision": "PASS. Opening and dinner beats are temporally separated, all six required beat/viewport combinations pass, and the prior P1 cue mismatch is removed.",
+  "perBeatViewportVerdict": {
+    "s65-locked-kitchen-keys": {"1920x900":"PASS","390x844":"PASS","360x640":"PASS"},
+    "s65-locked-kitchen-hallway": {"1920x900":"PASS","390x844":"PASS","360x640":"PASS"}
+  },
+  "findings": [
+    {"id":"S65-WH-P2-01","severity":"P2","scope":"opening all viewports","detail":"The door's kitchen purpose is supported mainly by the authored text rather than a unique visual sign; acceptable and non-blocking."},
+    {"id":"S65-WH-P2-02","severity":"P2","scope":"dinner 390x844 and 360x640","detail":"Damir is partly near the right edge, but the tomato action remains legible; non-blocking mobile crop."}
+  ],
+  "unresolved": [],
+  "confirmedPasses": ["temporal-cue-match", "opening-key-action", "dinner-action-attribution", "grounding", "character-identity", "mobile-crop", "dialogue-readability", "dialogue-safe-area", "style-consistency", "no-major-artifacts"],
+  "reviewBasis": "Independent Web High review of all six attached EN runtime screenshots; provider-attested receipt not required by HOST_OBSERVED_ART_ACCEPTANCE_V1.",
+  "actualPixelsCount": 6,
+  "requiredPixelsCount": 6
+}

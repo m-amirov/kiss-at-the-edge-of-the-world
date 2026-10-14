@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "recordType": "four-scene-art-repair-generation",
+  "runId": "2026-10-09T04-54-44-516Z-production-art-d4d9f8",
+  "sourceHead": "a2308054c338b53ecf2310a1bee44e6f5e54f02a",
+  "capability": {
+    "challengeId": "cap-5f9fbf22353b0f2ab965",
+    "sessionId": "01a11f08-a139-76d0-808d-6348e08175e5",
+    "turnId": "01a11f0c-044f-7e82-ba35-12880d8b93a7",
+    "attestedTool": "image_gen.imagegen",
+    "trustScope": "run-session-turn",
+    "generationAllowed": true
+  },
+  "generatedAssets": [
+    {
+      "sceneId": "S26",
+      "desktop": { "path": "assets/cg/s26-power-outage-notebook.png", "sha256": "BA487D55AA654204C8F5EF2978793FAD68C559A5E675A40CC9B091BD9D232840", "dimensions": "1672x941", "recomposition": "single entry lamp; notebook on windowsill; map and butter stain raised above the desktop dialogue-safe area" },
+      "portrait": { "path": "assets/cg/s26-power-outage-notebook-portrait.png", "sha256": "B30E4BB44EF102D9F2E7104F746BD5D25C094BF171EB698B1AAB656702AC0F1C", "dimensions": "941x1672", "recomposition": "single entry lamp; notebook, map and butter stain raised above the dialogue-safe area" },
+      "generationType": "new bounded scene pair"
+    },
+    {
+      "sceneId": "S07",
+      "desktop": { "path": "assets/cg/s07-kitchen-pasta.png", "sha256": "ACDA492CC1CC2824550600F5BABFA8F6D5039D1879FBD3755C1D2EEBBB768487", "dimensions": "1672x941" },
+      "portrait": { "path": "assets/cg/s07-kitchen-pasta-portrait.png", "sha256": "808CDA353AB023C75CCC68C50C29A0F2E7C32C27E52AB288EEF4CB957214D235", "dimensions": "941x1672" },
+      "generationType": "new bounded scene pair after Web High runtime rework"
+    },
+    {
+      "sceneId": "S18",
+      "portrait": { "path": "assets/backgrounds/s18-hofn-harbour-portrait.png", "sha256": "9731E0AE421FB1DD306685942DD340E1F392111AFEDC6BA086DB3EE09703E348", "dimensions": "941x1672" },
+      "generationType": "scene-specific portrait background re-composition"
+    },
+    {
+      "sceneId": "S38",
+      "desktop": { "path": "assets/cg/s38-alice-nick-ordinary-day.png", "sha256": "4B45F3163D15FA72B7F1001952502080BFEF216A7C0DF3FD15F670612F130612", "dimensions": "1672x941" },
+      "portrait": { "path": "assets/cg/s38-alice-nick-ordinary-day-portrait.png", "sha256": "9F084549A62A98877CBD6BE05B0EB357C20C73EAFC1023BF8EEB5F9F841DBE3F", "dimensions": "941x1672", "normalization": "centered ImageOps.fit from native 981x1602 output; no authored content added" },
+      "generationType": "new bounded scene pair after two Web High reworks"
+    }
+  ],
+  "nonGeneratedRepair": { "sceneId": "S18", "change": "localized runtime focal point for existing harbour background", "assetPreserved": true }
+}

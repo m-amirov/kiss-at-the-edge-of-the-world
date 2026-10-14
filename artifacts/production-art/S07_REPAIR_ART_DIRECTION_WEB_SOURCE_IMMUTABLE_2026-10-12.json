@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "phase": "analysis",
+  "recordType": "source-bound-web-art-direction",
+  "agent": "ceos_art_director_web",
+  "reviewer": "ceos_art_director_web",
+  "status": "FINDINGS",
+  "evidenceArtifact": "artifacts/production-art/S07_REPAIR_ART_DIRECTION_WEB_SOURCE_IMMUTABLE_2026-10-12.json",
+  "transportAgentId": "01a12edf-0fe8-7721-a447-b6d2f9279667",
+  "sourceHead": "1eb41c69495326b86f699570ec8c6efeab2558e9",
+  "actualPixelsReceived": true,
+  "reviewedItems": ["S07/source-desktop","S07/source-portrait","S07/reference-alice","S07/reference-nick","S07/reference-eric","S07/reference-damir"],
+  "evidenceRefs": ["s07-source-desktop-immutable","s07-source-portrait-immutable","s07-reference-alice","s07-reference-nick","s07-reference-eric","s07-reference-damir"],
+  "receivedEvidenceRefs": ["s07-source-desktop-immutable","s07-source-portrait-immutable","s07-reference-alice","s07-reference-nick","s07-reference-eric","s07-reference-damir"],
+  "decision": "FINDINGS: the complete immutable source evidence bundle was reviewed. Mapping and authored beat are coherent, but both source compositions place the blond Eric closest to Alice with the visible stop gesture while canonical Nick is behind holding plates. This is a P1 source-composition defect; repair must reassign the action center to Nick without changing prose or stage mapping.",
+  "findings": [{"id":"S07-SOURCE-ACTION-TRUTH","severity":"P1","summary":"Eric visually owns the stop gesture and Nick is backgrounded, so the player can misattribute the line to Eric."}],
+  "unresolved": [],
+  "visualEvidence": [
+    {"ref":"s07-source-desktop-immutable","sceneId":"S07","viewport":"source-desktop","path":"artifacts/production-art/source-evidence/s07-kitchen-pasta-source-desktop.png","sha256":"acda492cc1cc2824550600f5babfa8f6d5039d1879fbd3755c1d2eebbb768487","observation":"Immutable desktop source pixels show Alice at the pot, blond Eric nearest her with the raised stop hand, and dark-haired Nick behind holding plates; the gesture-to-speaker relationship is visually wrong."},
+    {"ref":"s07-source-portrait-immutable","sceneId":"S07","viewport":"source-portrait","path":"artifacts/production-art/source-evidence/s07-kitchen-pasta-source-portrait.png","sha256":"808cda353ab023c75ccc68c50c29a0f2e7c32c27e52ab288eef4cb957214d235","observation":"Immutable portrait source keeps the same ambiguous action center and compresses multiple dark-haired figures, making Nick's identity and ownership of the stop beat unclear."},
+    {"ref":"s07-reference-alice","sceneId":"S07","viewport":"reference","path":"assets/characters/alice-master.png","sha256":"d261c464d1d40913e3bd377b206b9d59e86310ecfbedc0357d6fe4def1179d5d","observation":"Alice reference establishes the addressed participant's identity and palette for the repaired kitchen action pair."},
+    {"ref":"s07-reference-nick","sceneId":"S07","viewport":"reference","path":"assets/characters/nick-master.png","sha256":"a1c4aae9230b21a7ce9eaf4605a62ed54e225e35ab1b2470049902a63fe44fdd","observation":"Nick reference establishes dark curly hair, light stubble, and green outerwear required for unambiguous action ownership."},
+    {"ref":"s07-reference-eric","sceneId":"S07","viewport":"reference","path":"assets/characters/eric-master.png","sha256":"aa66cc7e0a58bd409b1066dbc07cd5780796245fd79a7eb5c8e0fb98f0322f14","observation":"Eric reference establishes blond hair and blue outerwear so he can remain a separated supporting observer in the repaired frame."},
+    {"ref":"s07-reference-damir","sceneId":"S07","viewport":"reference","path":"assets/characters/damir-master.png","sha256":"221df2cdd61880de169b500fa56095c99c9784595d156201ee65f15f76c69ef3","observation":"Damir reference establishes swept dark hair and burgundy scarf, which must remain visually distinct from Nick in the repaired frame."}
+  ],
+  "requiredComposition": {
+    "desktop": "Alice center-left at the pot; canonical Nick immediately beside her with visible face and stopping hand between Alice and the pot; Eric and Damir supporting and separated from the action center.",
+    "portrait": "Preserve Alice, canonical Nick, pot and Nick's stopping hand as the central action pair above dialogue-safe area; supporting cast must not create a false speaker.",
+    "identity": "Nick: dark curly hair, recognizable face, green outerwear family. Eric: blond supporting observer. Damir: dark swept hair and burgundy scarf.",
+    "forbidden": ["Eric performing the stop gesture","Nick backgrounded with plates while another man interacts with Alice","two indistinguishable dark-haired men competing for Nick identity","occluded stop hand"]
+  },
+  "acceptanceChecklist": ["Nick is the unambiguous visual speaker/action owner in desktop and portrait.","Alice remains the addressed participant at the pot.","Eric remains blond and supporting; Damir remains distinct with burgundy scarf.","Desktop and portrait preserve one S07 beat without identity or crop drift."]
+}

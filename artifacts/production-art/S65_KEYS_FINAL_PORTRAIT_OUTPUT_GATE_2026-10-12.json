@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "path": "E:\\Work\\YandexGames\\Novells\\kiss-at-the-edge-of-the-world-s65-repair-20261012\\assets\\cg\\s65-locked-kitchen-keys-portrait.png",
+  "kind": "background",
+  "status": "PASS_ART_OUTPUT_MECHANICAL",
+  "issues": [],
+  "sha256": "52717bf67ccf92a0db3c6eddaa8b7c257aac293adaa0ba35cbcf2a9de01d5526",
+  "bytes": 2544564,
+  "dimensions": {
+    "width": 941,
+    "height": 1672
+  },
+  "alpha": {
+    "opaque": 1573352,
+    "transparent": 0,
+    "partial": 0,
+    "nonzero": 1573352,
+    "cornerAlpha": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "bounds": {
+    "x": 0,
+    "y": 0,
+    "width": 941,
+    "height": 1672
+  },
+  "checkerboard": {
+    "detected": false
+  },
+  "visualAcceptance": "NOT_VERIFIED",
+  "recordedAt": "2026-10-12T08:15:13.916Z"
+}

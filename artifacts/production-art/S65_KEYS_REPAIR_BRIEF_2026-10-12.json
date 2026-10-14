@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "recordType": "source-bound-art-brief",
+  "sourceHead": "bdfce614dda323a1ad69f7b893cce61017a1e747",
+  "sceneId": "S65",
+  "cue": {"id": "s65-locked-kitchen-keys", "at": [0, 0]},
+  "sourceRef": {"chunk": 0, "paragraph": 0},
+  "location": "Рейкьявик, старый гостевой дом, коридор у закрытой общей кухни, вечер",
+  "purpose": "Targeted repair of the S65 opening key-discovery beat; show the missing kitchen key before the later hallway dinner beat without changing authored text.",
+  "authoredAction": "Eric distributes room keys and discovers that the common kitchen key is missing. Nick points to the blue key fob; Alice and Damir remain with the group in the corridor.",
+  "requiredCast": ["alice", "eric", "nick", "damir"],
+  "narrativeActions": [
+    {"character": "alice", "action": "Stands naturally on the hallway floor in the canonical yellow jacket and burgundy scarf, observing the key exchange."},
+    {"character": "eric", "action": "Owns the key-checking action, visibly holding the room-key ring and looking toward the closed kitchen door."},
+    {"character": "nick", "action": "Points toward the blue key fob or empty kitchen-key position; do not show him preparing food yet."},
+    {"character": "damir", "action": "Remains a distinct supporting figure on the floor, not holding a knife and not performing the later tomato action."}
+  ],
+  "sceneContinuity": "The later dinner CG starts at S65.C000.P029, where the group settles in the hallway and Nick arranges food. This opening CG must precede that beat and show no prepared meal, suitcase food display, knife, tomatoes, or open kitchen interior.",
+  "characterReferences": [
+    {"character": "alice", "path": "assets/characters/alice-master.png", "sha256": "d261c464d1d40913e3bd377b206b9d59e86310ecfbedc0357d6fe4def1179d5d"},
+    {"character": "eric", "path": "assets/characters/eric-master.png", "sha256": "aa66cc7e0a58bd409b1066dbc07cd5780796245fd79a7eb5c8e0fb98f0322f14"},
+    {"character": "nick", "path": "assets/characters/nick-master.png", "sha256": "a1c4aae9230b21a7ce9eaf4605a62ed54e225e35ab1b2470049902a63fe44fdd"},
+    {"character": "damir", "path": "assets/characters/damir-master.png", "sha256": "221df2cdd61880de169b500fa56095c99c9784595d156201ee65f15f76c69ef3"}
+  ],
+  "locationReferences": [
+    {"character": "accepted-later-S65-hallway-dinner-CG", "path": "assets/cg/s65-locked-kitchen-hallway.png", "sha256": "0cf54652ca2da9ba64109d974002028043fea012bd31be7711df94e0df57d4c7"}
+  ],
+  "forbiddenProps": ["open or usable kitchen interior", "prepared meal or food spread", "knife", "tomatoes", "new readable text", "logos", "watermarks", "standing characters on a tabletop", "extra dark-haired male duplicates"],
+  "desktop": {"composition": "A cinematic landscape hallway outside a visibly closed kitchen door. Eric is the clear focal action owner at the center with a small key ring, Nick points toward the blue fob, Alice and Damir stand naturally on the same floor plane. Keep the lower dialogue-safe zone free of food and table-like surfaces.", "framing": "1672x941 landscape CG; grounded feet and contact shadows, believable hallway perspective, closed kitchen service hatch or key plate legible behind the group, no counters or stove visible.", "requiredVisibleCast": ["alice", "eric", "nick", "damir"]},
+  "portrait": {"composition": "A purpose-built vertical crop of the same early key-discovery hallway scene. The closed kitchen door and blue key fob remain legible above the dialogue-safe area; Eric, Nick, Alice and Damir remain distinct and grounded with no food setup.", "framing": "941x1672 portrait CG; preserve faces, key ring/fob, door hardware and floor contact, with no later dinner props.", "requiredVisibleCast": ["alice", "eric", "nick", "damir"]},
+  "style": "cinematic semi-realistic visual-novel CG; restrained brush texture, warm entry lamp against cool evening hallway, Icelandic guesthouse architecture, coherent scale and depth; no interface text baked into pixels",
+  "qualityAcceptance": [
+    "The image unambiguously depicts the early missing-kitchen-key beat before the group shops and improvises dinner.",
+    "The common kitchen reads as closed and inaccessible; no equipped usable kitchen interior is visible.",
+    "Eric owns the key-checking action and Nick's blue-fob gesture is readable; Damir is not mistaken for the action owner.",
+    "All four characters are identifiable and grounded on the same hallway floor plane; no tabletop or countertop ambiguity.",
+    "Desktop and portrait preserve the same authored situation, readable faces and key prop, mobile-safe composition, and no anatomy, lighting, crop or baked-text defects."
+  ],
+  "candidateNumber": 1,
+  "priorRejection": null,
+  "priorReviewFindings": "A separate later-dinner cue at S65.C000.P029 received Web High PASS for grounding and identity; its earlier incorrect [0,0] mapping caused a P1 cue mismatch against the key-discovery paragraphs."
+}

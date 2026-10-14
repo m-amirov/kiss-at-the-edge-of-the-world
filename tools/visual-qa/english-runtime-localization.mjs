@@ -95,6 +95,7 @@ async function advanceToChoice(page) {
 async function captureTarget(sceneId, viewport) {
   const context = await browser.newContext({ viewport, reducedMotion: 'reduce' });
   const page = await context.newPage();
+  await page.route('**/sdk.js', route => route.fulfill({ status: 200, contentType: 'application/javascript', body: 'window.YaGames = undefined;' }));
   const consoleErrors = []; const failedRequests = [];
   page.on('pageerror', error => consoleErrors.push(String(error)));
   page.on('console', message => { if (message.type() === 'error') consoleErrors.push(message.text()); });
@@ -147,6 +148,7 @@ async function captureTarget(sceneId, viewport) {
 async function checkSaveLoadCase(sceneId) {
   const context = await browser.newContext({ viewport: { width: 390, height: 844 }, reducedMotion: 'reduce' });
   const page = await context.newPage();
+  await page.route('**/sdk.js', route => route.fulfill({ status: 200, contentType: 'application/javascript', body: 'window.YaGames = undefined;' }));
   const consoleErrors = []; const failedRequests = [];
   page.on('pageerror', error => consoleErrors.push(String(error)));
   page.on('console', message => { if (message.type() === 'error') consoleErrors.push(message.text()); });

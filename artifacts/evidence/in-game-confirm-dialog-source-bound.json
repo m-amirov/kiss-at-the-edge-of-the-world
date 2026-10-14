@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "verdict": "PASS_IN_GAME_CONFIRM_DIALOG",
+  "generatedAt": "2026-10-08T11:12:00.000Z",
+  "source": {
+    "canonicalStartingHead": "169cbc37efa22fd3438de3de6574a7964b7e0c8c",
+    "implementationHead": "f6c2d06ab42beee9c5db98d2da71b6f2be69623a",
+    "branch": "release/final-rc-2026-10-08",
+    "evidenceBinding": "implementation commit plus evidence-only descendant; evidence does not self-bind to its own commit"
+  },
+  "changedFiles": [
+    "src/literary-player.js",
+    "src/literary.css",
+    "src/localization.js",
+    "tests/narrative/confirm-dialog.test.mjs",
+    "tools/visual-qa/confirm-dialog-runtime.mjs",
+    "package.json"
+  ],
+  "requirements": {
+    "operations": ["new-game-reset", "episode-replay", "cloud-restore"],
+    "nativeWindowConfirmCount": 0,
+    "dialog": ["role=dialog", "aria-modal=true", "focus-trap", "Escape", "history-backed Back", "app inert", "touch settle guard"],
+    "locales": ["ru", "en"],
+    "viewports": ["1920x900", "390x844", "360x640"]
+  },
+  "regression": {
+    "staticCommand": "node tests/narrative/confirm-dialog.test.mjs",
+    "staticStatus": "PASS",
+    "browserCommand": "GIT_HEAD=f6c2d06ab42beee9c5db98d2da71b6f2be69623a npm run qa:confirm-dialog",
+    "browserStatus": "PASS",
+    "browserEvidence": "artifacts/evidence/confirm-dialog-runtime/evidence.json",
+    "browserScenarioCount": 8,
+    "browserCaptureCount": 7,
+    "consoleErrors": 0,
+    "failedRequests": 0,
+    "overflowCases": 0,
+    "cases": ["cancel", "confirm", "save-load", "Escape", "Back", "touch duplicate guard", "RU", "EN"]
+  },
+  "package": {
+    "path": "release-artifacts/kiss-at-the-edge-of-the-world-rc-confirm-dialog-f6c2d06.zip",
+    "sha256": "731f395c54fc6e8c5605c2cf78798c858f1026f7f931751fa0683cc631f74921",
+    "bytes": 56652300,
+    "entries": 226,
+    "runtimeAssets": 207,
+    "packageAssetTest": "PASS 8/8"
+  },
+  "releaseScopeNote": "This artifact proves the in-game confirm-dialog change and its package. Full RC readiness remains separately subject to existing release gates and external Yandex evidence."
+}

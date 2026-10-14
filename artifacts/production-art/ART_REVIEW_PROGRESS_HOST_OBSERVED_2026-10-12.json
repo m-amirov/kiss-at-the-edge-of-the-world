@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "recordType": "production-art-review-progress",
+  "standard": "HOST_OBSERVED_ART_ACCEPTANCE_V1",
+  "sourceHead": "1eb41c69495326b86f699570ec8c6efeab2558e9",
+  "status": "STOPPED_ON_NEXT_P1",
+  "globalAcceptanceRecordCreated": false,
+  "coverage": {
+    "runtimeMatrix": "66 scenes x 3 viewports = 198 captures",
+    "matrixSource": "artifacts/evidence/final-exact-head-qa-2026-10-12/production-art-coverage-66x3/evidence.json",
+    "matrixRuntimeStatus": "PASS",
+    "hostObservedScreenshotsReviewed": 13,
+    "hostObservedPassViewports": 10,
+    "hostObservedReworkViewports": 3,
+    "hostObservedBlockedViewports": 2,
+    "uniqueScenesTouched": 5,
+    "uniqueScenesWithNoWebReview": 61,
+    "unacceptedOrUnresolvedViewports": 188
+  },
+  "sceneVerdicts": {
+    "S07": "PASS",
+    "S01": "BLOCKED_INCOMPLETE_ATTACHMENTS",
+    "S02": "PASS_VIEWPORTS_BATCH_NOT_ACCEPTED",
+    "S03": "PASS_VIEWPORTS_BATCH_NOT_ACCEPTED",
+    "S65": "REWORK_P1",
+    "remainingScenes": "NOT_REVIEWED"
+  },
+  "s07Evidence": {
+    "runtimeAcceptance": "artifacts/production-art/S07_REPAIR_RUNTIME_ACCEPTANCE_2026-10-12.json",
+    "webHighMidpoint": "artifacts/production-art/S07_REPAIR_WEB_HIGH_MIDPOINT_2026-10-12.json",
+    "webHighAcceptance": "artifacts/production-art/S07_REPAIR_WEB_HIGH_ACCEPTANCE_2026-10-12.json",
+    "verdict": "PASS_S07_REPAIR_AND_ART_REVIEW_RESUMED"
+  },
+  "stopReason": {
+    "scene": "S65",
+    "severity": "P1",
+    "receipt": "artifacts/production-art/ART_REVIEW_BATCH1_WEB_HIGH_2026-10-12.json",
+    "action": "Do not review or accept further scenes until S65 is separately repaired and re-reviewed."
+  }
+}

@@ -3,7 +3,7 @@
   "updaterSchemaVersion": 2,
   "installedVersion": "0.5.9",
   "attemptedVersion": "0.5.9",
-  "sourceManifestHash": "153f4fbc9a30db452f94a02b09260893dee1e7b0fbfc7b2b868ed228f046df9c",
+  "sourceManifestHash": "cddcfa1ee5d5b2659b6e435bf1442bc13cb856d0d9e4ed255e49c1fadb52e9a0",
   "targetProfile": {
     "schemaVersion": 1,
     "profileName": "new-project",
@@ -54,8 +54,8 @@
     },
     "managed:changelog": {
       "target": ".starter-kit/docs/CHANGELOG.md",
-      "sourceHash": "eec9d6ec477975bd6d082a9c400e8aaef4c59e440cea59dc9fea817973901b64",
-      "targetHash": "301a2de272921ad415156797ae1200d1d1363abf2e9ca931902396fefe94a5cd"
+      "sourceHash": "fe06e6f7bc8673c569aadfbfa3a9641a622f8056bfdafc61009e797fee8d5905",
+      "targetHash": "0554860147f64d6034d0a0fba6f430bd90ef38da9d4895ab298cc9767129781c"
     },
     "managed:starter-readme": {
       "target": ".starter-kit/docs/README.md",
@@ -99,8 +99,8 @@
     },
     "managed:known-failures": {
       "target": "lessons/known-failures.yaml",
-      "sourceHash": "362daadd9fcd8639f01d90e0737fa536843fc55aade12794ec53cf5b3b1e851f",
-      "targetHash": "1813e3767f9d7c5f6a7b3acc6678d963b57109527ef0986035912be3407cb32d"
+      "sourceHash": "a9b01daae6e0e338cb4624b75450234ca503d617719455351b83b85531dc8afa",
+      "targetHash": "25e2f6bcccb79a90531afeb290ff53ae093febf90c53019f23233cd68c7579ca"
     },
     "migration:0.3.0-yandex-requirements": {
       "target": "migrations/0.3.0-yandex-requirements.md",
@@ -239,8 +239,8 @@
     },
     "managed:tool-self-test": {
       "target": "tools/starter-kit/self-test.mjs",
-      "sourceHash": "867d1ced24cf328c222458b61895a63d7dc289340add1ff313bdb9280e7be34e",
-      "targetHash": "8d956560aff0424ba9be9f3f11a1ffd828f9d88e1c9994a699692a2a3128c841"
+      "sourceHash": "0d86218cdec4bac2a2ef286cd87a32b4bc3d327011c6431c1cc11ea93d9d35d4",
+      "targetHash": "e14bcf1b8367c9b360cd1c773dc29dd6564b82bed888e524194d43bc3bcb11ce"
     },
     "managed:tool-status": {
       "target": "tools/starter-kit/status.mjs",
@@ -264,8 +264,8 @@
     },
     "managed:tool-yandex-requirements-audit": {
       "target": "tools/yandex/requirements-audit.mjs",
-      "sourceHash": "6fc65ef1014b6d363e9607db4454e3ae7ad9a37da54abb5b426f57f23f76adb3",
-      "targetHash": "bfd1e42ed95f05762e590672fc628b07da8d0f40b5ae4fe2c93486fded888366"
+      "sourceHash": "06c6ae4c0bc9b24b1448f2f00a05592e638bd8581fdc95ebef3fbc36f4b98e9b",
+      "targetHash": "13a977c07901fed40b6113b541fef49faee6a35cd15221a257c0a6579155b468"
     },
     "managed:tool-yandex-docs-watch": {
       "target": "tools/yandex/docs-watch.mjs",
@@ -354,17 +354,17 @@
     },
     "managed:yandex-release-evidence-schema": {
       "target": "config/yandex-release-evidence.schema.json",
-      "sourceHash": "5f84ad1c0f40184c7e1f01f17c2ab77cc646289be1b40cb401c9955ef53eacf8",
+      "sourceHash": "8858177460a0cd4231d7852c4acf2e85531aab12d66b078ab1ff875391e67ffb",
       "targetHash": "8858177460a0cd4231d7852c4acf2e85531aab12d66b078ab1ff875391e67ffb"
     },
     "managed:yandex-release-evidence-gate": {
       "target": "tools/yandex/release-evidence-gate.mjs",
-      "sourceHash": "fb64996a5df243f7f434b9016d25100311c0103f57004926346264d49ba256e0",
+      "sourceHash": "57ab698e2379f175292283dec0233f6e7ce7dd45fb20198ae90552c7eb1c7438",
       "targetHash": "57ab698e2379f175292283dec0233f6e7ce7dd45fb20198ae90552c7eb1c7438"
     },
     "managed:production-incident-hardening": {
       "target": "docs/PRODUCTION_INCIDENT_HARDENING.md",
-      "sourceHash": "a93431216676e6bd68034b673f35d620815d5de57f37a9cf6cecbc40a8a74ec7",
+      "sourceHash": "aa914cec4d104f2cfc924881700d6a6be8ae1eb6279dfb6ac1323ab341c5941f",
       "targetHash": "aa914cec4d104f2cfc924881700d6a6be8ae1eb6279dfb6ac1323ab341c5941f"
     }
   },
@@ -506,13 +506,13 @@
     },
     "contract:package-json": {
       "target": "package.json",
-      "sourceHash": "87b4876baffb1e117150b44006bc3cfce522ea7738c3f9770297b28343c75612",
-      "targetHash": "b48b7bfb02a18bc873b678a5a5a9ffd7494f907c9ef9215d35b47ce63901f480"
+      "sourceHash": "859a38d84ec08fbe9745a3ff240112eb1e002f235bc5e7601e9cd5f9cfa2b2c3",
+      "targetHash": "ca11b12f41c2f91d28c4844c3d6d863d7cf4c9ba4635252767183fb896f8c780"
     },
     "contract:yandex-requirements": {
       "target": "config/yandex-requirements.yaml",
-      "sourceHash": "97bd79057de121a53fcf2f41dfa4c75c4a2d81d25f01b1f53e380e5e5b5d47fd",
-      "targetHash": "ce06ff4097dcab890632ea4d896ecf50d64a3c2327450be857eb6c890d1a8df6"
+      "sourceHash": "c2767387141290afc68a250749c37cc4637d335315eb625cbd65e4d14ac8b8c1",
+      "targetHash": "a6322d60b01f604fb7a6b922d5026673dec8fc378369a53e20601a014c711f8f"
     },
     "contract:yandex-console-requirements": {
       "target": "config/yandex-console-requirements.yaml",
@@ -536,7 +536,7 @@
     },
     "managed:manifest-entry-config": {
       "target": "config/manifest-entries.json",
-      "sourceHash": "a165f3baacabc64255fbd3bd94045977e9b8fe18754880d53f083797bc9be544",
+      "sourceHash": "fc04b675ef130e3ed4338faf5b05b512809eb304d237e34321d4d493ffdd4e6d",
       "targetHash": "c6c0a38044ee85384928945fc0766a9f6864ba897b09310a302e84fec7a3d131"
     },
     "managed:final-gameplay-videos-schema": {
@@ -551,8 +551,8 @@
     },
     "managed:yandex-doc-snapshot": {
       "target": "config/yandex-doc-snapshot.json",
-      "sourceHash": "7d2605723ba7439abeb30d12c7fb6b54776f12ac45f1b1e7f4bec4244d02fb68",
-      "targetHash": "4f489c263f9c842c5531842928ec599ac2262121c9ee0c95c4a3501c34bec32c"
+      "sourceHash": "16f49b39be3ad3a315ccdf5a4a5ba7b163c947ed451923cb7d6557aa837bc1b4",
+      "targetHash": "670b2835cb8417f0e54078b5814a100b29ab9d0d34f6016a8d02730b0233c7de"
     }
   },
   "conflicts": [],
