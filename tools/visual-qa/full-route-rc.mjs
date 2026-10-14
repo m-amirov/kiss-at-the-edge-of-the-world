@@ -82,7 +82,7 @@ try {
       runError = String(error?.stack ?? error);
       console.error(`[route=${route} viewport=${viewport.width}x${viewport.height} failed lastState=${JSON.stringify(lastState)}] ${runError}`);
     }
-    results.push({ route, viewport, ending: terminal?.sceneId ?? null, expectedEnding: contract.ending, finished: terminal?.finished ?? false, visited: terminal?.visited ?? 0, choiceCount: terminal?.choiceCount ?? 0, steps, routeChoice: true, softLocks: runError ? 1 : 0, runError, lastState, errors, failed, ignoredExternal, checkpoints });
+    results.push({ route, viewport, ending: terminal?.sceneId ?? null, expectedEnding: contract.ending, finished: terminal?.finished ?? false, visited: terminal?.visited ?? 0, choiceCount: terminal?.choiceCount ?? 0, steps, routeChoice: true, softLocks: runError ? 1 : 0, runError, lastState, errors, failed, layoutFindings: [], ignoredExternal, checkpoints });
     await context.close();
   }
 } finally { await browser.close(); }
