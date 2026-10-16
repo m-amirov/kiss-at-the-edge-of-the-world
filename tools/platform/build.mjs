@@ -34,7 +34,8 @@ function assertNoSymlinkComponents(candidate) {
   for (const part of candidate.slice(parsed.root.length).split(path.sep)) {
     if (!part) continue;
     current = path.join(current, part);
-    if (fs.existsSync(current) && fs.lstatSync(current).isSymbolicLink()) {
+    // lstat also detects dangling symlinks (existsSync returns false for those).
+    if (fs.lstatSync(current, { throwIfNoEntry: false })?.isSymbolicLink()) {
       throw new Error('Unsafe output path: symlink');
     }
   }
@@ -42,7 +43,7 @@ function assertNoSymlinkComponents(candidate) {
 
 export function assertSafeOutputPath(root, outputDir, platform) {
   if (!PLATFORM_NAMES.has(platform)) throw new Error('Unsafe output path: unknown platform');
-  if (typeof outputDir !== 'string' || !outputDir || outputDir.includes('\\0')) {
+  if (typeof outputDir !== 'string' || !outputDir || outputDir.includes('\0')) {
     throw new Error('Unsafe output path');
   }
   if (hasTraversal(outputDir)) throw new Error('Unsafe output path: traversal');
