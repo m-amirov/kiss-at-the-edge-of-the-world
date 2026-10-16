@@ -118,7 +118,9 @@ export function buildObjectUploadArgs(config, { bucket, file, env = {} }) {
   const contentType = MIME_BY_EXTENSION[extension] ?? 'application/octet-stream';
   return [
     'storage', 's3api', 'put-object',
-    '--body', file.absolute,
+    // yc storage s3api --body treats an unprefixed value as literal data.
+    // Prefix the absolute filename with @ to upload the file bytes.
+    '--body', `@${file.absolute}`,
     '--bucket', bucket,
     '--key', file.path,
     '--content-type', contentType,
@@ -251,12 +253,14 @@ export async function runPreviewDeploy({ root = ROOT, env = process.env, argv = 
     mode
   });
   if (argv.includes('--create-bucket')) await runYc(buildBucketCreateArgs(config, { bucket, env }), { root, env, spawnImpl });
+  // Keep a newly created bucket private until every object is uploaded.
+  // If an upload fails, do not widen anonymous access.
+  for (const args of effectivePlan.upload) await runYc(args, { root, env, spawnImpl });
   await runYc(buildPublicReadOnlyArgs(config, { bucket, env }), { root, env, spawnImpl });
   if (mode === 'website') {
     await runYc(['storage', 'bucket', 'update', '--name', bucket, '--public-list', ...buildProfileArgs(config, env)], { root, env, spawnImpl });
     await runYc(buildWebsiteSettingsArgs(config, { bucket, env }), { root, env, spawnImpl });
   }
-  for (const args of effectivePlan.upload) await runYc(args, { root, env, spawnImpl });
   return {
     status: 'DEPLOYED_PREVIEW',
     sourceHead: effectivePlan.sourceHead,
