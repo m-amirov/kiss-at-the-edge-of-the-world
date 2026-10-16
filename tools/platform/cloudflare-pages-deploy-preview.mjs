@@ -59,6 +59,7 @@ export async function runPreviewDeploy({ root = ROOT, env = process.env, spawnIm
   const config = readConfig();
   const local = auditLocalBundle(root);
   if (local.status !== 'PASS') throw new Error(`BLOCKED_VK_BUNDLE_AUDIT: ${local.errors.join('; ')}`);
+  if (local.externalAudio) throw new Error('BLOCKED_SPLIT_AUDIO_BUILD: this full-bundle deploy requires npm run build:vk (with local OGG). Use the split-audio package only for official VK Hosting.');
   const projectName = assertProjectName(requireEnv(env, config.projectNameEnv));
   requireEnv(env, config.accountIdEnv);
   requireEnv(env, config.apiTokenEnv);

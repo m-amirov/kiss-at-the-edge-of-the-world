@@ -108,7 +108,7 @@ This is an external hosting blocker, not a local or mock runtime PASS. Before re
 
 ## Hosting-size diagnosis and HTTPS alternative
 
-The current official [VK Games static hosting limits](https://dev.vk.ru/ru/games/development/hosting/overview) are material to this bundle: the ZIP archive is limited to 300 MB, and audio/video files cannot be placed on VK Hosting. The failed upload archive at the earlier exact HEAD was 460,988,432 bytes (SHA-256 `47b174aaf579cc4ea6e4375a1c3035b60ce397792c1796ef4efbb9f9e9aa6732`), so the rejection cannot be attributed to `.ogg` alone. The current unmodified VK output is 404 files / 465,725,183 bytes and still contains all eight music files. The same official page documents `Error: 15` only as an app/configuration error for which `app_id` should be checked; it is not evidence that the audio files alone caused the response. Both the archive-size and media restrictions must therefore be treated as independent blockers.
+The current official [VK Games static hosting limits](https://dev.vk.ru/ru/games/development/hosting/overview) are material to this bundle: the ZIP archive is limited to 300 MB, and audio/video files cannot be placed on VK Hosting. The failed upload archive at the earlier exact HEAD was 460,988,432 bytes (SHA-256 `47b174aaf579cc4ea6e4375a1c3035b60ce397792c1796ef4efbb9f9e9aa6732`), so the rejection cannot be attributed to `.ogg` alone. The **historic** unoptimized VK output was 404 files / 465,725,183 bytes. This is no longer the current build: the shared runtime-asset selector reduced ordinary VK output to approximately 52.5 MB while preserving all eight tracks. The same official page documents `Error: 15` only as an app/configuration error for which `app_id` should be checked; it is not evidence that the audio files alone caused the response. Both the archive-size and media restrictions must therefore be treated as independent blockers.
 
 The full VK bundle has a guarded external-hosting path for a manual Cloudflare Pages preview. Its configuration is [config/platform/vk-external-hosting.json](../config/platform/vk-external-hosting.json), and the launcher is `npm run vk:deploy:cloudflare:preview -- --confirm-preview`. It requires an owner-provided `CF_PAGES_PROJECT_NAME`, `CLOUDFLARE_ACCOUNT_ID` and `CLOUDFLARE_API_TOKEN` in the process environment, always uses a non-production preview branch, and never stores those values in Git. The pinned Wrangler version is `4.151.0`.
 
@@ -133,3 +133,38 @@ Required values are supplied outside Git: `YC_VK_PREVIEW_BUCKET` (3–63 lowerca
 There is an official Yandex limitation that must not be hidden: static **website** hosting requires public object listing in addition to public object read ([hosting setup](https://yandex.cloud/en/docs/storage/operations/hosting/setup), [public access](https://yandex.cloud/en/docs/storage/operations/buckets/bucket-availability)). Therefore `https://<bucket>.website.yandexcloud.net/` is available only in an explicitly owner-authorized `--mode website --allow-public-list` flow. This project does not enable that flow by default and will fail closed instead of widening access. The read-only object endpoint is the compatible option under the current “no public listing” constraint. A website configuration, when separately approved, uses `index.html` for both index and SPA fallback; Yandex documents HTTPS for dot-free bucket names ([HTTPS](https://yandex.cloud/en/docs/storage/operations/hosting/certificate)).
 
 After a real owner-authorized upload, run `npm run vk:hosting:audit -- --url https://<actual-object-or-website-url>/` and preserve the response as remote evidence. The audit must pass HTTPS, every manifest resource, JS/CSS/JSON/OGG/PNG MIME, relative paths and iframe headers before any VK/OK client checks. As of the current worktree there is no `yc` CLI, bucket, authorized Yandex profile or URL, so no deploy or remote audit was attempted and the external hosting state remains blocked.
+
+## Official VK Hosting with external OGG (optional build)
+
+The default `npm run build:vk` still ships all 8 OGG files and remains the
+appropriate option for local tests and whole-bundle external hosting.
+
+For the official VK static host, use an owner-approved *public HTTPS audio
+directory* (with no URL tokens or credentials) and the explicit command:
+
+```sh
+# Set VK_AUDIO_BASE_URL in the local environment to https://<actual-audio-host>/.../
+npm run build:vk:hosting
+npm run vk:hosting:audit
+```
+
+The guard rejects missing, non-HTTPS, credential-bearing, query-bearing and
+non-directory audio URLs **before** cleaning `dist/vk`. The VK-specific
+`src/vk-audio-config.js` is then injected with the chosen base. The resulting
+manifest records the 8 externally hosted OGG files with their SHA-256 hashes,
+and the official VK Hosting upload includes no OGG. The common audio
+director retains local audio paths for Yandex and ordinary VK builds.
+
+The local audit does not prove that externally hosted OGG exist: the remote
+audit additionally checks all eight external URLs for HTTPS/HTTP and
+`audio/ogg` MIME. Test actual playback and lifecycle behavior on real VK/OK
+devices before marking release gates as satisfied. The audio host has not
+been provisioned; the external URL must never be invented or embedded until
+it exists and owner authorization is obtained.
+
+Cloudflare Pages and Yandex Object Storage **full-bundle** preview deploy
+scripts fail closed when pointed at a split-audio VK Hosting output, to avoid
+mistakenly deploying an incomplete game. Restore the full local-audio bundle
+with `npm run build:vk` before those fallback deploy modes. Do not
+automatically deploy, incur paid cloud charges, change VK production URL,
+publish or submit moderation.
