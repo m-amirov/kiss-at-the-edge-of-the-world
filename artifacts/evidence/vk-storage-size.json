@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS_VK_SAVE_SIZE_MEASURED",
+  "measurement": {
+    "stateSchemaVersion": 4,
+    "scenes": 66,
+    "visitedScenes": 66,
+    "choiceEntries": 96,
+    "utf8Bytes": 1926,
+    "vkStorageLimitBytes": 3800,
+    "headroomBytes": 1874
+  },
+  "method": "Serialized the largest local literary save shape with every authored interaction choice and every season scene visited; UTF-8 byte length measured before VKWebAppStorageSet.",
+  "releaseEvidence": false,
+  "note": "This measurement does not attest VK or OK client behavior and is not runtime release evidence."
+}

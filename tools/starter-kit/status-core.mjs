@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { readJson, sha256Buffer, sha256File, stableJson } from './lib.mjs';
+import { readJson, sha256Buffer, sha256File, sha256TextFile, stableJson } from './lib.mjs';
 
 const PRODUCT_RUNTIME = /^(src|public|levels|assets)(\/|$)|^(index\.html|project\.profile\.yaml|game-spec\.yaml|package-lock\.json)$/;
 
@@ -28,10 +28,15 @@ export function inspectTargetStatus({ sourceRoot, targetRoot }) {
   const currentSourceManifestHash = fs.existsSync(sourceManifestFile) ? sha256File(sourceManifestFile) : state.sourceManifestHash;
   const managedFiles = [];
   const modifiedManagedFiles = [];
+  const modifiedSemanticFiles = [];
   for (const [logicalId, baseline] of Object.entries(state.baseline ?? {})) {
     const file = path.join(targetRoot, baseline.target);
     managedFiles.push({ logicalId, target: baseline.target });
-    if (!fs.existsSync(file) || sha256File(file) !== baseline.targetHash) modifiedManagedFiles.push(baseline.target);
+    if (!fs.existsSync(file) || sha256TextFile(file) !== baseline.targetHash) modifiedManagedFiles.push(baseline.target);
+  }
+  for (const accepted of Object.values(state.semanticAcceptances ?? {})) {
+    const file = path.join(targetRoot, accepted.target);
+    if (!fs.existsSync(file) || sha256TextFile(file) !== accepted.targetHash) modifiedSemanticFiles.push(accepted.target);
   }
   const otherRoot = profile?.skillRoot === '.agents/skills' ? '.codex/skills' : '.agents/skills';
   const secondRootViolation = profile && !profile.allowSecondSkillRoot
@@ -56,7 +61,7 @@ export function inspectTargetStatus({ sourceRoot, targetRoot }) {
   const unresolvedConflicts = state.conflicts ?? [];
   let status = 'clean';
   if (unresolvedConflicts.length) status = 'conflicts';
-  else if (modifiedManagedFiles.length || violations.length) status = 'modified';
+  else if (modifiedManagedFiles.length || modifiedSemanticFiles.length || violations.length) status = 'modified';
   return {
     status,
     sourceVersion: sourceManifest.version,
@@ -84,6 +89,7 @@ export function inspectTargetStatus({ sourceRoot, targetRoot }) {
     forbiddenSecondRootStatus: secondRootViolation ? 'violation' : 'clean',
     productRuntimeOwnershipViolations: runtimeViolations,
     modifiedManagedFiles,
+    modifiedSemanticFiles,
     violations
   };
 }

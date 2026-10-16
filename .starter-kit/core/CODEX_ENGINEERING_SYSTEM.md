@@ -10,6 +10,11 @@ A trivial task is a deterministic one-file change with no behavioral, build, sav
 
 ## Operating sequence
 
+## Repository preflight barrier
+
+For projects under Git, run the Starter Kit `AGENTS_CORE.md` GitHub-first preflight before step 1 of the engineering cycle. Use `ceos git-preflight --fetch` to discover stale `main`; only `--fetch --apply` with clean same-branch fast-forward may mutate the checkout automatically. A dirty checkout or divergent/unknown GitHub state is not a reason to reset, stash or skip the comparison. Do not claim that a GitHub document does not exist from a stale local clone. Commit/push only if the task authorizes them, and verify the final remote SHA.
+
+
 1. Define the exact scope, protected areas, success token, and smallest evidence needed.
 2. Read the nearest contract, implementation files, and tests first. Expand context only when the current evidence is insufficient.
 3. Use RED evidence or an executable acceptance check where practical.
@@ -28,6 +33,7 @@ A trivial task is a deterministic one-file change with no behavioral, build, sav
 - Do not re-read unchanged files, stable architecture, or previously verified requirements in the same task. Re-open them only when the file changed, the evidence became stale, or a concrete contradiction appears.
 - Keep a compact task checkpoint under `.loop/` with scope, decisions, changed files, evidence, and next step. Update it at phase boundaries rather than repeatedly reconstructing context.
 - Reuse fresh evidence only when commit, inputs, configuration, and relevant files are unchanged. State what evidence was reused.
+- Establish a local freeze for source-bound evidence before comparing it with external evidence; local freeze and external evidence are separate proof domains.
 
 ### Execution
 
@@ -70,6 +76,16 @@ The visual review follows project-owned `ART_BIBLE`, `VISUAL_LANGUAGE`, asset ma
 Store a compact evidence package with the screenshot set, short verdict, states/viewports, and current HEAD. Include a before/after contact sheet for rework only where useful. If capture infrastructure times out or fails, record the exact evidence gap and do not claim visual PASS.
 
 For a pass requiring this gate, do not issue `*_IMPLEMENTED`, `*_ACCEPTED`, `*_OWNER_REVIEW_READY`, or a visual/product completion token until it passes. `FUNCTIONALLY_IMPLEMENTED` with `VISUAL_ACCEPTANCE: FAIL` is a valid and preferred interim status.
+
+## Failure prevention and incident promotion
+
+Use lessons/known-failures.yaml and docs/DEVELOPMENT_POSTMORTEM_2026-09.md as reusable engineering memory. When a new recurring defect is confirmed, complete the promotion loop: reproduce -> classify -> root cause -> repair -> regression coverage -> durable rule/gate -> fresh verification. Unknown root cause stays UNKNOWN.
+
+Never collapse CONFIGURATION_ERROR, TEST_FAILURE, COMMAND_FAILURE, HARNESS_DEFECT and PRODUCT_DEFECT into one generic failure. Before changing production code for a browser/UI automation failure, use TEST_HARNESS_ADJUDICATION.md.
+
+At release/recovery boundaries freeze repository/worktree/branch/HEAD and required base ancestry. A base mismatch is BLOCKED; do not switch/reset/stash away parallel work to manufacture continuity.
+
+Keep functional/tests, runtime, visual, authored-content, platform/manual, media and package/release evidence separate. Narrow green checks cannot promote a broader PASS.
 
 ## Boundaries
 

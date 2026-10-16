@@ -1,6 +1,5 @@
 import { literarySeason } from './literary-season-data.js';
 import { compileScenePlayback, nextLiteraryScene, literarySaveKey, cleanLiteraryText } from './literary-engine.js';
-import { initYandexPlatform } from './yandex-sdk.js';
 import { createCloudSaveQueue } from './save-state.js';
 import { stageForScene } from './literary-stage.js';
 import { visualAt, visualEntryForPosition } from './literary-visual-directions.js';
@@ -10,6 +9,8 @@ import { literaryLocaleBundles } from './literary-localization-bundle.js';
 import { interactionBeats } from './literary-interactive-beats.js';
 import { createDialogueHistory } from './literary-history.js';
 
+export async function startLiteraryPlayer({ initPlatform } = {}) {
+if(typeof initPlatform!=='function')throw new TypeError('initPlatform is required');
 const canonicalById = new Map(literarySeason.scenes.map(scene => [scene.id, scene]));
 let runtimeSeason = literarySeason;
 let byId = canonicalById;
@@ -168,7 +169,7 @@ function loadRuntimeSeason(selectedLocale,qaLocaleOverride){
 function persist() {
   reader.revision=(reader.revision??0)+1;
   try {localStorage.setItem(literarySaveKey,JSON.stringify(reader));hasSave=true;}catch{}
-  if(cloudQueue && platform?.mode==='yandex')cloudQueue.enqueue(reader).catch(()=>{});
+  if(cloudQueue && (platform?.mode==='yandex'||platform?.mode==='vk-games'))cloudQueue.enqueue(reader).catch(()=>{});
 }
 function recordDialogueState(){dialogueHistory.record(reader)}
 function rollbackNarrative(){
@@ -208,9 +209,13 @@ function advanceNarrative(){
   }else{
     const next=nextLiteraryScene(reader.sceneId,reader.choices);
     if(!next || !byId.has(next))return false;
+    const crossedEpisode=scene.episode!==byId.get(next).episode;
     recordDialogueState();
     reader.sceneId=next;reader.position=0;
     if(!reader.visited.includes(next))reader.visited.push(next);
+    persist();renderReader();
+    if(crossedEpisode)Promise.resolve(platform?.showInterstitial?.({atBoundary:true})).catch(()=>{});
+    return true;
   }
   persist();renderReader();return true;
 }
@@ -435,14 +440,14 @@ applySettings();
 const bootHadLocal=hasSave;
 async function boot(){
  try{
-  const result=await initYandexPlatform({cloudKey:literaryCloudKey,onCloudState:raw=>{
+  const result=await initPlatform({cloudKey:literaryCloudKey,onCloudState:raw=>{
    const candidate=parseSaved(raw);
    if(!candidate || cloudLocked)return;
    if(bootHadLocal || hasSave){cloudCandidate=candidate; if(menuOpen)renderMenu();return}
    reader=candidate;hasSave=true;
    try{localStorage.setItem(literarySaveKey,JSON.stringify(reader))}catch{}
    if(menuOpen)renderMenu();
-  }});
+  },onCloudError:error=>{console.warn('[platform] cloud storage unavailable',error);}});
   platform=result;
   locale=platform.locale;
   t=createTranslator(locale);
@@ -455,7 +460,7 @@ async function boot(){
   renderMenu();
   platform.setGameplayActive(!menuOpen);
   platform.markInteractiveReady();
-  if(platform.mode==='yandex'){
+  if(platform.mode==='yandex'||platform.mode==='vk-games'){
     cloudQueue=createCloudSaveQueue(snapshot=>platform.save(snapshot));
     // Explicit new-game reset may have happened while SDK was initializing.
     if(cloudLocked)cloudQueue.enqueue(reader).catch(()=>{});
@@ -484,3 +489,4 @@ window.__LITERARY_QA__={
   // QA methods are strictly read-only; preview and the old game have separate state keys.
 };
 boot();
+}
