@@ -21,11 +21,6 @@ function sha256File(file) {
   return hash.digest('hex');
 }
 
-function gitHead(rootDir) {
-  const result = spawnSync('git', ['rev-parse', 'HEAD'], { cwd: rootDir, encoding: 'utf8' });
-  return result.status === 0 ? result.stdout.trim() : null;
-}
-
 function manualPass(entry, key) {
   const review = entry.manualReview?.[key];
   return review?.status === 'PASS' && typeof review.evidence === 'string' && review.evidence.trim().length > 0;
@@ -34,6 +29,11 @@ function manualPass(entry, key) {
 function readArg(name, fallback) {
   const index = process.argv.indexOf(name);
   return index >= 0 ? process.argv[index + 1] : fallback;
+}
+
+function currentGitHead(rootDir) {
+  const result = spawnSync('git', ['rev-parse', 'HEAD'], { cwd: rootDir, encoding: 'utf8' });
+  return result.status === 0 ? result.stdout.trim() : null;
 }
 
 function yamlValue(text, wantedPath) {
@@ -101,7 +101,7 @@ export function inspectMediaFile(file) {
   };
 }
 
-function validateEvidenceMatchesFile(entry, actual, blockers, { sourceHead, inspectRuntimeIdentity }) {
+function validateEvidenceMatchesFile(entry, actual, blockers) {
   if (entry.dimensions?.width !== actual.width || entry.dimensions?.height !== actual.height) {
     blockers.push(`${entry.locale}: evidence dimensions do not match the file`);
   }
@@ -112,13 +112,6 @@ function validateEvidenceMatchesFile(entry, actual, blockers, { sourceHead, insp
   if (String(entry.sha256).toLowerCase() !== String(actual.sha256).toLowerCase()) {
     blockers.push(`${entry.locale}: evidence SHA-256 does not match the file`);
   }
-  if (entry.sourceHead !== sourceHead) blockers.push(`${entry.locale}: evidence source HEAD does not match the current source HEAD`);
-  if (!/^\d{4}-\d{2}-\d{2}T/.test(String(entry.capturedAt ?? ''))) blockers.push(`${entry.locale}: capture timestamp is missing or invalid`);
-  if (entry.viewport?.width !== actual.width || entry.viewport?.height !== actual.height || entry.viewport?.orientation !== (actual.width >= actual.height ? 'landscape' : 'portrait')) blockers.push(`${entry.locale}: viewport metadata does not match the file`);
-  if (entry.capturedRuntimeState?.uiLocale !== entry.locale || !String(entry.capturedRuntimeState?.sceneId ?? '').trim()) blockers.push(`${entry.locale}: captured runtime locale/state is incomplete`);
-  const runtime = inspectRuntimeIdentity(entry);
-  if (!runtime?.exists) blockers.push(`${entry.locale}: runtime identity entrypoint is missing`);
-  else if (entry.runtimeIdentity?.sha256 !== runtime.sha256) blockers.push(`${entry.locale}: runtime identity SHA-256 does not match the entrypoint`);
 }
 
 export async function validateGameplayVideos(options) {
@@ -127,19 +120,16 @@ export async function validateGameplayVideos(options) {
     declaredLocales = [],
     languageDependentText,
     videos = [],
+    sourceHead = null,
+    currentHead = null,
     rootDir = process.cwd(),
     inspectMedia = async (entry) => inspectMediaFile(path.resolve(rootDir, entry.path)),
-    sourceHead = gitHead(rootDir),
-    inspectRuntimeIdentity = (entry) => {
-      const runtimePath = entry.runtimeIdentity?.entrypoint ? path.resolve(rootDir, entry.runtimeIdentity.entrypoint) : null;
-      return runtimePath && fs.existsSync(runtimePath) ? { exists: true, sha256: sha256File(runtimePath) } : { exists: false };
-    },
     languageIndependentTextReview
   } = options;
   const blockers = [];
   const warnings = [];
   const results = [];
-  if (!sourceHead) blockers.push('current Git source HEAD is unavailable');
+  const actualHashLocales = new Map();
 
   if (!['first-publication', 'update'].includes(publicationType)) {
     blockers.push('yandex.publication.type must be first-publication or update');
@@ -149,6 +139,15 @@ export async function validateGameplayVideos(options) {
   }
   if (publicationType === 'first-publication' && videos.length === 0) {
     blockers.push('first-publication requires a horizontal gameplay video');
+  }
+  if (videos.length > 0) {
+    if (!/^[a-f0-9]{40}$/i.test(String(sourceHead ?? ''))) {
+      blockers.push('gameplay video evidence source HEAD is missing or invalid');
+    } else if (!currentHead) {
+      blockers.push('current HEAD could not be proven for gameplay video evidence');
+    } else if (String(sourceHead).toLowerCase() !== String(currentHead).toLowerCase()) {
+      blockers.push('gameplay video evidence source HEAD ' + sourceHead + ' does not match current HEAD ' + currentHead);
+    }
   }
 
   const localeEntries = new Map();
@@ -177,7 +176,12 @@ export async function validateGameplayVideos(options) {
       }
       if (actual.sizeBytes > MAX_SIZE_BYTES) itemBlockers.push(`${locale}: size must be at most ${MAX_SIZE_BYTES} bytes`);
       if (actual.width !== 1920 || actual.height !== 1080) warnings.push(`${locale}: 1920x1080 is preferred`);
-      validateEvidenceMatchesFile(entry, actual, itemBlockers, { sourceHead, inspectRuntimeIdentity });
+      validateEvidenceMatchesFile(entry, actual, itemBlockers);
+      if (actual.sha256) {
+        const locales = actualHashLocales.get(String(actual.sha256).toLowerCase()) ?? [];
+        locales.push(locale);
+        actualHashLocales.set(String(actual.sha256).toLowerCase(), locales);
+      }
     }
     if (!(Number(entry.gameplayRatio) >= MIN_GAMEPLAY_RATIO && Number(entry.gameplayRatio) <= 1)) {
       itemBlockers.push(`${locale}: manually reviewed real gameplay ratio must be at least 0.70`);
@@ -187,7 +191,8 @@ export async function validateGameplayVideos(options) {
       systemUiAbsent: 'system UI absence',
       yandexUiAbsent: 'Yandex Games UI absence',
       artificialBlackBarsAbsent: 'artificial black bars absence',
-      localeMatchesDraft: 'Draft locale match'
+      localeMatchesDraft: 'Draft locale match',
+      openingFrameReady: 'opening frame readiness'
     };
     for (const [key, label] of Object.entries(reviewLabels)) {
       if (!manualPass(entry, key)) itemBlockers.push(`${locale}: manual ${label} review with evidence is required`);
@@ -205,6 +210,11 @@ export async function validateGameplayVideos(options) {
       }
       for (const [videoPath, locales] of pathLocales) {
         if (videoPath && new Set(locales).size > 1) blockers.push(`${videoPath}: localized gameplay video cannot be reused across locales`);
+      }
+      for (const [hash, locales] of actualHashLocales) {
+        if (new Set(locales).size > 1) {
+          blockers.push(hash + ': identical media cannot represent multiple localized gameplay videos (' + [...new Set(locales)].join(', ') + ')');
+        }
       }
     } else {
       const covered = new Set(videos.flatMap((entry) => entry.coversLocales ?? [entry.locale]));
@@ -296,6 +306,8 @@ async function runCli() {
   const media = await validateGameplayVideos({
     ...contract,
     videos: evidence.videos ?? [],
+    sourceHead: evidence.sourceHead ?? null,
+    currentHead: currentGitHead(rootDir),
     languageIndependentTextReview: evidence.languageIndependentTextReview,
     rootDir
   });

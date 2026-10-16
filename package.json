@@ -25,11 +25,20 @@
     "release:preflight": "node tools/release/preflight.mjs",
     "release:local-freeze": "node tools/release/local-freeze.mjs",
     "dev": "node tools/dev-server.mjs",
-    "yandex:release:evidence": "node tools/yandex/release-evidence-gate.mjs"
-    ,"audio:check": "node tools/audio-generation/check-generator.mjs"
-    ,"audio:build-cues": "node tools/audio-generation/build-music-cues.mjs"
-    ,"test:audio": "node --test tests/audio/music-system.test.mjs"
-    ,"qa:audio-listening": "node tools/audio-qa/serve-listening-review.mjs"
+    "yandex:release:evidence": "node tools/yandex/release-evidence-gate.mjs",
+    "audio:check": "node tools/audio-generation/check-generator.mjs",
+    "audio:build-cues": "node tools/audio-generation/build-music-cues.mjs",
+    "test:audio": "node --test tests/audio/music-system.test.mjs",
+    "qa:audio-listening": "node tools/audio-qa/serve-listening-review.mjs",
+    "yandex:sdk:validate": "node tools/yandex/sdk-validation.mjs",
+    "yandex:contract:validate": "node tools/yandex/project-contract-validation.mjs",
+    "vk:validate": "node tools/vk/vk-games-check.mjs",
+    "build:vk": "node tools/platform/build.mjs --platform vk",
+    "build:yandex": "node tools/platform/build.mjs --platform yandex",
+    "test:vk": "node --test tests/platform/vk-games.test.mjs tests/platform/lifecycle.test.mjs tests/platform/platform-build.test.mjs"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@vkontakte/vk-bridge": "2.14.0"
+  }
 }

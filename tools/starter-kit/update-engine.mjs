@@ -6,8 +6,10 @@ import {
   posix,
   readJson,
   resolveInside,
-  sha256Buffer,
   sha256File,
+  sha256Text,
+  sha256TextBuffer,
+  sha256TextFile,
   stableJson,
   writeFileIfChanged,
   writeJson
@@ -158,7 +160,7 @@ function processPackageEntry({
       }
       : {});
   const merge = planPackageMerge(source, target);
-  const currentTargetHash = fs.existsSync(targetFile) ? sha256File(targetFile) : null;
+  const currentTargetHash = fs.existsSync(targetFile) ? sha256TextFile(targetFile) : null;
   const accepted = state.semanticAcceptances[entry.logicalId];
   const explicitResolution = resolveSemantic.has(entry.logicalId) || resolveSemantic.has(entry.target);
   const acceptedUnchanged = merge.conflicts.length
@@ -191,7 +193,7 @@ function processPackageEntry({
   } else {
     report.preserved.push({ logicalId: entry.logicalId, target: entry.target });
   }
-  const resultingHash = sha256Buffer(Buffer.from(stableJson(merge.value)));
+  const resultingHash = sha256Text(stableJson(merge.value));
   nextState.semanticAcceptances[entry.logicalId] = {
     target: entry.target,
     sourceHash: entry.sha256,
@@ -213,14 +215,16 @@ function processEntry(context) {
     resolveManaged,
     report
   } = context;
-  const expectedHash = materializeEntrySource(sourceRoot, entry, context.profile).sha256;
+  const materialized = materializeEntrySource(sourceRoot, entry, context.profile);
+  const expectedHash = materialized.sha256;
+  const expectedTargetHash = sha256TextBuffer(materialized.bytes);
   if (entry.logicalId === 'contract:package-json') {
     processPackageEntry(context);
     return;
   }
   const targetFile = resolveInside(targetRoot, entry.target);
   const exists = fs.existsSync(targetFile);
-  const targetHash = exists ? sha256File(targetFile) : null;
+  const targetHash = exists ? sha256TextFile(targetFile) : null;
   const baseline = state.baseline[entry.logicalId];
   const accepted = state.semanticAcceptances[entry.logicalId];
 
@@ -251,17 +255,17 @@ function processEntry(context) {
       nextState.semanticAcceptances[entry.logicalId] = {
         target: entry.target,
         sourceHash: expectedHash,
-        targetHash: expectedHash
+        targetHash: expectedTargetHash
       };
       delete nextState.baseline[entry.logicalId];
     } else {
-      nextState.baseline[entry.logicalId] = { target: entry.target, sourceHash: expectedHash, targetHash: expectedHash };
+      nextState.baseline[entry.logicalId] = { target: entry.target, sourceHash: expectedHash, targetHash: expectedTargetHash };
       delete nextState.semanticAcceptances[entry.logicalId];
     }
     return;
   }
 
-  if (targetHash === expectedHash) {
+  if (targetHash === expectedTargetHash) {
     report.preserved.push({ logicalId: entry.logicalId, target: entry.target });
     if (semantic) {
       nextState.semanticAcceptances[entry.logicalId] = { target: entry.target, sourceHash: expectedHash, targetHash };
@@ -270,6 +274,18 @@ function processEntry(context) {
       nextState.baseline[entry.logicalId] = { target: entry.target, sourceHash: expectedHash, targetHash };
       delete nextState.semanticAcceptances[entry.logicalId];
     }
+    return;
+  }
+
+  if (semantic && baseline && baseline.targetHash === targetHash && !accepted) {
+    report.updated.push({ logicalId: entry.logicalId, target: entry.target, ownership: 'managed-to-semantic' });
+    if (!dryRun) copySource(sourceRoot, targetRoot, entry, context.profile);
+    nextState.semanticAcceptances[entry.logicalId] = {
+      target: entry.target,
+      sourceHash: expectedHash,
+      targetHash: expectedTargetHash
+    };
+    delete nextState.baseline[entry.logicalId];
     return;
   }
 
@@ -282,7 +298,7 @@ function processEntry(context) {
     nextState.semanticAcceptances[entry.logicalId] = {
       target: entry.target,
       sourceHash: expectedHash,
-      targetHash: expectedHash
+      targetHash: expectedTargetHash
     };
     delete nextState.baseline[entry.logicalId];
     return;
@@ -315,18 +331,22 @@ function processEntry(context) {
   if (baseline && baseline.targetHash === targetHash) {
     report.updated.push({ logicalId: entry.logicalId, target: entry.target });
     if (!dryRun) copySource(sourceRoot, targetRoot, entry, context.profile);
-    nextState.baseline[entry.logicalId] = { target: entry.target, sourceHash: expectedHash, targetHash: expectedHash };
+    nextState.baseline[entry.logicalId] = { target: entry.target, sourceHash: expectedHash, targetHash: expectedTargetHash };
     delete nextState.semanticAcceptances[entry.logicalId];
     return;
   }
 
-  if (baseline && explicitManagedResolution && !semantic) {
-    report.resolved.push({ logicalId: entry.logicalId, target: entry.target, resolution: 'replace-managed-drift' });
+  if (explicitManagedResolution && !semantic) {
+    report.resolved.push({
+      logicalId: entry.logicalId,
+      target: entry.target,
+      resolution: baseline ? 'replace-managed-drift' : 'accept-explicit-managed'
+    });
     if (!dryRun) {
       copySource(sourceRoot, targetRoot, entry, context.profile);
       removeConflictFiles(targetRoot, manifest.version, entry.target);
     }
-    nextState.baseline[entry.logicalId] = { target: entry.target, sourceHash: expectedHash, targetHash: expectedHash };
+    nextState.baseline[entry.logicalId] = { target: entry.target, sourceHash: expectedHash, targetHash: expectedTargetHash };
     delete nextState.semanticAcceptances[entry.logicalId];
     return;
   }

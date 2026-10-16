@@ -1,168 +1,181 @@
 {
   "schemaVersion": 2,
   "updaterSchemaVersion": 2,
-  "updaterVersion": "0.5.9",
+  "updaterVersion": "0.5.14",
   "mode": "update",
   "dryRun": false,
   "fromVersion": "0.5.9",
-  "toVersion": "0.5.9",
-  "sourceManifestHash": "153f4fbc9a30db452f94a02b09260893dee1e7b0fbfc7b2b868ed228f046df9c",
+  "toVersion": "0.5.14",
+  "sourceManifestHash": "3fe1b479404b0e512dc30c49bad5d0cdb16759c0c5c9ebd48efd25f1362cfe5a",
   "targetProfile": "new-project",
   "projectType": "new",
   "skillRoot": ".codex/skills",
-  "created": [],
+  "created": [
+    {
+      "logicalId": "managed:head-bound-release-evidence-doc",
+      "target": "docs/HEAD_BOUND_RELEASE_EVIDENCE.md",
+      "ownership": "managed"
+    },
+    {
+      "logicalId": "managed:tool-semantic-acceptance",
+      "target": "tools/starter-kit/semantic-acceptance.mjs",
+      "ownership": "managed"
+    },
+    {
+      "logicalId": "managed:tool-yandex-sdk-validation",
+      "target": "tools/yandex/sdk-validation.mjs",
+      "ownership": "managed"
+    },
+    {
+      "logicalId": "managed:tool-yandex-project-contract-validation",
+      "target": "tools/yandex/project-contract-validation.mjs",
+      "ownership": "managed"
+    },
+    {
+      "logicalId": "managed:tool-yandex-registry-hash",
+      "target": "tools/yandex/registry-hash.mjs",
+      "ownership": "managed"
+    },
+    {
+      "logicalId": "managed:narrative-scene-contract",
+      "target": "tools/visual/narrative-scene-contract.mjs",
+      "ownership": "managed"
+    },
+    {
+      "logicalId": "managed:narrative-scene-contract-doc",
+      "target": "docs/NARRATIVE_SCENE_VISUAL_CONTRACT.md",
+      "ownership": "managed"
+    },
+    {
+      "logicalId": "managed:narrative-game-validator",
+      "target": "tools/narrative/narrative-game-validator.mjs",
+      "ownership": "managed"
+    },
+    {
+      "logicalId": "managed:story-promise-validator",
+      "target": "tools/narrative/story-promise-validator.mjs",
+      "ownership": "managed"
+    },
+    {
+      "logicalId": "managed:narrative-game-profile-cli",
+      "target": "tools/narrative/narrative-game-check.mjs",
+      "ownership": "managed"
+    },
+    {
+      "logicalId": "managed:narrative-game-profile-template",
+      "target": "config/optional-profiles/narrative-game.json",
+      "ownership": "managed"
+    },
+    {
+      "logicalId": "managed:narrative-game-profile-doc",
+      "target": "docs/NARRATIVE_GAME_PROFILE.md",
+      "ownership": "managed"
+    },
+    {
+      "logicalId": "migration:0.5.11-to-0.5.12",
+      "target": "migrations/0.5.11-to-0.5.12.md",
+      "ownership": "managed"
+    },
+    {
+      "logicalId": "managed:vk-games-profile-template",
+      "target": "config/optional-profiles/vk-games.json",
+      "ownership": "managed"
+    },
+    {
+      "logicalId": "managed:vk-games-check",
+      "target": "tools/vk/vk-games-check.mjs",
+      "ownership": "managed"
+    },
+    {
+      "logicalId": "managed:vk-games-adapter-reference",
+      "target": "templates/platform/vk-bridge-adapter.mjs",
+      "ownership": "managed"
+    },
+    {
+      "logicalId": "managed:vk-games-contract-example",
+      "target": "templates/platform/vk-games.contract.example.json",
+      "ownership": "managed"
+    },
+    {
+      "logicalId": "managed:vk-games-profile-doc",
+      "target": "docs/VK_GAMES_PROFILE.md",
+      "ownership": "managed"
+    },
+    {
+      "logicalId": "migration:0.5.13-to-0.5.14",
+      "target": "migrations/0.5.13-to-0.5.14.md",
+      "ownership": "managed"
+    }
+  ],
   "updated": [],
   "preserved": [
     {
       "logicalId": "skill:asset-provenance-and-rights:SKILL.md",
-      "target": ".codex/skills/asset-provenance-and-rights/SKILL.md",
-      "ownership": "target-mapped"
+      "target": ".codex/skills/asset-provenance-and-rights/SKILL.md"
     },
     {
       "logicalId": "skill:game-accessibility:SKILL.md",
-      "target": ".codex/skills/game-accessibility/SKILL.md",
-      "ownership": "target-mapped"
+      "target": ".codex/skills/game-accessibility/SKILL.md"
     },
     {
       "logicalId": "skill:game-audio-quality:ORIGIN.md",
-      "target": ".codex/skills/game-audio-quality/ORIGIN.md",
-      "ownership": "target-mapped"
+      "target": ".codex/skills/game-audio-quality/ORIGIN.md"
     },
     {
       "logicalId": "skill:game-audio-quality:SKILL.md",
-      "target": ".codex/skills/game-audio-quality/SKILL.md",
-      "ownership": "target-mapped"
+      "target": ".codex/skills/game-audio-quality/SKILL.md"
     },
     {
       "logicalId": "skill:game-feel-polish:SKILL.md",
-      "target": ".codex/skills/game-feel-polish/SKILL.md",
-      "ownership": "target-mapped"
+      "target": ".codex/skills/game-feel-polish/SKILL.md"
     },
     {
       "logicalId": "skill:game-performance-budget:SKILL.md",
-      "target": ".codex/skills/game-performance-budget/SKILL.md",
-      "ownership": "target-mapped"
+      "target": ".codex/skills/game-performance-budget/SKILL.md"
     },
     {
       "logicalId": "skill:implementation-cycle:SKILL.md",
-      "target": ".codex/skills/implementation-cycle/SKILL.md",
-      "ownership": "target-mapped"
+      "target": ".codex/skills/implementation-cycle/SKILL.md"
     },
     {
       "logicalId": "skill:codex-engineering-system:SKILL.md",
-      "target": ".codex/skills/codex-engineering-system/SKILL.md",
-      "ownership": "target-mapped"
+      "target": ".codex/skills/codex-engineering-system/SKILL.md"
     },
     {
       "logicalId": "skill:project-termination:SKILL.md",
-      "target": ".codex/skills/project-termination/SKILL.md",
-      "ownership": "target-mapped"
+      "target": ".codex/skills/project-termination/SKILL.md"
     },
     {
       "logicalId": "skill:level-design-quality:SKILL.md",
-      "target": ".codex/skills/level-design-quality/SKILL.md",
-      "ownership": "target-mapped"
+      "target": ".codex/skills/level-design-quality/SKILL.md"
     },
     {
       "logicalId": "skill:mobile-game-ux:ORIGIN.md",
-      "target": ".codex/skills/mobile-game-ux/ORIGIN.md",
-      "ownership": "target-mapped"
-    },
-    {
-      "logicalId": "skill:mobile-game-ux:SKILL.md",
-      "target": ".codex/skills/mobile-game-ux/SKILL.md",
-      "ownership": "target-mapped"
+      "target": ".codex/skills/mobile-game-ux/ORIGIN.md"
     },
     {
       "logicalId": "skill:product-quality-review:ORIGIN.md",
-      "target": ".codex/skills/product-quality-review/ORIGIN.md",
-      "ownership": "target-mapped"
+      "target": ".codex/skills/product-quality-review/ORIGIN.md"
     },
     {
       "logicalId": "skill:product-quality-review:SKILL.md",
-      "target": ".codex/skills/product-quality-review/SKILL.md",
-      "ownership": "target-mapped"
-    },
-    {
-      "logicalId": "skill:release-audit:SKILL.md",
-      "target": ".codex/skills/release-audit/SKILL.md",
-      "ownership": "target-mapped"
+      "target": ".codex/skills/product-quality-review/SKILL.md"
     },
     {
       "logicalId": "skill:visual-quality-gate:ORIGIN.md",
-      "target": ".codex/skills/visual-quality-gate/ORIGIN.md",
-      "ownership": "target-mapped"
-    },
-    {
-      "logicalId": "skill:visual-quality-gate:SKILL.md",
-      "target": ".codex/skills/visual-quality-gate/SKILL.md",
-      "ownership": "target-mapped"
+      "target": ".codex/skills/visual-quality-gate/ORIGIN.md"
     },
     {
       "logicalId": "skill:web-game-playtest:ORIGIN.md",
-      "target": ".codex/skills/web-game-playtest/ORIGIN.md",
-      "ownership": "target-mapped"
-    },
-    {
-      "logicalId": "skill:web-game-playtest:SKILL.md",
-      "target": ".codex/skills/web-game-playtest/SKILL.md",
-      "ownership": "target-mapped"
-    },
-    {
-      "logicalId": "skill:yandex-release-validation:SKILL.md",
-      "target": ".codex/skills/yandex-release-validation/SKILL.md",
-      "ownership": "target-mapped"
-    },
-    {
-      "logicalId": "contract:AGENTS.md",
-      "target": "AGENTS.md",
-      "ownership": "semantic-merge"
-    },
-    {
-      "logicalId": "contract:package-json",
-      "target": "package.json"
-    },
-    {
-      "logicalId": "managed:agents-core",
-      "target": ".starter-kit/core/AGENTS_CORE.md"
-    },
-    {
-      "logicalId": "managed:codex-engineering-system-core",
-      "target": ".starter-kit/core/CODEX_ENGINEERING_SYSTEM.md"
+      "target": ".codex/skills/web-game-playtest/ORIGIN.md"
     },
     {
       "logicalId": "managed:concept-proof-gate",
       "target": ".starter-kit/core/CONCEPT_PROOF_GATE.md"
     },
     {
-      "logicalId": "managed:test-harness-adjudication",
-      "target": ".starter-kit/core/TEST_HARNESS_ADJUDICATION.md"
-    },
-    {
-      "logicalId": "managed:version",
-      "target": ".starter-kit/VERSION"
-    },
-    {
-      "logicalId": "managed:changelog",
-      "target": ".starter-kit/docs/CHANGELOG.md"
-    },
-    {
-      "logicalId": "managed:starter-readme",
-      "target": ".starter-kit/docs/README.md"
-    },
-    {
       "logicalId": "managed:master-prompt",
       "target": ".starter-kit/docs/MASTER_PROMPT.md"
-    },
-    {
-      "logicalId": "contract:yandex-requirements",
-      "target": "config/yandex-requirements.yaml",
-      "ownership": "semantic-merge"
-    },
-    {
-      "logicalId": "contract:yandex-console-requirements",
-      "target": "config/yandex-console-requirements.yaml",
-      "ownership": "semantic-merge"
     },
     {
       "logicalId": "managed:yandex-doc-sources",
@@ -174,22 +187,11 @@
     },
     {
       "logicalId": "contract:skill-precedence",
-      "target": "docs/SKILL_PRECEDENCE.md",
-      "ownership": "semantic-merge"
-    },
-    {
-      "logicalId": "contract:yandex-checklist",
-      "target": "docs/YANDEX_REQUIREMENTS_CHECKLIST.md",
-      "ownership": "semantic-merge"
+      "target": "docs/SKILL_PRECEDENCE.md"
     },
     {
       "logicalId": "managed:yandex-requirements-diff-2026-08-18",
       "target": "docs/YANDEX_REQUIREMENTS_DIFF_2026-07-01_TO_2026-08-18.md"
-    },
-    {
-      "logicalId": "managed:skill-policy",
-      "target": "config/skill-policy.json",
-      "ownership": "semantic-merge"
     },
     {
       "logicalId": "managed:external-skill-sources",
@@ -198,14 +200,6 @@
     {
       "logicalId": "managed:quality-constitution",
       "target": "docs/QUALITY_CONSTITUTION.md"
-    },
-    {
-      "logicalId": "managed:update-doc",
-      "target": "docs/STARTER_KIT_UPDATES.md"
-    },
-    {
-      "logicalId": "managed:known-failures",
-      "target": "lessons/known-failures.yaml"
     },
     {
       "logicalId": "migration:0.3.0-yandex-requirements",
@@ -248,10 +242,6 @@
       "target": "templates/product-validation/BLIND_PLAYTEST.md"
     },
     {
-      "logicalId": "managed:screenshot-visual-gate-template",
-      "target": "templates/visual-review/SCREENSHOT_VISUAL_GATE.md"
-    },
-    {
       "logicalId": "managed:horizontal-gameplay-video-task",
       "target": "templates/media/HORIZONTAL_GAMEPLAY_VIDEO.md"
     },
@@ -266,11 +256,6 @@
     {
       "logicalId": "managed:manifest-schema-doc",
       "target": "docs/MANIFEST_SCHEMA.md"
-    },
-    {
-      "logicalId": "managed:manifest-entry-config",
-      "target": "config/manifest-entries.json",
-      "ownership": "semantic-merge"
     },
     {
       "logicalId": "managed:manifest-json-schema",
@@ -301,10 +286,6 @@
       "target": "tools/starter-kit/init-project.mjs"
     },
     {
-      "logicalId": "managed:tool-lib",
-      "target": "tools/starter-kit/lib.mjs"
-    },
-    {
       "logicalId": "managed:tool-manifest",
       "target": "tools/starter-kit/manifest.mjs"
     },
@@ -321,32 +302,12 @@
       "target": "tools/starter-kit/profile.mjs"
     },
     {
-      "logicalId": "managed:tool-self-test",
-      "target": "tools/starter-kit/self-test.mjs"
-    },
-    {
       "logicalId": "managed:tool-status",
       "target": "tools/starter-kit/status.mjs"
     },
     {
-      "logicalId": "managed:tool-status-core",
-      "target": "tools/starter-kit/status-core.mjs"
-    },
-    {
-      "logicalId": "managed:tool-update-engine",
-      "target": "tools/starter-kit/update-engine.mjs"
-    },
-    {
       "logicalId": "managed:tool-update-self-test",
       "target": "tools/starter-kit/update-self-test.mjs"
-    },
-    {
-      "logicalId": "managed:tool-yandex-requirements-audit",
-      "target": "tools/yandex/requirements-audit.mjs"
-    },
-    {
-      "logicalId": "managed:tool-yandex-docs-watch",
-      "target": "tools/yandex/docs-watch.mjs"
     },
     {
       "logicalId": "managed:yandex-external-evidence-providers",
@@ -425,8 +386,83 @@
       "target": "docs/PRODUCTION_INCIDENT_HARDENING.md"
     }
   ],
-  "merged": [],
+  "merged": [
+    {
+      "logicalId": "contract:package-json",
+      "target": "package.json"
+    }
+  ],
   "resolved": [
+    {
+      "logicalId": "skill:mobile-game-ux:SKILL.md",
+      "target": ".codex/skills/mobile-game-ux/SKILL.md",
+      "resolution": "accept-current"
+    },
+    {
+      "logicalId": "skill:release-audit:SKILL.md",
+      "target": ".codex/skills/release-audit/SKILL.md",
+      "resolution": "accept-current"
+    },
+    {
+      "logicalId": "skill:visual-quality-gate:SKILL.md",
+      "target": ".codex/skills/visual-quality-gate/SKILL.md",
+      "resolution": "accept-current"
+    },
+    {
+      "logicalId": "skill:web-game-playtest:SKILL.md",
+      "target": ".codex/skills/web-game-playtest/SKILL.md",
+      "resolution": "accept-current"
+    },
+    {
+      "logicalId": "skill:yandex-release-validation:SKILL.md",
+      "target": ".codex/skills/yandex-release-validation/SKILL.md",
+      "resolution": "accept-current"
+    },
+    {
+      "logicalId": "contract:AGENTS.md",
+      "target": "AGENTS.md",
+      "resolution": "accept-current"
+    },
+    {
+      "logicalId": "managed:agents-core",
+      "target": ".starter-kit/core/AGENTS_CORE.md",
+      "resolution": "replace-managed-drift"
+    },
+    {
+      "logicalId": "managed:codex-engineering-system-core",
+      "target": ".starter-kit/core/CODEX_ENGINEERING_SYSTEM.md",
+      "resolution": "replace-managed-drift"
+    },
+    {
+      "logicalId": "managed:test-harness-adjudication",
+      "target": ".starter-kit/core/TEST_HARNESS_ADJUDICATION.md",
+      "resolution": "replace-managed-drift"
+    },
+    {
+      "logicalId": "managed:version",
+      "target": ".starter-kit/VERSION",
+      "resolution": "replace-managed-drift"
+    },
+    {
+      "logicalId": "managed:changelog",
+      "target": ".starter-kit/docs/CHANGELOG.md",
+      "resolution": "replace-managed-drift"
+    },
+    {
+      "logicalId": "managed:starter-readme",
+      "target": ".starter-kit/docs/README.md",
+      "resolution": "replace-managed-drift"
+    },
+    {
+      "logicalId": "contract:yandex-requirements",
+      "target": "config/yandex-requirements.yaml",
+      "resolution": "accept-current"
+    },
+    {
+      "logicalId": "contract:yandex-console-requirements",
+      "target": "config/yandex-console-requirements.yaml",
+      "resolution": "accept-current"
+    },
     {
       "logicalId": "managed:yandex-doc-snapshot",
       "target": "config/yandex-doc-snapshot.json",
@@ -435,12 +471,72 @@
     {
       "logicalId": "managed:final-gameplay-videos-schema",
       "target": "config/final-gameplay-videos.schema.json",
+      "resolution": "accept-explicit-managed"
+    },
+    {
+      "logicalId": "contract:yandex-checklist",
+      "target": "docs/YANDEX_REQUIREMENTS_CHECKLIST.md",
       "resolution": "accept-current"
+    },
+    {
+      "logicalId": "managed:skill-policy",
+      "target": "config/skill-policy.json",
+      "resolution": "accept-incoming"
+    },
+    {
+      "logicalId": "managed:update-doc",
+      "target": "docs/STARTER_KIT_UPDATES.md",
+      "resolution": "replace-managed-drift"
+    },
+    {
+      "logicalId": "managed:known-failures",
+      "target": "lessons/known-failures.yaml",
+      "resolution": "replace-managed-drift"
+    },
+    {
+      "logicalId": "managed:screenshot-visual-gate-template",
+      "target": "templates/visual-review/SCREENSHOT_VISUAL_GATE.md",
+      "resolution": "replace-managed-drift"
+    },
+    {
+      "logicalId": "managed:manifest-entry-config",
+      "target": "config/manifest-entries.json",
+      "resolution": "accept-incoming"
+    },
+    {
+      "logicalId": "managed:tool-lib",
+      "target": "tools/starter-kit/lib.mjs",
+      "resolution": "replace-managed-drift"
+    },
+    {
+      "logicalId": "managed:tool-self-test",
+      "target": "tools/starter-kit/self-test.mjs",
+      "resolution": "replace-managed-drift"
+    },
+    {
+      "logicalId": "managed:tool-status-core",
+      "target": "tools/starter-kit/status-core.mjs",
+      "resolution": "replace-managed-drift"
+    },
+    {
+      "logicalId": "managed:tool-update-engine",
+      "target": "tools/starter-kit/update-engine.mjs",
+      "resolution": "replace-managed-drift"
+    },
+    {
+      "logicalId": "managed:tool-yandex-requirements-audit",
+      "target": "tools/yandex/requirements-audit.mjs",
+      "resolution": "replace-managed-drift"
+    },
+    {
+      "logicalId": "managed:tool-yandex-docs-watch",
+      "target": "tools/yandex/docs-watch.mjs",
+      "resolution": "replace-managed-drift"
     },
     {
       "logicalId": "managed:tool-yandex-media-validation",
       "target": "tools/yandex/media-validation.mjs",
-      "resolution": "accept-current"
+      "resolution": "accept-explicit-managed"
     }
   ],
   "projectOwned": [],
@@ -465,12 +561,14 @@
     "migrations/0.5.3-profile-aware-quality-constitution.md",
     "migrations/0.5.4-to-0.5.5.md",
     "migrations/0.5.5-to-0.5.6.md",
-    "migrations/0.5.6-to-0.5.7.md"
+    "migrations/0.5.6-to-0.5.7.md",
+    "migrations/0.5.11-to-0.5.12.md",
+    "migrations/0.5.13-to-0.5.14.md"
   ],
   "upstreamFreshness": {
     "status": "SNAPSHOT_ONLY",
-    "snapshotReviewedAt": "2026-09-30",
-    "snapshotFetchedAt": "2026-09-30T15:48:17.820Z",
+    "snapshotReviewedAt": "2026-10-12",
+    "snapshotFetchedAt": "2026-10-12T13:26:23.486Z",
     "lastLiveCheckAt": null,
     "lastLiveVerdicts": [],
     "unresolvedSemanticChanges": false,

@@ -1,4 +1,23 @@
+## 0.5.14 — 2026-10-16
+
+- Add disabled-by-default VK Games profile for VKontakte and Odnoklassniki (not VK Play).
+- Reference injected VK Bridge adapter for lifecycle, conservative storage round-trip and safe ad boundaries.
+- Independent VK contract validator and fail-closed git HEAD/build SHA/runtime matrix release gate.
+- Manifest delivery, regression coverage and migration docs; no automatic mature game runtime edits.
+
 # Changelog
+
+## 0.5.12 — optional story-promise references for future narrative games
+
+- Added opt-in `promisesPath` on enabled `narrative-game` profiles. Existing games are unchanged.
+- Validates declared scene references, finite-state guards and route-conditioned setup-to-payoff reachability, while preserving planned/open/unverified status boundaries.
+- Adds fail-closed tests for impossible payoff paths, missing scenes, guards and unauthorized runtime attestation. No new platform or release gates.
+
+## 0.5.11 — final hardening consolidation
+
+- Consolidated current SDK bootstrap, release-contract, reviewed semantic-acceptance and exact source-lineage protections without lowering the 0.5.11 baseline.
+- Added failure-memory promotion, evidence-domain separation, Windows-oriented verification coverage and opening-frame/locale-distinct gameplay-video checks.
+- Reconciled the 9 October 2026 official Yandex documentation update: requirement 8.3.5 content scope, Draft metadata review, moderation/detail-page snapshot and current source revision.
 
 ## 0.5.9 — 2026-09-30
 

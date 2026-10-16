@@ -71,6 +71,12 @@ test('narrative navigation is stage-first and retired text controls are absent',
   assert.match(css, /\.choice-button\{[\s\S]*?min-height:56px/);
 });
 
+test('VK interstitials are requested only after an episode boundary', () => {
+  assert.match(player, /crossedEpisode=byId\.get\(next\)\?\.episode!==scene\.episode/);
+  assert.match(player, /platform\?\.mode==='vk-games'/);
+  assert.match(player, /showInterstitial\(\{atBoundary:true\}\)/);
+});
+
 test('Cinematic A mobile polish keeps artwork visible without a nested menu scroller', () => {
   assert.match(css, /\.literary-home::after\{[^}]*linear-gradient/);
   assert.match(css, /\.literary-home-card\{[^}]*overflow:visible/);

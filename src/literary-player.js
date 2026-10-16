@@ -1,6 +1,5 @@
 import { literarySeason } from './literary-season-data.js';
 import { compileScenePlayback, nextLiteraryScene, literarySaveKey, cleanLiteraryText } from './literary-engine.js';
-import { initYandexPlatform } from './yandex-sdk.js';
 import { createCloudSaveQueue } from './save-state.js';
 import { stageForScene } from './literary-stage.js';
 import { visualAt, visualEntryForPosition } from './literary-visual-directions.js';
@@ -11,7 +10,10 @@ import { interactionBeats } from './literary-interactive-beats.js';
 import { createDialogueHistory } from './literary-history.js';
 import { createAudioDirector } from './audio-director.js';
 import { musicCues, musicCueForScene } from './music-cues.js';
+import { createPlatformLifecycleController } from './platform/lifecycle.js';
 
+export async function startLiteraryPlayer({ initPlatform } = {}) {
+if(typeof initPlatform!=='function')throw new TypeError('initPlatform is required');
 const canonicalById = new Map(literarySeason.scenes.map(scene => [scene.id, scene]));
 let runtimeSeason = literarySeason;
 let byId = canonicalById;
@@ -141,7 +143,17 @@ let t=createTranslator(locale);
 let cloudQueue=null;
 const audioDirector=createAudioDirector();
 const audioCueById=new Map(musicCues.map(cue=>[cue.cueId,{...cue,file:`${cue.cueId}.ogg`} ]));
+let lifecycle=null;
 let settings=(()=>{try{return{scale:1,contrast:false,motion:false,...JSON.parse(localStorage.getItem(textSettingsKey)||'{}')}}catch{return{scale:1,contrast:false,motion:false}}})();
+function gameplayShouldBeActive(){return !menuOpen && !lifecycle?.isPaused()}
+lifecycle=createPlatformLifecycleController({
+  app,
+  document,
+  setGameplayActive:active=>platform?.setGameplayActive(active),
+  isGameplayActive:()=>!menuOpen,
+  onPause:()=>{audioDirector.pause()},
+  onResume:()=>{if(!menuOpen)audioDirector.resume().catch(()=>{})}
+});
 function loadRuntimeSeason(selectedLocale,qaLocaleOverride){
   if(selectedLocale==='ru')return literarySeason;
   const localeData=literaryLocaleBundles[selectedLocale];
@@ -163,7 +175,7 @@ function loadRuntimeSeason(selectedLocale,qaLocaleOverride){
 function persist() {
   reader.revision=(reader.revision??0)+1;
   try {localStorage.setItem(literarySaveKey,JSON.stringify(reader));hasSave=true;}catch{}
-  if(cloudQueue && platform?.mode==='yandex')cloudQueue.enqueue(reader).catch(()=>{});
+  if(cloudQueue && (platform?.mode==='yandex'||platform?.mode==='vk-games'))cloudQueue.enqueue(reader).catch(()=>{});
 }
 function recordDialogueState(){dialogueHistory.record(reader)}
 function rollbackNarrative(){
@@ -192,7 +204,7 @@ let lastPointerActivationAt=0;
 let lastStageInput='none';
 function isInteractiveTarget(target){return target instanceof Element && Boolean(target.closest(interactiveSelector));}
 function advanceNarrative(){
-  if(menuOpen)return false;
+  if(menuOpen || lifecycle.isPaused())return false;
   const scene=byId.get(reader.sceneId);if(!scene)return false;
   const flow=compileInteractivePlayback(scene,reader.choices,locale);
   const current=flow[reader.position];
@@ -206,6 +218,10 @@ function advanceNarrative(){
     recordDialogueState();
     reader.sceneId=next;reader.position=0;
     if(!reader.visited.includes(next))reader.visited.push(next);
+    const crossedEpisode=byId.get(next)?.episode!==scene.episode;
+    persist();renderReader();
+    if(crossedEpisode&&platform?.mode==='vk-games')platform.showInterstitial({atBoundary:true}).catch(error=>console.warn('[platform] interstitial unavailable',error));
+    return true;
   }
   persist();renderReader();return true;
 }
@@ -363,10 +379,10 @@ function artMode(scene, entry, choices, isEnding) {
 }
 function renderReader(){
   if(menuOpen)return renderMenu();
-  platform?.setGameplayActive(true);
+  platform?.setGameplayActive(gameplayShouldBeActive());
   const scene=byId.get(reader.sceneId);if(!scene){goHome();return}
   audioDirector.setCue(audioCueById.get(musicCueForScene(scene.id)));
-  audioDirector.resume().catch(()=>{});
+  if(!lifecycle.isPaused())audioDirector.resume().catch(()=>{});
   const flow=compileInteractivePlayback(scene,reader.choices,locale);reader.position=Math.min(reader.position,flow.at(-1)?.type==='choice'?Math.max(0,flow.length-1):flow.length);
   const isEnding=['S44','S45','S46','S47'].includes(scene.id);
   const mode=artMode(scene,flow[reader.position],reader.choices,isEnding);
@@ -424,9 +440,9 @@ window.addEventListener('keydown',event=>{
 });
 window.addEventListener('pointerdown',()=>{audioDirector.unlock().catch(()=>{})},{passive:true});
 window.addEventListener('keydown',()=>{audioDirector.unlock().catch(()=>{})},{passive:true});
-document.addEventListener('visibilitychange',()=>{if(document.hidden)audioDirector.pause();else audioDirector.resume().catch(()=>{})});
-window.addEventListener('blur',()=>audioDirector.pause());
-window.addEventListener('focus',()=>audioDirector.resume().catch(()=>{}));
+document.addEventListener('visibilitychange',()=>lifecycle.setDocumentHidden(Boolean(document.hidden)));
+window.addEventListener('blur',()=>lifecycle.pause('window'));
+window.addEventListener('focus',()=>lifecycle.resume('window'));
 function renderBootFailure(error){
   platform?.setGameplayActive(false);
   app.className='literary-home';
@@ -440,14 +456,14 @@ applySettings();
 const bootHadLocal=hasSave;
 async function boot(){
  try{
-  const result=await initYandexPlatform({cloudKey:literaryCloudKey,onCloudState:raw=>{
+  const result=await initPlatform({cloudKey:literaryCloudKey,onCloudState:raw=>{
    const candidate=parseSaved(raw);
    if(!candidate || cloudLocked)return;
    if(bootHadLocal || hasSave){cloudCandidate=candidate; if(menuOpen)renderMenu();return}
    reader=candidate;hasSave=true;
    try{localStorage.setItem(literarySaveKey,JSON.stringify(reader))}catch{}
    if(menuOpen)renderMenu();
-  }});
+  },onCloudError:error=>{console.warn('[platform] cloud storage unavailable',error);},onPause:()=>lifecycle.pause('platform'),onResume:()=>lifecycle.resume('platform')});
   platform=result;
   locale=platform.locale;
   t=createTranslator(locale);
@@ -458,10 +474,10 @@ async function boot(){
   byId=new Map(runtimeSeason.scenes.map(scene=>[scene.id,scene]));
   if(!byId.has(reader.sceneId))throw Error(`BLOCKED_EN_CORPUS_INCOMPLETE: missing scene ${reader.sceneId}`);
   renderMenu();
-  platform.setGameplayActive(!menuOpen);
+  platform.setGameplayActive(gameplayShouldBeActive());
   platform.markInteractiveReady();
-  if(platform.mode==='yandex'){
-    cloudQueue=createCloudSaveQueue(snapshot=>platform.save(snapshot));
+  if(platform.mode==='yandex'||platform.mode==='vk-games'){
+    cloudQueue=createCloudSaveQueue(snapshot=>platform.save(snapshot),{onError:error=>console.warn('[platform] cloud write unavailable',error)});
     // Explicit new-game reset may have happened while SDK was initializing.
     if(cloudLocked)cloudQueue.enqueue(reader).catch(()=>{});
   }
@@ -478,6 +494,7 @@ window.__LITERARY_QA__={
   getPlatformMode:()=>platform?.mode??'booting',
   getPersistenceKeys:()=>({local:literarySaveKey,cloud:literaryCloudKey}),
   getScreen:()=>({menuOpen,sceneId:reader.sceneId,position:reader.position}),
+  getLifecycle:()=>lifecycle.getState(),
   getRuntimeTrace:()=>{
     const scene=byId.get(reader.sceneId),flow=compileInteractivePlayback(scene,reader.choices,locale),entry=flow[reader.position]??flow.at(-1)??null;
     const visualEntry=visualEntryForPosition(flow,reader.position);
@@ -489,3 +506,4 @@ window.__LITERARY_QA__={
   // QA methods are strictly read-only; preview and the old game have separate state keys.
 };
 boot();
+}

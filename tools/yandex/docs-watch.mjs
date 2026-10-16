@@ -5,6 +5,8 @@ import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
 import { ROOT } from '../starter-kit/lib.mjs';
+import { recordSemanticAcceptance } from '../starter-kit/semantic-acceptance.mjs';
+import { registryTextSha256 } from './registry-hash.mjs';
 
 export const DOC_SNAPSHOT_SCHEMA_VERSION = 1;
 export const DOC_PARSER_VERSION = 2;
@@ -745,8 +747,8 @@ async function runCli() {
       throw new Error('Semantic changes require explicit --policy-reviewed after registry and policy review');
     }
     const registryAlignment = {
-      requirementsRegistrySha256: sha256(fs.readFileSync(path.join(ROOT, 'config', 'yandex-requirements.yaml'), 'utf8')),
-      consoleRegistrySha256: sha256(fs.readFileSync(path.join(ROOT, 'config', 'yandex-console-requirements.yaml'), 'utf8'))
+      requirementsRegistrySha256: registryTextSha256(fs.readFileSync(path.join(ROOT, 'config', 'yandex-requirements.yaml'), 'utf8')),
+      consoleRegistrySha256: registryTextSha256(fs.readFileSync(path.join(ROOT, 'config', 'yandex-console-requirements.yaml'), 'utf8'))
     };
     const candidate = { ...result.currentSnapshot, reviewedAt, registryAlignment };
     if (result.reviewRequired || !reviewedSnapshot) {
@@ -762,6 +764,7 @@ async function runCli() {
       });
     }
     fs.writeFileSync(snapshotFile, `${JSON.stringify(candidate, null, 2)}\n`);
+    recordSemanticAcceptance({ root: ROOT, logicalId: 'managed:yandex-doc-snapshot', target: 'config/yandex-doc-snapshot.json' });
     const latestFile = path.join(ROOT, 'artifacts', 'upstream', 'yandex-docs', 'latest.json');
     fs.mkdirSync(path.dirname(latestFile), { recursive: true });
     fs.writeFileSync(latestFile, `${JSON.stringify({
