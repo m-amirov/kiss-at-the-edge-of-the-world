@@ -97,3 +97,9 @@ The tracked `vk-hosting-config.json` uses the real app ID from the authorized VK
 5. Preserve the three returned HTTPS dev URLs and bind them to the exact source HEAD and VK bundle digest in runtime evidence. A successful upload is not real-client acceptance.
 
 The dev launcher is intentionally not a CI job, `predeploy` hook or production script. If the account is not an owner/admin of the app, the deploy remains blocked at the provider authorization step.
+
+## Hosting attempt at current HEAD
+
+At `734c7395950ec0a6e49463fe8217951058e33e5e` the guarded command was executed with an owner-authorized OAuth token supplied only through the process environment. The package reached VK Hosting and uploaded `build.zip` (`460988432` bytes, SHA-256 `47b174aaf579cc4ea6e4375a1c3035b60ce397792c1796ef4efbb9f9e9aa6732`), but the provider rejected task creation with the exact response `Error: 15 Access denied: invalid file`. No HTTPS dev URL was returned; the console still reports that the application is unavailable by URL.
+
+This is an external hosting blocker, not a local or mock runtime PASS. Before retrying, the app owner must clarify with VK whether app `54782569` is eligible for Mini Apps Hosting through `@vkontakte/vk-miniapps-deploy@1.0.3` and whether the uploaded archive is subject to a hosting limit or a VK Games-specific packaging rule. Do not switch to production, publish, moderate or treat OK as verified until a real URL and client evidence exist.

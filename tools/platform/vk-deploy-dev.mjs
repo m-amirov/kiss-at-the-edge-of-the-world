@@ -34,12 +34,16 @@ export async function runDevDeploy({ argv = process.argv, env = process.env } = 
   }
   const config = JSON.parse(fs.readFileSync(CONFIG_FILE, 'utf8'));
   assertDevDeployConfig(config);
-  const executable = process.platform === 'win32' ? 'npx.cmd' : 'npx';
+  // npm exposes npx as a .cmd shim on Windows. Node cannot spawn that shim
+  // directly in the desktop runner (EINVAL), while shell resolution is safe
+  // here because every argument is fixed by this launcher.
+  const executable = 'npx';
   await new Promise((resolve, reject) => {
     const child = spawn(executable, ['--yes', DEPLOY_PACKAGE], {
       cwd: ROOT,
       env: childEnvironment(env),
-      stdio: 'inherit'
+      stdio: 'inherit',
+      shell: process.platform === 'win32'
     });
     child.on('error', reject);
     child.on('exit', (code, signal) => {
