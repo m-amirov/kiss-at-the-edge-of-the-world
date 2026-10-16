@@ -169,7 +169,22 @@ export function auditLocalBundle(root = ROOT) {
   }
 
   const audioFiles = actualFiles.filter((file) => file.toLowerCase().endsWith('.ogg'));
-  if (!audioFiles.length) errors.push('VK bundle contains no OGG music files');
+  const externalAudio = manifest.externalAudio ?? null;
+  if (externalAudio) {
+    try {
+      const url = new URL(externalAudio.baseUrl);
+      if (url.protocol !== 'https:' || url.username || url.password || url.search || url.hash || !url.pathname.endsWith('/')) {
+        errors.push('invalid external audio HTTPS URL');
+      }
+    } catch { errors.push('invalid external audio HTTPS URL'); }
+    if (!Array.isArray(externalAudio.files) || externalAudio.files.length !== 8) errors.push('external audio must contain eight OGG entries');
+    for (const item of externalAudio.files ?? []) {
+      if (!/^assets\/audio\/music\/[^/]+\.ogg$/i.test(item.path) || !/^[a-f0-9]{64}$/.test(item.sha256)) errors.push('invalid external audio manifest entry');
+      if (actualFiles.includes(item.path)) errors.push(`externally hosted audio included in bundle: ${item.path}`);
+    }
+    if (audioFiles.length) errors.push('external audio build still contains local OGG');
+    warnings.push('external audio requires HTTPS/MIME playback audit before release');
+  } else if (audioFiles.length !== 8) errors.push('VK bundle must contain eight local OGG tracks');
   for (const relative of actualFiles) {
     const mime = expectedMime(relative);
     if (mime === 'application/octet-stream') warnings.push(`no explicit MIME mapping: ${relative}`);
@@ -186,6 +201,7 @@ export function auditLocalBundle(root = ROOT) {
     fileCount: actualFiles.length,
     totalBytes: actualFiles.reduce((sum, relative) => sum + fs.statSync(path.join(bundleRoot, ...relative.split('/'))).size, 0),
     audioFiles,
+    externalAudio,
     errors,
     warnings,
     files: actualFiles.map((relative) => ({ path: relative, bytes: fs.statSync(path.join(bundleRoot, ...relative.split('/'))).size, mime: expectedMime(relative) }))
@@ -227,6 +243,17 @@ export async function auditRemoteBundle(root, url, { fetchImpl = globalThis.fetc
       } catch (error) { errors.push(error.message); }
     }
   }
+  for (const item of local.externalAudio?.files ?? []) {
+    const name = item.path.split('/').at(-1);
+    const remoteUrl = new URL(name, local.externalAudio.baseUrl).toString();
+    const response = await fetchWithFallback(remoteUrl, fetchImpl);
+    checked.push(item.path);
+    if (!response.ok) errors.push(`external audio ${name} returned HTTP ${response.status}`);
+    if (response.ok && !mimeMatches(response.headers.get('content-type'), 'audio/ogg')) {
+      errors.push(`external audio ${name} has incorrect MIME`);
+    }
+    if (!String(response.url || remoteUrl).startsWith('https://')) errors.push(`external audio ${name} redirected outside HTTPS`);
+  }
   for (const file of local.files) {
     const fileUrl = new URL(file.path, base).toString();
     const response = await fetchWithFallback(fileUrl, fetchImpl);
@@ -265,6 +292,7 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
       fileCount: result.fileCount ?? result.local?.fileCount,
       totalBytes: result.totalBytes ?? result.local?.totalBytes,
       audioFiles: result.audioFiles ?? result.local?.audioFiles,
+      externalAudio: result.externalAudio ?? result.local?.externalAudio,
       checkedCount: result.checkedCount,
       iframeCompatible: result.iframeCompatible,
       errors: result.errors,

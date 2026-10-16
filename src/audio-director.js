@@ -7,7 +7,8 @@ function readSettings(storage) {
   } catch { return { volume: 0.28, muted: false }; }
 }
 
-export function createAudioDirector({ AudioClass = globalThis.Audio, storage = globalThis.localStorage, requestFrame = globalThis.requestAnimationFrame } = {}) {
+export function createAudioDirector({ AudioClass = globalThis.Audio, storage = globalThis.localStorage, requestFrame = globalThis.requestAnimationFrame, audioBaseUrl = './assets/audio/music/' } = {}) {
+  if (typeof audioBaseUrl !== 'string' || !audioBaseUrl.endsWith('/')) throw new Error('Audio base URL must end in /');
   const settings = readSettings(storage);
   let currentCue = null;
   let currentAudio = null;
@@ -18,7 +19,7 @@ export function createAudioDirector({ AudioClass = globalThis.Audio, storage = g
   const setAudioVolume = (audio, value) => { if (audio) audio.volume = Math.min(1, Math.max(0, value)); };
   const createAudio = (cue) => {
     const audio = new AudioClass();
-    audio.src = `./assets/audio/music/${cue.file}`;
+    audio.src = `${audioBaseUrl}${cue.file}`;
     audio.preload = 'auto';
     audio.loop = Boolean(cue.loopable);
     audio.setAttribute?.('aria-hidden', 'true');

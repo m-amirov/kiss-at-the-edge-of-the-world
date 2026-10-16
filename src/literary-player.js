@@ -12,7 +12,7 @@ import { createAudioDirector } from './audio-director.js';
 import { musicCues, musicCueForScene } from './music-cues.js';
 import { createPlatformLifecycleController } from './platform/lifecycle.js';
 
-export async function startLiteraryPlayer({ initPlatform } = {}) {
+export async function startLiteraryPlayer({ initPlatform, audioBaseUrl } = {}) {
 if(typeof initPlatform!=='function')throw new TypeError('initPlatform is required');
 const canonicalById = new Map(literarySeason.scenes.map(scene => [scene.id, scene]));
 let runtimeSeason = literarySeason;
@@ -141,7 +141,7 @@ let platform=null;
 let locale='ru';
 let t=createTranslator(locale);
 let cloudQueue=null;
-const audioDirector=createAudioDirector();
+const audioDirector=createAudioDirector({audioBaseUrl});
 const audioCueById=new Map(musicCues.map(cue=>[cue.cueId,{...cue,file:`${cue.cueId}.ogg`} ]));
 let lifecycle=null;
 let settings=(()=>{try{return{scale:1,contrast:false,motion:false,...JSON.parse(localStorage.getItem(textSettingsKey)||'{}')}}catch{return{scale:1,contrast:false,motion:false}}})();

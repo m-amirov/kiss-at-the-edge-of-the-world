@@ -64,3 +64,24 @@ test('browser AudioDirector does not assign readonly HTMLAudioElement.dataset', 
   await assert.doesNotReject(() => director.unlock());
   assert.equal(director.getState().activeInstances, 1);
 });
+
+test('VK external audio uses configured HTTPS base without changing Yandex local path', async () => {
+  const { createAudioDirector } = await import('../../src/audio-director.js');
+  const sources = [];
+  class FakeAudio {
+    constructor(){ this.dataset = {}; this.volume = 0; sources.push(this); }
+    setAttribute(){}
+    play(){ return Promise.resolve(); }
+    pause(){}
+  }
+  const storage = { getItem: () => null, setItem: () => {} };
+  const cue = { cueId: 'main-theme', file: 'main-theme.ogg', loopable: true };
+  const vk = createAudioDirector({ AudioClass: FakeAudio, storage, requestFrame: null, audioBaseUrl: 'https://example.org/preview/music/' });
+  vk.setCue(cue);
+  await vk.unlock();
+  assert.equal(sources.at(-1).src, 'https://example.org/preview/music/main-theme.ogg');
+  const yandex = createAudioDirector({ AudioClass: FakeAudio, storage, requestFrame: null });
+  yandex.setCue(cue);
+  await yandex.unlock();
+  assert.equal(sources.at(-1).src, './assets/audio/music/main-theme.ogg');
+});

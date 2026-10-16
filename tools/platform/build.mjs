@@ -8,6 +8,18 @@ import { collectRuntimeAssets } from './runtime-assets.mjs';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const PLATFORM_NAMES = new Set(['yandex', 'vk']);
 
+export function validateExternalAudioBaseUrl(value) {
+  if (typeof value !== 'string' || !value || !value.endsWith('/')) throw new Error('VK_AUDIO_BASE_URL must be an HTTPS directory URL ending in /');
+  let url;
+  try { url = new URL(value); } catch { throw new Error('VK_AUDIO_BASE_URL is invalid'); }
+  if (url.protocol !== 'https:' || url.username || url.password || url.search || url.hash || url.origin === 'null') {
+    throw new Error('VK_AUDIO_BASE_URL must be HTTPS without credentials, query or fragment');
+  }
+  return url.toString();
+}
+
+
+
 function isWithin(parent, candidate) {
   const relative = path.relative(parent, candidate);
   return relative === '' || (!relative.startsWith('..' + path.sep) && relative !== '..' && !path.isAbsolute(relative));
@@ -102,12 +114,29 @@ function sourceHead(root) {
   }
 }
 
-export function buildPlatform(root = ROOT, platform, outputDir = path.join(root, 'dist', platform)) {
+export function buildPlatform(root = ROOT, platform, outputDir = path.join(root, 'dist', platform), options = {}) {
   if (!PLATFORM_NAMES.has(platform)) throw new Error(`Unsupported platform: ${platform}`);
   const sourceRoot = path.resolve(root);
   const output = path.resolve(outputDir);
   assertSafeOutputPath(sourceRoot, outputDir, platform);
+  if (options.externalAudioBaseUrl && platform !== 'vk') throw new Error('External audio build is VK-only');
+  const externalAudioBaseUrl = options.externalAudioBaseUrl ? validateExternalAudioBaseUrl(options.externalAudioBaseUrl) : null;
   const assetSelection = collectRuntimeAssets(sourceRoot, platform);
+  const externalAudioFiles = externalAudioBaseUrl
+    ? assetSelection.files.filter((file) => /^assets\/audio\/music\/[^/]+\.ogg$/i.test(file))
+    : [];
+  if (externalAudioBaseUrl && externalAudioFiles.length !== 8) throw new Error('VK Hosting requires all eight declared OGG cues');
+  const packagedSelection = externalAudioBaseUrl ? {
+    ...assetSelection,
+    files: assetSelection.files.filter((file) => !externalAudioFiles.includes(file)),
+    entries: assetSelection.entries.filter((entry) => !externalAudioFiles.includes(entry.path))
+  } : assetSelection;
+  const externalAudio = externalAudioBaseUrl ? {
+    baseUrl: externalAudioBaseUrl,
+    files: externalAudioFiles.map((file) => ({
+      path: file, sha256: sha256(path.join(sourceRoot, ...file.split('/')))
+    }))
+  } : null;
   fs.rmSync(output, { recursive: true, force: true });
   fs.mkdirSync(output, { recursive: true });
 
@@ -118,7 +147,7 @@ export function buildPlatform(root = ROOT, platform, outputDir = path.join(root,
     'src/entry.js', 'src/yandex-entry.js', 'src/yandex-sdk.js', 'src/main.js', 'src/vk-test-entry.js', 'src/platform/vk-bridge-mock.js'
   ]);
   const excluded = platform === 'yandex' ? excludedForYandex : excludedForVk;
-  copySelectedAssets(sourceRoot, output, assetSelection);
+  copySelectedAssets(sourceRoot, output, packagedSelection);
   const runtimeSourceFiles = new Set(assetSelection.sourceFiles);
   copyTree(path.join(sourceRoot, 'src'), path.join(output, 'src'), sourceRoot,
     (relative, entry) => entry.isDirectory() || (runtimeSourceFiles.has(relative) && !excluded.has(relative)));
@@ -128,6 +157,7 @@ export function buildPlatform(root = ROOT, platform, outputDir = path.join(root,
   }
 
   if (platform === 'vk') {
+    if (externalAudioBaseUrl) fs.writeFileSync(path.join(output, 'src', 'vk-audio-config.js'), `export const vkAudioBaseUrl = ${JSON.stringify(externalAudioBaseUrl)};\n`);
     const bridgeSource = path.join(sourceRoot, 'node_modules', '@vkontakte', 'vk-bridge', 'dist', 'index.es.js');
     if (!fs.existsSync(bridgeSource)) throw new Error('VK Bridge dependency is not installed');
     const vendorDir = path.join(output, 'vendor');
@@ -158,7 +188,8 @@ export function buildPlatform(root = ROOT, platform, outputDir = path.join(root,
     platform,
     sourceHead: sourceHead(sourceRoot),
     entry: 'index.html',
-    assetSelection,
+    assetSelection: packagedSelection,
+    ...(externalAudio ? { externalAudio } : {}),
     files: files.map((relative) => ({ path: relative, sha256: sha256(path.join(output, relative)) }))
   };
   fs.writeFileSync(path.join(output, 'build-manifest.json'), `${JSON.stringify(manifest, null, 2)}\n`);
@@ -174,7 +205,10 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
   const platform = argument('--platform');
   const output = argument('--out') ?? path.join(ROOT, 'dist', platform ?? 'unknown');
   try {
-    console.log(JSON.stringify(buildPlatform(ROOT, platform, output), null, 2));
+    const externalAudio = process.argv.includes('--external-audio');
+    const externalAudioBaseUrl = externalAudio ? process.env.VK_AUDIO_BASE_URL : null;
+    if (externalAudio && !externalAudioBaseUrl) throw new Error('VK Hosting build requires VK_AUDIO_BASE_URL');
+    console.log(JSON.stringify(buildPlatform(ROOT, platform, output, { externalAudioBaseUrl }), null, 2));
   } catch (error) {
     console.error(`BLOCKED_PLATFORM_BUILD: ${error.message}`);
     process.exitCode = 2;

@@ -40,7 +40,8 @@
     "vk:deploy:dev": "node tools/platform/vk-deploy-dev.mjs",
     "vk:hosting:audit": "node tools/platform/vk-hosting-audit.mjs",
     "vk:deploy:cloudflare:preview": "node tools/platform/cloudflare-pages-deploy-preview.mjs",
-    "vk:deploy:yandex:preview": "node tools/platform/yandex-object-storage-deploy-preview.mjs"
+    "vk:deploy:yandex:preview": "node tools/platform/yandex-object-storage-deploy-preview.mjs",
+    "build:vk:hosting": "node tools/platform/build.mjs --platform vk --external-audio"
   },
   "type": "module",
   "dependencies": {

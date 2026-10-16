@@ -199,3 +199,32 @@ test('real VK build resolves hosted relative assets and has no production mock/t
     fs.rmSync(yandexOutput, { recursive: true, force: true });
   }
 });
+
+test('VK Hosting mode excludes only music and requires approved HTTPS audio URL', () => {
+  const root = process.cwd();
+  const pathRoot = path.join(root, 'dist', 'vk');
+  fs.mkdirSync(pathRoot, { recursive: true });
+  const out = fs.mkdtempSync(path.join(pathRoot, 'hosted-test-'));
+  const sentinel = path.join(out, 'sentinel.txt');
+  fs.writeFileSync(sentinel, 'keep');
+  try {
+    const bad = ['http://example.org/music/', 'https://example.org/music', 'https://user:pw@example.org/music/', 'https://example.org/music/?token=123'];
+    for (const externalAudioBaseUrl of bad) {
+      assert.throws(() => buildPlatform(root, 'vk', out, { externalAudioBaseUrl }), /VK_AUDIO_BASE_URL/);
+      assert.equal(fs.readFileSync(sentinel, 'utf8'), 'keep');
+    }
+    const target = 'https://media.example.org/game/music/';
+    buildPlatform(root, 'vk', out, { externalAudioBaseUrl: target });
+    const manifest = JSON.parse(fs.readFileSync(path.join(out, 'build-manifest.json'), 'utf8'));
+    assert.equal(manifest.externalAudio.baseUrl, target);
+    assert.equal(manifest.externalAudio.files.length, 8);
+    const audioDir = path.join(out, 'assets/audio/music');
+    assert.equal(fs.existsSync(audioDir), false);
+    assert.ok(manifest.externalAudio.files.every(item => /^[a-f0-9]{64}$/.test(item.sha256)));
+    const config = fs.readFileSync(path.join(out, 'src/vk-audio-config.js'), 'utf8');
+    assert.equal(config, `export const vkAudioBaseUrl = "${target}";\n`);
+    assert.equal(fs.existsSync(path.join(out, 'assets/branding/kiss-at-the-edge-icon.png')), true);
+  } finally {
+    fs.rmSync(out, { recursive: true, force: true });
+  }
+});

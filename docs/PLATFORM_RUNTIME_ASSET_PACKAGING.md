@@ -72,3 +72,34 @@ node --test tests/release/rc-package-assets.test.mjs
 The platform regression tests cover WebP-over-master selection, confirmed PNG
 branding, music/fonts, missing-resource fail-closed behavior, output isolation,
 and platform adapter separation.
+
+## VK Hosting: optional split-audio package
+
+The default `npm run build:vk` continues to bundle all eight OGG files for local
+smoke testing and self-hosting. The official VK static host does not accept
+audio files, so a second *explicitly selected* build profile is available:
+
+```sh
+# Set VK_AUDIO_BASE_URL to an actual, owner-approved, HTTPS directory URL
+# ending with / which contains the 8 OGG files (never a token-bearing URL).
+npm run build:vk:hosting
+npm run vk:hosting:audit
+```
+
+This profile excludes the eight OGG tracks from `dist/vk` and injects the
+external audio base URL into the VK-only module `src/vk-audio-config.js`.
+The source module defaults to a relative local path, so Yandex and ordinary
+VK builds are unchanged. The schema-2 build manifest records
+`externalAudio.baseUrl` and the SHA-256 of every original OGG.
+The audit checks all eight remote OGG URLs when using `--url`; a local
+PASS alone is **not** proof of externally hosted audio.
+
+The OGG bytes are not modified, transcoded, deleted from the repository,
+or uploaded by the build step. Provisioning a public HTTPS audio host, paying
+for storage, permitting anonymous reads, and changing any VK Developer Console
+URL require separate owner authorization.
+
+The build must be regenerated at its final HEAD and hash verified after a
+real audio host is approved. External audio in VK Web/Android/iOS and OK
+Web/Android/iOS remains pending real-client playback testing. Run default
+`npm run build:vk` to restore the local all-assets bundle.
