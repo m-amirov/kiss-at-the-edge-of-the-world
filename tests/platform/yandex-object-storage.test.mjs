@@ -60,6 +60,34 @@ test('Yandex upload plan covers the exact bundle, all eight OGG files and explic
   assert.doesNotMatch(uploadText, /public-read-write|--public-list/);
 });
 
+test('Yandex upload passes real file bytes to yc instead of a literal path', () => {
+  const config = JSON.parse(fs.readFileSync(path.join(root, 'config/platform/yandex-object-storage-preview.json'), 'utf8'));
+  const local = auditLocalBundle(root);
+  assert.equal(local.status, 'PASS', local.errors.join('; '));
+  const plan = buildDeploymentPlan(config, {
+    root,
+    bucket: 'vk-games-preview-20261016',
+    sourceHead: local.sourceHead,
+    bundleSha256: local.bundleSha256
+  });
+  for (const args of plan.upload) {
+    const bodyIndex = args.indexOf('--body');
+    const keyIndex = args.indexOf('--key');
+    assert.ok(bodyIndex >= 0 && keyIndex >= 0);
+    const body = args[bodyIndex + 1];
+    assert.ok(body.startsWith('@'), 'yc --body must prefix an existing file with @');
+    const uploadedFile = body.slice(1);
+    assert.ok(path.isAbsolute(uploadedFile));
+    const key = args[keyIndex + 1];
+    assert.deepEqual(
+      fs.readFileSync(uploadedFile),
+      fs.readFileSync(path.join(root, 'dist', 'vk', ...key.split('/'))),
+      `upload body must match bundled bytes for ${key}`
+    );
+  }
+  assert.equal(plan.upload.filter(args => args[args.indexOf('--key') + 1].endsWith('.ogg')).length, 8);
+});
+
 test('Yandex mutation commands never enable public write or listing in object mode', () => {
   const config = JSON.parse(fs.readFileSync(path.join(root, 'config/platform/yandex-object-storage-preview.json'), 'utf8'));
   const create = buildBucketCreateArgs(config, { bucket: 'vk-games-preview-20261016', env: {} });
