@@ -61,6 +61,31 @@ test('nonempty external output and its sentinel cannot be deleted by a platform 
   }
 });
 
+test('dangling symlink under dist cannot bypass canonical output guard', t => {
+  const root = fixture();
+  const dist = path.join(root, 'dist');
+  const dangling = path.join(dist, 'vk');
+  fs.mkdirSync(dist, { recursive: true });
+  try {
+    try {
+      fs.symlinkSync(path.join(root, 'does-not-exist'), dangling, 'junction');
+    } catch (error) {
+      if (['EPERM', 'EACCES', 'ENOTSUP'].includes(error?.code)) {
+        t.skip('symlink creation not permitted in this environment');
+        return;
+      }
+      throw error;
+    }
+    assert.throws(
+      () => buildPlatform(root, 'vk', path.join(dangling, 'test-output')),
+      /Unsafe output path: symlink/
+    );
+    assert.equal(fs.lstatSync(dangling).isSymbolicLink(), true);
+  } finally {
+    fs.rmSync(root, { recursive: true, force: true });
+  }
+});
+
 test('a safe output creates an isolated platform tree', () => {
   const root = fixture();
   const output = path.join(root, 'dist', 'yandex');
@@ -80,29 +105,29 @@ test('real VK build resolves hosted relative assets and has no production mock/t
   const output = fs.mkdtempSync(path.join(vkBuilds, 'test-'));
   const yandexOutput = fs.mkdtempSync(path.join(yandexBuilds, 'test-'));
   try {
-    buildPlatform(root, 'vk', output);
-  const html = fs.readFileSync(path.join(output, 'index.html'), 'utf8');
-  assert.equal(fs.existsSync(path.join(output, 'vendor', 'vk-bridge.js')), true);
-  for (const reference of [...html.matchAll(/(?:src|href)="(\.[^"]+)"/g)].map(match => match[1])) {
-    assert.equal(fs.existsSync(path.resolve(output, reference)), true, `missing hosted asset ${reference}`);
-  }
-  const sourceFiles = [];
-  const visit = directory => {
-    for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
-      const file = path.join(directory, entry.name);
-      if (entry.isDirectory()) visit(file);
-      else if (/\.(html|js|mjs|css)$/i.test(entry.name)) sourceFiles.push(file);
+      buildPlatform(root, 'vk', output);
+    const html = fs.readFileSync(path.join(output, 'index.html'), 'utf8');
+    assert.equal(fs.existsSync(path.join(output, 'vendor', 'vk-bridge.js')), true);
+    for (const reference of [...html.matchAll(/(?:src|href)="(\.[^"]+)"/g)].map(match => match[1])) {
+      assert.equal(fs.existsSync(path.resolve(output, reference)), true, `missing hosted asset ${reference}`);
     }
-  };
-  visit(output);
-  const source = sourceFiles.map(file => fs.readFileSync(file, 'utf8')).join('\n');
-  for (const forbidden of ['vk-bridge-mock', 'createMockVkBridge', '__VK_BRIDGE__', 'vk-test-entry.js', 'initYandexPlatform', 'YaGames']) {
-    assert.equal(source.includes(forbidden), false, `production VK bundle contains ${forbidden}`);
-  }
-  buildPlatform(root, 'yandex', yandexOutput);
-  const yandexSource = fs.readFileSync(path.join(yandexOutput, 'index.html'), 'utf8') + fs.readFileSync(path.join(yandexOutput, 'src', 'entry.js'), 'utf8');
-  assert.equal(yandexSource.includes('vk-entry.js'), false);
-  assert.equal(fs.existsSync(path.join(yandexOutput, 'vendor', 'vk-bridge.js')), false);
+    const sourceFiles = [];
+    const visit = directory => {
+      for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+        const file = path.join(directory, entry.name);
+        if (entry.isDirectory()) visit(file);
+        else if (/\.(html|js|mjs|css)$/i.test(entry.name)) sourceFiles.push(file);
+      }
+    };
+    visit(output);
+    const source = sourceFiles.map(file => fs.readFileSync(file, 'utf8')).join('\n');
+    for (const forbidden of ['vk-bridge-mock', 'createMockVkBridge', '__VK_BRIDGE__', 'vk-test-entry.js', 'initYandexPlatform', 'YaGames']) {
+      assert.equal(source.includes(forbidden), false, `production VK bundle contains ${forbidden}`);
+    }
+    buildPlatform(root, 'yandex', yandexOutput);
+    const yandexSource = fs.readFileSync(path.join(yandexOutput, 'index.html'), 'utf8') + fs.readFileSync(path.join(yandexOutput, 'src', 'entry.js'), 'utf8');
+    assert.equal(yandexSource.includes('vk-entry.js'), false);
+    assert.equal(fs.existsSync(path.join(yandexOutput, 'vendor', 'vk-bridge.js')), false);
   } finally {
     fs.rmSync(output, { recursive: true, force: true });
     fs.rmSync(yandexOutput, { recursive: true, force: true });
