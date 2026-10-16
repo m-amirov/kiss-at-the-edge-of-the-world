@@ -1043,6 +1043,7 @@
     },
     {
       "path": "assets/audio/music/main-theme.ogg",
+      "sha256": "8B8D82236A89EBE5506BA7D6458EF72E09A66AC88671F3B968FA8CF81F266B4F",
       "method": "ACE-Step 1.5 local generation from machine-readable music cue spec; normalized and encoded to OGG Vorbis q4",
       "source": "ACE-Step/Ace-Step1.5, ACE-Step 1.5 v0.1.8, local CPU generation",
       "license": "ACE-Step code and model MIT; generated output permitted for commercial use per official model card",
@@ -1051,6 +1052,7 @@
     },
     {
       "path": "assets/audio/music/road.ogg",
+      "sha256": "A1B9859BE4192F47F0C78B30BD4AA6650BC9348787BF1AA87B798D8493E8E160",
       "method": "ACE-Step 1.5 local generation from machine-readable music cue spec; normalized and encoded to OGG Vorbis q4",
       "source": "ACE-Step/Ace-Step1.5, ACE-Step 1.5 v0.1.8, local CPU generation",
       "license": "ACE-Step code and model MIT; generated output permitted for commercial use per official model card",
@@ -1059,6 +1061,7 @@
     },
     {
       "path": "assets/audio/music/cafe.ogg",
+      "sha256": "520BB76925DDAACCBC8BC3E9924924CEFF3F7BF3B097768D77372F8E85C6E58B",
       "method": "ACE-Step 1.5 local generation from machine-readable music cue spec; normalized and encoded to OGG Vorbis q4",
       "source": "ACE-Step/Ace-Step1.5, ACE-Step 1.5 v0.1.8, local CPU generation",
       "license": "ACE-Step code and model MIT; generated output permitted for commercial use per official model card",
@@ -1067,6 +1070,7 @@
     },
     {
       "path": "assets/audio/music/iceland-calm.ogg",
+      "sha256": "B71467AC89012EAA13077AFF09276C328BEC804D5DEF1AF1D263B0B4020406A2",
       "method": "ACE-Step 1.5 local generation from machine-readable music cue spec; normalized and encoded to OGG Vorbis q4",
       "source": "ACE-Step/Ace-Step1.5, ACE-Step 1.5 v0.1.8, local CPU generation",
       "license": "ACE-Step code and model MIT; generated output permitted for commercial use per official model card",
@@ -1075,6 +1079,7 @@
     },
     {
       "path": "assets/audio/music/romantic.ogg",
+      "sha256": "806561A239DF784C38EC7D6462AF6A12EAF2B7D11E49933AEB0A1CB204DA1D58",
       "method": "ACE-Step 1.5 local generation from machine-readable music cue spec; normalized and encoded to OGG Vorbis q4",
       "source": "ACE-Step/Ace-Step1.5, ACE-Step 1.5 v0.1.8, local CPU generation",
       "license": "ACE-Step code and model MIT; generated output permitted for commercial use per official model card",
@@ -1083,6 +1088,7 @@
     },
     {
       "path": "assets/audio/music/tension.ogg",
+      "sha256": "79116D5F5B1158E0C5C9B61985068768FDDB6B983384E2EA2ACE092503E2A0A3",
       "method": "ACE-Step 1.5 local generation from machine-readable music cue spec; normalized and encoded to OGG Vorbis q4",
       "source": "ACE-Step/Ace-Step1.5, ACE-Step 1.5 v0.1.8, local CPU generation",
       "license": "ACE-Step code and model MIT; generated output permitted for commercial use per official model card",
@@ -1091,6 +1097,7 @@
     },
     {
       "path": "assets/audio/music/sad.ogg",
+      "sha256": "1B89BEA3E219E43DF8F81EA22AFE647273CAA1B203C6A9FDA6CD3930AE14B191",
       "method": "ACE-Step 1.5 local generation from machine-readable music cue spec; normalized and encoded to OGG Vorbis q4",
       "source": "ACE-Step/Ace-Step1.5, ACE-Step 1.5 v0.1.8, local CPU generation",
       "license": "ACE-Step code and model MIT; generated output permitted for commercial use per official model card",
@@ -1099,6 +1106,7 @@
     },
     {
       "path": "assets/audio/music/ending.ogg",
+      "sha256": "9562EBEC3527D252F85E599BFA465A8791E7652DD5D699CF1A601BF3D659AAE3",
       "method": "ACE-Step 1.5 local generation from machine-readable music cue spec; normalized and encoded to OGG Vorbis q4",
       "source": "ACE-Step/Ace-Step1.5, ACE-Step 1.5 v0.1.8, local CPU generation",
       "license": "ACE-Step code and model MIT; generated output permitted for commercial use per official model card",

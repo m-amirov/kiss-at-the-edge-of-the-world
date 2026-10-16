@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -16,6 +17,18 @@ test('production audio files and cue metadata agree', () => {
   for (const cue of musicCues) {
     assert.ok(fs.existsSync(path.join(root, 'assets/audio/music', `${cue.cueId}.ogg`)), `missing ${cue.cueId}.ogg`);
     assert.ok(Number.isInteger(cue.seed));
+  }
+});
+
+test('audio rights manifest binds every shipped OGG to its current SHA-256', () => {
+  const rights = JSON.parse(fs.readFileSync(path.join(root, 'assets/provenance/rights-manifest.json'), 'utf8'));
+  const entries = new Map(rights.assets.map(entry => [entry.path, entry]));
+  for (const cue of musicCues) {
+    const relative = `assets/audio/music/${cue.cueId}.ogg`;
+    const entry = entries.get(relative);
+    assert.match(entry?.sha256 ?? '', /^[A-F0-9]{64}$/);
+    const actual = crypto.createHash('sha256').update(fs.readFileSync(path.join(root, relative))).digest('hex').toUpperCase();
+    assert.equal(entry.sha256, actual, `rights manifest hash mismatch for ${relative}`);
   }
 });
 
