@@ -1,9 +1,15 @@
 import assert from 'node:assert/strict';
+import crypto from 'node:crypto';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import test from 'node:test';
 import { assertSafeOutputPath, buildPlatform } from '../../tools/platform/build.mjs';
+
+test('VK regression suite bootstraps the local-audio build before bundle-dependent checks', () => {
+  const packageJson = JSON.parse(fs.readFileSync(path.resolve(process.cwd(), 'package.json'), 'utf8'));
+  assert.match(packageJson.scripts?.['test:vk'] ?? '', /^npm run build:vk && node --test/);
+});
 
 function fixture() {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'platform-build-'));
@@ -221,6 +227,11 @@ test('VK Hosting mode excludes only music and requires approved HTTPS audio URL'
     const audioDir = path.join(out, 'assets/audio/music');
     assert.equal(fs.existsSync(audioDir), false);
     assert.ok(manifest.externalAudio.files.every(item => /^[a-f0-9]{64}$/.test(item.sha256)));
+    for (const item of manifest.externalAudio.files) {
+      const source = path.join(root, ...item.path.split('/'));
+      const sourceHash = crypto.createHash('sha256').update(fs.readFileSync(source)).digest('hex');
+      assert.equal(item.sha256, sourceHash, `external audio hash must bind to ${item.path}`);
+    }
     const config = fs.readFileSync(path.join(out, 'src/vk-audio-config.js'), 'utf8');
     assert.equal(config, `export const vkAudioBaseUrl = "${target}";\n`);
     assert.equal(fs.existsSync(path.join(out, 'assets/branding/kiss-at-the-edge-icon.png')), true);

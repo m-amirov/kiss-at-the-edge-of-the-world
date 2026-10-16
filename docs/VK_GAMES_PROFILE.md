@@ -162,6 +162,14 @@ devices before marking release gates as satisfied. The audio host has not
 been provisioned; the external URL must never be invented or embedded until
 it exists and owner authorization is obtained.
 
+The VK regression command is self-contained: `npm run test:vk` first rebuilds
+the ordinary local-audio `dist/vk` tree, then runs the bundle-dependent tests.
+This prevents a clean checkout from reporting false failures merely because a
+generated manifest is absent. A split-audio build may be exercised locally with
+an explicitly non-routable test URL, but that output is structural evidence
+only; it must never be deployed or treated as proof that the eight remote OGG
+objects exist.
+
 Cloudflare Pages and Yandex Object Storage **full-bundle** preview deploy
 scripts fail closed when pointed at a split-audio VK Hosting output, to avoid
 mistakenly deploying an incomplete game. Restore the full local-audio bundle
