@@ -3,6 +3,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
+import { collectRuntimeAssets } from './runtime-assets.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const PLATFORM_NAMES = new Set(['yandex', 'vk']);
@@ -77,6 +78,18 @@ function copyTree(source, target, sourceRoot, filter = () => true) {
   }
 }
 
+function copySelectedAssets(sourceRoot, output, selection) {
+  for (const relative of selection.files) {
+    const sourcePath = path.join(sourceRoot, ...relative.split('/'));
+    const targetPath = path.join(output, ...relative.split('/'));
+    const stat = fs.lstatSync(sourcePath);
+    if (stat.isSymbolicLink()) throw new Error(`Source symlink is not allowed: ${relative}`);
+    if (!stat.isFile()) throw new Error(`Runtime asset is not a regular file: ${relative}`);
+    fs.mkdirSync(path.dirname(targetPath), { recursive: true });
+    fs.copyFileSync(sourcePath, targetPath);
+  }
+}
+
 function sha256(file) {
   return crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
 }
@@ -94,6 +107,7 @@ export function buildPlatform(root = ROOT, platform, outputDir = path.join(root,
   const sourceRoot = path.resolve(root);
   const output = path.resolve(outputDir);
   assertSafeOutputPath(sourceRoot, outputDir, platform);
+  const assetSelection = collectRuntimeAssets(sourceRoot, platform);
   fs.rmSync(output, { recursive: true, force: true });
   fs.mkdirSync(output, { recursive: true });
 
@@ -104,9 +118,10 @@ export function buildPlatform(root = ROOT, platform, outputDir = path.join(root,
     'src/entry.js', 'src/yandex-entry.js', 'src/yandex-sdk.js', 'src/main.js', 'src/vk-test-entry.js', 'src/platform/vk-bridge-mock.js'
   ]);
   const excluded = platform === 'yandex' ? excludedForYandex : excludedForVk;
-  copyTree(path.join(sourceRoot, 'assets'), path.join(output, 'assets'), sourceRoot);
+  copySelectedAssets(sourceRoot, output, assetSelection);
+  const runtimeSourceFiles = new Set(assetSelection.sourceFiles);
   copyTree(path.join(sourceRoot, 'src'), path.join(output, 'src'), sourceRoot,
-    (relative, entry) => entry.isDirectory() || !excluded.has(relative));
+    (relative, entry) => entry.isDirectory() || (runtimeSourceFiles.has(relative) && !excluded.has(relative)));
   fs.copyFileSync(path.join(sourceRoot, platform === 'vk' ? 'vk.html' : 'index.html'), path.join(output, 'index.html'));
   if (platform === 'yandex' && fs.existsSync(path.join(sourceRoot, 'literary.html'))) {
     fs.copyFileSync(path.join(sourceRoot, 'literary.html'), path.join(output, 'literary.html'));
@@ -139,10 +154,11 @@ export function buildPlatform(root = ROOT, platform, outputDir = path.join(root,
   };
   visit(output);
   const manifest = {
-    schemaVersion: 1,
+    schemaVersion: 2,
     platform,
     sourceHead: sourceHead(sourceRoot),
     entry: 'index.html',
+    assetSelection,
     files: files.map((relative) => ({ path: relative, sha256: sha256(path.join(output, relative)) }))
   };
   fs.writeFileSync(path.join(output, 'build-manifest.json'), `${JSON.stringify(manifest, null, 2)}\n`);

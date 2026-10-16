@@ -21,7 +21,7 @@ function fixture() {
   write('assets/font.woff2', Buffer.from([0x77, 0x4f, 0x46, 0x32, 0xff, 0xfe]));
   write('assets/branding/kiss-at-the-edge-cover.png', Buffer.from([1]));
   write('assets/branding/kiss-at-the-edge-icon.png', Buffer.from([2]));
-  write('assets/asset-manifest.json', JSON.stringify({ assets: [{ status: 'integrated', runtimePath: 'assets/picture.webp' }] }));
+  write('assets/asset-manifest.json', JSON.stringify({ schemaVersion: 1, assets: [{ status: 'integrated', runtimePath: 'assets/picture.webp' }] }));
   write('src/legacy.js', 'throw new Error("legacy")');
   write('tests/qa.js', 'throw new Error("qa")');
   return { directory, write, output: path.join(directory, 'rc.zip') };
@@ -47,7 +47,7 @@ test('unresolved local import blocks packaging', () => {
 
 test('missing referenced asset blocks packaging', () => {
   const f = fixture(); fs.unlinkSync(path.join(f.directory, 'assets', 'picture.webp')); const result = run(f);
-  assert.notEqual(result.status, 0); assert.match(result.stderr, /unresolved local dependency|missing dependency/);
+  assert.notEqual(result.status, 0); assert.match(result.stderr, /unresolved local dependency|missing dependency|Missing runtime asset/);
 });
 
 test('binary WebP and font dependencies are never decoded as text', () => {

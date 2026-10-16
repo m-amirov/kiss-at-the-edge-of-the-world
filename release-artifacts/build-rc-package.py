@@ -4,6 +4,7 @@ import json
 import os
 from pathlib import Path, PurePosixPath
 import re
+import subprocess
 import zipfile
 
 TEXT_EXTENSIONS = {".css", ".html", ".js", ".json", ".mjs"}
@@ -67,14 +68,27 @@ def dependency_closure(root: Path) -> tuple[set[str], str]:
             if dependency and dependency not in files: pending.append(dependency)
     return files, "\n".join(source_text)
 
+def runtime_asset_selection(root: Path) -> dict:
+    selector = Path(__file__).resolve().parents[1] / "tools" / "platform" / "runtime-assets-cli.mjs"
+    result = subprocess.run(
+        ["node", str(selector), "--root", str(root), "--platform", "yandex"],
+        cwd=root,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    if result.returncode != 0:
+        detail = result.stderr.strip() or result.stdout.strip() or "unknown runtime asset selection failure"
+        raise PackageError(detail)
+    try:
+        return json.loads(result.stdout)
+    except json.JSONDecodeError as error:
+        raise PackageError(f"invalid runtime asset selection output: {error}") from error
+
 def build_package(root: Path, output: Path) -> dict:
     root = root.resolve()
-    files, source_text = dependency_closure(root)
-    manifest = json.loads(strict_text(root / "assets" / "asset-manifest.json"))
-    manifest_assets = [entry for section in ("assets", "previewAssets") for entry in manifest.get(section, [])
-        if (entry.get("status") == "integrated" or entry.get("runtimePath"))
-        and any(os.path.basename(candidate or "") in source_text for candidate in (entry.get("runtimePath"), entry.get("runtimePortraitAsset"), entry.get("path"), entry.get("portraitAsset")))]
-    files.update(asset_path for entry in manifest_assets for asset_path in (entry.get("runtimePath", entry.get("path")), entry.get("runtimePortraitAsset", entry.get("portraitAsset"))) if asset_path)
+    selection = runtime_asset_selection(root)
+    files = set(selection["sourceFiles"]) | set(selection["files"])
     files.update(REQUIRED_STATIC_FILES)
     missing = sorted(relative for relative in files if not (root / relative).is_file())
     if missing: raise PackageError("missing dependency: " + ", ".join(missing))

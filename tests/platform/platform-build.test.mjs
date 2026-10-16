@@ -8,15 +8,32 @@ import { assertSafeOutputPath, buildPlatform } from '../../tools/platform/build.
 function fixture() {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'platform-build-'));
   fs.mkdirSync(path.join(root, 'assets'), { recursive: true });
+  fs.mkdirSync(path.join(root, 'assets', 'audio', 'music'), { recursive: true });
+  fs.mkdirSync(path.join(root, 'assets', 'fonts'), { recursive: true });
   fs.mkdirSync(path.join(root, 'src', 'platform'), { recursive: true });
   fs.mkdirSync(path.join(root, 'public'), { recursive: true });
+  fs.writeFileSync(path.join(root, 'assets', 'scene.png'), 'master');
   fs.writeFileSync(path.join(root, 'assets', 'scene.webp'), 'asset');
+  fs.writeFileSync(path.join(root, 'assets', 'brand.png'), 'branding');
+  fs.writeFileSync(path.join(root, 'assets', 'unused.png'), 'unused');
+  fs.writeFileSync(path.join(root, 'assets', 'audio', 'music', 'main-theme.ogg'), 'music');
+  fs.writeFileSync(path.join(root, 'assets', 'fonts', 'game.ttf'), 'font');
+  fs.writeFileSync(path.join(root, 'assets', 'asset-manifest.json'), JSON.stringify({
+    schemaVersion: 1,
+    assets: [
+      { id: 'scene', family: 'background', path: 'assets/scene.png', status: 'integrated', runtimePath: 'assets/scene.webp' },
+      { id: 'brand', family: 'branding', path: 'assets/brand.png', status: 'integrated', runtimePath: 'assets/brand.png' },
+      { id: 'music-main-theme', family: 'music', path: 'assets/audio/music/main-theme.ogg', status: 'integrated' },
+      { id: 'font-game', family: 'font', path: 'assets/fonts/game.ttf', status: 'integrated' },
+      { id: 'unused', family: 'cg', path: 'assets/unused.png', status: 'unused-candidate' }
+    ]
+  }));
   fs.writeFileSync(path.join(root, 'src', 'entry.js'), 'entry');
   fs.writeFileSync(path.join(root, 'src', 'important.txt'), 'do-not-delete');
   fs.writeFileSync(path.join(root, 'src', 'vk-entry.js'), 'vk');
   fs.writeFileSync(path.join(root, 'src', 'platform', 'vk-games.js'), 'adapter');
   fs.writeFileSync(path.join(root, 'src', 'platform', 'vk-bridge-mock.js'), 'mock');
-  fs.writeFileSync(path.join(root, 'index.html'), '<link rel="stylesheet" href="./src/literary.css"><script type="module" src="./src/entry.js"></script>');
+  fs.writeFileSync(path.join(root, 'index.html'), '<link rel="icon" href="./assets/brand.png"><link rel="stylesheet" href="./src/literary.css"><script type="module" src="./src/entry.js"></script>');
   fs.writeFileSync(path.join(root, 'vk.html'), '<link rel="stylesheet" href="./src/literary.css"><script type="module" src="./src/vk-entry.js"></script>');
   fs.writeFileSync(path.join(root, 'src', 'literary.css'), 'body{}');
   return root;
@@ -96,6 +113,43 @@ test('a safe output creates an isolated platform tree', () => {
   assert.equal(fs.existsSync(path.join(output, 'src', 'platform', 'vk-bridge-mock.js')), false);
 });
 
+test('runtime asset selection keeps WebP and confirmed branding but excludes master and unused PNG files', () => {
+  const root = fixture();
+  const output = path.join(root, 'dist', 'yandex');
+  try {
+    buildPlatform(root, 'yandex', output);
+    assert.equal(fs.existsSync(path.join(output, 'assets', 'scene.webp')), true);
+    assert.equal(fs.existsSync(path.join(output, 'assets', 'brand.png')), true);
+    assert.equal(fs.existsSync(path.join(output, 'assets', 'audio', 'music', 'main-theme.ogg')), true);
+    assert.equal(fs.existsSync(path.join(output, 'assets', 'fonts', 'game.ttf')), true);
+    assert.equal(fs.existsSync(path.join(output, 'assets', 'scene.png')), false);
+    assert.equal(fs.existsSync(path.join(output, 'assets', 'unused.png')), false);
+    const manifest = JSON.parse(fs.readFileSync(path.join(output, 'build-manifest.json'), 'utf8'));
+    assert.deepEqual(manifest.assetSelection.files, [
+      'assets/audio/music/main-theme.ogg',
+      'assets/brand.png',
+      'assets/fonts/game.ttf',
+      'assets/scene.webp'
+    ]);
+  } finally {
+    fs.rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test('missing selected runtime asset fails before replacing an existing platform output', () => {
+  const root = fixture();
+  const output = path.join(root, 'dist', 'yandex');
+  fs.mkdirSync(output, { recursive: true });
+  fs.writeFileSync(path.join(output, 'sentinel.txt'), 'preserve');
+  fs.unlinkSync(path.join(root, 'assets', 'scene.webp'));
+  try {
+    assert.throws(() => buildPlatform(root, 'yandex', output), /Missing runtime asset: assets\/scene\.webp/);
+    assert.equal(fs.readFileSync(path.join(output, 'sentinel.txt'), 'utf8'), 'preserve');
+  } finally {
+    fs.rmSync(root, { recursive: true, force: true });
+  }
+});
+
 test('real VK build resolves hosted relative assets and has no production mock/test switch', () => {
   const root = process.cwd();
   const vkBuilds = path.join(root, 'dist', 'vk');
@@ -128,6 +182,18 @@ test('real VK build resolves hosted relative assets and has no production mock/t
     const yandexSource = fs.readFileSync(path.join(yandexOutput, 'index.html'), 'utf8') + fs.readFileSync(path.join(yandexOutput, 'src', 'entry.js'), 'utf8');
     assert.equal(yandexSource.includes('vk-entry.js'), false);
     assert.equal(fs.existsSync(path.join(yandexOutput, 'vendor', 'vk-bridge.js')), false);
+    for (const buildOutput of [output, yandexOutput]) {
+      const pngs = [];
+      const visitAssets = directory => {
+        for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+          const file = path.join(directory, entry.name);
+          if (entry.isDirectory()) visitAssets(file);
+          else if (entry.isFile() && entry.name.toLowerCase().endsWith('.png')) pngs.push(path.relative(buildOutput, file).replaceAll('\\', '/'));
+        }
+      };
+      visitAssets(path.join(buildOutput, 'assets'));
+      assert.deepEqual(pngs.sort(), ['assets/branding/kiss-at-the-edge-cover.png', 'assets/branding/kiss-at-the-edge-icon.png']);
+    }
   } finally {
     fs.rmSync(output, { recursive: true, force: true });
     fs.rmSync(yandexOutput, { recursive: true, force: true });
