@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "provider": "yandex-object-storage",
+  "environment": "preview",
+  "outputDir": "dist/vk",
+  "entry": "index.html",
+  "errorPage": "index.html",
+  "bucketEnv": "YC_VK_PREVIEW_BUCKET",
+  "folderIdEnv": "YC_VK_PREVIEW_FOLDER_ID",
+  "profileEnv": "YC_PROFILE",
+  "objectEndpoint": "https://<bucket>.storage.yandexcloud.net/index.html",
+  "websiteEndpoint": "https://<bucket>.website.yandexcloud.net/",
+  "requireBucketWithoutDots": true,
+  "requireHttps": true,
+  "requirePublicReadObjects": true,
+  "forbidPublicListByDefault": true,
+  "forbidPublicWrite": true,
+  "productionDeploy": false
+}
