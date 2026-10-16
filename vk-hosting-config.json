@@ -1,0 +1,13 @@
+{
+  "static_path": "dist/vk",
+  "app_id": 54782569,
+  "endpoints": {
+    "web": "index.html",
+    "mobile": "index.html",
+    "mvk": "index.html"
+  },
+  "noprompt": true,
+  "update_prod": false,
+  "update_dev": true,
+  "debug": false
+}

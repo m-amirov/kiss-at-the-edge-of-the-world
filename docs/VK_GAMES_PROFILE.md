@@ -83,3 +83,17 @@ The machine gate does not replace real moderation or revenue verification. Befor
 - Preserve separate platform-specific build and source SHA evidence.
 
 No game release ZIP, moderation submission, or false release PASS is produced by enabling the profile.
+
+## Official VK Mini Apps Hosting: guarded dev deploy
+
+The official `@vkontakte/vk-miniapps-deploy` package is used only as a manually invoked deploy client. Versions below `1.0.0` are unsupported; this project pins the current inspected `1.0.3` in `tools/platform/vk-deploy-dev.mjs` without adding an access token to Git.
+
+The tracked `vk-hosting-config.json` uses the real app ID from the authorized VK Developer Console, `54782569`, and maps `dist/vk/index.html` to `web`, `mobile` and `mvk`. It has `update_prod: false` and `update_dev: true`.
+
+1. Build the exact VK bundle: `npm run build:vk`.
+2. Run the explicit guarded command: `npm run vk:deploy:dev -- --confirm-dev`.
+3. The launcher forces `MINI_APPS_ENVIRONMENT=dev`, enables URL reporting, refuses to run without `--confirm-dev`, and refuses a config that can update production URLs.
+4. Authentication is obtained by the official CLI through its local config store/OAuth flow or an explicitly supplied `MINI_APPS_ACCESS_TOKEN`; tokens must never be written to the repository or command history.
+5. Preserve the three returned HTTPS dev URLs and bind them to the exact source HEAD and VK bundle digest in runtime evidence. A successful upload is not real-client acceptance.
+
+The dev launcher is intentionally not a CI job, `predeploy` hook or production script. If the account is not an owner/admin of the app, the deploy remains blocked at the provider authorization step.

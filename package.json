@@ -1,4 +1,5 @@
 {
+  "homepage": "./",
   "scripts": {
     "test:narrative": "node tests/narrative/season-state.test.mjs && node tests/narrative/save-state.test.mjs && node tests/narrative/s18-preview.test.mjs && node tests/narrative/literary-reader.test.mjs && node tests/narrative/literary-ui.test.mjs && node tests/narrative/literary-stage.test.mjs && node tests/narrative/literary-interactivity.test.mjs && node tests/narrative/release-preflight.test.mjs && node tests/narrative/literary-pacing.test.mjs && node tests/narrative/literary-visual.test.mjs && node tests/narrative/literary-qa-isolation.test.mjs",
     "test:yandex-sdk": "node --test tests/yandex/sdk-runtime.test.mjs",
@@ -35,7 +36,8 @@
     "vk:validate": "node tools/vk/vk-games-check.mjs",
     "build:vk": "node tools/platform/build.mjs --platform vk",
     "build:yandex": "node tools/platform/build.mjs --platform yandex",
-    "test:vk": "node --test tests/platform/vk-games.test.mjs tests/platform/lifecycle.test.mjs tests/platform/platform-build.test.mjs"
+    "test:vk": "node --test tests/platform/vk-games.test.mjs tests/platform/lifecycle.test.mjs tests/platform/platform-build.test.mjs tests/platform/vk-hosting-deploy.test.mjs",
+    "vk:deploy:dev": "node tools/platform/vk-deploy-dev.mjs"
   },
   "type": "module",
   "dependencies": {
