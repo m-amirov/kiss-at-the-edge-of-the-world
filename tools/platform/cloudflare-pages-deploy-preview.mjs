@@ -7,7 +7,7 @@ import { auditLocalBundle, getGitHead } from './vk-hosting-audit.mjs';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const CONFIG_FILE = path.join(ROOT, 'config/platform/vk-external-hosting.json');
 
-export const DEPLOY_PACKAGE = '@cloudflare/wrangler@4.151.0';
+export const DEPLOY_PACKAGE = 'wrangler@4.151.0';
 
 export function assertPreviewDeployConfig(config) {
   if (config?.schemaVersion !== 1 || config.provider !== 'cloudflare-pages' || config.environment !== 'preview') {

@@ -66,7 +66,7 @@ test('remote audit checks every manifest resource MIME and rejects iframe blocke
 
 test('Cloudflare deployment contract is preview-only and carries exact HEAD', () => {
   const config = JSON.parse(fs.readFileSync(path.join(root, 'config/platform/vk-external-hosting.json'), 'utf8'));
-  assert.equal(DEPLOY_PACKAGE, '@cloudflare/wrangler@4.151.0');
+  assert.equal(DEPLOY_PACKAGE, 'wrangler@4.151.0');
   assert.doesNotThrow(() => assertPreviewDeployConfig(config));
   assert.throws(() => assertPreviewDeployConfig({ ...config, productionDeploy: true }), /production/);
   assert.throws(() => assertPreviewDeployConfig({ ...config, branch: 'main' }), /production branch/);
