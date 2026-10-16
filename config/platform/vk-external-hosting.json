@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "provider": "cloudflare-pages",
+  "environment": "preview",
+  "outputDir": "dist/vk",
+  "entry": "index.html",
+  "branch": "vk-games-hardening-20261016",
+  "projectNameEnv": "CF_PAGES_PROJECT_NAME",
+  "accountIdEnv": "CLOUDFLARE_ACCOUNT_ID",
+  "apiTokenEnv": "CLOUDFLARE_API_TOKEN",
+  "wranglerVersion": "4.151.0",
+  "productionDeploy": false,
+  "requireHttps": true
+}
