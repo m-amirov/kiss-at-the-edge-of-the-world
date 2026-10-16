@@ -6,7 +6,6 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const PLATFORM_NAMES = new Set(['yandex', 'vk']);
-const CRITICAL_SOURCE_DIRS = new Set(['.git', 'src', 'assets', 'public', 'node_modules', 'config', 'tests', 'tools']);
 
 function isWithin(parent, candidate) {
   const relative = path.relative(parent, candidate);
@@ -41,8 +40,9 @@ function assertNoSymlinkComponents(candidate) {
   }
 }
 
-export function assertSafeOutputPath(root, outputDir) {
-  if (typeof outputDir !== 'string' || !outputDir || outputDir.includes('\0')) {
+export function assertSafeOutputPath(root, outputDir, platform) {
+  if (!PLATFORM_NAMES.has(platform)) throw new Error('Unsafe output path: unknown platform');
+  if (typeof outputDir !== 'string' || !outputDir || outputDir.includes('\\0')) {
     throw new Error('Unsafe output path');
   }
   if (hasTraversal(outputDir)) throw new Error('Unsafe output path: traversal');
@@ -52,15 +52,12 @@ export function assertSafeOutputPath(root, outputDir) {
   assertNoSymlinkComponents(requested);
   const canonical = canonicalPath(requested);
 
-  if (isWithin(sourceRoot, canonical)) {
-    const relative = path.relative(sourceRoot, canonical);
-    const first = relative.split(path.sep)[0];
-    if (!first || !['dist'].includes(first) || CRITICAL_SOURCE_DIRS.has(first)) {
-      throw new Error('Unsafe output path: critical source directory');
-    }
-  }
-  if (canonical === sourceRoot || isWithin(canonical, sourceRoot)) {
-    throw new Error('Unsafe output path: project root or ancestor');
+  // Only the dedicated output tree for the selected platform may be replaced.
+  // Never allow an external directory, the shared dist/ root or another
+  // platform's output, even when --out is supplied explicitly.
+  const allowedRoot = path.join(sourceRoot, 'dist', platform);
+  if (!isWithin(allowedRoot, canonical)) {
+    throw new Error('Unsafe output path: outside platform build directory');
   }
   return { requested, canonical, sourceRoot };
 }
@@ -95,7 +92,7 @@ export function buildPlatform(root = ROOT, platform, outputDir = path.join(root,
   if (!PLATFORM_NAMES.has(platform)) throw new Error(`Unsupported platform: ${platform}`);
   const sourceRoot = path.resolve(root);
   const output = path.resolve(outputDir);
-  assertSafeOutputPath(sourceRoot, outputDir);
+  assertSafeOutputPath(sourceRoot, outputDir, platform);
   fs.rmSync(output, { recursive: true, force: true });
   fs.mkdirSync(output, { recursive: true });
 
