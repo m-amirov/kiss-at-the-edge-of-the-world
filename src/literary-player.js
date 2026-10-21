@@ -577,7 +577,7 @@ window.__LITERARY_QA__={
   getPlatformMode:()=>platform?.mode??'booting',
   getPersistenceKeys:()=>({local:literarySaveKey,cloud:literaryCloudKey}),
   getScreen:()=>({menuOpen,sceneId:reader.sceneId,position:reader.position}),
-  getVisualCache:()=>({ ...visualLayers.getState(), cachedImages:imagePreloader.getSize() }),
+  getVisualCache:()=>({ ...visualLayers.getState(), cachedImages:imagePreloader.getSize(), pendingImages:imagePreloader.getPendingSize?.()??0 }),
   getViewport:()=>({
     innerWidth:window.innerWidth,
     innerHeight:window.innerHeight,

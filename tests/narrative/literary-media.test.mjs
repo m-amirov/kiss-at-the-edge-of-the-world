@@ -22,6 +22,28 @@ test('image preload waits for decode, deduplicates repeated sources, bounds cach
  const p=c.preload('a.webp');assert.equal(c.preload('a.webp'),p);assert.equal(await p,true);
  assert.equal(count,1);assert.equal(await c.preload('b.webp'),true);assert.equal(await c.preload('c.webp'),true);assert.equal(c.getSize(),2);
 });
+test('pending preload remains deduplicated when the settled cache is full',()=>{
+ let count=0;const images=[];
+ class ImageStub{set src(v){this.url=v;count++;images.push(this)}decode(){return Promise.resolve()}}
+ const c=createImagePreloader({ImageClass:ImageStub,capacity:1});
+ const first=c.preload('a.webp');
+ c.preload('b.webp');
+ assert.equal(c.preload('a.webp'),first);
+ assert.equal(count,2);
+});
+test('decode failures resolve safely and do not poison a later retry',async()=>{
+ let count=0;
+ class ImageStub{
+   set src(_url){count++;Promise.resolve().then(()=>this.onload())}
+   decode(){return Promise.reject(new Error('decode failed'))}
+ }
+ const c=createImagePreloader({ImageClass:ImageStub,capacity:1});
+ assert.equal(await c.preload('bad.webp'),false);
+ assert.equal(await c.preload('bad.webp'),false);
+ assert.equal(count,2);
+ assert.equal(c.getSize(),0);
+ assert.equal(c.getPendingSize(),0);
+});
 test('repeat lines reuse same picture and do not restart sprite animation',()=>{
  const container=root(),c=createVisualLayerController({root:container,preload:()=>Promise.resolve(true)});
  assert.equal(c.present({key:'A',build:()=>node('A')}),'mounted');
@@ -59,4 +81,30 @@ test('failed preloads preserve the current visual and report an error',async()=>
  c.present({key:'bad',assets:['bad.webp'],build:()=>node('bad')});await flush();
  assert.deepEqual(container.children.map(n=>n.id),['A']);
  assert.equal(container.dataset.visualError,'preload-failed');assert.equal(c.getState().failed,1);
+});
+test('stale animation frames cannot make a superseded visual visible',async()=>{
+ const container=root(),frames=[],timers=[];
+ const c=createVisualLayerController({
+   root:container,
+   preload:()=>Promise.resolve(true),
+   frame:fn=>{frames.push(fn);return frames.length-1},
+   schedule:fn=>{timers.push(fn);return timers.length-1}
+ });
+ c.present({key:'A',build:()=>node('A')});
+ c.present({key:'B',assets:['B.webp'],build:()=>node('B')});await flush();
+ const oldIncoming=container.children.find(item=>item.id==='B');
+ c.present({key:'C',assets:['C.webp'],build:()=>node('C')});await flush();
+ frames[0]();
+ assert.equal(oldIncoming.classList.set.has('scene-visual-visible'),false);
+ assert.equal(container.children.at(-1).id,'C');
+});
+test('clear cancels a transition and removes temporary visual nodes',async()=>{
+ const container=root(),c=createVisualLayerController({root:container,preload:()=>Promise.resolve(true),frame:fn=>fn(),schedule:fn=>fn()});
+ c.present({key:'A',build:()=>node('A')});
+ c.present({key:'B',assets:['B.webp'],build:()=>node('B')});await flush();
+ c.clear();
+ assert.deepEqual(container.children,[]);
+ assert.equal(c.getState().activeKey,null);
+ assert.equal(c.getState().requestedKey,null);
+ assert.equal(c.getState().transitions,1);
 });
