@@ -11,6 +11,7 @@ import { createDialogueHistory } from './literary-history.js';
 import { createAudioDirector } from './audio-director.js';
 import { musicCues, musicCueForScene } from './music-cues.js';
 import { createPlatformLifecycleController } from './platform/lifecycle.js';
+import { createImagePreloader, createVisualLayerController } from './literary-media.js';
 
 export async function startLiteraryPlayer({ initPlatform, audioBaseUrl } = {}) {
 if(typeof initPlatform!=='function')throw new TypeError('initPlatform is required');
@@ -168,6 +169,8 @@ let locale='ru';
 let t=createTranslator(locale);
 let cloudQueue=null;
 const audioDirector=createAudioDirector({audioBaseUrl});
+const imagePreloader=createImagePreloader();
+const visualLayers=createVisualLayerController({root:app,preload:imagePreloader.preload});
 const audioCueById=new Map(musicCues.map(cue=>[cue.cueId,{...cue,file:`${cue.cueId}.ogg`} ]));
 let lifecycle=null;
 let settings=(()=>{try{return{scale:1,contrast:false,motion:false,...JSON.parse(localStorage.getItem(textSettingsKey)||'{}')}}catch{return{scale:1,contrast:false,motion:false}}})();
@@ -362,6 +365,7 @@ function settingsPanel(section){
   draw();section.append(size,contrast,motion,audioMute,audioVolume);
 }
 function renderMenu(){
+  visualLayers.clear();
   platform?.setGameplayActive(false);
   audioDirector.pause();
   menuOpen=true;app.className='literary-home';app.dataset.presentation=modal?`menu-${modal.toLowerCase()}`:'menu-home';app.style.setProperty('--cover',`url('${cover}')`);app.replaceChildren();
@@ -412,17 +416,69 @@ function renderReader(){
   const flow=compileInteractivePlayback(scene,reader.choices,locale);reader.position=Math.min(reader.position,flow.at(-1)?.type==='choice'?Math.max(0,flow.length-1):flow.length);
   const isEnding=['S44','S45','S46','S47'].includes(scene.id);
   const mode=artMode(scene,flow[reader.position],reader.choices,isEnding);
-  app.className='literary-reader';app.dataset.presentation=mode;app.replaceChildren();
+  app.className='literary-reader';app.dataset.presentation=mode;
+  // Replace only the text/controls. Never detach an unchanged visual frame:
+  // doing so restarts sprite entrance animations and flashes the background.
+  for(const child of [...app.children])if(!child.classList.contains('literary-picture'))child.remove();
   const current=flow[reader.position];
   const visualEntry=visualEntryForPosition(flow,reader.position);
   const direction=visualAt(scene.id,visualEntry,reader.choices,stageForScene(scene.id,reader.choices).cast);
   const art=direction.art;
-  const picture=el('','literary-picture');picture.setAttribute('aria-hidden','true');picture.dataset.presentation=mode;picture.dataset.mode=art?.presentation??(art?.type==='cg'?'cinematic':'environment');
-  picture.dataset.visualBeat=direction.beatId;picture.dataset.location=direction.location;picture.dataset.time=direction.time;
-  if(art){const file=assetFileForViewport(art,locale);const img=el('','','img');img.src=`./assets/${art.type==='cg'?'cg':'backgrounds'}/${file}`;img.alt='';img.decoding='async';img.dataset.desktopAsset=art.file;img.dataset.asset=file;img.addEventListener('error',()=>{picture.dataset.assetError=file},{once:true});picture.append(img);picture.style.setProperty('--focus',focalPointByAsset[file]??focalPointByAsset[art.file]??'50% 50%');if(art.type==='cg'){picture.classList.add('is-cg');picture.style.setProperty('--cg-url',`url("${img.src}")`)}}
-  else picture.classList.add('no-art');
-  if(art?.presentation!=='cinematic') picture.append(renderStage({...direction,mode:direction.cast.length>2?'group':direction.cast.length===2?'pair':'solo',mood:stageForScene(scene.id,reader.choices).mood}));
-  picture.append(el('','literary-vignette'));app.append(picture);bindStageNavigation(picture);
+  const stageMode=direction.cast.length>2?'group':direction.cast.length===2?'pair':'solo';
+  const stageMood=stageForScene(scene.id,reader.choices).mood;
+  const file=art?assetFileForViewport(art,locale):null;
+  const assetUrl=art?`./assets/${art.type==='cg'?'cg':'backgrounds'}/${file}`:null;
+  const showSprites=art?.presentation!=='cinematic';
+  const visualKey=JSON.stringify([assetUrl,art?.presentation??null,showSprites?direction.cast:[],showSprites?stageMode:null,showSprites?stageMood:null,art?.type,mode]);
+  const assets=[...(assetUrl?[assetUrl]:[]),...(showSprites?direction.cast.map(person=>`./assets/characters/${stageAsset[person]}`):[])];
+  function annotatePicture(picture){
+    picture.dataset.visualBeat=direction.beatId;
+    picture.dataset.location=direction.location;
+    picture.dataset.time=direction.time;
+  }
+  function buildPicture(){
+    const picture=el('','literary-picture');picture.setAttribute('aria-hidden','true');
+    picture.dataset.presentation=mode;
+    picture.dataset.mode=art?.presentation??(art?.type==='cg'?'cinematic':'environment');
+    annotatePicture(picture);
+    if(art){
+      const img=el('','','img');
+      img.src=assetUrl;img.alt='';img.decoding='async';img.dataset.desktopAsset=art.file;img.dataset.asset=file;
+      img.addEventListener('error',()=>{picture.dataset.assetError=file},{once:true});
+      picture.append(img);
+      picture.style.setProperty('--focus',focalPointByAsset[file]??focalPointByAsset[art.file]??'50% 50%');
+      if(art.type==='cg'){picture.classList.add('is-cg');picture.style.setProperty('--cg-url',`url("${img.src}")`)}
+    } else picture.classList.add('no-art');
+    if(showSprites)picture.append(renderStage({...direction,mode:stageMode,mood:stageMood}));
+    picture.append(el('','literary-vignette'));
+    bindStageNavigation(picture);
+    return picture;
+  }
+  visualLayers.present({key:visualKey,assets,build:buildPicture,onReuse:annotatePicture});
+  // Preheat the next distinct visual beat, instead of fetching it during a tap.
+  // Limit to a single upcoming image; the LRU bounds memory on mobile.
+  let prefetchUrl=null;
+  for(let position=reader.position+1;position<flow.length;position++){
+    const future=visualAt(scene.id,visualEntryForPosition(flow,position),reader.choices,stageForScene(scene.id,reader.choices).cast).art;
+    if(!future)continue;
+    const nextFile=assetFileForViewport(future,locale);
+    const nextUrl=`./assets/${future.type==='cg'?'cg':'backgrounds'}/${nextFile}`;
+    if(nextUrl!==assetUrl){prefetchUrl=nextUrl;break}
+  }
+  if(!prefetchUrl){
+    const nextId=nextLiteraryScene(scene.id,reader.choices);
+    const nextScene=byId.get(nextId);
+    if(nextScene){
+      const nextFlow=compileInteractivePlayback(nextScene,reader.choices,locale);
+      const nextDirection=visualAt(nextId,visualEntryForPosition(nextFlow,0),reader.choices,stageForScene(nextId,reader.choices).cast);
+      if(nextDirection.art){
+        const nextFile=assetFileForViewport(nextDirection.art,locale);
+        const nextUrl=`./assets/${nextDirection.art.type==='cg'?'cg':'backgrounds'}/${nextFile}`;
+        if(nextUrl!==assetUrl)prefetchUrl=nextUrl;
+      }
+    }
+  }
+  if(prefetchUrl)imagePreloader.preload(prefetchUrl);
   const header=el('','reader-header');
   const back=button(locale==='ru'?'Назад':'Back',rollbackNarrative,'small-button dialogue-back');back.disabled=!dialogueHistory.canRollback();
   header.append(button('☰ '+t('menu'),goHome,'small-button'),back,el(t('episode')+` ${scene.episode} / 10`,'chapter-index'),el(t('readerHeaderTitle'),'draft-indicator'));
@@ -520,6 +576,7 @@ window.__LITERARY_QA__={
   getPlatformMode:()=>platform?.mode??'booting',
   getPersistenceKeys:()=>({local:literarySaveKey,cloud:literaryCloudKey}),
   getScreen:()=>({menuOpen,sceneId:reader.sceneId,position:reader.position}),
+  getVisualCache:()=>({ ...visualLayers.getState(), cachedImages:imagePreloader.getSize() }),
   getViewport:()=>({
     innerWidth:window.innerWidth,
     innerHeight:window.innerHeight,

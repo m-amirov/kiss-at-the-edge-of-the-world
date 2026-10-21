@@ -606,3 +606,15 @@ button.primary:hover{background:linear-gradient(135deg,#d19b76,#a36d51);filter:n
     max-block-size:none;
   }
 }
+
+/* Preserve a decoded frame while an authored visual beat changes. Dialogue
+   updates reuse the existing image DOM and never restart stage-in. */
+.literary-reader .literary-picture.scene-visual-next{
+  opacity:0;
+  transition:opacity 180ms ease;
+  will-change:opacity;
+}
+.literary-reader .literary-picture.scene-visual-next.scene-visual-visible{opacity:1}
+@media(prefers-reduced-motion:reduce){
+  .literary-reader .literary-picture.scene-visual-next{transition:none}
+}

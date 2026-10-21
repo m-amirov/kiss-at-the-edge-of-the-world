@@ -171,3 +171,12 @@ test('legacy-only Myvatn background is not falsely reported as active literary r
   assert.equal(asset?.status, 'available-unassigned');
   assert.match(asset?.runtime ?? '', /Legacy src\/season-data\.js only/);
 });
+
+test('visual rendering reuses picture nodes between dialogue taps and preloads next art', () => {
+  const functionBody = player.slice(player.indexOf('function renderReader(){'), player.indexOf("window.addEventListener('keydown'", player.indexOf('function renderReader(){')));
+  assert.doesNotMatch(functionBody, /app\\.replaceChildren\\(\\)/, 'renderReader must not detach the visible picture on each tap');
+  assert.match(functionBody, /visualLayers\\.present\\(/);
+  assert.match(functionBody, /imagePreloader\\.preload\\(prefetchUrl\\)/);
+  assert.match(player, /getVisualCache:\\(\\)=>/);
+  assert.match(css, /\\.scene-visual-next\\.scene-visual-visible\\{opacity:1\\}/);
+});
