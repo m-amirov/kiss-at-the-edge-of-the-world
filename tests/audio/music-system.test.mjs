@@ -147,3 +147,25 @@ test('restored Yandex audio director guards repeated unlock and preserves positi
   assert.equal(instances[0].currentTime,16.25);
   assert.equal(instances[0].plays,2);
 });
+
+
+test('fast gameplay-to-menu cue replacements cancel abandoned fades', async () => {
+  const {createAudioDirector}=await import('../../src/audio-director.js');
+  const instances=[],frames=[];
+  class FakeAudio {
+    constructor(){this.volume=0;this.currentTime=0;this.paused=true;this.dataset={};this.plays=0;this.pauses=0;instances.push(this)}
+    setAttribute(){}
+    play(){this.plays++;this.paused=false;return Promise.resolve()}
+    pause(){this.pauses++;this.paused=true}
+  }
+  const director=createAudioDirector({AudioClass:FakeAudio,storage:{getItem:()=>null,setItem:()=>{}},requestFrame:fn=>{frames.push(fn);return frames.length}});
+  const cue=id=>({cueId:id,file:id+'.ogg',loopable:true});
+  director.setCue(cue('road'));await director.unlock();
+  director.setCue(cue('cafe'));director.setCue(cue('main-theme'));
+  for(const frame of frames.splice(0))frame(performance.now()+1000);
+  await Promise.resolve();await Promise.resolve();
+  assert.equal(instances.length,1);
+  assert.equal(instances[0].src,'./assets/audio/music/main-theme.ogg');
+  assert.equal(director.getState().cueId,'main-theme');
+  assert.equal(director.getState().activeInstances,1);
+});
