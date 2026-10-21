@@ -7,8 +7,11 @@ const root = fileURLToPath(new URL('../../', import.meta.url));
 const cssPath = fileURLToPath(new URL('../../src/literary.css', import.meta.url));
 const css = fs.readFileSync(cssPath, 'utf8');
 const player = fs.readFileSync(fileURLToPath(new URL('../../src/literary-player.js', import.meta.url)), 'utf8');
+const vkEntry = fs.readFileSync(fileURLToPath(new URL('../../src/vk-entry.js', import.meta.url)), 'utf8');
+const visualDirections = fs.readFileSync(fileURLToPath(new URL('../../src/literary-visual-directions.js', import.meta.url)), 'utf8');
 const localization = fs.readFileSync(fileURLToPath(new URL('../../src/localization.js', import.meta.url)), 'utf8');
 const assetManifest = JSON.parse(fs.readFileSync(`${root}/assets/asset-manifest.json`, 'utf8'));
+const allManifestEntries = [...(assetManifest.assets ?? []), ...(assetManifest.previewAssets ?? [])];
 
 test('production literary UI bundles the approved Cinematic Romance fonts locally', () => {
   for (const file of ['assets/fonts/CormorantGaramond[wght].ttf', 'assets/fonts/Manrope[wght].ttf']) {
@@ -75,6 +78,40 @@ test('VK interstitials are requested only after an episode boundary', () => {
   assert.match(player, /crossedEpisode=byId\.get\(next\)\?\.episode!==scene\.episode/);
   assert.match(player, /platform\?\.mode==='vk-games'/);
   assert.match(player, /showInterstitial\(\{atBoundary:true\}\)/);
+});
+
+test('VK sync keeps accepted new cues and excludes pending rework art from runtime mapping', () => {
+  for (const id of [
+    's01-nick-arrives-placard-ru', 's01-nick-arrives-placard-en', 's01-airport-outside-batch2',
+    's01-damir-arrives-batch2', 's02-van-group-batch2', 's02-roadside-cafe-group',
+    's03-editor-call', 's18-hofn-lighthouse', 's18-hofn-day10-room',
+    's26-power-outage-notebook', 's26-route-choice-courtyard-final', 's42-harbour-cafe',
+    's44-eric-morning-harbour', 's46-airport-bus', 's48-last-breakfast-batch2',
+    's60-souvenir-kitchen-batch2', 's65-locked-kitchen-keys', 's65-locked-kitchen-hallway'
+  ]) {
+    const asset = allManifestEntries.find(entry => entry.id === id);
+    assert.equal(asset?.status, 'integrated', `${id} must be accepted`);
+    assert.match(asset?.runtimePath ?? '', /\.webp$/, `${id} desktop runtime must be WebP`);
+    assert.ok(fs.existsSync(`${root}/${asset.runtimePath}`), `${id} desktop runtime must exist`);
+    assert.ok(fs.existsSync(`${root}/${asset.runtimePortraitAsset}`), `${id} portrait runtime must exist`);
+  }
+  for (const id of [
+    's04-thingvellir-trail-rework', 's05-hveragerdi-van-warning-rework',
+    's11-reynisfjara-information-board-rework', 's12-vik-cafe-damir-rework',
+    's14-skaftafell-pace-rework', 's19-hofn-pool-opening-rework', 's22-eastfjords-van-road-rework'
+  ]) {
+    const asset = allManifestEntries.find(entry => entry.id === id);
+    assert.equal(asset?.status, 'integrated-local-web-review-pending', `${id} must remain pending`);
+    assert.doesNotMatch(visualDirections, new RegExp(`art:'cg/${id}\\.webp'`));
+  }
+});
+
+test('VK desktop width override and viewport diagnostics are isolated from Yandex', () => {
+  assert.match(vkEntry, /document\.documentElement\.dataset\.platform = 'vk'/);
+  assert.match(player, /getViewport:\(\)=>/);
+  assert.match(css, /:root\[data-platform="vk"\]/);
+  assert.match(css, /inline-size:100vw/);
+  assert.doesNotMatch(css, /:root\[data-platform="yandex"\]/);
 });
 
 test('Cinematic A mobile polish keeps artwork visible without a nested menu scroller', () => {

@@ -20,6 +20,7 @@ function fixture() {
   fs.mkdirSync(path.join(root, 'public'), { recursive: true });
   fs.writeFileSync(path.join(root, 'assets', 'scene.png'), 'master');
   fs.writeFileSync(path.join(root, 'assets', 'scene.webp'), 'asset');
+  fs.writeFileSync(path.join(root, 'assets', 'pending.webp'), 'pending');
   fs.writeFileSync(path.join(root, 'assets', 'brand.png'), 'branding');
   fs.writeFileSync(path.join(root, 'assets', 'unused.png'), 'unused');
   fs.writeFileSync(path.join(root, 'assets', 'audio', 'music', 'main-theme.ogg'), 'music');
@@ -31,6 +32,7 @@ function fixture() {
       { id: 'brand', family: 'branding', path: 'assets/brand.png', status: 'integrated', runtimePath: 'assets/brand.png' },
       { id: 'music-main-theme', family: 'music', path: 'assets/audio/music/main-theme.ogg', status: 'integrated' },
       { id: 'font-game', family: 'font', path: 'assets/fonts/game.ttf', status: 'integrated' },
+      { id: 'pending', family: 'cg', path: 'assets/pending.png', status: 'integrated-local-web-review-pending', runtimePath: 'assets/pending.webp' },
       { id: 'unused', family: 'cg', path: 'assets/unused.png', status: 'unused-candidate' }
     ]
   }));
@@ -129,6 +131,7 @@ test('runtime asset selection keeps WebP and confirmed branding but excludes mas
     assert.equal(fs.existsSync(path.join(output, 'assets', 'audio', 'music', 'main-theme.ogg')), true);
     assert.equal(fs.existsSync(path.join(output, 'assets', 'fonts', 'game.ttf')), true);
     assert.equal(fs.existsSync(path.join(output, 'assets', 'scene.png')), false);
+    assert.equal(fs.existsSync(path.join(output, 'assets', 'pending.webp')), false);
     assert.equal(fs.existsSync(path.join(output, 'assets', 'unused.png')), false);
     const manifest = JSON.parse(fs.readFileSync(path.join(output, 'build-manifest.json'), 'utf8'));
     assert.deepEqual(manifest.assetSelection.files, [

@@ -3,6 +3,7 @@ import path from 'node:path';
 
 const TEXT_EXTENSIONS = new Set(['.css', '.html', '.js', '.json', '.mjs']);
 const RUNTIME_MANIFEST_FAMILIES = new Set(['font', 'music']);
+const RUNTIME_ACCEPTED_STATUSES = new Set(['integrated', 'preview-integrated']);
 const EXTERNAL_RUNTIME_PATHS = new Set(['/sdk.js']);
 const HTML_DEPENDENCY_RE = /(?:src|href)\s*=\s*["']([^"']+)["']/gi;
 const JS_IMPORT_RE = /(?:import\s*\(\s*|(?:import|export)\s+(?:[^'";]*?\sfrom\s*)?)["']([^"']+)["']/g;
@@ -133,6 +134,7 @@ export function collectRuntimeAssets(root, platform) {
   for (const reference of directAssetReferences) add(reference, 'runtime-source-reference');
 
   for (const entry of entries) {
+    if (entry.status && !RUNTIME_ACCEPTED_STATUSES.has(entry.status)) continue;
     const runtimePaths = [entry.runtimePath, entry.runtimePortraitAsset].filter(Boolean);
     for (const runtimePath of runtimePaths) {
       const normalized = posixRelative(runtimePath);

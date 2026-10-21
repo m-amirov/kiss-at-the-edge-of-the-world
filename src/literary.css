@@ -580,3 +580,29 @@ button.primary:hover{background:linear-gradient(135deg,#d19b76,#a36d51);filter:n
   button{transition:none}
   .advance-cue{animation:none}
 }
+
+/* VK owns a browser iframe whose available desktop width is not guaranteed to
+   match a portrait-oriented host card. Keep this override platform-scoped:
+   VK can consume the document viewport, while Yandex keeps its existing
+   presentation contract. The actual iframe width remains a host setting and
+   is exposed by __LITERARY_QA__.getViewport(). */
+@media (min-width:681px){
+  :root[data-platform="vk"],
+  :root[data-platform="vk"] body,
+  :root[data-platform="vk"] #literary-app{
+    inline-size:100vw;
+    max-inline-size:none;
+    min-inline-size:0;
+  }
+  :root[data-platform="vk"] body{overflow-x:hidden}
+  :root[data-platform="vk"] .literary-home,
+  :root[data-platform="vk"] .literary-reader{
+    inline-size:100%;
+    max-inline-size:none;
+    min-inline-size:0;
+  }
+  :root[data-platform="vk"] .literary-picture>img{
+    max-inline-size:none;
+    max-block-size:none;
+  }
+}

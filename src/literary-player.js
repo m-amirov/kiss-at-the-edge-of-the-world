@@ -29,11 +29,16 @@ const endingHeadings = {
 };
 // Presentation-only focal points. Values are percentages of the source image;
 // the authored visual event remains the source of truth for which asset shows.
-const focalPointByAsset = {
-  's02-roadside-cafe.webp': '50% 48%',
-  's13-skaftafell-travelers.webp': '50% 42%',
-  's18-hofn-dance-lights.webp': '50% 44%',
-  's26-eric-choice.webp': '50% 40%',
+  const focalPointByAsset = {
+    's02-roadside-cafe.webp': '50% 48%',
+    's13-skaftafell-travelers.webp': '50% 42%',
+    's18-hofn-dance-lights.webp': '50% 44%',
+    's18-hofn-lighthouse.webp': '50% 42%',
+    's18-hofn-lighthouse-portrait.webp': '50% 54%',
+    's18-hofn-harbour.webp': '90% 50%',
+    's26-eric-choice.webp': '50% 40%',
+    's26-route-choice-courtyard-final.webp': '50% 42%',
+    's26-route-choice-courtyard-final-portrait.webp': '50% 50%',
   's23-eric-harbor-plan.webp': '50% 42%',
   's24-nick-pier-consent.webp': '50% 42%',
   's25-damir-clarity-talk.webp': '50% 42%',
@@ -47,8 +52,10 @@ const focalPointByAsset = {
   's44-eric-epilogue-month-later.webp': '50% 48%',
   's45-nick-home-epilogue-month-later.webp': '50% 45%',
   's46-damir-epilogue-month-later.webp': '50% 44%',
-  's47-alice-home-epilogue-month-later.webp': '67% 44%'
-};
+    's47-alice-home-epilogue-month-later.webp': '67% 44%'
+    ,'s03-editor-call.webp':'50% 34%'
+    ,'s03-editor-call-portrait.webp':'50% 31%'
+  };
 const portraitAssetByDesktopAsset = {
   's06-hveragerdi-eric-alice.webp':'s06-hveragerdi-eric-alice-portrait.webp',
   's07-kitchen-pasta.webp':'s07-kitchen-pasta-portrait.webp',
@@ -107,10 +114,29 @@ const portraitAssetByDesktopAsset = {
   ,'s64-alice-snaefellsnes-trail.webp':'s64-alice-snaefellsnes-trail-portrait.webp'
   ,'s26-eastfjords-courtyard-group.webp':'s26-eastfjords-courtyard-group-portrait.webp'
   ,'s48-guesthouse-exit-group.webp':'s48-guesthouse-exit-group-portrait.webp'
+  ,'s18-hofn-harbour.webp':'s18-hofn-harbour-portrait.webp'
+  ,'s18-hofn-lighthouse.webp':'s18-hofn-lighthouse-portrait.webp'
+  ,'s26-power-outage-notebook.webp':'s26-power-outage-notebook-portrait.webp'
+  ,'s44-eric-morning-harbour.webp':'s44-eric-morning-harbour-portrait.webp'
+  ,'s46-airport-bus.webp':'s46-airport-bus-portrait.webp'
+  ,'s42-harbour-cafe.webp':'s42-harbour-cafe-portrait.webp'
+  ,'s01-airport-outside-batch2.webp':'s01-airport-outside-batch2-portrait.webp'
+  ,'s01-damir-arrives-batch2.webp':'s01-damir-arrives-batch2-portrait.webp'
+  ,'s48-last-breakfast-batch2.webp':'s48-last-breakfast-batch2-portrait.webp'
+  ,'s26-route-choice-courtyard-batch2.webp':'s26-route-choice-courtyard-batch2-portrait.webp'
+  ,'s26-route-choice-courtyard-final.webp':'s26-route-choice-courtyard-final-portrait.webp'
+  ,'s02-van-group-batch2.webp':'s02-van-group-batch2-portrait.webp'
+  ,'s02-roadside-cafe-group.webp':'s02-roadside-cafe-group-portrait.webp'
+  ,'s03-editor-call.webp':'s03-editor-call-portrait.webp'
+  ,'s60-souvenir-kitchen-batch2.webp':'s60-souvenir-kitchen-batch2-portrait.webp'
+  ,'s65-locked-kitchen-hallway.webp':'s65-locked-kitchen-hallway-portrait.webp'
+  ,'s65-locked-kitchen-keys.webp':'s65-locked-kitchen-keys-portrait.webp'
 };
-function assetFileForViewport(art){
+ function assetFileForViewport(art,selectedLocale=locale){
   const portrait=window.matchMedia?.('(max-width: 680px) and (orientation: portrait)').matches;
-  return portrait ? (portraitAssetByDesktopAsset[art.file]??art.file) : art.file;
+  const desktopFile=art.localeFiles?.[selectedLocale]??art.file;
+  if(!portrait)return desktopFile;
+  return art.localePortraitFiles?.[selectedLocale]??portraitAssetByDesktopAsset[desktopFile]??desktopFile;
 }
 const stageAsset = { alice:'alice-stage.webp', eric:'eric-stage.webp', nick:'nick-stage.webp', damir:'damir-stage.webp' };
 // This value is consumed by a url() inside src/literary.css; resolve from the
@@ -393,7 +419,7 @@ function renderReader(){
   const art=direction.art;
   const picture=el('','literary-picture');picture.setAttribute('aria-hidden','true');picture.dataset.presentation=mode;picture.dataset.mode=art?.presentation??(art?.type==='cg'?'cinematic':'environment');
   picture.dataset.visualBeat=direction.beatId;picture.dataset.location=direction.location;picture.dataset.time=direction.time;
-  if(art){const file=assetFileForViewport(art);const img=el('','','img');img.src=`./assets/${art.type==='cg'?'cg':'backgrounds'}/${file}`;img.alt='';img.decoding='async';img.dataset.desktopAsset=art.file;img.dataset.asset=file;picture.append(img);picture.style.setProperty('--focus',focalPointByAsset[file]??focalPointByAsset[art.file]??'50% 50%');if(art.type==='cg'){picture.classList.add('is-cg');picture.style.setProperty('--cg-url',`url("${img.src}")`)}}
+  if(art){const file=assetFileForViewport(art,locale);const img=el('','','img');img.src=`./assets/${art.type==='cg'?'cg':'backgrounds'}/${file}`;img.alt='';img.decoding='async';img.dataset.desktopAsset=art.file;img.dataset.asset=file;img.addEventListener('error',()=>{picture.dataset.assetError=file},{once:true});picture.append(img);picture.style.setProperty('--focus',focalPointByAsset[file]??focalPointByAsset[art.file]??'50% 50%');if(art.type==='cg'){picture.classList.add('is-cg');picture.style.setProperty('--cg-url',`url("${img.src}")`)}}
   else picture.classList.add('no-art');
   if(art?.presentation!=='cinematic') picture.append(renderStage({...direction,mode:direction.cast.length>2?'group':direction.cast.length===2?'pair':'solo',mood:stageForScene(scene.id,reader.choices).mood}));
   picture.append(el('','literary-vignette'));app.append(picture);bindStageNavigation(picture);
@@ -494,6 +520,16 @@ window.__LITERARY_QA__={
   getPlatformMode:()=>platform?.mode??'booting',
   getPersistenceKeys:()=>({local:literarySaveKey,cloud:literaryCloudKey}),
   getScreen:()=>({menuOpen,sceneId:reader.sceneId,position:reader.position}),
+  getViewport:()=>({
+    innerWidth:window.innerWidth,
+    innerHeight:window.innerHeight,
+    devicePixelRatio:window.devicePixelRatio,
+    orientation:window.matchMedia?.('(orientation: portrait)').matches?'portrait':'landscape',
+    desktopMedia:window.matchMedia?.('(min-width: 681px)').matches??false,
+    root:document.documentElement.getBoundingClientRect().toJSON(),
+    body:document.body.getBoundingClientRect().toJSON(),
+    app:app?.getBoundingClientRect?.().toJSON?.()??null
+  }),
   getLifecycle:()=>lifecycle.getState(),
   getRuntimeTrace:()=>{
     const scene=byId.get(reader.sceneId),flow=compileInteractivePlayback(scene,reader.choices,locale),entry=flow[reader.position]??flow.at(-1)??null;
