@@ -17,13 +17,19 @@ export function createAudioDirector({ AudioClass = globalThis.Audio, storage = g
   let unlocked = false;
   let suspended = false;
   let unlockPromise = null;
+  let retryPromise = null;
+  let desiredPlaying = false;
   let transitionToken = 0;
+  let createdInstances = 0;
+  let playCalls = 0;
+  let pauseCalls = 0;
 
   const persist = () => { try { storage?.setItem(settingsKey, JSON.stringify(settings)); } catch {} };
   const effectiveVolume = () => settings.muted ? 0 : settings.volume;
   const setAudioVolume = (value) => { if (currentAudio) currentAudio.volume = Math.min(1, Math.max(0, value)); };
   const createAudio = cue => {
     const audio = new AudioClass();
+    createdInstances += 1;
     audio.preload = 'auto';
     audio.setAttribute?.('aria-hidden', 'true');
     currentAudio = audio;
@@ -39,25 +45,60 @@ export function createAudioDirector({ AudioClass = globalThis.Audio, storage = g
   };
   const pauseAudio = () => {
     if (!currentAudio) return;
+    desiredPlaying = false;
     state.pauseRequested = true;
     state.playing = false;
-    if (state.playPromise || currentAudio.paused !== true) currentAudio.pause?.();
+    if (state.playPromise || currentAudio.paused !== true) {
+      pauseCalls += 1;
+      currentAudio.pause?.();
+    }
   };
-  const playAudio = () => {
-    if (!currentAudio) return Promise.resolve(false);
-    if (state.playPromise) return state.playPromise;
+  const startAudioPlay = () => {
+    if (!currentAudio || !desiredPlaying || suspended) return Promise.resolve(false);
     if (state.playing || currentAudio.paused === false) { state.playing = true; return Promise.resolve(true); }
-    state.pauseRequested = false;
     state.playing = true;
+    const audio = currentAudio;
     let result;
-    try { result = currentAudio.play(); } catch { state.playing = false; return Promise.resolve(false); }
+    try {
+      playCalls += 1;
+      result = audio.play();
+    } catch {
+      state.playing = false;
+      return Promise.resolve(false);
+    }
     const promise = Promise.resolve(result).then(() => {
-      if (state.pauseRequested) { currentAudio.pause?.(); state.playing = false; return false; }
+      if (!desiredPlaying || suspended) {
+        if (audio.paused !== true) {
+          pauseCalls += 1;
+          audio.pause?.();
+        }
+        state.playing = false;
+        return false;
+      }
       return true;
     }, () => { state.playing = false; return false; });
     state.playPromise = promise;
     promise.then(() => { if (state.playPromise === promise) state.playPromise = null; });
     return promise;
+  };
+  const playAudio = () => {
+    if (!currentAudio) return Promise.resolve(false);
+    desiredPlaying = true;
+    state.pauseRequested = false;
+    if (state.playPromise) {
+      if (!retryPromise) {
+        const pending = state.playPromise;
+        retryPromise = pending.then(() => {
+          retryPromise = null;
+          return startAudioPlay();
+        }, () => {
+          retryPromise = null;
+          return startAudioPlay();
+        });
+      }
+      return retryPromise;
+    }
+    return startAudioPlay();
   };
   const fadeTo = (target, token, done) => {
     if (!currentAudio || token !== transitionToken) return;
@@ -97,6 +138,7 @@ export function createAudioDirector({ AudioClass = globalThis.Audio, storage = g
       if (unlockPromise) return unlockPromise;
       suspended = false;
       unlocked = true;
+      desiredPlaying = true;
       if (!currentAudio) createAudio(currentCue);
       setAudioVolume(effectiveVolume());
       unlockPromise = playAudio().then(started => {
@@ -136,6 +178,23 @@ export function createAudioDirector({ AudioClass = globalThis.Audio, storage = g
     },
     getState() {
       return { cueId: currentCue?.cueId ?? null, unlocked, volume: settings.volume, muted: settings.muted, activeInstances: currentAudio ? 1 : 0 };
+    },
+    getDiagnostics() {
+      return {
+        cueId: currentCue?.cueId ?? null,
+        unlocked,
+        volume: settings.volume,
+        muted: settings.muted,
+        activeInstances: currentAudio ? 1 : 0,
+        createdInstances,
+        playCalls,
+        pauseCalls,
+        playPromisePending: Boolean(state.playPromise || retryPromise),
+        paused: currentAudio?.paused ?? true,
+        currentTime: Number.isFinite(currentAudio?.currentTime) ? currentAudio.currentTime : 0,
+        audioVolume: Number.isFinite(currentAudio?.volume) ? currentAudio.volume : 0,
+        source: currentAudio?.src ?? null
+      };
     }
   };
 }

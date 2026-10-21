@@ -50,7 +50,7 @@ test('cue transition policy is semantic and does not restart A -> A', async () =
   const a = { cueId:'a', file:'a.ogg', loopable:true }; const b = { cueId:'b', file:'b.ogg', loopable:true };
   director.setCue(a); assert.equal(instances.length, 0); await director.unlock(); assert.equal(instances.length, 1);
   director.setCue(a); assert.equal(instances.length, 1); director.setCue(a); assert.equal(instances.length, 1);
-  director.setCue(b); assert.equal(instances.length, 2); assert.equal(instances[0].pauseCount, 1); assert.equal(director.getState().activeInstances, 1);
+  director.setCue(b); assert.equal(instances.length, 1); assert.equal(instances[0].pauseCount, 1); assert.equal(director.getState().activeInstances, 1);
 });
 
 test('audio settings persist and apply mute/volume', async () => {
@@ -102,7 +102,7 @@ test('VK external audio uses configured HTTPS base without changing Yandex local
 
 test('menu tabs preserve the same music playback position', async () => {
   const runtime = fs.readFileSync(path.join(root, 'src/literary-player.js'), 'utf8');
-  const menu = runtime.match(/function renderMenu\(\)\{([\s\S]*?)\n\}\nfunction renderStage/)?.[1] ?? '';
+  const menu = runtime.match(/function renderMenu\(\)\s*\{([\s\S]*?)\n\s*\}\s*function renderStage/)?.[1] ?? '';
   assert.match(menu, /audioDirector\.setCue\(menuAudioCue\)/);
   assert.doesNotMatch(menu, /audioDirector\.pause\(\)/);
   assert.match(runtime, /const menuAudioCue=audioCueById\.get\('main-theme'\)/);
@@ -168,4 +168,91 @@ test('fast gameplay-to-menu cue replacements cancel abandoned fades', async () =
   assert.equal(instances[0].src,'./assets/audio/music/main-theme.ogg');
   assert.equal(director.getState().cueId,'main-theme');
   assert.equal(director.getState().activeInstances,1);
+});
+
+test('resume after pause during a pending play does not reuse a stale playPromise', async () => {
+  const {createAudioDirector}=await import('../../src/audio-director.js');
+  const pending=[];
+  let audio;
+  class FakeAudio {
+    constructor(){audio=this;this.volume=0;this.currentTime=0;this.paused=true;this.dataset={};this.plays=0;this.pauses=0;}
+    setAttribute(){}
+    play(){
+      this.plays++;
+      this.paused=false;
+      return new Promise(resolve=>pending.push(resolve));
+    }
+    pause(){this.pauses++;this.paused=true}
+  }
+  const director=createAudioDirector({AudioClass:FakeAudio,storage:{getItem:()=>null,setItem:()=>{}},requestFrame:null});
+  const main={cueId:'main-theme',file:'main-theme.ogg',loopable:true};
+  director.setCue(main);
+  const unlock=director.unlock();
+  director.pause();
+  const resume=director.resume();
+  pending.shift()();
+  await Promise.resolve();
+  await Promise.resolve();
+  assert.equal(pending.length,1);
+  pending.shift()();
+  await Promise.all([unlock,resume]);
+  assert.equal(director.getState().activeInstances,1);
+  assert.equal(director.getState().unlocked,true);
+  assert.equal(audio.plays,2);
+  assert.equal(audio.paused,false);
+});
+
+test('cue replacement during a pending play settles on the latest cue without overlap', async () => {
+  const {createAudioDirector}=await import('../../src/audio-director.js');
+  const instances=[],pending=[];
+  class FakeAudio {
+    constructor(){this.volume=0;this.currentTime=0;this.paused=true;this.dataset={};this.plays=0;this.pauses=0;instances.push(this)}
+    setAttribute(){}
+    play(){this.plays++;this.paused=false;return new Promise(resolve=>pending.push(resolve))}
+    pause(){this.pauses++;this.paused=true}
+  }
+  const director=createAudioDirector({AudioClass:FakeAudio,storage:{getItem:()=>null,setItem:()=>{}},requestFrame:null});
+  const road={cueId:'road',file:'road.ogg',loopable:true};
+  const menu={cueId:'main-theme',file:'main-theme.ogg',loopable:true};
+  director.setCue(road);
+  const unlock=director.unlock();
+  director.setCue(menu);
+  pending.shift()();
+  await Promise.resolve();
+  await Promise.resolve();
+  assert.equal(pending.length,1);
+  pending.shift()();
+  await unlock;
+  await Promise.resolve();
+  await Promise.resolve();
+  assert.equal(instances.length,1);
+  assert.equal(instances[0].src,'./assets/audio/music/main-theme.ogg');
+  assert.equal(instances[0].plays,2);
+  assert.equal(instances[0].paused,false);
+  assert.equal(director.getState().cueId,'main-theme');
+  assert.equal(director.getState().activeInstances,1);
+});
+
+test('audio diagnostics expose one instance, lifecycle calls, position and effective volume', async () => {
+  const {createAudioDirector}=await import('../../src/audio-director.js');
+  let audio;
+  class FakeAudio {
+    constructor(){audio=this;this.volume=0;this.currentTime=0;this.paused=true;this.dataset={};}
+    setAttribute(){}
+    play(){this.paused=false;return Promise.resolve()}
+    pause(){this.paused=true}
+  }
+  const director=createAudioDirector({AudioClass:FakeAudio,storage:{getItem:()=>null,setItem:()=>{}},requestFrame:null});
+  director.setCue({cueId:'main-theme',file:'main-theme.ogg',loopable:true});
+  await director.unlock();
+  audio.currentTime=12.75;
+  director.setVolume(.6);
+  director.setMuted(true);
+  const playing=director.getDiagnostics();
+  assert.deepEqual({createdInstances:playing.createdInstances,activeInstances:playing.activeInstances,playCalls:playing.playCalls,pauseCalls:playing.pauseCalls,paused:playing.paused,currentTime:playing.currentTime,muted:playing.muted,audioVolume:playing.audioVolume},{createdInstances:1,activeInstances:1,playCalls:1,pauseCalls:0,paused:false,currentTime:12.75,muted:true,audioVolume:0});
+  director.pause();
+  const paused=director.getDiagnostics();
+  assert.equal(paused.paused,true);
+  assert.equal(paused.currentTime,12.75);
+  assert.equal(paused.pauseCalls,1);
 });
