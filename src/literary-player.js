@@ -172,6 +172,7 @@ const audioDirector=createAudioDirector({audioBaseUrl});
 const imagePreloader=createImagePreloader();
 const visualLayers=createVisualLayerController({root:app,preload:imagePreloader.preload});
 const audioCueById=new Map(musicCues.map(cue=>[cue.cueId,{...cue,file:`${cue.cueId}.ogg`} ]));
+const menuAudioCue=audioCueById.get('main-theme');
 let lifecycle=null;
 let settings=(()=>{try{return{scale:1,contrast:false,motion:false,...JSON.parse(localStorage.getItem(textSettingsKey)||'{}')}}catch{return{scale:1,contrast:false,motion:false}}})();
 function gameplayShouldBeActive(){return !menuOpen && !lifecycle?.isPaused()}
@@ -181,7 +182,7 @@ lifecycle=createPlatformLifecycleController({
   setGameplayActive:active=>platform?.setGameplayActive(active),
   isGameplayActive:()=>!menuOpen,
   onPause:()=>{audioDirector.pause()},
-  onResume:()=>{if(!menuOpen)audioDirector.resume().catch(()=>{})}
+  onResume:()=>{audioDirector.resume().catch(()=>{})}
 });
 function loadRuntimeSeason(selectedLocale,qaLocaleOverride){
   if(selectedLocale==='ru')return literarySeason;
@@ -367,7 +368,10 @@ function settingsPanel(section){
 function renderMenu(){
   visualLayers.clear();
   platform?.setGameplayActive(false);
-  audioDirector.pause();
+  // Preserve the main theme across menu/settings/episodes navigation.
+  // Re-rendering menu UI must not pause or restart the audio stream.
+  audioDirector.setCue(menuAudioCue);
+  if(!lifecycle.isPaused())audioDirector.resume().catch(()=>{});
   menuOpen=true;app.className='literary-home';app.dataset.presentation=modal?`menu-${modal.toLowerCase()}`:'menu-home';app.style.setProperty('--cover',`url('${cover}')`);app.replaceChildren();
   const section=el('','literary-home-card');app.append(section);
   section.append(el(t('menuKicker'),'kicker'),el(t('gameTitle'),'home-title','h1'));

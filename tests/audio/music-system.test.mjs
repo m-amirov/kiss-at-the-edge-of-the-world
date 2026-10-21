@@ -98,3 +98,52 @@ test('VK external audio uses configured HTTPS base without changing Yandex local
   await yandex.unlock();
   assert.equal(sources.at(-1).src, './assets/audio/music/main-theme.ogg');
 });
+
+
+test('menu tabs preserve the same music playback position', async () => {
+  const runtime = fs.readFileSync(path.join(root, 'src/literary-player.js'), 'utf8');
+  const menu = runtime.match(/function renderMenu\(\)\{([\s\S]*?)\n\}\nfunction renderStage/)?.[1] ?? '';
+  assert.match(menu, /audioDirector\.setCue\(menuAudioCue\)/);
+  assert.doesNotMatch(menu, /audioDirector\.pause\(\)/);
+  assert.match(runtime, /const menuAudioCue=audioCueById\.get\('main-theme'\)/);
+  const {createAudioDirector}=await import('../../src/audio-director.js');
+  const instances=[];
+  class FakeAudio {
+    constructor(){this.volume=0;this.currentTime=0;this.dataset={};this.paused=true;this.plays=0;this.pauses=0;instances.push(this)}
+    setAttribute(){}
+    play(){this.plays++;this.paused=false;return Promise.resolve()}
+    pause(){this.pauses++;this.paused=true}
+  }
+  const director=createAudioDirector({AudioClass:FakeAudio,storage:{getItem:()=>null,setItem:()=>{}},requestFrame:null,audioBaseUrl:'https://s3.twcstorage.ru/kiss-vk-audio-2026/music/'});
+  const main={cueId:'main-theme',file:'main-theme.ogg',loopable:true};
+  director.setCue(main);await Promise.all([director.unlock(),director.unlock()]);
+  assert.equal(instances.length,1);
+  const playing=instances[0], count=playing.plays;
+  playing.currentTime=19.5;
+  director.setCue(main);await director.resume();director.setCue(main);await director.resume();
+  assert.equal(playing.plays,count,'menu switching must not call play() again');
+  assert.equal(playing.currentTime,19.5,'menu switching must retain currentTime');
+  assert.equal(playing.pauses,0,'menu switching must not pause');
+  assert.equal(playing.src,'https://s3.twcstorage.ru/kiss-vk-audio-2026/music/main-theme.ogg');
+});
+
+test('restored Yandex audio director guards repeated unlock and preserves position', async () => {
+  const {createAudioDirector}=await import('../../src/audio-director.js');
+  const instances=[];
+  class FakeAudio {
+    constructor(){this.volume=0;this.dataset={};this.currentTime=0;this.paused=true;this.plays=0;this.pauses=0;instances.push(this)}
+    setAttribute(){}
+    play(){this.plays++;this.paused=false;return Promise.resolve()}
+    pause(){this.pauses++;this.paused=true}
+  }
+  const director=createAudioDirector({AudioClass:FakeAudio,storage:{getItem:()=>null,setItem:()=>{}},requestFrame:null});
+  const main={cueId:'main-theme',file:'main-theme.ogg',loopable:true};
+  director.setCue(main);await Promise.all([director.unlock(),director.unlock(),director.unlock()]);
+  assert.equal(instances.length,1);
+  assert.equal(instances[0].plays,1);
+  assert.equal(instances[0].src,'./assets/audio/music/main-theme.ogg');
+  instances[0].currentTime=16.25;
+  director.pause();director.pause();await director.resume();await director.resume();
+  assert.equal(instances[0].currentTime,16.25);
+  assert.equal(instances[0].plays,2);
+});
