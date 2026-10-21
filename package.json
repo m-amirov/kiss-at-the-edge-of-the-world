@@ -36,7 +36,7 @@
     "vk:validate": "node tools/vk/vk-games-check.mjs",
     "build:vk": "node tools/platform/build.mjs --platform vk",
     "build:yandex": "node tools/platform/build.mjs --platform yandex",
-    "test:vk": "npm run build:vk && node --test --test-concurrency=1 tests/platform/vk-games.test.mjs tests/platform/lifecycle.test.mjs tests/platform/platform-build.test.mjs tests/platform/vk-hosting-deploy.test.mjs tests/platform/vk-external-hosting.test.mjs tests/platform/yandex-object-storage.test.mjs",
+    "test:vk": "npm run build:vk && node --test --test-concurrency=1 tests/platform/vk-games.test.mjs tests/platform/lifecycle.test.mjs tests/platform/platform-build.test.mjs tests/platform/vk-hosting-deploy.test.mjs tests/platform/vk-external-hosting.test.mjs tests/platform/yandex-object-storage.test.mjs tests/narrative/literary-media.test.mjs",
     "vk:deploy:dev": "node tools/platform/vk-deploy-dev.mjs",
     "vk:hosting:audit": "node tools/platform/vk-hosting-audit.mjs",
     "vk:deploy:cloudflare:preview": "node tools/platform/cloudflare-pages-deploy-preview.mjs",

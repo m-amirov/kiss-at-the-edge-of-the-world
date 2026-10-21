@@ -429,9 +429,10 @@ function renderReader(){
   const file=art?assetFileForViewport(art,locale):null;
   const assetUrl=art?`./assets/${art.type==='cg'?'cg':'backgrounds'}/${file}`:null;
   const showSprites=art?.presentation!=='cinematic';
-  const visualKey=JSON.stringify([assetUrl,art?.presentation??null,showSprites?direction.cast:[],showSprites?stageMode:null,showSprites?stageMood:null,art?.type,mode]);
+  const visualKey=JSON.stringify([assetUrl,art?.presentation??null,showSprites?direction.cast:[],showSprites?stageMode:null,showSprites?stageMood:null,art?.type]);
   const assets=[...(assetUrl?[assetUrl]:[]),...(showSprites?direction.cast.map(person=>`./assets/characters/${stageAsset[person]}`):[])];
   function annotatePicture(picture){
+    picture.dataset.presentation=mode;
     picture.dataset.visualBeat=direction.beatId;
     picture.dataset.location=direction.location;
     picture.dataset.time=direction.time;

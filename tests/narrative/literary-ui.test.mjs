@@ -172,11 +172,14 @@ test('legacy-only Myvatn background is not falsely reported as active literary r
   assert.match(asset?.runtime ?? '', /Legacy src\/season-data\.js only/);
 });
 
-test('visual rendering reuses picture nodes between dialogue taps and preloads next art', () => {
-  const functionBody = player.slice(player.indexOf('function renderReader(){'), player.indexOf("window.addEventListener('keydown'", player.indexOf('function renderReader(){')));
-  assert.doesNotMatch(functionBody, /app\\.replaceChildren\\(\\)/, 'renderReader must not detach the visible picture on each tap');
-  assert.match(functionBody, /visualLayers\\.present\\(/);
-  assert.match(functionBody, /imagePreloader\\.preload\\(prefetchUrl\\)/);
-  assert.match(player, /getVisualCache:\\(\\)=>/);
-  assert.match(css, /\\.scene-visual-next\\.scene-visual-visible\\{opacity:1\\}/);
+test('dialogue taps retain visual layer nodes and prefetch the next asset', () => {
+  const start=player.indexOf('function renderReader(){');
+  const end=player.indexOf("window.addEventListener('keydown'", start);
+  const reader=player.slice(start,end);
+  assert.ok(start>0 && end>start);
+  assert.equal(reader.includes('app.replaceChildren()'),false);
+  assert.ok(reader.includes('visualLayers.present('));
+  assert.ok(reader.includes('imagePreloader.preload(prefetchUrl)'));
+  assert.ok(player.includes('getVisualCache:()=>'));
+  assert.ok(css.includes('.scene-visual-next.scene-visual-visible{opacity:1}'));
 });
