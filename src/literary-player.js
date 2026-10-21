@@ -531,6 +531,7 @@ window.__LITERARY_QA__={
     app:app?.getBoundingClientRect?.().toJSON?.()??null
   }),
   getLifecycle:()=>lifecycle.getState(),
+  getPlatformDiagnostics:()=>platform?.diagnostics?.map(event=>structuredClone(event))??[],
   getRuntimeTrace:()=>{
     const scene=byId.get(reader.sceneId),flow=compileInteractivePlayback(scene,reader.choices,locale),entry=flow[reader.position]??flow.at(-1)??null;
     const visualEntry=visualEntryForPosition(flow,reader.position);

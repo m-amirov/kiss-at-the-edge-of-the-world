@@ -15,6 +15,28 @@ export function requestedVkLocale(
   return normalizeVkLocale(navigator?.language);
 }
 
+function isDesktopVkClient(location) {
+  return new URLSearchParams(location?.search || '').get('vk_platform') === 'desktop_web';
+}
+
+function viewportSize(window) {
+  return {
+    width: Number.isFinite(window?.innerWidth) ? window.innerWidth : null,
+    height: Number.isFinite(window?.innerHeight) ? window.innerHeight : null
+  };
+}
+
+function waitForViewport(window, timeoutMs) {
+  return new Promise(resolve => {
+    const finish = () => resolve(viewportSize(window));
+    if (typeof window?.requestAnimationFrame === 'function') {
+      window.requestAnimationFrame(() => window.requestAnimationFrame(finish));
+    } else {
+      setTimeout(finish, Math.min(120, timeoutMs));
+    }
+  });
+}
+
 function textBytes(value) {
   return new TextEncoder().encode(value).length;
 }
@@ -31,7 +53,8 @@ export function createVkPlatform(bridge, {
   onLanguage,
   onPause,
   onResume,
-  onDiagnostic
+  onDiagnostic,
+  resizeTimeoutMs = 800
 } = {}) {
   if (!bridge || typeof bridge.send !== 'function' || typeof bridge.subscribe !== 'function') {
     throw new TypeError('VK Bridge with send/subscribe required');
@@ -79,6 +102,46 @@ export function createVkPlatform(bridge, {
   const handleBlur = () => { browserHidden = true; syncPause(); };
   const handleFocus = () => { browserHidden = false; syncPause(); };
 
+  async function requestDesktopResize() {
+    if (!isDesktopVkClient(location)) {
+      diagnostic('resize', 'skipped', { reason: 'not-desktop' });
+      return;
+    }
+    if (typeof bridge.supports !== 'function' || !bridge.supports('VKWebAppResizeWindow')) {
+      diagnostic('resize', 'unsupported');
+      return;
+    }
+    const requested = { width: 1000, height: 720 };
+    const before = viewportSize(window);
+    let response = null;
+    try {
+      let timer;
+      const pending = Promise.resolve(bridge.send('VKWebAppResizeWindow', requested));
+      response = await Promise.race([
+        pending,
+        new Promise((_, reject) => { timer = setTimeout(() => reject(new Error('VK_RESIZE_TIMEOUT')), resizeTimeoutMs); })
+      ]);
+      clearTimeout(timer);
+      const after = await waitForViewport(window, resizeTimeoutMs);
+      const changed = before.width !== after.width || before.height !== after.height;
+      const applied = after.width >= requested.width && after.height >= requested.height;
+      diagnostic('resize', applied ? 'applied' : changed ? 'changed-partial' : 'unchanged', {
+        requested,
+        before,
+        response: response && { width: response.width ?? null, height: response.height ?? null },
+        after,
+        changed,
+        applied
+      });
+    } catch (error) {
+      diagnostic('resize', error?.message === 'VK_RESIZE_TIMEOUT' ? 'timeout' : 'rejected', {
+        requested,
+        before,
+        reason: error?.message || String(error)
+      });
+    }
+  }
+
   async function init() {
     if (destroyed) throw new Error('Adapter destroyed');
     if (initialized) return api;
@@ -93,6 +156,7 @@ export function createVkPlatform(bridge, {
       handleVisibility();
       onLanguage?.(locale);
       diagnostic('sdk', 'initialized');
+      await requestDesktopResize();
       try {
         const cloud = await load();
         if (cloud !== null) onCloudState?.(cloud);
