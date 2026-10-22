@@ -69,3 +69,19 @@ localStore.set('save', JSON.stringify(latestSave ? { ...cloudProgress, revision:
 assert.equal(localStore.has('save'), true);
 
 console.log('save-state: PASS');
+
+const failedWrites = [];
+let shouldFail = true;
+const recoveryErrors = [];
+const recoveryQueue = createCloudSaveQueue(async (snapshot) => {
+  failedWrites.push(snapshot.revision);
+  if (shouldFail) {
+    shouldFail = false;
+    throw new Error('TEMPORARY_STORAGE_FAILURE');
+  }
+}, { onError: error => recoveryErrors.push(error.message) });
+await assert.rejects(recoveryQueue.enqueue({ revision: 1 }), /TEMPORARY_STORAGE_FAILURE/);
+assert.deepEqual(await recoveryQueue.enqueue({ revision: 2 }), { skipped: false });
+assert.deepEqual(await recoveryQueue.enqueue({ revision: 3 }), { skipped: false });
+assert.deepEqual(failedWrites, [1, 2, 3], 'a failed write does not poison later ordered writes');
+assert.deepEqual(recoveryErrors, ['TEMPORARY_STORAGE_FAILURE'], 'write failures remain observable');

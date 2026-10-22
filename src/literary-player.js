@@ -1,6 +1,5 @@
 import { literarySeason } from './literary-season-data.js';
 import { compileScenePlayback, nextLiteraryScene, literarySaveKey, cleanLiteraryText } from './literary-engine.js';
-import { initYandexPlatform } from './yandex-sdk.js';
 import { createCloudSaveQueue } from './save-state.js';
 import { stageForScene } from './literary-stage.js';
 import { visualAt, visualEntryForPosition } from './literary-visual-directions.js';
@@ -11,7 +10,11 @@ import { interactionBeats } from './literary-interactive-beats.js';
 import { createDialogueHistory } from './literary-history.js';
 import { createAudioDirector } from './audio-director.js';
 import { musicCues, musicCueForScene } from './music-cues.js';
+import { createPlatformLifecycleController } from './platform/lifecycle.js';
+import { createImagePreloader, createVisualLayerController } from './literary-media.js';
 
+export async function startLiteraryPlayer({ initPlatform, audioBaseUrl } = {}) {
+if(typeof initPlatform!=='function')throw new TypeError('initPlatform is required');
 const canonicalById = new Map(literarySeason.scenes.map(scene => [scene.id, scene]));
 let runtimeSeason = literarySeason;
 let byId = canonicalById;
@@ -27,11 +30,16 @@ const endingHeadings = {
 };
 // Presentation-only focal points. Values are percentages of the source image;
 // the authored visual event remains the source of truth for which asset shows.
-const focalPointByAsset = {
-  's02-roadside-cafe.webp': '50% 48%',
-  's13-skaftafell-travelers.webp': '50% 42%',
-  's18-hofn-dance-lights.webp': '50% 44%',
-  's26-eric-choice.webp': '50% 40%',
+  const focalPointByAsset = {
+    's02-roadside-cafe.webp': '50% 48%',
+    's13-skaftafell-travelers.webp': '50% 42%',
+    's18-hofn-dance-lights.webp': '50% 44%',
+    's18-hofn-lighthouse.webp': '50% 42%',
+    's18-hofn-lighthouse-portrait.webp': '50% 54%',
+    's18-hofn-harbour.webp': '90% 50%',
+    's26-eric-choice.webp': '50% 40%',
+    's26-route-choice-courtyard-final.webp': '50% 42%',
+    's26-route-choice-courtyard-final-portrait.webp': '50% 50%',
   's23-eric-harbor-plan.webp': '50% 42%',
   's24-nick-pier-consent.webp': '50% 42%',
   's25-damir-clarity-talk.webp': '50% 42%',
@@ -45,8 +53,10 @@ const focalPointByAsset = {
   's44-eric-epilogue-month-later.webp': '50% 48%',
   's45-nick-home-epilogue-month-later.webp': '50% 45%',
   's46-damir-epilogue-month-later.webp': '50% 44%',
-  's47-alice-home-epilogue-month-later.webp': '67% 44%'
-};
+    's47-alice-home-epilogue-month-later.webp': '67% 44%'
+    ,'s03-editor-call.webp':'50% 34%'
+    ,'s03-editor-call-portrait.webp':'50% 31%'
+  };
 const portraitAssetByDesktopAsset = {
   's06-hveragerdi-eric-alice.webp':'s06-hveragerdi-eric-alice-portrait.webp',
   's07-kitchen-pasta.webp':'s07-kitchen-pasta-portrait.webp',
@@ -105,10 +115,29 @@ const portraitAssetByDesktopAsset = {
   ,'s64-alice-snaefellsnes-trail.webp':'s64-alice-snaefellsnes-trail-portrait.webp'
   ,'s26-eastfjords-courtyard-group.webp':'s26-eastfjords-courtyard-group-portrait.webp'
   ,'s48-guesthouse-exit-group.webp':'s48-guesthouse-exit-group-portrait.webp'
+  ,'s18-hofn-harbour.webp':'s18-hofn-harbour-portrait.webp'
+  ,'s18-hofn-lighthouse.webp':'s18-hofn-lighthouse-portrait.webp'
+  ,'s26-power-outage-notebook.webp':'s26-power-outage-notebook-portrait.webp'
+  ,'s44-eric-morning-harbour.webp':'s44-eric-morning-harbour-portrait.webp'
+  ,'s46-airport-bus.webp':'s46-airport-bus-portrait.webp'
+  ,'s42-harbour-cafe.webp':'s42-harbour-cafe-portrait.webp'
+  ,'s01-airport-outside-batch2.webp':'s01-airport-outside-batch2-portrait.webp'
+  ,'s01-damir-arrives-batch2.webp':'s01-damir-arrives-batch2-portrait.webp'
+  ,'s48-last-breakfast-batch2.webp':'s48-last-breakfast-batch2-portrait.webp'
+  ,'s26-route-choice-courtyard-batch2.webp':'s26-route-choice-courtyard-batch2-portrait.webp'
+  ,'s26-route-choice-courtyard-final.webp':'s26-route-choice-courtyard-final-portrait.webp'
+  ,'s02-van-group-batch2.webp':'s02-van-group-batch2-portrait.webp'
+  ,'s02-roadside-cafe-group.webp':'s02-roadside-cafe-group-portrait.webp'
+  ,'s03-editor-call.webp':'s03-editor-call-portrait.webp'
+  ,'s60-souvenir-kitchen-batch2.webp':'s60-souvenir-kitchen-batch2-portrait.webp'
+  ,'s65-locked-kitchen-hallway.webp':'s65-locked-kitchen-hallway-portrait.webp'
+  ,'s65-locked-kitchen-keys.webp':'s65-locked-kitchen-keys-portrait.webp'
 };
-function assetFileForViewport(art){
+ function assetFileForViewport(art,selectedLocale=locale){
   const portrait=window.matchMedia?.('(max-width: 680px) and (orientation: portrait)').matches;
-  return portrait ? (portraitAssetByDesktopAsset[art.file]??art.file) : art.file;
+  const desktopFile=art.localeFiles?.[selectedLocale]??art.file;
+  if(!portrait)return desktopFile;
+  return art.localePortraitFiles?.[selectedLocale]??portraitAssetByDesktopAsset[desktopFile]??desktopFile;
 }
 const stageAsset = { alice:'alice-stage.webp', eric:'eric-stage.webp', nick:'nick-stage.webp', damir:'damir-stage.webp' };
 // This value is consumed by a url() inside src/literary.css; resolve from the
@@ -139,9 +168,22 @@ let platform=null;
 let locale='ru';
 let t=createTranslator(locale);
 let cloudQueue=null;
-const audioDirector=createAudioDirector();
+const audioDirector=createAudioDirector({audioBaseUrl});
+const imagePreloader=createImagePreloader();
+const visualLayers=createVisualLayerController({root:app,preload:imagePreloader.preload});
 const audioCueById=new Map(musicCues.map(cue=>[cue.cueId,{...cue,file:`${cue.cueId}.ogg`} ]));
+const menuAudioCue=audioCueById.get('main-theme');
+let lifecycle=null;
 let settings=(()=>{try{return{scale:1,contrast:false,motion:false,...JSON.parse(localStorage.getItem(textSettingsKey)||'{}')}}catch{return{scale:1,contrast:false,motion:false}}})();
+function gameplayShouldBeActive(){return !menuOpen && !lifecycle?.isPaused()}
+lifecycle=createPlatformLifecycleController({
+  app,
+  document,
+  setGameplayActive:active=>platform?.setGameplayActive(active),
+  isGameplayActive:()=>!menuOpen,
+  onPause:()=>{audioDirector.pause()},
+  onResume:()=>{audioDirector.resume().catch(()=>{})}
+});
 function loadRuntimeSeason(selectedLocale,qaLocaleOverride){
   if(selectedLocale==='ru')return literarySeason;
   const localeData=literaryLocaleBundles[selectedLocale];
@@ -163,7 +205,7 @@ function loadRuntimeSeason(selectedLocale,qaLocaleOverride){
 function persist() {
   reader.revision=(reader.revision??0)+1;
   try {localStorage.setItem(literarySaveKey,JSON.stringify(reader));hasSave=true;}catch{}
-  if(cloudQueue && platform?.mode==='yandex')cloudQueue.enqueue(reader).catch(()=>{});
+  if(cloudQueue && (platform?.mode==='yandex'||platform?.mode==='vk-games'))cloudQueue.enqueue(reader).catch(()=>{});
 }
 function recordDialogueState(){dialogueHistory.record(reader)}
 function rollbackNarrative(){
@@ -192,7 +234,7 @@ let lastPointerActivationAt=0;
 let lastStageInput='none';
 function isInteractiveTarget(target){return target instanceof Element && Boolean(target.closest(interactiveSelector));}
 function advanceNarrative(){
-  if(menuOpen)return false;
+  if(menuOpen || lifecycle.isPaused())return false;
   const scene=byId.get(reader.sceneId);if(!scene)return false;
   const flow=compileInteractivePlayback(scene,reader.choices,locale);
   const current=flow[reader.position];
@@ -206,6 +248,10 @@ function advanceNarrative(){
     recordDialogueState();
     reader.sceneId=next;reader.position=0;
     if(!reader.visited.includes(next))reader.visited.push(next);
+    const crossedEpisode=byId.get(next)?.episode!==scene.episode;
+    persist();renderReader();
+    if(crossedEpisode&&platform?.mode==='vk-games')platform.showInterstitial({atBoundary:true}).catch(error=>console.warn('[platform] interstitial unavailable',error));
+    return true;
   }
   persist();renderReader();return true;
 }
@@ -320,8 +366,12 @@ function settingsPanel(section){
   draw();section.append(size,contrast,motion,audioMute,audioVolume);
 }
 function renderMenu(){
+  visualLayers.clear();
   platform?.setGameplayActive(false);
-  audioDirector.pause();
+  // Preserve the main theme across menu/settings/episodes navigation.
+  // Re-rendering menu UI must not pause or restart the audio stream.
+  audioDirector.setCue(menuAudioCue);
+  if(!lifecycle.isPaused())audioDirector.resume().catch(()=>{});
   menuOpen=true;app.className='literary-home';app.dataset.presentation=modal?`menu-${modal.toLowerCase()}`:'menu-home';app.style.setProperty('--cover',`url('${cover}')`);app.replaceChildren();
   const section=el('','literary-home-card');app.append(section);
   section.append(el(t('menuKicker'),'kicker'),el(t('gameTitle'),'home-title','h1'));
@@ -363,24 +413,77 @@ function artMode(scene, entry, choices, isEnding) {
 }
 function renderReader(){
   if(menuOpen)return renderMenu();
-  platform?.setGameplayActive(true);
+  platform?.setGameplayActive(gameplayShouldBeActive());
   const scene=byId.get(reader.sceneId);if(!scene){goHome();return}
   audioDirector.setCue(audioCueById.get(musicCueForScene(scene.id)));
-  audioDirector.resume().catch(()=>{});
+  if(!lifecycle.isPaused())audioDirector.resume().catch(()=>{});
   const flow=compileInteractivePlayback(scene,reader.choices,locale);reader.position=Math.min(reader.position,flow.at(-1)?.type==='choice'?Math.max(0,flow.length-1):flow.length);
   const isEnding=['S44','S45','S46','S47'].includes(scene.id);
   const mode=artMode(scene,flow[reader.position],reader.choices,isEnding);
-  app.className='literary-reader';app.dataset.presentation=mode;app.replaceChildren();
+  app.className='literary-reader';app.dataset.presentation=mode;
+  // Replace only the text/controls. Never detach an unchanged visual frame:
+  // doing so restarts sprite entrance animations and flashes the background.
+  for(const child of [...app.children])if(!child.classList.contains('literary-picture'))child.remove();
   const current=flow[reader.position];
   const visualEntry=visualEntryForPosition(flow,reader.position);
   const direction=visualAt(scene.id,visualEntry,reader.choices,stageForScene(scene.id,reader.choices).cast);
   const art=direction.art;
-  const picture=el('','literary-picture');picture.setAttribute('aria-hidden','true');picture.dataset.presentation=mode;picture.dataset.mode=art?.presentation??(art?.type==='cg'?'cinematic':'environment');
-  picture.dataset.visualBeat=direction.beatId;picture.dataset.location=direction.location;picture.dataset.time=direction.time;
-  if(art){const file=assetFileForViewport(art);const img=el('','','img');img.src=`./assets/${art.type==='cg'?'cg':'backgrounds'}/${file}`;img.alt='';img.decoding='async';img.dataset.desktopAsset=art.file;img.dataset.asset=file;picture.append(img);picture.style.setProperty('--focus',focalPointByAsset[file]??focalPointByAsset[art.file]??'50% 50%');if(art.type==='cg'){picture.classList.add('is-cg');picture.style.setProperty('--cg-url',`url("${img.src}")`)}}
-  else picture.classList.add('no-art');
-  if(art?.presentation!=='cinematic') picture.append(renderStage({...direction,mode:direction.cast.length>2?'group':direction.cast.length===2?'pair':'solo',mood:stageForScene(scene.id,reader.choices).mood}));
-  picture.append(el('','literary-vignette'));app.append(picture);bindStageNavigation(picture);
+  const stageMode=direction.cast.length>2?'group':direction.cast.length===2?'pair':'solo';
+  const stageMood=stageForScene(scene.id,reader.choices).mood;
+  const file=art?assetFileForViewport(art,locale):null;
+  const assetUrl=art?`./assets/${art.type==='cg'?'cg':'backgrounds'}/${file}`:null;
+  const showSprites=art?.presentation!=='cinematic';
+  const visualKey=JSON.stringify([assetUrl,art?.presentation??null,showSprites?direction.cast:[],showSprites?stageMode:null,showSprites?stageMood:null,art?.type]);
+  const assets=[...(assetUrl?[assetUrl]:[]),...(showSprites?direction.cast.map(person=>`./assets/characters/${stageAsset[person]}`):[])];
+  function annotatePicture(picture){
+    picture.dataset.presentation=mode;
+    picture.dataset.visualBeat=direction.beatId;
+    picture.dataset.location=direction.location;
+    picture.dataset.time=direction.time;
+  }
+  function buildPicture(){
+    const picture=el('','literary-picture');picture.setAttribute('aria-hidden','true');
+    picture.dataset.presentation=mode;
+    picture.dataset.mode=art?.presentation??(art?.type==='cg'?'cinematic':'environment');
+    annotatePicture(picture);
+    if(art){
+      const img=el('','','img');
+      img.src=assetUrl;img.alt='';img.decoding='async';img.dataset.desktopAsset=art.file;img.dataset.asset=file;
+      img.addEventListener('error',()=>{picture.dataset.assetError=file},{once:true});
+      picture.append(img);
+      picture.style.setProperty('--focus',focalPointByAsset[file]??focalPointByAsset[art.file]??'50% 50%');
+      if(art.type==='cg'){picture.classList.add('is-cg');picture.style.setProperty('--cg-url',`url("${img.src}")`)}
+    } else picture.classList.add('no-art');
+    if(showSprites)picture.append(renderStage({...direction,mode:stageMode,mood:stageMood}));
+    picture.append(el('','literary-vignette'));
+    bindStageNavigation(picture);
+    return picture;
+  }
+  visualLayers.present({key:visualKey,assets,build:buildPicture,onReuse:annotatePicture});
+  // Preheat the next distinct visual beat, instead of fetching it during a tap.
+  // Limit to a single upcoming image; the LRU bounds memory on mobile.
+  let prefetchUrl=null;
+  for(let position=reader.position+1;position<flow.length;position++){
+    const future=visualAt(scene.id,visualEntryForPosition(flow,position),reader.choices,stageForScene(scene.id,reader.choices).cast).art;
+    if(!future)continue;
+    const nextFile=assetFileForViewport(future,locale);
+    const nextUrl=`./assets/${future.type==='cg'?'cg':'backgrounds'}/${nextFile}`;
+    if(nextUrl!==assetUrl){prefetchUrl=nextUrl;break}
+  }
+  if(!prefetchUrl){
+    const nextId=nextLiteraryScene(scene.id,reader.choices);
+    const nextScene=byId.get(nextId);
+    if(nextScene){
+      const nextFlow=compileInteractivePlayback(nextScene,reader.choices,locale);
+      const nextDirection=visualAt(nextId,visualEntryForPosition(nextFlow,0),reader.choices,stageForScene(nextId,reader.choices).cast);
+      if(nextDirection.art){
+        const nextFile=assetFileForViewport(nextDirection.art,locale);
+        const nextUrl=`./assets/${nextDirection.art.type==='cg'?'cg':'backgrounds'}/${nextFile}`;
+        if(nextUrl!==assetUrl)prefetchUrl=nextUrl;
+      }
+    }
+  }
+  if(prefetchUrl)imagePreloader.preload(prefetchUrl);
   const header=el('','reader-header');
   const back=button(locale==='ru'?'Назад':'Back',rollbackNarrative,'small-button dialogue-back');back.disabled=!dialogueHistory.canRollback();
   header.append(button('☰ '+t('menu'),goHome,'small-button'),back,el(t('episode')+` ${scene.episode} / 10`,'chapter-index'),el(t('readerHeaderTitle'),'draft-indicator'));
@@ -424,9 +527,9 @@ window.addEventListener('keydown',event=>{
 });
 window.addEventListener('pointerdown',()=>{audioDirector.unlock().catch(()=>{})},{passive:true});
 window.addEventListener('keydown',()=>{audioDirector.unlock().catch(()=>{})},{passive:true});
-document.addEventListener('visibilitychange',()=>{if(document.hidden)audioDirector.pause();else audioDirector.resume().catch(()=>{})});
-window.addEventListener('blur',()=>audioDirector.pause());
-window.addEventListener('focus',()=>audioDirector.resume().catch(()=>{}));
+document.addEventListener('visibilitychange',()=>lifecycle.setDocumentHidden(Boolean(document.hidden)));
+window.addEventListener('blur',()=>lifecycle.pause('window'));
+window.addEventListener('focus',()=>lifecycle.resume('window'));
 function renderBootFailure(error){
   platform?.setGameplayActive(false);
   app.className='literary-home';
@@ -440,14 +543,14 @@ applySettings();
 const bootHadLocal=hasSave;
 async function boot(){
  try{
-  const result=await initYandexPlatform({cloudKey:literaryCloudKey,onCloudState:raw=>{
+  const result=await initPlatform({cloudKey:literaryCloudKey,onCloudState:raw=>{
    const candidate=parseSaved(raw);
    if(!candidate || cloudLocked)return;
    if(bootHadLocal || hasSave){cloudCandidate=candidate; if(menuOpen)renderMenu();return}
    reader=candidate;hasSave=true;
    try{localStorage.setItem(literarySaveKey,JSON.stringify(reader))}catch{}
    if(menuOpen)renderMenu();
-  }});
+  },onCloudError:error=>{console.warn('[platform] cloud storage unavailable',error);},onPause:()=>lifecycle.pause('platform'),onResume:()=>lifecycle.resume('platform')});
   platform=result;
   locale=platform.locale;
   t=createTranslator(locale);
@@ -458,10 +561,10 @@ async function boot(){
   byId=new Map(runtimeSeason.scenes.map(scene=>[scene.id,scene]));
   if(!byId.has(reader.sceneId))throw Error(`BLOCKED_EN_CORPUS_INCOMPLETE: missing scene ${reader.sceneId}`);
   renderMenu();
-  platform.setGameplayActive(!menuOpen);
+  platform.setGameplayActive(gameplayShouldBeActive());
   platform.markInteractiveReady();
-  if(platform.mode==='yandex'){
-    cloudQueue=createCloudSaveQueue(snapshot=>platform.save(snapshot));
+  if(platform.mode==='yandex'||platform.mode==='vk-games'){
+    cloudQueue=createCloudSaveQueue(snapshot=>platform.save(snapshot),{onError:error=>console.warn('[platform] cloud write unavailable',error)});
     // Explicit new-game reset may have happened while SDK was initializing.
     if(cloudLocked)cloudQueue.enqueue(reader).catch(()=>{});
   }
@@ -478,6 +581,20 @@ window.__LITERARY_QA__={
   getPlatformMode:()=>platform?.mode??'booting',
   getPersistenceKeys:()=>({local:literarySaveKey,cloud:literaryCloudKey}),
   getScreen:()=>({menuOpen,sceneId:reader.sceneId,position:reader.position}),
+  getVisualCache:()=>({ ...visualLayers.getState(), cachedImages:imagePreloader.getSize(), pendingImages:imagePreloader.getPendingSize?.()??0 }),
+  getViewport:()=>({
+    innerWidth:window.innerWidth,
+    innerHeight:window.innerHeight,
+    devicePixelRatio:window.devicePixelRatio,
+    orientation:window.matchMedia?.('(orientation: portrait)').matches?'portrait':'landscape',
+    desktopMedia:window.matchMedia?.('(min-width: 681px)').matches??false,
+    root:document.documentElement.getBoundingClientRect().toJSON(),
+    body:document.body.getBoundingClientRect().toJSON(),
+    app:app?.getBoundingClientRect?.().toJSON?.()??null
+  }),
+  getLifecycle:()=>lifecycle.getState(),
+  getAudioDiagnostics:()=>audioDirector.getDiagnostics(),
+  getPlatformDiagnostics:()=>platform?.diagnostics?.map(event=>structuredClone(event))??[],
   getRuntimeTrace:()=>{
     const scene=byId.get(reader.sceneId),flow=compileInteractivePlayback(scene,reader.choices,locale),entry=flow[reader.position]??flow.at(-1)??null;
     const visualEntry=visualEntryForPosition(flow,reader.position);
@@ -489,3 +606,4 @@ window.__LITERARY_QA__={
   // QA methods are strictly read-only; preview and the old game have separate state keys.
 };
 boot();
+}

@@ -20,6 +20,34 @@ Use this compact template at the acceptance boundary of a production-visible pas
 
 Use only affected states. Enemy work normally includes normal and pressure or attack states; include elite/boss when affected. Boss work includes introduction/readability, materially different attacks/phases and crowded combat. Biome work includes environment, ordinary combat, interaction and pressure. UI includes normal, long RU/EN text, interactive and relevant modal/result state.
 
+## Multi-character dialogue / mobile composition (when applicable)
+
+- Characters visible / scene cue / sprite or unified CG mode:
+- Existing sprite overlap rework count and CG-fallback decision (why feasible or why retained sprites):
+- Screenshot visual separation: visible silhouette pixels vs first dialogue glyphs (not only DOM rectangles); record overlap/gap at compact **360×640** and taller portrait viewport:
+- If a unified CG is used: character identity/reference match, landscape/portrait continuity, natural framing, portrait dialogue-safe negative space, no embedded UI/text/icons:
+- If prior mobile REWORK was reported: fresh current-HEAD before/after captures, role-specific independent reviewer verdict, and remaining findings:
+- If repeated fixes fail: stop under the global three-attempt limit and link `artifacts/ESCALATION_REPORT.md`:
+
+## Narrative meaning and Web High repair budget (when applicable)
+
+- Static illustrated beat: unified full-scene CG preferred? Sprite staging exception and authored reason:
+- P0/P1 material findings only: wrong actor/action, location/time/essential props, cue ordering, important clipping, impossible space or unreadable UI; cite authored text and observed pixels:
+- P2 polish impact / P3 subjective advice: P3 alone does not trigger additional generation:
+- Root cause: source art vs stage/mapping vs crop/CSS; smallest verified repair:
+- Rework attempt/candidate count, previous accepted state preserved and escalation decision:
+- Changed and causally affected visual beats only; outstanding independent-review coverage recorded:
+- Image-driven preload/crossfade: decoded next image, Slow 3G last-frame retention, stale cancellation, failure fallback, reduced-motion, memory/request limits; outcome or N/A:
+
+## Human-figure CG anatomy and grounding (when applicable)
+
+- Canonical character references / intentional stylization consulted:
+- Proportions at full-source resolution and current runtime crop: head-to-torso, leg-to-torso, hands/feet, joints and relative scale between people (unintended compression or exaggeration?):
+- Camera level, focal perspective, horizon and consistent relative depth (unintended low-angle / wide-angle distortions?):
+- Ground plane, shoes/contact shadows, quay edge, waterline, foreground occlusion (any false flooded or behind-seawall appearance?):
+- Mobile crop choice and lower dialogue negative space: natural framing without stretching, anatomy clipping, masking or fabricated barriers:
+- Independent image-visible anatomy/perspective/spatial verdict for **360×640**, taller portrait and affected desktop captures (anomalies are **FAIL/REWORK** even with no UI overlap):
+
 ## Visual review verdict
 
 - Verdict: `PASS` / `FAIL` / `EVIDENCE_GAP`

@@ -1,9 +1,39 @@
-# Autonomous Yandex Games Starter Kit 0.5.7
+# Autonomous Yandex Games Starter Kit 0.5.14
 
 Версионируемая engineering/compliance инфраструктура для создания новых игр и
 безопасного обновления существующих зрелых проектов Яндекс Игр.
 
+## Optional VK Games distribution profile (0.5.14)
+
+An additive, disabled-by-default platform profile supports VK Games in VKontakte
+and Odnoklassniki (not VK Play). It supplies an injectable VK Bridge reference
+adapter, static contract validation, and a head-and-artifact-bound live
+evidence release gate. The Yandex SDK and mature game runtimes are unchanged.
+
+Usage: npm run vk:validate. For an opted-in game, build the separated VK target
+first and run npm run vk:validate -- --root . ; then use --release only after
+collecting actual VK/OK client observations. See docs/VK_GAMES_PROFILE.md.
+
+## Optional future visual-novel story promises
+
+For **future games** that explicitly enable `narrative-game`, an optional
+`promisesPath` verifies scene and state-guard references for material story setups
+and payoffs. Profiles without `promisesPath` behave exactly as before. This is not
+a release gate, a runtime attestation or a judgment about the prose.
+See `docs/NARRATIVE_GAME_PROFILE.md`.
+
 ## Два разных режима
+
+## GitHub-first Codex workflow
+
+CEOS and Starter Kit now share a fail-closed Git preflight contract. In an installed project, first run:
+
+```powershell
+ceos git-preflight --project . --remote origin --branch main --expect-repo owner/repo --fetch --json
+```
+
+If the result is `BEHIND_FAST_FORWARD_AVAILABLE`, and the checkout is clean and on the intended branch, run the same command with `--apply`. This is **not** a forced pull or a background service. Dirty/diverged/wrong-remote states are preserved and require reconciliation. Re-fetch before authorized push and verify remote SHA. CEOS command availability requires updating the installed CEOS CLI separately; Starter Kit instructions provide a Git-command fallback where it is absent. Mature-project AGENTS changes remain semantic-merge proposals; they are never silently overwritten.
+
 
 Новый проект:
 
@@ -101,6 +131,16 @@ decision permits production. `STOP_PROJECT` activates `$project-termination`.
 UI/E2E instability is adjudicated through
 `.starter-kit/core/TEST_HARNESS_ADJUDICATION.md` before runtime changes.
 
+## Human-figure CG anatomy and spatial continuity (0.5.11)
+
+Generated human-character illustrations must pass image-visible review for reference-consistent body proportions, natural camera perspective and a coherent supporting ground plane. A visually clean UI does not excuse unintentionally oversized heads, short-looking legs, forced wide-angle perspective or a false impression that characters stand in harbor water behind a seawall. On mobile, choose an intentional portrait crop rather than distorting anatomy to preserve dialogue space. New checks ship through `$visual-quality-gate`, `$mobile-game-ux` and the managed screenshot gate template; existing Yandex, provenance and independent visual acceptance rules still apply.
+
+## Multi-character scene composition (0.5.10)
+
+The shipped `$visual-quality-gate` and `$mobile-game-ux` skills now require an explicit unified-CG fallback assessment after **two distinct failed mobile sprite-overlap repairs** in a narrative two-character (or group) dialogue scene. Use a single scene-composed CG when suitable instead of accumulating CSS offsets/masks. The artwork must not embed UI, must preserve character identity, and must be separately framed for mobile dialogue-safe space when necessary. Verify **visible silhouette pixels vs dialogue text** in real 360×640 and taller portrait captures. Existing three-attempt escalation and external art-provenance constraints remain in effect.
+
+Mature-project updates deliver this through semantic-merge skills and the managed screenshot gate template. Review conflicts explicitly; do not overwrite project-owned runtime or existing art rules.
+
 ## Screenshot Visual Gate
 
 `SCREENSHOT_VISUAL_GATE` is mandatory before accepting a production-visible gameplay, environment, enemy/boss, attack, VFX, Living Arena, UI, asset, responsive-layout, or meaningful visual-state pass. It captures the affected current-HEAD production runtime states, reviews them against the project's art contracts and accepted baseline, then permits the acceptance token only after any correction/recheck. The matrix is impact-based rather than a whole-project recapture; gameplay/UI changes include representative desktop and actual-touch mobile evidence. See `templates/visual-review/SCREENSHOT_VISUAL_GATE.md`.
@@ -134,6 +174,8 @@ npm run starter-kit:manifest
 npm run starter-kit:self-test
 npm run test:updater
 npm run starter-kit:update-self-test
+npm run yandex:sdk:validate
+npm run yandex:contract:validate
 npm run yandex:external:verify
 npm run starter-kit:status -- --target E:\Path\To\initialized-target
 ```

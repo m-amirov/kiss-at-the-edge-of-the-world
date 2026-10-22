@@ -44,7 +44,7 @@ export function canHydrateCloud(candidate, current, { locked = false } = {}) {
   return Boolean(current?.runId) && compareStateFreshness(candidate, current) > 0;
 }
 
-export function createCloudSaveQueue(writeCloud) {
+export function createCloudSaveQueue(writeCloud, { onError } = {}) {
   let tail = Promise.resolve();
   let generation = 0;
   return {
@@ -52,12 +52,18 @@ export function createCloudSaveQueue(writeCloud) {
     enqueue(state) {
       const requestGeneration = generation;
       const snapshot = structuredClone(state);
-      tail = tail.then(async () => {
+      const operation = tail.then(async () => {
         if (requestGeneration !== generation) return { skipped: true, reason: 'invalidated' };
         await writeCloud(snapshot);
         return { skipped: false };
       });
-      return tail;
+      // Keep the internal chain usable after one rejected write while the
+      // returned operation remains rejected for the caller and diagnostics.
+      tail = operation.catch((error) => {
+        onError?.(error);
+        return { skipped: true, reason: 'previous-write-failed' };
+      });
+      return operation;
     }
   };
 }

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "platform": "vk-games",
+  "distributions": [
+    "vk"
+  ],
+  "buildFile": "dist/vk/index.html",
+  "adapterFile": "src/platform/vk-games.js",
+  "bridgePackage": "@vkontakte/vk-bridge",
+  "ads": {
+    "interstitial": "boundary-only",
+    "allowDuringDialogue": false,
+    "rewarded": false
+  },
+  "saves": {
+    "mode": "vk-bridge",
+    "maxBytes": 3800
+  },
+  "yandexSdkIncluded": false,
+  "bundleDir": "dist/vk"
+}
