@@ -1,6 +1,12 @@
 import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
 import test from 'node:test';
+import { fileURLToPath } from 'node:url';
 import { createVkPlatform, normalizeVkLocale, requestedVkLocale } from '../../src/platform/vk-games.js';
+import { requiredClientsForDistributions } from '../../tools/vk/vk-games-check.mjs';
+
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 
 function bridgeHarness({ failWrites = 0, stored = '', supportsResize = false, resizeAfter = null, resizeNever = false } = {}) {
   const storage = new Map([['kiss_literary_season_v1', stored]]);
@@ -30,6 +36,15 @@ function bridgeHarness({ failWrites = 0, stored = '', supportsResize = false, re
   };
   return { bridge, calls, document, window, storage };
 }
+
+test('VK-only release scope requires only the three VK clients and preserves OK for future opt-in', () => {
+  const contract = JSON.parse(fs.readFileSync(path.join(root, 'platform/vk-games.contract.json'), 'utf8'));
+  assert.deepEqual(contract.distributions, ['vk']);
+  assert.deepEqual(requiredClientsForDistributions(contract.distributions), ['vk-web', 'vk-android', 'vk-ios']);
+  assert.deepEqual(requiredClientsForDistributions(['vk', 'ok']), [
+    'vk-web', 'vk-android', 'vk-ios', 'ok-web', 'ok-android', 'ok-ios'
+  ]);
+});
 
 test('VK locale is limited to Russian and English', () => {
   assert.equal(normalizeVkLocale('ru-RU'), 'ru');

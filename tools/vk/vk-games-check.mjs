@@ -8,6 +8,10 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..')
 const CLIENTS = { vk: ['vk-web', 'vk-android', 'vk-ios'], ok: ['ok-web', 'ok-android', 'ok-ios'] };
 const REQUIRED_CHECKS = ['init', 'pauseResume', 'input', 'portrait', 'saveRoundTrip', 'ads', 'noYandexSdk'];
 
+export function requiredClientsForDistributions(distributions) {
+  return distributions.flatMap((distribution) => CLIENTS[distribution] ?? []);
+}
+
 function inside(root, relative) {
   if (typeof relative !== 'string' || !relative || path.isAbsolute(relative) ||
       /^[A-Za-z]:[\\/]/.test(relative) || relative.includes('\0')) {
@@ -119,7 +123,7 @@ export function runVkGamesProfile(root, profile, { release = false } = {}) {
       !Number.isFinite(Date.parse(evidence.capturedAt)) ||
       !Array.isArray(evidence.clients)) return fail('STALE_OR_INVALID_RUNTIME_EVIDENCE');
 
-  const required = c.distributions.flatMap((item) => CLIENTS[item]);
+  const required = requiredClientsForDistributions(c.distributions);
   const observed = evidence.clients;
   if (observed.length !== required.length ||
       new Set(observed.map((item) => item.client)).size !== required.length ||

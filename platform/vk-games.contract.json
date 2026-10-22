@@ -2,8 +2,7 @@
   "schemaVersion": 1,
   "platform": "vk-games",
   "distributions": [
-    "vk",
-    "ok"
+    "vk"
   ],
   "buildFile": "dist/vk/index.html",
   "adapterFile": "src/platform/vk-games.js",
